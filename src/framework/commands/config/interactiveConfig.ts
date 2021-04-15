@@ -162,8 +162,7 @@ export default class extends Command {
 				return 'up';
 			}
 
-			if (!choice) return;
-			const sel = choices[choice];
+			const sel = choices[choice as number];
 
 			if (sel.type === 'key') {
 				const key = sel.value as GuildSettingsKey;
