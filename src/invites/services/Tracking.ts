@@ -331,7 +331,7 @@ export class TrackingService extends IMService {
 		// Join roles
 		const sets = await this.client.cache.guilds.get(guild.id);
 		if (sets.joinRoles && sets.joinRoles.length > 0) {
-			if (!guild.members.get(this.client.user.id).permission.has(GuildPermission.MANAGE_ROLES)) {
+			if (!guild.members.get(this.client.user.id).permissions.has(GuildPermission.MANAGE_ROLES)) {
 				console.log(`TRYING TO SET JOIN ROLES IN ${guild.id} WITHOUT MANAGE_ROLES PERMISSION`);
 			} else {
 				const premium = await this.client.cache.premium.get(guild.id);
@@ -342,7 +342,7 @@ export class TrackingService extends IMService {
 		}
 
 		// If we don't have manage server then what are we even doing here and why did you invite our bot
-		if (!guild.members.get(this.client.user.id).permission.has(GuildPermission.MANAGE_GUILD)) {
+		if (!guild.members.get(this.client.user.id).permissions.has(GuildPermission.MANAGE_GUILD)) {
 			console.error(`BOT DOESN'T HAVE MANAGE SERVER PERMISSIONS FOR ${guild.id} ON MEMBERADD`);
 			return;
 		}
@@ -813,7 +813,7 @@ export class TrackingService extends IMService {
 	}
 
 	public async insertGuildData(guild: Guild) {
-		if (!guild.members.get(this.client.user.id).permission.has(GuildPermission.MANAGE_GUILD)) {
+		if (!guild.members.get(this.client.user.id).permissions.has(GuildPermission.MANAGE_GUILD)) {
 			console.error(`BOT DOESN'T HAVE MANAGE SERVER PERMISSIONS FOR ${guild.id} ON INSERT`);
 			return;
 		}

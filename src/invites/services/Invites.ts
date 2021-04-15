@@ -312,7 +312,7 @@ export class InvitesService extends IMService {
 			}
 		}
 
-		if (me.permission.has(GuildPermission.MANAGE_ROLES)) {
+		if (me.permissions.has(GuildPermission.MANAGE_ROLES)) {
 			// Filter dangerous roles
 			dangerous = reached.filter(
 				(r) => r.permissions.has(GuildPermission.ADMINISTRATOR) || r.permissions.has(GuildPermission.MANAGE_GUILD)

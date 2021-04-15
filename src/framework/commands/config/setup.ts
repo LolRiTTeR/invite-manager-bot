@@ -52,21 +52,21 @@ export default class extends Command {
 			})
 		});
 
-		if (!me.permission.has(GuildPermission.MANAGE_GUILD)) {
+		if (!me.permissions.has(GuildPermission.MANAGE_GUILD)) {
 			embed.fields.push({
 				name: t('cmd.setup.manageGuild.title'),
 				value: t('cmd.setup.manageGuild.text')
 			});
 		}
 
-		if (!me.permission.has(GuildPermission.MANAGE_ROLES)) {
+		if (!me.permissions.has(GuildPermission.MANAGE_ROLES)) {
 			embed.fields.push({
 				name: t('cmd.setup.manageRoles.title'),
 				value: t('cmd.setup.manageRoles.text')
 			});
 		}
 
-		if (!me.permission.has(GuildPermission.VIEW_AUDIT_LOGS)) {
+		if (!me.permissions.has(GuildPermission.VIEW_AUDIT_LOGS)) {
 			embed.fields.push({
 				name: t('cmd.setup.viewAuditLogs.title'),
 				value: t('cmd.setup.viewAuditLogs.text')

@@ -121,7 +121,7 @@ export default class extends Command {
 					embed.description = t('cmd.premium.activate.noGuild');
 				} else if (isPremium) {
 					embed.description = t('cmd.premium.activate.currentlyActive');
-				} else if (!message.member.permission.has(GuildPermission.MANAGE_GUILD)) {
+				} else if (!message.member.permissions.has(GuildPermission.MANAGE_GUILD)) {
 					embed.description = t('cmd.premium.activate.permissions');
 				} else if (!subs) {
 					embed.description = t('cmd.premium.activate.noSubscription', {
@@ -149,7 +149,7 @@ export default class extends Command {
 					embed.description = t('cmd.premium.deactivate.customBot');
 				} else if (!guildId) {
 					embed.description = t('cmd.premium.deactivate.noGuild');
-				} else if (!message.member.permission.has(GuildPermission.MANAGE_GUILD)) {
+				} else if (!message.member.permissions.has(GuildPermission.MANAGE_GUILD)) {
 					embed.description = t('cmd.premium.deactivate.permissions');
 				} else if (!isPremium) {
 					embed.description = t('cmd.premium.deactivate.noSubscription');

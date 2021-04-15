@@ -296,7 +296,7 @@ export class RabbitMqService extends IMService {
 				}
 
 				const sets = await this.client.cache.guilds.get(guildId);
-				const perms = guild.members.get(this.client.user.id).permission.json;
+				const perms = guild.members.get(this.client.user.id).permissions.json;
 
 				let joinChannelPerms: { [key: string]: boolean } = {};
 				if (sets.joinMessageChannel) {

@@ -275,7 +275,7 @@ export class CommandsService extends IMService {
 			}
 
 			// Always allow admins
-			if (!member.permission.has(GuildPermission.ADMINISTRATOR) && guild.ownerID !== member.id) {
+			if (!member.permissions.has(GuildPermission.ADMINISTRATOR) && guild.ownerID !== member.id) {
 				const perms = (await this.client.cache.permissions.get(guild.id))[cmd.name];
 
 				if (perms && perms.length > 0) {

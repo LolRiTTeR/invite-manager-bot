@@ -84,15 +84,15 @@ export default class extends Command {
 					member = await guild.getRESTMember(message.author.id);
 				}
 
-				if (member && member.permission.has(GuildPermission.ADMINISTRATOR)) {
+				if (member && member.permissions.has(GuildPermission.ADMINISTRATOR)) {
 					const missing: string[] = [];
-					if (!me.permission.has(GuildPermission.MANAGE_GUILD)) {
+					if (!me.permissions.has(GuildPermission.MANAGE_GUILD)) {
 						missing.push(t('permissions.manageGuild'));
 					}
-					if (!me.permission.has(GuildPermission.VIEW_AUDIT_LOGS)) {
+					if (!me.permissions.has(GuildPermission.VIEW_AUDIT_LOGS)) {
 						missing.push(t('permissions.viewAuditLogs'));
 					}
-					if (!me.permission.has(GuildPermission.MANAGE_ROLES)) {
+					if (!me.permissions.has(GuildPermission.MANAGE_ROLES)) {
 						missing.push(t('permissions.manageRoles'));
 					}
 

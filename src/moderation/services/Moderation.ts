@@ -130,7 +130,7 @@ export class ModerationService extends IMService {
 		}
 
 		/*
-		if (member.permission.has(Permissions.ADMINISTRATOR)) {
+		if (member.permissions.has(Permissions.ADMINISTRATOR)) {
 			return;
 		}
 		*/
