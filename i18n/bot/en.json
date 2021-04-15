@@ -1499,7 +1499,8 @@
 				},
 				"title": "Invites",
 				"general": {
-					"title": "General"
+					"title": "General",
+					"description": "settings.groups.invites.general.description"
 				}
 			},
 			"moderation": {

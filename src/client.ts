@@ -157,9 +157,7 @@ export class IMClient extends Client {
 			maxShards: shardCount,
 			disableEvents: {
 				TYPING_START: true,
-				PRESENCE_UPDATE: true,
-				VOICE_STATE_UPDATE: true,
-				USER_UPDATE: true
+				PRESENCE_UPDATE: true
 			},
 			restMode: true,
 			messageLimit: 2,
