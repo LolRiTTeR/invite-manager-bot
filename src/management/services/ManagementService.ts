@@ -1,4 +1,4 @@
-import { Emoji, PossiblyUncachedMessage, TextChannel } from 'eris';
+import { Emoji, Member, PossiblyUncachedMessage, TextChannel } from 'eris';
 
 import { IMService } from '../../framework/services/Service';
 
@@ -8,7 +8,7 @@ export class ManagementService extends IMService {
 		this.client.on('messageReactionRemove', this.onMessageReactionRemove.bind(this));
 	}
 
-	public async onMessageReactionAdd(message: PossiblyUncachedMessage, emoji: Emoji, userId: string) {
+	public async onMessageReactionAdd(message: PossiblyUncachedMessage, emoji: Emoji, member: Member) {
 		if (message.channel instanceof TextChannel) {
 			const reactionRoles = await this.client.cache.reactionRoles.get(message.channel.guild.id);
 
@@ -24,7 +24,7 @@ export class ManagementService extends IMService {
 				}
 			});
 			if (reactionRole) {
-				await this.client.addGuildMemberRole(message.channel.guild.id, userId, reactionRole.roleId);
+				await this.client.addGuildMemberRole(message.channel.guild.id, member.id, reactionRole.roleId);
 			}
 		}
 	}

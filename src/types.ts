@@ -18,13 +18,13 @@ export interface BasicUser {
 
 export enum GuildPermission {
 	ADMINISTRATOR = 'administrator',
-	READ_MESSAGES = 'readMessages',
+	READ_MESSAGES = 'viewChannel',
 	SEND_MESSAGES = 'sendMessages',
 	MANAGE_MESSAGES = 'manageMessages',
 	EMBED_LINKS = 'embedLinks',
 	MANAGE_GUILD = 'manageGuild',
 	MANAGE_CHANNELS = 'manageChannels',
-	VIEW_AUDIT_LOGS = 'viewAuditLogs',
+	VIEW_AUDIT_LOGS = 'viewAuditLog',
 	MANAGE_ROLES = 'manageRoles',
 	CREATE_INSTANT_INVITE = 'createInstantInvite',
 	BAN_MEMBERS = 'banMembers',

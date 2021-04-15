@@ -1,4 +1,4 @@
-import { Emoji, GuildChannel, Message, TextChannel } from 'eris';
+import { Emoji, GuildChannel, Member, Message, TextChannel } from 'eris';
 
 import { IMClient } from '../../../client';
 import { beautify, guildSettingsInfo, SettingsGroup, SettingsInfo, toDbValue } from '../../../settings';
@@ -356,7 +356,7 @@ export default class extends Command {
 		return new Promise<any>(async (resolve, reject) => {
 			let timeOut: NodeJS.Timer;
 
-			const func = async (userMsg: Message, emoji: Emoji, userId: string) => {
+			const func = async (userMsg: Message, emoji: Emoji, { id: userId }: Member) => {
 				clearTimeout(timeOut);
 				this.client.removeListener('messageCreate', func);
 				this.client.removeListener('messageReactionAdd', func);
@@ -447,7 +447,7 @@ export default class extends Command {
 	private async awaitChoice(authorId: string, msg: Message) {
 		return new Promise<'prev' | 'next' | 'up' | number | void>(async (resolve) => {
 			let timeOut: NodeJS.Timer;
-			const func = async (resp: Message, emoji: Emoji, userId: string) => {
+			const func = async (resp: Message, emoji: Emoji, { id: userId }: Member) => {
 				if (resp.id !== msg.id || authorId !== userId) {
 					return;
 				}

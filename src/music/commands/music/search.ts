@@ -1,4 +1,4 @@
-import { Emoji, Message, VoiceChannel } from 'eris';
+import { Emoji, Member, Message, VoiceChannel } from 'eris';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -110,7 +110,7 @@ export default class extends Command {
 	private async awaitChoice(authorId: string, msg: Message) {
 		return new Promise<number>(async (resolve) => {
 			let timeOut: NodeJS.Timer;
-			const func = async (resp: Message, emoji: Emoji, userId: string) => {
+			const func = async (resp: Message, emoji: Emoji, { id: userId }: Member) => {
 				if (resp.id !== msg.id || authorId !== userId) {
 					return;
 				}

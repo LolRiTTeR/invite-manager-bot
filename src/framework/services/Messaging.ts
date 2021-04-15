@@ -1,5 +1,5 @@
 import { captureException, withScope } from '@sentry/node';
-import { Embed, EmbedOptions, Emoji, Guild, GuildChannel, Message, TextableChannel, User } from 'eris';
+import { Embed, EmbedOptions, Emoji, Guild, GuildChannel, Member, Message, TextableChannel, User } from 'eris';
 import i18n from 'i18n';
 import moment from 'moment';
 
@@ -340,7 +340,7 @@ export class MessagingService extends IMService {
 		if (page > 0 || page < maxPage - 1) {
 			let timer: NodeJS.Timer;
 
-			const func = async (msg: Message, emoji: Emoji, userId: string) => {
+			const func = async (msg: Message, emoji: Emoji, { id: userId }: Member) => {
 				if (msg.id !== prevMsg.id || userId !== author.id) {
 					return;
 				}
