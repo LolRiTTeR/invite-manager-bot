@@ -355,10 +355,13 @@ export default class extends Command {
 		return new Promise<any>(async (resolve, reject) => {
 			let timeOut: NodeJS.Timer;
 
-			const func = async (userMsg: Message, emoji: Emoji, { id: userId }: Member) => {
+			const func = async (userMsg: Message, emoji: Emoji, member: Member) => {
 				clearTimeout(timeOut);
 				this.client.removeListener('messageCreate', func);
 				this.client.removeListener('messageReactionAdd', func);
+
+				let userId: string;
+				if (member) userId = member.id;
 
 				if (emoji && userId === authorId) {
 					await msg.removeReaction(emoji.name, userId);
@@ -446,7 +449,10 @@ export default class extends Command {
 	private async awaitChoice(authorId: string, msg: Message) {
 		return new Promise<'prev' | 'next' | 'up' | number | void>(async (resolve) => {
 			let timeOut: NodeJS.Timer;
-			const func = async (resp: Message, emoji: Emoji, { id: userId }: Member) => {
+			const func = async (resp: Message, emoji: Emoji, member: Member) => {
+				let userId: string;
+				if (member) userId = member.id;
+
 				if (resp.id !== msg.id || authorId !== userId) {
 					return;
 				}
