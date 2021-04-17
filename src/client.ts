@@ -465,7 +465,7 @@ export class IMClient extends Client {
 					'To get help setting up join messages or changing the prefix, please run the `!setup` command.\n\n' +
 					'You can see a list of all commands using the `!help` command.\n\n' +
 					`That's it! Enjoy the bot and if you have any questions feel free to join our support server!\n` +
-					'https://discord.gg/2eTnsVM'
+					'https://discord.gg/kQQmfNCTzm'
 			)
 			.catch(() => undefined);
 	}
