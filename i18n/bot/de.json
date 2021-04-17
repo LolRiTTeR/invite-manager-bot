@@ -36,8 +36,8 @@
 			"numberTooSmall": "Die von dir angegebene Zahl ist zu klein."
 		},
 		"addRank": {
-			"created": "Added rank {{{ role }}} which needs {{ invites }} invites and has the following description: {{ description }}",
-			"roleTooHigh": "Diese rolle {{{ role }}} ist höher als meine Rolle ({{{ myRole }}}) deshalb kann ich diesem Mitglied diese Rolle nicht zuordnen.",
+			"created": "Rang {{{ role }}} hinzugefügt. Er benötigt {{ invites }} Einladungen und hat diese Beschreibung: {{ description }}",
+			"roleTooHigh": "Diese Rolle {{{ role }}} ist höher als meine Rolle ({{{ myRole }}}) deshalb kann ich diesem Mitglied diese Rolle nicht zuordnen.",
 			"self": {
 				"args": {
 					"info": "Eine Beschreibung die Nutzer sehen damit sie mehr über den Rang wissen.",
@@ -46,12 +46,12 @@
 				},
 				"description": "Füge einen neuen Rang hinzu."
 			},
-			"updated": "Rank {{{ role }}} updated: Now needs {{ invites }} invites and has the following description: {{ description }}"
+			"updated": "Rang {{{ role }}} aktualisiert: Nun werden {{ invites }} Einladungen benötigt. Die Beschreibung lautet: {{ description }}"
 		},
 		"ban": {
 			"canNotBan": "Ich kann diesen Nutzer nicht verbannen.",
 			"done": "Dieser Nutzer wurde erfolgreich gebannt.",
-			"error": "Es ist ein Fehler aufgetreten beim Verbannen des Benutzers:\n{{ error }}",
+			"error": "Es ist ein Fehler aufgetreten beim verbannen des Benutzers:\n{{ error }}",
 			"missingPermissions": "Ich benötige die 'Mitglieder bannen' Berechtigung, um diesen Befehl auszuführen.",
 			"self": {
 				"args": {
@@ -61,48 +61,48 @@
 				},
 				"description": "Bannt ein Mitglied vom Server.",
 				"flags": {
-					"deleteMessageDays": "If specified will delete messages by the banned members this many days back."
+					"deleteMessageDays": "Wenn angegeben, dann werden alle Nachrichten dieses Mitglieds mit dieser Anzahl an Tagen gelöscht."
 				}
 			},
-			"canNotSoftBan": "I cannot softban this user."
+			"canNotSoftBan": "Ich kann diesen Nutzer nicht softbannen."
 		},
 		"botConfig": {
-			"canNotClear": "The config setting **{{ key }}** can not be cleared. You can use `{{ prefix }}botConfig {{ key }} default` to reset it to the default value.",
+			"canNotClear": "Die Konfiguration **{{ key }}** kann nicht geleert werden. Du kannst `{{ prefix }}botConfig {{ key }} default` verwenden um es auf den Standardwert zurückzusetzen.",
 			"changed": {
-				"text": "This config has been changed.\nUse `{{ prefix }}botConfig {{ key }} <value>` to change it again.\nUse `{{ prefix }}botConfig {{ key }} default` to reset it to the default."
+				"text": "Diese Konfiguration wurde geändert.\Nutze `{{ prefix }}botConfig {{ key }} <value>` um sie erneut zu ändern.\Nutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen."
 			},
 			"current": {
-				"clear": "Use `{{ prefix }}botConfig {{ key }} none` to clear it.",
-				"notSet": "This config is currently **not** set.\nUse `{{ prefix }}config {{ key }} <value>` to set it.",
-				"text": "This config is currently set.\nUse `{{ prefix }}botConfig {{ key }} <value>` to change it.\nUse `{{ prefix }}botConfig {{ key }} default` to reset it to the default.",
+				"clear": "Nutze `{{ prefix }}botConfig {{ key }} none` zum leeren.",
+				"notSet": "Diese Konfiguration ist aktuell **nicht** gesetzt.\nNutze `{{ prefix }}config {{ key }} <value>` zum ändern.",
+				"text": "Diese Konfiguration ist bereits gesetzt.\nNutze `{{ prefix }}botConfig {{ key }} <value>` zum ändern.\Nutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen.",
 				"title": "Current Value"
 			},
-			"customOnly": "**This command is only available for custom bots.**\nIf you are looking for your server config, please use the `{{ prefix }}config` command.\n\nVisit our patreon page to learn more about how you can get your own custom bot: {{{ patreon }}}",
+			"customOnly": "**Dieser Befehl ist nur für Custom Bots verfügbar.**\nWenn du nach der Serverkonfiguration suchst, nutze den `{{ prefix }}config` Befehl.\n\nBesuche unsere Patreon Seite um mehr darüber herauszufinden, wie man einen Custom Bot erhält: {{{ patreon }}}",
 			"invalid": {
-				"twitchOnly": "Discord only supports twitch.tv URLs for the streaming activity."
+				"twitchOnly": "Discord unterstützt nur twitch.tv URLs als Streamingaktivität."
 			},
 			"new": {
-				"title": "New Value"
+				"title": "Neuer Wert"
 			},
-			"none": "None",
-			"notSet": "These settings are not set",
+			"none": "Nichts",
+			"notSet": "Diese Einstellungen sind nicht gesetzt",
 			"preview": {
-				"nextMessage": "<See next message>",
-				"title": "Preview"
+				"nextMessage": "<Siehe nächste Nachricht>",
+				"title": "Vorschau"
 			},
 			"previous": {
-				"title": "Previous Value"
+				"title": "Vorheriger Wert"
 			},
-			"sameValue": "This config is already set to that value.",
+			"sameValue": "Diese Konfiguration hat bereits diesen Wert.",
 			"self": {
 				"args": {
-					"key": "The bot config setting which you want to show/change.",
-					"value": "The new value of the setting."
+					"key": "Die Konfiguration, die du anzeigen/ändern willst",
+					"value": "Der neue Wert der Konfiguration"
 				},
-				"description": "Show and change the config of the bot."
+				"description": "Konfiguration des Bots anzeigen/ändern."
 			},
-			"text": "Below are all the config settings of your bot.\nUse `{{ prefix }}botConfig <key>` to view a single setting\nUse `{{ prefix }}botConfig <key> <value>` to set the config <key> to <value>",
-			"title": "Custom Bot Config"
+			"text": "Nachfolgend findest du alle Einstellmöglichkeiten des Bots.\nNutze `{{ prefix }}botConfig <key>` um eine einzelne Einstellung anzusehen\nNutze `{{ prefix }}botConfig <key> <value>` um die Konfiguration <key> auf den Wert <value> zu setzen",
+			"title": "Custom Bot Konfiguration"
 		},
 		"botInfo": {
 			"guilds": "Gilden",
@@ -124,47 +124,47 @@
 			"version": "Version"
 		},
 		"caseDelete": {
-			"done": "Case deleted",
-			"notFound": "Case not found",
+			"done": "Fall gelöscht",
+			"notFound": "Fall nicht gefunden",
 			"self": {
 				"args": {
-					"caseNumber": "Case number",
-					"reason": "The reason for removing the case."
+					"caseNumber": "Fallnummer",
+					"reason": "Der Grund, warum gelöscht wird."
 				},
-				"description": "Delete a specific case."
+				"description": "Einen spezifischen Fall löschen."
 			},
-			"title": "Case #{{ id }}"
+			"title": "Fall #{{ id }}"
 		},
 		"caseView": {
-			"notFound": "Case not found",
+			"notFound": "Fall nicht gefunden",
 			"self": {
 				"args": {
-					"caseNumber": "Case number"
+					"caseNumber": "Fallnummer"
 				},
-				"description": "View info about a specific case."
+				"description": "Einen spezifischen Fall anzeigen."
 			},
-			"strike": "{{{ member }}} received {{{ amount }}} strikes for violating the {{{ violation }}} rule {{{ date }}}.",
-			"title": "Case #{{ id }}"
+			"strike": "{{{ member }}} erhielt {{{ amount }}} Strikes aufgrund der Regel {{{ violation }}} {{{ date }}}.",
+			"title": "Fall #{{ id }}"
 		},
 		"check": {
 			"noHistory": "Benutzer hat keine Einträge.",
 			"punishments": {
-				"entry": "{{ punishment }} because he had {{ amount }} strikes {{ date }}",
+				"entry": "{{ punishment }} weil er {{ amount }} Strikes hatte {{ date }}",
 				"title": "Bestrafungen",
-				"total": "Punishments Total",
-				"totalText": "{{{ amount }}} punishments."
+				"total": "Alle Bestrafungen",
+				"totalText": "{{{ amount }}} Bestrafungen."
 			},
 			"self": {
 				"args": {
-					"user": "Benutzer zum Überpfrüfen."
+					"user": "Benutzer zum überprüfen."
 				},
 				"description": "Zeige Verletzungen der Regeln und Bestrafungen des Benutzers."
 			},
 			"strikes": {
-				"entry": "#{{ id }} - Received {{ amount }} strikes for {{ violation }} {{ date }}",
+				"entry": "#{{ id }} - Erhielt {{ amount }} Strikes für {{ violation }} {{ date }}",
 				"title": "Strikes",
 				"total": "Strikes Total",
-				"totalText": "Received {{{ total }}} strikes for {{{ amount }}} violations."
+				"totalText": "Erhielt {{{ total }}} Strikes für {{{ amount }}} Verletzungen der Regeln."
 			}
 		},
 		"clean": {
@@ -173,45 +173,45 @@
 			"self": {
 				"args": {
 					"member": "User wessen Nachrichten entfernt werden.",
-					"numberOfMessages": "Number of messages that will be searched.",
+					"numberOfMessages": "Anzahl an Nachrichten die gesucht werden sollen.",
 					"quantity": "Wieviele Nachrichten sollen entfernt werden.",
-					"type": "The type of messages that will be deleted."
+					"type": "Der Typ der Nachricht die gelöscht werden sollen."
 				},
-				"description": "Entferne bestimmte nachrichten in einem Kanal."
+				"description": "Entferne bestimmte Nachrichten in einem Kanal."
 			},
-			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 sekunden gelöscht.",
+			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 Sekunden gelöscht.",
 			"title": "Gelöschte Nachrichten",
-			"textReactions": "Deleted {{ amount }} messages containing reactions."
+			"textReactions": "{{ amount }} Nachrichten mit Reaktionen gelöscht."
 		},
 		"cleanShort": {
 			"self": {
 				"args": {
-					"maxTextLength": "All messages shorter than this will be deleted.",
-					"numberOfMessages": "Number of messages that will be searched."
+					"maxTextLength": "Alle Nachrichten kürzer als diese werden gelöscht.",
+					"numberOfMessages": "Anzahl an Nachrichten die gesucht werden sollen."
 				},
-				"description": "Clear short messages"
+				"description": "Kurze Nachrichten entfernen"
 			}
 		},
 		"cleanText": {
 			"self": {
 				"args": {
-					"numberOfMessages": "Number of messages that will be searched.",
-					"text": "All messages containing this word will be deleted."
+					"numberOfMessages": "Anzahl an Nachrichten die gesucht werden sollen.",
+					"text": "Alle Nachrichten mit diesem Wort werden gelöscht."
 				},
-				"description": "Delete messages containing certain keywords."
+				"description": "Löscht Nachrichten die spezifische Wörter enthalten."
 			}
 		},
 		"clearInvites": {
-			"done": "Einldungen für {{ amount }} Benutzer wurden entfernt.",
+			"done": "Einladungen für {{ amount }} Benutzer wurden entfernt.",
 			"self": {
 				"args": {
-					"clearBonus": "Pass `true` if you want to remove bonus invites, otherwise `false` (default).",
-					"user": "Der Benutzer wessen Einladungen entfernt werden.Wenn nicht angeben werden einladungen aller Benutzer entfernt."
+					"clearBonus": "Gebe `true` an wenn du Bonus Einladungen entfernen möchtest, ansonten nutze `false` (default).",
+					"user": "Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben werden einladungen aller Benutzer entfernt."
 				},
-				"description": "Entferne Einladungen des servers/eines Benutzers.",
+				"description": "Entferne Einladungen des Servers/eines Benutzers.",
 				"flags": {
-					"clearBonus": "Add this flag to clear bonus invites aswell. Otherwise bonus invites are left untouched.",
-					"date": "The date start at which invites should be counted. Default is today."
+					"clearBonus": "Füge diese Option hinzu um auch Bonus Einladungen zu löschen. Falls nicht werden Bonus Einladungen nicht verändert.",
+					"date": "Das Datum ab welchem Tag Einladungen gezählt werden sollen. Standardmäßig wird heute verwendet."
 				}
 			}
 		},
@@ -801,7 +801,7 @@
 					"punishment": "Typ der Bestrafung welche benutzt wird.",
 					"strikes": "Anzahl der Regel verletzungen um diese Strafe auszulösen."
 				},
-				"description": "Stelle eine Bestrafung ein wenn eine bestimmte anzahl am Regelverletzungen erreicht wird."
+				"description": "Stelle eine Bestrafung ein wenn eine bestimmte Anzahl an Regelverletzungen erreicht wird."
 			},
 			"text": "{{ strikes }} Regelverletzungen werden bestraft mit einem {{ punishment }}",
 			"title": "Bestrafungs Einstellungen.",
@@ -812,32 +812,32 @@
 			"invalidQuantity": "Du musst eine Positive Anzahl an Nachrichten zum entfernen angeben.",
 			"self": {
 				"args": {
-					"member": "Benutzer wessen nachricht gelöscht wird.",
+					"member": "Benutzer wessen Nachrichten gelöscht werden.",
 					"quantity": "Wieviele Nachrichten sollen entfernt werden.",
-					"user": "User whose messages are deleted."
+					"user": "Nutzer dessen Nachrichten gelöscht werden sollen."
 				},
 				"description": "Entferne Nachrichten in einem Kanal."
 			},
-			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 sekunden gelöscht.",
-			"title": "Nachriten gelöscht"
+			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 Sekunden gelöscht.",
+			"title": "Nachrichten gelöscht"
 		},
 		"purgeUntil": {
 			"error": "Fehler",
-			"msgNotFound": "Die messageID konnte in den letzten 100 Nachrichten nicht gefunden werden.",
+			"msgNotFound": "Die Nachrichten ID konnte in den letzten 100 Nachrichten nicht gefunden werden.",
 			"none": "Keine Nachrichten zum löschen gefunden.",
 			"self": {
 				"args": {
 					"messageID": "Letzte Nachrichten ID die entfernt werden soll."
 				},
-				"description": "Entferne nachrichten bis zu einer bestimmten nachricht."
+				"description": "Entferne Nachrichten bis zu einer bestimmten Nachricht."
 			},
-			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 sekunden gelöscht.",
+			"text": "Es wurden {{ amount }} Nachrichten gelöscht.\nDiese Nachricht wird in 5 Sekunden gelöscht.",
 			"title": "Lösche Nachrichten",
-			"inProgress": "Purging..."
+			"inProgress": "Lösche..."
 		},
 		"ranks": {
-			"entry": "{{{ role }}}: **{{ numInvites }} invites** {{ description }}",
-			"none": "Keine Ränge wurden jetzt erstellt",
+			"entry": "{{{ role }}}: **{{ numInvites }} Einladungen** {{ description }}",
+			"none": "Es wurde noch kein Rang erstellt",
 			"self": {
 				"description": "Zeigt alle Ränge.",
 				"args": {
@@ -849,44 +849,44 @@
 		"removeInvites": {
 			"self": {
 				"args": {
-					"amount": "The amount of invites to remove.",
-					"reason": "The reason for removing the invites.",
-					"user": "The user to remove the invites from."
+					"amount": "Die Anzahl an Einladungen die entfernt werden sollen.",
+					"reason": "Der Grund für das entfernen der Einladungen.",
+					"user": "Der Benutzer von welchem die Einladungen entfernt werden sollen."
 				},
-				"description": "Removes a specified amount of invites from a user."
+				"description": "Entfernt die angegebene Anzahl an Einladungen eines Benutzers."
 			}
 		},
 		"removeRank": {
-			"done": "Rang {{role }} entfernt.",
+			"done": "Rang {{ role }} entfernt.",
 			"rankNotFound": "Rang {{ role }} gibt es nicht",
 			"self": {
 				"args": {
 					"rank": "Der Benutzer für den der Rang entfernt werden soll."
 				},
-				"description": "Entferne einen Rang."
+				"description": "Entferne einen Rang eines Benutzers."
 			}
 		},
 		"restoreInvites": {
 			"done": "Restored invites",
 			"self": {
 				"args": {
-					"user": "Der Benutzer wessen Einladungen zurückgegeben werden.Wenn kein Benutzer angegeben wird werden alle Einladungen zurückgegeben."
+					"user": "Der Benutzer wessen Einladungen wiederhergestellt werden. Wenn kein Benutzer angegeben wird werden alle Einladungen wiederhergestellt."
 				},
-				"description": "Erhalte alle vorher entfernten Einladungen zurück."
+				"description": "Alle vorher entfernen Einladungen wiederherstellen."
 			}
 		},
 		"setup": {
 			"faq": {
-				"text": "A complete guide on setting up the bot can be found here: https://docs.invitemanager.co/",
-				"title": "Fragen und antworten und noch mehr"
+				"text": "Eine komplette Anleitung um den Bot einzurichten findest du hier: https://docs.invitemanager.co/",
+				"title": "Fragen, Antworten und mehr"
 			},
 			"help": {
-				"text": "If you need help or have feedback, you can either use the `!feedback` command or join our discord support server: {{{ link }}}",
+				"text": "Wenn du Hilfe benötigst oder Feedback abgeben willst, nutze `!feedback` oder komm auf unseren Support Server: {{{ link }}}",
 				"title": "Hilfe"
 			},
 			"joinLeave": {
-				"text": "If you want to display join and or leave messages in one of your channels, you have to configure that channel by doing `!config joinMessageChannel #channel` or `!config leaveMessageChannel #channel`. Make sure the bot has write permissions in those channels!",
-				"title": "Setzen Sie Join und lassen Sie Message Chann"
+				"text": "Wenn du Beitritts- und Verlassensnachrichten in einem Kanal anzeigen lassen willst, nutze `!config joinMessageChannel #channel` oder `!config leaveMessageChannel #channel`. Stelle sicher, dass der Bot Schreibrechte in diesen Kanälen hat!",
+				"title": "Beitritts- und Verlassensnachrichten"
 			},
 			"manageGuild": {
 				"text": "Dem Bot fehlt die \"Server verwalten\" Berechtigung. Diese Berechtigung ist erforderlich um die Einladungen des Servers zu lesen. Ohne diese Berechtigung werden die Einladungsmeldungen nicht funktionieren.",
@@ -897,21 +897,21 @@
 				"title": "Fehlende Berechtigung: Rollen verwalten"
 			},
 			"prefix": {
-				"text": "Du kannst den Präfix ändern, indem du den Befehl `!config prefix !` Nutzt.\nWenn du den aktuellen Präfix nicht kennst kannst du ihn herausfinden, indem du den Befehl `@InviteManager config prefix` Nutzt.",
+				"text": "Du kannst den Präfix ändern, indem du den Befehl `!config prefix !` nutzt.\nWenn du den aktuellen Präfix nicht kennst kannst du ihn herausfinden, indem du den Befehl `@InviteManager config prefix` nutzt.",
 				"title": "Das Präfix ändern"
 			},
 			"premium": {
-				"text": "If you would like to support the development of this bot, you can do so by supporting us on Patreon: {{{ link }}}\n\nDepending on the tier, you will get some additional features.",
+				"text": "Wenn du die Entwicklung des Bots unterstützen möchtest, kannst du das gerne über Patreon tun: {{{ link }}}\n\nAbhängig vom Patreon-Level erhältst du extra Features.",
 				"title": "Premium"
 			},
 			"self": {
 				"description": "Hilft den Bot einzustellen und sucht nach Problemen (z.B. fehlende Rechte)"
 			},
-			"text": "Nach dem Einladen diese Bots werden alle Einladungen automatisch zugeordnet.",
-			"title": "Einrichten InviteManager",
+			"text": "Nach dem Einladen dieses Bots werden alle Einladungen automatisch zugeordnet.",
+			"title": "Einrichtung vom InviteManager",
 			"viewAuditLogs": {
-				"text": "Der Bot hat nicht die `View Audit Logs` erlaubnis.Diese erlaublnis ermöglicht dem Bot einladungen besser zu zu ordnen.",
-				"title": "Fehlenden Berechtigung:View Audit Logs"
+				"text": "Der Bot hat nicht die `View Audit Logs` Berechtigung. Diese Berechtigung ermöglicht dem Bot Einladungen besser zuzuordnen.",
+				"title": "Fehlenden Berechtigung: View Audit Logs"
 			}
 		},
 		"softBan": {
