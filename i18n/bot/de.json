@@ -69,12 +69,12 @@
 		"botConfig": {
 			"canNotClear": "Die Konfiguration **{{ key }}** kann nicht geleert werden. Du kannst `{{ prefix }}botConfig {{ key }} default` verwenden um es auf den Standardwert zurückzusetzen.",
 			"changed": {
-				"text": "Diese Konfiguration wurde geändert.\Nutze `{{ prefix }}botConfig {{ key }} <value>` um sie erneut zu ändern.\Nutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen."
+				"text": "Diese Konfiguration wurde geändert.\nNutze `{{ prefix }}botConfig {{ key }} <value>` um sie erneut zu ändern.\nNutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen."
 			},
 			"current": {
 				"clear": "Nutze `{{ prefix }}botConfig {{ key }} none` zum leeren.",
 				"notSet": "Diese Konfiguration ist aktuell **nicht** gesetzt.\nNutze `{{ prefix }}config {{ key }} <value>` zum ändern.",
-				"text": "Diese Konfiguration ist bereits gesetzt.\nNutze `{{ prefix }}botConfig {{ key }} <value>` zum ändern.\Nutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen.",
+				"text": "Diese Konfiguration ist bereits gesetzt.\nNutze `{{ prefix }}botConfig {{ key }} <value>` zum ändern.\nNutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen.",
 				"title": "Current Value"
 			},
 			"customOnly": "**Dieser Befehl ist nur für Custom Bots verfügbar.**\nWenn du nach der Serverkonfiguration suchst, nutze den `{{ prefix }}config` Befehl.\n\nBesuche unsere Patreon Seite um mehr darüber herauszufinden, wie man einen Custom Bot erhält: {{{ patreon }}}",
