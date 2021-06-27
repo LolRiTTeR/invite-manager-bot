@@ -4,36 +4,35 @@ import { IMClient } from '../../../client';
 import { BotCommand, CommandGroup } from '../../../types';
 import { Command, Context } from '../Command';
 
-// Developers
-const developers: string[] = ['Andy#1801', 'Valandur#3581', 'santjum#0450', 'legendarylol#8215'];
-
-// Staff
-const moderators: string[] = [
-	'malok#8571',
+const admins: string[] = [
 	'Alan Wen#3344',
-	'GTA Tetris#4587',
-	'𝕸σσɳ유#2296',
-	'SemiMute#2018',
-	'Mennoplays#0001'
+	'LolRiTTeR#1258'
 ];
 
-const staff: string[] = ['Audio#0265', 'Chris.#0006', 'Gugu72#0016'];
+const managers: string[] = [
+	'Menno#0002',
+	'Ｍｏｏｎ ?#2296',
+	'Astryx#4587',
+	'malok#0002'
+];
+
+const mods: string[] = [
+	'Gugu72#0016',
+	'Simplee.#5460',
+	'JWEi#9873'
+];
+
+const staff: string[] = [
+	'SPAZ#0001',
+	'Mob#4040'
+];
+
+const graphic_designer: string[] = [
+	'Danu#4422'
+];
 
 const translators: string[] = [
-	'legendarylol#8215',
-	'Mennoplays#5943',
-	'Simplee ♪ Li .#2222',
-	'サロにぃ/Saroniii#3621',
-	'CyberWhiteBR#7805',
-	'Gugu72#2059',
-	'ImRoyal_Raddar#0001',
-	'Lorio#0666',
-	'Lukas17#2252',
-	'Izmoqwy#0423',
-	'Qbiczeq#3641',
-	'qq1zz (REAL) (New Account)2374#1204',
-	'《Ն·Բ》ĂĆRΣANØ#1391',
-	'• xFalcon#1581'
+	'• xFalcon#0061'
 ];
 
 export default class extends Command {
@@ -51,22 +50,32 @@ export default class extends Command {
 		const embed = this.createEmbed();
 
 		embed.fields.push({
-			name: t('cmd.credits.developers'),
-			value: this.getList(developers)
+			name: t('Community Team'),
+			value: this.getList(managers)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.moderators'),
-			value: this.getList(moderators)
+			name: t('Bot Developers'),
+			value: this.getList(admins)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.staff'),
+			name: t('Moderation Team'),
+			value: this.getList(mods)
+		});
+
+		embed.fields.push({
+			name: t('Support Team'),
 			value: this.getList(staff)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.translators'),
+			name: t('Graphic Designer'),
+			value: this.getList(graphic_designer)
+		});
+
+		embed.fields.push({
+			name: t('Translators'),
 			value: this.getList(translators)
 		});
 
