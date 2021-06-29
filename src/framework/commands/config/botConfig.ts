@@ -36,6 +36,16 @@ export default class extends Command {
 		flags: {},
 		context: Context
 	): Promise<any> {
+		if (message.author.id != '79305800157233152') {
+			const embed = this.createEmbed();
+
+			embed.fields.push({
+				name: `Command disabled`,
+				value: `This command is disabled.`
+			});
+
+			return this.sendReply(message, embed);
+		}
 		const { guild, t } = context;
 
 		if (this.client.type !== 'custom') {
