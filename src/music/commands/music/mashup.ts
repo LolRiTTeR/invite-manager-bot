@@ -27,6 +27,9 @@ export default class extends Command {
 	}
 
 	public async action(message: Message, [videos]: [string], flags: {}, { t, guild }: Context): Promise<any> {
+		if (message.author.id != '79305800157233152') {
+			return this.sendReply(message, `The music feature is disabled.\nPlease use a dedicated music bot like <https://fredboat.com/add>, <https://rythm.fm/> or <https://groovy.bot/invite>`);
+		}
 		// TODO
 		const voiceChannelId = message.member.voiceState.channelID;
 		if (!voiceChannelId) {
