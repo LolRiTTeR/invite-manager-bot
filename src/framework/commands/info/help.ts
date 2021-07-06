@@ -48,7 +48,7 @@ export default class extends Command {
 			});
 			embed.fields.push({
 				name: t('cmd.help.usage.title'),
-				value: '`' + cmd.usage + '`\n\n' + cmd.info
+				value: '`' + cmd.usage.slice(0, -1) + '`\n\n' + cmd.info
 			});
 			if (cmd.aliases.length > 0) {
 				embed.fields.push({

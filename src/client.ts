@@ -471,6 +471,9 @@ export class IMClient extends Client {
 	}
 
 	private async onGuildDelete(guild: Guild): Promise<void> {
+		// We grab the guild from the database so we can keep the banReason, if present
+		const dbGuild = await this.db.getGuild(guild.id);
+
 		// If we're disabled it means the pro bot is in that guild,
 		// so don't delete the guild
 		if (this.disabledGuilds.has(guild.id)) {
@@ -482,13 +485,14 @@ export class IMClient extends Client {
 			return;
 		}
 
-		// Remove the guild (only sets the 'deletedAt' timestamp)
+		// Remove the guild (sets 'deletedAt' timestamp and keeps banReason)
 		await this.db.saveGuilds([
 			{
 				id: guild.id,
 				name: guild.name,
 				icon: guild.iconURL,
 				memberCount: guild.memberCount,
+				banReason: dbGuild.banReason,
 				deletedAt: new Date()
 			}
 		]);
