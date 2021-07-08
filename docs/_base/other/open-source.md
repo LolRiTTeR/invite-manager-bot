@@ -4,4 +4,4 @@
 
 ## §{other.openSource.bot.title}
 
-§{other.openSource.bot.description:["link":"https://github.com/SideProjectGuys/invite-manager-bot"]}
+§{other.openSource.bot.description:["link":"https://github.com/LolRiTTeR/invite-manager-bot"]}
