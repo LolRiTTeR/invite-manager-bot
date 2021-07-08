@@ -1500,7 +1500,7 @@
 				"title": "Invites",
 				"general": {
 					"title": "General",
-					"description": "settings.groups.invites.general.description"
+					"description": "General invite settings, such as join roles"
 				}
 			},
 			"moderation": {
