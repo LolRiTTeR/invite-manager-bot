@@ -12,7 +12,56 @@
 				"title": "Overview"
 			},
 			"customMessages": {
-				"title": "Custom message"
+				"title": "Custom message",
+				"description": "You can customise the join and leave messages with a number of parameters.",
+				"placeholders": {
+					"title": {
+						"small": "placeholders",
+						"large": "Placeholders"
+					},
+					"jumpto": "Jump to",
+					"yes": "yes",
+					"no": "no",
+					"example": "example",
+					"description": "description",
+					"descriptions": {
+						"memberName": "The name of the member that just joined your discord server",
+						"memberId": "The discord ID of the member that just joined your server",
+						"memberMention": "The mention of the member that just joined your discord server (person will be pinged).",
+						"memberFullName": "The username and discriminator of the user that just joined your server",
+						"memberImage": "URL of the avatar of the member",
+						"inviterName": "The name of the inviter",
+						"inviterId": "The discord ID of the inviter",
+						"inviterMention": "The mention of the inviter (person will be pinged)",
+						"inviterFullName": "The username and discriminator of the inviter",
+						"inviterImage": "URL of the avatar of the inviter",
+						"numInvites": "Number of invites the inviter has in total",
+						"numRegularInvites": "Number of invites the inviter has through regular invites",
+						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually(",
+						"numFakeInvites": "Number of fake invites the inviter has",
+						"numLeaveInvites": "Number of invites that were removed because the member left again.",
+						"memberCount": "Number of members your server has in total",
+						"numJoins": "Number of times the user has joined the server",
+						"channelName": "The name of the channel where the invite code was created",
+						"channelMention": "Mention of the channel where the invite code was created",
+						"inviteCode": "Invite code used",
+						"memberCreatedDate": "Date the discord user was created",
+						"memberCreatedDuration": "Duration since the discord user was created",
+						"memberCreatedTimeAgo": "Time the discord user was created",
+						"firstJoinDate": "Date the user joined the server for the first time",
+						"firstJoinDuration": "Duration since the user joined the server for the first time",
+						"firstJoinTimeAgo": "Time the user joined the server for the first time",
+						"previousJoinDate": "Date when the user joined the server the last time",
+						"previousJoinDuration": "Duration since when the user joined the server the last time",
+						"previousJoinTimeAgo": "Time when the user joined the server the last time",
+						"joinedAtDate": "Date when the user joined",
+						"joinedAtDuration": "Duration since when the user joined",
+						"joinedAtTimeAgo": "Time when the user joined"
+					}
+				},
+				"content": "You can set a custom join or leave message by setting the config:\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\nor\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\nA message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.\n\nSo if we want the message to say\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\nwe can easily do that by replacing all the names and the number with placeholders:\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\nSo you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.",
+				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](modules/invites/examples.md)",
+				"endingParagraph": "Please see the [examples page](/examples.md) to see what kind of messages you can make!"
 			}
 		},
 		"moderation": {
