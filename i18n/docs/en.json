@@ -197,5 +197,14 @@
 		"settings": {
 			"title": "Configs / Settings"
 		}
+	},
+	"module": {
+		"invites": {
+			"customMessages": {
+				"content": "module.invites.customMessages.content",
+				"premiumNote": "module.invites.customMessages.premiumNote",
+				"endingParagraph": "module.invites.customMessages.endingParagraph"
+			}
+		}
 	}
 }

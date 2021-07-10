@@ -12,7 +12,53 @@
 				"title": "Gambaran"
 			},
 			"customMessages": {
-				"title": "Pesan khusus"
+				"title": "Pesan khusus",
+				"placeholders": {
+					"jumpto": "modules.invites.customMessages.placeholders.jumpto",
+					"title": {
+						"small": "modules.invites.customMessages.placeholders.title.small",
+						"large": "modules.invites.customMessages.placeholders.title.large"
+					},
+					"example": "modules.invites.customMessages.placeholders.example",
+					"description": "modules.invites.customMessages.placeholders.description",
+					"yes": "modules.invites.customMessages.placeholders.yes",
+					"descriptions": {
+						"memberName": "modules.invites.customMessages.placeholders.descriptions.memberName",
+						"memberId": "modules.invites.customMessages.placeholders.descriptions.memberId",
+						"memberMention": "modules.invites.customMessages.placeholders.descriptions.memberMention",
+						"memberFullName": "modules.invites.customMessages.placeholders.descriptions.memberFullName",
+						"memberImage": "modules.invites.customMessages.placeholders.descriptions.memberImage",
+						"inviterName": "modules.invites.customMessages.placeholders.descriptions.inviterName",
+						"inviterId": "modules.invites.customMessages.placeholders.descriptions.inviterId",
+						"inviterMention": "modules.invites.customMessages.placeholders.descriptions.inviterMention",
+						"inviterFullName": "modules.invites.customMessages.placeholders.descriptions.inviterFullName",
+						"inviterImage": "modules.invites.customMessages.placeholders.descriptions.inviterImage",
+						"numInvites": "modules.invites.customMessages.placeholders.descriptions.numInvites",
+						"numRegularInvites": "modules.invites.customMessages.placeholders.descriptions.numRegularInvites",
+						"numBonusInvites": "modules.invites.customMessages.placeholders.descriptions.numBonusInvites",
+						"numFakeInvites": "modules.invites.customMessages.placeholders.descriptions.numFakeInvites",
+						"numLeaveInvites": "modules.invites.customMessages.placeholders.descriptions.numLeaveInvites",
+						"memberCount": "modules.invites.customMessages.placeholders.descriptions.memberCount",
+						"numJoins": "modules.invites.customMessages.placeholders.descriptions.numJoins",
+						"channelName": "modules.invites.customMessages.placeholders.descriptions.channelName",
+						"channelMention": "modules.invites.customMessages.placeholders.descriptions.channelMention",
+						"inviteCode": "modules.invites.customMessages.placeholders.descriptions.inviteCode",
+						"memberCreatedDate": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDate",
+						"memberCreatedDuration": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDuration",
+						"memberCreatedTimeAgo": "modules.invites.customMessages.placeholders.descriptions.memberCreatedTimeAgo",
+						"firstJoinDate": "modules.invites.customMessages.placeholders.descriptions.firstJoinDate",
+						"firstJoinDuration": "modules.invites.customMessages.placeholders.descriptions.firstJoinDuration",
+						"firstJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.firstJoinTimeAgo",
+						"previousJoinDate": "modules.invites.customMessages.placeholders.descriptions.previousJoinDate",
+						"previousJoinDuration": "modules.invites.customMessages.placeholders.descriptions.previousJoinDuration",
+						"previousJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.previousJoinTimeAgo",
+						"joinedAtDate": "modules.invites.customMessages.placeholders.descriptions.joinedAtDate",
+						"joinedAtDuration": "modules.invites.customMessages.placeholders.descriptions.joinedAtDuration",
+						"joinedAtTimeAgo": "modules.invites.customMessages.placeholders.descriptions.joinedAtTimeAgo"
+					},
+					"no": "modules.invites.customMessages.placeholders.no"
+				},
+				"description": "modules.invites.customMessages.description"
 			}
 		},
 		"moderation": {
@@ -147,6 +193,15 @@
 		},
 		"settings": {
 			"title": "Configs / Settings"
+		}
+	},
+	"module": {
+		"invites": {
+			"customMessages": {
+				"content": "module.invites.customMessages.content",
+				"premiumNote": "module.invites.customMessages.premiumNote",
+				"endingParagraph": "module.invites.customMessages.endingParagraph"
+			}
 		}
 	}
 }

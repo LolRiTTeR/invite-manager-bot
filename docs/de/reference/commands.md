@@ -88,20 +88,20 @@ This argument expects a duration. The following duration types are supported:
 
 ### Invites
 
-| Command                           | Description                                            | Usage                                                            |
-| --------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------- |
-| [addInvites](#addInvites)         | Entfernt/Fügt Einladungen von/zu einem Mitglied hinzu. | !addInvites \<user\> \<amount\> [reason]                         |
-| [clearInvites](#clearInvites)     | Entferne Einladungen des servers/eines Benutzers.      | !clearInvites [-d value\|--date=value][-cb\|--clearbonus] [user] |
-| [createInvite](#createInvite)     | Erstellt einen einzigartigen Einladungs Code.          | !createInvite \<name\> [channel]                                 |
-| [info](#info)                     | Zeigt Informationen über einen bestimmten Benutzer.    | !info \<user\> [details][page]                                   |
-| [inviteCodes](#inviteCodes)       | Erhalte eine Lliste aller Invite codes.                | !inviteCodes                                                     |
-| [inviteDetails](#inviteDetails)   | Shows details about where your invites are from.       | !inviteDetails [user]                                            |
-| [invites](#invites)               | Zeigt persönliche Einladungen.                         | !invites [user]                                                  |
-| [leaderboard](#leaderboard)       | Zeigt Benutzer mit meissten Einladungen.               | !leaderboard [page]                                              |
-| [removeInvites](#removeInvites)   | Removes a specified amount of invites from a user.     | !removeInvites \<user\> \<amount\> [reason]                      |
-| [restoreInvites](#restoreInvites) | Erhalte alle vorher entfernten Einladungen zurück.     | !restoreInvites [user]                                           |
-| [subtractFakes](#subtractFakes)   | Entferne Fake Einladungen von allen Benutzern.         | !subtractFakes                                                   |
-| [subtractLeaves](#subtractLeaves) | Entferne Leaves von allen Benutzern.                   | !subtractLeaves                                                  |
+| Command                           | Description                                                    | Usage                                                            |
+| --------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [addInvites](#addInvites)         | Entfernt/Fügt Einladungen von/zu einem Mitglied hinzu.         | !addInvites \<user\> \<amount\> [reason]                         |
+| [clearInvites](#clearInvites)     | Entferne Einladungen des Servers/eines Benutzers.              | !clearInvites [-d value\|--date=value][-cb\|--clearbonus] [user] |
+| [createInvite](#createInvite)     | Erstellt einen einzigartigen Einladungs Code.                  | !createInvite \<name\> [channel]                                 |
+| [info](#info)                     | Zeigt Informationen über einen bestimmten Benutzer.            | !info \<user\> [details][page]                                   |
+| [inviteCodes](#inviteCodes)       | Erhalte eine Lliste aller Invite codes.                        | !inviteCodes                                                     |
+| [inviteDetails](#inviteDetails)   | Shows details about where your invites are from.               | !inviteDetails [user]                                            |
+| [invites](#invites)               | Zeigt persönliche Einladungen.                                 | !invites [user]                                                  |
+| [leaderboard](#leaderboard)       | Zeigt Benutzer mit meissten Einladungen.                       | !leaderboard [page]                                              |
+| [removeInvites](#removeInvites)   | Entfernt die angegebene Anzahl an Einladungen eines Benutzers. | !removeInvites \<user\> \<amount\> [reason]                      |
+| [restoreInvites](#restoreInvites) | Alle vorher entfernen Einladungen wiederherstellen.            | !restoreInvites [user]                                           |
+| [subtractFakes](#subtractFakes)   | Entferne Fake Einladungen von allen Benutzern.                 | !subtractFakes                                                   |
+| [subtractLeaves](#subtractLeaves) | Entferne Leaves von allen Benutzern.                           | !subtractLeaves                                                  |
 
 ### Ranks
 
@@ -110,13 +110,13 @@ This argument expects a duration. The following duration types are supported:
 | [addRank](#addRank)       | Füge einen neuen Rang hinzu.                  | !addRank \<role\> \<invites\> [info] |
 | [fixRanks](#fixRanks)     | Deletes any ranks where the role was deleted. | !fixRanks                            |
 | [ranks](#ranks)           | Zeigt alle Ränge.                             | !ranks [page]                        |
-| [removeRank](#removeRank) | Entferne einen Rang.                          | !removeRank \<rank\>                 |
+| [removeRank](#removeRank) | Entferne einen Rang eines Benutzers.          | !removeRank \<rank\>                 |
 
 ### Config
 
 | Command                                 | Description                                                   | Usage                                       |
 | --------------------------------------- | ------------------------------------------------------------- | ------------------------------------------- |
-| [botConfig](#botConfig)                 | Show and change the config of the bot.                        | !botConfig [key][value]                     |
+| [botConfig](#botConfig)                 | Konfiguration des Bots anzeigen/ändern.                       | !botConfig [key][value]                     |
 | [config](#config)                       | Zeigt und ändert die einstellungen des Servers.               | !config [key][value]                        |
 | [interactiveConfig](#interactiveConfig) | Interactive Config                                            | !interactiveConfig                          |
 | [inviteCodeConfig](#inviteCodeConfig)   | Show and change the config of invite codes of the server.     | !inviteCodeConfig [key][invitecode] [value] |
@@ -150,18 +150,18 @@ This argument expects a duration. The following duration types are supported:
 | Command                               | Description                                                                                                                                   | Usage                                                            |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | [ban](#ban)                           | Bannt ein Mitglied vom Server.                                                                                                                | !ban [-d value\|--deleteMessageDays=value] \<user\> [reason]     |
-| [caseDelete](#caseDelete)             | Delete a specific case.                                                                                                                       | !caseDelete \<caseNumber\> [reason]                              |
-| [caseView](#caseView)                 | View info about a specific case.                                                                                                              | !caseView \<caseNumber\>                                         |
+| [caseDelete](#caseDelete)             | Einen spezifischen Fall löschen.                                                                                                              | !caseDelete \<caseNumber\> [reason]                              |
+| [caseView](#caseView)                 | Einen spezifischen Fall anzeigen.                                                                                                             | !caseView \<caseNumber\>                                         |
 | [check](#check)                       | Zeige Verletzungen der Regeln und Bestrafungen des Benutzers.                                                                                 | !check \<user\>                                                  |
-| [clean](#clean)                       | Entferne bestimmte nachrichten in einem Kanal.                                                                                                | !clean \<type\> [numberOfMessages]                               |
-| [cleanShort](#cleanShort)             | Clear short messages                                                                                                                          | !cleanShort \<maxTextLength\> [numberOfMessages]                 |
-| [cleanText](#cleanText)               | Delete messages containing certain keywords.                                                                                                  | !cleanText \<text\> [numberOfMessages]                           |
+| [clean](#clean)                       | Entferne bestimmte Nachrichten in einem Kanal.                                                                                                | !clean \<type\> [numberOfMessages]                               |
+| [cleanShort](#cleanShort)             | Kurze Nachrichten entfernen                                                                                                                   | !cleanShort \<maxTextLength\> [numberOfMessages]                 |
+| [cleanText](#cleanText)               | Löscht Nachrichten die spezifische Wörter enthalten.                                                                                          | !cleanText \<text\> [numberOfMessages]                           |
 | [kick](#kick)                         | Kickt ein Benutzer vom Server.                                                                                                                | !kick \<member\> [reason]                                        |
 | [lockdown](#lockdown)                 | Lockdown a specific channel (Prevents anyone without special roles from sending messages)                                                     | !lockdown [-t value\|--timeout=value][channel]                   |
 | [mute](#mute)                         | Mute a user                                                                                                                                   | !mute [-d value\|--duration=value] \<user\> [reason]             |
-| [punishmentConfig](#punishmentConfig) | Stelle eine Bestrafung ein wenn eine bestimmte anzahl am Regelverletzungen erreicht wird.                                                     | !punishmentConfig [punishment][strikes] [args]                   |
+| [punishmentConfig](#punishmentConfig) | Stelle eine Bestrafung ein wenn eine bestimmte Anzahl an Regelverletzungen erreicht wird.                                                     | !punishmentConfig [punishment][strikes] [args]                   |
 | [purge](#purge)                       | Entferne Nachrichten in einem Kanal.                                                                                                          | !purge \<quantity\> [user]                                       |
-| [purgeUntil](#purgeUntil)             | Entferne nachrichten bis zu einer bestimmten nachricht.                                                                                       | !purgeUntil \<messageID\>                                        |
+| [purgeUntil](#purgeUntil)             | Entferne Nachrichten bis zu einer bestimmten Nachricht.                                                                                       | !purgeUntil \<messageID\>                                        |
 | [softBan](#softBan)                   | Banne ein Mitlgied und es wird dann automatisch entbannt.                                                                                     | !softBan [-d value\|--deleteMessageDays=value] \<user\> [reason] |
 | [strike](#strike)                     | Add strikes to a user                                                                                                                         | !strike \<member\> \<type\> \<amount\>                           |
 | [strikeConfig](#strikeConfig)         | Bearbeite strikes die für unterschiedliche Regelbrüche verteilt werden.                                                                       | !strikeConfig [violation][strikes]                               |
@@ -292,9 +292,9 @@ Bannt ein Mitglied vom Server.
 
 ### Flags
 
-| Flag                              | Short     | Type              | Description                                                                  |
-| --------------------------------- | --------- | ----------------- | ---------------------------------------------------------------------------- |
-| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | If specified will delete messages by the banned members this many days back. |
+| Flag                              | Short     | Type              | Description                                                                                        |
+| --------------------------------- | --------- | ----------------- | -------------------------------------------------------------------------------------------------- |
+| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | Wenn angegeben, dann werden alle Nachrichten dieses Mitglieds mit dieser Anzahl an Tagen gelöscht. |
 
 ### Examples
 
@@ -304,7 +304,7 @@ Bannt ein Mitglied vom Server.
 
 ## !botConfig
 
-Show and change the config of the bot.
+Konfiguration des Bots anzeigen/ändern.
 
 ### Usage
 
@@ -320,10 +320,10 @@ Show and change the config of the bot.
 
 ### Arguments
 
-| Argument | Type            | Required | Description                                           | Details                                                                                                                                     |
-| -------- | --------------- | -------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| key      | [Enum](#Enum)   | No       | The bot config setting which you want to show/change. | Use one of the following values: `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
-| value    | [Value](#Value) | No       | The new value of the setting.                         |                                                                                                                                             |
+| Argument | Type            | Required | Description                                      | Details                                                                                                                                     |
+| -------- | --------------- | -------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| key      | [Enum](#Enum)   | No       | Die Konfiguration, die du anzeigen/ändern willst | Use one of the following values: `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
+| value    | [Value](#Value) | No       | Der neue Wert der Konfiguration                  |                                                                                                                                             |
 
 ### Examples
 
@@ -361,7 +361,7 @@ Erhalte die wichtigsten Informationen des Bots
 
 ## !caseDelete
 
-Delete a specific case.
+Einen spezifischen Fall löschen.
 
 ### Usage
 
@@ -377,10 +377,10 @@ Delete a specific case.
 
 ### Arguments
 
-| Argument   | Type              | Required | Description                       | Details |
-| ---------- | ----------------- | -------- | --------------------------------- | ------- |
-| caseNumber | [Number](#Number) | Yes      | Case number                       |         |
-| reason     | [Text](#Text)     | No       | The reason for removing the case. |         |
+| Argument   | Type              | Required | Description                     | Details |
+| ---------- | ----------------- | -------- | ------------------------------- | ------- |
+| caseNumber | [Number](#Number) | Yes      | Fallnummer                      |         |
+| reason     | [Text](#Text)     | No       | Der Grund, warum gelöscht wird. |         |
 
 ### Examples
 
@@ -394,7 +394,7 @@ Delete a specific case.
 
 ## !caseView
 
-View info about a specific case.
+Einen spezifischen Fall anzeigen.
 
 ### Usage
 
@@ -412,7 +412,7 @@ View info about a specific case.
 
 | Argument   | Type              | Required | Description | Details |
 | ---------- | ----------------- | -------- | ----------- | ------- |
-| caseNumber | [Number](#Number) | Yes      | Case number |         |
+| caseNumber | [Number](#Number) | Yes      | Fallnummer  |         |
 
 ### Examples
 
@@ -440,9 +440,9 @@ Zeige Verletzungen der Regeln und Bestrafungen des Benutzers.
 
 ### Arguments
 
-| Argument | Type          | Required | Description               | Details |
-| -------- | ------------- | -------- | ------------------------- | ------- |
-| user     | [User](#User) | Yes      | Benutzer zum Überpfrüfen. |         |
+| Argument | Type          | Required | Description              | Details |
+| -------- | ------------- | -------- | ------------------------ | ------- |
+| user     | [User](#User) | Yes      | Benutzer zum überprüfen. |         |
 
 ### Examples
 
@@ -460,7 +460,7 @@ Zeige Verletzungen der Regeln und Bestrafungen des Benutzers.
 
 ## !clean
 
-Entferne bestimmte nachrichten in einem Kanal.
+Entferne bestimmte Nachrichten in einem Kanal.
 
 ### Usage
 
@@ -474,10 +474,10 @@ Entferne bestimmte nachrichten in einem Kanal.
 
 ### Arguments
 
-| Argument         | Type              | Required | Description                                | Details                                                                                                            |
-| ---------------- | ----------------- | -------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| type             | [Enum](#Enum)     | Yes      | The type of messages that will be deleted. | Use one of the following values: `bots`, `embeds`, `emojis`, `images`, `links`, `mentions`, `reacted`, `reactions` |
-| numberOfMessages | [Number](#Number) | No       | Number of messages that will be searched.  |                                                                                                                    |
+| Argument         | Type              | Required | Description                                       | Details                                                                                                            |
+| ---------------- | ----------------- | -------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| type             | [Enum](#Enum)     | Yes      | Der Typ der Nachricht die gelöscht werden sollen. | Use one of the following values: `bots`, `embeds`, `emojis`, `images`, `links`, `mentions`, `reacted`, `reactions` |
+| numberOfMessages | [Number](#Number) | No       | Anzahl an Nachrichten die gesucht werden sollen.  |                                                                                                                    |
 
 ### Examples
 
@@ -487,7 +487,7 @@ Entferne bestimmte nachrichten in einem Kanal.
 
 ## !cleanShort
 
-Clear short messages
+Kurze Nachrichten entfernen
 
 ### Usage
 
@@ -503,10 +503,10 @@ Clear short messages
 
 ### Arguments
 
-| Argument         | Type              | Required | Description                                     | Details |
-| ---------------- | ----------------- | -------- | ----------------------------------------------- | ------- |
-| maxTextLength    | [Number](#Number) | Yes      | All messages shorter than this will be deleted. |         |
-| numberOfMessages | [Number](#Number) | No       | Number of messages that will be searched.       |         |
+| Argument         | Type              | Required | Description                                        | Details |
+| ---------------- | ----------------- | -------- | -------------------------------------------------- | ------- |
+| maxTextLength    | [Number](#Number) | Yes      | Alle Nachrichten kürzer als diese werden gelöscht. |         |
+| numberOfMessages | [Number](#Number) | No       | Anzahl an Nachrichten die gesucht werden sollen.   |         |
 
 ### Examples
 
@@ -516,7 +516,7 @@ Clear short messages
 
 ## !cleanText
 
-Delete messages containing certain keywords.
+Löscht Nachrichten die spezifische Wörter enthalten.
 
 ### Usage
 
@@ -532,10 +532,10 @@ Delete messages containing certain keywords.
 
 ### Arguments
 
-| Argument         | Type              | Required | Description                                        | Details |
-| ---------------- | ----------------- | -------- | -------------------------------------------------- | ------- |
-| text             | [Text](#Text)     | Yes      | All messages containing this word will be deleted. |         |
-| numberOfMessages | [Number](#Number) | No       | Number of messages that will be searched.          |         |
+| Argument         | Type              | Required | Description                                       | Details |
+| ---------------- | ----------------- | -------- | ------------------------------------------------- | ------- |
+| text             | [Text](#Text)     | Yes      | Alle Nachrichten mit diesem Wort werden gelöscht. |         |
+| numberOfMessages | [Number](#Number) | No       | Anzahl an Nachrichten die gesucht werden sollen.  |         |
 
 ### Examples
 
@@ -545,7 +545,7 @@ Delete messages containing certain keywords.
 
 ## !clearInvites
 
-Entferne Einladungen des servers/eines Benutzers.
+Entferne Einladungen des Servers/eines Benutzers.
 
 ### Usage
 
@@ -559,16 +559,16 @@ Entferne Einladungen des servers/eines Benutzers.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                                                                                    | Details |
-| -------- | ------------- | -------- | -------------------------------------------------------------------------------------------------------------- | ------- |
-| user     | [User](#User) | No       | Der Benutzer wessen Einladungen entfernt werden.Wenn nicht angeben werden einladungen aller Benutzer entfernt. |         |
+| Argument | Type          | Required | Description                                                                                                     | Details |
+| -------- | ------------- | -------- | --------------------------------------------------------------------------------------------------------------- | ------- |
+| user     | [User](#User) | No       | Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben werden einladungen aller Benutzer entfernt. |         |
 
 ### Flags
 
-| Flag                       | Short      | Type                | Description                                                                              |
-| -------------------------- | ---------- | ------------------- | ---------------------------------------------------------------------------------------- |
-| &#x2011;&#x2011;date       | &#x2011;d  | [Date](#Date)       | The date start at which invites should be counted. Default is today.                     |
-| &#x2011;&#x2011;clearBonus | &#x2011;cb | [Boolean](#Boolean) | Add this flag to clear bonus invites aswell. Otherwise bonus invites are left untouched. |
+| Flag                       | Short      | Type                | Description                                                                                                         |
+| -------------------------- | ---------- | ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| &#x2011;&#x2011;date       | &#x2011;d  | [Date](#Date)       | Das Datum ab welchem Tag Einladungen gezählt werden sollen. Standardmäßig wird heute verwendet.                     |
+| &#x2011;&#x2011;clearBonus | &#x2011;cb | [Boolean](#Boolean) | Füge diese Option hinzu um auch Bonus Einladungen zu löschen. Falls nicht werden Bonus Einladungen nicht verändert. |
 
 ### Examples
 
@@ -1487,7 +1487,7 @@ Info about premium version of InviteManager.
 
 ## !punishmentConfig
 
-Stelle eine Bestrafung ein wenn eine bestimmte anzahl am Regelverletzungen erreicht wird.
+Stelle eine Bestrafung ein wenn eine bestimmte Anzahl an Regelverletzungen erreicht wird.
 
 ### Usage
 
@@ -1533,10 +1533,10 @@ Entferne Nachrichten in einem Kanal.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                  | Details |
-| -------- | ----------------- | -------- | -------------------------------------------- | ------- |
-| quantity | [Number](#Number) | Yes      | Wieviele Nachrichten sollen entfernt werden. |         |
-| user     | [User](#User)     | No       | User whose messages are deleted.             |         |
+| Argument | Type              | Required | Description                                       | Details |
+| -------- | ----------------- | -------- | ------------------------------------------------- | ------- |
+| quantity | [Number](#Number) | Yes      | Wieviele Nachrichten sollen entfernt werden.      |         |
+| user     | [User](#User)     | No       | Nutzer dessen Nachrichten gelöscht werden sollen. |         |
 
 ### Examples
 
@@ -1546,7 +1546,7 @@ Entferne Nachrichten in einem Kanal.
 
 ## !purgeUntil
 
-Entferne nachrichten bis zu einer bestimmten nachricht.
+Entferne Nachrichten bis zu einer bestimmten Nachricht.
 
 ### Usage
 
@@ -1626,7 +1626,7 @@ Zeigt alle Ränge.
 
 ## !removeInvites
 
-Removes a specified amount of invites from a user.
+Entfernt die angegebene Anzahl an Einladungen eines Benutzers.
 
 ### Usage
 
@@ -1640,11 +1640,11 @@ Removes a specified amount of invites from a user.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                          | Details |
-| -------- | ----------------- | -------- | ------------------------------------ | ------- |
-| user     | [User](#User)     | Yes      | The user to remove the invites from. |         |
-| amount   | [Number](#Number) | Yes      | The amount of invites to remove.     |         |
-| reason   | [Text](#Text)     | No       | The reason for removing the invites. |         |
+| Argument | Type              | Required | Description                                                      | Details |
+| -------- | ----------------- | -------- | ---------------------------------------------------------------- | ------- |
+| user     | [User](#User)     | Yes      | Der Benutzer von welchem die Einladungen entfernt werden sollen. |         |
+| amount   | [Number](#Number) | Yes      | Die Anzahl an Einladungen die entfernt werden sollen.            |         |
+| reason   | [Text](#Text)     | No       | Der Grund für das entfernen der Einladungen.                     |         |
 
 ### Examples
 
@@ -1666,7 +1666,7 @@ Removes a specified amount of invites from a user.
 
 ## !removeRank
 
-Entferne einen Rang.
+Entferne einen Rang eines Benutzers.
 
 ### Usage
 
@@ -1724,7 +1724,7 @@ Set the song to be played on repeat.
 
 ## !restoreInvites
 
-Erhalte alle vorher entfernten Einladungen zurück.
+Alle vorher entfernen Einladungen wiederherstellen.
 
 ### Usage
 
@@ -1740,9 +1740,9 @@ Erhalte alle vorher entfernten Einladungen zurück.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                                                                                                   | Details |
-| -------- | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
-| user     | [User](#User) | No       | Der Benutzer wessen Einladungen zurückgegeben werden.Wenn kein Benutzer angegeben wird werden alle Einladungen zurückgegeben. |         |
+| Argument | Type          | Required | Description                                                                                                                            | Details |
+| -------- | ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| user     | [User](#User) | No       | Der Benutzer wessen Einladungen wiederhergestellt werden. Wenn kein Benutzer angegeben wird werden alle Einladungen wiederhergestellt. |         |
 
 ### Examples
 
