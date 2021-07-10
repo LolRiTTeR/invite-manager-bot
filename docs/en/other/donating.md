@@ -1,7 +1,7 @@
-# other.donating.title
+# Donating
 
-other.donating.description
+We currently dont accept any donations.
 
-## other.donating.crypto.title
+## Crypto
 
-other.donating.crypto.description
+We currently dont accept any crypto donations.

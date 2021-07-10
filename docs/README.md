@@ -1,6 +1,6 @@
 # InviteManager Docs
 
-- [lang](/en/README.md)
+- [English](/en/README.md)
 - [العربية](/ar/README.md)
 - [български](/bg/README.md)
 - [Čeština](/cs/README.md)
