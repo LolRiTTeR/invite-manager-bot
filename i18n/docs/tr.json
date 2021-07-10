@@ -58,7 +58,10 @@
 					},
 					"no": "modules.invites.customMessages.placeholders.no"
 				},
-				"description": "modules.invites.customMessages.description"
+				"description": "modules.invites.customMessages.description",
+				"content": "modules.invites.customMessages.content",
+				"premiumNote": "modules.invites.customMessages.premiumNote",
+				"endingParagraph": "modules.invites.customMessages.endingParagraph"
 			}
 		},
 		"moderation": {

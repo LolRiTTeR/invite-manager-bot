@@ -6,12 +6,12 @@
 
 ## §{modules.invites.customMessages.description}
 
-§{module.invites.customMessages.content}
+§{modules.invites.customMessages.content}
 
 > [!NOTE|style:flat]
-> §{module.invites.customMessages.premiumNote}
+> §{modules.invites.customMessages.premiumNote}
 
-§{module.invites.customMessages.endingParagraph}
+§{modules.invites.customMessages.endingParagraph}
 
 ### §{modules.invites.customMessages.placeholders.title.large}
 

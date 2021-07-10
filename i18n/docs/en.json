@@ -60,8 +60,8 @@
 					}
 				},
 				"content": "You can set a custom join or leave message by setting the config:\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\nor\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\nA message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.\n\nSo if we want the message to say\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\nwe can easily do that by replacing all the names and the number with placeholders:\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\nSo you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.",
-				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](modules/invites/examples.md)",
-				"endingParagraph": "Please see the [examples page](/examples.md) to see what kind of messages you can make!"
+				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](./examples.md)",
+				"endingParagraph": "Please see the [examples page](./examples.md) to see what kind of messages you can make!"
 			}
 		},
 		"moderation": {
