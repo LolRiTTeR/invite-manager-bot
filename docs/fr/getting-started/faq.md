@@ -1,4 +1,4 @@
-# Questions Courantes}
+# Questions Courantes
 
 ## Comment je change le préfix du bot?
 

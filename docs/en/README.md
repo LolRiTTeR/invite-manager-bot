@@ -1,22 +1,22 @@
 # InviteManager
 
-## Reference
+## undefined
 
-- [Commands](/en/reference/commands.md)
-- [Configs / Settings](/en/reference/settings.md)
+- [reference.commands.title](/en/reference/commands.md)
+- [reference.settings.title](/en/reference/settings.md)
 
-## Getting Started
+## start.title
 
-To get started, just run the `!setup` command on your server.
+start.description
 
-### Invite Management
+### modules.invites.title
 
-While our bot is on your server, we track every invite that happens on your server. Discord only shows you who has how many invites. Our bot also analyses who was invited by whom. This allows our bot to detect fake invites and see who is trying to cheat the invite system.
+modules.invites.description
 
-### Moderation
+### modules.moderation.title
 
-Our brand new moderation system allows you to auto-moderate many things. Please check our [strikes](/en/modules/moderation/strikes.md) and [punishments](/en/modules/moderation/punishments.md) pages for more info. In short, our bot gives out 'strikes' to people who misbehave, and after a certain amount of strikes, the user receives a punishment. All of this is configurable by the user.
+modules.moderation.description
 
-## Premium
+## premium.title
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page](/en/premium/features.md).
+premium.description

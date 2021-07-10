@@ -1,4 +1,4 @@
-# FAQs}
+# FAQs
 
 ## How do I change the prefix of the bot?
 

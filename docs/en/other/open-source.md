@@ -1,7 +1,7 @@
-# Open Source
+# other.openSource.title
 
 other.openSource.description
 
-## Main Bot
+## other.openSource.bot.title
 
 other.openSource.bot.description

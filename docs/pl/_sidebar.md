@@ -2,6 +2,7 @@
 
   - [Szybki Start](/pl/getting-started/quick-start.md)
   - [FAQ](/pl/getting-started/faq.md)
+  - [start.ourBots.title](/pl/getting-started/ourBots.md)
   - [Bot w wersji Alfa](/pl/getting-started/alpha.md)
   - [Pro Bot](/pl/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Funkcje](/pl/premium/features.md)
-  - [Poziomy](/pl/premium/tiers.md)
-  - [Konfiguracja](/pl/premium/setup.md)
 
 - Moduły
 
   - Zarządzanie zaproszeniami
 
-    - [Przegląd](/pl/modules/invites/overview.md)
     - [Niestandardowe wiadomości](/pl/modules/invites/custom-messages.md)
       - [Przykłady](/pl/modules/invites/examples.md)
 

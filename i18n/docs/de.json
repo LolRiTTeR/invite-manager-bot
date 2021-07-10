@@ -6,7 +6,22 @@
 			"title": "Einladungsmanagement",
 			"description": "Während unser Bot auf deinem Server ist, verfolgen wir jede Einladung, die auf deinem Server stattfindet. Discord zeigt dir nur, wer wie viele Einladungen hat. Unser Bot analysiert auch, wer von wem eingeladen wurde. Dies ermöglicht unserem Bot gefälschte Einladungen zu erkennen und zu sehen, wer versucht das Einladungssystem zu betrügen.",
 			"examples": {
-				"title": "Beispiele"
+				"title": "Beispiele",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			},
 			"overview": {
 				"title": "Übersicht"
@@ -68,16 +83,45 @@
 			"title": "Moderation",
 			"description": "Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu moderieren. Bitte schaue dir für weiteren Informationen unsere [Strikes]({{{ linkStrikes }}}) und [Bestraftungen]({{{ linkPunishments }}}) Seiten an. Kurz gesagt vergibt unser Bot 'Strikes' an Leute, die sich schlecht benehmen, und nach einer bestimmten Anzahl von Strikes erhält der User eine Bestrafung. All das ist durch den Benutzer konfigurierbar.",
 			"punishments": {
-				"title": "Bestrafungen"
+				"title": "Bestrafungen",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			},
 			"strikes": {
-				"title": "Strikes"
+				"title": "Strikes",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
 			}
 		},
 		"music": {
 			"title": "Musik",
 			"overview": {
-				"title": "Übersicht"
+				"title": "Übersicht",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
@@ -119,6 +163,9 @@
 				"title": "Main Bot",
 				"description": "other.openSource.bot.description"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
 	"premium": {
@@ -140,7 +187,8 @@
 		"alpha": {
 			"title": "Alpha Bot",
 			"intro": "Der `InviteManager Alpha` Bot ist der Bot, den wir zum Testen neuer Funktionen verwenden. Die neuen Funktionen auf dem Alpha Bot werden nicht immer stabil sein, aber wenn du diesen Bot benutzt, wirst du der erste sein, der diese sieht und kannst uns Feedback geben, wie wir diese verbessern können, bevor sie in den Main Bot aufgenommen werden.",
-			"linkDescription": "Lade den InviteManager Alpha hier auf deinem Server ein"
+			"linkDescription": "Lade den InviteManager Alpha hier auf deinem Server ein",
+			"disabled": "start.alpha.disabled"
 		},
 		"faq": {
 			"title": "FAQ",
@@ -187,6 +235,10 @@
 					"description": "start.quick.setup.second.description"
 				}
 			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
 		}
 	},
 	"reference": {

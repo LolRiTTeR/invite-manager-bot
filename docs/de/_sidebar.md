@@ -2,6 +2,7 @@
 
   - [Start](/de/getting-started/quick-start.md)
   - [FAQ](/de/getting-started/faq.md)
+  - [start.ourBots.title](/de/getting-started/ourBots.md)
   - [Alpha Bot](/de/getting-started/alpha.md)
   - [Pro Bot](/de/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Features](/de/premium/features.md)
-  - [Stufen](/de/premium/tiers.md)
-  - [Einrichtung](/de/premium/setup.md)
 
 - Module
 
   - Einladungsmanagement
 
-    - [Übersicht](/de/modules/invites/overview.md)
     - [Individuelle Nachricht](/de/modules/invites/custom-messages.md)
       - [Beispiele](/de/modules/invites/examples.md)
 

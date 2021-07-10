@@ -19,4 +19,4 @@ Yeni moderasyon sistemimiz birçok şeyi otomatik olarak yönetmenizi sağlar. D
 
 ## Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page](/tr/premium/features.md).
+To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().

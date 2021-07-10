@@ -19,4 +19,4 @@ Notre tout nouveau système de modération vous permet de modérer automatiqueme
 
 ## Prime
 
-Pour payer notre facture de serveur, nous proposons une version premium du bot. Pour voir toutes les fonctionnalités supplémentaires que vous obtenez, veuillez visiter notre [page de tarification](/fr/premium/features.md).
+Pour payer notre facture de serveur, nous proposons une version premium du bot. Pour voir toutes les fonctionnalités supplémentaires que vous obtenez, veuillez visiter notre [page de tarification]().

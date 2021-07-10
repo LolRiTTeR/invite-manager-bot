@@ -1,4 +1,4 @@
-# §{start.faq.title}}
+# §{start.faq.title}
 
 ## §{start.faq.prefix.title}
 

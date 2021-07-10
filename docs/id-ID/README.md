@@ -19,4 +19,4 @@ Our brand new moderation system allows you to auto-moderate many things. Please 
 
 ## Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page](/id-ID/premium/features.md).
+To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().

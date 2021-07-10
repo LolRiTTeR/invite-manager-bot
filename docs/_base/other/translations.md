@@ -4,4 +4,4 @@
 
 ## §{other.translations.help.title}
 
-§{other.translations.help.description:["discordLink":"https://discord.gg/x3NGUSX","transifexLink":"https://www.transifex.com/sideprojectguys/invitemanager-bot/"]}
+§{other.translations.help.description:["discordLink":"https://discord.gg/kQQmfNCTzm","transifexLink":"https://www.transifex.com/invitemanager-1/invitemanager_bot/"]}

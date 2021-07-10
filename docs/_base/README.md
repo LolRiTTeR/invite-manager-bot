@@ -19,4 +19,4 @@
 
 ## §{premium.title}
 
-§{premium.description:["link":"/§{lang}/premium/features.md"]}
+§{premium.description:["ourBotsLink":"/§{lang}/getting-started/our-bots.md"]}

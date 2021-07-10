@@ -1,4 +1,4 @@
-- [English](/en/README.md)
+- [lang](/en/README.md)
 - [العربية](/ar/README.md)
 - [български](/bg/README.md)
 - [Čeština](/cs/README.md)

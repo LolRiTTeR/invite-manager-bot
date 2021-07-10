@@ -1,210 +1,240 @@
 {
-	"lang": "English",
+	"reference": {
+		"commands": {
+			"title": "reference.commands.title"
+		},
+		"settings": {
+			"title": "reference.settings.title"
+		},
+		"title": "reference.title"
+	},
+	"start": {
+		"title": "start.title",
+		"description": "start.description",
+		"quick": {
+			"title": "start.quick.title",
+			"setup": {
+				"title": "start.quick.setup.title",
+				"description": "start.quick.setup.description",
+				"first": {
+					"title": "start.quick.setup.first.title",
+					"description": "start.quick.setup.first.description"
+				}
+			}
+		},
+		"faq": {
+			"title": "start.faq.title",
+			"prefix": {
+				"title": "start.faq.prefix.title",
+				"description": "start.faq.prefix.description"
+			},
+			"joinLeaveChannel": {
+				"title": "start.faq.joinLeaveChannel.title",
+				"description": "start.faq.joinLeaveChannel.description"
+			},
+			"joinLeaveMessage": {
+				"title": "start.faq.joinLeaveMessage.title",
+				"description": "start.faq.joinLeaveMessage.description"
+			},
+			"ranks": {
+				"title": "start.faq.ranks.title",
+				"description": "start.faq.ranks.description"
+			},
+			"channel": {
+				"title": "start.faq.channel.title",
+				"description": "start.faq.channel.description"
+			},
+			"limitations": {
+				"title": "start.faq.limitations.title",
+				"description": "start.faq.limitations.description"
+			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
+		},
+		"alpha": {
+			"title": "start.alpha.title",
+			"intro": "start.alpha.intro",
+			"linkDescription": "start.alpha.linkDescription",
+			"disabled": "start.alpha.disabled"
+		},
+		"pro": {
+			"title": "start.pro.title",
+			"description": "start.pro.description"
+		}
+	},
 	"modules": {
-		"title": "Modules",
 		"invites": {
-			"title": "Invite Management",
-			"description": "While our bot is on your server, we track every invite that happens on your server. Discord only shows you who has how many invites. Our bot also analyses who was invited by whom. This allows our bot to detect fake invites and see who is trying to cheat the invite system.",
-			"examples": {
-				"title": "Examples"
-			},
-			"overview": {
-				"title": "Overview"
-			},
+			"title": "modules.invites.title",
+			"description": "modules.invites.description",
 			"customMessages": {
-				"title": "Custom message",
-				"description": "You can customise the join and leave messages with a number of parameters.",
+				"title": "modules.invites.customMessages.title",
 				"placeholders": {
+					"jumpto": "modules.invites.customMessages.placeholders.jumpto",
 					"title": {
-						"small": "placeholders",
-						"large": "Placeholders"
+						"small": "modules.invites.customMessages.placeholders.title.small",
+						"large": "modules.invites.customMessages.placeholders.title.large"
 					},
-					"jumpto": "Jump to",
-					"yes": "yes",
-					"no": "no",
-					"example": "example",
-					"description": "description",
+					"example": "modules.invites.customMessages.placeholders.example",
+					"description": "modules.invites.customMessages.placeholders.description",
+					"yes": "modules.invites.customMessages.placeholders.yes",
 					"descriptions": {
-						"memberName": "The name of the member that just joined your discord server",
-						"memberId": "The discord ID of the member that just joined your server",
-						"memberMention": "The mention of the member that just joined your discord server (person will be pinged).",
-						"memberFullName": "The username and discriminator of the user that just joined your server",
-						"memberImage": "URL of the avatar of the member",
-						"inviterName": "The name of the inviter",
-						"inviterId": "The discord ID of the inviter",
-						"inviterMention": "The mention of the inviter (person will be pinged)",
-						"inviterFullName": "The username and discriminator of the inviter",
-						"inviterImage": "URL of the avatar of the inviter",
-						"numInvites": "Number of invites the inviter has in total",
-						"numRegularInvites": "Number of invites the inviter has through regular invites",
-						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually(",
-						"numFakeInvites": "Number of fake invites the inviter has",
-						"numLeaveInvites": "Number of invites that were removed because the member left again.",
-						"memberCount": "Number of members your server has in total",
-						"numJoins": "Number of times the user has joined the server",
-						"channelName": "The name of the channel where the invite code was created",
-						"channelMention": "Mention of the channel where the invite code was created",
-						"inviteCode": "Invite code used",
-						"memberCreatedDate": "Date the discord user was created",
-						"memberCreatedDuration": "Duration since the discord user was created",
-						"memberCreatedTimeAgo": "Time the discord user was created",
-						"firstJoinDate": "Date the user joined the server for the first time",
-						"firstJoinDuration": "Duration since the user joined the server for the first time",
-						"firstJoinTimeAgo": "Time the user joined the server for the first time",
-						"previousJoinDate": "Date when the user joined the server the last time",
-						"previousJoinDuration": "Duration since when the user joined the server the last time",
-						"previousJoinTimeAgo": "Time when the user joined the server the last time",
-						"joinedAtDate": "Date when the user joined",
-						"joinedAtDuration": "Duration since when the user joined",
-						"joinedAtTimeAgo": "Time when the user joined"
-					}
+						"memberName": "modules.invites.customMessages.placeholders.descriptions.memberName",
+						"memberId": "modules.invites.customMessages.placeholders.descriptions.memberId",
+						"memberMention": "modules.invites.customMessages.placeholders.descriptions.memberMention",
+						"memberFullName": "modules.invites.customMessages.placeholders.descriptions.memberFullName",
+						"memberImage": "modules.invites.customMessages.placeholders.descriptions.memberImage",
+						"inviterName": "modules.invites.customMessages.placeholders.descriptions.inviterName",
+						"inviterId": "modules.invites.customMessages.placeholders.descriptions.inviterId",
+						"inviterMention": "modules.invites.customMessages.placeholders.descriptions.inviterMention",
+						"inviterFullName": "modules.invites.customMessages.placeholders.descriptions.inviterFullName",
+						"inviterImage": "modules.invites.customMessages.placeholders.descriptions.inviterImage",
+						"numInvites": "modules.invites.customMessages.placeholders.descriptions.numInvites",
+						"numRegularInvites": "modules.invites.customMessages.placeholders.descriptions.numRegularInvites",
+						"numBonusInvites": "modules.invites.customMessages.placeholders.descriptions.numBonusInvites",
+						"numFakeInvites": "modules.invites.customMessages.placeholders.descriptions.numFakeInvites",
+						"numLeaveInvites": "modules.invites.customMessages.placeholders.descriptions.numLeaveInvites",
+						"memberCount": "modules.invites.customMessages.placeholders.descriptions.memberCount",
+						"numJoins": "modules.invites.customMessages.placeholders.descriptions.numJoins",
+						"channelName": "modules.invites.customMessages.placeholders.descriptions.channelName",
+						"channelMention": "modules.invites.customMessages.placeholders.descriptions.channelMention",
+						"inviteCode": "modules.invites.customMessages.placeholders.descriptions.inviteCode",
+						"memberCreatedDate": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDate",
+						"memberCreatedDuration": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDuration",
+						"memberCreatedTimeAgo": "modules.invites.customMessages.placeholders.descriptions.memberCreatedTimeAgo",
+						"firstJoinDate": "modules.invites.customMessages.placeholders.descriptions.firstJoinDate",
+						"firstJoinDuration": "modules.invites.customMessages.placeholders.descriptions.firstJoinDuration",
+						"firstJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.firstJoinTimeAgo",
+						"previousJoinDate": "modules.invites.customMessages.placeholders.descriptions.previousJoinDate",
+						"previousJoinDuration": "modules.invites.customMessages.placeholders.descriptions.previousJoinDuration",
+						"previousJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.previousJoinTimeAgo",
+						"joinedAtDate": "modules.invites.customMessages.placeholders.descriptions.joinedAtDate",
+						"joinedAtDuration": "modules.invites.customMessages.placeholders.descriptions.joinedAtDuration",
+						"joinedAtTimeAgo": "modules.invites.customMessages.placeholders.descriptions.joinedAtTimeAgo"
+					},
+					"no": "modules.invites.customMessages.placeholders.no"
 				},
-				"content": "You can set a custom join or leave message by setting the config:\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\nor\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\nA message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.\n\nSo if we want the message to say\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\nwe can easily do that by replacing all the names and the number with placeholders:\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\nSo you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.",
-				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](./examples.md)",
-				"endingParagraph": "Please see the [examples page](./examples.md) to see what kind of messages you can make!"
+				"description": "modules.invites.customMessages.description",
+				"content": "modules.invites.customMessages.content",
+				"premiumNote": "modules.invites.customMessages.premiumNote",
+				"endingParagraph": "modules.invites.customMessages.endingParagraph"
+			},
+			"examples": {
+				"title": "modules.invites.examples.title",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			}
 		},
 		"moderation": {
-			"title": "Moderation",
-			"description": "Our brand new moderation system allows you to auto-moderate many things. Please check our [strikes]({{{ linkStrikes }}}) and [punishments]({{{ linkPunishments }}}) pages for more info. In short, our bot gives out 'strikes' to people who misbehave, and after a certain amount of strikes, the user receives a punishment. All of this is configurable by the user.",
-			"punishments": {
-				"title": "Punishments"
-			},
+			"title": "modules.moderation.title",
+			"description": "modules.moderation.description",
 			"strikes": {
-				"title": "Strikes"
+				"title": "modules.moderation.strikes.title",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
+			},
+			"punishments": {
+				"title": "modules.moderation.punishments.title",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			}
 		},
+		"title": "modules.title",
 		"music": {
-			"title": "Music",
+			"title": "modules.music.title",
 			"overview": {
-				"title": "Overview"
+				"title": "modules.music.overview.title",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
+	"premium": {
+		"title": "premium.title",
+		"description": "premium.description",
+		"features": {
+			"title": "premium.features.title"
+		}
+	},
 	"other": {
-		"title": "Other",
-		"donating": {
-			"title": "Donating",
-			"description": "other.donating.description",
-			"crypto": {
-				"title": "Crypto",
-				"description": "other.donating.crypto.description"
-			}
-		},
-		"roadmap": {
-			"title": "Roadmap"
-		},
-		"support": {
-			"title": "Support"
+		"title": "other.title",
+		"webpanel": {
+			"title": "other.webpanel.title",
+			"description": "other.webpanel.description"
 		},
 		"translations": {
-			"title": "Translations",
+			"title": "other.translations.title",
 			"description": "other.translations.description",
 			"help": {
 				"title": "other.translations.help.title",
 				"description": "other.translations.help.description"
 			}
 		},
-		"webpanel": {
-			"title": "Webpanel",
-			"description": "other.webpanel.description"
+		"donating": {
+			"title": "other.donating.title",
+			"description": "other.donating.description",
+			"crypto": {
+				"title": "other.donating.crypto.title",
+				"description": "other.donating.crypto.description"
+			}
+		},
+		"support": {
+			"title": "other.support.title"
 		},
 		"changelog": {
-			"title": "Changelog"
+			"title": "other.changelog.title"
+		},
+		"roadmap": {
+			"title": "other.roadmap.title"
 		},
 		"openSource": {
-			"title": "Open Source",
+			"title": "other.openSource.title",
 			"description": "other.openSource.description",
 			"bot": {
-				"title": "Main Bot",
+				"title": "other.openSource.bot.title",
 				"description": "other.openSource.bot.description"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
-	"premium": {
-		"title": "Premium",
-		"description": "To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]({{{ link }}}).",
-		"features": {
-			"title": "Features"
-		},
-		"tiers": {
-			"title": "Tiers"
-		},
-		"setup": {
-			"title": "Setup"
-		}
-	},
-	"start": {
-		"title": "Getting Started",
-		"description": "To get started, just run the `!setup` command on your server.",
-		"alpha": {
-			"title": "Alpha Bot",
-			"intro": "The `InviteManager Alpha` bot is the bot we use to test new features. The new features on the Alpha bot will not always be stable, but if you use this bot, you'll be the first to see them and you can give us feedback how we can make them better before they will be included in the main bot.",
-			"linkDescription": "Invite the InviteManager Alpha here"
-		},
-		"faq": {
-			"title": "FAQs",
-			"prefix": {
-				"title": "How do I change the prefix of the bot?",
-				"description": "You can do `!config prefix -` to change the prefix.\n\nIf you don't know your current prefix, you can do `@InviteManager config prefix` to see the prefix."
-			},
-			"joinLeaveChannel": {
-				"title": "How do I set join and leave messages?",
-				"description": "Set the channel by doing\n\n`!config joinMessageChannel #channel`\n\nor\n\n`!config leaveMessageChannel #channel`.\n\nAfter doing that, new joins and leaves will be posted to that channel."
-			},
-			"joinLeaveMessage": {
-				"title": "Can I customize the join and leave messages?",
-				"description": "Absolutely! You can change the message by doing for example\n\n`!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)`\n\nor\n\n`!config leaveMessage {memberName} **left**; Invited by **{inviterName}**`.\n\nThere are many placeholders available. You can see the full list on the '[Custom Messages]({{{ link }}})' page."
-			},
-			"ranks": {
-				"title": "What are 'Ranks' and how can I use them?",
-				"description": "Ranks are used to assign roles to people when they reach a certain amount of invites. For example. if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!"
-			},
-			"channel": {
-				"title": "How can I disable the bot in all but one/some channels?",
-				"description": "Take away the read message permissions in the channels where you don't want the bot to reply."
-			},
-			"limitations": {
-				"title": "Limitation: No advanced tracking before the bot joins",
-				"description": "Advanced tracking (who invited who) only works after you have invited the bot. The bot will still know everyones invite count after you invite it, don't worry. Just the additional information is missing and can only be collected for members who join after you invited the bot."
-			}
-		},
-		"pro": {
-			"title": "Pro Bot",
-			"description": "start.pro.description"
-		},
-		"quick": {
-			"title": "Quick Start",
-			"setup": {
-				"title": "Setup",
-				"description": "start.quick.setup.description",
-				"first": {
-					"title": "start.quick.setup.first.title",
-					"description": "start.quick.setup.first.description"
-				},
-				"second": {
-					"title": "start.quick.setup.second.title",
-					"description": "start.quick.setup.second.description"
-				}
-			}
-		}
-	},
-	"reference": {
-		"title": "Reference",
-		"commands": {
-			"title": "Commands"
-		},
-		"settings": {
-			"title": "Configs / Settings"
-		}
-	},
-	"module": {
-		"invites": {
-			"customMessages": {
-				"content": "module.invites.customMessages.content",
-				"premiumNote": "module.invites.customMessages.premiumNote",
-				"endingParagraph": "module.invites.customMessages.endingParagraph"
-			}
-		}
-	}
+	"lang": "lang"
 }

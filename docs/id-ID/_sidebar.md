@@ -2,6 +2,7 @@
 
   - [Quick Start](/id-ID/getting-started/quick-start.md)
   - [FAQs](/id-ID/getting-started/faq.md)
+  - [start.ourBots.title](/id-ID/getting-started/ourBots.md)
   - [Alpha Bot](/id-ID/getting-started/alpha.md)
   - [Pro Bot](/id-ID/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Features](/id-ID/premium/features.md)
-  - [Tiers](/id-ID/premium/tiers.md)
-  - [Setup](/id-ID/premium/setup.md)
 
 - Modules
 
   - Invite Management
 
-    - [Gambaran](/id-ID/modules/invites/overview.md)
     - [Pesan khusus](/id-ID/modules/invites/custom-messages.md)
       - [Contoh](/id-ID/modules/invites/examples.md)
 

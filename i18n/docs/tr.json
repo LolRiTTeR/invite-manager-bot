@@ -6,7 +6,22 @@
 			"title": "Davet Yönetimi",
 			"description": "Botumuz sunucunuzdayken, sunucunuzda gerçekleşen her daveti izleriz. Discord sadece size kimin davet ettiğini gösterir. Botumuz ayrıca kimin kimi davet ettiğini analiz eder. Bu botumuzun sahte davetiyeleri tespit etmesini ve davet sistemini kandırmaya çalıştığını görmesini sağlar.",
 			"examples": {
-				"title": "Örnekler"
+				"title": "Örnekler",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			},
 			"overview": {
 				"title": "Genel Bakış"
@@ -68,16 +83,45 @@
 			"title": "Moderasyon",
 			"description": "Yeni moderasyon sistemimiz birçok şeyi otomatik olarak yönetmenizi sağlar. Daha fazla bilgi için lütfen [strikes] ({{{ linkStrikes }}}) ve [punishments] ({{{ linkPunishments }}}) sayfalarımızı kontrol edin. Kısacası, botumuz yanlış davranan insanlara 'grev' verir ve belirli bir grevden sonra kullanıcı bir ceza alır. Tüm bunlar kullanıcı tarafından yapılandırılabilir.",
 			"punishments": {
-				"title": "Cezalar"
+				"title": "Cezalar",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			},
 			"strikes": {
-				"title": "Grevler"
+				"title": "Grevler",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
 			}
 		},
 		"music": {
 			"title": "Müzik",
 			"overview": {
-				"title": "Genel Bakış"
+				"title": "Genel Bakış",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
@@ -119,6 +163,9 @@
 				"title": "Ana bot",
 				"description": "other.openSource.bot.description"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
 	"premium": {
@@ -140,7 +187,8 @@
 		"alpha": {
 			"title": "Alpha Bot",
 			"intro": "`InviteManager Alpha` bot, yeni özellikleri test etmek için kullandığımız bottur. Alpha bot'taki yeni özellikler her zaman istikrarlı olmayacak, ancak bu botu kullanırsanız, onları ilk gören siz olacaksınız ve ana bota dahil edilmeden önce onları nasıl daha iyi hale getirebileceğimiz konusunda bize geri bildirimde bulunabilirsiniz. .",
-			"linkDescription": "Invite the InviteManager Alpha here"
+			"linkDescription": "Invite the InviteManager Alpha here",
+			"disabled": "start.alpha.disabled"
 		},
 		"faq": {
 			"title": "FAQs",
@@ -187,6 +235,10 @@
 					"description": "start.quick.setup.second.description"
 				}
 			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
 		}
 	},
 	"reference": {

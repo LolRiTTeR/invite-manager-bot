@@ -1,4 +1,4 @@
-# FAQ}
+# FAQ
 
 ## Jak zmienić prefiks bota?
 

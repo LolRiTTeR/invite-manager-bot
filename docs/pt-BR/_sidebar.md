@@ -2,6 +2,7 @@
 
   - [Quick Start](/pt-BR/getting-started/quick-start.md)
   - [FAQs](/pt-BR/getting-started/faq.md)
+  - [start.ourBots.title](/pt-BR/getting-started/ourBots.md)
   - [Alpha Bot](/pt-BR/getting-started/alpha.md)
   - [Pro Bot](/pt-BR/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Features](/pt-BR/premium/features.md)
-  - [Tiers](/pt-BR/premium/tiers.md)
-  - [Setup](/pt-BR/premium/setup.md)
 
 - Modules
 
   - Invite Management
 
-    - [Overview](/pt-BR/modules/invites/overview.md)
     - [Custom message](/pt-BR/modules/invites/custom-messages.md)
       - [Examples](/pt-BR/modules/invites/examples.md)
 

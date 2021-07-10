@@ -2,6 +2,7 @@
 
   - [Hızlı başlangıç](/tr/getting-started/quick-start.md)
   - [FAQs](/tr/getting-started/faq.md)
+  - [start.ourBots.title](/tr/getting-started/ourBots.md)
   - [Alpha Bot](/tr/getting-started/alpha.md)
   - [Profesyonel Bot](/tr/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Özellikleri](/tr/premium/features.md)
-  - [Aşamalar](/tr/premium/tiers.md)
-  - [Kurma](/tr/premium/setup.md)
 
 - Modüller
 
   - Davet Yönetimi
 
-    - [Genel Bakış](/tr/modules/invites/overview.md)
     - [Özel mesaj](/tr/modules/invites/custom-messages.md)
       - [Örnekler](/tr/modules/invites/examples.md)
 

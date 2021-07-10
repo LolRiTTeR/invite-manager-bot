@@ -6,7 +6,22 @@
 			"title": "Invite Management",
 			"description": "BOTがサーバーにいる間は、招待を使って起こったすべての出来事を追跡します。Discordはどれくらい招待コードが使われたのかしか表示しませんが、我々のBOTは誰が作ったコードが誰に使われたのか分析します。これにより、BOTは偽物の招待を検出し、招待システムをだまそうとしている人を確認できます。",
 			"examples": {
-				"title": "例"
+				"title": "例",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			},
 			"overview": {
 				"title": "オーバービュー"
@@ -68,16 +83,45 @@
 			"title": "管理",
 			"description": "新しいモデレーションシステムにより、多くのことを自動モデレートできます。詳細については [strikes]({{{ linkStrikes }}}) および[punishments]({{{ linkPunishments }}}) ページをご覧ください。要するに、BOTは不正行為をした人に'strikes' を行い、一定数の警告の後、ユーザーに罰を与えます。 これらはすべてユーザーに設定可能です。",
 			"punishments": {
-				"title": "罰"
+				"title": "罰",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			},
 			"strikes": {
-				"title": "警告"
+				"title": "警告",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
 			}
 		},
 		"music": {
 			"title": "音楽",
 			"overview": {
-				"title": "オーバービュー"
+				"title": "オーバービュー",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
@@ -119,6 +163,9 @@
 				"title": "メインBot",
 				"description": "other.openSource.bot.description"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
 	"premium": {
@@ -140,7 +187,8 @@
 		"alpha": {
 			"title": "アルファ Bot",
 			"intro": "`InviteManager Alpha` botは、新しい機能をテストするために使用するbotです。 Alpha botの新機能は常に安定しているとは限りませんが、このボットを使用する場合、最初にそれらの機能を確認でき、main botに組み込む前に改善する方法をフィードバックできます。 ",
-			"linkDescription": "ここから InviteManager Alpha を招待できます"
+			"linkDescription": "ここから InviteManager Alpha を招待できます",
+			"disabled": "start.alpha.disabled"
 		},
 		"faq": {
 			"title": "FAQs",
@@ -187,6 +235,10 @@
 					"description": "start.quick.setup.second.description"
 				}
 			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
 		}
 	},
 	"reference": {

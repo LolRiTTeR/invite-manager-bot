@@ -19,4 +19,4 @@ Nasz nowy system moderacji pozwala na automatyczną moderację wielu rzeczy. Spr
 
 ## Premium
 
-Aby zapłacić nasz rachunek za serwer, oferujemy wersję premium bota. Aby zobaczyć wszystkie dodatkowe funkcje, które otrzymujesz, odwiedź naszą [stronę płatności](/pl/premium/features.md).
+Aby zapłacić nasz rachunek za serwer, oferujemy wersję premium bota. Aby zobaczyć wszystkie dodatkowe funkcje, które otrzymujesz, odwiedź naszą [stronę płatności]().

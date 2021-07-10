@@ -6,7 +6,22 @@
 			"title": "邀請管理",
 			"description": "當我們的機器人加入您的伺服器時，我們將會追蹤您伺服器上的每一個邀請。Discord只會顯示您總共有多少邀請。我們的機器人也會分析誰邀請誰。這個功能讓我們的機器人可以偵測到假的邀請以及看到誰試圖欺騙邀請系統。",
 			"examples": {
-				"title": "範例"
+				"title": "範例",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			},
 			"overview": {
 				"title": "概述"
@@ -68,16 +83,45 @@
 			"title": "審核",
 			"description": "我們商標的全新審核系統允許您自動審核很多東西。請閱讀我們的[strikes]({{{ linkStrikes }}})和[懲罰]({{{ linkPunishments }}})頁面來獲得更多資訊。簡單來說，我們的機器人會給予「strikes」當人們行為不端時，然後當他們達到一定數量的strikes時，他們便會受到懲罰。這些都可以透過使用者自行配置。",
 			"punishments": {
-				"title": "懲罰"
+				"title": "懲罰",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			},
 			"strikes": {
-				"title": "Strikes"
+				"title": "Strikes",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
 			}
 		},
 		"music": {
 			"title": "音樂",
 			"overview": {
-				"title": "概述"
+				"title": "概述",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
@@ -119,6 +163,9 @@
 				"title": "主要機器人",
 				"description": "其他.開放資源.機器人.敘述"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
 	"premium": {
@@ -140,7 +187,8 @@
 		"alpha": {
 			"title": "初期的機器人",
 			"intro": "`InviteManager Alpha`機器人是我們拿來測試新特色用的機器人。這些新的特色在初期的機器人不會一直穩定，但如果您使用這個機器人，您將會是第一個看到這些特色而且您可以給我們回饋讓我們知道如何把他們變得更好在他們將被放進主要機器人之前。",
-			"linkDescription": "邀請InviteManager Alpha的連結在這裡"
+			"linkDescription": "邀請InviteManager Alpha的連結在這裡",
+			"disabled": "start.alpha.disabled"
 		},
 		"faq": {
 			"title": "常見問題",
@@ -187,6 +235,10 @@
 					"description": "開始.快速.設定.第二.敘述"
 				}
 			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
 		}
 	},
 	"reference": {

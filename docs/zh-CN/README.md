@@ -19,4 +19,4 @@
 
 ## Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page](/zh-CN/premium/features.md).
+To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().

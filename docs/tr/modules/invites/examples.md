@@ -1,45 +1,35 @@
-# Examples
+# Örnekler
 
-## Normal
+## modules.invites.examples.headlines.normal
 
-```text
-!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)
-```
+modules.invites.examples.content.normalCode
 
-```text
-!config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**
-```
+## modules.invites.examples.headlines.embed
 
-## Embed \(Premium\)
-
-### Join Message
+### modules.invites.examples.headlines.joinMessage
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** modules.invites.examples.headlines.screenshot **
 
-![Join Embed](../../../assets/invite-manager-join-message-premium.png)
+![modules.invites.examples.headlines.joinEmbed](../../../assets/invite-manager-join-message-premium.png)
 
-#### ** Code **
+#### ** modules.invites.examples.headlines.code **
 
-```text
-!config joinMessage { "color": "#5cd65c", "author": { "name": "{memberName} joined!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Account created", "value": "{memberCreated:timeAgo}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Invited by", "value": "{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})" }, { "name": "Invite Code", "value": "{inviteCode} in channel {channelMention}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
-```
+modules.invites.examples.content.joinMessageCode
 
 <!-- tabs:end -->
 
-### Leave Message
+### modules.invites.examples.headlines.leaveMessage
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** modules.invites.examples.headlines.screenshot **
 
-![Leave Embed](../../../assets/invite-manager-leave-message-premium.png)
+![modules.invites.examples.headlines.leaveEmbed](../../../assets/invite-manager-leave-message-premium.png)
 
-#### ** Code **
+#### ** modules.invites.examples.headlines.code **
 
-```text
-!config leaveMessage { "color": "#d65c5c", "author": { "name": "{memberName} left!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Time on server", "value": "{joinedAt:duration}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Invited by", "value": "{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})" }, { "name": "Invite Code", "value": "{inviteCode} in channel {channelMention}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
-```
+modules.invites.examples.content.leaveMessageCode
 
 <!-- tabs:end -->

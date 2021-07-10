@@ -1,7 +1,7 @@
-# Donating
+# other.donating.title
 
 other.donating.description
 
-## Crypto
+## other.donating.crypto.title
 
 other.donating.crypto.description

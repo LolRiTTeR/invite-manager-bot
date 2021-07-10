@@ -2,6 +2,7 @@
 
   - [Guide de démarrage rapide](/fr/getting-started/quick-start.md)
   - [Questions Courantes](/fr/getting-started/faq.md)
+  - [start.ourBots.title](/fr/getting-started/ourBots.md)
   - [Bot en Alpha](/fr/getting-started/alpha.md)
   - [Bot Pro](/fr/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Prime
 
   - [Fonctionnalités](/fr/premium/features.md)
-  - [Tiers](/fr/premium/tiers.md)
-  - [Installation](/fr/premium/setup.md)
 
 - Modules
 
   - Gestion des invitations
 
-    - [Vue d'ensemble](/fr/modules/invites/overview.md)
     - [Message personnalisé](/fr/modules/invites/custom-messages.md)
       - [Examples](/fr/modules/invites/examples.md)
 

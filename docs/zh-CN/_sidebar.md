@@ -2,6 +2,7 @@
 
   - [Quick Start](/zh-CN/getting-started/quick-start.md)
   - [问与答](/zh-CN/getting-started/faq.md)
+  - [start.ourBots.title](/zh-CN/getting-started/ourBots.md)
   - [Alpha Bot](/zh-CN/getting-started/alpha.md)
   - [Pro Bot](/zh-CN/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - Premium
 
   - [Features](/zh-CN/premium/features.md)
-  - [Tiers](/zh-CN/premium/tiers.md)
-  - [设定](/zh-CN/premium/setup.md)
 
 - Modules
 
   - 邀请管理
 
-    - [Overview](/zh-CN/modules/invites/overview.md)
     - [自定义讯息](/zh-CN/modules/invites/custom-messages.md)
       - [例子](/zh-CN/modules/invites/examples.md)
 

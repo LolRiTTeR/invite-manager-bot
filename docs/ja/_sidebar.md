@@ -2,6 +2,7 @@
 
   - [クイック-スタート](/ja/getting-started/quick-start.md)
   - [FAQs](/ja/getting-started/faq.md)
+  - [start.ourBots.title](/ja/getting-started/ourBots.md)
   - [アルファ Bot](/ja/getting-started/alpha.md)
   - [Pro Bot](/ja/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - プレミアム
 
   - [特徴](/ja/premium/features.md)
-  - [ティア](/ja/premium/tiers.md)
-  - [セットアップ](/ja/premium/setup.md)
 
 - モジュール
 
   - Invite Management
 
-    - [オーバービュー](/ja/modules/invites/overview.md)
     - [カスタム-メッセージ](/ja/modules/invites/custom-messages.md)
       - [例](/ja/modules/invites/examples.md)
 

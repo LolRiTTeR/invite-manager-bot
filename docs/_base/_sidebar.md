@@ -2,6 +2,7 @@
 
   - [§{start.quick.title}](/§{lang}/getting-started/quick-start.md)
   - [§{start.faq.title}](/§{lang}/getting-started/faq.md)
+  - [§{start.ourBots.title}](/§{lang}/getting-started/ourBots.md)
   - [§{start.alpha.title}](/§{lang}/getting-started/alpha.md)
   - [§{start.pro.title}](/§{lang}/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - §{premium.title}
 
   - [§{premium.features.title}](/§{lang}/premium/features.md)
-  - [§{premium.tiers.title}](/§{lang}/premium/tiers.md)
-  - [§{premium.setup.title}](/§{lang}/premium/setup.md)
 
 - §{modules.title}
 
   - §{modules.invites.title}
 
-    - [§{modules.invites.overview.title}](/§{lang}/modules/invites/overview.md)
     - [§{modules.invites.customMessages.title}](/§{lang}/modules/invites/custom-messages.md)
       - [§{modules.invites.examples.title}](/§{lang}/modules/invites/examples.md)
 

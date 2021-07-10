@@ -1,4 +1,4 @@
-# FAQ}
+# FAQ
 
 ## Wie ändere ich den Prefix des Bots?
 

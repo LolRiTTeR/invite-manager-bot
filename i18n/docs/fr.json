@@ -6,7 +6,22 @@
 			"title": "Gestion des invitations",
 			"description": "Pendant que notre bot est sur votre serveur, nous suivons chaque invitation qui se produit sur votre serveur. Discord vous montre seulement qui a combien d'invitations. Notre bot analyse également qui a été invité par qui. Cela permet à notre bot de détecter les fausses invitations et de voir qui tente de tromper le système d’invitation.",
 			"examples": {
-				"title": "Examples"
+				"title": "Examples",
+				"headlines": {
+					"normal": "modules.invites.examples.headlines.normal",
+					"embed": "modules.invites.examples.headlines.embed",
+					"joinMessage": "modules.invites.examples.headlines.joinMessage",
+					"screenshot": "modules.invites.examples.headlines.screenshot",
+					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
+					"code": "modules.invites.examples.headlines.code",
+					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
+					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+				},
+				"content": {
+					"normalCode": "modules.invites.examples.content.normalCode",
+					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
+					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+				}
 			},
 			"overview": {
 				"title": "Vue d'ensemble"
@@ -68,16 +83,45 @@
 			"title": "Modération",
 			"description": "Notre tout nouveau système de modération vous permet de modérer automatiquement de nombreuses choses. Veuillez consulter nos pages [avertissements]({{{linkStrikes}}}) et [sanctions]({{{linkPunishments}}}) pour plus d'informations. En bref, notre bot donne des 'avertissements' aux personnes qui se conduisent mal et après un certain nombre d'avertissements, l'utilisateur est sanctionné. Tout cela est configurable par l'utilisateur.",
 			"punishments": {
-				"title": "Sanctions"
+				"title": "Sanctions",
+				"question": {
+					"first": "modules.moderation.punishments.question.first",
+					"second": "modules.moderation.punishments.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.punishments.answer.first",
+					"second": "modules.moderation.punishments.answer.second"
+				}
 			},
 			"strikes": {
-				"title": "Avertissements"
+				"title": "Avertissements",
+				"question": {
+					"first": "modules.moderation.strikes.question.first",
+					"second": "modules.moderation.strikes.question.second"
+				},
+				"answer": {
+					"first": "modules.moderation.strikes.answer.first",
+					"second": "modules.moderation.strikes.answer.second"
+				},
+				"violations": {
+					"title": "modules.moderation.strikes.violations.title",
+					"invites": "modules.moderation.strikes.violations.invites",
+					"links": "modules.moderation.strikes.violations.links",
+					"words": "modules.moderation.strikes.violations.words",
+					"allCaps": "modules.moderation.strikes.violations.allCaps",
+					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
+					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
+					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
+					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
+					"emojis": "modules.moderation.strikes.violations.emojis"
+				}
 			}
 		},
 		"music": {
 			"title": "Musique",
 			"overview": {
-				"title": "Vue d'ensemble"
+				"title": "Vue d'ensemble",
+				"description": "modules.music.overview.description"
 			}
 		}
 	},
@@ -119,6 +163,9 @@
 				"title": "Bot principal",
 				"description": "other.openSource.bot.description"
 			}
+		},
+		"premium": {
+			"title": "other.premium.title"
 		}
 	},
 	"premium": {
@@ -140,7 +187,8 @@
 		"alpha": {
 			"title": "Bot en Alpha",
 			"intro": "Le bot `InviteManager Alpha` est le bot que nous utilisons pour tester de nouvelles fonctionnalités. Les nouvelles fonctionnalités du bot Alpha ne seront pas toujours stables, mais si vous utilisez ce bot, vous serez les premiers à les voir et vous pourrez nous dire comment nous pouvons les améliorer avant qu'elles ne soient incluses dans le bot principal.",
-			"linkDescription": "Invitez InviteManager en Alpha ici"
+			"linkDescription": "Invitez InviteManager en Alpha ici",
+			"disabled": "start.alpha.disabled"
 		},
 		"faq": {
 			"title": "Questions Courantes",
@@ -187,6 +235,10 @@
 					"description": "start.quick.setup.second.description"
 				}
 			}
+		},
+		"ourBots": {
+			"title": "start.ourBots.title",
+			"subtitle": "start.ourBots.subtitle"
 		}
 	},
 	"reference": {

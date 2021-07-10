@@ -1,4 +1,4 @@
-# FAQs}
+# FAQs
 
 ## Botun ön ekini nasıl değiştirebilirim?
 

@@ -2,6 +2,7 @@
 
   - [Quick Start](/ar/getting-started/quick-start.md)
   - [الأسئلة الشائعة](/ar/getting-started/faq.md)
+  - [start.ourBots.title](/ar/getting-started/ourBots.md)
   - [البوت التجريبي](/ar/getting-started/alpha.md)
   - [Pro Bot](/ar/getting-started/pro.md)
 
@@ -13,14 +14,11 @@
 - النسخة المدفوعة
 
   - [الخصائص](/ar/premium/features.md)
-  - [مستويات](/ar/premium/tiers.md)
-  - [تأسيس](/ar/premium/setup.md)
 
 - الخصائص
 
   - تدبير الدعوات
 
-    - [نظرة عامة](/ar/modules/invites/overview.md)
     - [رسالة مخصص](/ar/modules/invites/custom-messages.md)
       - [أمثلة](/ar/modules/invites/examples.md)
 
