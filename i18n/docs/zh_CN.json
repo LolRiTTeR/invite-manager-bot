@@ -8,19 +8,20 @@
 			"examples": {
 				"title": "例子",
 				"headlines": {
-					"normal": "modules.invites.examples.headlines.normal",
-					"embed": "modules.invites.examples.headlines.embed",
-					"joinMessage": "modules.invites.examples.headlines.joinMessage",
-					"screenshot": "modules.invites.examples.headlines.screenshot",
-					"joinEmbed": "modules.invites.examples.headlines.joinEmbed",
-					"code": "modules.invites.examples.headlines.code",
-					"leaveMessage": "modules.invites.examples.headlines.leaveMessage",
-					"leaveEmbed": "modules.invites.examples.headlines.leaveEmbed"
+					"examples": "例子",
+					"normal": "Normal",
+					"embed": "Embed \\(Premium\\)",
+					"screenshot": "Screenshot",
+					"code": "Code",
+					"joinMessage": "Join Message",
+					"joinEmbed": "Join Embed",
+					"leaveMessage": "Leave Message",
+					"leaveEmbed": "Leave Embed"
 				},
 				"content": {
-					"normalCode": "modules.invites.examples.content.normalCode",
-					"joinMessageCode": "modules.invites.examples.content.joinMessageCode",
-					"leaveMessageCode": "modules.invites.examples.content.leaveMessageCode"
+					"normalCode": "```text\n!config joinMessage \\{memberMention\\} **joined**; Invited by **\\{inviterName\\}** (**\\{numInvites\\}** invites)\n```\n\n```text\n!config leaveMessage \\{memberName\\} **left** after \\{joinedAt:duration\\} on this server; Invited by **\\{inviterName\\}**\n```",
+					"joinMessageCode": "```text\n!config joinMessage \\{ \"color\": \"#5cd65c\", \"author\": \\{ \"name\": \"\\{memberName\\} joined!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Account created\", \"value\": \"\\{memberCreated:timeAgo\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```",
+					"leaveMessageCode": "```text\n!config leaveMessage \\{ \"color\": \"#d65c5c\", \"author\": \\{ \"name\": \"\\{memberName\\} left!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Time on server\", \"value\": \"\\{joinedAt:duration\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```"
 				}
 			},
 			"overview": {
@@ -28,55 +29,55 @@
 			},
 			"customMessages": {
 				"title": "自定义讯息",
+				"description": "You can customise the join and leave messages with a number of parameters.",
 				"placeholders": {
-					"jumpto": "modules.invites.customMessages.placeholders.jumpto",
 					"title": {
-						"small": "modules.invites.customMessages.placeholders.title.small",
-						"large": "modules.invites.customMessages.placeholders.title.large"
+						"small": "placeholders",
+						"large": "Placeholders"
 					},
-					"example": "modules.invites.customMessages.placeholders.example",
-					"description": "modules.invites.customMessages.placeholders.description",
-					"yes": "modules.invites.customMessages.placeholders.yes",
+					"jumpto": "Jump to",
+					"yes": "yes",
+					"no": "no",
+					"example": "example",
+					"description": "description",
 					"descriptions": {
-						"memberName": "modules.invites.customMessages.placeholders.descriptions.memberName",
-						"memberId": "modules.invites.customMessages.placeholders.descriptions.memberId",
-						"memberMention": "modules.invites.customMessages.placeholders.descriptions.memberMention",
-						"memberFullName": "modules.invites.customMessages.placeholders.descriptions.memberFullName",
-						"memberImage": "modules.invites.customMessages.placeholders.descriptions.memberImage",
-						"inviterName": "modules.invites.customMessages.placeholders.descriptions.inviterName",
-						"inviterId": "modules.invites.customMessages.placeholders.descriptions.inviterId",
-						"inviterMention": "modules.invites.customMessages.placeholders.descriptions.inviterMention",
-						"inviterFullName": "modules.invites.customMessages.placeholders.descriptions.inviterFullName",
-						"inviterImage": "modules.invites.customMessages.placeholders.descriptions.inviterImage",
-						"numInvites": "modules.invites.customMessages.placeholders.descriptions.numInvites",
-						"numRegularInvites": "modules.invites.customMessages.placeholders.descriptions.numRegularInvites",
-						"numBonusInvites": "modules.invites.customMessages.placeholders.descriptions.numBonusInvites",
-						"numFakeInvites": "modules.invites.customMessages.placeholders.descriptions.numFakeInvites",
-						"numLeaveInvites": "modules.invites.customMessages.placeholders.descriptions.numLeaveInvites",
-						"memberCount": "modules.invites.customMessages.placeholders.descriptions.memberCount",
-						"numJoins": "modules.invites.customMessages.placeholders.descriptions.numJoins",
-						"channelName": "modules.invites.customMessages.placeholders.descriptions.channelName",
-						"channelMention": "modules.invites.customMessages.placeholders.descriptions.channelMention",
-						"inviteCode": "modules.invites.customMessages.placeholders.descriptions.inviteCode",
-						"memberCreatedDate": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDate",
-						"memberCreatedDuration": "modules.invites.customMessages.placeholders.descriptions.memberCreatedDuration",
-						"memberCreatedTimeAgo": "modules.invites.customMessages.placeholders.descriptions.memberCreatedTimeAgo",
-						"firstJoinDate": "modules.invites.customMessages.placeholders.descriptions.firstJoinDate",
-						"firstJoinDuration": "modules.invites.customMessages.placeholders.descriptions.firstJoinDuration",
-						"firstJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.firstJoinTimeAgo",
-						"previousJoinDate": "modules.invites.customMessages.placeholders.descriptions.previousJoinDate",
-						"previousJoinDuration": "modules.invites.customMessages.placeholders.descriptions.previousJoinDuration",
-						"previousJoinTimeAgo": "modules.invites.customMessages.placeholders.descriptions.previousJoinTimeAgo",
-						"joinedAtDate": "modules.invites.customMessages.placeholders.descriptions.joinedAtDate",
-						"joinedAtDuration": "modules.invites.customMessages.placeholders.descriptions.joinedAtDuration",
-						"joinedAtTimeAgo": "modules.invites.customMessages.placeholders.descriptions.joinedAtTimeAgo"
-					},
-					"no": "modules.invites.customMessages.placeholders.no"
+						"memberName": "The name of the member that just joined your discord server",
+						"memberId": "The discord ID of the member that just joined your server",
+						"memberMention": "The mention of the member that just joined your discord server (person will be pinged).",
+						"memberFullName": "The username and discriminator of the user that just joined your server",
+						"memberImage": "URL of the avatar of the member",
+						"inviterName": "The name of the inviter",
+						"inviterId": "The discord ID of the inviter",
+						"inviterMention": "The mention of the inviter (person will be pinged)",
+						"inviterFullName": "The username and discriminator of the inviter",
+						"inviterImage": "URL of the avatar of the inviter",
+						"numInvites": "Number of invites the inviter has in total",
+						"numRegularInvites": "Number of invites the inviter has through regular invites",
+						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually(",
+						"numFakeInvites": "Number of fake invites the inviter has",
+						"numLeaveInvites": "Number of invites that were removed because the member left again.",
+						"memberCount": "Number of members your server has in total",
+						"numJoins": "Number of times the user has joined the server",
+						"channelName": "The name of the channel where the invite code was created",
+						"channelMention": "Mention of the channel where the invite code was created",
+						"inviteCode": "Invite code used",
+						"memberCreatedDate": "Date the discord user was created",
+						"memberCreatedDuration": "Duration since the discord user was created",
+						"memberCreatedTimeAgo": "Time the discord user was created",
+						"firstJoinDate": "Date the user joined the server for the first time",
+						"firstJoinDuration": "Duration since the user joined the server for the first time",
+						"firstJoinTimeAgo": "Time the user joined the server for the first time",
+						"previousJoinDate": "Date when the user joined the server the last time",
+						"previousJoinDuration": "Duration since when the user joined the server the last time",
+						"previousJoinTimeAgo": "Time when the user joined the server the last time",
+						"joinedAtDate": "Date when the user joined",
+						"joinedAtDuration": "Duration since when the user joined",
+						"joinedAtTimeAgo": "Time when the user joined"
+					}
 				},
-				"description": "modules.invites.customMessages.description",
-				"content": "modules.invites.customMessages.content",
-				"premiumNote": "modules.invites.customMessages.premiumNote",
-				"endingParagraph": "modules.invites.customMessages.endingParagraph"
+				"content": "You can set a custom join or leave message by setting the config:\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\nor\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\nA message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.\n\nSo if we want the message to say\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\nwe can easily do that by replacing all the names and the number with placeholders:\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\nSo you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.",
+				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](./examples.md)",
+				"endingParagraph": "Please see the [examples page](./examples.md) to see what kind of messages you can make!"
 			}
 		},
 		"moderation": {
@@ -85,35 +86,35 @@
 			"punishments": {
 				"title": "惩罚",
 				"question": {
-					"first": "modules.moderation.punishments.question.first",
-					"second": "modules.moderation.punishments.question.second"
+					"first": "What are punishments?",
+					"second": "How can I punish a user after reaching a certain amount of strikes?"
 				},
 				"answer": {
-					"first": "modules.moderation.punishments.answer.first",
-					"second": "modules.moderation.punishments.answer.second"
+					"first": "Punishments are actions like `ban`, `kick` or `mute` that can be given to a user when he violates the rules. You can either call punish users directly by using commands, or you can define punishments that happen after a user reaches a certain amount of strikes.",
+					"second": "With the `punishmentconfig` command you can set after how many strikes a certain punishment action will be given.\n\n```text\n!punishmentconfig <punishmentType> <numberOfStrikesNeeded>\n```\n\nA list of all available punishments:\n\n- ban\n- softban\n- kick\n- mute\n- warn\n\nSo if you would like to kick a user after he reaches 5 strikes, you would have to execute the following command\n\n```text\n!punishmentconfig kick 5\n```\n\nIf you want to delete a `punishmentconfig`, just set the strikes to `0` like that:\n\n```text\n!punishmentconfig kick 0\n```\n\nTo see all punishment configs, just use the command without giving any arguments:\n\n```text\n!punishmentconfig\n```"
 				}
 			},
 			"strikes": {
 				"title": "警告",
 				"question": {
-					"first": "modules.moderation.strikes.question.first",
-					"second": "modules.moderation.strikes.question.second"
+					"first": "What are strikes?",
+					"second": "What are violations?"
 				},
 				"answer": {
-					"first": "modules.moderation.strikes.answer.first",
-					"second": "modules.moderation.strikes.answer.second"
+					"first": "Strikes are points that users get for violating server rules. Every time the user receives a strike, he gets a personal message telling him how many strikes he has and why he got them. When a user reaches a certain amount of strikes, he will receive a **punishment**.",
+					"second": "Violations are auto-moderation rules that you can enable or disable on your server. Currently, the following violations exist:\n\n- [invites](strikes.md#invites)\n- [links](strikes.md#links)\n- [words](strikes.md#words)\n- [allCaps](strikes.md#allcaps)\n- [duplicateText](strikes.md#duplicatetext)\n- [quickMessages](strikes.md#quickmessages)\n- [mentionUsers](strikes.md#mentionusers)\n- [mentionRoles](strikes.md#mentionroles)\n- [emojis](strikes.md#emojis)\n\nFor each of those violations, you have to define how many strikes will be given if someone violates it. You can do that by using the `strikeconfig` command:\n\n```text\n!strikeconfig <violationType> <numberOfStrikes>\n```\n\nFor example, if you want users to get `2` strikes for violating the `invites` rule, then you would use the following command:\n\n```text\n!strikeconfig invites 2\n```\n\nYou can check the current config by doing:\n\n```text\n!strikeconfig\n```"
 				},
 				"violations": {
-					"title": "modules.moderation.strikes.violations.title",
-					"invites": "modules.moderation.strikes.violations.invites",
-					"links": "modules.moderation.strikes.violations.links",
-					"words": "modules.moderation.strikes.violations.words",
-					"allCaps": "modules.moderation.strikes.violations.allCaps",
-					"duplicateText": "modules.moderation.strikes.violations.duplicateText",
-					"quickMessages": "modules.moderation.strikes.violations.quickMessages",
-					"mentionUsers": "modules.moderation.strikes.violations.mentionUsers",
-					"mentionRoles": "modules.moderation.strikes.violations.mentionRoles",
-					"emojis": "modules.moderation.strikes.violations.emojis"
+					"title": "Detailed list of violations",
+					"invites": "This violation is triggered whenever the user posts an invite link to another discord server.\n\nExample:\n\n`!strikeconfig invites 1`\n\nTo delete the strike config:\n\n`!strikeconfig invites 0`\n\n**Config options:**\n\n- [autoModInvitesEnabled](../../reference/settings?id=enabled-2)",
+					"links": "This violation is triggered whenever the user posts a link.\n\nExample:\n\n`!strikeconfig links 1`\n\nTo delete the strike config:\n\n`!strikeconfig links 0`\n\n**Config options:**\n\n- [autoModLinksEnabled](../../reference/settings?id=enabled-3)\n- [autoModLinksWhitelist](../../reference/settings?id=whitelist)\n- [autoModLinksBlacklist](../../reference/settings?id=blacklist)\n- [autoModLinksFollowRedirects](../../reference/settings?id=follow-redirects)",
+					"words": "This violation is triggered whenever the user posts blacklisted words.\n\nExample:\n\n`!strikeconfig words 1`\n\nTo delete the strike config:\n\n`!strikeconfig words 0`\n\n**Config options:**\n\n- [autoModWordsEnabled](../../reference/settings?id=enabled-4)\n- [autoModWordsBlacklist](../../reference/settings?id=blacklist-1)",
+					"allCaps": "This violation is triggered whenever the user posts a message that is mostly in CAPS.\n\nExample:\n\n`!strikeconfig allCaps 1`\n\nTo delete the strike config:\n\n`!strikeconfig allCaps 0`\n\n**Config options:**\n\n- [autoModAllCapsEnabled](../../reference/settings?id=enabled-5)\n- [autoModAllCapsMinCharacters](../../reference/settings?id=min-characters)\n- [autoModAllCapsPercentageCaps](../../reference/settings?id=percentage-caps)",
+					"duplicateText": "This violation is triggered whenever the user posts the same text multiple times.\n\nExample:\n\n`!strikeconfig duplicateText 1`\n\nTo delete the strike config:\n\n`!strikeconfig duplicateText 0`\n\n**Config options:**}\n\n- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)\n- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)",
+					"quickMessages": "This violation is triggered whenever the user quickly posts messages.\n\nExample:\n\n`!strikeconfig quickMessages 1`\n\nTo delete the strike config:\n\n`!strikeconfig quickMessages 0`\n\n**Config options:**\n\n- [autoModQuickMessagesEnabled](../../reference/settings?id=enabled-7)\n- [autoModQuickMessagesNumberOfMessages](../../reference/settings?id=-of-messages)\n- [autoModQuickMessagesTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds-1)",
+					"mentionUsers": "This violation is triggered whenever the user mentions mutliple users.\n\nExample:\n\n`!strikeconfig mentionUsers 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionUsers 0`\n\n**Config options:**\n\n- [autoModMentionUsersEnabled](../../reference/settings?id=enabled-8)\n- [autoModMentionUsersMaxNumberOfMentions](../../reference/settings?id=max-of-mentions)",
+					"mentionRoles": "This violation is triggered whenever the user mentions mutliple roles.\n\nExample:\n\n`!strikeconfig mentionRoles 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionRoles 0`\n\n**Config options:**\n\n- [autoModMentionRolesEnabled](../../reference/settings?id=enabled-9)\n- [autoModMentionRolesMaxNumberOfMentions](../../reference/settings?id=max-of-mentions-1)",
+					"emojis": "This violation is triggered whenever the user posts multiple emojis.\n\nExample:\n\n`!strikeconfig emojis 1`\n\nTo delete the strike config:\n\n`!strikeconfig emojis 0`\n\n**Config options:**\n\n- [autoModEmojisEnabled](../../reference/settings?id=enabled-10)\n- [autoModEmojisMaxNumberOfEmojis](../../reference/settings?id=max-of-emojis)"
 				}
 			}
 		},
@@ -121,7 +122,7 @@
 			"title": "音乐",
 			"overview": {
 				"title": "总览",
-				"description": "modules.music.overview.description"
+				"description": "The music feature currently is disabled. There are no plans to re-enable them in the near future."
 			}
 		}
 	},
@@ -129,10 +130,10 @@
 		"title": "其他",
 		"donating": {
 			"title": "赞助",
-			"description": "other.donating.description",
+			"description": "We currently dont accept any donations.",
 			"crypto": {
 				"title": "加密",
-				"description": "other.donating.crypto.description"
+				"description": "We currently dont accept any crypto donations."
 			}
 		},
 		"roadmap": {
@@ -140,49 +141,30 @@
 		},
 		"support": {
 			"title": "支持",
-			"description": "other.support.description"
+			"description": "For support please first read the [Frequently Asked Questions (FAQ)]({{{ faqLink }}}).\n\nIf you can not find your question there, we have a more extensive FAQ list in our [Discord server]({{{ discordInvite }}}) in the [#faq channel]({{{ faqChannelLink }}})\n\nLastly, you can check the [#support channel]({{{ supportChannelLink }}}) for your question. In there you can also request human support by choosing option `6`\n(**Please only request human support if you have read the FAQs in our Discord!**)"
 		},
 		"translations": {
 			"title": "翻译",
-			"description": "other.translations.description",
+			"description": "InviteManager relies on the community to be translated into different languages. Your help is gladly appreciated, please check the link below if you want to contribute.",
 			"help": {
-				"title": "other.translations.help.title",
-				"description": "other.translations.help.description"
+				"title": "Help translating",
+				"description": "If you want to help translate the bot or the documentation, please join our [Discord server]({{{ discordLink }}}) so we can invite you to our [Transifex organization]({{{ transifexLink }}})"
 			}
 		},
 		"webpanel": {
 			"title": "网页后台",
-			"description": "other.webpanel.description"
+			"description": "There currently are no plans to release a webpanel in the near future."
 		},
 		"changelog": {
 			"title": "更新记录"
 		},
 		"openSource": {
 			"title": "Open Source",
-			"description": "other.openSource.description",
+			"description": "InviteManager is open source for everyone to contribute.",
 			"bot": {
 				"title": "Main Bot",
-				"description": "other.openSource.bot.description"
+				"description": "If you want to contribute or run your own custom bot instance check our [Github repository]({{{ link }}})"
 			}
-		},
-		"premium": {
-			"title": "other.premium.title",
-			"description": "other.premium.description"
-		}
-	},
-	"premium": {
-		"title": "Premium",
-		"description": "To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]({{{ link }}}).",
-		"features": {
-			"title": "Features",
-			"first": "premium.features.first",
-			"second": "premium.features.second"
-		},
-		"tiers": {
-			"title": "Tiers"
-		},
-		"setup": {
-			"title": "设定"
 		}
 	},
 	"start": {
@@ -192,7 +174,7 @@
 			"title": "Alpha Bot",
 			"intro": "The `InviteManager Alpha` bot is the bot we use to test new features. The new features on the Alpha bot will not always be stable, but if you use this bot, you'll be the first to see them and you can give us feedback how we can make them better before they will be included in the main bot.",
 			"linkDescription": "Invite the InviteManager Alpha here",
-			"disabled": "start.alpha.disabled"
+			"disabled": "Disabled"
 		},
 		"faq": {
 			"title": "问与答",
@@ -223,27 +205,23 @@
 		},
 		"pro": {
 			"title": "Pro Bot",
-			"description": "start.pro.description"
+			"description": "There currently is no pro bot available. All the pro features are enabled on the regular bots aswell."
 		},
 		"quick": {
 			"title": "Quick Start",
 			"setup": {
 				"title": "Setup",
-				"description": "start.quick.setup.description",
+				"description": "To start, please invite one of our bots from the [Our Bots page](./our-bots)\n\nAfter that make sure the bot has `Read Messages` and `Send Messages` permission in a channel, then run the `!setup` command.\n\nThe setup command will tell you if the bot is missing any required permissions.",
 				"first": {
-					"title": "start.quick.setup.first.title",
-					"description": "start.quick.setup.first.description"
-				},
-				"second": {
-					"title": "start.quick.setup.second.title",
-					"description": "start.quick.setup.second.description"
+					"title": "First steps",
+					"description": "After setting up the bot you most likely want to configure join and leave channels. For that please head over [to our FAQ](./faq) to learn more."
 				}
 			}
 		},
 		"ourBots": {
-			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle",
-			"description": "start.ourBots.description"
+			"title": "Our Bots",
+			"subtitle": "Invite the Bot",
+			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot**:\n{{{ blueBotLink }}}\n\n**Invite the yellow bot**\n{{{ yellowBotLink }}}"
 		}
 	},
 	"reference": {
@@ -255,13 +233,19 @@
 			"title": "Configs / Settings"
 		}
 	},
-	"module": {
-		"invites": {
-			"customMessages": {
-				"content": "module.invites.customMessages.content",
-				"premiumNote": "module.invites.customMessages.premiumNote",
-				"endingParagraph": "module.invites.customMessages.endingParagraph"
-			}
+	"premium": {
+		"title": "Premium",
+		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.",
+		"features": {
+			"title": "Features",
+			"first": "Join and leave message styling \\(Embedded messages\\)",
+			"second": "Leaderboards are refreshed every 5 minutes"
+		},
+		"tiers": {
+			"title": "Tiers"
+		},
+		"setup": {
+			"title": "设定"
 		}
 	}
 }

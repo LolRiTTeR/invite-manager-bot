@@ -877,7 +877,7 @@
 		},
 		"setup": {
 			"faq": {
-				"text": "Botun kurulumu hakkında eksiksiz bir kılavuz burada bulunabilir: https://invitemanager.cc/",
+				"text": "A complete guide on setting up the bot can be found here: https://invitemanager.cc/",
 				"title": "SSS (Sıkça Sorulan Sorular) ve daha fazlası"
 			},
 			"help": {
@@ -1499,7 +1499,8 @@
 				},
 				"title": "davetler",
 				"general": {
-					"title": "Genel"
+					"title": "Genel",
+					"description": "General invite settings, such as join roles"
 				}
 			},
 			"moderation": {

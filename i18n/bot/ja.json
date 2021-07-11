@@ -1499,7 +1499,8 @@
 				},
 				"title": "招待",
 				"general": {
-					"title": "General"
+					"title": "General",
+					"description": "General invite settings, such as join roles"
 				}
 			},
 			"moderation": {

@@ -10,7 +10,7 @@
 			"title": "Discord Hilfe-Server"
 		},
 		"website": {
-			"title": "Bot Webseite"
+			"title": "Bot Website"
 		},
 		"mentionHelp": "Mein aktueller Prefix ist `{{{ prefix }}}`\n\nVerwende `{{{ prefix }}}help` für weitere Hilfe."
 	},
@@ -248,10 +248,10 @@
 			"sameValue": "Diese Konfiguration ist bereits auf diesen Wert eingestellt.",
 			"self": {
 				"args": {
-					"key": "Die Configurations Einstellung welche du anzeichen/ändern willst.",
-					"value": "Der neue wert der Einstellung."
+					"key": "Die Konfigurationseinstellung, die du anzeigen/ändern willst.",
+					"value": "Der neue Wert der Einstellung."
 				},
-				"description": "Zeigt und ändert die einstellungen des Servers."
+				"description": "Zeigt und ändert die Einstellungen des Servers."
 			},
 			"text": "Below are all the config settings of your server.\nUse `{{ prefix }}config <key>` to view a single setting\nUse `{{ prefix }}config <key> <value>` to set the config <key> to <value>",
 			"title": "Deine Einstellungen"
@@ -1499,7 +1499,8 @@
 				},
 				"title": "Invites",
 				"general": {
-					"title": "General"
+					"title": "General",
+					"description": "Generelle Invite-Einstellungen, wie z.B. Beitrittrsrollen"
 				}
 			},
 			"moderation": {

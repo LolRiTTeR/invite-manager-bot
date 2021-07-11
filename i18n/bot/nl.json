@@ -20,8 +20,8 @@
 	"cmd": {
 		"addInvites": {
 			"amount": {
-				"negative": "**{{ amount }}** invites verwijdert voor <{{ member }}>, en heeft nu **{{ totalInvites }}**",
-				"positive": "**{{ amount }}** invites toegevoegt voor <@{{ member }}>, en heeft nu **{{ totalInvites }}** invites."
+				"negative": "**{{ amount }}** invites verwijdert voor {{{ member }}}, en heeft nu **{{ totalInvites }}**",
+				"positive": "**{{ amount }}** invites toegevoegt voor @{{{ member }}}, en heeft nu **{{ totalInvites }}** invites."
 			},
 			"self": {
 				"args": {
@@ -37,7 +37,7 @@
 		},
 		"addRank": {
 			"created": "Rank {{{ role }}} toegevoegd  en heeft {{ invites }} nodig en heeft de volgende beschrijving: {{ description }}",
-			"roleTooHigh": "De role **{{ role }}** is hoger dan mijn role (**{{ myRole }}**) dus daarom kan ik de role niet geven aan mensen die het aantal invites bereiken.",
+			"roleTooHigh": "De role **{{{ role }}}** is hoger dan mijn role (**{{{ myRole }}}**) dus daarom kan ik de role niet geven aan mensen die het aantal invites bereiken.",
 			"self": {
 				"args": {
 					"info": "Een beschrijving zodat gebruikers meer krijgen te weten over deze rank.",
@@ -877,7 +877,7 @@
 		},
 		"setup": {
 			"faq": {
-				"text": "Een complete uitleg om de bot op te zetten kan hier worden gevonden: https://invitemanager.cc/",
+				"text": "Een complete guide om de bot op te zetten kan hier gevonden worden:\nhttps://invitemanager.cc/",
 				"title": "Vraag en antwoorden en meer"
 			},
 			"help": {
@@ -1499,7 +1499,8 @@
 				},
 				"title": "Invites",
 				"general": {
-					"title": "General"
+					"title": "General",
+					"description": "Algemene invite instellingen, zoals join rollen"
 				}
 			},
 			"moderation": {
