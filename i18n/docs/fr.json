@@ -139,7 +139,8 @@
 			"title": "Feuille de route"
 		},
 		"support": {
-			"title": "Support"
+			"title": "Support",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "Traductions",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "Prime",
 		"description": "Pour payer notre facture de serveur, nous proposons une version premium du bot. Pour voir toutes les fonctionnalités supplémentaires que vous obtenez, veuillez visiter notre [page de tarification]({{{ link }}}).",
 		"features": {
-			"title": "Fonctionnalités"
+			"title": "Fonctionnalités",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "Tiers"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

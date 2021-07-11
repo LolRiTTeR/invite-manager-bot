@@ -52,7 +52,7 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModInvitesEnabled](../../../reference/settings?id=enabled-2)
+- [autoModInvitesEnabled](../../reference/settings?id=enabled-2)
 
 ### links
 
@@ -68,10 +68,10 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModLinksEnabled](../../../reference/settings?id=enabled-3)
-- [autoModLinksWhitelist](../../../reference/settings?id=whitelist)
-- [autoModLinksBlacklist](../../../reference/settings?id=blacklist)
-- [autoModLinksFollowRedirects](../../../reference/settings?id=follow-redirects)
+- [autoModLinksEnabled](../../reference/settings?id=enabled-3)
+- [autoModLinksWhitelist](../../reference/settings?id=whitelist)
+- [autoModLinksBlacklist](../../reference/settings?id=blacklist)
+- [autoModLinksFollowRedirects](../../reference/settings?id=follow-redirects)
 
 ### words
 
@@ -87,8 +87,8 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModWordsEnabled](../../../reference/settings?id=enabled-4)
-- [autoModWordsBlacklist](../../../reference/settings?id=blacklist-1)
+- [autoModWordsEnabled](../../reference/settings?id=enabled-4)
+- [autoModWordsBlacklist](../../reference/settings?id=blacklist-1)
 
 ### allCaps
 
@@ -104,9 +104,9 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModAllCapsEnabled](../../../reference/settings?id=enabled-5)
-- [autoModAllCapsMinCharacters](../../../reference/settings?id=min-characters)
-- [autoModAllCapsPercentageCaps](../../../reference/settings?id=percentage-caps)
+- [autoModAllCapsEnabled](../../reference/settings?id=enabled-5)
+- [autoModAllCapsMinCharacters](../../reference/settings?id=min-characters)
+- [autoModAllCapsPercentageCaps](../../reference/settings?id=percentage-caps)
 
 ### duplicateText
 
@@ -122,8 +122,8 @@ To delete the strike config:
 
 **Config options:**}
 
-- [autoModDuplicateTextEnabled](../../../reference/settings?id=enabled-6)
-- [autoModDuplicateTextTimeframeInSeconds](../../../reference/settings?id=timeframe-in-seconds)
+- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)
+- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)
 
 ### quickMessages
 
@@ -139,9 +139,9 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModQuickMessagesEnabled](../../../reference/settings?id=enabled-7)
-- [autoModQuickMessagesNumberOfMessages](../../../reference/settings?id=-of-messages)
-- [autoModQuickMessagesTimeframeInSeconds](../../../reference/settings?id=timeframe-in-seconds-1)
+- [autoModQuickMessagesEnabled](../../reference/settings?id=enabled-7)
+- [autoModQuickMessagesNumberOfMessages](../../reference/settings?id=-of-messages)
+- [autoModQuickMessagesTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds-1)
 
 ### mentionUsers
 
@@ -157,8 +157,8 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModMentionUsersEnabled](../../../reference/settings?id=enabled-8)
-- [autoModMentionUsersMaxNumberOfMentions](../../../reference/settings?id=max-of-mentions)
+- [autoModMentionUsersEnabled](../../reference/settings?id=enabled-8)
+- [autoModMentionUsersMaxNumberOfMentions](../../reference/settings?id=max-of-mentions)
 
 ### mentionRoles
 
@@ -174,8 +174,8 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModMentionRolesEnabled](../../../reference/settings?id=enabled-9)
-- [autoModMentionRolesMaxNumberOfMentions](../../../reference/settings?id=max-of-mentions-1)
+- [autoModMentionRolesEnabled](../../reference/settings?id=enabled-9)
+- [autoModMentionRolesMaxNumberOfMentions](../../reference/settings?id=max-of-mentions-1)
 
 ### emojis
 
@@ -191,5 +191,5 @@ To delete the strike config:
 
 **Config options:**
 
-- [autoModEmojisEnabled](../../../reference/settings?id=enabled-10)
-- [autoModEmojisMaxNumberOfEmojis](../../../reference/settings?id=max-of-emojis)
+- [autoModEmojisEnabled](../../reference/settings?id=enabled-10)
+- [autoModEmojisMaxNumberOfEmojis](../../reference/settings?id=max-of-emojis)

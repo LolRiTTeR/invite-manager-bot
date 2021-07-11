@@ -2,7 +2,7 @@
 
   - [Guide de démarrage rapide](/fr/getting-started/quick-start.md)
   - [Questions Courantes](/fr/getting-started/faq.md)
-  - [start.ourBots.title](/fr/getting-started/ourBots.md)
+  - [start.ourBots.title](/fr/getting-started/our-bots.md)
   - [Bot en Alpha](/fr/getting-started/alpha.md)
   - [Bot Pro](/fr/getting-started/pro.md)
 

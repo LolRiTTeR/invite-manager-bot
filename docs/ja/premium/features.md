@@ -1,7 +1,9 @@
-# other.premium.title
+# プレミアム
 
-§{other.premium.description["ourBotsLink":"/ja/getting-started/our-bots.md"]}
+サーバーの請求書を支払うために、botのプレミアムバージョンを提供しています。 追加機能をすべてご覧になるには、[pricing page]() をご覧ください。
 
-### \${other.premium.features.first}
+## 特徴
 
-### \${other.premium.features.second}
+### premium.features.first
+
+### premium.features.second

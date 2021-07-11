@@ -2,7 +2,7 @@
 
   - [Quick Start](/zh-CN/getting-started/quick-start.md)
   - [问与答](/zh-CN/getting-started/faq.md)
-  - [start.ourBots.title](/zh-CN/getting-started/ourBots.md)
+  - [start.ourBots.title](/zh-CN/getting-started/our-bots.md)
   - [Alpha Bot](/zh-CN/getting-started/alpha.md)
   - [Pro Bot](/zh-CN/getting-started/pro.md)
 

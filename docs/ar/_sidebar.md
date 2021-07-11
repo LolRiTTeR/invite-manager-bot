@@ -2,7 +2,7 @@
 
   - [Quick Start](/ar/getting-started/quick-start.md)
   - [الأسئلة الشائعة](/ar/getting-started/faq.md)
-  - [start.ourBots.title](/ar/getting-started/ourBots.md)
+  - [start.ourBots.title](/ar/getting-started/our-bots.md)
   - [البوت التجريبي](/ar/getting-started/alpha.md)
   - [Pro Bot](/ar/getting-started/pro.md)
 

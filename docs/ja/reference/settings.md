@@ -6,195 +6,200 @@ There are many config options that can be set. You don't have to set all of them
 
 ### 総合
 
-| Setting                                     | Description                                                              |
-| ------------------------------------------- | ------------------------------------------------------------------------ |
-| [接頭辞](#prefix)                           | ボットコマンドを呼びだすために使用されるプレフィックス。                 |
-| [言語](#lang)                               | BOT の言語                                                               |
-| [ログチャンネル](#logchannel)               | ボットアクションが記録されるチャンネル。                                 |
-| [アップデート情報を手に入れる](#getupdates) | InviteManager に関する開発の最新情報を受け取ることができるようにします。 |
-| [コマンドチャンネル](#channels)             | ボットがコマンドに反応するチャンネル。                                   |
-| [無視されるチャンネル](#ignoredchannels)    | ボットがコマンドを無視するチャンネル。                                   |
+| Setting | Description |
+|---|---|
+| [接頭辞](#prefix) | ボットコマンドを呼びだすために使用されるプレフィックス。
+| [言語](#lang) | BOTの言語
+| [ログチャンネル](#logchannel) | ボットアクションが記録されるチャンネル。
+| [アップデート情報を手に入れる](#getupdates) | InviteManagerに関する開発の最新情報を受け取ることができるようにします。
+| [コマンドチャンネル](#channels) | ボットがコマンドに反応するチャンネル。
+| [無視されるチャンネル](#ignoredchannels) | ボットがコマンドを無視するチャンネル。
 
 ### 招待
 
+
+
 #### General
 
-| Setting                  | Description                                          |
-| ------------------------ | ---------------------------------------------------- |
-| [Join Roles](#joinroles) | Roles that are assigned to all members when joining. |
+| Setting | Description |
+|---|---|
+| [Join Roles](#joinroles) | Roles that are assigned to all members when joining.
 
 #### 参加
 
-| Setting                                     | Description                                    |
-| ------------------------------------------- | ---------------------------------------------- |
-| [メッセージ](#joinmessage)                  | サーバーに参加したときに送信されるメッセージ。 |
-| [メッセージチャンネル](#joinmessagechannel) | 参加時のメッセージが送信されるチャンネル。     |
+| Setting | Description |
+|---|---|
+| [メッセージ](#joinmessage) | サーバーに参加したときに送信されるメッセージ。
+| [メッセージチャンネル](#joinmessagechannel) | 参加時のメッセージが送信されるチャンネル。
 
 #### 退出
 
-| Setting                                         | Description                                                        |
-| ----------------------------------------------- | ------------------------------------------------------------------ |
-| [メッセージ](#leavemessage)                     | サーバーを離れたときに送信されるメッセージ。                       |
-| [メッセージチャンネル](#leavemessagechannel)    | 退出メッセージが送信されるチャンネル。                             |
-| [自動減算](#autosubtractleaves)                 | 招待ユーザーが退出したときに招待者から招待状を自動的に削除します。 |
-| [自動減算しきい値](#autosubtractleavethreshold) | 招待を数えるためにユーザーがサーバーに留まる必要がある時間（秒）。 |
+| Setting | Description |
+|---|---|
+| [メッセージ](#leavemessage) | サーバーを離れたときに送信されるメッセージ。
+| [メッセージチャンネル](#leavemessagechannel) | 退出メッセージが送信されるチャンネル。
+| [自動減算](#autosubtractleaves) | 招待ユーザーが退出したときに招待者から招待状を自動的に削除します。
+| [自動減算しきい値](#autosubtractleavethreshold) | 招待を数えるためにユーザーがサーバーに留まる必要がある時間（秒）。
 
 #### リーダーボード
 
-| Setting                                               | Description                                                  |
-| ----------------------------------------------------- | ------------------------------------------------------------ |
-| [スタイル](#leaderboardstyle)                         | リーダーボードの表示スタイル。                               |
-| [退出メンバーを隠す](#hideleftmembersfromleaderboard) | リーダーボードからサーバーを離れたメンバーを非表示にします。 |
+| Setting | Description |
+|---|---|
+| [スタイル](#leaderboardstyle) | リーダーボードの表示スタイル。
+| [退出メンバーを隠す](#hideleftmembersfromleaderboard) | リーダーボードからサーバーを離れたメンバーを非表示にします。
 
 #### 偽
 
-| Setting                        | Description                      |
-| ------------------------------ | -------------------------------- |
-| [自動減算](#autosubtractfakes) | 自動的に偽の招待を差し引きます。 |
+| Setting | Description |
+|---|---|
+| [自動減算](#autosubtractfakes) | 自動的に偽の招待を差し引きます。
 
 #### ランク
 
-| Setting                                        | Description                                                      |
-| ---------------------------------------------- | ---------------------------------------------------------------- |
-| [割り当てスタイル](#rankassignmentstyle)       | ランクはユーザーにどのように与えられますか。                     |
-| [お知らせチャンネル](#rankannouncementchannel) | ユーザーが新しいランクを獲得したときにアナウンスするチャンネル。 |
-| [お知らせメッセージ](#rankannouncementmessage) | ユーザーが新しいランクを受け取ったときに送信されるメッセージ。   |
+| Setting | Description |
+|---|---|
+| [割り当てスタイル](#rankassignmentstyle) | ランクはユーザーにどのように与えられますか。
+| [お知らせチャンネル](#rankannouncementchannel) | ユーザーが新しいランクを獲得したときにアナウンスするチャンネル。
+| [お知らせメッセージ](#rankannouncementmessage) | ユーザーが新しいランクを受け取ったときに送信されるメッセージ。
 
 ### 管理
 
+
+
 #### Captcha
 
-| Setting                                                  | Description                                                                          |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| [有効](#captchaverificationonjoin)                       | キャプチャ検証が有効かどうか。                                                       |
-| [参加メッセージ](#captchaverificationwelcomemessage)     | ユーザーがサーバーに参加してキャプチャに入るように指示した後に表示されるメッセージ。 |
-| [成功メッセージ](#captchaverificationsuccessmessage)     | ユーザーが正常に確認した後にユーザーに送信されるウェルカムメッセージ。               |
-| [失敗メッセージ](#captchaverificationfailedmessage)      | ユーザーが無効なキャプチャを入力した場合にメッセージがユーザーに送信されます。       |
-| [認証タイムアウト](#captchaverificationtimeout)          | キャプチャが正常に入力されなければならない時間。                                     |
-| [ログが有効化されました](#captchaverificationlogenabled) | 検証の試行がログに記録されるかどうか。                                               |
+| Setting | Description |
+|---|---|
+| [有効](#captchaverificationonjoin) | キャプチャ検証が有効かどうか。
+| [参加メッセージ](#captchaverificationwelcomemessage) | ユーザーがサーバーに参加してキャプチャに入るように指示した後に表示されるメッセージ。
+| [成功メッセージ](#captchaverificationsuccessmessage) | ユーザーが正常に確認した後にユーザーに送信されるウェルカムメッセージ。
+| [失敗メッセージ](#captchaverificationfailedmessage) | ユーザーが無効なキャプチャを入力した場合にメッセージがユーザーに送信されます。
+| [認証タイムアウト](#captchaverificationtimeout) | キャプチャが正常に入力されなければならない時間。
+| [ログが有効化されました](#captchaverificationlogenabled) | 検証の試行がログに記録されるかどうか。
 
 #### 総合
 
-| Setting                                                          | Description                                                                                                                                                  |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [有効](#automodenabled)                                          | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).                                       |
-| [管理チャンネル](#automodmoderatedchannels)                      | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels). |
-| [管理役職](#automodmoderatedroles)                               | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).    |
-| [無視されるチャンネル](#automodignoredchannels)                  | Channels that are ignored while automatically moderating.                                                                                                    |
-| [無視される役職](#automodignoredroles)                           | Any members with these roles will not automatically be moderated.                                                                                            |
-| [ミュート役職](#mutedrole)                                       | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.                                                 |
-| [古いメンバーには無効](#automoddisabledforoldmembers)            | Disabled auto moderation for members that have been in your server for a long time.                                                                          |
-| [古いメンバーのしきい値](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.                                                                                 |
+| Setting | Description |
+|---|---|
+| [有効](#automodenabled) | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
+| [管理チャンネル](#automodmoderatedchannels) | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
+| [管理役職](#automodmoderatedroles) | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
+| [無視されるチャンネル](#automodignoredchannels) | Channels that are ignored while automatically moderating.
+| [無視される役職](#automodignoredroles) | Any members with these roles will not automatically be moderated.
+| [ミュート役職](#mutedrole) | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
+| [古いメンバーには無効](#automoddisabledforoldmembers) | Disabled auto moderation for members that have been in your server for a long time.
+| [古いメンバーのしきい値](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.
 
 #### ログを記録する
 
-| Setting                                                                        | Description                                                         |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| [ログが有効化されました](#automodlogenabled)                                   | Log any moderation actions that the bot makes.                      |
-| [MOD ログチャンネル](#modlogchannel)                                           | モデレーションログが記録されるチャンネル。                          |
-| [BOT のメッセージを削除](#automoddeletebotmessage)                             | Automatically delete the bots own messages (keeps your chat clean). |
-| [ボットメッセージタイムアウトの削除](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.                   |
-| [BAN メッセージを削除](#modpunishmentbandeletemessage)                         | 「禁止」プッシュメッセージを自動的に削除するかどうか。              |
-| [キックメッセージを削除](#modpunishmentkickdeletemessage)                      | 「キック」プッシュメッセージが自動的に削除されるかどうか。          |
-| [ソフト BAN メッセージを削除](#modpunishmentsoftbandeletemessage)              | 「Softban」プッシュメッセージが自動的に削除されるかどうか。         |
-| [警告メッセージを削除](#modpunishmentwarndeletemessage)                        | 「警告」プッシュメッセージを自動的に削除するかどうか。              |
-| [ミュートメッセージを削除](#modpunishmentmutedeletemessage)                    | 「ミュート」プッシュメッセージが自動的に削除されるかどうか。        |
+| Setting | Description |
+|---|---|
+| [ログが有効化されました](#automodlogenabled) | Log any moderation actions that the bot makes.
+| [MODログチャンネル](#modlogchannel) | モデレーションログが記録されるチャンネル。
+| [BOTのメッセージを削除](#automoddeletebotmessage) | Automatically delete the bots own messages (keeps your chat clean).
+| [ボットメッセージタイムアウトの削除](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.
+| [BANメッセージを削除](#modpunishmentbandeletemessage) | 「禁止」プッシュメッセージを自動的に削除するかどうか。
+| [キックメッセージを削除](#modpunishmentkickdeletemessage) | 「キック」プッシュメッセージが自動的に削除されるかどうか。
+| [ソフトBANメッセージを削除](#modpunishmentsoftbandeletemessage) | 「Softban」プッシュメッセージが自動的に削除されるかどうか。
+| [警告メッセージを削除](#modpunishmentwarndeletemessage) | 「警告」プッシュメッセージを自動的に削除するかどうか。
+| [ミュートメッセージを削除](#modpunishmentmutedeletemessage) | 「ミュート」プッシュメッセージが自動的に削除されるかどうか。
 
 #### 招待
 
-| Setting                        | Description                                                           |
-| ------------------------------ | --------------------------------------------------------------------- |
-| [有効](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them. |
+| Setting | Description |
+|---|---|
+| [有効](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them.
 
 #### リンク
 
-| Setting                                                    | Description                                                                             |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [有効](#automodlinksenabled)                               | Automatically remove messages containing links (you can set a whitelist and blacklist). |
-| [ホワイトリスト](#automodlinkswhitelist)                   | A list of links that users are allowed to post.                                         |
-| [ブラックリスト](#automodlinksblacklist)                   | Blacklist certain links which users won't be able to post.                              |
-| [リダイレクトをフォローする](#automodlinksfollowredirects) | Enable this to resolve redirects for links.                                             |
+| Setting | Description |
+|---|---|
+| [有効](#automodlinksenabled) | Automatically remove messages containing links (you can set a whitelist and blacklist).
+| [ホワイトリスト](#automodlinkswhitelist) | A list of links that users are allowed to post.
+| [ブラックリスト](#automodlinksblacklist) | Blacklist certain links which users won't be able to post.
+| [リダイレクトをフォローする](#automodlinksfollowredirects) | Enable this to resolve redirects for links.
 
 #### 禁止された単語
 
-| Setting                                  | Description                                          |
-| ---------------------------------------- | ---------------------------------------------------- |
-| [有効](#automodwordsenabled)             | ブラックリストに載っている単語を自動対応するかどうか |
-| [ブラックリスト](#automodwordsblacklist) | 禁止されている単語のリスト。                         |
+| Setting | Description |
+|---|---|
+| [有効](#automodwordsenabled) | ブラックリストに載っている単語を自動対応するかどうか
+| [ブラックリスト](#automodwordsblacklist) | 禁止されている単語のリスト。
 
 #### キャップ
 
-| Setting                                           | Description                                                                                                                         |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [有効](#automodallcapsenabled)                    | 自動的に 適度な メッセージ とともに 多くのキャップ                                                                                  |
-| [最小文字](#automodallcapsmincharacters)          | あの ミニマム 量 の キャラクター に メッセージ へ なる 検討する ために 適度な (セッティング へ '3' しましょう 無視する 'オーケー'). |
-| [煽りのパーセント](#automodallcapspercentagecaps) | あの 割合 の キャラクター の あの メッセージ それ 持ってる へ なる クリック数 ために あの ルール へ 引き金.                         |
+| Setting | Description |
+|---|---|
+| [有効](#automodallcapsenabled) | 自動的に 適度な メッセージ とともに 多くのキャップ
+| [最小文字](#automodallcapsmincharacters) | あの ミニマム 量 の キャラクター に メッセージ へ なる 検討する ために 適度な (セッティング へ '3' しましょう 無視する 'オーケー').
+| [煽りのパーセント](#automodallcapspercentagecaps) | あの 割合 の キャラクター の あの メッセージ それ 持ってる へ なる クリック数 ために あの ルール へ 引き金.
 
 #### 重複メッセージ
 
-| Setting                                                           | Description                                                         |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [有効化](#automodduplicatetextenabled)                            | Automatically moderate duplicate messages (copy-paste spam).        |
-| [秒単位のタイムフレーム](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates. |
+| Setting | Description |
+|---|---|
+| [有効化](#automodduplicatetextenabled) | Automatically moderate duplicate messages (copy-paste spam).
+| [秒単位のタイムフレーム](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates.
 
 #### スパム
 
-| Setting                                                           | Description                                                                           |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [有効](#automodquickmessagesenabled)                              | Automatically moderate users sending a lot of messages in a short time.               |
-| [#のメッセージ数](#automodquickmessagesnumberofmessages)          | The number of messages that have to be sent within the timeframe to trigger the rule. |
-| [秒単位のタイムフレーム](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.    |
+| Setting | Description |
+|---|---|
+| [有効](#automodquickmessagesenabled) | Automatically moderate users sending a lot of messages in a short time.
+| [#のメッセージ数](#automodquickmessagesnumberofmessages) | The number of messages that have to be sent within the timeframe to trigger the rule.
+| [秒単位のタイムフレーム](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.
 
 #### メンション
 
-| Setting                                               | Description                                                                |
-| ----------------------------------------------------- | -------------------------------------------------------------------------- |
-| [有効](#automodmentionusersenabled)                   | Automatically moderate messages that mention an excessive amount of users. |
-| [メンション](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.             |
-| [有効](#automodmentionrolesenabled)                   | Automatically moderate messages that mention an excessive amount of roles. |
-| [メンション](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.             |
+| Setting | Description |
+|---|---|
+| [有効](#automodmentionusersenabled) | Automatically moderate messages that mention an excessive amount of users.
+| [メンション](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.
+| [有効](#automodmentionrolesenabled) | Automatically moderate messages that mention an excessive amount of roles.
+| [メンション](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.
 
 #### 絵文字
 
-| Setting                                           | Description                                                                                                               |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [有効](#automodemojisenabled)                     | Automatically moderate messages with an excessive amount of emojis.                                                       |
-| [絵文字の最大数](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.                                        |
-| [Enabled](#automodhoistenabled)                   | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list). |
+| Setting | Description |
+|---|---|
+| [有効](#automodemojisenabled) | Automatically moderate messages with an excessive amount of emojis.
+| [絵文字の最大数](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.
+| [Enabled](#automodhoistenabled) | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
 
 ### 音楽
 
+
+
 #### Music
 
-| Setting                    | Description                                                      |
-| -------------------------- | ---------------------------------------------------------------- |
-| [音楽の音量](#musicvolume) | ボットが音声チャネルに参加したときに設定されるデフォルトの音量。 |
+| Setting | Description |
+|---|---|
+| [音楽の音量](#musicvolume) | ボットが音声チャネルに参加したときに設定されるデフォルトの音量。
 
 #### Announcement
 
-| Setting                                     | Description                                      |
-| ------------------------------------------- | ------------------------------------------------ |
-| [次の曲をアナウンスする](#announcenextsong) | 次の曲を音声チャンネルでアナウンスするかどうか。 |
-| [アナウンスの声](#announcementvoice)        | 次の曲の発表で使われる声。                       |
+| Setting | Description |
+|---|---|
+| [次の曲をアナウンスする](#announcenextsong) | 次の曲を音声チャンネルでアナウンスするかどうか。
+| [アナウンスの声](#announcementvoice) | 次の曲の発表で使われる声。
 
 #### Fade Music
 
-| Setting                                                          | Description                                        |
-| ---------------------------------------------------------------- | -------------------------------------------------- |
-| [トークで音楽をフェード](#fademusicontalk)                       | 有効にすると、人々が話している間、音楽は消えます。 |
-| [ミュージックのフェードが終了するまでの時間](#fademusicenddelay) | 音量が正常に戻るまでに誰も話していない秒数の遅延。 |
+| Setting | Description |
+|---|---|
+| [トークで音楽をフェード](#fademusicontalk) | 有効にすると、人々が話している間、音楽は消えます。
+| [ミュージックのフェードが終了するまでの時間](#fademusicenddelay) | 音量が正常に戻るまでに誰も話していない秒数の遅延。
 
 #### Platform
 
-| Setting                                             | Description                                                                               |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Default Music Platform](#defaultmusicplatform)     | The platform that is used to search / play music when no platform is selected explicitly. |
-| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.                       |
+| Setting | Description |
+|---|---|
+| [Default Music Platform](#defaultmusicplatform) | The platform that is used to search / play music when no platform is selected explicitly.
+| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.
 
 <a name=prefix></a>
 
 ---
-
 ## 接頭辞
 
 ボットコマンドを呼びだすために使用されるプレフィックス。
@@ -212,13 +217,14 @@ Examples:
 
 `!config prefix >`
 
+
+
 <a name=lang></a>
 
 ---
-
 ## 言語
 
-BOT の言語
+BOTの言語
 
 Type: `Enum<Lang>`
 
@@ -233,10 +239,11 @@ Example:
 
 `!config lang ar`
 
+
+
 <a name=logChannel></a>
 
 ---
-
 ## ログチャンネル
 
 ボットアクションが記録されるチャンネル。
@@ -252,13 +259,14 @@ Examples:
 
 `!config logChannel #channel`
 
+
+
 <a name=getUpdates></a>
 
 ---
-
 ## アップデート情報を手に入れる
 
-InviteManager に関する開発の最新情報を受け取ることができるようにします。
+InviteManagerに関する開発の最新情報を受け取ることができるようにします。
 
 Type: `Boolean`
 
@@ -275,10 +283,11 @@ Disable:
 
 `!config getUpdates false`
 
+
+
 <a name=channels></a>
 
 ---
-
 ## コマンドチャンネル
 
 ボットがコマンドに反応するチャンネル。
@@ -290,10 +299,11 @@ Default: ``
 Reset to default:
 `!config channels default`
 
+
+
 <a name=ignoredChannels></a>
 
 ---
-
 ## 無視されるチャンネル
 
 ボットがコマンドを無視するチャンネル。
@@ -305,10 +315,11 @@ Default: ``
 Reset to default:
 `!config ignoredChannels default`
 
+
+
 <a name=joinRoles></a>
 
 ---
-
 ## Join Roles
 
 Roles that are assigned to all members when joining.
@@ -320,10 +331,11 @@ Default: ``
 Reset to default:
 `!config joinRoles default`
 
+
+
 <a name=joinMessage></a>
 
 ---
-
 ## メッセージ
 
 サーバーに参加したときに送信されるメッセージ。
@@ -335,10 +347,11 @@ Default: `{memberMention} **joined**; Invited by **{inviterName}** (**{numInvite
 Reset to default:
 `!config joinMessage default`
 
+
+
 <a name=joinMessageChannel></a>
 
 ---
-
 ## メッセージチャンネル
 
 参加時のメッセージが送信されるチャンネル。
@@ -356,10 +369,11 @@ Examples:
 
 `!config joinMessageChannel #joins`
 
+
+
 <a name=leaveMessage></a>
 
 ---
-
 ## メッセージ
 
 サーバーを離れたときに送信されるメッセージ。
@@ -373,14 +387,15 @@ Reset to default:
 
 Examples:
 
-`!config leaveMessage`
+`!config leaveMessage `
 
-`!config leaveMessage`
+`!config leaveMessage `
+
+
 
 <a name=leaveMessageChannel></a>
 
 ---
-
 ## メッセージチャンネル
 
 退出メッセージが送信されるチャンネル。
@@ -398,10 +413,11 @@ Examples:
 
 `!config leaveMessageChannel #leaves`
 
+
+
 <a name=leaderboardStyle></a>
 
 ---
-
 ## スタイル
 
 リーダーボードの表示スタイル。
@@ -419,10 +435,11 @@ Example:
 
 `!config leaderboardStyle normal`
 
+
+
 <a name=hideLeftMembersFromLeaderboard></a>
 
 ---
-
 ## 退出メンバーを隠す
 
 リーダーボードからサーバーを離れたメンバーを非表示にします。
@@ -442,10 +459,11 @@ Disable:
 
 `!config hideLeftMembersFromLeaderboard false`
 
+
+
 <a name=autoSubtractFakes></a>
 
 ---
-
 ## 自動減算
 
 自動的に偽の招待を差し引きます。
@@ -465,10 +483,11 @@ Disable:
 
 `!config autoSubtractFakes false`
 
+
+
 <a name=autoSubtractLeaves></a>
 
 ---
-
 ## 自動減算
 
 招待ユーザーが退出したときに招待者から招待状を自動的に削除します。
@@ -488,10 +507,11 @@ Disable:
 
 `!config autoSubtractLeaves false`
 
+
+
 <a name=autoSubtractLeaveThreshold></a>
 
 ---
-
 ## 自動減算しきい値
 
 招待を数えるためにユーザーがサーバーに留まる必要がある時間（秒）。
@@ -509,10 +529,11 @@ Examples:
 
 `!config autoSubtractLeaveThreshold 3600`
 
+
+
 <a name=rankAssignmentStyle></a>
 
 ---
-
 ## 割り当てスタイル
 
 ランクはユーザーにどのように与えられますか。
@@ -530,10 +551,11 @@ Example:
 
 `!config rankAssignmentStyle all`
 
+
+
 <a name=rankAnnouncementChannel></a>
 
 ---
-
 ## お知らせチャンネル
 
 ユーザーが新しいランクを獲得したときにアナウンスするチャンネル。
@@ -547,14 +569,15 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
+
+
 
 <a name=rankAnnouncementMessage></a>
 
 ---
-
 ## お知らせメッセージ
 
 ユーザーが新しいランクを受け取ったときに送信されるメッセージ。
@@ -568,14 +591,15 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
+
+
 
 <a name=captchaVerificationOnJoin></a>
 
 ---
-
 ## 有効
 
 キャプチャ検証が有効かどうか。
@@ -595,10 +619,11 @@ Disable:
 
 `!config captchaVerificationOnJoin false`
 
+
+
 <a name=captchaVerificationWelcomeMessage></a>
 
 ---
-
 ## 参加メッセージ
 
 ユーザーがサーバーに参加してキャプチャに入るように指示した後に表示されるメッセージ。
@@ -614,10 +639,11 @@ Examples:
 
 `!config captchaVerificationWelcomeMessage Welcome, please enter the captcha below!`
 
+
+
 <a name=captchaVerificationSuccessMessage></a>
 
 ---
-
 ## 成功メッセージ
 
 ユーザーが正常に確認した後にユーザーに送信されるウェルカムメッセージ。
@@ -633,10 +659,11 @@ Examples:
 
 `!config captchaVerificationSuccessMessage Thanks for entering the captcha, enjoy our server!`
 
+
+
 <a name=captchaVerificationFailedMessage></a>
 
 ---
-
 ## 失敗メッセージ
 
 ユーザーが無効なキャプチャを入力した場合にメッセージがユーザーに送信されます。
@@ -652,10 +679,11 @@ Examples:
 
 `!config captchaVerificationFailedMessage Looks like you are not human :(. You can join again and try again later if this was a mistake!`
 
+
+
 <a name=captchaVerificationTimeout></a>
 
 ---
-
 ## 認証タイムアウト
 
 キャプチャが正常に入力されなければならない時間。
@@ -673,10 +701,11 @@ Examples:
 
 `!config captchaVerificationTimeout 600`
 
+
+
 <a name=captchaVerificationLogEnabled></a>
 
 ---
-
 ## ログが有効化されました
 
 検証の試行がログに記録されるかどうか。
@@ -696,10 +725,11 @@ Disable:
 
 `!config captchaVerificationLogEnabled false`
 
+
+
 <a name=autoModEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
@@ -719,10 +749,11 @@ Disable:
 
 `!config autoModEnabled false`
 
+
+
 <a name=autoModModeratedChannels></a>
 
 ---
-
 ## 管理チャンネル
 
 The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
@@ -740,10 +771,11 @@ Examples:
 
 `!config autoModModeratedChannels #support,#help`
 
+
+
 <a name=autoModModeratedRoles></a>
 
 ---
-
 ## 管理役職
 
 The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
@@ -761,10 +793,11 @@ Examples:
 
 `!config autoModModeratedRoles @Newbies,@Starters`
 
+
+
 <a name=autoModIgnoredChannels></a>
 
 ---
-
 ## 無視されるチャンネル
 
 Channels that are ignored while automatically moderating.
@@ -782,10 +815,11 @@ Examples:
 
 `!config autoModIgnoredChannels #off-topic,#nsfw`
 
+
+
 <a name=autoModIgnoredRoles></a>
 
 ---
-
 ## 無視される役職
 
 Any members with these roles will not automatically be moderated.
@@ -803,10 +837,11 @@ Examples:
 
 `!config autoModIgnoredRoles @Moderators,@Staff`
 
+
+
 <a name=mutedRole></a>
 
 ---
-
 ## ミュート役職
 
 The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
@@ -822,10 +857,11 @@ Examples:
 
 `!config mutedRole @muted`
 
+
+
 <a name=autoModDisabledForOldMembers></a>
 
 ---
-
 ## 古いメンバーには無効
 
 Disabled auto moderation for members that have been in your server for a long time.
@@ -845,10 +881,11 @@ Disable:
 
 `!config autoModDisabledForOldMembers false`
 
+
+
 <a name=autoModDisabledForOldMembersThreshold></a>
 
 ---
-
 ## 古いメンバーのしきい値
 
 The amount of time a member has to be in your server to be considered 'old'.
@@ -866,10 +903,11 @@ Examples:
 
 `!config autoModDisabledForOldMembersThreshold 2419200` (1 month)``
 
+
+
 <a name=autoModLogEnabled></a>
 
 ---
-
 ## ログが有効化されました
 
 Log any moderation actions that the bot makes.
@@ -889,11 +927,12 @@ Disable:
 
 `!config autoModLogEnabled false`
 
+
+
 <a name=modLogChannel></a>
 
 ---
-
-## MOD ログチャンネル
+## MODログチャンネル
 
 モデレーションログが記録されるチャンネル。
 
@@ -910,11 +949,12 @@ Examples:
 
 `!config modLogChannel #logs`
 
+
+
 <a name=autoModDeleteBotMessage></a>
 
 ---
-
-## BOT のメッセージを削除
+## BOTのメッセージを削除
 
 Automatically delete the bots own messages (keeps your chat clean).
 
@@ -933,10 +973,11 @@ Disable:
 
 `!config autoModDeleteBotMessage false`
 
+
+
 <a name=autoModDeleteBotMessageTimeoutInSeconds></a>
 
 ---
-
 ## ボットメッセージタイムアウトの削除
 
 The timeout after which bot messages are deleted.
@@ -954,11 +995,12 @@ Examples:
 
 `!config autoModDeleteBotMessageTimeoutInSeconds 10`
 
+
+
 <a name=modPunishmentBanDeleteMessage></a>
 
 ---
-
-## BAN メッセージを削除
+## BANメッセージを削除
 
 「禁止」プッシュメッセージを自動的に削除するかどうか。
 
@@ -977,10 +1019,11 @@ Disable:
 
 `!config modPunishmentBanDeleteMessage false`
 
+
+
 <a name=modPunishmentKickDeleteMessage></a>
 
 ---
-
 ## キックメッセージを削除
 
 「キック」プッシュメッセージが自動的に削除されるかどうか。
@@ -1000,11 +1043,12 @@ Disable:
 
 `!config modPunishmentKickDeleteMessage false`
 
+
+
 <a name=modPunishmentSoftbanDeleteMessage></a>
 
 ---
-
-## ソフト BAN メッセージを削除
+## ソフトBANメッセージを削除
 
 「Softban」プッシュメッセージが自動的に削除されるかどうか。
 
@@ -1023,10 +1067,11 @@ Disable:
 
 `!config modPunishmentSoftbanDeleteMessage false`
 
+
+
 <a name=modPunishmentWarnDeleteMessage></a>
 
 ---
-
 ## 警告メッセージを削除
 
 「警告」プッシュメッセージを自動的に削除するかどうか。
@@ -1046,10 +1091,11 @@ Disable:
 
 `!config modPunishmentWarnDeleteMessage false`
 
+
+
 <a name=modPunishmentMuteDeleteMessage></a>
 
 ---
-
 ## ミュートメッセージを削除
 
 「ミュート」プッシュメッセージが自動的に削除されるかどうか。
@@ -1069,10 +1115,11 @@ Disable:
 
 `!config modPunishmentMuteDeleteMessage false`
 
+
+
 <a name=autoModInvitesEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically scan messages for discord invite links and remove them.
@@ -1092,10 +1139,11 @@ Disable:
 
 `!config autoModInvitesEnabled false`
 
+
+
 <a name=autoModLinksEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically remove messages containing links (you can set a whitelist and blacklist).
@@ -1115,10 +1163,11 @@ Disable:
 
 `!config autoModLinksEnabled false`
 
+
+
 <a name=autoModLinksWhitelist></a>
 
 ---
-
 ## ホワイトリスト
 
 A list of links that users are allowed to post.
@@ -1136,10 +1185,11 @@ Examples:
 
 `!config autoModLinksWhitelist youtube.com,twitch.com`
 
+
+
 <a name=autoModLinksBlacklist></a>
 
 ---
-
 ## ブラックリスト
 
 Blacklist certain links which users won't be able to post.
@@ -1157,10 +1207,11 @@ Examples:
 
 `!config autoModLinksBlacklist twitch.com,youtube.com`
 
+
+
 <a name=autoModLinksFollowRedirects></a>
 
 ---
-
 ## リダイレクトをフォローする
 
 Enable this to resolve redirects for links.
@@ -1180,10 +1231,11 @@ Disable:
 
 `!config autoModLinksFollowRedirects false`
 
+
+
 <a name=autoModWordsEnabled></a>
 
 ---
-
 ## 有効
 
 ブラックリストに載っている単語を自動対応するかどうか
@@ -1203,10 +1255,11 @@ Disable:
 
 `!config autoModWordsEnabled false`
 
+
+
 <a name=autoModWordsBlacklist></a>
 
 ---
-
 ## ブラックリスト
 
 禁止されている単語のリスト。
@@ -1224,10 +1277,11 @@ Examples:
 
 `!config autoModWordsBlacklist stupid,fuck`
 
+
+
 <a name=autoModAllCapsEnabled></a>
 
 ---
-
 ## 有効
 
 自動的に 適度な メッセージ とともに 多くのキャップ
@@ -1247,10 +1301,11 @@ Disable:
 
 `!config autoModAllCapsEnabled false`
 
+
+
 <a name=autoModAllCapsMinCharacters></a>
 
 ---
-
 ## 最小文字
 
 あの ミニマム 量 の キャラクター に メッセージ へ なる 検討する ために 適度な (セッティング へ '3' しましょう 無視する 'オーケー').
@@ -1268,10 +1323,11 @@ Examples:
 
 `!config autoModAllCapsMinCharacters 15`
 
+
+
 <a name=autoModAllCapsPercentageCaps></a>
 
 ---
-
 ## 煽りのパーセント
 
 あの 割合 の キャラクター の あの メッセージ それ 持ってる へ なる クリック数 ために あの ルール へ 引き金.
@@ -1289,10 +1345,11 @@ Examples:
 
 `!config autoModAllCapsPercentageCaps 90`
 
+
+
 <a name=autoModDuplicateTextEnabled></a>
 
 ---
-
 ## 有効化
 
 Automatically moderate duplicate messages (copy-paste spam).
@@ -1312,10 +1369,11 @@ Disable:
 
 `!config autoModDuplicateTextEnabled false`
 
+
+
 <a name=autoModDuplicateTextTimeframeInSeconds></a>
 
 ---
-
 ## 秒単位のタイムフレーム
 
 The timeframe whithin which messages will be considered duplicates.
@@ -1333,10 +1391,11 @@ Examples:
 
 `!config autoModDuplicateTextTimeframeInSeconds 20`
 
+
+
 <a name=autoModQuickMessagesEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically moderate users sending a lot of messages in a short time.
@@ -1356,10 +1415,11 @@ Disable:
 
 `!config autoModQuickMessagesEnabled false`
 
+
+
 <a name=autoModQuickMessagesNumberOfMessages></a>
 
 ---
-
 ## #のメッセージ数
 
 The number of messages that have to be sent within the timeframe to trigger the rule.
@@ -1377,10 +1437,11 @@ Examples:
 
 `!config autoModQuickMessagesNumberOfMessages 10`
 
+
+
 <a name=autoModQuickMessagesTimeframeInSeconds></a>
 
 ---
-
 ## 秒単位のタイムフレーム
 
 The timeframe within which a user is allowed to send a maximum amount of messages.
@@ -1398,10 +1459,11 @@ Examples:
 
 `!config autoModQuickMessagesTimeframeInSeconds 10`
 
+
+
 <a name=autoModMentionUsersEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically moderate messages that mention an excessive amount of users.
@@ -1421,10 +1483,11 @@ Disable:
 
 `!config autoModMentionUsersEnabled false`
 
+
+
 <a name=autoModMentionUsersMaxNumberOfMentions></a>
 
 ---
-
 ## メンション
 
 The maximum amount of users a member can mention in a message.
@@ -1442,10 +1505,11 @@ Examples:
 
 `!config autoModMentionUsersMaxNumberOfMentions 5`
 
+
+
 <a name=autoModMentionRolesEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically moderate messages that mention an excessive amount of roles.
@@ -1465,10 +1529,11 @@ Disable:
 
 `!config autoModMentionRolesEnabled false`
 
+
+
 <a name=autoModMentionRolesMaxNumberOfMentions></a>
 
 ---
-
 ## メンション
 
 The maximum amount of roles a member can mention in a message.
@@ -1486,10 +1551,11 @@ Examples:
 
 `!config autoModMentionRolesMaxNumberOfMentions 5`
 
+
+
 <a name=autoModEmojisEnabled></a>
 
 ---
-
 ## 有効
 
 Automatically moderate messages with an excessive amount of emojis.
@@ -1509,10 +1575,11 @@ Disable:
 
 `!config autoModEmojisEnabled false`
 
+
+
 <a name=autoModEmojisMaxNumberOfEmojis></a>
 
 ---
-
 ## 絵文字の最大数
 
 The maximum amount of emojis a message is allowed to have before trigger the rule.
@@ -1530,10 +1597,11 @@ Examples:
 
 `!config autoModEmojisMaxNumberOfEmojis 10`
 
+
+
 <a name=autoModHoistEnabled></a>
 
 ---
-
 ## Enabled
 
 Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
@@ -1553,10 +1621,11 @@ Disable:
 
 `!config autoModHoistEnabled false`
 
+
+
 <a name=musicVolume></a>
 
 ---
-
 ## 音楽の音量
 
 ボットが音声チャネルに参加したときに設定されるデフォルトの音量。
@@ -1568,10 +1637,11 @@ Default: `100`
 Reset to default:
 `!config musicVolume default`
 
+
+
 <a name=announceNextSong></a>
 
 ---
-
 ## 次の曲をアナウンスする
 
 次の曲を音声チャンネルでアナウンスするかどうか。
@@ -1591,10 +1661,11 @@ Disable:
 
 `!config announceNextSong false`
 
+
+
 <a name=announcementVoice></a>
 
 ---
-
 ## アナウンスの声
 
 次の曲の発表で使われる声。
@@ -1612,10 +1683,11 @@ Example:
 
 `!config announcementVoice Joanna`
 
+
+
 <a name=fadeMusicOnTalk></a>
 
 ---
-
 ## トークで音楽をフェード
 
 有効にすると、人々が話している間、音楽は消えます。
@@ -1635,10 +1707,11 @@ Disable:
 
 `!config fadeMusicOnTalk false`
 
+
+
 <a name=fadeMusicEndDelay></a>
 
 ---
-
 ## ミュージックのフェードが終了するまでの時間
 
 音量が正常に戻るまでに誰も話していない秒数の遅延。
@@ -1650,10 +1723,11 @@ Default: `1`
 Reset to default:
 `!config fadeMusicEndDelay default`
 
+
+
 <a name=defaultMusicPlatform></a>
 
 ---
-
 ## Default Music Platform
 
 The platform that is used to search / play music when no platform is selected explicitly.
@@ -1665,10 +1739,11 @@ Default: `soundcloud`
 Reset to default:
 `!config defaultMusicPlatform default`
 
+
+
 <a name=disabledMusicPlatforms></a>
 
 ---
-
 ## Disabled Music Platforms
 
 Music platforms that are disabled and cannot be used to play music.
@@ -1679,3 +1754,4 @@ Default: ``
 
 Reset to default:
 `!config disabledMusicPlatforms default`
+

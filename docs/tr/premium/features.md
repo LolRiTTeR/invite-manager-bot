@@ -1,7 +1,9 @@
-# other.premium.title
+# Premium
 
-§{other.premium.description["ourBotsLink":"/tr/getting-started/our-bots.md"]}
+To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().
 
-### \${other.premium.features.first}
+## Özellikleri
 
-### \${other.premium.features.second}
+### premium.features.first
+
+### premium.features.second

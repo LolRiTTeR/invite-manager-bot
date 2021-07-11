@@ -1,7 +1,9 @@
-# §{other.premium.title}
+# §{premium.title}
 
-§{other.premium.description["ourBotsLink":"/§{lang}/getting-started/our-bots.md"]}
+§{premium.description:["ourBotsLink":"/§{lang}/getting-started/our-bots.md"]}
 
-### \${other.premium.features.first}
+## §{premium.features.title}
 
-### \${other.premium.features.second}
+### §{premium.features.first}
+
+### §{premium.features.second}

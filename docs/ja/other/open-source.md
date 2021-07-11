@@ -2,6 +2,6 @@
 
 other.openSource.description
 
-## メイン Bot
+## メインBot
 
 other.openSource.bot.description

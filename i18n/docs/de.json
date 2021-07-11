@@ -139,7 +139,8 @@
 			"title": "Roadmap"
 		},
 		"support": {
-			"title": "Support"
+			"title": "Support",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "Übersetzungen",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "Premium",
 		"description": "Um unsere Server Rechnungen zu bezahlen, bieten wir eine Premium-Version des Bots an. Um alle Premium Features zu sehen, besuche unsere  [Premium Seite]({{{ link }}}).",
 		"features": {
-			"title": "Features"
+			"title": "Features",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "Stufen"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

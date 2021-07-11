@@ -2,7 +2,7 @@
 
   - [クイック-スタート](/ja/getting-started/quick-start.md)
   - [FAQs](/ja/getting-started/faq.md)
-  - [start.ourBots.title](/ja/getting-started/ourBots.md)
+  - [start.ourBots.title](/ja/getting-started/our-bots.md)
   - [アルファ Bot](/ja/getting-started/alpha.md)
   - [Pro Bot](/ja/getting-started/pro.md)
 

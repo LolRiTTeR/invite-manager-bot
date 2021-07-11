@@ -2,7 +2,7 @@
 
   - [§{start.quick.title}](/§{lang}/getting-started/quick-start.md)
   - [§{start.faq.title}](/§{lang}/getting-started/faq.md)
-  - [§{start.ourBots.title}](/§{lang}/getting-started/ourBots.md)
+  - [§{start.ourBots.title}](/§{lang}/getting-started/our-bots.md)
   - [§{start.alpha.title}](/§{lang}/getting-started/alpha.md)
   - [§{start.pro.title}](/§{lang}/getting-started/pro.md)
 

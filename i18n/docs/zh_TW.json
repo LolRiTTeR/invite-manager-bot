@@ -139,7 +139,8 @@
 			"title": "規劃"
 		},
 		"support": {
-			"title": "支援"
+			"title": "支援",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "翻譯",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "付費",
 		"description": "給付我們的伺服器帳單，我們會提供一個付費版本的機器人。如果您想知道所有額外的特點，可以參觀我們的網站[價格頁面]({{{ link }}})。",
 		"features": {
-			"title": "特色"
+			"title": "特色",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "價位"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

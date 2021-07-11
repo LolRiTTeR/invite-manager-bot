@@ -2,7 +2,7 @@
 
   - [快速開始](/zh-TW/getting-started/quick-start.md)
   - [常見問題](/zh-TW/getting-started/faq.md)
-  - [start.ourBots.title](/zh-TW/getting-started/ourBots.md)
+  - [start.ourBots.title](/zh-TW/getting-started/our-bots.md)
   - [初期的機器人](/zh-TW/getting-started/alpha.md)
   - [高級機器人](/zh-TW/getting-started/pro.md)
 

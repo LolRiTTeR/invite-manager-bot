@@ -139,7 +139,8 @@
 			"title": "ロードマップ"
 		},
 		"support": {
-			"title": "サポート"
+			"title": "サポート",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "翻訳",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "プレミアム",
 		"description": "サーバーの請求書を支払うために、botのプレミアムバージョンを提供しています。 追加機能をすべてご覧になるには、[pricing page]({{{ link }}}) をご覧ください。",
 		"features": {
-			"title": "特徴"
+			"title": "特徴",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "ティア"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

@@ -4,4 +4,4 @@ InviteManager relies on the community to be translated into different languages.
 
 ## Help translating
 
-If you want to help translation please join our [Discord server](https://discord.gg/kQQmfNCTzm) to join our [Transifex organization](https://www.transifex.com/invitemanager-1/invitemanager_bot/)
+If you want to help translate the bot or the documentation, please join our [Discord server](https://discord.gg/kQQmfNCTzm) so we can invite you to our [Transifex organization](https://www.transifex.com/invitemanager-1/invitemanager_bot/)

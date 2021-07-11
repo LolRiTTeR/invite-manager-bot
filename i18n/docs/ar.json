@@ -139,7 +139,8 @@
 			"title": "خريطة الطريق"
 		},
 		"support": {
-			"title": "الدعم الفني"
+			"title": "الدعم الفني",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "الترجمات",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "النسخة المدفوعة",
 		"description": "لدفع فاتورة الخادم الخاص بنا ، نحن نقدم نسخة مميزة من الروبوت. لرؤية جميع الميزات الإضافية التي تحصل عليها ، يرجى زيارة موقعنا [pricing page]({{{ link }}}).",
 		"features": {
-			"title": "الخصائص"
+			"title": "الخصائص",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "مستويات"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

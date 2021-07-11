@@ -1,7 +1,9 @@
-# other.premium.title
+# Premium
 
-§{other.premium.description["ourBotsLink":"/de/getting-started/our-bots.md"]}
+Um unsere Server Rechnungen zu bezahlen, bieten wir eine Premium-Version des Bots an. Um alle Premium Features zu sehen, besuche unsere  [Premium Seite]().
 
-### \${other.premium.features.first}
+## Features
 
-### \${other.premium.features.second}
+### premium.features.first
+
+### premium.features.second

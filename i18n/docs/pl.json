@@ -139,7 +139,8 @@
 			"title": "Mapa"
 		},
 		"support": {
-			"title": "Wsparcie"
+			"title": "Wsparcie",
+			"description": "other.support.description"
 		},
 		"translations": {
 			"title": "Tłumaczenia",
@@ -165,14 +166,17 @@
 			}
 		},
 		"premium": {
-			"title": "other.premium.title"
+			"title": "other.premium.title",
+			"description": "other.premium.description"
 		}
 	},
 	"premium": {
 		"title": "Premium",
 		"description": "Aby zapłacić nasz rachunek za serwer, oferujemy wersję premium bota. Aby zobaczyć wszystkie dodatkowe funkcje, które otrzymujesz, odwiedź naszą [stronę płatności]({{{ link }}}).",
 		"features": {
-			"title": "Funkcje"
+			"title": "Funkcje",
+			"first": "premium.features.first",
+			"second": "premium.features.second"
 		},
 		"tiers": {
 			"title": "Poziomy"
@@ -238,7 +242,8 @@
 		},
 		"ourBots": {
 			"title": "start.ourBots.title",
-			"subtitle": "start.ourBots.subtitle"
+			"subtitle": "start.ourBots.subtitle",
+			"description": "start.ourBots.description"
 		}
 	},
 	"reference": {

@@ -1,7 +1,9 @@
-# other.premium.title
+# Premium
 
-§{other.premium.description["ourBotsLink":"/en/getting-started/our-bots.md"]}
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/en/getting-started/our-bots.md) already have all premium features enabled.
 
-### \${other.premium.features.first}
+## Features
 
-### \${other.premium.features.second}
+### Join and leave message styling \(Embedded messages\)
+
+### Leaderboards are refreshed every 5 minutes

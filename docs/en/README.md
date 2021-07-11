@@ -20,5 +20,3 @@ Our brand new moderation system allows you to auto-moderate many things. Please 
 ## Premium
 
 We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/en/getting-started/our-bots.md) already have all premium features enabled.
-
-Below is a list of those features.

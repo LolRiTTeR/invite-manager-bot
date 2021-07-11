@@ -1,7 +1,9 @@
-# other.premium.title
+# النسخة المدفوعة
 
-§{other.premium.description["ourBotsLink":"/ar/getting-started/our-bots.md"]}
+لدفع فاتورة الخادم الخاص بنا ، نحن نقدم نسخة مميزة من الروبوت. لرؤية جميع الميزات الإضافية التي تحصل عليها ، يرجى زيارة موقعنا [pricing page]().
 
-### \${other.premium.features.first}
+## الخصائص
 
-### \${other.premium.features.second}
+### premium.features.first
+
+### premium.features.second
