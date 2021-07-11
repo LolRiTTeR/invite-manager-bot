@@ -221,7 +221,7 @@
 		"ourBots": {
 			"title": "Our Bots",
 			"subtitle": "Invite the Bot",
-			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot**:\n{{{ blueBotLink }}}\n\n**Invite the yellow bot**\n{{{ yellowBotLink }}}"
+			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot**:\n{{{ blueBotLink }}}\n\n**Invite the yellow bot:**\n{{{ yellowBotLink }}}"
 		}
 	},
 	"reference": {
