@@ -625,7 +625,7 @@ export class IMClient extends Client {
 				? 3
 				: 0;
 
-		const name = this.settings.activityMessage || `docs.invitemanager.co!`;
+		const name = this.settings.activityMessage || `invitemanager.cc!`;
 		const url = this.settings.activityUrl;
 
 		this.editStatus(status, { name, type, url });

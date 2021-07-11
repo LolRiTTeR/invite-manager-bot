@@ -6,7 +6,7 @@ This is the code repository for the InviteManager Discord Bot.
 
 ## Docs
 
-[Click here to view the documentation](https://docs.invitemanager.co)
+[Click here to view the documentation](https://invitemanager.cc)
 
 ## Self hosting quick setup
 

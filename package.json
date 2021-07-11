@@ -28,7 +28,7 @@
 	"bugs": {
 		"url": "https://github.com/SideProjectGuys/invite-manager-bot/issues"
 	},
-	"homepage": "https://docs.invitemanager.co/",
+	"homepage": "https://invitemanager.cc/",
 	"dependencies": {
 		"@sentry/node": "5.15.5",
 		"amqplib": "0.5.6",

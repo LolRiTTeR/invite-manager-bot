@@ -59,7 +59,7 @@ export default class extends Command {
 				embed.fields.push({
 					name: t('cmd.premium.feature.embeds.title'),
 					value: t('cmd.premium.feature.embeds.text', {
-						link: 'https://docs.invitemanager.co/bot/custom-messages/join-message-examples'
+						link: 'https://invitemanager.cc/#/en/modules/invites/examples'
 					})
 				});
 
@@ -108,7 +108,7 @@ export default class extends Command {
 						date,
 						limit,
 						guildList,
-						link: 'https://docs.invitemanager.co/bot/premium/features'
+						link: 'https://invitemanager.cc/#/en/premium/features'
 					}) + '\n';
 			}
 		} else {
