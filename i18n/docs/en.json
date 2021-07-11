@@ -130,10 +130,10 @@
 		"title": "Other",
 		"donating": {
 			"title": "Donating",
-			"description": "We currently dont accept any donations.",
+			"description": "We currently don't accept any donations.",
 			"crypto": {
 				"title": "Crypto",
-				"description": "We currently dont accept any crypto donations."
+				"description": "We currently don't accept any crypto donations."
 			}
 		},
 		"roadmap": {
