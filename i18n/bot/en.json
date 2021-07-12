@@ -476,7 +476,7 @@
 			"current": {
 				"clear": "Use `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"notSet": "This invite code config is currently **not** set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to set it.",
-				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none\\` to clear it.",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "Current Value"
 			},
 			"keys": {
@@ -635,7 +635,7 @@
 			},
 			"current": {
 				"notSet": "This member config is currently **not** set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to set it.",
-				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none\\` to clear it.",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "Current Value"
 			},
 			"keys": {
