@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Developers",
-			"moderators": "Moderators",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "Show developers and contributors of the bot."
 			},
-			"staff": "Staff",
+			"staff": "Support Team",
 			"translators": "Translators"
 		},
 		"error": "There was an error executing the command. Please report this to a developer:\n{{{ error }}}",
