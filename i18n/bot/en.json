@@ -769,7 +769,7 @@
 				},
 				"patreon": {
 					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchsed premium on Patreon"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
@@ -861,7 +861,7 @@
 			"rankNotFound": "Rank {{{ role }}} does not exist!",
 			"self": {
 				"args": {
-					"rank": "The for which you want to remove the rank."
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "Remove a rank."
 			}
@@ -893,11 +893,11 @@
 				"title": "Missing permission: Manage Server"
 			},
 			"manageRoles": {
-				"text": "The bot does not have the \"Manage Roles\" permissions. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "Missing permission: Manage Roles"
 			},
 			"prefix": {
-				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the bots prefix, you can find it using `@InviteManager config prefix`.",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "Changing the prefix"
 			},
 			"premium": {
@@ -910,7 +910,7 @@
 			"text": "After inviting the bot, all invites will be tracked automatically.",
 			"title": "Setting up InviteManager",
 			"viewAuditLogs": {
-				"text": "The bot does not have the `View Audit Logs` permissions. This permission allows the bot to better track invites.",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "Missing permission: View Audit Logs"
 			}
 		},
@@ -930,7 +930,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "The user was but could not be unbanned...\n{{ error }}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
