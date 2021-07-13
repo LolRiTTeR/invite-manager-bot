@@ -2,21 +2,21 @@
 
 ## Reference
 
-- [Commands](/bg/reference/commands.md)
-- [Configs / Settings](/bg/reference/settings.md)
+- [Команди](/bg/reference/commands.md)
+- [Настройки на конфигурацията](/bg/reference/settings.md)
 
-## Getting Started
+## Първи стъпки
 
-To get started, just run the `!setup` command on your server.
+За да започнете, напишете командата `!setup` във вашият сървър.
 
-### Invite Management
+### Управление на поканите
 
-While our bot is on your server, we track every invite that happens on your server. Discord only shows you who has how many invites. Our bot also analyses who was invited by whom. This allows our bot to detect fake invites and see who is trying to cheat the invite system.
+Докато нашият бот е във вашият сървър, той проследява всяка покана, която се получава във вашият сървър. Discord показва само кой, колко покани има. Нашият бот анализира, кой от кого е бил поканен. Това позволява на нашият бот да открие фалшивите покани и показва, кой се опитва да мами със системата за покани.
 
 ### Moderation
 
-Our brand new moderation system allows you to auto-moderate many things. Please check our [strikes](/bg/modules/moderation/strikes.md) and [punishments](/bg/modules/moderation/punishments.md) pages for more info. In short, our bot gives out 'strikes' to people who misbehave, and after a certain amount of strikes, the user receives a punishment. All of this is configurable by the user.
+Нашата чисто нова модерираща система ви позволява да управлявате автоматично много неща. Моля, посетете следните страници [strikes](/bg/modules/moderation/strikes.md) и [punishments](/bg/modules/moderation/punishments.md) за повече информация. Накратко, нашият под дава "наказания" на хора, които се държат зле и след определени наказания, потребителят получава наказание. Всичко това е конфигурируемо от потребителя
 
 ## Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/bg/getting-started/our-bots.md) already have all premium features enabled.

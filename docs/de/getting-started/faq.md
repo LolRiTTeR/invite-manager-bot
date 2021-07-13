@@ -32,7 +32,7 @@ Es sind viele Platzhalter verfügbar. Du kannst die vollständige Liste auf der 
 
 ## Was sind 'Ränge' und wie kann ich sie benutzen?
 
-Ränge werden verwendet, um Personen Rollen zuzuweisen, wenn sie eine bestimmte Anzahl von Einladungen erreicht haben. Wenn du zum Beispiel eine Rolle namens `@Anfänger` hast und du möchtest, dass Leute, die 5 oder mehr Einladungen haben, zu dieser Rolle hinzugefügt werden, musst du dafür so einen Rang erstellen: `!add-rank @Anfänger 5 (und wenn du willst hier eine Beschreibung)`. Sobald jemand 5 Einladungen hat, wird er automatisch dieser Rolle hinzugefügt!
+Ränge werden verwendet um Benutzern rollen zuzuweisen, wenn diese eine gewisse Anzahl an Einladungen erreicht haben. Wenn du zum Beispiel eine Rolle namens `@Anfänger` hast und du willst, dass Benutzer mit 5 oder mehr Einladungen diese Rolle bekommen, dann musst du mit `!add-rank @Anfänger 5 (Und fallst du willst, mit einer Beschreibung hier)` den Rang erstellen. Sobald jemand 5 Einladungen erreicht wird ihm automatisch die Rolle zugewiesen.
 
 ## Wie kann ich den Bot in allen bis auf einen oder einige Channel deaktivieren?
 

@@ -1,9 +1,9 @@
 # 付費
 
-給付我們的伺服器帳單，我們會提供一個付費版本的機器人。如果您想知道所有額外的特點，可以參觀我們的網站[價格頁面]()。
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/zh-TW/getting-started/our-bots.md) already have all premium features enabled.
 
 ## 特色
 
-### premium.features.first
+### Join and leave message styling \(Embedded messages\)
 
-### premium.features.second
+### Leaderboards are refreshed every 5 minutes

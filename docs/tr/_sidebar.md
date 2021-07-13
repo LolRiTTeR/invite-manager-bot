@@ -2,7 +2,7 @@
 
   - [Hızlı başlangıç](/tr/getting-started/quick-start.md)
   - [FAQs](/tr/getting-started/faq.md)
-  - [start.ourBots.title](/tr/getting-started/our-bots.md)
+  - [Our Bots](/tr/getting-started/our-bots.md)
   - [Alpha Bot](/tr/getting-started/alpha.md)
   - [Profesyonel Bot](/tr/getting-started/pro.md)
 

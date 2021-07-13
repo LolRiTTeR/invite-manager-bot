@@ -1,7 +1,7 @@
 # Faire un don
 
-other.donating.description
+Nous n'acceptons aucun don pour l'instant.
 
 ## Crypto
 
-other.donating.crypto.description
+Nous n'acceptons pas de dons en crypto-monnaies pour l'instant.

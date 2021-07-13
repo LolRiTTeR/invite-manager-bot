@@ -1,9 +1,9 @@
 # Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/pt/getting-started/our-bots.md) already have all premium features enabled.
 
 ## Features
 
-### premium.features.first
+### Join and leave message styling \(Embedded messages\)
 
-### premium.features.second
+### Leaderboards are refreshed every 5 minutes

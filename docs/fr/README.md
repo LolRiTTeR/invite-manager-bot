@@ -7,7 +7,7 @@
 
 ## Commencer
 
-Pour commencer, il suffit d'exécuter la commande `!setup` sur votre serveur.
+Pour commencer, il suffit d'exécuter la commande `!setup` sur ton serveur.
 
 ### Gestion des invitations
 
@@ -17,6 +17,6 @@ Pendant que notre bot est sur votre serveur, nous suivons chaque invitation qui 
 
 Notre tout nouveau système de modération vous permet de modérer automatiquement de nombreuses choses. Veuillez consulter nos pages [avertissements](/fr/modules/moderation/strikes.md) et [sanctions](/fr/modules/moderation/punishments.md) pour plus d'informations. En bref, notre bot donne des 'avertissements' aux personnes qui se conduisent mal et après un certain nombre d'avertissements, l'utilisateur est sanctionné. Tout cela est configurable par l'utilisateur.
 
-## Prime
+## Premium
 
-Pour payer notre facture de serveur, nous proposons une version premium du bot. Pour voir toutes les fonctionnalités supplémentaires que vous obtenez, veuillez visiter notre [page de tarification]().
+Nous ne proposons pas de bot premium payant. Tous nos bots listés dans [Nos bots](/fr/getting-started/our-bots.md) ont déjà toutes les fonctionnalités premium d'activées.

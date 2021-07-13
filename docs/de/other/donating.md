@@ -1,7 +1,7 @@
 # Spenden
 
-other.donating.description
+Momentan akzeptieren wir keine Spenden.
 
 ## Crypto
 
-other.donating.crypto.description
+Momentan akzeptieren wir keinen Spenden über Crypto.

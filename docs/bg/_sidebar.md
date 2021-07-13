@@ -1,42 +1,42 @@
-- Getting Started
+- Първи стъпки
 
-  - [Quick Start](/bg/getting-started/quick-start.md)
-  - [FAQs](/bg/getting-started/faq.md)
-  - [start.ourBots.title](/bg/getting-started/our-bots.md)
+  - [Бързо стартиране](/bg/getting-started/quick-start.md)
+  - [Ч.З.В.](/bg/getting-started/faq.md)
+  - [Our Bots](/bg/getting-started/our-bots.md)
   - [Alpha Bot](/bg/getting-started/alpha.md)
   - [Pro Bot](/bg/getting-started/pro.md)
 
 - Reference
 
-  - [Commands](/bg/reference/commands.md)
-  - [Configs / Settings](/bg/reference/settings.md)
+  - [Команди](/bg/reference/commands.md)
+  - [Настройки на конфигурацията](/bg/reference/settings.md)
 
 - Premium
 
-  - [Features](/bg/premium/features.md)
+  - [Функции](/bg/premium/features.md)
 
-- Modules
+- Модули
 
-  - Invite Management
+  - Управление на поканите
 
-    - [Custom message](/bg/modules/invites/custom-messages.md)
-      - [Examples](/bg/modules/invites/examples.md)
+    - [Персонализирани съобщения](/bg/modules/invites/custom-messages.md)
+      - [Примери](/bg/modules/invites/examples.md)
 
   - Moderation
 
-    - [Strikes](/bg/modules/moderation/strikes.md)
-    - [Punishments](/bg/modules/moderation/punishments.md)
+    - [Предупреждения](/bg/modules/moderation/strikes.md)
+    - [Наказания](/bg/modules/moderation/punishments.md)
 
-  - Music
+  - Музика
 
-    - [Overview](/bg/modules/music/overview.md)
+    - [Преглед](/bg/modules/music/overview.md)
 
-- Other
+- Друго
 
-  - [Webpanel](/bg/other/webpanel.md)
-  - [Translations](/bg/other/translations.md)
-  - [Donating](/bg/other/donating.md)
-  - [Support](/bg/other/support.md)
-  - [Changelog](/bg/other/changelog.md)
-  - [Roadmap](/bg/other/roadmap.md)
-  - [Open Source](/bg/other/open-source.md)
+  - [Уебpanel](/bg/other/webpanel.md)
+  - [Преводи](/bg/other/translations.md)
+  - [Дарения](/bg/other/donating.md)
+  - [Поддържка](/bg/other/support.md)
+  - [Промени](/bg/other/changelog.md)
+  - [Пътна карта](/bg/other/roadmap.md)
+  - [Отворен код](/bg/other/open-source.md)

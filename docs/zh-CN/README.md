@@ -15,8 +15,8 @@
 
 ### 审核
 
-我们全新的审核系统可让您自动审核许多内容。 请查看我们的 [警告] (/zh-CN/modules/moderation/strikes.md) 和 [惩罚] (/zh-CN/modules/moderation/punishments.md)页面以获取更多信息。 简而言之，我们的机器人向行为不端的人发出“警告”，经过一定数量的警告后，用户会受到惩罚。 用户可以自由配置全部设定。
+我们全新的审核系统可让您自动审核许多内容。 请查看我们的 [警告](/zh-CN/modules/moderation/strikes.md) 和 [惩罚](/zh-CN/modules/moderation/punishments.md)页面以获取更多信息。 简而言之，我们的机器人向行为不端的人发出“警告”，经过一定数量的警告后，用户会受到惩罚。 用户可以自由配置全部设定。
 
 ## Premium
 
-To pay our server bill, we offer a premium version of the bot. To see all the extra feature you get, please visit our [pricing page]().
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/zh-CN/getting-started/our-bots.md) already have all premium features enabled.

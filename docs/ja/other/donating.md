@@ -1,7 +1,7 @@
 # 寄付
 
-other.donating.description
+We currently dont accept any donations.
 
 ## 暗号
 
-other.donating.crypto.description
+We currently dont accept any crypto donations.

@@ -1,7 +1,7 @@
 # 翻譯
 
-其他.翻譯.敘述
+InviteManager relies on the community to be translated into different languages. Your help is gladly appreciated, please check the link below if you want to contribute.
 
-## 其他.翻譯.幫助.標題
+## Help translating
 
-其他.翻譯.幫助.敘述
+If you want to help translate the bot or the documentation, please join our [Discord server](https://discord.gg/kQQmfNCTzm) so we can invite you to our [Transifex organization](https://www.transifex.com/invitemanager-1/invitemanager_bot/)

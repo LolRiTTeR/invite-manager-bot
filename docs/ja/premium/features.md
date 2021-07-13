@@ -1,9 +1,9 @@
 # プレミアム
 
-サーバーの請求書を支払うために、botのプレミアムバージョンを提供しています。 追加機能をすべてご覧になるには、[pricing page]() をご覧ください。
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/ja/getting-started/our-bots.md) already have all premium features enabled.
 
 ## 特徴
 
-### premium.features.first
+### Join and leave message styling \(Embedded messages\)
 
-### premium.features.second
+### Leaderboards are refreshed every 5 minutes

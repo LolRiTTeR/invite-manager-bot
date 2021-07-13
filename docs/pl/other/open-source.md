@@ -1,7 +1,7 @@
 # Otwarte źródło
 
-inne.openSource.opis
+InviteManager is open source for everyone to contribute.
 
 ## Główny Bot
 
-inne.openSource.bot.opis
+If you want to contribute or run your own custom bot instance check our [Github repository](https://github.com/LolRiTTeR/invite-manager-bot)

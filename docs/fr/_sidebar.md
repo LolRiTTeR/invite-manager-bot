@@ -1,9 +1,9 @@
 - Commencer
 
-  - [Guide de démarrage rapide](/fr/getting-started/quick-start.md)
-  - [Questions Courantes](/fr/getting-started/faq.md)
-  - [start.ourBots.title](/fr/getting-started/our-bots.md)
-  - [Bot en Alpha](/fr/getting-started/alpha.md)
+  - [Démarrage rapide](/fr/getting-started/quick-start.md)
+  - [FAQ](/fr/getting-started/faq.md)
+  - [Nos bots](/fr/getting-started/our-bots.md)
+  - [Bot Alpha](/fr/getting-started/alpha.md)
   - [Bot Pro](/fr/getting-started/pro.md)
 
 - Référence
@@ -11,7 +11,7 @@
   - [Commandes](/fr/reference/commands.md)
   - [Configurations / Paramètres](/fr/reference/settings.md)
 
-- Prime
+- Premium
 
   - [Fonctionnalités](/fr/premium/features.md)
 
@@ -20,7 +20,7 @@
   - Gestion des invitations
 
     - [Message personnalisé](/fr/modules/invites/custom-messages.md)
-      - [Examples](/fr/modules/invites/examples.md)
+      - [Exemples](/fr/modules/invites/examples.md)
 
   - Modération
 
@@ -33,7 +33,7 @@
 
 - Autre
 
-  - [Webpanel](/fr/other/webpanel.md)
+  - [Tableau de bord](/fr/other/webpanel.md)
   - [Traductions](/fr/other/translations.md)
   - [Faire un don](/fr/other/donating.md)
   - [Support](/fr/other/support.md)

@@ -1,9 +1,9 @@
-# Prime
+# Premium
 
-Pour payer notre facture de serveur, nous proposons une version premium du bot. Pour voir toutes les fonctionnalités supplémentaires que vous obtenez, veuillez visiter notre [page de tarification]().
+Nous ne proposons pas de bot premium payant. Tous nos bots listés dans [Nos bots](/fr/getting-started/our-bots.md) ont déjà toutes les fonctionnalités premium d'activées.
 
 ## Fonctionnalités
 
-### premium.features.first
+### Style des messages d'arrivée et de départ \(Messages contenant un embed\)
 
-### premium.features.second
+### Les classements sont rafraîchis toutes les 5 minutes

@@ -1,7 +1,7 @@
 # Dotacje
 
-inne.dotacje.opis
+We currently dont accept any donations.
 
 ## Kryptowaluty
 
-inne.dotacje.kryptowaluty.opis
+We currently dont accept any crypto donations.

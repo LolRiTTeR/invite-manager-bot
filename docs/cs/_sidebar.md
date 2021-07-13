@@ -2,7 +2,7 @@
 
   - [Quick Start](/cs/getting-started/quick-start.md)
   - [FAQs](/cs/getting-started/faq.md)
-  - [start.ourBots.title](/cs/getting-started/our-bots.md)
+  - [Our Bots](/cs/getting-started/our-bots.md)
   - [Alpha Bot](/cs/getting-started/alpha.md)
   - [Pro Bot](/cs/getting-started/pro.md)
 

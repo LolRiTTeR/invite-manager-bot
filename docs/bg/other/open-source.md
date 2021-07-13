@@ -1,7 +1,7 @@
-# Open Source
+# Отворен код
 
-other.openSource.description
+InviteManager is open source for everyone to contribute.
 
-## Main Bot
+## Главен бот
 
-other.openSource.bot.description
+If you want to contribute or run your own custom bot instance check our [Github repository](https://github.com/LolRiTTeR/invite-manager-bot)

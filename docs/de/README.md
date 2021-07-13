@@ -19,4 +19,4 @@ Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu
 
 ## Premium
 
-Um unsere Server Rechnungen zu bezahlen, bieten wir eine Premium-Version des Bots an. Um alle Premium Features zu sehen, besuche unsere  [Premium Seite]().
+Aktuell bieten wir keine bezahlte Version unseres Bots an. Beide Bots die unter [Unsere Bots](/de/getting-started/our-bots.md) gelistet sind haben bereits alle Premium Features freigeschalten.

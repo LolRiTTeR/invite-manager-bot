@@ -1,3 +1,3 @@
-# Webpanel
+# Tableau de bord
 
-other.webpanel.description
+Il n'y a aucune actualité quant à créer un tableau de bord dans un futur proche.

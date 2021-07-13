@@ -1,7 +1,7 @@
 # 赞助
 
-other.donating.description
+We currently dont accept any donations.
 
 ## 加密
 
-other.donating.crypto.description
+We currently dont accept any crypto donations.

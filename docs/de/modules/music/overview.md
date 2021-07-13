@@ -1,3 +1,3 @@
 # Übersicht
 
-modules.music.overview.description
+Musik Features sind aktuell deaktiviert. Aktuell ist nicht geplant sie wieder zu reaktivieren.

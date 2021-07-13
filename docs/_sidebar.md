@@ -1,6 +1,6 @@
 - [English](/en/README.md)
 - [العربية](/ar/README.md)
-- [български](/bg/README.md)
+- [Български](/bg/README.md)
 - [Čeština](/cs/README.md)
 - [Deutsch](/de/README.md)
 - [English](/el/README.md)

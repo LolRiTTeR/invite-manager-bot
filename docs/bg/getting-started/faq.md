@@ -1,43 +1,43 @@
-# FAQs
+# Ч.З.В.
 
-## How do I change the prefix of the bot?
+## Как да сменя префикса на бота?
 
-You can do `!config prefix -` to change the prefix.
+Трябва да напишете `!config prefix -` за да смените префикса.
 
-If you don't know your current prefix, you can do `@InviteManager config prefix` to see the prefix.
+Ако не знаете сегашният ви префикс, може да напишете `@InviteManager config prefix` , за да видите префикса.
 
-## How do I set join and leave messages?
+## Как да сложа съобщение за илизане и влизане?
 
-Set the channel by doing
+Задайте канала по следния начин
 
 `!config joinMessageChannel #channel`
 
-or
+или
 
 `!config leaveMessageChannel #channel`.
 
-After doing that, new joins and leaves will be posted to that channel.
+След като направите това, новите влизания и излизания ще бъдат изпращани в този канал.
 
-## Can I customize the join and leave messages?
+## Мога ли да персонализирам съобщенията за излизане и влизане?
 
-Absolutely! You can change the message by doing for example
+Абсолютно! Може да смените съобщението на примерно
 
-`!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)`
+`!config joinMessage {memberMention} **влезе**; Поканен от **{inviterName}** (**{numInvites}** покани)`
 
 or
 
-`!config leaveMessage {memberName} **left**; Invited by **{inviterName}**`.
+`!config leaveMessage {memberName} **излезе**; Поканен от **{inviterName}**`.
 
-There are many placeholders available. You can see the full list on the '[Custom Messages](/bg/modules/invites/custom-messages.md)' page.
+Има още много начини. Може да видите целият лист от '[Custom Messages](/bg/modules/invites/custom-messages.md)' .
 
-## What are 'Ranks' and how can I use them?
+## Какво представляват "Ranks" и как мога да ги използвам?
 
-Ranks are used to assign roles to people when they reach a certain amount of invites. For example. if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
+Ранговете се ползват за закачане на роли на хора когато те достигнат определена бройка покани. За пример ако ти имаш роля наречена `@Begginer` и искаш хора които имат 5 или повече покани да имат тази роля, ти трябва да създадеш ранг ето така: `!add-rank @Beginner 5 (и ако искаш описание тук)`. И вече когато някой достигне 5 покани, автоматично ще му бъде дадена роля!
 
-## How can I disable the bot in all but one/some channels?
+## Как мога да деактивирам бота във всички, освен един / някои канали?
 
-Take away the read message permissions in the channels where you don't want the bot to reply.
+Махнете правата "Read Messages" в каналите, в които не искате бота да отговаря.
 
-## Limitation: No advanced tracking before the bot joins
+## Ограничение: Без разширено проследяване преди да се присъедини бота.
 
-Advanced tracking (who invited who) only works after you have invited the bot. The bot will still know everyones invite count after you invite it, don't worry. Just the additional information is missing and can only be collected for members who join after you invited the bot.
+Разширено проследяване (кой, кого е поканил) работи, когато сте поканили бота. Бота ще знае поканите на всеки, след като сте го поканили, но не се притеснявайте. Само допълнителна информация липсва и може да бъде събрана само за членове, които се присъединяват след като сте поканили бот.

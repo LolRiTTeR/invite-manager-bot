@@ -1,7 +1,7 @@
 # 開放資源
 
-其他.開放資源.敘述
+InviteManager is open source for everyone to contribute.
 
 ## 主要機器人
 
-其他.開放資源.機器人.敘述
+If you want to contribute or run your own custom bot instance check our [Github repository](https://github.com/LolRiTTeR/invite-manager-bot)

@@ -19,4 +19,4 @@
 
 ## النسخة المدفوعة
 
-لدفع فاتورة الخادم الخاص بنا ، نحن نقدم نسخة مميزة من الروبوت. لرؤية جميع الميزات الإضافية التي تحصل عليها ، يرجى زيارة موقعنا [pricing page]().
+We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/ar/getting-started/our-bots.md) already have all premium features enabled.

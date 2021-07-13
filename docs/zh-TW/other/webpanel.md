@@ -1,3 +1,3 @@
 # 網頁版
 
-其他.網頁版.敘述
+There currently are no plans to release a webpanel in the near future.
