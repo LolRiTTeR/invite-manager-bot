@@ -10,7 +10,7 @@
 				"headlines": {
 					"examples": "Examples",
 					"normal": "Normal",
-					"embed": "Embed \\(Premium\\)",
+					"embed": "Embed (Premium)",
 					"screenshot": "Screenshot",
 					"code": "Code",
 					"joinMessage": "Join Message",
@@ -19,9 +19,9 @@
 					"leaveEmbed": "Leave Embed"
 				},
 				"content": {
-					"normalCode": "```text\n!config joinMessage \\{memberMention\\} **joined**; Invited by **\\{inviterName\\}** (**\\{numInvites\\}** invites)\n```\n\n```text\n!config leaveMessage \\{memberName\\} **left** after \\{joinedAt:duration\\} on this server; Invited by **\\{inviterName\\}**\n```",
-					"joinMessageCode": "```text\n!config joinMessage \\{ \"color\": \"#5cd65c\", \"author\": \\{ \"name\": \"\\{memberName\\} joined!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Account created\", \"value\": \"\\{memberCreated:timeAgo\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```",
-					"leaveMessageCode": "```text\n!config leaveMessage \\{ \"color\": \"#d65c5c\", \"author\": \\{ \"name\": \"\\{memberName\\} left!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Time on server\", \"value\": \"\\{joinedAt:duration\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```"
+					"normalCode": "```text\n!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)\n```\n\n```text\n!config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**\n```",
+					"joinMessageCode": "```text\n!config joinMessage { \"color\": \"#5cd65c\", \"author\": { \"name\": \"{memberName} joined!\", \"icon_url\": \"{memberImage}\" }, \"fields\": [ { \"name\": \"Account created\", \"value\": \"{memberCreated:timeAgo}\", \"inline\": true }, { \"name\": \"First joined\", \"value\": \"{firstJoin:date}\", \"inline\": true }, { \"name\": \"Number of joins\", \"value\": \"{numJoins}\", \"inline\": true }, { \"name\": \"Invited by\", \"value\": \"{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})\" }, { \"name\": \"Invite Code\", \"value\": \"{inviteCode} in channel {channelMention}\" }, { \"name\": \"Total Member Count\", \"value\": \"{memberCount}\" } ] }\n```",
+					"leaveMessageCode": "```text\n!config leaveMessage { \"color\": \"#d65c5c\", \"author\": { \"name\": \"{memberName} left!\", \"icon_url\": \"{memberImage}\" }, \"fields\": [ { \"name\": \"Time on server\", \"value\": \"{joinedAt:duration}\", \"inline\": true }, { \"name\": \"First joined\", \"value\": \"{firstJoin:date}\", \"inline\": true }, { \"name\": \"Number of joins\", \"value\": \"{numJoins}\", \"inline\": true }, { \"name\": \"Invited by\", \"value\": \"{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})\" }, { \"name\": \"Invite Code\", \"value\": \"{inviteCode} in channel {channelMention}\" }, { \"name\": \"Total Member Count\", \"value\": \"{memberCount}\" } ] }\n```"
 				}
 			},
 			"overview": {
@@ -238,7 +238,7 @@
 		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.",
 		"features": {
 			"title": "Features",
-			"first": "Join and leave message styling \\(Embedded messages\\)",
+			"first": "Join and leave message styling (Embedded messages)",
 			"second": "Leaderboards are refreshed every 5 minutes"
 		},
 		"tiers": {
