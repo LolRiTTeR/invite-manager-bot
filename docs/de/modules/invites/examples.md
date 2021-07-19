@@ -3,14 +3,14 @@
 ## Normal
 
 ```text
-!config joinMessage \{memberMention\} ist dem Server **beigetreten**; Eingeladen von **\{inviterName\}** (**\{numInvites\}** invites)
+!config joinMessage {memberMention} ist dem Server **beigetreten**; Eingeladen von **{inviterName}** (**{numInvites}** invites)
 ```
 
 ```text
-!config leaveMessage \{memberName\} hat den Server nach \{joinedAt:duration\} **verlassen**; Eingeladen von **\{inviterName\}**
+!config leaveMessage {memberName} hat den Server nach {joinedAt:duration} **verlassen**; Eingeladen von **{inviterName}**
 ```
 
-## Embed \(Premium\)
+## Embed (Premium)
 
 ### Beitrittsnachricht
 
@@ -23,8 +23,8 @@
 #### ** Code **
 
 ```text
-!config joinMessage \{ "color": "#5cd65c", "author": \{ "name": "\{memberName\} ist beigetreten!", "icon_url": "\{memberImage\}" \}, "fields": \[ \{ "name": "Account erstellt", "value": "\{memberCreated:timeAgo\}", "inline": true \}, \{ "name": "Erster Beitritt", "value": "\{firstJoin:date\}", "inline": true \}, \{ "name": "Anzahl an Beitritten", "value": "\{numJoins\}", "inline": true \}, \{ "name": "Eingeladen von", "value": "\{inviterMention\}
-\{numInvites\} (regulär: \{numRegularInvites\}, bonus: \{numBonusInvites\}, gefälscht: \{numFakeInvites\}, verlassen: \{numLeaveInvites\})" \}, \{ "name": "Einladungscode", "value": "\{inviteCode\} im Channel \{channelMention\}" \}, \{ "name": "Anzahl an Mitgliedern", "value": "\{memberCount\}" \} \] \}
+!config joinMessage { "color": "#5cd65c", "author": { "name": "{memberName} ist beigetreten!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Account erstellt", "value": "{memberCreated:timeAgo}", "inline": true }, { "name": "Erster Beitritt", "value": "{firstJoin:date}", "inline": true }, { "name": "Anzahl an Beitritten", "value": "{numJoins}", "inline": true }, { "name": "Eingeladen von", "value": "{inviterMention}
+{numInvites} (regulär: {numRegularInvites}, bonus: {numBonusInvites}, gefälscht: {numFakeInvites}, verlassen: {numLeaveInvites})" }, { "name": "Einladungscode", "value": "{inviteCode} im Channel {channelMention}" }, { "name": "Anzahl an Mitgliedern", "value": "{memberCount}" } ] }
 ```
 
 <!-- tabs:end -->
@@ -40,8 +40,8 @@
 #### ** Code **
 
 ```text
-!config leaveMessage \{ "color": "#d65c5c", "author": \{ "name": "\{memberName\} hat den Server verlassen!", "icon_url": "\{memberImage\}" \}, "fields": \[ \{ "name": "Verbrachte Zeit", "value": "\{joinedAt:duration\}", "inline": true \}, \{ "name": "Erster Beitritt", "value": "\{firstJoin:date\}", "inline": true \}, \{ "name": "Anzahl an Beitritten", "value": "\{numJoins\}", "inline": true \}, \{ "name": "Eingeladen von", "value": "\{inviterMention\}
-\{numInvites\} (regulär: \{numRegularInvites\}, bonus: \{numBonusInvites\}, gefälscht: \{numFakeInvites\}, verlassen: \{numLeaveInvites\})" \}, \{ "name": "Einladungscode", "value": "\{inviteCode\} im Channel \{channelMention\}" \}, \{ "name": "Anzahl an Mitgliedern", "value": "\{memberCount\}" \} \] \}
+!config leaveMessage { "color": "#d65c5c", "author": { "name": "{memberName} hat den Server verlassen!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Verbrachte Zeit", "value": "{joinedAt:duration}", "inline": true }, { "name": "Erster Beitritt", "value": "{firstJoin:date}", "inline": true }, { "name": "Anzahl an Beitritten", "value": "{numJoins}", "inline": true }, { "name": "Eingeladen von", "value": "{inviterMention}
+{numInvites} (regulär: {numRegularInvites}, bonus: {numBonusInvites}, gefälscht: {numFakeInvites}, verlassen: {numLeaveInvites})" }, { "name": "Einladungscode", "value": "{inviteCode} im Channel {channelMention}" }, { "name": "Anzahl an Mitgliedern", "value": "{memberCount}" } ] }
 ```
 
 <!-- tabs:end -->

@@ -51,13 +51,13 @@
 		"ban": {
 			"canNotBan": "Ich kann diesen Nutzer nicht verbannen.",
 			"done": "Dieser Nutzer wurde erfolgreich gebannt.",
-			"error": "Es ist ein Fehler aufgetreten beim verbannen des Benutzers:\n{{ error }}",
+			"error": "Beim bannen des Benutzers ist ein Fehler aufgetreten:\n{{ error }}",
 			"missingPermissions": "Ich benötige die 'Mitglieder bannen' Berechtigung, um diesen Befehl auszuführen.",
 			"self": {
 				"args": {
 					"deleteMessageDays": "Wie weit zurück alte Nachrichten entfernt werden (in Tagen).",
 					"reason": "Warum der Nutzer gebannt wurde.",
-					"user": "Nutzer zum verbannen."
+					"user": "Nutzer der gebannt wird."
 				},
 				"description": "Bannt ein Mitglied vom Server.",
 				"flags": {
@@ -75,7 +75,7 @@
 				"clear": "Nutze `{{ prefix }}botConfig {{ key }} none` zum leeren.",
 				"notSet": "Diese Konfiguration ist aktuell **nicht** gesetzt.\nNutze `{{ prefix }}config {{ key }} <value>` zum ändern.",
 				"text": "Diese Konfiguration ist bereits gesetzt.\nNutze `{{ prefix }}botConfig {{ key }} <value>` zum ändern.\nNutze `{{ prefix }}botConfig {{ key }} default` um sie auf den Standardwert zurückzusetzen.",
-				"title": "Current Value"
+				"title": "Aktueller Wert"
 			},
 			"customOnly": "**Dieser Befehl ist nur für Custom Bots verfügbar.**\nWenn du nach der Serverkonfiguration suchst, nutze den `{{ prefix }}config` Befehl.\n\nBesuche unsere Patreon Seite um mehr darüber herauszufinden, wie man einen Custom Bot erhält: {{{ patreon }}}",
 			"invalid": {
@@ -120,7 +120,7 @@
 				"current": "Aktueller Shard",
 				"total": "Shards insgesamt"
 			},
-			"uptime": "Verfügbarkeit",
+			"uptime": "Laufzeit",
 			"version": "Version"
 		},
 		"caseDelete": {
@@ -129,7 +129,7 @@
 			"self": {
 				"args": {
 					"caseNumber": "Fallnummer",
-					"reason": "Der Grund, warum gelöscht wird."
+					"reason": "Der Grund, warum der Fall gelöscht wird."
 				},
 				"description": "Einen spezifischen Fall löschen."
 			},
@@ -151,19 +151,19 @@
 			"punishments": {
 				"entry": "{{ punishment }} weil er {{ amount }} Strikes hatte {{ date }}",
 				"title": "Bestrafungen",
-				"total": "Alle Bestrafungen",
+				"total": "Bestrafungen Gesamt",
 				"totalText": "{{{ amount }}} Bestrafungen."
 			},
 			"self": {
 				"args": {
-					"user": "Benutzer zum überprüfen."
+					"user": "Benutzer der überprüft wird."
 				},
 				"description": "Zeige Verletzungen der Regeln und Bestrafungen des Benutzers."
 			},
 			"strikes": {
 				"entry": "#{{ id }} - Erhielt {{ amount }} Strikes für {{ violation }} {{ date }}",
 				"title": "Strikes",
-				"total": "Strikes Total",
+				"total": "Strikes Gesamt",
 				"totalText": "Erhielt {{{ total }}} Strikes für {{{ amount }}} Verletzungen der Regeln."
 			}
 		},
@@ -174,7 +174,7 @@
 				"args": {
 					"member": "User wessen Nachrichten entfernt werden.",
 					"numberOfMessages": "Anzahl an Nachrichten die gesucht werden sollen.",
-					"quantity": "Wieviele Nachrichten sollen entfernt werden.",
+					"quantity": "Wie viele Nachrichten entfernt werden sollen.",
 					"type": "Der Typ der Nachricht die gelöscht werden sollen."
 				},
 				"description": "Entferne bestimmte Nachrichten in einem Kanal."
@@ -205,8 +205,8 @@
 			"done": "Einladungen für {{ amount }} Benutzer wurden entfernt.",
 			"self": {
 				"args": {
-					"clearBonus": "Gebe `true` an wenn du Bonus Einladungen entfernen möchtest, ansonten nutze `false` (default).",
-					"user": "Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben werden einladungen aller Benutzer entfernt."
+					"clearBonus": "Gebe `true` an wenn du Bonus Einladungen entfernen möchtest, ansonsten nutze `false` (Standard).",
+					"user": "Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben dann werden die Einladungen von allen Benutzern entfernt."
 				},
 				"description": "Entferne Einladungen des Servers/eines Benutzers.",
 				"flags": {
@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Developers",
-			"moderators": "Moderators",
+			"developers": "Bot Entwickler",
+			"moderators": "Moderatoren Team",
+			"managers": "Community Team",
+			"designers": "Grafikdesigner",
 			"self": {
 				"description": "Show developers and contributors of the bot."
 			},
-			"staff": "Staff",
+			"staff": "Support Team",
 			"translators": "Translators"
 		},
 		"error": "There was an error executing the command. Please report this to a developer:\n{{{ error }}}",
@@ -476,7 +478,7 @@
 			"current": {
 				"clear": "Use `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"notSet": "This invite code config is currently **not** set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to set it.",
-				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none\\` to clear it.",
+				"text": "Diese Einladungskonfiguration ist aktuell gesetzt.\n\nNutze `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} 1` zum ändern.\nNutze `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` um es auf Standard zurückzusetzen.\nNutze `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` zum leeren.",
 				"title": "Current Value"
 			},
 			"keys": {
@@ -635,28 +637,28 @@
 			},
 			"current": {
 				"notSet": "This member config is currently **not** set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to set it.",
-				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none\\` to clear it.",
-				"title": "Aktuellen Wert"
+				"text": "Diese Mitgliederkonfiguration ist aktuell gesetzt.\n\nNutze `{{ prefix }}memberConfig {{ key }} {{ username }} 1` zum ändern.\nNutze `{{ prefix }}memberConfig {{ key }} {{ username }} default` um es auf Standard zurückzusetzen.\nNutze `{{ prefix }}memberConfig {{ key }} {{ username }} none` zum leeren.",
+				"title": "Aktueller Wert"
 			},
 			"keys": {
 				"title": "Gültige Mitglieder-Konfigurationsschlüssel"
 			},
 			"new": {
-				"title": "Neuen Wert"
+				"title": "Neuer Wert"
 			},
 			"none": "Nichts",
 			"notSet": "This member config settings is currently not set for any members",
 			"previous": {
-				"title": "Bisherigen Wert"
+				"title": "Vorheriger Wert"
 			},
-			"sameValue": "Die Konfiguration diese Mitgliedes ist bereits auf diesen Wert eingestellt",
+			"sameValue": "Die Konfiguration dieses Mitgliedes ist bereits auf diesen Wert eingestellt",
 			"self": {
 				"args": {
 					"key": "The member config setting which you want to show/change.",
-					"user": "Der bentzer für den die Einstellung angezeigt/geändert wird.",
+					"user": "Der Benutzer für den die Einstellung angezeigt/geändert wird.",
 					"value": "Der neue Wert der Einstellung."
 				},
-				"description": "Zeigt und ändert die einstellungen von Benutzern des servers."
+				"description": "Zeigt und ändert die Einstellungen von Benutzern des Servers."
 			},
 			"text": "Below are all the available member config settings.\n\nUse `{{ prefix }}memberConfig <key>` to view the users which have a `<key>` setting\nUse `{{ prefix }}memberConfig <key> @user` to view the setting for a single `@user`\nUse `{{ prefix }}memberConfig <key> @user <value>` to set the config `<key>` to `<value>` for `@user`",
 			"title": "Mitglieder Konfiguration"
@@ -669,10 +671,10 @@
 				"month": "Trat in diesem Monat",
 				"week": "Diese Woche beigetreten"
 			},
-			"members": "Mitglider",
+			"members": "Mitglieder",
 			"online": "Online",
 			"self": {
-				"description": "Zeigt Mitgliederanzahl des servers."
+				"description": "Zeigt Mitgliederanzahl des Servers."
 			}
 		},
 		"mentionRole": {
@@ -769,7 +771,7 @@
 				},
 				"patreon": {
 					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchsed premium on Patreon"
+					"title": "Wenn du Premium auf Patreon gekauft hast"
 				},
 				"servers": {
 					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
@@ -799,12 +801,12 @@
 				"args": {
 					"args": "Argument der Bestrafung.",
 					"punishment": "Typ der Bestrafung welche benutzt wird.",
-					"strikes": "Anzahl der Regel verletzungen um diese Strafe auszulösen."
+					"strikes": "Anzahl der Regelverletzungen um diese Strafe auszulösen."
 				},
 				"description": "Stelle eine Bestrafung ein wenn eine bestimmte Anzahl an Regelverletzungen erreicht wird."
 			},
-			"text": "{{ strikes }} Regelverletzungen werden bestraft mit einem {{ punishment }}",
-			"title": "Bestrafungs Einstellungen.",
+			"text": "{{ strikes }} Regelverletzungen werden mit einem {{ punishment }} bestraft",
+			"title": "Bestrafungseinstellungen",
 			"unusedPunishment": "Unbenutzte Bestrafungen."
 		},
 		"purge": {
@@ -839,7 +841,7 @@
 			"entry": "{{{ role }}}: **{{ numInvites }} Einladungen** {{ description }}",
 			"none": "Es wurde noch kein Rang erstellt",
 			"self": {
-				"description": "Zeigt alle Ränge.",
+				"description": "Zeige alle Ränge.",
 				"args": {
 					"page": "The page of the ranks list to show."
 				}
@@ -857,17 +859,17 @@
 			}
 		},
 		"removeRank": {
-			"done": "Rang {{ role }} entfernt.",
-			"rankNotFound": "Rang {{ role }} gibt es nicht",
+			"done": "Rang {{{ role }}} entfernt.",
+			"rankNotFound": "Rang {{{ role }}} gibt es nicht",
 			"self": {
 				"args": {
-					"rank": "Der Benutzer für den der Rang entfernt werden soll."
+					"rank": "Die Benutzer wessen Rang du entfernen willst."
 				},
 				"description": "Entferne einen Rang eines Benutzers."
 			}
 		},
 		"restoreInvites": {
-			"done": "Restored invites",
+			"done": "Einladungen wiederhergestellt",
 			"self": {
 				"args": {
 					"user": "Der Benutzer wessen Einladungen wiederhergestellt werden. Wenn kein Benutzer angegeben wird werden alle Einladungen wiederhergestellt."
@@ -893,11 +895,11 @@
 				"title": "Fehlende Berechtigung: Server verwalten"
 			},
 			"manageRoles": {
-				"text": "Dem Bot fehlt die \"Rollen verwalten\" Berechtigung. Diese Berechtigung ist erforderlich um Rollen zu vergeben. Ohne diese Berechtigung können den Mitgliedern keine Rollen automatisch hinzugefügt werden.",
+				"text": "Dem Bot fehlt die \"Rollen verwalten\" Berechtigung. Diese Berechtigung wird benötigt um Ränge einem Benutzer zuzuweisen. Wenn diese Berechtigung fehlt ist es nicht möglich Benutzer automatisch im Rang hochzustufen.",
 				"title": "Fehlende Berechtigung: Rollen verwalten"
 			},
 			"prefix": {
-				"text": "Du kannst den Präfix ändern, indem du den Befehl `!config prefix !` nutzt.\nWenn du den aktuellen Präfix nicht kennst kannst du ihn herausfinden, indem du den Befehl `@InviteManager config prefix` nutzt.",
+				"text": "Du kannst den Präfix mit `!config prefix !` ändern\n\nWenn du den aktuellen Präfix des Bots nicht weißt kannst du `@InviteManager config prefix` verwenden.",
 				"title": "Das Präfix ändern"
 			},
 			"premium": {
@@ -910,27 +912,27 @@
 			"text": "Nach dem Einladen dieses Bots werden alle Einladungen automatisch zugeordnet.",
 			"title": "Einrichtung vom InviteManager",
 			"viewAuditLogs": {
-				"text": "Der Bot hat nicht die `View Audit Logs` Berechtigung. Diese Berechtigung ermöglicht dem Bot Einladungen besser zuzuordnen.",
+				"text": "Dem Bot fehlt die \"Betrachte Audit Logs\" Berechtigung. Diese Berechtigung erlaubt es dem Bot Einladungen besser zu überwachen.",
 				"title": "Fehlenden Berechtigung: View Audit Logs"
 			}
 		},
 		"softBan": {
 			"canNotSoftBan": "Ich kann diesen user Nicht soft-bannen.",
 			"done": "Der Benutzer wurde erfolgreich ge soft-bannt.",
-			"error": "Es ist ein fehler aufgetreten beim bannen des Benutzers:\n{{ fehler }}",
-			"missingPermissions": "Ich brauche die `Ban Members` erlaubnis um diesen command zu benutzen.",
+			"error": "Beim bannen des Benutzers ist ein Fehler aufgetreten:\n{{ error }}",
+			"missingPermissions": "Ich benötige die 'Mitglieder bannen' Berechtigung, um diesen Befehl auszuführen.",
 			"self": {
 				"args": {
-					"deleteMessageDays": "Wie alte Nachrichten entfernt werden (in Tagen).",
-					"reason": "Warum der nutzer gebannt wurde,",
-					"user": "Nutzer zum bannen."
+					"deleteMessageDays": "Wie weit zurück alte Nachrichten entfernt werden (in Tagen).",
+					"reason": "Warum der Nutzer gebannt wurde.",
+					"user": "Nutzer der gebannt wird."
 				},
 				"description": "Banne ein Mitlgied und es wird dann automatisch entbannt.",
 				"flags": {
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "Der Benutzer wurde gebannt aber kann nicht entbannt werden...\n{{ error }}"
+			"unBanError": "Der Benutzer ist gebannt aber konnte nicht entbannt werden...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1171,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!"
+			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",

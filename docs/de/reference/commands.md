@@ -109,7 +109,7 @@ This argument expects a duration. The following duration types are supported:
 | ------------------------- | --------------------------------------------- | ------------------------------------ |
 | [addRank](#addRank)       | Füge einen neuen Rang hinzu.                  | !addRank \<role\> \<invites\> [info] |
 | [fixRanks](#fixRanks)     | Deletes any ranks where the role was deleted. | !fixRanks                            |
-| [ranks](#ranks)           | Zeigt alle Ränge.                             | !ranks [page]                        |
+| [ranks](#ranks)           | Zeige alle Ränge.                             | !ranks [page]                        |
 | [removeRank](#removeRank) | Entferne einen Rang eines Benutzers.          | !removeRank \<rank\>                 |
 
 ### Config
@@ -120,7 +120,7 @@ This argument expects a duration. The following duration types are supported:
 | [config](#config)                       | Zeigt und ändert die Einstellungen des Servers.               | !config [key][value]                        |
 | [interactiveConfig](#interactiveConfig) | Interactive Config                                            | !interactiveConfig                          |
 | [inviteCodeConfig](#inviteCodeConfig)   | Show and change the config of invite codes of the server.     | !inviteCodeConfig [key][invitecode] [value] |
-| [memberConfig](#memberConfig)           | Zeigt und ändert die einstellungen von Benutzern des servers. | !memberConfig [key][user] [value]           |
+| [memberConfig](#memberConfig)           | Zeigt und ändert die Einstellungen von Benutzern des Servers. | !memberConfig [key][user] [value]           |
 | [permissions](#permissions)             | Configure permissions to use commands.                        | !permissions [cmd][role]                    |
 
 ### Info
@@ -131,7 +131,7 @@ This argument expects a duration. The following duration types are supported:
 | [credits](#credits) | Show developers and contributors of the bot.                               | !credits        |
 | [getBot](#getBot)   | Get an invite link for the bot.                                            | !getBot         |
 | [help](#help)       | Zeigt hilfe.                                                               | !help [command] |
-| [members](#members) | Zeigt Mitgliederanzahl des servers.                                        | !members        |
+| [members](#members) | Zeigt Mitgliederanzahl des Servers.                                        | !members        |
 | [ping](#ping)       | Ping the bot                                                               | !ping           |
 | [prefix](#prefix)   | Shows the current prefix of the bot.                                       | !prefix         |
 | [setup](#setup)     | Hilft den Bot einzustellen und sucht nach Problemen (z.B. fehlende Rechte) | !setup          |
@@ -287,7 +287,7 @@ Bannt ein Mitglied vom Server.
 
 | Argument | Type          | Required | Description                     | Details |
 | -------- | ------------- | -------- | ------------------------------- | ------- |
-| user     | [User](#User) | Yes      | Nutzer zum verbannen.           |         |
+| user     | [User](#User) | Yes      | Nutzer der gebannt wird.        |         |
 | reason   | [Text](#Text) | No       | Warum der Nutzer gebannt wurde. |         |
 
 ### Flags
@@ -377,10 +377,10 @@ Einen spezifischen Fall löschen.
 
 ### Arguments
 
-| Argument   | Type              | Required | Description                     | Details |
-| ---------- | ----------------- | -------- | ------------------------------- | ------- |
-| caseNumber | [Number](#Number) | Yes      | Fallnummer                      |         |
-| reason     | [Text](#Text)     | No       | Der Grund, warum gelöscht wird. |         |
+| Argument   | Type              | Required | Description                              | Details |
+| ---------- | ----------------- | -------- | ---------------------------------------- | ------- |
+| caseNumber | [Number](#Number) | Yes      | Fallnummer                               |         |
+| reason     | [Text](#Text)     | No       | Der Grund, warum der Fall gelöscht wird. |         |
 
 ### Examples
 
@@ -440,9 +440,9 @@ Zeige Verletzungen der Regeln und Bestrafungen des Benutzers.
 
 ### Arguments
 
-| Argument | Type          | Required | Description              | Details |
-| -------- | ------------- | -------- | ------------------------ | ------- |
-| user     | [User](#User) | Yes      | Benutzer zum überprüfen. |         |
+| Argument | Type          | Required | Description                  | Details |
+| -------- | ------------- | -------- | ---------------------------- | ------- |
+| user     | [User](#User) | Yes      | Benutzer der überprüft wird. |         |
 
 ### Examples
 
@@ -559,9 +559,9 @@ Entferne Einladungen des Servers/eines Benutzers.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                                                                                     | Details |
-| -------- | ------------- | -------- | --------------------------------------------------------------------------------------------------------------- | ------- |
-| user     | [User](#User) | No       | Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben werden einladungen aller Benutzer entfernt. |         |
+| Argument | Type          | Required | Description                                                                                                                   | Details |
+| -------- | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
+| user     | [User](#User) | No       | Der Benutzer wessen Einladungen entfernt werden. Wenn nicht angeben dann werden die Einladungen von allen Benutzern entfernt. |         |
 
 ### Flags
 
@@ -1197,7 +1197,7 @@ Create a mashup of 2 songs.
 
 ## !memberConfig
 
-Zeigt und ändert die einstellungen von Benutzern des servers.
+Zeigt und ändert die Einstellungen von Benutzern des Servers.
 
 ### Usage
 
@@ -1213,11 +1213,11 @@ Zeigt und ändert die einstellungen von Benutzern des servers.
 
 ### Arguments
 
-| Argument | Type            | Required | Description                                                  | Details                                                |
-| -------- | --------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------ |
-| key      | [Enum](#Enum)   | No       | The member config setting which you want to show/change.     | Use one of the following values: `hideFromLeaderboard` |
-| user     | [User](#User)   | No       | Der bentzer für den die Einstellung angezeigt/geändert wird. |                                                        |
-| value    | [Value](#Value) | No       | Der neue Wert der Einstellung.                               |                                                        |
+| Argument | Type            | Required | Description                                                   | Details                                                |
+| -------- | --------------- | -------- | ------------------------------------------------------------- | ------------------------------------------------------ |
+| key      | [Enum](#Enum)   | No       | The member config setting which you want to show/change.      | Use one of the following values: `hideFromLeaderboard` |
+| user     | [User](#User)   | No       | Der Benutzer für den die Einstellung angezeigt/geändert wird. |                                                        |
+| value    | [Value](#Value) | No       | Der neue Wert der Einstellung.                                |                                                        |
 
 ### Examples
 
@@ -1231,7 +1231,7 @@ Zeigt und ändert die einstellungen von Benutzern des servers.
 
 ## !members
 
-Zeigt Mitgliederanzahl des servers.
+Zeigt Mitgliederanzahl des Servers.
 
 ### Usage
 
@@ -1501,11 +1501,11 @@ Stelle eine Bestrafung ein wenn eine bestimmte Anzahl an Regelverletzungen errei
 
 ### Arguments
 
-| Argument   | Type              | Required | Description                                               | Details                                                                   |
-| ---------- | ----------------- | -------- | --------------------------------------------------------- | ------------------------------------------------------------------------- |
-| punishment | [Enum](#Enum)     | No       | Typ der Bestrafung welche benutzt wird.                   | Use one of the following values: `ban`, `kick`, `mute`, `softban`, `warn` |
-| strikes    | [Number](#Number) | No       | Anzahl der Regel verletzungen um diese Strafe auszulösen. |                                                                           |
-| args       | [Text](#Text)     | No       | Argument der Bestrafung.                                  |                                                                           |
+| Argument   | Type              | Required | Description                                              | Details                                                                   |
+| ---------- | ----------------- | -------- | -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| punishment | [Enum](#Enum)     | No       | Typ der Bestrafung welche benutzt wird.                  | Use one of the following values: `ban`, `kick`, `mute`, `softban`, `warn` |
+| strikes    | [Number](#Number) | No       | Anzahl der Regelverletzungen um diese Strafe auszulösen. |                                                                           |
+| args       | [Text](#Text)     | No       | Argument der Bestrafung.                                 |                                                                           |
 
 ### Examples
 
@@ -1595,7 +1595,7 @@ Display the songs in the queue.
 
 ## !ranks
 
-Zeigt alle Ränge.
+Zeige alle Ränge.
 
 ### Usage
 
@@ -1680,9 +1680,9 @@ Entferne einen Rang eines Benutzers.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                         | Details |
-| -------- | ------------- | -------- | --------------------------------------------------- | ------- |
-| rank     | [Role](#Role) | Yes      | Der Benutzer für den der Rang entfernt werden soll. |         |
+| Argument | Type          | Required | Description                                   | Details |
+| -------- | ------------- | -------- | --------------------------------------------- | ------- |
+| rank     | [Role](#Role) | Yes      | Die Benutzer wessen Rang du entfernen willst. |         |
 
 ### Examples
 
@@ -1939,8 +1939,8 @@ Banne ein Mitlgied und es wird dann automatisch entbannt.
 
 | Argument | Type              | Required | Description                     | Details |
 | -------- | ----------------- | -------- | ------------------------------- | ------- |
-| user     | [Member](#Member) | Yes      | Nutzer zum bannen.              |         |
-| reason   | [Text](#Text)     | No       | Warum der nutzer gebannt wurde, |         |
+| user     | [Member](#Member) | Yes      | Nutzer der gebannt wird.        |         |
+| reason   | [Text](#Text)     | No       | Warum der Nutzer gebannt wurde. |         |
 
 ### Flags
 
