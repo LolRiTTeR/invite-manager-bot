@@ -4,7 +4,7 @@
 
 يمكنك القيام `!config prefix -` لتغيير البريفكس.
 
-إذا كنت لا تعرف البريفكس الحالية الخاصة بك ، فيمكنك عمل بادئة تهيئة `@InviteManager config prefix`  لرؤية البريفكس
+إذا كنت لا تعرف البريفكس الحالية الخاصة بك ، فيمكنك عمل بادئة تهيئة `@InviteManager config prefix` لرؤية البريفكس
 
 ## كيف أختار رسائل الدخول والخروج?
 
@@ -32,7 +32,7 @@ There are many placeholders available. You can see the full list on the '[Custom
 
 ## ماهي ال`رتب` وكيف أستطيع استخدامها?
 
-Ranks are used to assign roles to people when they reach a certain amount of invites. For example. if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
+Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
 
 ## How can I disable the bot in all but one/some channels?
 

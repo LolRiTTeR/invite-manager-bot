@@ -8,7 +8,7 @@ Si tu ne connais pas ton préfixe actuel, tu peux utiliser `@InviteManager confi
 
 ## Comment je définis les messages d'arrivée et de départ ?
 
-Défini le salon en faisant
+Définis le salon en faisant
 `!config joinMessageChannel #channel` ou
 
 `!config leaveMessageChannel #channel`.
@@ -17,7 +17,7 @@ Après cela, les prochains messages seront affichées sur ce salon.
 ## Est-ce que je peux personnaliser les messages d'arrivée et de départ ?
 
 Absolument ! Tu peux changer le message en faisant par exemple
-``!config joinMessage {memberMention} **a rejoint**; Invité par **{inviterName}** (**{numInvites}** invitations)`
+`!config joinMessage {memberMention} **a rejoint**; Invité par **{inviterName}** (**{numInvites}** invitations)`
 
 ou
 

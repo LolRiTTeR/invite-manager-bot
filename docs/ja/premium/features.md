@@ -4,6 +4,6 @@ We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/j
 
 ## 特徴
 
-### Join and leave message styling \(Embedded messages\)
+### Join and leave message styling (Embedded messages)
 
 ### Leaderboards are refreshed every 5 minutes

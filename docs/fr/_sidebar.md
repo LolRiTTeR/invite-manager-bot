@@ -6,7 +6,7 @@
   - [Bot Alpha](/fr/getting-started/alpha.md)
   - [Bot Pro](/fr/getting-started/pro.md)
 
-- Référence
+- Sommaire
 
   - [Commandes](/fr/reference/commands.md)
   - [Configurations / Paramètres](/fr/reference/settings.md)

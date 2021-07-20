@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "開発者",
-			"moderators": "モデレーター",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "BOTの開発者と貢献者を表示します。"
 			},
-			"staff": "スタッフ",
+			"staff": "Support Team",
 			"translators": "翻訳者"
 		},
 		"error": "コマンドの実行中にエラーが発生しました。これを開発者に報告してください。\n{{{ error }}}",
@@ -465,7 +467,8 @@
 				"role[]": "役職のリスト、例えば：@Admin @Mod",
 				"string": "任意のテキスト",
 				"string[]": "単語のリスト、例えば： \"スペースのある単語\"",
-				"enum<musicplatformtypes>[]": "音楽プラットフォームの種類のリスト"
+				"enum<musicplatformtypes>[]": "音楽プラットフォームの種類のリスト",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "リアクションを使用して、利用可能なオプションの1つを選択してください。"
 		},
@@ -476,7 +479,7 @@
 			"current": {
 				"clear": "クリアするには `{{prefix}} inviteCodeConfig {{key}} {{code}} none`を使います。",
 				"notSet": "この招待コード設定は現在**設定されていません**。\n\n設定するには `{{prefix}} inviteCodeConfig {{key}} {{code}} <value>`を使います。",
-				"text": "この招待リンク設定は現在設定されています。\n\n変更するには `{{prefix}} inviteCodeConfig {{key}} {{code}} <value>`を使ってください。\nデフォルトに戻すには `{{prefix}} inviteCodeConfig {{key}} {{code}} default`を使います。\nクリアするには、 `{{prefix}} inviteCodeConfig {{key}} {{code}} none \\`を使用してください。",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "現在の値"
 			},
 			"keys": {
@@ -635,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "このメンバー設定は現在**設定されていません**。\n\n設定するには `{{prefix}} memberConfig {{key}} {{username}}<value>`を使います。",
-				"text": "このメンバー設定は現在設定されています。\n\n変更するには `{{ prefix }}memberConfig {{ key }} {{ username }} <value>`を使います。\nデフォルトにリセットするには `{{ prefix }}memberConfig {{ key }} {{ username }} default`を使います。\nクリアするには `{{ prefix }}memberConfig {{ key }} {{ username }} none\\`を使用してください。",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "現在の値"
 			},
 			"keys": {
@@ -769,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "{{{cmd}}}を実行してPatreonの契約書を検証して有効にします。",
-					"title": "Patreonでプレミアムを購入した場合"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "プレミアムを取得したら、選択した最大5台のサーバーで有効にすることができ、いつでもこれら5台のサーバーを変更できます。",
@@ -861,7 +864,7 @@
 			"rankNotFound": "ランク{{{role}}}は存在しません。",
 			"self": {
 				"args": {
-					"rank": "ランクを削除したい対象です。"
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "ランクを外します。"
 			}
@@ -893,11 +896,11 @@
 				"title": "権限がありません：サーバーの管理"
 			},
 			"manageRoles": {
-				"text": "ボットには「役職の管理」権限がありません。 この権限は、役職をユーザーに割り当てるために必要です。 この許可がないと、メンバーは自動昇格できません。",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "権限がありません：ロールの管理"
 			},
 			"prefix": {
-				"text": "接頭辞を変更するには、 `!config prefix !`を実行します。\n\nボットのプレフィックスがわからない場合は、 `@InviteManager config prefix`を使って見つけることができます。",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "接頭辞を変更する"
 			},
 			"premium": {
@@ -910,7 +913,7 @@
 			"text": "ボットを招待した後、すべての招待は自動的に追跡されます。",
 			"title": "InviteManagerを設定する",
 			"viewAuditLogs": {
-				"text": "ボットには「サーバーログの表示」権限がありません。 この許可により、ボットは招待状をよりよく追跡することができます。",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "権限がありません：サーバーログの表示"
 			}
 		},
@@ -930,7 +933,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "ユーザーはBANされていましたが、BANを解除できなかった。\n{{error}}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1172,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!"
+			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",

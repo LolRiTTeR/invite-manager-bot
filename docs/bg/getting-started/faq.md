@@ -32,7 +32,7 @@ or
 
 ## Какво представляват "Ranks" и как мога да ги използвам?
 
-Ранговете се ползват за закачане на роли на хора когато те достигнат определена бройка покани. За пример ако ти имаш роля наречена `@Begginer` и искаш хора които имат 5 или повече покани да имат тази роля, ти трябва да създадеш ранг ето така: `!add-rank @Beginner 5 (и ако искаш описание тук)`. И вече когато някой достигне 5 покани, автоматично ще му бъде дадена роля!
+Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
 
 ## Как мога да деактивирам бота във всички, освен един / някои канали?
 

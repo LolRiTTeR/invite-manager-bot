@@ -8,8 +8,7 @@ Les sanctions sont des actions comme `ban`, `kick` ou `mute` qui peuvent être d
 
 Avec la commande `punishmentconfig` tu peux configurer après combien d'avertissements une certaine sanction sera donnée.
 
-```
-text
+```text
 !punishmentconfig <punishmentType><numberOfStrikesNeeded>
 ```
 
@@ -23,21 +22,18 @@ Une liste des sanctions disponibles :
 
 Donc si tu veux expulser un utilisateur après 5 avertissements, tu devrais utiliser cette commande
 
-```
-text
+```text
 !punishmentconfig kick 5
 ```
 
 Si tu veux supprimer un `punishmentconfig`, paramètre juste les avertissements à `0` comme ceci :
 
-```
-text
+```text
 !punishmentconfig kick 0
 ```
 
 Pour voir tous les paramètres de sanction, utilise la commande sans argument :
 
-```
-text
+```text
 !punishmentconfig
 ```

@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "開發人員",
-			"moderators": "審核人員",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "顯示機器人的開發人員和合作人員。"
 			},
-			"staff": "員工",
+			"staff": "Support Team",
 			"translators": "翻譯人員"
 		},
 		"error": "執行指令時發生一個錯誤。請報告這個給一個開發人員：\n{{{ error }}}",
@@ -465,7 +467,8 @@
 				"role[]": "A list of roles, for example: @Admin @Mod",
 				"string": "Any text",
 				"string[]": "A list of words, for example: word another \"word with space\"",
-				"enum<musicplatformtypes>[]": "A list of music platform types"
+				"enum<musicplatformtypes>[]": "A list of music platform types",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "Use the reactions to pick one of the available options."
 		},
@@ -476,7 +479,7 @@
 			"current": {
 				"clear": "Use `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"notSet": "This invite code config is currently **not** set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to set it.",
-				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none\\` to clear it.",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "Current Value"
 			},
 			"keys": {
@@ -635,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "This member config is currently **not** set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to set it.",
-				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none\\` to clear it.",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "Current Value"
 			},
 			"keys": {
@@ -769,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchsed premium on Patreon"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
@@ -861,7 +864,7 @@
 			"rankNotFound": "Rank {{{ role }}} does not exist!",
 			"self": {
 				"args": {
-					"rank": "The for which you want to remove the rank."
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "Remove a rank."
 			}
@@ -893,11 +896,11 @@
 				"title": "Missing permission: Manage Server"
 			},
 			"manageRoles": {
-				"text": "The bot does not have the \"Manage Roles\" permissions. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "Missing permission: Manage Roles"
 			},
 			"prefix": {
-				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the bots prefix, you can find it using `@InviteManager config prefix`.",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "Changing the prefix"
 			},
 			"premium": {
@@ -910,7 +913,7 @@
 			"text": "After inviting the bot, all invites will be tracked automatically.",
 			"title": "Setting up InviteManager",
 			"viewAuditLogs": {
-				"text": "The bot does not have the `View Audit Logs` permissions. This permission allows the bot to better track invites.",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "Missing permission: View Audit Logs"
 			}
 		},
@@ -930,7 +933,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "The user was but could not be unbanned...\n{{ error }}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1172,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!"
+			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",

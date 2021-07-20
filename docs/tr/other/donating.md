@@ -1,7 +1,7 @@
 # Oy verme
 
-We currently dont accept any donations.
+We currently don't accept any donations.
 
 ## Kripto
 
-We currently dont accept any crypto donations.
+We currently don't accept any crypto donations.

@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Ontwikkelaars.",
-			"moderators": "Moderators",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "Zie de ontwikkelaars en de mensen die hebben helpen aan de bot."
 			},
-			"staff": "Staff",
+			"staff": "Support Team",
 			"translators": "Vertalers"
 		},
 		"error": "Er is een error opgetreden tijdens het uitvoeren van dit commando. Rapporteer dit alsjeblieft naar een ontwikkelaar:\n{{{ error }}}",
@@ -465,7 +467,8 @@
 				"role[]": "Een lijst van rollen, bijvoorbeeld: @Admin @Mod",
 				"string": "Een tekst",
 				"string[]": "Een lijst van woorden, bijvoorbeeld: woord nog een \"woord met spatie\"",
-				"enum<musicplatformtypes>[]": "Een lijst met muziek platvorm types."
+				"enum<musicplatformtypes>[]": "Een lijst met muziek platvorm types.",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "Gebruik de reacties om een van de mogelijke opties te kiezen."
 		},
@@ -476,7 +479,7 @@
 			"current": {
 				"clear": "Gebruik `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` om alles te verwijderen.",
 				"notSet": "Deze invite code configuratie is momenteel **niet** gezet.\n\nGebruik `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` om dit te zetten.",
-				"text": "Deze invite code configuratie is momenteel gezet.\n\nGebruik `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` om dit te veranderen.\nGebruik `{{ prefix }}InviteCodeConfig {{ key }} {{ code }} default` om het te resetten naar de standaard waarde.\nGebruik `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none\\` om dit te verwijderen.",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "Huidge Waarden"
 			},
 			"keys": {
@@ -635,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "Deze gebruiker configuratie is momenteel **niet** gezet.\n\nGebruik `{{ prefix }}memberConfig {{ ke }} {{ username }} <value>` om dit te zetten.",
-				"text": "Deze gebruiker configuratie is momenteel gezet.\n\nGebruik `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` om dit te veranderen.\nGebruik `{{ prefix }}memberConfig {{ key }} {{ username }} default` om dit te resetten naar de standaard waarde.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` om dit te verwijderen.",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "Huidige Waarde"
 			},
 			"keys": {
@@ -769,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "Gebruik {{{ cmd }}} om je Patreon product te valideren en te activeren.",
-					"title": "Als je premium hebt betaald via Patreon"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "Wanneer je de betaalde functies hebt kan je dit activeren tot 5 servers naar jouw keuze, en je kan deze 5 servers op elk moment wijzigen.",
@@ -861,7 +864,7 @@
 			"rankNotFound": "De {{ role }} bestaat niet!",
 			"self": {
 				"args": {
-					"rank": "Voor wie je de rank wilt verwijderen."
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "Verwijder een rank."
 			}
@@ -893,11 +896,11 @@
 				"title": "Ik mis de permissie: Server beheren"
 			},
 			"manageRoles": {
-				"text": "De bot heeft de \"Rollen beheren\" permissies niet. Deze permissie is nodig om iemand een role te geven die hij / zij krijgt wanneer hij de zoveel invites heeft behaald. Zonder deze permissie kan de bot niet automatisch de role geven.",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "Ik mis de permissie: Rollen beheren."
 			},
 			"prefix": {
-				"text": "Je kan de prefix veranderen door `!config prefix !` te doen\n\nAls je de bot prefix niet meer weet, kan je het vinden door `@InviteManager config prefix` te doen.",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "Verander de prefix"
 			},
 			"premium": {
@@ -910,7 +913,7 @@
 			"text": "Wanneer je de bot geinvite hebt, worden alle invites automatisch bijgehouden.",
 			"title": "Opzetten InviteManager",
 			"viewAuditLogs": {
-				"text": "De bot heeft niet de `Zie logboeken` permissie. Deze permissie laat de bot toe om op een betere manier de invites te volgen.",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "Ik mis de permissie: Zie logboeken."
 			}
 		},
@@ -930,7 +933,7 @@
 					"deleteMessageDays": "Verwijder berichten van de gebruiker van dagen geleden."
 				}
 			},
-			"unBanError": "De gebruiker is verbannen maar kan niet worden geunbanned...\n{{ error }}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1172,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "De placeholder bericht met de opgegeven id kan niet worden gevonden.",
-			"unknownEmoji": "Onbekende emoji. De bot moet in de guild zijn waar de emoji vandaan komt!"
+			"unknownEmoji": "Onbekende emoji. De bot moet in de guild zijn waar de emoji vandaan komt!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "Lockdown voor {{{ channel }}} is geïndigd.",

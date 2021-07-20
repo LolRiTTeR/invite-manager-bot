@@ -4,6 +4,6 @@ Nous ne proposons pas de bot premium payant. Tous nos bots listés dans [Nos bot
 
 ## Fonctionnalités
 
-### Style des messages d'arrivée et de départ \(Messages contenant un embed\)
+### Join and leave message styling (Embedded messages)
 
 ### Les classements sont rafraîchis toutes les 5 minutes

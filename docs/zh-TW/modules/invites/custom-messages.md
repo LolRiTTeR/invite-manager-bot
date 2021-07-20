@@ -51,7 +51,7 @@ Please see the [examples page](./examples.md) to see what kind of messages you c
 | {inviterImage}           | yes  | yes   | \[URL\]       | URL of the avatar of the inviter                                                        |
 | {numInvites}             | yes  | yes   | 12            | Number of invites the inviter has in total                                              |
 | {numRegularInvites}      | yes  | yes   | 7             | Number of invites the inviter has through regular invites                               |
-| {numBonusInvites}        | yes  | yes   | 5             | Number of invites the inviter has as a bonus (they were assigned manually(              |
+| {numBonusInvites}        | yes  | yes   | 5             | Number of invites the inviter has as a bonus (they were assigned manually)              |
 | {numFakeInvites}         | yes  | yes   | 3             | Number of fake invites the inviter has                                                  |
 | {numLeaveInvites}        | yes  | yes   | 6             | Number of invites that were removed because the member left again.                      |
 | {memberCount}            | yes  | yes   | 42            | Number of members your server has in total                                              |

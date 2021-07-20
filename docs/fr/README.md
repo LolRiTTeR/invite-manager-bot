@@ -1,6 +1,6 @@
 # InviteManager
 
-## Référence
+## Sommaire
 
 - [Commandes](/fr/reference/commands.md)
 - [Configurations / Paramètres](/fr/reference/settings.md)

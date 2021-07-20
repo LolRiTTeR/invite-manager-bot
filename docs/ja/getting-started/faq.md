@@ -1,6 +1,6 @@
 # FAQs
 
-## botのプレフィックスを変更するにはどうすればよいですか？
+## bot のプレフィックスを変更するにはどうすればよいですか？
 
 プレフィックスを変更するには `!config prefix -`を実行します。
 
@@ -32,12 +32,12 @@
 
 ## 'ランク' とは何ですか？どのように使用できますか？
 
-ランクは、使われた招待が一定数に達したときに役職を人々に割り当てるために使用されます。例えば `@Beginner` という役職があり、その役職に5人以上の招待がある人を追加したい場合は、このようにランクを作成する必要があります： `!add-rank @Beginner 5 (必要ならここに説明を入力できます)`。招待者された人が5人いるとすぐにその役職が自動的に追加されます！
+Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
 
-## 1つまたはいくつかのチャンネルでbotを無効にするにはどうすればよいですか？
+## 1 つまたはいくつかのチャンネルで bot を無効にするにはどうすればよいですか？
 
-botに返信させたくないチャンネルのメッセージの読み取り許可を取り除きます。
+bot に返信させたくないチャンネルのメッセージの読み取り許可を取り除きます。
 
 ## 制限：ボットが参加する前に高度な追跡はありません
 
-高度な追跡（誰が誰を招待したか）は、botを招待した後にのみ機能します。 botは、招待しても全員の招待がカウントされることを引き続き認識します。心配しないでください。 追加情報のみが欠落しており、ボットを招待した後に参加したメンバーについてのみ収集できます。
+高度な追跡（誰が誰を招待したか）は、bot を招待した後にのみ機能します。 bot は、招待しても全員の招待がカウントされることを引き続き認識します。心配しないでください。 追加情報のみが欠落しており、ボットを招待した後に参加したメンバーについてのみ収集できます。

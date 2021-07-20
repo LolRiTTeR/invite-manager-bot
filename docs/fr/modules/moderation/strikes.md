@@ -32,8 +32,7 @@ Par exemple, si tu veux que les utilisateurs reçoivent `2` avertissements lorsq
 
 Tu peux vérifier la configuration actuelle en faisant :
 
-```
-text
+```text
 !strikeconfig
 ```
 

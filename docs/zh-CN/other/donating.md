@@ -1,7 +1,7 @@
 # 赞助
 
-We currently dont accept any donations.
+We currently don't accept any donations.
 
 ## 加密
 
-We currently dont accept any crypto donations.
+We currently don't accept any crypto donations.

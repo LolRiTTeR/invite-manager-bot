@@ -32,7 +32,7 @@
 
 ## 甚麼是「等級」然後我要如何使用它們？
 
-等級用於分配身分組給人們當他們達到一定數量的邀請。例如，如果您有一個身分組叫做`@Beginner`然後您希望當人們達到5以上的邀請數量時被加入該身分組，您需要為此創立一個等級就像這樣：`!add-rank @Beginner 5 （然後如果您需要一個敘述可以寫在此）`。只要有人達到5邀請時，他將自動被加入該身分組！
+Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
 
 ## 我要如何禁用機器人在所有的頻道但可以使用在其中一個/一些？
 

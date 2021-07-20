@@ -10,7 +10,7 @@
 				"headlines": {
 					"examples": "Örnekler",
 					"normal": "Normal",
-					"embed": "Embed \\(Premium\\)",
+					"embed": "Embed (Premium)",
 					"screenshot": "Screenshot",
 					"code": "Code",
 					"joinMessage": "Join Message",
@@ -19,9 +19,9 @@
 					"leaveEmbed": "Leave Embed"
 				},
 				"content": {
-					"normalCode": "```text\n!config joinMessage \\{memberMention\\} **joined**; Invited by **\\{inviterName\\}** (**\\{numInvites\\}** invites)\n```\n\n```text\n!config leaveMessage \\{memberName\\} **left** after \\{joinedAt:duration\\} on this server; Invited by **\\{inviterName\\}**\n```",
-					"joinMessageCode": "```text\n!config joinMessage \\{ \"color\": \"#5cd65c\", \"author\": \\{ \"name\": \"\\{memberName\\} joined!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Account created\", \"value\": \"\\{memberCreated:timeAgo\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```",
-					"leaveMessageCode": "```text\n!config leaveMessage \\{ \"color\": \"#d65c5c\", \"author\": \\{ \"name\": \"\\{memberName\\} left!\", \"icon_url\": \"\\{memberImage\\}\" \\}, \"fields\": \\[ \\{ \"name\": \"Time on server\", \"value\": \"\\{joinedAt:duration\\}\", \"inline\": true \\}, \\{ \"name\": \"First joined\", \"value\": \"\\{firstJoin:date\\}\", \"inline\": true \\}, \\{ \"name\": \"Number of joins\", \"value\": \"\\{numJoins\\}\", \"inline\": true \\}, \\{ \"name\": \"Invited by\", \"value\": \"\\{inviterMention\\}\n\\{numInvites\\} (regular: \\{numRegularInvites\\}, bonus: \\{numBonusInvites\\}, fake: \\{numFakeInvites\\}, leave: \\{numLeaveInvites\\})\" \\}, \\{ \"name\": \"Invite Code\", \"value\": \"\\{inviteCode\\} in channel \\{channelMention\\}\" \\}, \\{ \"name\": \"Total Member Count\", \"value\": \"\\{memberCount\\}\" \\} \\] \\}\n```"
+					"normalCode": "```text\n!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)\n```\n\n```text\n!config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**\n```",
+					"joinMessageCode": "```text\n!config joinMessage { \"color\": \"#5cd65c\", \"author\": { \"name\": \"{memberName} joined!\", \"icon_url\": \"{memberImage}\" }, \"fields\": [ { \"name\": \"Account created\", \"value\": \"{memberCreated:timeAgo}\", \"inline\": true }, { \"name\": \"First joined\", \"value\": \"{firstJoin:date}\", \"inline\": true }, { \"name\": \"Number of joins\", \"value\": \"{numJoins}\", \"inline\": true }, { \"name\": \"Invited by\", \"value\": \"{inviterMention}\\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})\" }, { \"name\": \"Invite Code\", \"value\": \"{inviteCode} in channel {channelMention}\" }, { \"name\": \"Total Member Count\", \"value\": \"{memberCount}\" } ] }\n```",
+					"leaveMessageCode": "```text\n!config leaveMessage { \"color\": \"#d65c5c\", \"author\": { \"name\": \"{memberName} left!\", \"icon_url\": \"{memberImage}\" }, \"fields\": [ { \"name\": \"Time on server\", \"value\": \"{joinedAt:duration}\", \"inline\": true }, { \"name\": \"First joined\", \"value\": \"{firstJoin:date}\", \"inline\": true }, { \"name\": \"Number of joins\", \"value\": \"{numJoins}\", \"inline\": true }, { \"name\": \"Invited by\", \"value\": \"{inviterMention}\\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})\" }, { \"name\": \"Invite Code\", \"value\": \"{inviteCode} in channel {channelMention}\" }, { \"name\": \"Total Member Count\", \"value\": \"{memberCount}\" } ] }\n```"
 				}
 			},
 			"overview": {
@@ -53,7 +53,7 @@
 						"inviterImage": "URL of the avatar of the inviter",
 						"numInvites": "Number of invites the inviter has in total",
 						"numRegularInvites": "Number of invites the inviter has through regular invites",
-						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually(",
+						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually)",
 						"numFakeInvites": "Number of fake invites the inviter has",
 						"numLeaveInvites": "Number of invites that were removed because the member left again.",
 						"memberCount": "Number of members your server has in total",
@@ -110,7 +110,7 @@
 					"links": "This violation is triggered whenever the user posts a link.\n\nExample:\n\n`!strikeconfig links 1`\n\nTo delete the strike config:\n\n`!strikeconfig links 0`\n\n**Config options:**\n\n- [autoModLinksEnabled](../../reference/settings?id=enabled-3)\n- [autoModLinksWhitelist](../../reference/settings?id=whitelist)\n- [autoModLinksBlacklist](../../reference/settings?id=blacklist)\n- [autoModLinksFollowRedirects](../../reference/settings?id=follow-redirects)",
 					"words": "This violation is triggered whenever the user posts blacklisted words.\n\nExample:\n\n`!strikeconfig words 1`\n\nTo delete the strike config:\n\n`!strikeconfig words 0`\n\n**Config options:**\n\n- [autoModWordsEnabled](../../reference/settings?id=enabled-4)\n- [autoModWordsBlacklist](../../reference/settings?id=blacklist-1)",
 					"allCaps": "This violation is triggered whenever the user posts a message that is mostly in CAPS.\n\nExample:\n\n`!strikeconfig allCaps 1`\n\nTo delete the strike config:\n\n`!strikeconfig allCaps 0`\n\n**Config options:**\n\n- [autoModAllCapsEnabled](../../reference/settings?id=enabled-5)\n- [autoModAllCapsMinCharacters](../../reference/settings?id=min-characters)\n- [autoModAllCapsPercentageCaps](../../reference/settings?id=percentage-caps)",
-					"duplicateText": "This violation is triggered whenever the user posts the same text multiple times.\n\nExample:\n\n`!strikeconfig duplicateText 1`\n\nTo delete the strike config:\n\n`!strikeconfig duplicateText 0`\n\n**Config options:**}\n\n- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)\n- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)",
+					"duplicateText": "This violation is triggered whenever the user posts the same text multiple times.\n\nExample:\n\n`!strikeconfig duplicateText 1`\n\nTo delete the strike config:\n\n`!strikeconfig duplicateText 0`\n\n**Config options:**\n\n- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)\n- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)",
 					"quickMessages": "This violation is triggered whenever the user quickly posts messages.\n\nExample:\n\n`!strikeconfig quickMessages 1`\n\nTo delete the strike config:\n\n`!strikeconfig quickMessages 0`\n\n**Config options:**\n\n- [autoModQuickMessagesEnabled](../../reference/settings?id=enabled-7)\n- [autoModQuickMessagesNumberOfMessages](../../reference/settings?id=-of-messages)\n- [autoModQuickMessagesTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds-1)",
 					"mentionUsers": "This violation is triggered whenever the user mentions mutliple users.\n\nExample:\n\n`!strikeconfig mentionUsers 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionUsers 0`\n\n**Config options:**\n\n- [autoModMentionUsersEnabled](../../reference/settings?id=enabled-8)\n- [autoModMentionUsersMaxNumberOfMentions](../../reference/settings?id=max-of-mentions)",
 					"mentionRoles": "This violation is triggered whenever the user mentions mutliple roles.\n\nExample:\n\n`!strikeconfig mentionRoles 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionRoles 0`\n\n**Config options:**\n\n- [autoModMentionRolesEnabled](../../reference/settings?id=enabled-9)\n- [autoModMentionRolesMaxNumberOfMentions](../../reference/settings?id=max-of-mentions-1)",
@@ -130,10 +130,10 @@
 		"title": "Diğer",
 		"donating": {
 			"title": "Oy verme",
-			"description": "We currently dont accept any donations.",
+			"description": "We currently don't accept any donations.",
 			"crypto": {
 				"title": "Kripto",
-				"description": "We currently dont accept any crypto donations."
+				"description": "We currently don't accept any crypto donations."
 			}
 		},
 		"roadmap": {
@@ -192,7 +192,7 @@
 			},
 			"ranks": {
 				"title": "What are 'Ranks' and how can I use them?",
-				"description": "Rütbe, belirli bir sayıda davete ulaştıklarında insanlara rol atamak için kullanılır. Örneğin. `@Başlangıçcı` adında bir rolünüz varsa ve 5 veya daha fazla daveti olan kişilerin bu role eklenmesini istiyorsanız şu şekilde bir sıralama oluşturmanız gerekir:`! add-rank @Başlangıçcı 5 (ve burada bir açıklama istersiniz) `. Birisi 5 davet alır almaz, otomatik olarak bu role eklenir!"
+				"description": "Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!"
 			},
 			"channel": {
 				"title": "Bir / bazı kanallar dışındaki tüm botları nasıl devre dışı bırakabilirim?",
@@ -221,7 +221,7 @@
 		"ourBots": {
 			"title": "Our Bots",
 			"subtitle": "Invite the Bot",
-			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot**:\n{{{ blueBotLink }}}\n\n**Invite the yellow bot**\n{{{ yellowBotLink }}}"
+			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot:**\n{{{ blueBotLink }}}\n\n**Invite the yellow bot:**\n{{{ yellowBotLink }}}"
 		}
 	},
 	"reference": {
@@ -238,7 +238,7 @@
 		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.",
 		"features": {
 			"title": "Özellikleri",
-			"first": "Join and leave message styling \\(Embedded messages\\)",
+			"first": "Join and leave message styling (Embedded messages)",
 			"second": "Leaderboards are refreshed every 5 minutes"
 		},
 		"tiers": {

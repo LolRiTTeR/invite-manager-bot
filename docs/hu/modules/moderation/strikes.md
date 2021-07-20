@@ -120,7 +120,7 @@ To delete the strike config:
 
 `!strikeconfig duplicateText 0`
 
-**Config options:**}
+**Config options:**
 
 - [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)
 - [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)

@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Desarroladores",
-			"moderators": "Moderadores",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "Mostrar desarrolladores y colaboradores del bot."
 			},
-			"staff": "Staff",
+			"staff": "Support Team",
 			"translators": "Traductores"
 		},
 		"error": "Hubo un problema al ejecutar el comando. Por favor, reporta este problema a un desarrollador:\n{{{ error }}}",
@@ -465,7 +467,8 @@
 				"role[]": "Una lista de roles, por ejemplo: @Admin @Mod",
 				"string": "Cualquier texto",
 				"string[]": "Una lista de palabras, por ejemplo: palabra otra \"palabra con espacio\"",
-				"enum<musicplatformtypes>[]": "A list of music platform types"
+				"enum<musicplatformtypes>[]": "A list of music platform types",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "Usa las reacciones para elegir una de las opciones disponibles."
 		},
@@ -476,7 +479,7 @@
 			"current": {
 				"clear": "Use `{{prefijo}} inviteCodeConfig {{key}} {{code}} none` para borrarlo.",
 				"notSet": "Esta configuración del código de invitación está ** actualmente ** no ** configurada.\n\nUse `{{prefijo}} inviteCodeConfig {{key}} {{code}} 1` para configurarlo.",
-				"text": "Esta configuración de código de invitación está configurada actualmente.\n\nUse `{{prefijo}} inviteCodeConfig {{key}} {{code}} 1` para cambiarlo.\nUse `{{prefijo}} inviteCodeConfig {{key}} {{code}} default` para restablecerlo al valor predeterminado.\nUse `{{prefijo}} inviteCodeConfig {{key}} {{code}} none \\` para borrarlo.",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "Valor actual"
 			},
 			"keys": {
@@ -635,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "Esta configuración de miembro actualmente no está ** configurada **.\n\nUse `{{prefix}} memberConfig {{key}} {{username}} 1` para configurarlo.",
-				"text": "Esta configuración de miembro está configurada actualmente.\n\nUse `{{prefix}} memberConfig {{key}} {{username}} 1` para cambiarlo.\nUse `{{prefix}} memberConfig {{key}} {{username}} default` para restablecer el valor predeterminado.\nUse `{{prefix}} memberConfig {{key}} {{username}} none \\` para borrarlo.",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "Valor actual"
 			},
 			"keys": {
@@ -769,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchsed premium on Patreon"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
@@ -861,7 +864,7 @@
 			"rankNotFound": "¡Rango {{ role }} no existe!",
 			"self": {
 				"args": {
-					"rank": "Para el que desea eliminar el rango."
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "Remueve un rango."
 			}
@@ -893,11 +896,11 @@
 				"title": "Permiso faltante: Administrar el Servidor"
 			},
 			"manageRoles": {
-				"text": "El bot no tiene el permiso \"Administrar Roles\". El permiso es necesario para asignar roles a los usuarios, sin el, no se otorgara automaticamente el rol a los usuarios.",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "Permiso faltante: Administrar Roles"
 			},
 			"prefix": {
-				"text": "Puedes cambiar el prefijo haciendo `!config prefix !`\n\nSi no conoces el prefijo del bot, puedes encontrarlo usando `@InviteManager config prefix`.\n",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "Cambiando prefijo"
 			},
 			"premium": {
@@ -910,7 +913,7 @@
 			"text": "Luego de invitar al bot, todas las invitaciones seran rastreadas automaticamente.",
 			"title": "Configurando InviteManager",
 			"viewAuditLogs": {
-				"text": "El bot no tiene el permiso \"Ver el registro de auditoria\". Este permiso permite al bot rastrear las invitaciones más fácil.",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "Permiso faltante: Ver el registro de auditoría"
 			}
 		},
@@ -930,7 +933,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "El usuario fue pero no ha podido ser desbaneado...\n{{ error }}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1172,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!"
+			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",

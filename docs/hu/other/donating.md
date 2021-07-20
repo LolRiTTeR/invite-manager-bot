@@ -1,7 +1,7 @@
 # Donating
 
-We currently dont accept any donations.
+We currently don't accept any donations.
 
 ## Crypto
 
-We currently dont accept any crypto donations.
+We currently don't accept any crypto donations.

@@ -105,7 +105,7 @@
 			"title": "اعدادات البوت المخصص."
 		},
 		"botInfo": {
-			"guilds": "مجموعات / النقابات",
+			"guilds": "مجموعات",
 			"members": "أعضاء",
 			"premium": {
 				"active": "السيرفر اعلاه يستعمل **النخسة المدفوعة**",
@@ -231,7 +231,7 @@
 				"canNotSendEmbeds": "ليس لدي اذن الـ **embed links** في هذه الغرفة/الروم",
 				"canNotSendMessages": "ليس لدي اذن الـ **send message** في هذه الغرفة/الروم",
 				"mustBeTextChannel": "هذه الغرفة/الروم ليست للكتابة",
-				"multipleJoinRolesIsPremium": "Multiple join roles are a premium feature."
+				"multipleJoinRolesIsPremium": "خاصية الرتب المتعددة هي للنسخة المدفوعة فقط."
 			},
 			"new": {
 				"title": "اعدادات جديدة"
@@ -267,12 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "مطورين.",
-			"moderators": "المشرفون",
+			"developers": "Bot Developers",
+			"moderators": "Moderation Team",
+			"managers": "Community Team",
+			"designers": "Graphic Designers",
 			"self": {
 				"description": "إظهار المطورين والمساهمين في البوت."
 			},
-			"staff": "الدعم الفني",
+			"staff": "Support Team",
 			"translators": "مترجمين"
 		},
 		"error": "هنالك خطأ فني في الامر المدعي, ادخل سيرفر الدعم الفني لاعلام المطورين بذلك\n{{{ error }}}\n ",
@@ -291,7 +293,7 @@
 				"entry": {
 					"multi": "**{{ name }}** (**{{ times }}** times)",
 					"single": "**{{ name }}**",
-					"text": "**{{ name }}** joined **{{ times }} times**, invited by:"
+					"text": "**{{ name }}** دخل , **{{ times }}** مرات , عن طريق:"
 				}
 			},
 			"none": "لا يوجد دعوات زائفة",
@@ -313,7 +315,7 @@
 		"graph": {
 			"joins": {
 				"text": "يوضح هذا المخطط عدد المستخدمين الذين ينضمون إلى السيرفر الخاص بك.",
-				"title": "Users joining"
+				"title": "المستخدمين الذين دخلوا"
 			},
 			"leaves": {
 				"text": "يوضح هذا المخطط عدد المستخدمين الذين يغادرون السيرفر الخاص بك.",
@@ -398,7 +400,7 @@
 				"unknown": "(يعمل هذا فقط للاعضاء الجديدة في السيرفر)"
 			},
 			"lastJoined": {
-				"notInGuild": "المستخدم ليس جزءًا من سيرفرك",
+				"notInGuild": "المستخدم ليس موجودا في السيرفر",
 				"title": "آخر انضمام"
 			},
 			"regularInvites": {
@@ -417,7 +419,7 @@
 			}
 		},
 		"interactiveConfig": {
-			"useWeb": "Please use the {{{ configCmd }}} command or our website at {{{ link }}} to configure your bot.",
+			"useWeb": "استخدم الامر {{{ configCmd }}} او الموقع الخاص بنا {{{ link }}} لاعداد البوت.",
 			"add": "قم بوضع نوع الاعدادات او اظهر لائحة الاعدادات للاضافة.",
 			"change": "**الاعدادات الحالية**\n{{{ current }}}\n\n**الاعدادات الممكنة**\n{{{ possible }}}\n ",
 			"current": {
@@ -463,9 +465,10 @@
 				"number": "اي رقم",
 				"role": "أي رتبة, مثال: @Admin",
 				"role[]": "لائحة للرتب, مثال: @Admin @Mod",
-				"string": "الرجاء قم بذكر أي نص",
+				"string": "أي نص",
 				"string[]": "قائمة الكلمات ، على سبيل المثال: \"كلمات مع فواصل\"",
-				"enum<musicplatformtypes>[]": "A list of music platform types"
+				"enum<musicplatformtypes>[]": "A list of music platform types",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "استخدم ردود الفعل لاختيار أحد الخيارات المتاحة."
 		},
@@ -476,7 +479,7 @@
 			"current": {
 				"clear": "استعمل الامر هذا لمسحه `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none`",
 				"notSet": "روابط الدعوات لم تضبط بعد.\nاستعمل هذا الامر لضبطه Use `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} ` ",
-				"text": "روابط الدعوات لم تضبط بعد.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} `  لتغييره مجددا.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` لارجاعه كما كان.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none\\` لمسحه.",
+				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
 				"title": "الاعدادات الحالية"
 			},
 			"keys": {
@@ -515,7 +518,7 @@
 				"title": "دائم"
 			},
 			"recommendedCode": {
-				"none": "يرجى إنشاء رابط للدعوة دائم.",
+				"none": "يرجى إنشاء رابط دعوة دائم.",
 				"title": "رابط الدعوة الموصى به"
 			},
 			"self": {
@@ -635,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "الاعدادات حاليا لم توضع.\n`{{ prefix }}memberConfig {{ key }} {{ username }} none` لضبطه.",
-				"text": "تم ضبط اعدادات هذا العضو.\nاستعمل هذا الامر لتغييره `{{ prefix }}memberConfig {{ key }} {{ username }} `\nلاعداداته الى طبيعته `{{ prefix }}memberConfig {{ key }} {{ username }} default`\nلمسحه `{{ prefix }}memberConfig {{ key }} {{ username }} none\\`",
+				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
 				"title": "الاعدادات الحالية"
 			},
 			"keys": {
@@ -769,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "شغّل {{{cmd}}} للتحقق من صحة تعهد Patreon وتنشيطه.",
-					"title": "إذا قمت بشراء premium على patreon"
+					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
 					"text": "بمجرد حصولك على قسط يمكنك تفعيله على ما يصل إلى 5 خوادم من اختيارك ، ويمكنك تغيير هذه الخوادم 5 في أي وقت.",
@@ -861,7 +864,7 @@
 			"rankNotFound": "الرتبة {{{role}}} غير موجودة!",
 			"self": {
 				"args": {
-					"rank": "والتي تريد إزالة الترتيب."
+					"rank": "The user for which you want to remove the rank."
 				},
 				"description": "إزالة رتبة."
 			}
@@ -877,7 +880,7 @@
 		},
 		"setup": {
 			"faq": {
-				"text": "A complete guide on setting up the bot can be found here: https://invitemanager.cc/",
+				"text": "تعليمات كاملة على كيفية استعمال البوت موجودة بالرابط التالي: https://invitemanager.cc/",
 				"title": "الأسئلة المتداولة وأكثر من ذلك"
 			},
 			"help": {
@@ -893,11 +896,11 @@
 				"title": "Missing permission: Manage Server"
 			},
 			"manageRoles": {
-				"text": "ليس لدي صلاحية \"Manage Roles\"، مطلوب إذن له لتعيين الرتب للمستخدم. بدون هذا الإذن ، لا يمكن ترقية الأعضاء تلقائيًا.",
+				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
 				"title": "افتقد صلاحية: Manage Roles"
 			},
 			"prefix": {
-				"text": "يمكنك تغيير البريفكس من خلال كتابة `!config prefix !`\n\nإذا كنت لا تعرف البريفكس ، فيمكنك العثور عليها باستخدام `InviteManager config prefix`.",
+				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
 				"title": "يتم تغيير البريفكس"
 			},
 			"premium": {
@@ -910,7 +913,7 @@
 			"text": "After inviting the bot, all invites will be tracked automatically.",
 			"title": "اعداد الأنفايت منجر",
 			"viewAuditLogs": {
-				"text": "The bot does not have the `View Audit Logs` permissions. This permission allows the bot to better track invites.",
+				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
 				"title": "افتقد صلاحية: View Audit Logs"
 			}
 		},
@@ -930,7 +933,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "The user was but could not be unbanned...\n{{ error }}"
+			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1169,7 +1172,18 @@
 		},
 		"reactionRole": {
 			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!"
+			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"self": {
+				"flags": {
+					"remove": "cmd.reactionRole.self.flags.remove"
+				},
+				"args": {
+					"messageId": "cmd.reactionRole.self.args.messageId",
+					"emoji": "cmd.reactionRole.self.args.emoji",
+					"role": "cmd.reactionRole.self.args.role"
+				},
+				"description": "cmd.reactionRole.self.description"
+			}
 		},
 		"lockdown": {
 			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",
@@ -1500,7 +1514,7 @@
 				"title": "دعوات",
 				"general": {
 					"title": "General",
-					"description": "General invite settings, such as join roles"
+					"description": "اعدادات الدعوات العامة, كرواتب الانضمام"
 				}
 			},
 			"moderation": {
