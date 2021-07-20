@@ -467,7 +467,8 @@
 				"role[]": "A list of roles, for example: @Admin @Mod",
 				"string": "Any text",
 				"string[]": "A list of words, for example: word another \"word with space\"",
-				"enum<musicplatformtypes>[]": "A list of music platform types"
+				"enum<musicplatformtypes>[]": "A list of music platform types",
+				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
 			"welcome": "Use the reactions to pick one of the available options."
 		},
