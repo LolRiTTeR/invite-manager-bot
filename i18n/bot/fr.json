@@ -267,14 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Bot Developers",
-			"moderators": "Moderation Team",
-			"managers": "Community Team",
-			"designers": "Graphic Designers",
+			"developers": "Développeurs du bot",
+			"moderators": "Équipe de modération",
+			"managers": "Équipe de la communauté",
+			"designers": "Designers graphiques",
 			"self": {
 				"description": "Affiche les développeurs et les contributeurs du bot."
 			},
-			"staff": "Support Team",
+			"staff": "Équipe de support",
 			"translators": "Traducteurs"
 		},
 		"error": "Une erreur est survenue lors de l'exécution de cette commande. Signale ceci à un développeur:\n{{{ error }}}",
@@ -1005,7 +1005,7 @@
 			"error": "Impossible d'unban l'utilisateur à cause de l'erreur suivante:\n{{{ error }}}"
 		},
 		"unhoist": {
-			"done": "**Terminé !**\n\nTraité : {{ processed }}\n**Changé : {{ changed }}**\nExclus : {{ excluded }}\nErronés : {{ errored }}",
+			"done": "**Terminé !**\n\nTraité : {{ processed }}\n**Changé : {{ changed }}**\nExclus : {{ excluded }}\nErronés : {{ errored }}\n",
 			"processing": "Traitement en cours, cela peut prendre un moment...\n\nTraité : {{ processed }}/{{ total }}\n**Changé : {{ changed }}**\nExclus : {{ excluded }}\nErronés : {{ errored }}",
 			"self": {
 				"description": "Ajoute un caractère spécial devant le nom de chaque membre, donc ils seront affichés en dernier de la liste des membres."
