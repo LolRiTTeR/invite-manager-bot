@@ -807,8 +807,14 @@ export class TrackingService extends IMService {
 			}
 		}
 
+		let isVanity = false;
+		const vanityInv = await this.client.cache.vanity.get(guild.id);
+		if (inviteCode == vanityInv) {
+			isVanity = true;
+		}
+
 		const vanityMessageFormat = sets.leaveMessageVanity;
-		if (leaveChannel && vanityMessageFormat) {
+		if (isVanity && leaveChannel && vanityMessageFormat) {
 			const msg = await this.client.invs.fillJoinLeaveTemplate(vanityMessageFormat, guild, member, invites, {
 				invite: {
 					code: inviteCode,
