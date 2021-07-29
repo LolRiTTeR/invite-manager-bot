@@ -12,8 +12,10 @@ export enum GuildSettingsKey {
 	// Join and leave
 	joinRoles = 'joinRoles',
 	joinMessage = 'joinMessage',
+	joinMessageVanity = 'joinMessageVanity',
 	joinMessageChannel = 'joinMessageChannel',
 	leaveMessage = 'leaveMessage',
+	leaveMessageVanity = 'leaveMessageVanity',
 	leaveMessageChannel = 'leaveMessageChannel',
 
 	// Leaderboard

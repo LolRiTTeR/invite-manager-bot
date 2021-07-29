@@ -79,8 +79,10 @@ export interface GuildSettingsObject {
 
 	joinRoles: string[];
 	joinMessage: string;
+	joinMessageVanity: string;
 	joinMessageChannel: string;
 	leaveMessage: string;
+	leaveMessageVanity: string;
 	leaveMessageChannel: string;
 
 	leaderboardStyle: LeaderboardStyle;
@@ -216,6 +218,12 @@ export const guildSettingsInfo: {
 		defaultValue: '{memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)',
 		hasPremiumInfo: true
 	},
+	joinMessageVanity: {
+		type: 'String',
+		grouping: [SettingsGroup.invites, SettingsGroup.joins],
+		defaultValue: '{memberMention} **joined** using the vanity invite code **{inviteCode}**',
+		hasPremiumInfo: true
+	},
 	joinMessageChannel: {
 		type: 'Channel',
 		grouping: [SettingsGroup.invites, SettingsGroup.joins],
@@ -227,6 +235,12 @@ export const guildSettingsInfo: {
 		grouping: [SettingsGroup.invites, SettingsGroup.leaves],
 		defaultValue: '{memberName} **left**; Invited by **{inviterName}**',
 		exampleValues: ['', ''],
+		hasPremiumInfo: true
+	},
+	leaveMessageVanity: {
+		type: 'String',
+		grouping: [SettingsGroup.invites, SettingsGroup.leaves],
+		defaultValue: '{memberName} **left**',
 		hasPremiumInfo: true
 	},
 	leaveMessageChannel: {

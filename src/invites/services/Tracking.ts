@@ -548,7 +548,7 @@ export class TrackingService extends IMService {
 		}
 
 		const invite = newAndUsedCodes.find((c) => c.code === exactMatchCode);
-		const joinMessageFormat = sets.joinMessage;
+		const vanityMessageFormat = sets.joinMessageVanity;
 
 		// Exit if we can't find the invite code used
 		if (!invite) {
@@ -565,9 +565,9 @@ export class TrackingService extends IMService {
 			}
 			return;
 		} else if (isVanity) {
-			if (joinChannel) {
+			if (joinChannel && vanityMessageFormat) {
 				const invites = await this.client.cache.invites.getOne(guild.id, member.id);
-				const msg = await this.client.invs.fillJoinLeaveTemplate(joinMessageFormat, guild, member, invites, {
+				const msg = await this.client.invs.fillJoinLeaveTemplate(vanityMessageFormat, guild, member, invites, {
 					invite: {
 						code: exactMatchCode,
 						channel: {
@@ -659,6 +659,7 @@ export class TrackingService extends IMService {
 			}
 		}
 
+		const joinMessageFormat = sets.joinMessage;
 		if (joinChannel && joinMessageFormat) {
 			const msg = await this.client.invs.fillJoinLeaveTemplate(joinMessageFormat, guild, member, invites, {
 				invite,
@@ -804,6 +805,36 @@ export class TrackingService extends IMService {
 			if (me) {
 				await this.client.invs.promoteIfQualified(guild, inviter, me, invites.total);
 			}
+		}
+
+		const vanityMessageFormat = sets.leaveMessageVanity;
+		if (leaveChannel && vanityMessageFormat) {
+			const msg = await this.client.invs.fillJoinLeaveTemplate(vanityMessageFormat, guild, member, invites, {
+				invite: {
+					code: inviteCode,
+					channel: {
+						id: null,
+						name: null
+					}
+				},
+				inviter: {
+					user: {
+						id: null,
+						username: null,
+						discriminator: null,
+						avatarURL: null
+					}
+				}
+			});
+
+			leaveChannel.createMessage(typeof msg === 'string' ? msg : { embed: msg }).catch(async (err) => {
+				// Missing permissions
+				if (err.code === 50001 || err.code === 50020 || err.code === 50013) {
+					// Reset the channel
+					await this.client.cache.guilds.setOne(guild.id, GuildSettingsKey.joinMessageChannel, null);
+				}
+			});
+			return;
 		}
 
 		const leaveMessageFormat = sets.leaveMessage;

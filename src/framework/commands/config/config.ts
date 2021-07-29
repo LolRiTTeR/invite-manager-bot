@@ -192,7 +192,13 @@ export default class extends Command {
 		const { guild, t, me } = context;
 		const member = message.member;
 
-		if (value && (key === GuildSettingsKey.joinMessage || key === GuildSettingsKey.leaveMessage)) {
+		if (
+			value &&
+			(key === GuildSettingsKey.joinMessage ||
+				key === GuildSettingsKey.leaveMessage ||
+				key === GuildSettingsKey.joinMessageVanity ||
+				key === GuildSettingsKey.leaveMessageVanity)
+		) {
 			const preview = await this.client.invs.fillJoinLeaveTemplate(
 				value,
 				guild,
