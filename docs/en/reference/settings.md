@@ -404,7 +404,7 @@ The message sent when someone leaves the server after he joined with a vanity UR
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`

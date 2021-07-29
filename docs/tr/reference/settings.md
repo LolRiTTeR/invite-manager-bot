@@ -25,21 +25,21 @@ There are many config options that can be set. You don't have to set all of them
 
 #### gelenler
 
-| Setting                                                | Description                                    |
-| ------------------------------------------------------ | ---------------------------------------------- |
-| [Mesaj](#joinmessage)                                  | Birisi sunucuya katıldığında gönderilen mesaj. |
-| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description         |
-| [Mesaj Kanalı](#joinmessagechannel)                    | Katılmadaki iletinin gönderildiği kanal        |
+| Setting                             | Description                                                        |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| [Mesaj](#joinmessage)               | Birisi sunucuya katıldığında gönderilen mesaj.                     |
+| [Message](#joinmessagevanity)       | The message sent when someone joins the server using a vanity URL. |
+| [Mesaj Kanalı](#joinmessagechannel) | Katılmadaki iletinin gönderildiği kanal                            |
 
 #### ayrılanlar
 
-| Setting                                                  | Description                                                                                            |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [Mesaj](#leavemessage)                                   | Birisi sunucudan çıktığında gönderilen mesaj.                                                          |
-| [settings.leaveMessageVanity.title](#leavemessagevanity) | settings.leaveMessageVanity.description                                                                |
-| [Mesaj Kanalı](#leavemessagechannel)                     | Ayrılma mesajının gönderildiği kanal.                                                                  |
-| [Auto Subtract](#autosubtractleaves)                     | Kullanıcın yaptığı davetten gelen kullanıcı ayrıldığında kullanıcın otomatik olarak daveti kaldırılır. |
-| [Auto Subtract Threshold](#autosubtractleavethreshold)   | Davetiyenin sayması için bir kullanıcının sunucuda kalması gereken saniye cinsinden süre.              |
+| Setting                                                | Description                                                                                            |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| [Mesaj](#leavemessage)                                 | Birisi sunucudan çıktığında gönderilen mesaj.                                                          |
+| [Message](#leavemessagevanity)                         | The message sent when someone leaves the server after he joined with a vanity URL.                     |
+| [Mesaj Kanalı](#leavemessagechannel)                   | Ayrılma mesajının gönderildiği kanal.                                                                  |
+| [Auto Subtract](#autosubtractleaves)                   | Kullanıcın yaptığı davetten gelen kullanıcı ayrıldığında kullanıcın otomatik olarak daveti kaldırılır. |
+| [Auto Subtract Threshold](#autosubtractleavethreshold) | Davetiyenin sayması için bir kullanıcının sunucuda kalması gereken saniye cinsinden süre.              |
 
 #### Liderlik Tablosu
 
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## settings.joinMessageVanity.title
+## Message
 
-settings.joinMessageVanity.description
+The message sent when someone joins the server using a vanity URL.
 
 Type: `String`
 
@@ -398,13 +398,13 @@ Examples:
 
 ---
 
-## settings.leaveMessageVanity.title
+## Message
 
-settings.leaveMessageVanity.description
+The message sent when someone leaves the server after he joined with a vanity URL.
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`

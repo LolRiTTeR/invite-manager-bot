@@ -17,7 +17,7 @@
 ```
 
 ```text
-!config leaveMessageVanity {memberName} **left**
+!config leaveMessageVanity {memberName} **left** after {joinedAt:duration} on this server
 ```
 
 ## Embed

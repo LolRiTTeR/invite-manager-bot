@@ -10,11 +10,17 @@
 !config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**
 ```
 
-## modules.invites.examples.headlines.normalVanity
+## Normal (Vanity)
 
-modules.invites.examples.content.normalCodeVanity
+```text
+!config joinMessageVanity {memberMention} **joined** using the vanity invite code **{inviteCode}**
+```
 
-## Embed (Premium)
+```text
+!config leaveMessageVanity {memberName} **left**
+```
+
+## Embed
 
 ### Join Message
 
@@ -32,17 +38,19 @@ modules.invites.examples.content.normalCodeVanity
 
 <!-- tabs:end -->
 
-### modules.invites.examples.headlines.joinMessageVanity
+### Join Message (Vanity)
 
 <!-- tabs:start -->
 
 #### ** Screenshot **
 
-![modules.invites.examples.headlines.joinEmbedVanity](../../../assets/TBD)
+![Join Embed (Vanity)](../../../assets/TBD)
 
 #### ** Code **
 
-modules.invites.examples.content.joinMessageCodeVanity
+```text
+!config joinMessageVanity { "color": "#5cd65c", "author": { "name": "{memberName} joined!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Account created", "value": "{memberCreated:timeAgo}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Vanity Invite Code", "value": "{inviteCode}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
+```
 
 <!-- tabs:end -->
 
@@ -62,16 +70,18 @@ modules.invites.examples.content.joinMessageCodeVanity
 
 <!-- tabs:end -->
 
-### modules.invites.examples.headlines.leaveMessageVanity
+### Leave Message (Vanity)
 
 <!-- tabs:start -->
 
 #### ** Screenshot **
 
-![modules.invites.examples.headlines.leaveEmbedVanity](../../../assets/TBD)
+![Leave Embed (Vanity)](../../../assets/TBD)
 
 #### ** Code **
 
-modules.invites.examples.content.leaveMessageCodeVanity
+```text
+!config leaveMessageVanity { "color": "#d65c5c", "author": { "name": "{memberName} left!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Time on server", "value": "{joinedAt:duration}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Vanity Invite Code", "value": "{inviteCode}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
+```
 
 <!-- tabs:end -->

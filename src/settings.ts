@@ -240,7 +240,7 @@ export const guildSettingsInfo: {
 	leaveMessageVanity: {
 		type: 'String',
 		grouping: [SettingsGroup.invites, SettingsGroup.leaves],
-		defaultValue: '{memberName} **left**',
+		defaultValue: '{memberName} **left** after {joinedAt:duration} on this server',
 		hasPremiumInfo: true
 	},
 	leaveMessageChannel: {

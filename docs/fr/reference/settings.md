@@ -25,18 +25,18 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Arrivées
 
-| Setting                                                | Description                                              |
-| ------------------------------------------------------ | -------------------------------------------------------- |
-| [Message d'arrivée](#joinmessage)                      | Le message envoyé quand quelqu'un rejoint le serveur.    |
-| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description                   |
-| [Salon d'arrivée](#joinmessagechannel)                 | Le salon dans lequel le message de bienvenue est envoyé. |
+| Setting                                | Description                                                        |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| [Message d'arrivée](#joinmessage)      | Le message envoyé quand quelqu'un rejoint le serveur.              |
+| [Message](#joinmessagevanity)          | The message sent when someone joins the server using a vanity URL. |
+| [Salon d'arrivée](#joinmessagechannel) | Le salon dans lequel le message de bienvenue est envoyé.           |
 
 #### Départs
 
 | Setting                                                          | Description                                                                             |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [Message de départ](#leavemessage)                               | Le message envoyé quand quelqu'un quitte le serveur.                                    |
-| [settings.leaveMessageVanity.title](#leavemessagevanity)         | settings.leaveMessageVanity.description                                                 |
+| [Message](#leavemessagevanity)                                   | The message sent when someone leaves the server after he joined with a vanity URL.      |
 | [Salon de départ](#leavemessagechannel)                          | Le salon dans lequel est envoyé le message lorsque quelqu'un quitte le serveur.         |
 | [Soustraction automatique](#autosubtractleaves)                  | Enlève automatiquement les invitations de l'invitant quand l'utilisateur invité quitte. |
 | [Seuil de soustraction automatique](#autosubtractleavethreshold) | Le temps en secondes que doivent rester les utilisateurs pour que l'invitation compte.  |
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## settings.joinMessageVanity.title
+## Message
 
-settings.joinMessageVanity.description
+The message sent when someone joins the server using a vanity URL.
 
 Type: `String`
 
@@ -398,13 +398,13 @@ Examples:
 
 ---
 
-## settings.leaveMessageVanity.title
+## Message
 
-settings.leaveMessageVanity.description
+The message sent when someone leaves the server after he joined with a vanity URL.
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`

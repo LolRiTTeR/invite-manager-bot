@@ -25,21 +25,21 @@ There are many config options that can be set. You don't have to set all of them
 
 #### 参加
 
-| Setting                                                | Description                                    |
-| ------------------------------------------------------ | ---------------------------------------------- |
-| [メッセージ](#joinmessage)                             | サーバーに参加したときに送信されるメッセージ。 |
-| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description         |
-| [メッセージチャンネル](#joinmessagechannel)            | 参加時のメッセージが送信されるチャンネル。     |
+| Setting                                     | Description                                                        |
+| ------------------------------------------- | ------------------------------------------------------------------ |
+| [メッセージ](#joinmessage)                  | サーバーに参加したときに送信されるメッセージ。                     |
+| [Message](#joinmessagevanity)               | The message sent when someone joins the server using a vanity URL. |
+| [メッセージチャンネル](#joinmessagechannel) | 参加時のメッセージが送信されるチャンネル。                         |
 
 #### 退出
 
-| Setting                                                  | Description                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------------ |
-| [メッセージ](#leavemessage)                              | サーバーを離れたときに送信されるメッセージ。                       |
-| [settings.leaveMessageVanity.title](#leavemessagevanity) | settings.leaveMessageVanity.description                            |
-| [メッセージチャンネル](#leavemessagechannel)             | 退出メッセージが送信されるチャンネル。                             |
-| [自動減算](#autosubtractleaves)                          | 招待ユーザーが退出したときに招待者から招待状を自動的に削除します。 |
-| [自動減算しきい値](#autosubtractleavethreshold)          | 招待を数えるためにユーザーがサーバーに留まる必要がある時間（秒）。 |
+| Setting                                         | Description                                                                        |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [メッセージ](#leavemessage)                     | サーバーを離れたときに送信されるメッセージ。                                       |
+| [Message](#leavemessagevanity)                  | The message sent when someone leaves the server after he joined with a vanity URL. |
+| [メッセージチャンネル](#leavemessagechannel)    | 退出メッセージが送信されるチャンネル。                                             |
+| [自動減算](#autosubtractleaves)                 | 招待ユーザーが退出したときに招待者から招待状を自動的に削除します。                 |
+| [自動減算しきい値](#autosubtractleavethreshold) | 招待を数えるためにユーザーがサーバーに留まる必要がある時間（秒）。                 |
 
 #### リーダーボード
 
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## settings.joinMessageVanity.title
+## Message
 
-settings.joinMessageVanity.description
+The message sent when someone joins the server using a vanity URL.
 
 Type: `String`
 
@@ -398,13 +398,13 @@ Examples:
 
 ---
 
-## settings.leaveMessageVanity.title
+## Message
 
-settings.leaveMessageVanity.description
+The message sent when someone leaves the server after he joined with a vanity URL.
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`

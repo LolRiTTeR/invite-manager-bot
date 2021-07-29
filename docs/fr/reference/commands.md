@@ -29,11 +29,12 @@ Cet argument attend un code d'invitation Discord.
 
 ### Utilisateur
 
-Cet argument attend un utilisateur Discord. Vous pouvez utiliser une de ces méthodes pour donner un utilisateur :
+Cet argument attend un utilisateur Discord. Tu peux utiliser une de ces méthodes pour fournir un utilisateur :
 
-- Mentionner l'utilisateur `@Valandur`
+- Mentionner l'utilisateur : `@Valandur`
 - Utiliser l'ID : `102785693046026240`
 - Utiliser le nom : `Valandur`
+- Utiliser le nom et le discriminant : `Valandur#3581`
 - Utiliser des guillemets si le nom contient un espace : `"Valandur avec des espaces"`
 
 ### Role

@@ -25,21 +25,21 @@ There are many config options that can be set. You don't have to set all of them
 
 #### الانضمامات
 
-| Setting                                                | Description                                       |
-| ------------------------------------------------------ | ------------------------------------------------- |
-| [رساله](#joinmessage)                                  | الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر. |
-| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description            |
-| [قناه الرسائل](#joinmessagechannel)                    | القناة التي يتم إرسال رسالة الدخول فيها.          |
+| Setting                             | Description                                                        |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| [رساله](#joinmessage)               | الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر.                  |
+| [Message](#joinmessagevanity)       | The message sent when someone joins the server using a vanity URL. |
+| [قناه الرسائل](#joinmessagechannel) | القناة التي يتم إرسال رسالة الدخول فيها.                           |
 
 #### المغادرات
 
-| Setting                                                  | Description                                                              |
-| -------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [رساله](#leavemessage)                                   | الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.                        |
-| [settings.leaveMessageVanity.title](#leavemessagevanity) | settings.leaveMessageVanity.description                                  |
-| [قناه الرسائل](#leavemessagechannel)                     | القناة التي يتم إرسال رسالة الخروج فيها.                                 |
-| [طرح تلقائي](#autosubtractleaves)                        | ازالة الدعوات تلقائيًا من المدعو عندما يغادر                             |
-| [بداية الطرح التلقائي](#autosubtractleavethreshold)      | الوقت بالثواني الذي يتعين على المستخدم البقاء فيه في السيرفر للدعوه للعد |
+| Setting                                             | Description                                                                        |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [رساله](#leavemessage)                              | الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.                                  |
+| [Message](#leavemessagevanity)                      | The message sent when someone leaves the server after he joined with a vanity URL. |
+| [قناه الرسائل](#leavemessagechannel)                | القناة التي يتم إرسال رسالة الخروج فيها.                                           |
+| [طرح تلقائي](#autosubtractleaves)                   | ازالة الدعوات تلقائيًا من المدعو عندما يغادر                                       |
+| [بداية الطرح التلقائي](#autosubtractleavethreshold) | الوقت بالثواني الذي يتعين على المستخدم البقاء فيه في السيرفر للدعوه للعد           |
 
 #### المتصدرين
 
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## settings.joinMessageVanity.title
+## Message
 
-settings.joinMessageVanity.description
+The message sent when someone joins the server using a vanity URL.
 
 Type: `String`
 
@@ -398,13 +398,13 @@ Examples:
 
 ---
 
-## settings.leaveMessageVanity.title
+## Message
 
-settings.leaveMessageVanity.description
+The message sent when someone leaves the server after he joined with a vanity URL.
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`

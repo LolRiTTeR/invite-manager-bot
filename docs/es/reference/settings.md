@@ -25,21 +25,21 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Joins
 
-| Setting                                                | Description                                      |
-| ------------------------------------------------------ | ------------------------------------------------ |
-| [Message](#joinmessage)                                | The message sent when someone joins the server.  |
-| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description           |
-| [Message Channel](#joinmessagechannel)                 | The channel that the message on join is sent to. |
+| Setting                                | Description                                                        |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| [Message](#joinmessage)                | The message sent when someone joins the server.                    |
+| [Message](#joinmessagevanity)          | The message sent when someone joins the server using a vanity URL. |
+| [Message Channel](#joinmessagechannel) | The channel that the message on join is sent to.                   |
 
 #### Leaves
 
-| Setting                                                  | Description                                                                             |
-| -------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [Message](#leavemessage)                                 | The message sent when someone leaves the server.                                        |
-| [settings.leaveMessageVanity.title](#leavemessagevanity) | settings.leaveMessageVanity.description                                                 |
-| [Message Channel](#leavemessagechannel)                  | The channel that the leave message is sent to.                                          |
-| [Auto Subtract](#autosubtractleaves)                     | Automatically remove invites from the inviter when the invited user leaves.             |
-| [Auto Subtract Threshold](#autosubtractleavethreshold)   | The time in seconds for which a user has to stay in the server for the invite to count. |
+| Setting                                                | Description                                                                             |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| [Message](#leavemessage)                               | The message sent when someone leaves the server.                                        |
+| [Message](#leavemessagevanity)                         | The message sent when someone leaves the server after he joined with a vanity URL.      |
+| [Message Channel](#leavemessagechannel)                | The channel that the leave message is sent to.                                          |
+| [Auto Subtract](#autosubtractleaves)                   | Automatically remove invites from the inviter when the invited user leaves.             |
+| [Auto Subtract Threshold](#autosubtractleavethreshold) | The time in seconds for which a user has to stay in the server for the invite to count. |
 
 #### Leaderboard
 
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## settings.joinMessageVanity.title
+## Message
 
-settings.joinMessageVanity.description
+The message sent when someone joins the server using a vanity URL.
 
 Type: `String`
 
@@ -398,13 +398,13 @@ Examples:
 
 ---
 
-## settings.leaveMessageVanity.title
+## Message
 
-settings.leaveMessageVanity.description
+The message sent when someone leaves the server after he joined with a vanity URL.
 
 Type: `String`
 
-Default: `{memberName} **left**`
+Default: `{memberName} **left** after {joinedAt:duration} on this server`
 
 Reset to default:
 `!config leaveMessageVanity default`
