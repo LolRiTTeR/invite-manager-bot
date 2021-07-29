@@ -548,6 +548,7 @@ export class TrackingService extends IMService {
 		}
 
 		const invite = newAndUsedCodes.find((c) => c.code === exactMatchCode);
+		const joinMessageFormat = sets.joinMessage;
 
 		// Exit if we can't find the invite code used
 		if (!invite) {
@@ -565,15 +566,32 @@ export class TrackingService extends IMService {
 			return;
 		} else if (isVanity) {
 			if (joinChannel) {
-				joinChannel
-					.createMessage(i18n.__({ locale: lang, phrase: 'messages.joinVanityUrl' }, { id: member.id }))
-					.catch(async (err) => {
-						// Missing permissions
-						if (err.code === 50001 || err.code === 50020 || err.code === 50013) {
-							// Reset the channel
-							await this.client.cache.guilds.setOne(guild.id, GuildSettingsKey.joinMessageChannel, null);
+				const invites = await this.client.cache.invites.getOne(guild.id, member.id);
+				const msg = await this.client.invs.fillJoinLeaveTemplate(joinMessageFormat, guild, member, invites, {
+					invite: {
+						code: exactMatchCode,
+						channel: {
+							id: null,
+							name: null
 						}
-					});
+					},
+					inviter: {
+						user: {
+							id: null,
+							username: null,
+							discriminator: null,
+							avatarURL: null
+						}
+					}
+				});
+
+				await joinChannel.createMessage(typeof msg === 'string' ? msg : { embed: msg }).catch(async (err) => {
+					// Missing permissions
+					if (err.code === 50001 || err.code === 50020 || err.code === 50013) {
+						// Reset the channel
+						await this.client.cache.guilds.setOne(guild.id, GuildSettingsKey.joinMessageChannel, null);
+					}
+				});
 			}
 			return;
 		}
@@ -641,7 +659,6 @@ export class TrackingService extends IMService {
 			}
 		}
 
-		const joinMessageFormat = sets.joinMessage;
 		if (joinChannel && joinMessageFormat) {
 			const msg = await this.client.invs.fillJoinLeaveTemplate(joinMessageFormat, guild, member, invites, {
 				invite,
