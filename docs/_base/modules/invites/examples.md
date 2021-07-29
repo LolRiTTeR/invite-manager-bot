@@ -30,7 +30,7 @@
 
 #### ** §{modules.invites.examples.headlines.screenshot} **
 
-![§{modules.invites.examples.headlines.joinEmbedVanity}](../../../assets/TBD)
+![§{modules.invites.examples.headlines.joinEmbedVanity}](../../../assets/invite-manager-join-message-vanity-premium.png)
 
 #### ** §{modules.invites.examples.headlines.code} **
 
@@ -58,7 +58,7 @@
 
 #### ** §{modules.invites.examples.headlines.screenshot} **
 
-![§{modules.invites.examples.headlines.leaveEmbedVanity}](../../../assets/TBD)
+![§{modules.invites.examples.headlines.leaveEmbedVanity}](../../../assets/invite-manager-leave-message-vanity-premium.png)
 
 #### ** §{modules.invites.examples.headlines.code} **
 

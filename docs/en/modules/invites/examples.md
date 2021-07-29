@@ -44,7 +44,7 @@
 
 #### ** Screenshot **
 
-![Join Embed (Vanity)](../../../assets/TBD)
+![Join Embed (Vanity)](../../../assets/invite-manager-join-message-vanity-premium.png)
 
 #### ** Code **
 
@@ -76,7 +76,7 @@
 
 #### ** Screenshot **
 
-![Leave Embed (Vanity)](../../../assets/TBD)
+![Leave Embed (Vanity)](../../../assets/invite-manager-leave-message-vanity-premium.png)
 
 #### ** Code **
 
