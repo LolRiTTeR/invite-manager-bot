@@ -4,6 +4,10 @@
 
 §{modules.invites.examples.content.normalCode}
 
+## §{modules.invites.examples.headlines.normalVanity}
+
+§{modules.invites.examples.content.normalCodeVanity}
+
 ## §{modules.invites.examples.headlines.embed}
 
 ### §{modules.invites.examples.headlines.joinMessage}
@@ -20,6 +24,20 @@
 
 <!-- tabs:end -->
 
+### §{modules.invites.examples.headlines.joinMessageVanity}
+
+<!-- tabs:start -->
+
+#### ** §{modules.invites.examples.headlines.screenshot} **
+
+![§{modules.invites.examples.headlines.joinEmbedVanity}](../../../assets/TBD)
+
+#### ** §{modules.invites.examples.headlines.code} **
+
+§{modules.invites.examples.content.joinMessageCodeVanity}
+
+<!-- tabs:end -->
+
 ### §{modules.invites.examples.headlines.leaveMessage}
 
 <!-- tabs:start -->
@@ -31,5 +49,19 @@
 #### ** §{modules.invites.examples.headlines.code} **
 
 §{modules.invites.examples.content.leaveMessageCode}
+
+<!-- tabs:end -->
+
+### §{modules.invites.examples.headlines.leaveMessageVanity}
+
+<!-- tabs:start -->
+
+#### ** §{modules.invites.examples.headlines.screenshot} **
+
+![§{modules.invites.examples.headlines.leaveEmbedVanity}](../../../assets/TBD)
+
+#### ** §{modules.invites.examples.headlines.code} **
+
+§{modules.invites.examples.content.leaveMessageCodeVanity}
 
 <!-- tabs:end -->

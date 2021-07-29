@@ -1275,8 +1275,8 @@
 			"invalid": "Ce n'est pas un nombre valide.",
 			"type": "Nombre",
 			"typeInfo": "Veuillez spécifier un nombre",
-			"tooSmall": "That number is too small, it has to be at least {{{ min }}}.",
-			"tooLarge": "That number is too large, it has to be at most {{{ max }}}."
+			"tooSmall": "Ce nombre est trop petit, il doit être d'au moins {{{ min }}}.",
+			"tooLarge": "Ce nombre est trop grand, il doit être au plus {{{ max }}}."
 		},
 		"role": {
 			"multiple": "Plusieurs rôles trouvés. {{{ roles }}}",
@@ -1288,7 +1288,7 @@
 			"multiple": "Plusieurs utilisateurs trouvés. {{{ users }}}",
 			"notFound": "L'utilisateur n'a pas été trouvé.",
 			"type": "Utilisateur",
-			"typeInfo": "Cet argument attend un utilisateur Discord. Vous pouvez utiliser une de ces méthodes pour donner un utilisateur :\n\n- Mentionner l'utilisateur `@Valandur`\n- Utiliser l'ID : `102785693046026240`\n- Utiliser le nom : `Valandur`\n- Utiliser des guillemets si le nom contient un espace : `\"Valandur avec des espaces\"`"
+			"typeInfo": "Cet argument attend un utilisateur Discord. Tu peux utiliser une de ces méthodes pour fournir un utilisateur :\n\n- Mentionner l'utilisateur : `@Valandur`\n- Utiliser l'ID : `102785693046026240`\n- Utiliser le nom : `Valandur`\n- Utiliser le nom et le discriminant : `Valandur#3581`\n- Utiliser des guillemets si le nom contient un espace : `\"Valandur avec des espaces\"`"
 		},
 		"string": {
 			"type": "Texte",
@@ -1598,6 +1598,10 @@
 			"description": "Le message envoyé quand quelqu'un rejoint le serveur.",
 			"title": "Message d'arrivée"
 		},
+		"joinMessageVanity": {
+			"description": "The message sent when someone joins the server using a vanity URL.",
+			"title": "Message"
+		},
 		"joinMessageChannel": {
 			"description": "Le salon dans lequel le message de bienvenue est envoyé.",
 			"title": "Salon d'arrivée"
@@ -1613,6 +1617,10 @@
 		"leaveMessage": {
 			"description": "Le message envoyé quand quelqu'un quitte le serveur.",
 			"title": "Message de départ"
+		},
+		"leaveMessageVanity": {
+			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
+			"title": "Message"
 		},
 		"leaveMessageChannel": {
 			"description": "Le salon dans lequel est envoyé le message lorsque quelqu'un quitte le serveur.",

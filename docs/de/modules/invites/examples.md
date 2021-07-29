@@ -10,6 +10,10 @@
 !config leaveMessage {memberName} hat den Server nach {joinedAt:duration} **verlassen**; Eingeladen von **{inviterName}**
 ```
 
+## modules.invites.examples.headlines.normalVanity
+
+modules.invites.examples.content.normalCodeVanity
+
 ## Embed (Premium)
 
 ### Beitrittsnachricht
@@ -28,6 +32,20 @@
 
 <!-- tabs:end -->
 
+### modules.invites.examples.headlines.joinMessageVanity
+
+<!-- tabs:start -->
+
+#### ** Screenshot **
+
+![modules.invites.examples.headlines.joinEmbedVanity](../../../assets/TBD)
+
+#### ** Code **
+
+modules.invites.examples.content.joinMessageCodeVanity
+
+<!-- tabs:end -->
+
 ### Verlassensnachricht
 
 <!-- tabs:start -->
@@ -41,5 +59,19 @@
 ```text
 !config leaveMessage { "color": "#d65c5c", "author": { "name": "{memberName} hat den Server verlassen!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Verbrachte Zeit", "value": "{joinedAt:duration}", "inline": true }, { "name": "Erster Beitritt", "value": "{firstJoin:date}", "inline": true }, { "name": "Anzahl an Beitritten", "value": "{numJoins}", "inline": true }, { "name": "Eingeladen von", "value": "{inviterMention}\n{numInvites} (regulär: {numRegularInvites}, bonus: {numBonusInvites}, gefälscht: {numFakeInvites}, verlassen: {numLeaveInvites})" }, { "name": "Einladungscode", "value": "{inviteCode} im Channel {channelMention}" }, { "name": "Anzahl an Mitgliedern", "value": "{memberCount}" } ] }
 ```
+
+<!-- tabs:end -->
+
+### modules.invites.examples.headlines.leaveMessageVanity
+
+<!-- tabs:start -->
+
+#### ** Screenshot **
+
+![modules.invites.examples.headlines.leaveEmbedVanity](../../../assets/TBD)
+
+#### ** Code **
+
+modules.invites.examples.content.leaveMessageCodeVanity
 
 <!-- tabs:end -->

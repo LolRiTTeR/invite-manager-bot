@@ -1598,6 +1598,10 @@
 			"description": "サーバーに参加したときに送信されるメッセージ。",
 			"title": "メッセージ"
 		},
+		"joinMessageVanity": {
+			"description": "The message sent when someone joins the server using a vanity URL.",
+			"title": "Message"
+		},
 		"joinMessageChannel": {
 			"description": "参加時のメッセージが送信されるチャンネル。",
 			"title": "メッセージチャンネル"
@@ -1613,6 +1617,10 @@
 		"leaveMessage": {
 			"description": "サーバーを離れたときに送信されるメッセージ。",
 			"title": "メッセージ"
+		},
+		"leaveMessageVanity": {
+			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
+			"title": "Message"
 		},
 		"leaveMessageChannel": {
 			"description": "退出メッセージが送信されるチャンネル。",

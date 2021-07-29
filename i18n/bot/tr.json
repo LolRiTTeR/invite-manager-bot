@@ -1598,6 +1598,10 @@
 			"description": "Birisi sunucuya katıldığında gönderilen mesaj.",
 			"title": "Mesaj"
 		},
+		"joinMessageVanity": {
+			"description": "The message sent when someone joins the server using a vanity URL.",
+			"title": "Message"
+		},
 		"joinMessageChannel": {
 			"description": "Katılmadaki iletinin gönderildiği kanal",
 			"title": "Mesaj Kanalı"
@@ -1613,6 +1617,10 @@
 		"leaveMessage": {
 			"description": "Birisi sunucudan çıktığında gönderilen mesaj.",
 			"title": "Mesaj"
+		},
+		"leaveMessageVanity": {
+			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
+			"title": "Message"
 		},
 		"leaveMessageChannel": {
 			"description": "Ayrılma mesajının gönderildiği kanal.",

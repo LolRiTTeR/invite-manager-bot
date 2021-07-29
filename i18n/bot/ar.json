@@ -1598,6 +1598,10 @@
 			"description": "الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر.",
 			"title": "رساله"
 		},
+		"joinMessageVanity": {
+			"description": "The message sent when someone joins the server using a vanity URL.",
+			"title": "Message"
+		},
 		"joinMessageChannel": {
 			"description": "القناة التي يتم إرسال رسالة الدخول فيها.",
 			"title": "قناه الرسائل"
@@ -1613,6 +1617,10 @@
 		"leaveMessage": {
 			"description": "الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.",
 			"title": "رساله"
+		},
+		"leaveMessageVanity": {
+			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
+			"title": "Message"
 		},
 		"leaveMessageChannel": {
 			"description": "القناة التي يتم إرسال رسالة الخروج فيها.",

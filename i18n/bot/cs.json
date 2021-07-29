@@ -1598,6 +1598,10 @@
 			"description": "The message sent when someone joins the server.",
 			"title": "Message"
 		},
+		"joinMessageVanity": {
+			"description": "The message sent when someone joins the server using a vanity URL.",
+			"title": "Message"
+		},
 		"joinMessageChannel": {
 			"description": "The channel that the message on join is sent to.",
 			"title": "Message Channel"
@@ -1612,6 +1616,10 @@
 		},
 		"leaveMessage": {
 			"description": "The message sent when someone leaves the server.",
+			"title": "Message"
+		},
+		"leaveMessageVanity": {
+			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
 			"title": "Message"
 		},
 		"leaveMessageChannel": {
