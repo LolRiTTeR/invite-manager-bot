@@ -16,7 +16,7 @@ const devs: string[] = [
 	'LolRiTTeR#1258'
 ];
 
-const moderation: string[] = [
+const mods: string[] = [
 	'Gugu72#7378',
 	'Simplee.#5460',
 	'JWEi#9873'
@@ -53,32 +53,32 @@ export default class extends Command {
 		const embed = this.createEmbed();
 
 		embed.fields.push({
-			name: t('Community Team'),
+			name: t('cmd.credits.managers'),
 			value: this.getList(community)
 		});
 
 		embed.fields.push({
-			name: t('Bot Developers'),
+			name: t('cmd.credits.developers'),
 			value: this.getList(devs)
 		});
 
 		embed.fields.push({
-			name: t('Moderation Team'),
-			value: this.getList(moderation)
+			name: t('cmd.credits.moderators'),
+			value: this.getList(mods)
 		});
 
 		embed.fields.push({
-			name: t('Support Team'),
+			name: t('cmd.credits.staff'),
 			value: this.getList(staff)
 		});
 
 		embed.fields.push({
-			name: t('Graphic Designer'),
+			name: t('cmd.credits.designers'),
 			value: this.getList(graphic_designer)
 		});
 
 		embed.fields.push({
-			name: t('Translators'),
+			name: t('cmd.credits.translators'),
 			value: this.getList(translators)
 		});
 
