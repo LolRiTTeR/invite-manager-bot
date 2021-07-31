@@ -4,17 +4,39 @@ import { IMClient } from '../../../client';
 import { BotCommand, CommandGroup } from '../../../types';
 import { Command, Context } from '../Command';
 
-const admins: string[] = ['Alan Wen#3344', 'LolRiTTeR#1258'];
+const community: string[] = [
+	'Menno#0002',
+	'Armin#2296',
+	'Astryx#4587',
+	'malok#0002'
+];
 
-const managers: string[] = ['Menno#0002', 'Ｍｏｏｎ ?#2296', 'Astryx#4587', 'malok#0002'];
+const devs: string[] = [
+	'Alan Wen#3344',
+	'LolRiTTeR#1258'
+];
 
-const mods: string[] = ['Gugu72#0016', 'Simplee.#5460', 'JWEi#9873'];
+const moderation: string[] = [
+	'Gugu72#7378',
+	'Simplee.#5460',
+	'JWEi#9873'
+];
 
-const staff: string[] = ['SPAZ#0001', 'Mob#4040'];
+const staff: string[] = [
+	'wilman#4040',
+	'SPAZ#0001'
+];
 
-const graphic_designer: string[] = ['Danu#4422'];
+const graphic_designer: string[] = [
+	'Danu#4422'
+];
 
-const translators: string[] = ['• xFalcon#0061'];
+const translators: string[] = [
+	'• xFalcon#0061',
+	'Ormani3#8819',
+	'GPP#9510',
+	'awsamboi#9999'
+];
 
 export default class extends Command {
 	public constructor(client: IMClient) {
@@ -31,32 +53,32 @@ export default class extends Command {
 		const embed = this.createEmbed();
 
 		embed.fields.push({
-			name: t('cmd.credits.managers'),
-			value: this.getList(managers)
+			name: t('Community Team'),
+			value: this.getList(community)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.developers'),
-			value: this.getList(admins)
+			name: t('Bot Developers'),
+			value: this.getList(devs)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.moderators'),
-			value: this.getList(mods)
+			name: t('Moderation Team'),
+			value: this.getList(moderation)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.staff'),
+			name: t('Support Team'),
 			value: this.getList(staff)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.designers'),
+			name: t('Graphic Designer'),
 			value: this.getList(graphic_designer)
 		});
 
 		embed.fields.push({
-			name: t('cmd.credits.translators'),
+			name: t('Translators'),
 			value: this.getList(translators)
 		});
 
