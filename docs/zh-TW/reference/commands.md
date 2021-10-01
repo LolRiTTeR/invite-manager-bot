@@ -90,7 +90,7 @@ This argument expects a duration. The following duration types are supported:
 
 | Command                           | Description                                        | Usage                                                            |
 | --------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------- |
-| [addInvites](#addInvites)         | 新增/移除成員的邀請。                              | !addInvites \<user\> \<amount\> [reason]                         |
+| [addInvites](#addInvites)         | 增加/減少成員的邀請數量。                          | !addInvites \<user\> \<amount\> [reason]                         |
 | [clearInvites](#clearInvites)     | 清除伺服器/一個使用者的邀請。                      | !clearInvites [-d value\|--date=value][-cb\|--clearbonus] [user] |
 | [createInvite](#createInvite)     | 創立獨特的邀請代碼。                               | !createInvite \<name\> [channel]                                 |
 | [info](#info)                     | Show info about a specific member.                 | !info \<user\> [details][page]                                   |
@@ -116,7 +116,7 @@ This argument expects a duration. The following duration types are supported:
 
 | Command                                 | Description                                               | Usage                                       |
 | --------------------------------------- | --------------------------------------------------------- | ------------------------------------------- |
-| [botConfig](#botConfig)                 | 顯示和更改機器人的配置。                                  | !botConfig [key][value]                     |
+| [botConfig](#botConfig)                 | 顯示和更改機器人的設置選項。                              | !botConfig [key][value]                     |
 | [config](#config)                       | 顯示和更改伺服器的配置。                                  | !config [key][value]                        |
 | [interactiveConfig](#interactiveConfig) | Interactive Config                                        | !interactiveConfig                          |
 | [inviteCodeConfig](#inviteCodeConfig)   | Show and change the config of invite codes of the server. | !inviteCodeConfig [key][invitecode] [value] |
@@ -149,7 +149,7 @@ This argument expects a duration. The following duration types are supported:
 
 | Command                               | Description                                                                                                                                   | Usage                                                            |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [ban](#ban)                           | 從伺服器封鎖一個成員。                                                                                                                        | !ban [-d value\|--deleteMessageDays=value] \<user\> [reason]     |
+| [ban](#ban)                           | 從伺服器停權一位成員。                                                                                                                        | !ban [-d value\|--deleteMessageDays=value] \<user\> [reason]     |
 | [caseDelete](#caseDelete)             | 刪除一個特定案件。                                                                                                                            | !caseDelete \<caseNumber\> [reason]                              |
 | [caseView](#caseView)                 | 檢視一個特定案件的資訊。                                                                                                                      | !caseView \<caseNumber\>                                         |
 | [check](#check)                       | 檢查使用者的 violation 和懲罰歷史。                                                                                                           | !check \<user\>                                                  |
@@ -201,7 +201,7 @@ This argument expects a duration. The following duration types are supported:
 
 ## !addInvites
 
-新增/移除成員的邀請。
+增加/減少成員的邀請數量。
 
 ### Usage
 
@@ -215,11 +215,11 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                              | Details |
-| -------- | ----------------- | -------- | -------------------------------------------------------- | ------- |
-| user     | [User](#User)     | Yes      | 使用者將收到/遺失額外獎勵的邀請。                        |         |
-| amount   | [Number](#Number) | Yes      | 使用者的邀請數量將獲得/遺失。使用一個負(-)數來移除邀請。 |         |
-| reason   | [Text](#Text)     | No       | 新增/移除邀請的原因。                                    |         |
+| Argument | Type              | Required | Description                                             | Details |
+| -------- | ----------------- | -------- | ------------------------------------------------------- | ------- |
+| user     | [User](#User)     | Yes      | 使用者將收到/失去額外獎勵邀請數量。                     |         |
+| amount   | [Number](#Number) | Yes      | 使用者的邀請數量將被增加/減少。使用負數來減少邀請數量。 |         |
+| reason   | [Text](#Text)     | No       | 增加/減少邀請數量的原因。                               |         |
 
 ### Examples
 
@@ -253,11 +253,11 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                      | Details |
-| -------- | ----------------- | -------- | ------------------------------------------------ | ------- |
-| role     | [Role](#Role)     | Yes      | 使用者將收到的身分組當達到等級時。               |         |
-| invites  | [Number](#Number) | Yes      | 需要的邀請數量來達到等級。                       |         |
-| info     | [Text](#Text)     | No       | 一個使用者將看見的敘述所以他們能更知道這個等級。 |         |
+| Argument | Type              | Required | Description                                  | Details |
+| -------- | ----------------- | -------- | -------------------------------------------- | ------- |
+| role     | [Role](#Role)     | Yes      | 當達到等級時使用者將獲得的身分組。           |         |
+| invites  | [Number](#Number) | Yes      | 需要的邀請數量來達到等級。                   |         |
+| info     | [Text](#Text)     | No       | 使用者能看見的條件所以他們會更了解這個等級。 |         |
 
 ### Examples
 
@@ -275,7 +275,7 @@ This argument expects a duration. The following duration types are supported:
 
 ## !ban
 
-從伺服器封鎖一個成員。
+從伺服器停權一位成員。
 
 ### Usage
 
@@ -287,14 +287,14 @@ This argument expects a duration. The following duration types are supported:
 
 | Argument | Type          | Required | Description          | Details |
 | -------- | ------------- | -------- | -------------------- | ------- |
-| user     | [User](#User) | Yes      | 使用者封鎖。         |         |
-| reason   | [Text](#Text) | No       | 為甚麼使用者被封鎖。 |         |
+| user     | [User](#User) | Yes      | 被停權的使用者。     |         |
+| reason   | [Text](#Text) | No       | 為甚麼使用者被停權。 |         |
 
 ### Flags
 
-| Flag                              | Short     | Type              | Description                              |
-| --------------------------------- | --------- | ----------------- | ---------------------------------------- |
-| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | 如果指定將刪除被封鎖成員近幾日內的訊息。 |
+| Flag                              | Short     | Type              | Description                                  |
+| --------------------------------- | --------- | ----------------- | -------------------------------------------- |
+| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | 如果指定時間將刪除被停權成員近數日內的訊息。 |
 
 ### Examples
 
@@ -304,7 +304,7 @@ This argument expects a duration. The following duration types are supported:
 
 ## !botConfig
 
-顯示和更改機器人的配置。
+顯示和更改機器人的設置選項。
 
 ### Usage
 
@@ -322,7 +322,7 @@ This argument expects a duration. The following duration types are supported:
 
 | Argument | Type            | Required | Description                       | Details                                                                                                                                     |
 | -------- | --------------- | -------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| key      | [Enum](#Enum)   | No       | 您想要顯示/更改的機器人配置設定。 | Use one of the following values: `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
+| key      | [Enum](#Enum)   | No       | 您想要顯示/更改的機器人設置選項。 | Use one of the following values: `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
 | value    | [Value](#Value) | No       | 新設定的值。                      |                                                                                                                                             |
 
 ### Examples

@@ -1680,9 +1680,9 @@ Remove a rank.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                     | Details |
-| -------- | ------------- | -------- | ----------------------------------------------- | ------- |
-| rank     | [Role](#Role) | Yes      | The user for which you want to remove the rank. |         |
+| Argument | Type          | Required | Description                                | Details |
+| -------- | ------------- | -------- | ------------------------------------------ | ------- |
+| rank     | [Role](#Role) | Yes      | Uzytkownik dla którego chcesz usunąć rangę |         |
 
 ### Examples
 

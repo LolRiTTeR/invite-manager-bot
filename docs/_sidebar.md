@@ -20,4 +20,4 @@
 - [English](/sr/README.md)
 - [Türkçe](/tr/README.md)
 - [中文（中国）](/zh-CN/README.md)
-- [中文台灣](/zh-TW/README.md)
+- [繁體中文](/zh-TW/README.md)

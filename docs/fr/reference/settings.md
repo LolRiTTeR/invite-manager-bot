@@ -25,21 +25,21 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Arrivées
 
-| Setting                                | Description                                                        |
-| -------------------------------------- | ------------------------------------------------------------------ |
-| [Message d'arrivée](#joinmessage)      | Le message envoyé quand quelqu'un rejoint le serveur.              |
-| [Message](#joinmessagevanity)          | The message sent when someone joins the server using a vanity URL. |
-| [Salon d'arrivée](#joinmessagechannel) | Le salon dans lequel le message de bienvenue est envoyé.           |
+| Setting                                | Description                                                                           |
+| -------------------------------------- | ------------------------------------------------------------------------------------- |
+| [Message d'arrivée](#joinmessage)      | Le message envoyé quand quelqu'un rejoint le serveur.                                 |
+| [Message](#joinmessagevanity)          | Le message envoyé lorsqu'une personne rejoint le serveur en utilisant une vanity URL. |
+| [Salon d'arrivée](#joinmessagechannel) | Le salon dans lequel le message de bienvenue est envoyé.                              |
 
 #### Départs
 
-| Setting                                                          | Description                                                                             |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [Message de départ](#leavemessage)                               | Le message envoyé quand quelqu'un quitte le serveur.                                    |
-| [Message](#leavemessagevanity)                                   | The message sent when someone leaves the server after he joined with a vanity URL.      |
-| [Salon de départ](#leavemessagechannel)                          | Le salon dans lequel est envoyé le message lorsque quelqu'un quitte le serveur.         |
-| [Soustraction automatique](#autosubtractleaves)                  | Enlève automatiquement les invitations de l'invitant quand l'utilisateur invité quitte. |
-| [Seuil de soustraction automatique](#autosubtractleavethreshold) | Le temps en secondes que doivent rester les utilisateurs pour que l'invitation compte.  |
+| Setting                                                          | Description                                                                                       |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [Message de départ](#leavemessage)                               | Le message envoyé quand quelqu'un quitte le serveur.                                              |
+| [Message](#leavemessagevanity)                                   | Le message envoyé lorsqu'une personne quitte le serveur après l'avoir rejoint avec un vanity URL. |
+| [Salon de départ](#leavemessagechannel)                          | Le salon dans lequel est envoyé le message lorsque quelqu'un quitte le serveur.                   |
+| [Soustraction automatique](#autosubtractleaves)                  | Enlève automatiquement les invitations de l'invitant quand l'utilisateur invité quitte.           |
+| [Seuil de soustraction automatique](#autosubtractleavethreshold) | Le temps en secondes que doivent rester les utilisateurs pour que l'invitation compte.            |
 
 #### Classement
 
@@ -343,7 +343,7 @@ Reset to default:
 
 ## Message
 
-The message sent when someone joins the server using a vanity URL.
+Le message envoyé lorsqu'une personne rejoint le serveur en utilisant une vanity URL.
 
 Type: `String`
 
@@ -400,7 +400,7 @@ Examples:
 
 ## Message
 
-The message sent when someone leaves the server after he joined with a vanity URL.
+Le message envoyé lorsqu'une personne quitte le serveur après l'avoir rejoint avec un vanity URL.
 
 Type: `String`
 

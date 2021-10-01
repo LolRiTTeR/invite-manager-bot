@@ -1,13 +1,13 @@
-# 快速開始
+# 快速設定
 
-## 設定
+## 設置選項
 
-To start, please invite one of our bots from the [Our Bots page](./our-bots)
+如果要開始，請先從 [我們的機器人](./our-bots) 頁面邀請機器人。
 
-After that make sure the bot has `Read Messages` and `Send Messages` permission in a channel, then run the `!setup` command.
+接著請確認機器人在該頻道是否有 `檢視頻道` 及 `發送訊息` 權限，然後使用 `!setup` 指令。
 
-The setup command will tell you if the bot is missing any required permissions.
+此指令會告訴您機器人是否缺少一些必要的權限。
 
-### First steps
+### 第一步
 
-After setting up the bot you most likely want to configure join and leave channels. For that please head over [to our FAQ](./faq) to learn more.
+您應該最想要設定加入及離開訊息的頻道。請前往 [常見問答](./faq) 來得知更多資訊。

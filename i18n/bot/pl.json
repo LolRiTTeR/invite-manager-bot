@@ -31,7 +31,7 @@
 				},
 				"description": "Dodaje/Usuwa zaproszenia dla/od członka."
 			},
-			"zero": "Dodanie zero zaproszeń kompletne nie ma sensu ...",
+			"zero": "Dodanie zeru zaproszeń kompletne nie ma sensu...",
 			"numberTooLarge": "Liczba, którą wprowadziłeś, jest zbyt duża",
 			"numberTooSmall": "Liczba, którą wprowadziłeś, jest zbyt mała."
 		},
@@ -52,7 +52,7 @@
 			"canNotBan": "Nie mogę zbanować tego użytkownika.",
 			"done": "Użytkownik został pomyślnie zbanowany.",
 			"error": "Wystąpił błąd podczas banowania tego użytkownika:\n{{ error }}",
-			"missingPermissions": "Potrzebuję pozwolenia na `Ban Members`, aby użyć tego polecenia.",
+			"missingPermissions": "Potrzebuję permisji `Banowanie użytkowników`, aby użyć tego polecenia.",
 			"self": {
 				"args": {
 					"deleteMessageDays": "Jak daleko wstecz wiadomości będą usunięte (w dniach).",
@@ -267,14 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Bot Developers",
-			"moderators": "Moderation Team",
-			"managers": "Community Team",
-			"designers": "Graphic Designers",
+			"developers": "Programiści Bota",
+			"moderators": "Moderacja",
+			"managers": "Zespół od społeczności",
+			"designers": "Projektant Graficzny",
 			"self": {
 				"description": "Pokaż deweloperów i kontrybutorów bota."
 			},
-			"staff": "Support Team",
+			"staff": "Zespół wsparcia",
 			"translators": "Tłumacze"
 		},
 		"error": "Wystąpił błąd wykonując tą komende. Proszę zgłoś to do dewelopera:\n{{{ error }}}",
@@ -479,7 +479,7 @@
 			"current": {
 				"clear": "Użyj `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` żeby to wyczyścić.",
 				"notSet": "Ta konfiguracja kodu zaproszenia **nie** jest aktualnie ustawiona.\n\nUżyj `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` aby ją ustawić.",
-				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
+				"text": "Ustawienia kodu zaproszenia już zostały ustawione.\n\nUżyj `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>`, aby zmienić.\nUżyj`{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default`, aby zresetować do ustawień początkowych.\nUżyj `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none`, aby wyczyścić.",
 				"title": "Obecna wartość"
 			},
 			"keys": {
@@ -638,7 +638,7 @@
 			},
 			"current": {
 				"notSet": "This member config is currently **not** set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to set it.",
-				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
+				"text": "Ustawienia użytkownika już zostały ustawione.\n\nUżyj `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` , aby zmienić.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default`, aby zresetować do ustawień początkowych.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none`, aby wyczyścić.",
 				"title": "Aktualna wartość"
 			},
 			"keys": {
@@ -772,7 +772,7 @@
 				},
 				"patreon": {
 					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchased premium on Patreon"
+					"title": "Jeśli kupiłeś premium na Patreon"
 				},
 				"servers": {
 					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
@@ -864,7 +864,7 @@
 			"rankNotFound": "Rank {{{ role }}} does not exist!",
 			"self": {
 				"args": {
-					"rank": "The user for which you want to remove the rank."
+					"rank": "Uzytkownik dla którego chcesz usunąć rangę"
 				},
 				"description": "Remove a rank."
 			}
@@ -880,7 +880,7 @@
 		},
 		"setup": {
 			"faq": {
-				"text": "A complete guide on setting up the bot can be found here: https://invitemanager.cc/",
+				"text": "Kompletny poradnik do ustawienia bota możesz znaleźć tutaj: https://invitemanager.cc/",
 				"title": "FAQs and more"
 			},
 			"help": {
@@ -896,11 +896,11 @@
 				"title": "Missing permission: Manage Server"
 			},
 			"manageRoles": {
-				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
+				"text": "Bot nie posiada permisji do \"Zażądzania Rolami\". Te permisje są wymagane, aby przypisać role do użytkownika. Bez tych permisji użytkownicy nie mogą być autopromocjowani.",
 				"title": "Missing permission: Manage Roles"
 			},
 			"prefix": {
-				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
+				"text": "Możesz zmienić prefix poprzez `!config prefix !`\n\nJeśli nie znasz prefixu bota, możesz go znaleźć używając `@InviteManager config prefix`.",
 				"title": "Changing the prefix"
 			},
 			"premium": {
@@ -913,7 +913,7 @@
 			"text": "After inviting the bot, all invites will be tracked automatically.",
 			"title": "Setting up InviteManager",
 			"viewAuditLogs": {
-				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
+				"text": "Bot nie posiada permisji \"Wyświetlanie dziennika zdarzeń\". Te permisje pozwalają botowi do lepszego kontrolowania zaproszeń.",
 				"title": "Missing permission: View Audit Logs"
 			}
 		},
@@ -933,7 +933,7 @@
 					"deleteMessageDays": "Delete messages from the user this many days back."
 				}
 			},
-			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
+			"unBanError": "Użytkownik został zbanowany, lecz nie może zostać odbanowany...\n{{ error }}"
 		},
 		"strike": {
 			"self": {
@@ -1514,7 +1514,7 @@
 				"title": "Invites",
 				"general": {
 					"title": "General",
-					"description": "General invite settings, such as join roles"
+					"description": "Główne ustawienia zaproszeń, takie jak role za dołączenie"
 				}
 			},
 			"moderation": {
@@ -1599,8 +1599,8 @@
 			"title": "Message"
 		},
 		"joinMessageVanity": {
-			"description": "The message sent when someone joins the server using a vanity URL.",
-			"title": "Message"
+			"description": "Wiadomość kiedy ktoś dołączy do serwera za pomocą vanity URL.",
+			"title": "Wiadomość"
 		},
 		"joinMessageChannel": {
 			"description": "The channel that the message on join is sent to.",
@@ -1619,8 +1619,8 @@
 			"title": "Message"
 		},
 		"leaveMessageVanity": {
-			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
-			"title": "Message"
+			"description": "Wiadomość kiedy ktoś wyjdzie z serwera po tym jak dołączył za pomocą vanity URL.",
+			"title": "Wiadomość"
 		},
 		"leaveMessageChannel": {
 			"description": "The channel that the leave message is sent to.",
@@ -1760,11 +1760,11 @@
 		},
 		"kick": {
 			"title": "Kick",
-			"description": "Kick the member from the server."
+			"description": "Wyrzuć użytkownika z serwera."
 		},
 		"softban": {
 			"title": "Softban",
-			"description": "Zbanuj, a następnie natychmiast odblokuj członka."
+			"description": "Zbanuj, a następnie natychmiast odbanuj użytkownika."
 		},
 		"warn": {
 			"title": "Ostrzeżenie",
@@ -1776,13 +1776,13 @@
 		}
 	},
 	"music": {
-		"notPlaying": "There is currently no music being played!",
-		"notConnected": "The bot is not connected to a voice channel!",
-		"voiceChannelRequired": "You need to be in a voice channel to use that command!"
+		"notPlaying": "Obecnie nie jest odtwarzana żadna muzyka!",
+		"notConnected": "Bot nie jest na kanale głosowym!",
+		"voiceChannelRequired": "Musisz być na kanale głosowym, aby użyć tej komendy!"
 	},
 	"roles": {
-		"shouldHave": "The user should have the roles {{{ shouldHave }}}, but I can't assign them.",
-		"shouldNotHave": "The user should not have the roles {{{ shouldNotHave }}}, but I can't take them away.",
-		"dangerous": "The roles {{{ dangerous }}} are potentially dangerous to assign because they include important permissions."
+		"shouldHave": "Użytkownik powinien mieć role {{{ shouldHave }}}, ale nie mogę mu jej nadać",
+		"shouldNotHave": "Użytkownik nie powinien mieć ról {{{ shouldNotHave }}}, ale nie mogę mu ich odebrać.",
+		"dangerous": "Role {{{ dangerous }}} są prawdopodobnie niebezpieczne do dodania, ponieważ posiadają duże uprawnienia."
 	}
 }

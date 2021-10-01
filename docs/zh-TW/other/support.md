@@ -1,8 +1,8 @@
 # 支援
 
-For support please first read the [Frequently Asked Questions (FAQ)](/zh-TW/getting-started/faq.md).
+如有疑問請先閱讀 [常見的問題與答案(常見問答)](/zh-TW/getting-started/faq.md) 。
 
-If you can not find your question there, we have a more extensive FAQ list in our [Discord server](https://discord.gg/kQQmfNCTzm) in the [#faq channel](https://discord.com/channels/798243210446241792/802668456792293397/832338239657607228)
+如果沒有找到答案，請加入 [支援伺服器](https://discord.gg/kQQmfNCTzm) ，在 [#faq 頻道](https://discord.com/channels/798243210446241792/802668456792293397/832338239657607228) 有更詳細的問與答。
 
-Lastly, you can check the [#support channel](https://discord.com/channels/798243210446241792/830802350905884683/831910702004437102) for your question. In there you can also request human support by choosing option `6`
-(**Please only request human support if you have read the FAQs in our Discord!**)
+最後，如果以上均無法解答您的疑惑，請查看 [#support 頻道](https://discord.com/channels/798243210446241792/830802350905884683/831910702004437102) 是否有您的疑問。如果仍然沒有，請輸入 `6` ，會有專人為您服務。
+(**請務必在請求專人協助前先完整閱讀#faq 頻道**)

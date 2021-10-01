@@ -1,7 +1,7 @@
 # 贊助
 
-We currently don't accept any donations.
+目前不接受任何贊助。
 
-## 秘密
+## Crypto
 
-We currently don't accept any crypto donations.
+目前不接受 Crypto 贊助。

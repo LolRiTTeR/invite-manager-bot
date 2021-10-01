@@ -1,11 +1,11 @@
-# Our Bots
+# 我們的機器人
 
-## Invite the Bot
+## 邀請機器人
 
-This version of InviteManager has two of the same bots running permanently. Both are ****completely identical**** except for their avatar.
+InviteManager 有兩個永久運行的相同機器人。除了頭像及狀態不同，兩者的功能皆****完全相同****。
 
-**Invite the blue bot:**
+**邀請藍色機器人：**
 https://discord.com/oauth2/authorize?client_id=789797049746980895&permissions=8&scope=bot
 
-**Invite the yellow bot:**
+**邀請黃色機器人：**
 https://discord.com/oauth2/authorize?client_id=758592094964285441&permissions=8&scope=bot

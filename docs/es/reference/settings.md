@@ -84,7 +84,7 @@ There are many config options that can be set. You don't have to set all of them
 | [Moderated Roles](#automodmoderatedroles)                       | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).    |
 | [Ignored Channels](#automodignoredchannels)                     | Channels that are ignored while automatically moderating.                                                                                                    |
 | [Ignored Roles](#automodignoredroles)                           | Any members with these roles will not automatically be moderated.                                                                                            |
-| [Rol silenciado](#mutedrole)                                    | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.                                                 |
+| [Muted Role](#mutedrole)                                        | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.                                                 |
 | [Disabled for Old Members](#automoddisabledforoldmembers)       | Disabled auto moderation for members that have been in your server for a long time.                                                                          |
 | [Old Members Threshold](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.                                                                                 |
 
@@ -119,18 +119,18 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Banned Words
 
-| Setting                             | Description                                                     |
-| ----------------------------------- | --------------------------------------------------------------- |
-| [Enabled](#automodwordsenabled)     | Sí las palabras prohibidas van a ser moderadas automáticamente. |
-| [Blacklist](#automodwordsblacklist) | A list of words that are banned.                                |
+| Setting                             | Description                                             |
+| ----------------------------------- | ------------------------------------------------------- |
+| [Enabled](#automodwordsenabled)     | Whether or not blacklisted words will be automoderated. |
+| [Blacklist](#automodwordsblacklist) | A list of words that are banned.                        |
 
 #### Caps
 
-| Setting                                            | Description                                                                                                       |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [Enabled](#automodallcapsenabled)                  | Automatically moderate messages with A LOT OF CAPS.                                                               |
-| [Caracteres mínimos](#automodallcapsmincharacters) | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK'). |
-| [Percentage CAPs](#automodallcapspercentagecaps)   | The percentage of characters of the message that have to be CAPs for the rule to trigger.                         |
+| Setting                                          | Description                                                                                                       |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| [Enabled](#automodallcapsenabled)                | Automatically moderate messages with A LOT OF CAPS.                                                               |
+| [Min. Characters](#automodallcapsmincharacters)  | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK'). |
+| [Percentage CAPs](#automodallcapspercentagecaps) | The percentage of characters of the message that have to be CAPs for the rule to trigger.                         |
 
 #### Duplicate Messages
 
@@ -181,10 +181,10 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Fade Music
 
-| Setting                                    | Description                                                                                       |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| [Fade Music On Talk](#fademusicontalk)     | If enabled, the music will fade down while people are talking.                                    |
-| [Fade Music End Delay](#fademusicenddelay) | El retraso de cuantos segundos nadie tiene que hablar para que el volumen vuelva a la normalidad. |
+| Setting                                    | Description                                                                               |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| [Fade Music On Talk](#fademusicontalk)     | If enabled, the music will fade down while people are talking.                            |
+| [Fade Music End Delay](#fademusicenddelay) | The delay of how many seconds noone has to speak for the volume to return back to normal. |
 
 #### Platform
 
@@ -839,7 +839,7 @@ Examples:
 
 ---
 
-## Rol silenciado
+## Muted Role
 
 The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
 
@@ -1218,7 +1218,7 @@ Disable:
 
 ## Enabled
 
-Sí las palabras prohibidas van a ser moderadas automáticamente.
+Whether or not blacklisted words will be automoderated.
 
 Type: `Boolean`
 
@@ -1283,7 +1283,7 @@ Disable:
 
 ---
 
-## Caracteres mínimos
+## Min. Characters
 
 The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
 
@@ -1673,7 +1673,7 @@ Disable:
 
 ## Fade Music End Delay
 
-El retraso de cuantos segundos nadie tiene que hablar para que el volumen vuelva a la normalidad.
+The delay of how many seconds noone has to speak for the volume to return back to normal.
 
 Type: `Number`
 

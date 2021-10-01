@@ -1599,7 +1599,7 @@
 			"title": "Message d'arrivée"
 		},
 		"joinMessageVanity": {
-			"description": "The message sent when someone joins the server using a vanity URL.",
+			"description": "Le message envoyé lorsqu'une personne rejoint le serveur en utilisant une vanity URL.",
 			"title": "Message"
 		},
 		"joinMessageChannel": {
@@ -1619,7 +1619,7 @@
 			"title": "Message de départ"
 		},
 		"leaveMessageVanity": {
-			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
+			"description": "Le message envoyé lorsqu'une personne quitte le serveur après l'avoir rejoint avec un vanity URL.",
 			"title": "Message"
 		},
 		"leaveMessageChannel": {

@@ -1,18 +1,18 @@
 {
 	"bot": {
 		"invite": {
-			"title": "加入機器人到您的伺服器"
+			"title": "新增機器人到您的伺服器"
 		},
 		"patreon": {
 			"title": "Patreon"
 		},
 		"supportDiscord": {
-			"title": "支援Discord"
+			"title": "支援伺服器"
 		},
 		"website": {
 			"title": "機器人網站"
 		},
-		"mentionHelp": "我目前的前綴指令是`{{{ prefix }}}`\n\n使用`{{{ prefix }}}help`來得到更多幫助。"
+		"mentionHelp": "我的指令前綴是 `{{{ prefix }}}`\n\n使用 `{{{ prefix }}}help` 查看所有指令。"
 	},
 	"captcha": {
 		"invalid": "驗證碼不符合，請再試一次。"
@@ -20,86 +20,86 @@
 	"cmd": {
 		"addInvites": {
 			"amount": {
-				"negative": "{{{ member }}}移除**{{ amount }}**邀請，現在有：**{{ totalInvites }}**邀請。",
-				"positive": "{{{ member }}}新增**{{ amount }}**邀請，現在有：**{{ totalInvites }}**邀請。"
+				"negative": "從 {{{ member }}} 移除了 **{{ amount }}** 個邀請，現在有： **{{ totalInvites }}** 個邀請。",
+				"positive": "新增 **{{ amount }}** 個邀請給 {{{ member }}} ，現在有： **{{ totalInvites }}** 個邀請。"
 			},
 			"self": {
 				"args": {
-					"amount": "使用者的邀請數量將獲得/遺失。使用一個負(-)數來移除邀請。",
-					"reason": "新增/移除邀請的原因。",
-					"user": "使用者將收到/遺失額外獎勵的邀請。"
+					"amount": "使用者的邀請數量將被增加/減少。使用負數來減少邀請數量。",
+					"reason": "增加/減少邀請數量的原因。",
+					"user": "使用者將收到/失去額外獎勵邀請數量。"
 				},
-				"description": "新增/移除成員的邀請。"
+				"description": "增加/減少成員的邀請數量。"
 			},
-			"zero": "新增零邀請真的不合邏輯……",
+			"zero": "新增零個邀請真的沒有意義……",
 			"numberTooLarge": "您提供的數字太大了。",
 			"numberTooSmall": "您提供的數字太小了。"
 		},
 		"addRank": {
-			"created": "新增等級{{{ role }}}需要{{ invites }}邀請和以下敘述：{{ description }}",
-			"roleTooHigh": "身分組{{{ role }}}高於我的身分組({{{ myRole }}})，所以我不能指派它給獲得它的成員。",
+			"created": "新增等級 {{{ role }}} 需要 {{ invites }} 個邀請並且有以下條件： {{ description }}",
+			"roleTooHigh": "身分組 {{{ role }}} 高於我的身分組 ({{{ myRole }}}) ，所以我不能指派它給成員。",
 			"self": {
 				"args": {
-					"info": "一個使用者將看見的敘述所以他們能更知道這個等級。",
+					"info": "使用者能看見的條件所以他們會更了解這個等級。",
 					"invites": "需要的邀請數量來達到等級。",
-					"role": "使用者將收到的身分組當達到等級時。"
+					"role": "當達到等級時使用者將獲得的身分組。"
 				},
 				"description": "新增一個新的等級。"
 			},
-			"updated": "等級{{{ role }}}更新：目前需要{{ invites }}邀請和以下敘述：{{ description }}"
+			"updated": "等級 {{{ role }}} 更新：需要 {{ invites }} 個邀請並且有以下條件： {{ description }}"
 		},
 		"ban": {
-			"canNotBan": "我不能封鎖這個使用者。",
-			"done": "使用者成功地被封鎖。",
-			"error": "封鎖使用者時有一個錯誤：\n{{ error }}",
-			"missingPermissions": "我需要`Ban Members`權限來使用這個指令。",
+			"canNotBan": "我不能停權此使用者。",
+			"done": "使用者成功地被停權。",
+			"error": "停權使用者時發生錯誤：\n{{ error }}",
+			"missingPermissions": "我需要 `對成員停權` 的權限來執行這個指令。",
 			"self": {
 				"args": {
-					"deleteMessageDays": "距離多久以前的訊息將被刪除（以天數計）。",
-					"reason": "為甚麼使用者被封鎖。",
-					"user": "使用者封鎖。"
+					"deleteMessageDays": "距今多久以前的訊息將被刪除（以天數為單位）。",
+					"reason": "為甚麼使用者被停權。",
+					"user": "被停權的使用者。"
 				},
-				"description": "從伺服器封鎖一個成員。",
+				"description": "從伺服器停權一位成員。",
 				"flags": {
-					"deleteMessageDays": "如果指定將刪除被封鎖成員近幾日內的訊息。"
+					"deleteMessageDays": "如果指定時間將刪除被停權成員近數日內的訊息。"
 				}
 			},
-			"canNotSoftBan": "我不能軟封鎖這個使用者。 "
+			"canNotSoftBan": "我不能軟停權此使用者。 "
 		},
 		"botConfig": {
-			"canNotClear": "配置設定**{{ key }}**不能被清除。您可以使用`{{ prefix }}botConfig {{ key }} default`來重置它到預設值。",
+			"canNotClear": "此設置選項 **{{ key }}** 不能被清除。您可以使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。",
 			"changed": {
-				"text": "這個配置已經被更改。\n使用`{{ prefix }}botConfig {{ key }} <value>`來再次更改它。\n使用`{{ prefix }}botConfig {{ key }} default`來重置它到預設值。"
+				"text": "此設置選項已更改完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來再次更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。"
 			},
 			"current": {
-				"clear": "使用`{{ prefix }}botConfig {{ key }} none`來清除它。",
-				"notSet": "這個配置目前**沒有**被設定。\n使用`{{ prefix }}config {{ key }} 1`來設定它。",
-				"text": "這個配置目前被設定。\n使用`{{ prefix }}botConfig {{ key }} 1`來更改它。\n使用`{{ prefix }}botConfig {{ key }} default`來重置它到預設值。",
+				"clear": "使用 `{{ prefix }}botConfig {{ key }} none` 來清除它。",
+				"notSet": "此設置選項**沒有**設定。\n使用 `{{ prefix }}config {{ key }} <value>` 來設定它。",
+				"text": "此設置選項已設定完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。",
 				"title": "目前的值"
 			},
-			"customOnly": "**這個指令目前只有自定義機器人可用。**\n如果您在尋找您的伺服器配置，請使用`{{ prefix }}config`指令。\n\n參觀我們的patreon頁面來學習更多關於您如何可以獲得您自己的自定義機器人：{{{ patreon }}}",
+			"customOnly": "**此指令只有自定義機器人可用。**\n如果您在尋找伺服器設置選項，請使用 `{{ prefix }}config` 指令。\n\n參考我們的 Patreon 網站來得知更多有關自定義機器人的訊息： {{{ patreon }}}",
 			"invalid": {
-				"twitchOnly": "Discord的實況活動只支援twitch.tv網址。"
+				"twitchOnly": " Discord 的實況只支援 twitch.tv 網址。"
 			},
 			"new": {
 				"title": "新的值"
 			},
-			"none": "沒有",
-			"notSet": "這些設定還沒被設定。",
+			"none": "無",
+			"notSet": "這些設置選項還沒設定。",
 			"preview": {
 				"nextMessage": "<See next message>",
 				"title": "預覽"
 			},
 			"previous": {
-				"title": "以前的值"
+				"title": "先前的值"
 			},
-			"sameValue": "這個配置已經被設定到那個值。",
+			"sameValue": "此設置選項已經是該值。",
 			"self": {
 				"args": {
-					"key": "您想要顯示/更改的機器人配置設定。",
+					"key": "您想要顯示/更改的機器人設置選項。",
 					"value": "新設定的值。"
 				},
-				"description": "顯示和更改機器人的配置。"
+				"description": "顯示和更改機器人的設置選項。"
 			},
 			"text": "以下是您的機器人的所有配置設定。\n使用`{{ prefix }}botConfig 1` 來檢視單一設定\n使用`{{ prefix }}botConfig 2 3` 來設定配置 4 到 5",
 			"title": "自定義機器人配置"
@@ -267,14 +267,14 @@
 			}
 		},
 		"credits": {
-			"developers": "Bot Developers",
-			"moderators": "Moderation Team",
-			"managers": "Community Team",
-			"designers": "Graphic Designers",
+			"developers": "機器人開發者",
+			"moderators": "審核團隊",
+			"managers": "社群團隊",
+			"designers": "圖案設計師",
 			"self": {
 				"description": "顯示機器人的開發人員和合作人員。"
 			},
-			"staff": "Support Team",
+			"staff": "支援團隊",
 			"translators": "翻譯人員"
 		},
 		"error": "執行指令時發生一個錯誤。請報告這個給一個開發人員：\n{{{ error }}}",

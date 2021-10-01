@@ -1,27 +1,27 @@
 {
-	"lang": "中文台灣",
+	"lang": "繁體中文",
 	"modules": {
-		"title": "Modules",
+		"title": "模組",
 		"invites": {
 			"title": "邀請管理",
-			"description": "當我們的機器人加入您的伺服器時，我們將會追蹤您伺服器上的每一個邀請。Discord只會顯示您總共有多少邀請。我們的機器人也會分析誰邀請誰。這個功能讓我們的機器人可以偵測到假的邀請以及看到誰試圖欺騙邀請系統。",
+			"description": "當機器人加入您的伺服器時，它會追蹤您伺服器上的每一個邀請。 Discord 只會顯示您總共有多少邀請。機器人還會分析誰邀請了誰。此功能可以偵測到假的邀請數量以及發覺誰試圖欺騙邀請系統。",
 			"examples": {
 				"title": "範例",
 				"headlines": {
 					"examples": "範例",
-					"normal": "Normal",
-					"normalVanity": "Normal (Vanity)",
-					"embed": "Embed",
-					"screenshot": "Screenshot",
-					"code": "Code",
-					"joinMessage": "Join Message",
-					"joinMessageVanity": "Join Message (Vanity)",
-					"joinEmbed": "Join Embed",
-					"joinEmbedVanity": "Join Embed (Vanity)",
-					"leaveMessage": "Leave Message",
-					"leaveMessageVanity": "Leave Message (Vanity)",
-					"leaveEmbed": "Leave Embed",
-					"leaveEmbedVanity": "Leave Embed (Vanity)"
+					"normal": "一般式訊息",
+					"normalVanity": "一般式訊息（個性化網址）",
+					"embed": "嵌入式訊息",
+					"screenshot": "截圖",
+					"code": "代碼",
+					"joinMessage": "一般式加入訊息",
+					"joinMessageVanity": "一般式加入訊息（個性化網址）",
+					"joinEmbed": "嵌入式加入訊息",
+					"joinEmbedVanity": "嵌入式加入訊息（個性化網址）",
+					"leaveMessage": "一般式離開訊息",
+					"leaveMessageVanity": "一般式離開訊息（個性化網址）",
+					"leaveEmbed": "嵌入式離開訊息",
+					"leaveEmbedVanity": "嵌入式離開訊息（個性化網址）"
 				},
 				"content": {
 					"normalCode": "```text\n!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)\n```\n\n```text\n!config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**\n```",
@@ -36,93 +36,93 @@
 				"title": "概述"
 			},
 			"customMessages": {
-				"title": "自定義訊息",
-				"description": "You can customise the join and leave messages with a number of parameters.",
+				"title": "自訂訊息",
+				"description": "您可以運用多個參數自訂加入和離開訊息。",
 				"placeholders": {
 					"title": {
-						"small": "placeholders",
-						"large": "Placeholders"
+						"small": "預留參數",
+						"large": "預留參數"
 					},
-					"jumpto": "Jump to",
-					"yes": "yes",
-					"no": "no",
-					"example": "example",
-					"description": "description",
+					"jumpto": "跳至",
+					"yes": "是",
+					"no": "否",
+					"example": "範例",
+					"description": "描述",
 					"descriptions": {
-						"memberName": "The name of the member that just joined your discord server",
-						"memberId": "The discord ID of the member that just joined your server",
-						"memberMention": "The mention of the member that just joined your discord server (person will be pinged).",
-						"memberFullName": "The username and discriminator of the user that just joined your server",
-						"memberImage": "URL of the avatar of the member",
-						"inviterName": "The name of the inviter",
-						"inviterId": "The discord ID of the inviter",
-						"inviterMention": "The mention of the inviter (person will be pinged)",
-						"inviterFullName": "The username and discriminator of the inviter",
-						"inviterImage": "URL of the avatar of the inviter",
-						"numInvites": "Number of invites the inviter has in total",
-						"numRegularInvites": "Number of invites the inviter has through regular invites",
-						"numBonusInvites": "Number of invites the inviter has as a bonus (they were assigned manually)",
-						"numFakeInvites": "Number of fake invites the inviter has",
-						"numLeaveInvites": "Number of invites that were removed because the member left again.",
-						"memberCount": "Number of members your server has in total",
-						"numJoins": "Number of times the user has joined the server",
-						"channelName": "The name of the channel where the invite code was created",
-						"channelMention": "Mention of the channel where the invite code was created",
-						"inviteCode": "Invite code used",
-						"memberCreatedDate": "Date the discord user was created",
-						"memberCreatedDuration": "Duration since the discord user was created",
-						"memberCreatedTimeAgo": "Time the discord user was created",
-						"firstJoinDate": "Date the user joined the server for the first time",
-						"firstJoinDuration": "Duration since the user joined the server for the first time",
-						"firstJoinTimeAgo": "Time the user joined the server for the first time",
-						"previousJoinDate": "Date when the user joined the server the last time",
-						"previousJoinDuration": "Duration since when the user joined the server the last time",
-						"previousJoinTimeAgo": "Time when the user joined the server the last time",
-						"joinedAtDate": "Date when the user joined",
-						"joinedAtDuration": "Duration since when the user joined",
-						"joinedAtTimeAgo": "Time when the user joined"
+						"memberName": "加入成員的名稱",
+						"memberId": "加入成員的 ID",
+						"memberMention": "提及加入成員（該成員會被@）",
+						"memberFullName": "加入成員的完整名稱",
+						"memberImage": "加入成員的頭像連結",
+						"inviterName": "邀請成員的名稱",
+						"inviterId": "邀請成員的 ID",
+						"inviterMention": "提及邀請成員（該成員會被@）",
+						"inviterFullName": "邀請成員的完整名稱",
+						"inviterImage": "邀請成員的頭像連結",
+						"numInvites": "邀請成員的總邀請數量",
+						"numRegularInvites": "邀請成員的普通邀請數量",
+						"numBonusInvites": "邀請成員的額外獎勵邀請數量（手動分配）",
+						"numFakeInvites": "邀請成員的假邀請數量",
+						"numLeaveInvites": "邀請成員的離開邀請數量",
+						"memberCount": "伺服器的成員總數",
+						"numJoins": "成員加入伺服器的次數",
+						"channelName": "產生邀請連結的頻道名稱",
+						"channelMention": "提及產生邀請連結的頻道",
+						"inviteCode": "使用的邀請代碼",
+						"memberCreatedDate": "成員創立帳號的日期",
+						"memberCreatedDuration": "成員創立帳號的期間",
+						"memberCreatedTimeAgo": "成員創立帳號距今多久",
+						"firstJoinDate": "成員第一次加入伺服器的日期",
+						"firstJoinDuration": "成員第一次加入伺服器的期間",
+						"firstJoinTimeAgo": "成員第一次加入伺服器距今多久",
+						"previousJoinDate": "成員上一次加入伺服器的日期",
+						"previousJoinDuration": "成員上一次加入伺服器的期間",
+						"previousJoinTimeAgo": "成員上一次加入伺服器距今多久",
+						"joinedAtDate": "成員加入伺服器的日期",
+						"joinedAtDuration": "成員加入伺服器的期間",
+						"joinedAtTimeAgo": "成員加入伺服器距今多久"
 					}
 				},
-				"content": "You can set a custom join or leave message by setting the config:\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\nor\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\nA message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.\n\nSo if we want the message to say\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\nwe can easily do that by replacing all the names and the number with placeholders:\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\nSo you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.",
-				"premiumNote": "Premium users can also use embeds in their join and leave messages. [More info here](./examples.md)",
-				"endingParagraph": "Please see the [examples page](./examples.md) to see what kind of messages you can make!"
+				"content": "您可以自訂加入或離開訊息如下：\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\n或\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\n這樣的訊息顯然沒有意義。 您應該使用有關加入成員、邀請成員或伺服器的資訊對其進行個性化設定。 請參閱以下所有可用的預留參數列表。\n\n所以如果想要的訊息如下：\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\n可以透過用預留參數替換所有名稱和數字來輕鬆做到：\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\n所以您可以使用 `!config joinMessage <message from above>` 來設定加入訊息。當有人加入時，機器人會自動替換預留參數。",
+				"premiumNote": "高級會員還可以使用嵌入式加入及離開訊息。 [更多資訊](./examples.md)",
+				"endingParagraph": "請參閱 [範例網頁](./examples.md) 來了解您可以使用哪種訊息！"
 			}
 		},
 		"moderation": {
 			"title": "審核",
-			"description": "我們商標的全新審核系統允許您自動審核很多東西。請閱讀我們的[strikes]({{{ linkStrikes }}})和[懲罰]({{{ linkPunishments }}})頁面來獲得更多資訊。簡單來說，我們的機器人會給予「strikes」當人們行為不端時，然後當他們達到一定數量的strikes時，他們便會受到懲罰。這些都可以透過使用者自行配置。",
+			"description": "全新的審核系可以統協助您自動審核許多內容。請閱讀 [記點]({{{ linkStrikes }}}) 和 [懲罰]({{{ linkPunishments }}}) 頁面來獲得更多資訊。簡單來說，機器人會給予「記點」當人們行為不端時，當他們達到一定數量時，便會受到懲罰。這些都可以由使用者自行設定。",
 			"punishments": {
 				"title": "懲罰",
 				"question": {
-					"first": "What are punishments?",
-					"second": "How can I punish a user after reaching a certain amount of strikes?"
+					"first": "甚麼是懲罰？",
+					"second": "記點達到一定數量時，我該如何懲處使用者？"
 				},
 				"answer": {
-					"first": "Punishments are actions like `ban`, `kick` or `mute` that can be given to a user when he violates the rules. You can either call punish users directly by using commands, or you can define punishments that happen after a user reaches a certain amount of strikes.",
-					"second": "With the `punishmentconfig` command you can set after how many strikes a certain punishment action will be given.\n\n```text\n!punishmentconfig <punishmentType> <numberOfStrikesNeeded>\n```\n\nA list of all available punishments:\n\n- ban\n- softban\n- kick\n- mute\n- warn\n\nSo if you would like to kick a user after he reaches 5 strikes, you would have to execute the following command\n\n```text\n!punishmentconfig kick 5\n```\n\nIf you want to delete a `punishmentconfig`, just set the strikes to `0` like that:\n\n```text\n!punishmentconfig kick 0\n```\n\nTo see all punishment configs, just use the command without giving any arguments:\n\n```text\n!punishmentconfig\n```"
+					"first": "懲罰是類似 `停權` 、 `踢出` 或 `靜音` 之類的動作，可以在使用者違反規定時給予。 您可以使用指令直接懲罰使用者，也可以自訂讓使用者達到一定數量的記點後受到懲處。",
+					"second": "使用 `punishmentconfig` 指令可以設定每種懲罰各自對應到的記點次數。\n\n```text\n!punishmentconfig <punishmentType> <numberOfStrikesNeeded>\n```\n\n可用的懲罰如下：\n\n- 停權\n- 暫時停權\n- 踢出\n- 靜音\n- 警告\n\n所以如果您想要踢出記點達到 5 次的使用者，您可以執行以下指令：\n\n```text\n!punishmentconfig kick 5\n```\n\n如果您想要刪除一項 `punishmentconfig` ，請設定記點次數為 `0` ，如下所示：\n\n```text\n!punishmentconfig kick 0\n```\n\n直接使用指令可確認目前的懲罰設定：\n\n```text\n!punishmentconfig\n```"
 				}
 			},
 			"strikes": {
-				"title": "Strikes",
+				"title": "記點",
 				"question": {
-					"first": "What are strikes?",
-					"second": "What are violations?"
+					"first": "甚麼是記點？",
+					"second": "甚麼是違規事項？"
 				},
 				"answer": {
-					"first": "Strikes are points that users get for violating server rules. Every time the user receives a strike, he gets a personal message telling him how many strikes he has and why he got them. When a user reaches a certain amount of strikes, he will receive a **punishment**.",
-					"second": "Violations are auto-moderation rules that you can enable or disable on your server. Currently, the following violations exist:\n\n- [invites](strikes.md#invites)\n- [links](strikes.md#links)\n- [words](strikes.md#words)\n- [allCaps](strikes.md#allcaps)\n- [duplicateText](strikes.md#duplicatetext)\n- [quickMessages](strikes.md#quickmessages)\n- [mentionUsers](strikes.md#mentionusers)\n- [mentionRoles](strikes.md#mentionroles)\n- [emojis](strikes.md#emojis)\n\nFor each of those violations, you have to define how many strikes will be given if someone violates it. You can do that by using the `strikeconfig` command:\n\n```text\n!strikeconfig <violationType> <numberOfStrikes>\n```\n\nFor example, if you want users to get `2` strikes for violating the `invites` rule, then you would use the following command:\n\n```text\n!strikeconfig invites 2\n```\n\nYou can check the current config by doing:\n\n```text\n!strikeconfig\n```"
+					"first": "使用者違反伺服器規定時會被記點。每次記點時，機器人會透過私訊發送通知，告知記點次數及原因。當使用者的記點達到一定次數時，將受到**懲罰**。",
+					"second": "您可以在您的伺服器選擇啟用或禁用違規事項。可自訂的違規事項如下：\n\n- [邀請連結](strikes.md#invites)\n- [一般連結](strikes.md#links)\n- [特殊文字](strikes.md#words)\n- [大量大寫](strikes.md#allcaps)\n- [拷貝訊息](strikes.md#duplicatetext)\n- [洗頻訊息](strikes.md#quickmessages)\n- [提及使用者](strikes.md#mentionusers)\n- [提及身分組](strikes.md#mentionroles)\n- [表情符號](strikes.md#emojis)\n\n您必須自訂記點次數如果有人違反上述規定。您可以使用 `strikeconfig` 指令：\n\n```text\n!strikeconfig <violationType> <numberOfStrikes>\n```\n\n舉例來說，如果您希望使用者違反 `邀請連結` 時被記點 `2` 次，您可以執行以下指令：\n\n```text\n!strikeconfig invites 2\n```\n\n直接使用指令可確認目前的設定：\n\n```text\n!strikeconfig\n```"
 				},
 				"violations": {
-					"title": "Detailed list of violations",
-					"invites": "This violation is triggered whenever the user posts an invite link to another discord server.\n\nExample:\n\n`!strikeconfig invites 1`\n\nTo delete the strike config:\n\n`!strikeconfig invites 0`\n\n**Config options:**\n\n- [autoModInvitesEnabled](../../reference/settings?id=enabled-2)",
-					"links": "This violation is triggered whenever the user posts a link.\n\nExample:\n\n`!strikeconfig links 1`\n\nTo delete the strike config:\n\n`!strikeconfig links 0`\n\n**Config options:**\n\n- [autoModLinksEnabled](../../reference/settings?id=enabled-3)\n- [autoModLinksWhitelist](../../reference/settings?id=whitelist)\n- [autoModLinksBlacklist](../../reference/settings?id=blacklist)\n- [autoModLinksFollowRedirects](../../reference/settings?id=follow-redirects)",
-					"words": "This violation is triggered whenever the user posts blacklisted words.\n\nExample:\n\n`!strikeconfig words 1`\n\nTo delete the strike config:\n\n`!strikeconfig words 0`\n\n**Config options:**\n\n- [autoModWordsEnabled](../../reference/settings?id=enabled-4)\n- [autoModWordsBlacklist](../../reference/settings?id=blacklist-1)",
-					"allCaps": "This violation is triggered whenever the user posts a message that is mostly in CAPS.\n\nExample:\n\n`!strikeconfig allCaps 1`\n\nTo delete the strike config:\n\n`!strikeconfig allCaps 0`\n\n**Config options:**\n\n- [autoModAllCapsEnabled](../../reference/settings?id=enabled-5)\n- [autoModAllCapsMinCharacters](../../reference/settings?id=min-characters)\n- [autoModAllCapsPercentageCaps](../../reference/settings?id=percentage-caps)",
-					"duplicateText": "This violation is triggered whenever the user posts the same text multiple times.\n\nExample:\n\n`!strikeconfig duplicateText 1`\n\nTo delete the strike config:\n\n`!strikeconfig duplicateText 0`\n\n**Config options:**\n\n- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)\n- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)",
-					"quickMessages": "This violation is triggered whenever the user quickly posts messages.\n\nExample:\n\n`!strikeconfig quickMessages 1`\n\nTo delete the strike config:\n\n`!strikeconfig quickMessages 0`\n\n**Config options:**\n\n- [autoModQuickMessagesEnabled](../../reference/settings?id=enabled-7)\n- [autoModQuickMessagesNumberOfMessages](../../reference/settings?id=-of-messages)\n- [autoModQuickMessagesTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds-1)",
-					"mentionUsers": "This violation is triggered whenever the user mentions mutliple users.\n\nExample:\n\n`!strikeconfig mentionUsers 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionUsers 0`\n\n**Config options:**\n\n- [autoModMentionUsersEnabled](../../reference/settings?id=enabled-8)\n- [autoModMentionUsersMaxNumberOfMentions](../../reference/settings?id=max-of-mentions)",
-					"mentionRoles": "This violation is triggered whenever the user mentions mutliple roles.\n\nExample:\n\n`!strikeconfig mentionRoles 1`\n\nTo delete the strike config:\n\n`!strikeconfig mentionRoles 0`\n\n**Config options:**\n\n- [autoModMentionRolesEnabled](../../reference/settings?id=enabled-9)\n- [autoModMentionRolesMaxNumberOfMentions](../../reference/settings?id=max-of-mentions-1)",
-					"emojis": "This violation is triggered whenever the user posts multiple emojis.\n\nExample:\n\n`!strikeconfig emojis 1`\n\nTo delete the strike config:\n\n`!strikeconfig emojis 0`\n\n**Config options:**\n\n- [autoModEmojisEnabled](../../reference/settings?id=enabled-10)\n- [autoModEmojisMaxNumberOfEmojis](../../reference/settings?id=max-of-emojis)"
+					"title": "違規事項的詳細資訊",
+					"invites": "當使用者發送另一個伺服器的邀請連結時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig invites 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig invites 0`\n\n**設置選項：**\n\n- [自動審核邀請連結啟用](../../reference/settings?id=enabled-2)",
+					"links": "當使用者發送一般連結時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig links 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig links 0`\n\n**設置選項：**\n\n- [自動審核一般連結啟用](../../reference/settings?id=enabled-3)\n- [自動審核一般連結白名單](../../reference/settings?id=whitelist)\n- [自動審核一般連結黑名單](../../reference/settings?id=blacklist)\n- [自動審核重新導向連結](../../reference/settings?id=follow-redirects)",
+					"words": "當使用者發送特殊文字時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig words 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig words 0`\n\n**設置選項：**\n\n- [自動審核特殊文字啟用](../../reference/settings?id=enabled-4)\n- [自動審核特殊文字黑名單](../../reference/settings?id=blacklist-1)",
+					"allCaps": "當使用者發送大量大寫文字時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig allCaps 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig allCaps 0`\n\n**設置選項：**\n\n- [自動審核大量大寫啟用](../../reference/settings?id=enabled-5)\n- [自動審核大量大寫最少字數](../../reference/settings?id=min-characters)\n- [自動審核大量大寫百分比](../../reference/settings?id=percentage-caps)",
+					"duplicateText": "當使用者多次發送拷貝訊息時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig duplicateText 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig duplicateText 0`\n\n**設置選項：**\n\n- [自動審核拷貝訊息啟用](../../reference/settings?id=enabled-6)\n- [自動審核拷貝訊息發送間隔](../../reference/settings?id=timeframe-in-seconds)",
+					"quickMessages": "當使用者快速發送洗頻訊息時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig quickMessages 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig quickMessages 0`\n\n**設置選項：**\n\n- [自動審核洗頻訊息啟用](../../reference/settings?id=enabled-7)\n- [自動審核洗頻訊息數量](../../reference/settings?id=-of-messages)\n- [自動審核洗頻訊息發送間隔](../../reference/settings?id=timeframe-in-seconds-1)",
+					"mentionUsers": "當使用者提及多個使用者時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig mentionUsers 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionUsers 0`\n\n**設置選項：**\n\n- [自動審核提及使用者啟用](../../reference/settings?id=enabled-8)\n- [自動審核提及使用者數量](../../reference/settings?id=max-of-mentions)",
+					"mentionRoles": "當使用者提及多個身分組時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig mentionRoles 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionRoles 0`\n\n**設置選項：**\n\n- [自動審核提及身分組啟用](../../reference/settings?id=enabled-9)\n- [自動審核提及身分組數量](../../reference/settings?id=max-of-mentions-1)",
+					"emojis": "當使用者發送多個表情符號時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig emojis 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig emojis 0`\n\n**設置選項：**\n\n- [自動審核表情符號啟用](../../reference/settings?id=enabled-10)\n- [自動審核表情符號數量](../../reference/settings?id=max-of-emojis)"
 				}
 			}
 		},
@@ -130,7 +130,7 @@
 			"title": "音樂",
 			"overview": {
 				"title": "概述",
-				"description": "The music feature currently is disabled. There are no plans to re-enable them in the near future."
+				"description": "音樂功能已禁用。近期內沒有重新啟用的計劃。"
 			}
 		}
 	},
@@ -138,98 +138,98 @@
 		"title": "其他",
 		"donating": {
 			"title": "贊助",
-			"description": "We currently don't accept any donations.",
+			"description": "目前不接受任何贊助。",
 			"crypto": {
-				"title": "秘密",
-				"description": "We currently don't accept any crypto donations."
+				"title": "Crypto",
+				"description": "目前不接受 Crypto 贊助。"
 			}
 		},
 		"roadmap": {
-			"title": "規劃"
+			"title": "未來規劃"
 		},
 		"support": {
 			"title": "支援",
-			"description": "For support please first read the [Frequently Asked Questions (FAQ)]({{{ faqLink }}}).\n\nIf you can not find your question there, we have a more extensive FAQ list in our [Discord server]({{{ discordInvite }}}) in the [#faq channel]({{{ faqChannelLink }}})\n\nLastly, you can check the [#support channel]({{{ supportChannelLink }}}) for your question. In there you can also request human support by choosing option `6`\n(**Please only request human support if you have read the FAQs in our Discord!**)"
+			"description": "如有疑問請先閱讀 [常見的問題與答案(常見問答)]({{{ faqLink }}}) 。\n\n如果沒有找到答案，請加入 [支援伺服器]({{{ discordInvite }}}) ，在 [#faq 頻道]({{{ faqChannelLink }}}) 有更詳細的問與答。\n\n最後，如果以上均無法解答您的疑惑，請查看 [#support 頻道]({{{ supportChannelLink }}}) 是否有您的疑問。如果仍然沒有，請輸入 `6` ，會有專人為您服務。\n(**請務必在請求專人協助前先完整閱讀#faq頻道**)"
 		},
 		"translations": {
 			"title": "翻譯",
-			"description": "InviteManager relies on the community to be translated into different languages. Your help is gladly appreciated, please check the link below if you want to contribute.",
+			"description": "InviteManager 需要大家幫忙翻譯成各種不同的語言。非常感謝您的幫助，如果您有意願提供協助，請查看以下連結。",
 			"help": {
-				"title": "Help translating",
-				"description": "If you want to help translate the bot or the documentation, please join our [Discord server]({{{ discordLink }}}) so we can invite you to our [Transifex organization]({{{ transifexLink }}})"
+				"title": "協助翻譯",
+				"description": "如果您有意願協助翻譯機器人或網站，請加入 [支援伺服器]({{{ discordLink }}}) 與我們聯繫，我們將邀請您至 [Transifex 團隊]({{{ transifexLink }}}) 。"
 			}
 		},
 		"webpanel": {
 			"title": "網頁版",
-			"description": "There currently are no plans to release a webpanel in the near future."
+			"description": "近期內沒有重新啟用網頁版的計劃。"
 		},
 		"changelog": {
 			"title": "更新日誌"
 		},
 		"openSource": {
-			"title": "開放資源",
-			"description": "InviteManager is open source for everyone to contribute.",
+			"title": "開放式原碼",
+			"description": "InviteManager 是開放式原碼，歡迎大家貢獻開發。",
 			"bot": {
 				"title": "主要機器人",
-				"description": "If you want to contribute or run your own custom bot instance check our [Github repository]({{{ link }}})"
+				"description": "如果您有意願貢獻開發或自行營運機器人請查看 [GitHub 專案]({{{ link }}})"
 			}
 		}
 	},
 	"start": {
-		"title": "開始",
-		"description": "想要開始的話，只要執行`!setup`指令在您的伺服器上。",
+		"title": "開始設定",
+		"description": "想要開始設定的話，請在您的伺服器上執行 `!setup` 指令。",
 		"alpha": {
-			"title": "初期的機器人",
-			"intro": "`InviteManager Alpha`機器人是我們拿來測試新特色用的機器人。這些新的特色在初期的機器人不會一直穩定，但如果您使用這個機器人，您將會是第一個看到這些特色而且您可以給我們回饋讓我們知道如何把他們變得更好在他們將被放進主要機器人之前。",
-			"linkDescription": "邀請InviteManager Alpha的連結在這裡",
-			"disabled": "Disabled"
+			"title": "測試版機器人",
+			"intro": "`InviteManager Alpha` 是拿來測試新功能的機器人。測試機器人不會隨時保持穩定，但如果您使用此機器人，您可以在第一時間試用這些功能，而且您可以給我們回饋，讓他們變得更加完善。",
+			"linkDescription": "InviteManager Alpha 的連結在這裡",
+			"disabled": "禁用"
 		},
 		"faq": {
-			"title": "常見問題",
+			"title": "常見問答",
 			"prefix": {
-				"title": "我如何更改機器人的前綴指令？",
-				"description": "您可以用`!config prefix -`來更改前綴指令。\n\n如果您不知道目前的前綴指令，您可以用`@InviteManager config prefix`來得知前綴指令。"
+				"title": "我該如何更改機器人的前綴指令？",
+				"description": "您可以使用 `!config prefix -` 來更改前綴指令。\n\n如果您不知道目前的前綴指令，則可以使用 `@InviteManager config prefix` 來得知。"
 			},
 			"joinLeaveChannel": {
-				"title": "我如何設定加入和離開訊息？",
-				"description": "設定頻道用\n\n`!config joinMessageChannel #channel`\n\n或\n\n`!config leaveMessageChannel #channel`。\n\n設定完之後，新的加入和離開訊息將被顯示在該頻道。"
+				"title": "我該如何設定加入和離開訊息？",
+				"description": "設定頻道請用\n\n`!config joinMessageChannel #channel`\n\n或\n\n`!config leaveMessageChannel #channel`。\n\n設定完之後，新的加入和離開訊息就會顯示在該頻道。"
 			},
 			"joinLeaveMessage": {
-				"title": "我可以製作加入和離開訊息嗎？",
-				"description": "絕對可以！你可以更改訊息操作範例\n\n`!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)`\n\n或\n\n`!config leaveMessage {memberName} **left**; Invited by **{inviterName}**`。\n\n有很多預留字是可用的。你可以看到完整的清單在'[自定義訊息]({{{ link }}})'頁面。"
+				"title": "我可以自訂加入和離開訊息嗎？",
+				"description": "完全可以！您可以更改的範例如下：\n\n`!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)`\n\n或\n\n`!config leaveMessage {memberName} **left**; Invited by **{inviterName}**`。\n\n有很多預留參數是可用的。你可以在 [自訂訊息]({{{ link }}}) 頁面找到完整的清單。"
 			},
 			"ranks": {
-				"title": "甚麼是「等級」然後我要如何使用它們？",
-				"description": "Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!"
+				"title": "甚麼是等級？我該如何使用它們？",
+				"description": "等級可以在人們達到一定的邀請數量時自動分配身分組。舉例來說，如果您有一個身分組叫 `@Beginner` 然後您希望它能分配給擁有 5 以上邀請數量的人，您可以新增一個等級如下： `!add-rank @Beginner 5 (如果您需要一個描述)` 。當有人達到 5 個邀請時，就會被自動分配該身分組！"
 			},
 			"channel": {
-				"title": "我要如何禁用機器人在所有的頻道但可以使用在其中一個/一些？",
-				"description": "取消機器人的閱讀訊息權限在那些您不想要機器人回應的頻道。"
+				"title": "我該如何在所有的頻道除了其中一個/一些禁用機器人？",
+				"description": "在您不想要機器人回覆的頻道取消機器人的閱讀訊息權限。"
 			},
 			"limitations": {
-				"title": "限制：沒有高級追蹤在機器人加入以前。",
-				"description": "高級追蹤（誰邀請誰）只運作在當您邀請機器人之後。機器人將持續知道所有人的邀請數量在您邀請了它之後，不必擔心。只有額外訊息的缺失而且加入的成員可以被收集當您邀請機器人之後。"
+				"title": "限制：在機器人加入伺服器以前無法追蹤。",
+				"description": "追蹤（誰邀請誰）只會在您邀請機器人後才開始運作。在您邀請了它之後，機器人將持續追蹤所有人的邀請數量，請放心。額外資訊只能在您邀請機器人後開始收集。"
 			}
 		},
 		"pro": {
-			"title": "高級機器人",
-			"description": "There currently is no pro bot available. All the pro features are enabled on the regular bots aswell."
+			"title": "高級版機器人",
+			"description": "不提供高級版機器人。一般機器人都已經啟用所有高級版功能。"
 		},
 		"quick": {
-			"title": "快速開始",
+			"title": "快速設定",
 			"setup": {
-				"title": "設定",
-				"description": "To start, please invite one of our bots from the [Our Bots page](./our-bots)\n\nAfter that make sure the bot has `Read Messages` and `Send Messages` permission in a channel, then run the `!setup` command.\n\nThe setup command will tell you if the bot is missing any required permissions.",
+				"title": "設置選項",
+				"description": "如果要開始，請先從 [我們的機器人](./our-bots) 頁面邀請機器人。\n\n接著請確認機器人在該頻道是否有 `檢視頻道` 及 `發送訊息` 權限，然後使用 `!setup` 指令。\n\n此指令會告訴您機器人是否缺少一些必要的權限。",
 				"first": {
-					"title": "First steps",
-					"description": "After setting up the bot you most likely want to configure join and leave channels. For that please head over [to our FAQ](./faq) to learn more."
+					"title": "第一步",
+					"description": "您應該最想要設定加入及離開訊息的頻道。請前往 [常見問答](./faq) 來得知更多資訊。"
 				}
 			}
 		},
 		"ourBots": {
-			"title": "Our Bots",
-			"subtitle": "Invite the Bot",
-			"description": "This version of InviteManager has two of the same bots running permanently. Both are __**completely identical**__ except for their avatar.\n\n**Invite the blue bot:**\n{{{ blueBotLink }}}\n\n**Invite the yellow bot:**\n{{{ yellowBotLink }}}"
+			"title": "我們的機器人",
+			"subtitle": "邀請機器人",
+			"description": "InviteManager 有兩個永久運行的相同機器人。除了頭像及狀態不同，兩者的功能皆__**完全相同**__。\n\n**邀請藍色機器人：**\n{{{ blueBotLink }}}\n\n**邀請黃色機器人：**\n{{{ yellowBotLink }}}"
 		}
 	},
 	"reference": {
@@ -238,22 +238,22 @@
 			"title": "指令"
 		},
 		"settings": {
-			"title": "配置 / 設定"
+			"title": "設置選項"
 		}
 	},
 	"premium": {
-		"title": "付費",
-		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.",
+		"title": "高級版",
+		"description": "我們不提供高級版機器人。兩隻 [我們的機器人]({{{ ourBotsLink }}}) 都已經啟用所有高級版功能。",
 		"features": {
-			"title": "特色",
-			"first": "Join and leave message styling (Embedded messages)",
-			"second": "Leaderboards are refreshed every 5 minutes"
+			"title": "功能",
+			"first": "加入和離開訊息的格式（嵌入式訊息）",
+			"second": "排行榜每 5 分鐘更新一次"
 		},
 		"tiers": {
 			"title": "價位"
 		},
 		"setup": {
-			"title": "設定"
+			"title": "設置選項"
 		}
 	}
 }

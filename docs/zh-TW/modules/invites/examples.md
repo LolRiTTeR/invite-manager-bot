@@ -1,6 +1,6 @@
 # 範例
 
-## Normal
+## 一般式訊息
 
 ```text
 !config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)
@@ -10,7 +10,7 @@
 !config leaveMessage {memberName} **left** after {joinedAt:duration} on this server; Invited by **{inviterName}**
 ```
 
-## Normal (Vanity)
+## 一般式訊息（個性化網址）
 
 ```text
 !config joinMessageVanity {memberMention} **joined** using the vanity invite code **{inviteCode}**
@@ -20,17 +20,17 @@
 !config leaveMessageVanity {memberName} **left** after {joinedAt:duration} on this server
 ```
 
-## Embed
+## 嵌入式訊息
 
-### Join Message
+### 一般式加入訊息
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** 截圖 **
 
-![Join Embed](../../../assets/invite-manager-join-message-premium.png)
+![嵌入式加入訊息](../../../assets/invite-manager-join-message-premium.png)
 
-#### ** Code **
+#### ** 代碼 **
 
 ```text
 !config joinMessage { "color": "#5cd65c", "author": { "name": "{memberName} joined!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Account created", "value": "{memberCreated:timeAgo}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Invited by", "value": "{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})" }, { "name": "Invite Code", "value": "{inviteCode} in channel {channelMention}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
@@ -38,15 +38,15 @@
 
 <!-- tabs:end -->
 
-### Join Message (Vanity)
+### 一般式加入訊息（個性化網址）
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** 截圖 **
 
-![Join Embed (Vanity)](../../../assets/invite-manager-join-message-vanity-premium.png)
+![嵌入式加入訊息（個性化網址）](../../../assets/invite-manager-join-message-vanity-premium.png)
 
-#### ** Code **
+#### ** 代碼 **
 
 ```text
 !config joinMessageVanity { "color": "#5cd65c", "author": { "name": "{memberName} joined!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Account created", "value": "{memberCreated:timeAgo}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Vanity Invite Code", "value": "{inviteCode}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
@@ -54,15 +54,15 @@
 
 <!-- tabs:end -->
 
-### Leave Message
+### 一般式離開訊息
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** 截圖 **
 
-![Leave Embed](../../../assets/invite-manager-leave-message-premium.png)
+![嵌入式離開訊息](../../../assets/invite-manager-leave-message-premium.png)
 
-#### ** Code **
+#### ** 代碼 **
 
 ```text
 !config leaveMessage { "color": "#d65c5c", "author": { "name": "{memberName} left!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Time on server", "value": "{joinedAt:duration}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Invited by", "value": "{inviterMention}\n{numInvites} (regular: {numRegularInvites}, bonus: {numBonusInvites}, fake: {numFakeInvites}, leave: {numLeaveInvites})" }, { "name": "Invite Code", "value": "{inviteCode} in channel {channelMention}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }
@@ -70,15 +70,15 @@
 
 <!-- tabs:end -->
 
-### Leave Message (Vanity)
+### 一般式離開訊息（個性化網址）
 
 <!-- tabs:start -->
 
-#### ** Screenshot **
+#### ** 截圖 **
 
-![Leave Embed (Vanity)](../../../assets/invite-manager-leave-message-vanity-premium.png)
+![嵌入式離開訊息（個性化網址）](../../../assets/invite-manager-leave-message-vanity-premium.png)
 
-#### ** Code **
+#### ** 代碼 **
 
 ```text
 !config leaveMessageVanity { "color": "#d65c5c", "author": { "name": "{memberName} left!", "icon_url": "{memberImage}" }, "fields": [ { "name": "Time on server", "value": "{joinedAt:duration}", "inline": true }, { "name": "First joined", "value": "{firstJoin:date}", "inline": true }, { "name": "Number of joins", "value": "{numJoins}", "inline": true }, { "name": "Vanity Invite Code", "value": "{inviteCode}" }, { "name": "Total Member Count", "value": "{memberCount}" } ] }

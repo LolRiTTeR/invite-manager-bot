@@ -25,18 +25,18 @@ There are many config options that can be set. You don't have to set all of them
 
 #### Joins
 
-| Setting                                | Description                                                        |
-| -------------------------------------- | ------------------------------------------------------------------ |
-| [Message](#joinmessage)                | The message sent when someone joins the server.                    |
-| [Message](#joinmessagevanity)          | The message sent when someone joins the server using a vanity URL. |
-| [Message Channel](#joinmessagechannel) | The channel that the message on join is sent to.                   |
+| Setting                                | Description                                                   |
+| -------------------------------------- | ------------------------------------------------------------- |
+| [Message](#joinmessage)                | The message sent when someone joins the server.               |
+| [Wiadomość](#joinmessagevanity)        | Wiadomość kiedy ktoś dołączy do serwera za pomocą vanity URL. |
+| [Message Channel](#joinmessagechannel) | The channel that the message on join is sent to.              |
 
 #### Leaves
 
 | Setting                                                | Description                                                                             |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
 | [Message](#leavemessage)                               | The message sent when someone leaves the server.                                        |
-| [Message](#leavemessagevanity)                         | The message sent when someone leaves the server after he joined with a vanity URL.      |
+| [Wiadomość](#leavemessagevanity)                       | Wiadomość kiedy ktoś wyjdzie z serwera po tym jak dołączył za pomocą vanity URL.        |
 | [Message Channel](#leavemessagechannel)                | The channel that the leave message is sent to.                                          |
 | [Auto Subtract](#autosubtractleaves)                   | Automatically remove invites from the inviter when the invited user leaves.             |
 | [Auto Subtract Threshold](#autosubtractleavethreshold) | The time in seconds for which a user has to stay in the server for the invite to count. |
@@ -341,9 +341,9 @@ Reset to default:
 
 ---
 
-## Message
+## Wiadomość
 
-The message sent when someone joins the server using a vanity URL.
+Wiadomość kiedy ktoś dołączy do serwera za pomocą vanity URL.
 
 Type: `String`
 
@@ -398,9 +398,9 @@ Examples:
 
 ---
 
-## Message
+## Wiadomość
 
-The message sent when someone leaves the server after he joined with a vanity URL.
+Wiadomość kiedy ktoś wyjdzie z serwera po tym jak dołączył za pomocą vanity URL.
 
 Type: `String`
 

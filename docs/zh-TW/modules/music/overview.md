@@ -1,3 +1,3 @@
 # 概述
 
-The music feature currently is disabled. There are no plans to re-enable them in the near future.
+音樂功能已禁用。近期內沒有重新啟用的計劃。

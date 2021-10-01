@@ -1,38 +1,38 @@
 # 懲罰
 
-### What are punishments?
+### 甚麼是懲罰？
 
-Punishments are actions like `ban`, `kick` or `mute` that can be given to a user when he violates the rules. You can either call punish users directly by using commands, or you can define punishments that happen after a user reaches a certain amount of strikes.
+懲罰是類似 `停權` 、 `踢出` 或 `靜音` 之類的動作，可以在使用者違反規定時給予。 您可以使用指令直接懲罰使用者，也可以自訂讓使用者達到一定數量的記點後受到懲處。
 
-### How can I punish a user after reaching a certain amount of strikes?
+### 記點達到一定數量時，我該如何懲處使用者？
 
-With the `punishmentconfig` command you can set after how many strikes a certain punishment action will be given.
+使用 `punishmentconfig` 指令可以設定每種懲罰各自對應到的記點次數。
 
 ```text
 !punishmentconfig <punishmentType> <numberOfStrikesNeeded>
 ```
 
-A list of all available punishments:
+可用的懲罰如下：
 
-- ban
-- softban
-- kick
-- mute
-- warn
+- 停權
+- 暫時停權
+- 踢出
+- 靜音
+- 警告
 
-So if you would like to kick a user after he reaches 5 strikes, you would have to execute the following command
+所以如果您想要踢出記點達到 5 次的使用者，您可以執行以下指令：
 
 ```text
 !punishmentconfig kick 5
 ```
 
-If you want to delete a `punishmentconfig`, just set the strikes to `0` like that:
+如果您想要刪除一項 `punishmentconfig` ，請設定記點次數為 `0` ，如下所示：
 
 ```text
 !punishmentconfig kick 0
 ```
 
-To see all punishment configs, just use the command without giving any arguments:
+直接使用指令可確認目前的懲罰設定：
 
 ```text
 !punishmentconfig

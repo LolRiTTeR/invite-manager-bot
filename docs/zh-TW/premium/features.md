@@ -1,9 +1,9 @@
-# 付費
+# 高級版
 
-We are not offering a paid premium bot. Both of our bots listed in [Our Bots](/zh-TW/getting-started/our-bots.md) already have all premium features enabled.
+我們不提供高級版機器人。兩隻 [我們的機器人](/zh-TW/getting-started/our-bots.md) 都已經啟用所有高級版功能。
 
-## 特色
+## 功能
 
-### Join and leave message styling (Embedded messages)
+### 加入和離開訊息的格式（嵌入式訊息）
 
-### Leaderboards are refreshed every 5 minutes
+### 排行榜每 5 分鐘更新一次

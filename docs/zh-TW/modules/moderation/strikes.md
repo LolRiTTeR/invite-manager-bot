@@ -1,195 +1,195 @@
-# Strikes
+# 記點
 
-## What are strikes?
+## 甚麼是記點？
 
-Strikes are points that users get for violating server rules. Every time the user receives a strike, he gets a personal message telling him how many strikes he has and why he got them. When a user reaches a certain amount of strikes, he will receive a **punishment**.
+使用者違反伺服器規定時會被記點。每次記點時，機器人會透過私訊發送通知，告知記點次數及原因。當使用者的記點達到一定次數時，將受到**懲罰**。
 
-## What are violations?
+## 甚麼是違規事項？
 
-Violations are auto-moderation rules that you can enable or disable on your server. Currently, the following violations exist:
+您可以在您的伺服器選擇啟用或禁用違規事項。可自訂的違規事項如下：
 
-- [invites](strikes.md#invites)
-- [links](strikes.md#links)
-- [words](strikes.md#words)
-- [allCaps](strikes.md#allcaps)
-- [duplicateText](strikes.md#duplicatetext)
-- [quickMessages](strikes.md#quickmessages)
-- [mentionUsers](strikes.md#mentionusers)
-- [mentionRoles](strikes.md#mentionroles)
-- [emojis](strikes.md#emojis)
+- [邀請連結](strikes.md#invites)
+- [一般連結](strikes.md#links)
+- [特殊文字](strikes.md#words)
+- [大量大寫](strikes.md#allcaps)
+- [拷貝訊息](strikes.md#duplicatetext)
+- [洗頻訊息](strikes.md#quickmessages)
+- [提及使用者](strikes.md#mentionusers)
+- [提及身分組](strikes.md#mentionroles)
+- [表情符號](strikes.md#emojis)
 
-For each of those violations, you have to define how many strikes will be given if someone violates it. You can do that by using the `strikeconfig` command:
+您必須自訂記點次數如果有人違反上述規定。您可以使用 `strikeconfig` 指令：
 
 ```text
 !strikeconfig <violationType> <numberOfStrikes>
 ```
 
-For example, if you want users to get `2` strikes for violating the `invites` rule, then you would use the following command:
+舉例來說，如果您希望使用者違反 `邀請連結` 時被記點 `2` 次，您可以執行以下指令：
 
 ```text
 !strikeconfig invites 2
 ```
 
-You can check the current config by doing:
+直接使用指令可確認目前的設定：
 
 ```text
 !strikeconfig
 ```
 
-## Detailed list of violations
+## 違規事項的詳細資訊
 
 ### invites
 
-This violation is triggered whenever the user posts an invite link to another discord server.
+當使用者發送另一個伺服器的邀請連結時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig invites 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig invites 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModInvitesEnabled](../../reference/settings?id=enabled-2)
+- [自動審核邀請連結啟用](../../reference/settings?id=enabled-2)
 
 ### links
 
-This violation is triggered whenever the user posts a link.
+當使用者發送一般連結時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig links 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig links 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModLinksEnabled](../../reference/settings?id=enabled-3)
-- [autoModLinksWhitelist](../../reference/settings?id=whitelist)
-- [autoModLinksBlacklist](../../reference/settings?id=blacklist)
-- [autoModLinksFollowRedirects](../../reference/settings?id=follow-redirects)
+- [自動審核一般連結啟用](../../reference/settings?id=enabled-3)
+- [自動審核一般連結白名單](../../reference/settings?id=whitelist)
+- [自動審核一般連結黑名單](../../reference/settings?id=blacklist)
+- [自動審核重新導向連結](../../reference/settings?id=follow-redirects)
 
 ### words
 
-This violation is triggered whenever the user posts blacklisted words.
+當使用者發送特殊文字時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig words 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig words 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModWordsEnabled](../../reference/settings?id=enabled-4)
-- [autoModWordsBlacklist](../../reference/settings?id=blacklist-1)
+- [自動審核特殊文字啟用](../../reference/settings?id=enabled-4)
+- [自動審核特殊文字黑名單](../../reference/settings?id=blacklist-1)
 
 ### allCaps
 
-This violation is triggered whenever the user posts a message that is mostly in CAPS.
+當使用者發送大量大寫文字時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig allCaps 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig allCaps 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModAllCapsEnabled](../../reference/settings?id=enabled-5)
-- [autoModAllCapsMinCharacters](../../reference/settings?id=min-characters)
-- [autoModAllCapsPercentageCaps](../../reference/settings?id=percentage-caps)
+- [自動審核大量大寫啟用](../../reference/settings?id=enabled-5)
+- [自動審核大量大寫最少字數](../../reference/settings?id=min-characters)
+- [自動審核大量大寫百分比](../../reference/settings?id=percentage-caps)
 
 ### duplicateText
 
-This violation is triggered whenever the user posts the same text multiple times.
+當使用者多次發送拷貝訊息時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig duplicateText 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig duplicateText 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModDuplicateTextEnabled](../../reference/settings?id=enabled-6)
-- [autoModDuplicateTextTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds)
+- [自動審核拷貝訊息啟用](../../reference/settings?id=enabled-6)
+- [自動審核拷貝訊息發送間隔](../../reference/settings?id=timeframe-in-seconds)
 
 ### quickMessages
 
-This violation is triggered whenever the user quickly posts messages.
+當使用者快速發送洗頻訊息時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig quickMessages 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig quickMessages 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModQuickMessagesEnabled](../../reference/settings?id=enabled-7)
-- [autoModQuickMessagesNumberOfMessages](../../reference/settings?id=-of-messages)
-- [autoModQuickMessagesTimeframeInSeconds](../../reference/settings?id=timeframe-in-seconds-1)
+- [自動審核洗頻訊息啟用](../../reference/settings?id=enabled-7)
+- [自動審核洗頻訊息數量](../../reference/settings?id=-of-messages)
+- [自動審核洗頻訊息發送間隔](../../reference/settings?id=timeframe-in-seconds-1)
 
 ### mentionUsers
 
-This violation is triggered whenever the user mentions mutliple users.
+當使用者提及多個使用者時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig mentionUsers 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig mentionUsers 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModMentionUsersEnabled](../../reference/settings?id=enabled-8)
-- [autoModMentionUsersMaxNumberOfMentions](../../reference/settings?id=max-of-mentions)
+- [自動審核提及使用者啟用](../../reference/settings?id=enabled-8)
+- [自動審核提及使用者數量](../../reference/settings?id=max-of-mentions)
 
 ### mentionRoles
 
-This violation is triggered whenever the user mentions mutliple roles.
+當使用者提及多個身分組時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig mentionRoles 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig mentionRoles 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModMentionRolesEnabled](../../reference/settings?id=enabled-9)
-- [autoModMentionRolesMaxNumberOfMentions](../../reference/settings?id=max-of-mentions-1)
+- [自動審核提及身分組啟用](../../reference/settings?id=enabled-9)
+- [自動審核提及身分組數量](../../reference/settings?id=max-of-mentions-1)
 
 ### emojis
 
-This violation is triggered whenever the user posts multiple emojis.
+當使用者發送多個表情符號時就會觸犯此規定。
 
-Example:
+例如：
 
 `!strikeconfig emojis 1`
 
-To delete the strike config:
+刪除違規事項則請用：
 
 `!strikeconfig emojis 0`
 
-**Config options:**
+**設置選項：**
 
-- [autoModEmojisEnabled](../../reference/settings?id=enabled-10)
-- [autoModEmojisMaxNumberOfEmojis](../../reference/settings?id=max-of-emojis)
+- [自動審核表情符號啟用](../../reference/settings?id=enabled-10)
+- [自動審核表情符號數量](../../reference/settings?id=max-of-emojis)

@@ -1,73 +1,73 @@
-(Jump to [placeholders](#placeholders))
+(跳至 [預留參數](#placeholders))
 
-# 自定義訊息
+# 自訂訊息
 
 ---
 
-## You can customise the join and leave messages with a number of parameters.
+## 您可以運用多個參數自訂加入和離開訊息。
 
-You can set a custom join or leave message by setting the config:
+您可以自訂加入或離開訊息如下：
 
 ```
 !config joinMessage This is your custom join message! It will be posted every time someone joins your server.
 ```
 
-or
+或
 
 ```
 !config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.
 ```
 
-A message like that obviously doesn't make sense. You should personalise it with information about the new member, inviter or the server. Please see the list below for all available placeholders.
+這樣的訊息顯然沒有意義。 您應該使用有關加入成員、邀請成員或伺服器的資訊對其進行個性化設定。 請參閱以下所有可用的預留參數列表。
 
-So if we want the message to say
+所以如果想要的訊息如下：
 
 `Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`
 
-we can easily do that by replacing all the names and the number with placeholders:
+可以透過用預留參數替換所有名稱和數字來輕鬆做到：
 
 `Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`
 
-So you can now do `!config joinMessage <message from above>` to set the message. Our bot will automatically replace the placeholders every time someone joins.
+所以您可以使用 `!config joinMessage <message from above>` 來設定加入訊息。當有人加入時，機器人會自動替換預留參數。
 
 > [!NOTE|style:flat]
-> Premium users can also use embeds in their join and leave messages. [More info here](./examples.md)
+> 高級會員還可以使用嵌入式加入及離開訊息。 [更多資訊](./examples.md)
 
-Please see the [examples page](./examples.md) to see what kind of messages you can make!
+請參閱 [範例網頁](./examples.md) 來了解您可以使用哪種訊息！
 
-### Placeholders
+### 預留參數
 
-|                          | join | leave | example       | description                                                                             |
-| :----------------------- | :--- | :---- | :------------ | :-------------------------------------------------------------------------------------- |
-| {memberName}             | yes  | yes   | Andy          | The name of the member that just joined your discord server                             |
-| {memberId}               | yes  | yes   | 436844634     | The discord ID of the member that just joined your server                               |
-| {memberMention}          | yes  | no    | @Andy         | The mention of the member that just joined your discord server (person will be pinged). |
-| {memberFullName}         | yes  | yes   | Andy\#1801    | The username and discriminator of the user that just joined your server                 |
-| {memberImage}            | yes  | yes   | \[URL\]       | URL of the avatar of the member                                                         |
-| {inviterName}            | yes  | yes   | Andy          | The name of the inviter                                                                 |
-| {inviterId}              | yes  | yes   | 241929953     | The discord ID of the inviter                                                           |
-| {inviterMention}         | yes  | yes   | @Andy         | The mention of the inviter (person will be pinged)                                      |
-| {inviterFullName}        | yes  | yes   | Andy\#1801    | The username and discriminator of the inviter                                           |
-| {inviterImage}           | yes  | yes   | \[URL\]       | URL of the avatar of the inviter                                                        |
-| {numInvites}             | yes  | yes   | 12            | Number of invites the inviter has in total                                              |
-| {numRegularInvites}      | yes  | yes   | 7             | Number of invites the inviter has through regular invites                               |
-| {numBonusInvites}        | yes  | yes   | 5             | Number of invites the inviter has as a bonus (they were assigned manually)              |
-| {numFakeInvites}         | yes  | yes   | 3             | Number of fake invites the inviter has                                                  |
-| {numLeaveInvites}        | yes  | yes   | 6             | Number of invites that were removed because the member left again.                      |
-| {memberCount}            | yes  | yes   | 42            | Number of members your server has in total                                              |
-| {numJoins}               | yes  | yes   | 3             | Number of times the user has joined the server                                          |
-| {channelName}            | yes  | yes   | general       | The name of the channel where the invite code was created                               |
-| {channelMention}         | yes  | yes   | \#general     | Mention of the channel where the invite code was created                                |
-| {inviteCode}             | yes  | yes   | fgSr30s       | Invite code used                                                                        |
-| {memberCreated:date}     | yes  | yes   | 25.09.2016    | Date the discord user was created                                                       |
-| {memberCreated:duration} | yes  | yes   | 5 weeks       | Duration since the discord user was created                                             |
-| {memberCreated:timeAgo}  | yes  | yes   | 2 day ago     | Time the discord user was created                                                       |
-| {firstJoin:date}         | yes  | yes   | 11.12.2017    | Date the user joined the server for the first time                                      |
-| {firstJoin:duration}     | yes  | yes   | 4 days        | Duration since the user joined the server for the first time                            |
-| {firstJoin:timeAgo}      | yes  | yes   | 1 week ago    | Time the user joined the server for the first time                                      |
-| {previousJoin:date}      | yes  | no    | 02.04.2018    | Date when the user joined the server the last time                                      |
-| {previousJoin:duration}  | yes  | no    | 2 months      | Duration since when the user joined the server the last time                            |
-| {previousJoin:timeAgo}   | yes  | no    | 1 second ago  | Time when the user joined the server the last time                                      |
-| {joinedAt:date}          | no   | yes   | 17.05.2018    | Date when the user joined                                                               |
-| {joinedAt:duration}      | no   | yes   | 3 minutes     | Duration since when the user joined                                                     |
-| {joinedAt:timeAgo}       | no   | yes   | 2 minutes ago | Time when the user joined                                                               |
+|                          | join | leave | 範例          | 描述                                   |
+| :----------------------- | :--- | :---- | :------------ | :------------------------------------- |
+| {memberName}             | 是   | 是    | Andy          | 加入成員的名稱                         |
+| {memberId}               | 是   | 是    | 436844634     | 加入成員的 ID                          |
+| {memberMention}          | 是   | 否    | @Andy         | 提及加入成員（該成員會被@）            |
+| {memberFullName}         | 是   | 是    | Andy\#1801    | 加入成員的完整名稱                     |
+| {memberImage}            | 是   | 是    | \[URL\]       | 加入成員的頭像連結                     |
+| {inviterName}            | 是   | 是    | Andy          | 邀請成員的名稱                         |
+| {inviterId}              | 是   | 是    | 241929953     | 邀請成員的 ID                          |
+| {inviterMention}         | 是   | 是    | @Andy         | 提及邀請成員（該成員會被@）            |
+| {inviterFullName}        | 是   | 是    | Andy\#1801    | 邀請成員的完整名稱                     |
+| {inviterImage}           | 是   | 是    | \[URL\]       | 邀請成員的頭像連結                     |
+| {numInvites}             | 是   | 是    | 12            | 邀請成員的總邀請數量                   |
+| {numRegularInvites}      | 是   | 是    | 7             | 邀請成員的普通邀請數量                 |
+| {numBonusInvites}        | 是   | 是    | 5             | 邀請成員的額外獎勵邀請數量（手動分配） |
+| {numFakeInvites}         | 是   | 是    | 3             | 邀請成員的假邀請數量                   |
+| {numLeaveInvites}        | 是   | 是    | 6             | 邀請成員的離開邀請數量                 |
+| {memberCount}            | 是   | 是    | 42            | 伺服器的成員總數                       |
+| {numJoins}               | 是   | 是    | 3             | 成員加入伺服器的次數                   |
+| {channelName}            | 是   | 是    | general       | 產生邀請連結的頻道名稱                 |
+| {channelMention}         | 是   | 是    | \#general     | 提及產生邀請連結的頻道                 |
+| {inviteCode}             | 是   | 是    | fgSr30s       | 使用的邀請代碼                         |
+| {memberCreated:date}     | 是   | 是    | 25.09.2016    | 成員創立帳號的日期                     |
+| {memberCreated:duration} | 是   | 是    | 5 weeks       | 成員創立帳號的期間                     |
+| {memberCreated:timeAgo}  | 是   | 是    | 2 day ago     | 成員創立帳號距今多久                   |
+| {firstJoin:date}         | 是   | 是    | 11.12.2017    | 成員第一次加入伺服器的日期             |
+| {firstJoin:duration}     | 是   | 是    | 4 days        | 成員第一次加入伺服器的期間             |
+| {firstJoin:timeAgo}      | 是   | 是    | 1 week ago    | 成員第一次加入伺服器距今多久           |
+| {previousJoin:date}      | 是   | 否    | 02.04.2018    | 成員上一次加入伺服器的日期             |
+| {previousJoin:duration}  | 是   | 否    | 2 months      | 成員上一次加入伺服器的期間             |
+| {previousJoin:timeAgo}   | 是   | 否    | 1 second ago  | 成員上一次加入伺服器距今多久           |
+| {joinedAt:date}          | 否   | 是    | 17.05.2018    | 成員加入伺服器的日期                   |
+| {joinedAt:duration}      | 否   | 是    | 3 minutes     | 成員加入伺服器的期間                   |
+| {joinedAt:timeAgo}       | 否   | 是    | 2 minutes ago | 成員加入伺服器距今多久                 |

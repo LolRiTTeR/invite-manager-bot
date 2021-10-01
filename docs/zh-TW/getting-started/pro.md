@@ -1,3 +1,3 @@
-# 高級機器人
+# 高級版機器人
 
-There currently is no pro bot available. All the pro features are enabled on the regular bots aswell.
+不提供高級版機器人。一般機器人都已經啟用所有高級版功能。
