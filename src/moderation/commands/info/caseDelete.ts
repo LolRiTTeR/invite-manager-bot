@@ -32,7 +32,7 @@ export default class extends Command {
 	public async action(message: Message, [caseNumber]: [number], flags: {}, { guild, t }: Context): Promise<any> {
 		const embed = this.createEmbed({
 			title: t('cmd.caseDelete.title', {
-				number: caseNumber
+				id: caseNumber
 			})
 		});
 
