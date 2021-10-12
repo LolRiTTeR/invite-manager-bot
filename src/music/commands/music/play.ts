@@ -45,12 +45,6 @@ export default class extends Command {
 		{ platform, next }: { platform: MusicPlatformType; next: boolean },
 		{ t, guild, settings }: Context
 	): Promise<any> {
-		if (message.author.id != '79305800157233152') {
-			return this.sendReply(
-				message,
-				`The music feature is disabled.\nPlease use a dedicated music bot like <https://fredboat.com/add>`
-			);
-		}
 		const voiceChannelId = message.member.voiceState.channelID;
 		if (!voiceChannelId) {
 			await this.sendReply(message, t('music.voiceChannelRequired'));

@@ -52,6 +52,10 @@ export default class extends Command {
 			return cmd.action(message, [], {}, context);
 		}
 
+		if (key === 'announceNextSong') {
+			return this.sendReply(message, 'The config `announceNextSong` has been disabled.');
+		}
+
 		const info = guildSettingsInfo[key];
 		const oldVal = settings[key];
 		embed.title = key;

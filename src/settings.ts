@@ -579,7 +579,7 @@ export const guildSettingsInfo: {
 	announceNextSong: {
 		type: 'Boolean',
 		grouping: [SettingsGroup.music, SettingsGroup.announcement],
-		defaultValue: true
+		defaultValue: false
 	},
 	announcementVoice: {
 		type: 'Enum<AnnouncementVoice>',
@@ -602,12 +602,12 @@ export const guildSettingsInfo: {
 	defaultMusicPlatform: {
 		type: 'Enum<MusicPlatformTypes>',
 		grouping: [SettingsGroup.music, SettingsGroup.platform],
-		defaultValue: MusicPlatformType.SoundCloud
+		defaultValue: MusicPlatformType.YouTube
 	},
 	disabledMusicPlatforms: {
 		type: 'Enum<MusicPlatformTypes>[]',
 		grouping: [SettingsGroup.music, SettingsGroup.platform],
-		defaultValue: []
+		defaultValue: [MusicPlatformType.SoundCloud]
 	}
 };
 
