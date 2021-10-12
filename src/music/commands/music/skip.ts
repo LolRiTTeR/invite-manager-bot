@@ -31,6 +31,18 @@ export default class extends Command {
 			return;
 		}
 
+		let oldItem = conn.getNowPlaying();
+
 		await conn.skip(amount || 0);
+
+		let item = conn.getNowPlaying();
+
+		if (item && oldItem.id !== item.id) {
+			const embed = this.client.music.createPlayingEmbed(item);
+			embed.author.name = `Skipped by ${embed.author.name} - Now playing`;
+			await this.sendEmbed(message.channel, embed);
+		} else {
+			await this.sendEmbed(message.channel, ':stop_button: ' + t('music.endOfQueue'));
+		}
 	}
 }

@@ -25,6 +25,10 @@ export default class extends Command {
 
 		if (conn.isPlaying()) {
 			conn.pause();
+			await this.sendEmbed(message.channel, ':pause_button: ' + t('music.paused'));
+		} else {
+			conn.resume();
+			await this.sendEmbed(message.channel, ':arrow_forward: ' + t('music.resumed'));
 		}
 	}
 }

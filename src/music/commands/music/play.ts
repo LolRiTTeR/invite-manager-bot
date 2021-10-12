@@ -56,6 +56,7 @@ export default class extends Command {
 		if (!link) {
 			if (conn.isPaused()) {
 				conn.resume();
+				await this.sendEmbed(message.channel, ':pause_button: ' + t('music.resumed'));
 			}
 			return;
 		}

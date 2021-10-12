@@ -8,7 +8,7 @@ export default class extends Command {
 	public constructor(client: IMClient) {
 		super(client, {
 			name: MusicCommand.queue,
-			aliases: [],
+			aliases: ['q'],
 			group: CommandGroup.Music,
 			guildOnly: true,
 			defaultAdminOnly: false,
