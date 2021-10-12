@@ -8,7 +8,7 @@ export default class extends Command {
 	public constructor(client: IMClient) {
 		super(client, {
 			name: MusicCommand.disconnect,
-			aliases: [],
+			aliases: ['dc'],
 			group: CommandGroup.Music,
 			guildOnly: true,
 			defaultAdminOnly: false,
