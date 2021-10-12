@@ -301,7 +301,7 @@ CREATE TABLE `roles` (
 
 CREATE TABLE `scheduledActions` (
   `id` int(11) NOT NULL,
-  `actionType` enum('unmute') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `actionType` enum('unmute','unlock') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `args` json DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `reason` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
