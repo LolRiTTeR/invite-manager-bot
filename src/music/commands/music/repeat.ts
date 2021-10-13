@@ -26,7 +26,7 @@ export default class extends Command {
 		conn.setRepeat(!conn.isRepeating());
 
 		if (conn.isRepeating()) {
-			await this.sendReply(message, t('cmd.repeat.enabled'));
+			await this.sendReply(message, ':repeat_one: ' + t('cmd.repeat.enabled'));
 		} else {
 			await this.sendReply(message, t('cmd.repeat.disabled'));
 		}

@@ -1780,6 +1780,7 @@
 		"resumed": "Playback has been resumed!",
 		"endOfQueue": "Stopped. Reached end of playlist!",
 		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "There is currently no music being played!",
 		"notConnected": "The bot is not connected to a voice channel!",
 		"voiceChannelRequired": "You need to be in a voice channel to use that command!"

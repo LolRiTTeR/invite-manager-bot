@@ -24,5 +24,6 @@ export default class extends Command {
 		}
 
 		await conn.disconnect();
+		await this.sendEmbed(message.channel, ':thumbsup: ' + t('music.disconnected'));
 	}
 }
