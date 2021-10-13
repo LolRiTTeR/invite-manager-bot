@@ -1,4 +1,5 @@
 import { Message } from 'eris';
+import moment from 'moment';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -45,5 +46,11 @@ export default class extends Command {
 		}
 
 		await conn.seek(duration);
+		await this.sendEmbed(
+			message.channel,
+			t('music.seekedTo', {
+				duration: moment.utc(moment.duration(duration, 'seconds').asMilliseconds()).format('HH:mm:ss')
+			})
+		);
 	}
 }
