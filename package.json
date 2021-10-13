@@ -50,7 +50,7 @@
 		"reflect-metadata": "0.1.13",
 		"uws": "10.148.1",
 		"xmldoc": "1.1.2",
-		"ytdl-core": "2.1.4",
+		"ytdl-core": "4.9.1",
 		"zlib-sync": "0.1.6"
 	},
 	"devDependencies": {

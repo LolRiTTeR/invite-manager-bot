@@ -35,12 +35,12 @@ export class Youtube extends MusicPlatform {
 		}
 
 		return new YoutubeMusicItem(this, {
-			id: videoInfo.video_id,
+			id: videoInfo.videoDetails.videoId,
 			title: videoInfo.player_response.videoDetails.title,
-			link: `https://youtube.com/watch?v=${videoInfo.video_id}`,
+			link: `https://youtube.com/watch?v=${videoInfo.videoDetails.videoId}`,
 			imageUrl: videoInfo.thumbnail_url,
-			channel: videoInfo.author.name,
-			duration: Number(videoInfo.length_seconds)
+			channel: videoInfo.videoDetails.author.name,
+			duration: Number(videoInfo.videoDetails.lengthSeconds)
 		});
 	}
 
