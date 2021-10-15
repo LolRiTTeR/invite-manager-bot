@@ -10,7 +10,7 @@ export class FakeChannel extends TextChannel {
 		if (this.listener) {
 			this.listener(content);
 		}
-		return new Promise((resolve) => resolve());
+		return new Promise<any>((resolve) => resolve(true));
 	}
 
 	public permissionsOf(memberID: string): Permission {

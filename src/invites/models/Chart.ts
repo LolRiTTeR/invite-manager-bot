@@ -1,25 +1,29 @@
-import { CanvasRenderService } from 'chartjs-node-canvas';
+import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import chartjsPluginDatalabels from 'chartjs-plugin-datalabels';
 
-const bigCanvasRenderService = new CanvasRenderService(1000, 400, (chartJS) => {
-	chartJS.pluginService.register(chartjsPluginDatalabels);
+const width = 1000;
+const height = 400;
 
-	chartJS.plugins.register({
-		beforeDraw: function (chartInstance: any) {
-			const localCtx = chartInstance.chart.ctx;
-			localCtx.fillStyle = 'white';
-			localCtx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
-		}
-	});
-});
+const bigCanvasRenderService = new ChartJSNodeCanvas({ width, height, chartCallback: (chartJS) => {
+	chartJS.register(chartjsPluginDatalabels);
+}});
+
+const backgroundColor = {
+	id: 'backgroundColor',
+	beforeDraw: (chart: any) => {
+		const ctx = chart.canvas.getContext('2d');
+		ctx.save();
+		ctx.globalCompositeOperation = 'destination-over';
+		ctx.fillStyle = 'white';
+		ctx.fillRect(0, 0, chart.width, chart.height);
+		ctx.restore();
+	}
+}
 
 const options = {
 	maintainAspectRatio: false,
 	animation: {
 		duration: 0
-	},
-	legend: {
-		display: false
 	},
 	scales: {
 		yAxes: [
@@ -54,7 +58,10 @@ const options = {
 		]
 	},
 	plugins: {
-		datalabels: {
+		legend: {
+			display: false
+		},
+		chartjsPluginDatalabels: {
 			display: function (context: { dataIndex: number; dataset: any }) {
 				// Always show first and last value
 				if (context.dataIndex === 0 || context.dataIndex === context.dataset.data.length - 1) {
@@ -72,4 +79,12 @@ const options = {
 	}
 };
 
-export const renderChart = (type: string, data: any) => bigCanvasRenderService.renderToBuffer({ type, data, options });
+export const renderChart = (type: any, data: any) => {
+	const configuration: any = {
+		type: type,
+		data: data,
+		options: options,
+		plugins: [backgroundColor]
+	}
+	return bigCanvasRenderService.renderToBuffer(configuration);
+};

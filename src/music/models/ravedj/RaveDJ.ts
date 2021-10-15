@@ -120,7 +120,7 @@ export class RaveDJ extends MusicPlatform {
 			}
 		};
 
-		const { data } = await axios(options).catch(async (err) => {
+		const { data } = await axios(options).catch<any>(async (err) => {
 			if (err.code === 401) {
 				await this.getIdToken();
 			}

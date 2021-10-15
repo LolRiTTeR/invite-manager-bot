@@ -103,7 +103,7 @@ export class MusicService extends IMService {
 	}
 
 	public async getLyrics(item: MusicItem) {
-		const { data } = await axios.get(`http://video.google.com/timedtext?lang=en&v=${item.id}`);
+		const { data } = await axios.get<any>(`http://video.google.com/timedtext?lang=en&v=${item.id}`);
 
 		const lyrics: { start: number; dur: number; text: string }[] = [];
 		try {

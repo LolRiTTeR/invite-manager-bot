@@ -33,7 +33,7 @@ export class Soundcloud extends MusicPlatform {
 	public async getByLink(link: string): Promise<SoundcloudMusicItem> {
 		link = encodeURIComponent(link);
 		const scLink = `http://api.soundcloud.com/resolve?url=${link}&client_id=${SOUNDCLOUD_CLIENT_ID}`;
-		const scData: SoundcloudResponse = (await axios.get(scLink)).data;
+		const scData: SoundcloudResponse = (await axios.get<any>(scLink)).data;
 
 		if (scData.kind !== 'track') {
 			throw new Error('INVALID_PLATFORM_URL');
@@ -53,12 +53,12 @@ export class Soundcloud extends MusicPlatform {
 	public async search(searchTerm: string, maxResults?: number): Promise<SoundcloudMusicItem[]> {
 		searchTerm = encodeURIComponent(searchTerm);
 		const scLink = `http://api.soundcloud.com/tracks?q=${searchTerm}&client_id=${SOUNDCLOUD_CLIENT_ID}`;
-		const scData = (await axios.get(scLink)).data;
+		const scData = (await axios.get<any>(scLink)).data;
 
 		return scData.map(
 			(item: any, index: number) =>
 				new SoundcloudMusicItem(this, {
-					id: scData.id,
+					id: scData.id.toString(),
 					title: scData.title,
 					link: scData.permalink_url,
 					imageUrl: scData.artwork_url,

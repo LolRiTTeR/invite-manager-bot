@@ -12,8 +12,8 @@ This is the code repository for the InviteManager Discord Bot.
 
 ### Requirements
 
-- NodeJS (tested using v10)
-- Database (tested using `MySQL` 5.7+, `MariaDB` 10.2+ should work)
+- NodeJS (tested using v14)
+- Database (tested using `MySQL` 8.0, `MariaDB` 10.4+ should work)
 
 ### Setup
 

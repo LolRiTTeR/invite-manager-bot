@@ -1,4 +1,5 @@
 export interface SoundcloudResponse {
+	map(arg0: (item: any, index: number) => import("./SoundCloudMusicItem").SoundcloudMusicItem): import("./SoundCloudMusicItem").SoundcloudMusicItem[] | PromiseLike<import("./SoundCloudMusicItem").SoundcloudMusicItem[]>;
 	kind: string;
 	id: number;
 	created_at: string;

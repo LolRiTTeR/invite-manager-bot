@@ -30,7 +30,7 @@ export class TuneInMusicItem extends MusicItem {
 	}
 
 	public async getStreamUrl() {
-		const res = await axios.get(`${RADIO_TIME_URL}${this.id}`);
+		const res = await axios.get<any>(`${RADIO_TIME_URL}${this.id}`);
 		return res.data.body[0].url;
 	}
 
