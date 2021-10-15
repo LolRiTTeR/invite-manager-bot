@@ -12,7 +12,7 @@
 		"removeComments": false,
 		"experimentalDecorators": true,
 		"typeRoots": [],
-		"types": ["node"],
+		"types": ["node", "offscreencanvas"],
 		"outDir": "bin",
 		"plugins": [
 			{
