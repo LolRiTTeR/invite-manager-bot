@@ -605,23 +605,6 @@
 			"title": "Leaderboard",
 			"lastUpdate": "Last updated {{{ lastUpdate }}}, next update {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "DEPRECATED - this command will be removed soon."
-				},
-				"description": "DEPRECATED - this command will be removed soon."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "DEPRECATED - this command will be removed soon.",
-					"page": "DEPRECATED - this command will be removed soon."
-				},
-				"description": "DEPRECATED - this command will be removed soon."
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{ role }}} is already mentionable.",
 			"self": {
