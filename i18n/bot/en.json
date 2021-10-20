@@ -730,9 +730,9 @@
 				"maxGuilds": "You have activated premium on the maximum number of guilds."
 			},
 			"check": {
-				"declined": "Your payment for premium has been declined, plesae check your Patreon.",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "You have an active premium subscription valid until {{{ valid }}}.\n\nUse {{{ cmd }}} for more info.",
-				"notFound": "Your account does not have a premium subscription associated.\n\nIf you aquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "Check for a Premium Subscription",
 				"paused": "Your subscription currently seems to be paused, please check your Patreon."
 			},
@@ -754,7 +754,7 @@
 					"title": "Premium Feature: History export"
 				},
 				"patreon": {
-					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
@@ -847,7 +847,7 @@
 			"rankNotFound": "Rank {{{ role }}} does not exist!",
 			"self": {
 				"args": {
-					"rank": "The user for which you want to remove the rank."
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "Remove a rank."
 			}
