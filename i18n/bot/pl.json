@@ -355,7 +355,7 @@
 				},
 				"description": "Pokaż pomoc"
 			},
-			"text": "To jest lista poleceń, których możesz użyć. Możesz uzyskać więcej informacji na temat konkretnego polecenia, używając `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-ranks`)",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "Użycie"
 			}
@@ -605,23 +605,6 @@
 			"title": "Tabela liderów",
 			"lastUpdate": "Ostatnia aktualizacja {{{ lastUpdate }}}, następna aktualizacja {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "DEPRECATED - to polecenie zostanie wkrótce usunięte."
-				},
-				"description": "DEPRECATED - to polecenie zostanie wkrótce usunięte."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "DEPRECATED - to polecenie zostanie wkrótce usunięte.",
-					"page": "DEPRECATED - to polecenie zostanie wkrótce usunięte."
-				},
-				"description": "DEPRECATED - to polecenie zostanie wkrótce usunięte."
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{ rola }}} jest już możliwa do wzmieniania.",
 			"self": {
@@ -747,9 +730,9 @@
 				"maxGuilds": "You have activated premium on the maximum number of guilds."
 			},
 			"check": {
-				"declined": "Your payment for premium has been declined, plesae check your Patreon.",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "You have an active premium subscription valid until {{{ valid }}}.\n\nUse {{{ cmd }}} for more info.",
-				"notFound": "Your account does not have a premium subscription associated.\n\nIf you aquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "Check for a Premium Subscription",
 				"paused": "Your subscription currently seems to be paused, please check your Patreon."
 			},
@@ -771,7 +754,7 @@
 					"title": "Premium Feature: History export"
 				},
 				"patreon": {
-					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "Jeśli kupiłeś premium na Patreon"
 				},
 				"servers": {
@@ -864,7 +847,7 @@
 			"rankNotFound": "Rank {{{ role }}} does not exist!",
 			"self": {
 				"args": {
-					"rank": "Uzytkownik dla którego chcesz usunąć rangę"
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "Remove a rank."
 			}
@@ -1635,23 +1618,23 @@
 			"title": "Mod Log Channel"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "Whether or not \"Ban\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "Delete Ban Messages"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "Whether or not \"Kick\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "Delete Kick Messages"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "Whether or not \"Mute\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "Delete Mute Messages"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "Whether or not \"Softban\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "Delete Softban Messages"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "Whether or not \"Warn\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "Delete Warn Messages"
 		},
 		"mutedRole": {
@@ -1696,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "Fade Music End Delay",
-			"description": "The delay of how many seconds noone has to speak for the volume to return back to normal."
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Default Music Platform",
@@ -1776,6 +1759,11 @@
 		}
 	},
 	"music": {
+		"paused": "Playback has been paused!",
+		"resumed": "Playback has been resumed!",
+		"endOfQueue": "Stopped. Reached end of playlist!",
+		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "Obecnie nie jest odtwarzana żadna muzyka!",
 		"notConnected": "Bot nie jest na kanale głosowym!",
 		"voiceChannelRequired": "Musisz być na kanale głosowym, aby użyć tej komendy!"

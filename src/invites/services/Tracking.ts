@@ -414,7 +414,7 @@ export class TrackingService extends IMService {
 			}
 		}
 
-		if (inviteCodesUsed.length === 0) {
+		if (inviteCodesUsed.length === 0 && !isVanity) {
 			console.error(
 				`NO USED INVITE CODE FOUND: g:${guild.id} | m: ${member.id} ` +
 					`| t:${member.joinedAt} | invs: ${JSON.stringify(newInvs)} ` +

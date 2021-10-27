@@ -355,7 +355,7 @@
 				},
 				"description": "Display help."
 			},
-			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-ranks`)",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "Usage"
 			}
@@ -1618,23 +1618,23 @@
 			"title": "Mod Log Channel"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "Whether or not \"Ban\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "Delete Ban Messages"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "Whether or not \"Kick\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "Delete Kick Messages"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "Whether or not \"Mute\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "Delete Mute Messages"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "Whether or not \"Softban\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "Delete Softban Messages"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "Whether or not \"Warn\" pushment messages will be deleted automatically.",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "Delete Warn Messages"
 		},
 		"mutedRole": {
@@ -1679,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "Fade Music End Delay",
-			"description": "The delay of how many seconds noone has to speak for the volume to return back to normal."
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Default Music Platform",

@@ -355,7 +355,7 @@
 				},
 				"description": "Afficher l'aide."
 			},
-			"text": "Ceci est une liste des commandes que tu peux utiliser. Tu peux obtenir plus d'informations à propos d'une commande spécifique en utilisant `{{ prefix }}help <command>` (ex: `{{ prefix }}help add-ranks`)",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "Utilisation"
 			}
@@ -605,23 +605,6 @@
 			"title": "Classement",
 			"lastUpdate": "Dernière mise à jour {{{ lastUpdate }}}, prochaine mise à jour {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "FIN DE VIE - cette commande sera retirée bientôt."
-				},
-				"description": "FIN DE VIE - cette commande sera retirée bientôt."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "FIN DE VIE - cette commande sera retirée bientôt.",
-					"page": "FIN DE VIE - cette commande sera retirée bientôt."
-				},
-				"description": "FIN DE VIE - cette commande sera retirée bientôt."
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{ role }}} est déjà mentionable.",
 			"self": {
@@ -747,9 +730,9 @@
 				"maxGuilds": "Tu as activé le premium dans le nombre maximal de serveurs."
 			},
 			"check": {
-				"declined": "Ton paiement pour le premium a été refusé, merci de vérifier ton Patreon.",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "Tu disposes d'un abonnement premium valide jusqu'à {{{ valid }}}.\n\nUtilise {{{ cmd }}} pour plus d'informations.",
-				"notFound": "Ton compte n'est pas associé à un abonnement premium.\n\nSi tu as acquis le premium par Patreon, assure-toi d'avoir lié ton compte Discord à ton Patreon pour pouvoir profiter des récompenses, puis refais cette commande.",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "Vérifier un abonnement Premium existant",
 				"paused": "Ton abonnement à l'air d'être en pause, merci de vérifier ton Patreon."
 			},
@@ -771,7 +754,7 @@
 					"title": "Fonctionnalité Premium : Exportation de l'historique"
 				},
 				"patreon": {
-					"text": "Exécute {{{ cmd }}} pour valider et activer ton engagement Patreon.",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "Si tu as acheté le premium sur Patreon"
 				},
 				"servers": {
@@ -864,7 +847,7 @@
 			"rankNotFound": "Le rang {{{ role }}} n'existe pas !",
 			"self": {
 				"args": {
-					"rank": "L'utilisateur pour lequel tu souhaites retirer le rang."
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "Supprimer un rang."
 			}
@@ -1635,23 +1618,23 @@
 			"title": "Salon des journaux de modération"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "Si oui ou non les messages après un ban seront automatiquement supprimés.",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "Supprimer les messages de bannissement"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "Si oui ou non les messages après un kick seront automatiquement supprimés.",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "Supprimer les messages d'expulsion"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "Si oui ou non les messages après un mute seront automatiquement supprimés.",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "Supprimer les messages de mute"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "Si oui ou non les messages après un softban seront automatiquement supprimés.",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "Supprime les messages de Softban"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "Si oui ou non les messages après un warn seront automatiquement supprimés.",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "Supprimer les messages d'avertissement"
 		},
 		"mutedRole": {
@@ -1696,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "Fin du délai de baisse du volume",
-			"description": "Le temps pendant lequel personne ne doit parler pour que le volume retourne à la normale."
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Plateforme de musique par défault",
@@ -1776,6 +1759,11 @@
 		}
 	},
 	"music": {
+		"paused": "Playback has been paused!",
+		"resumed": "Playback has been resumed!",
+		"endOfQueue": "Stopped. Reached end of playlist!",
+		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "Aucune musique n'est jouée !",
 		"notConnected": "Le bot n'est pas connecté à un salon vocal !",
 		"voiceChannelRequired": "Vous devez être dans un salon vocal pour utiliser cette commande !"

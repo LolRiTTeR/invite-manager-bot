@@ -355,7 +355,7 @@
 				},
 				"description": "Yardımı gösterir."
 			},
-			"text": "Bu, kullanabileceğiniz komutların bir listesidir. `{{ prefix }} yardım <command>`(ör.`{{ prefix }}help add-ranks`) kullanarak belirli bir komut hakkında daha fazla bilgi alabilirsiniz.",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "Kullanım"
 			}
@@ -605,23 +605,6 @@
 			"title": "Liderlik Tablosu",
 			"lastUpdate": "Last updated {{{ lastUpdate }}}, next update {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "DEPRECATED - bu komut yakında kaldırılacak."
-				},
-				"description": "DEPRECATED - bu komut yakında kaldırılacak."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "DEPRECATED - bu komut yakında kaldırılacak.",
-					"page": "DEPRECATED - bu komut yakında kaldırılacak."
-				},
-				"description": "DEPRECATED - bu komut yakında kaldırılacak."
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{ rol }}} zaten kayda değer.",
 			"self": {
@@ -747,9 +730,9 @@
 				"maxGuilds": "Maksimum lonca sayısı için premiumu etkinleştirdiniz."
 			},
 			"check": {
-				"declined": "Prim ödemeniz reddedildi, lütfen Patreon'unuzu kontrol edin.",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "{{{ valid }}} süresine kadar aktif bir premiumunuz bulunmakta.\n\n{{{ cmd }}} komutunu kullanarak daha fazla bilgiye sahip olabilirsiniz.",
-				"notFound": "Hesabınızın premium aboneliği ilişkilendirilmemiş.\n\nPatreon'u kullanarak prim aldıysanız, ödüllerinizi toplamak için lütfen Discord hesabınızı Patreon'a bağladığınızdan emin olun, ardından bu komutu tekrar çalıştırın.",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "Premium Abonelik Kontrolü",
 				"paused": "Görünüşe gör aboneliğiniz durdurulmuş, Patreon sayfanızı kontrol edin."
 			},
@@ -771,7 +754,7 @@
 					"title": "Premium Özellik: Tarihçeyi dışa aktarım"
 				},
 				"patreon": {
-					"text": "Patreon taahhüdünüzü doğrulamak ve etkinleştirmek için {{{ cmd }}} komutunu çalıştırın.",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "Patreon'da premium satın aldıysanız"
 				},
 				"servers": {
@@ -864,7 +847,7 @@
 			"rankNotFound": "{{{Role}}} rütbesi mevcut değil!",
 			"self": {
 				"args": {
-					"rank": "Rütbesini kaldırmak istediğiniz kullanıcı."
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "Bir rank'ı kaldırın."
 			}
@@ -1635,23 +1618,23 @@
 			"title": "Mod Günlük Kanalı"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "\"Ban\" mesajlarının otomatik olarak silinip silinmeyeceği.",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "Yasaklama Mesajını Sil"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "\"Kick\" mesajlarının otomatik olarak silinip silinmeyeceği.",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "Kick Mesajını Sil"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "\"Mute\" mesajlarının otomatik olarak silinip silinmeyeceği.",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "Susturma Mesajlarını Sil."
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "\"Softban\" mesajlarının otomatik olarak silinip silinmeyeceği.",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "Softban Mesajlarını Sil"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "\"Uyarı\" ceza mesajlarının otomatik olarak silinip silinmeyeceği.",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "Uyarı Mesajlarını Sil."
 		},
 		"mutedRole": {
@@ -1696,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "Fade Müzik Bitiş Gecikmesi",
-			"description": "Sesin normale dönmesi için kimsenin konuşmasının gerekmediği sürenin gecikmesi."
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Varsayılan Müzik Platformu",
@@ -1776,6 +1759,11 @@
 		}
 	},
 	"music": {
+		"paused": "Playback has been paused!",
+		"resumed": "Playback has been resumed!",
+		"endOfQueue": "Stopped. Reached end of playlist!",
+		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "Şu anda çalınan müzik yok!",
 		"notConnected": "Bot bir ses kanalına bağlı değil!",
 		"voiceChannelRequired": "Bu komutu kullanmak için ses kanalında olmanız gerekir!"

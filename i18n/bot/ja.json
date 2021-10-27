@@ -355,7 +355,7 @@
 				},
 				"description": "ヘルプを表示する。"
 			},
-			"text": "これはあなたが使用できるコマンドのリストです。 特定のコマンドに関するより詳しい情報は `{{prefix}} help <command>`（例: `{{prefix}} help add-ranks`）を使うことで得られます。",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "使用方法"
 			}
@@ -605,23 +605,6 @@
 			"title": "リーダーボード",
 			"lastUpdate": "最後の更新 {{{ lastUpdate }}}, 次の更新 {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "非推奨 - このコマンドはまもなく削除されます。"
-				},
-				"description": "非推奨 - このコマンドはまもなく削除されます。"
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "非推奨 - このコマンドはまもなく削除されます。",
-					"page": "非推奨 - このコマンドはまもなく削除されます。"
-				},
-				"description": "非推奨 - このコマンドはまもなく削除されます。"
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{role}}}はすでにメンションできるようにされています。",
 			"self": {
@@ -747,9 +730,9 @@
 				"maxGuilds": "You have activated premium on the maximum number of guilds."
 			},
 			"check": {
-				"declined": "使用料の支払いが拒否されました。Patreonを確認してください。",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "あなたは{{{valid}}}まで有効なプレミアム購読を有効にしています。\n\n詳細については{{{cmd}}}を使用してください。",
-				"notFound": "あなたのアカウントにはプレミアム登録が関連付けられていません。\n\nPatreonを使用してプレミアムを取得した場合は、DiscordアカウントをPatreonにリンクして報酬を集めるようにしてから、もう一度このコマンドを実行してください。",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "プレミアム購読を確認する",
 				"paused": "Your subscription currently seems to be paused, please check your Patreon."
 			},
@@ -771,7 +754,7 @@
 					"title": "プレミアム機能：履歴のエクスポート"
 				},
 				"patreon": {
-					"text": "{{{cmd}}}を実行してPatreonの契約書を検証して有効にします。",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
@@ -864,7 +847,7 @@
 			"rankNotFound": "ランク{{{role}}}は存在しません。",
 			"self": {
 				"args": {
-					"rank": "The user for which you want to remove the rank."
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "ランクを外します。"
 			}
@@ -1635,23 +1618,23 @@
 			"title": "MODログチャンネル"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "「禁止」プッシュメッセージを自動的に削除するかどうか。",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "BANメッセージを削除"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "「キック」プッシュメッセージが自動的に削除されるかどうか。",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "キックメッセージを削除"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "「ミュート」プッシュメッセージが自動的に削除されるかどうか。",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "ミュートメッセージを削除"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "「Softban」プッシュメッセージが自動的に削除されるかどうか。",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "ソフトBANメッセージを削除"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "「警告」プッシュメッセージを自動的に削除するかどうか。",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "警告メッセージを削除"
 		},
 		"mutedRole": {
@@ -1696,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "ミュージックのフェードが終了するまでの時間",
-			"description": "音量が正常に戻るまでに誰も話していない秒数の遅延。"
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Default Music Platform",
@@ -1776,6 +1759,11 @@
 		}
 	},
 	"music": {
+		"paused": "Playback has been paused!",
+		"resumed": "Playback has been resumed!",
+		"endOfQueue": "Stopped. Reached end of playlist!",
+		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "現在再生中の音楽はありません。",
 		"notConnected": "BOTは音声チャンネルに接続されていません！",
 		"voiceChannelRequired": "そのコマンドを使うには音声チャンネルにいる必要があります。"

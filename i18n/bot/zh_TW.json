@@ -1,7 +1,7 @@
 {
 	"bot": {
 		"invite": {
-			"title": "新增機器人到您的伺服器"
+			"title": "新增機器人到伺服器"
 		},
 		"patreon": {
 			"title": "Patreon"
@@ -12,7 +12,7 @@
 		"website": {
 			"title": "機器人網站"
 		},
-		"mentionHelp": "我的指令前綴是 `{{{ prefix }}}`\n\n使用 `{{{ prefix }}}help` 查看所有指令。"
+		"mentionHelp": "我目前的指令前綴是 `{{{ prefix }}}`\n\n使用 `{{{ prefix }}}help` 查看所有指令。"
 	},
 	"captcha": {
 		"invalid": "驗證碼不符合，請再試一次。"
@@ -20,39 +20,39 @@
 	"cmd": {
 		"addInvites": {
 			"amount": {
-				"negative": "從 {{{ member }}} 移除了 **{{ amount }}** 個邀請，現在有： **{{ totalInvites }}** 個邀請。",
+				"negative": "從 {{{ member }}} 移除 **{{ amount }}** 個邀請，現在有： **{{ totalInvites }}** 個邀請。",
 				"positive": "新增 **{{ amount }}** 個邀請給 {{{ member }}} ，現在有： **{{ totalInvites }}** 個邀請。"
 			},
 			"self": {
 				"args": {
-					"amount": "使用者的邀請數量將被增加/減少。使用負數來減少邀請數量。",
-					"reason": "增加/減少邀請數量的原因。",
-					"user": "使用者將收到/失去額外獎勵邀請數量。"
+					"amount": "將新增 / 移除使用者的邀請數量。使用負(-)數來減少邀請數量。",
+					"reason": "新增 / 移除邀請數量的原因。",
+					"user": "使用者將收到 / 失去獎勵邀請數量。"
 				},
-				"description": "增加/減少成員的邀請數量。"
+				"description": "新增 / 移除一位成員的邀請數量。"
 			},
 			"zero": "新增零個邀請真的沒有意義……",
 			"numberTooLarge": "您提供的數字太大了。",
 			"numberTooSmall": "您提供的數字太小了。"
 		},
 		"addRank": {
-			"created": "新增等級 {{{ role }}} 需要 {{ invites }} 個邀請並且有以下條件： {{ description }}",
+			"created": "新增等級 {{{ role }}} 需要 {{ invites }} 個邀請然後有以下敘述： {{ description }}",
 			"roleTooHigh": "身分組 {{{ role }}} 高於我的身分組 ({{{ myRole }}}) ，所以我不能指派它給成員。",
 			"self": {
 				"args": {
-					"info": "使用者能看見的條件所以他們會更了解這個等級。",
-					"invites": "需要的邀請數量來達到等級。",
-					"role": "當達到等級時使用者將獲得的身分組。"
+					"info": "使用者將看見的敘述，所以他們會更了解這個等級。",
+					"invites": "需要達到等級的邀請數量。",
+					"role": "當達到等級時使用者將收到的身分組。"
 				},
 				"description": "新增一個新的等級。"
 			},
-			"updated": "等級 {{{ role }}} 更新：需要 {{ invites }} 個邀請並且有以下條件： {{ description }}"
+			"updated": "等級 {{{ role }}} 更新：現在需要 {{ invites }} 個邀請然後有以下敘述： {{ description }}"
 		},
 		"ban": {
 			"canNotBan": "我不能停權此使用者。",
-			"done": "使用者成功地被停權。",
-			"error": "停權使用者時發生錯誤：\n{{ error }}",
-			"missingPermissions": "我需要 `對成員停權` 的權限來執行這個指令。",
+			"done": "成功停權使用者。",
+			"error": "停權此使用者時發生錯誤：\n{{ error }}",
+			"missingPermissions": "我需要 `對成員停權` 的權限來執行此指令。",
 			"self": {
 				"args": {
 					"deleteMessageDays": "距今多久以前的訊息將被刪除（以天數為單位）。",
@@ -61,23 +61,23 @@
 				},
 				"description": "從伺服器停權一位成員。",
 				"flags": {
-					"deleteMessageDays": "如果指定時間將刪除被停權成員近數日內的訊息。"
+					"deleteMessageDays": "如果指定時間將刪除被停權成員多少天以內的訊息。"
 				}
 			},
-			"canNotSoftBan": "我不能軟停權此使用者。 "
+			"canNotSoftBan": "我不能暫時停權此使用者。 "
 		},
 		"botConfig": {
-			"canNotClear": "此設置選項 **{{ key }}** 不能被清除。您可以使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。",
+			"canNotClear": "此設置選項 **{{ key }}** 不能被清除。您可以使用 `{{ prefix }}botConfig {{ key }} default` 來重設回預設值。",
 			"changed": {
-				"text": "此設置選項已更改完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來再次更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。"
+				"text": "此設置選項已經更改完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來再次更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重設回預設值。"
 			},
 			"current": {
 				"clear": "使用 `{{ prefix }}botConfig {{ key }} none` 來清除它。",
 				"notSet": "此設置選項**沒有**設定。\n使用 `{{ prefix }}config {{ key }} <value>` 來設定它。",
-				"text": "此設置選項已設定完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重置回到預設值。",
+				"text": "此設置選項目前已經設定完成。\n使用 `{{ prefix }}botConfig {{ key }} <value>` 來更改它。\n使用 `{{ prefix }}botConfig {{ key }} default` 來重設回預設值。",
 				"title": "目前的值"
 			},
-			"customOnly": "**此指令只有自定義機器人可用。**\n如果您在尋找伺服器設置選項，請使用 `{{ prefix }}config` 指令。\n\n參考我們的 Patreon 網站來得知更多有關自定義機器人的訊息： {{{ patreon }}}",
+			"customOnly": "**此指令只有自定義機器人可用。**\n如果您在尋找伺服器設置選項，請使用 `{{ prefix }}config` 指令。\n\n參考我們的 Patreon 網站可以獲取自定義機器人的詳細資訊： {{{ patreon }}}",
 			"invalid": {
 				"twitchOnly": " Discord 的實況只支援 twitch.tv 網址。"
 			},
@@ -96,44 +96,44 @@
 			"sameValue": "此設置選項已經是該值。",
 			"self": {
 				"args": {
-					"key": "您想要顯示/更改的機器人設置選項。",
+					"key": "您想要顯示 / 更改的機器人設置選項。",
 					"value": "新設定的值。"
 				},
 				"description": "顯示和更改機器人的設置選項。"
 			},
-			"text": "以下是您的機器人的所有配置設定。\n使用`{{ prefix }}botConfig 1` 來檢視單一設定\n使用`{{ prefix }}botConfig 2 3` 來設定配置 4 到 5",
-			"title": "自定義機器人配置"
+			"text": "以下是機器人所有的設置選項。\n使用 `{{ prefix }}botConfig <key>` 來檢視單一設置選項\n使用 `{{ prefix }}botConfig <key> <value>` 來設定 <key> 到 <value>",
+			"title": "自定義機器人設置選項"
 		},
 		"botInfo": {
 			"guilds": "伺服器",
 			"members": "成員",
 			"premium": {
-				"active": "這個伺服器有一個**啟動付費**訂閱。",
-				"custom": "您正在使用一個自定義版本的機器人！",
-				"none": "這個伺服器目前**沒有**付費。",
-				"title": "付費"
+				"active": "此伺服器**激活高級版**訂閱。",
+				"custom": "您正在使用自定義版本的機器人！",
+				"none": "此伺服器目前**未激活**高級版訂閱。",
+				"title": "高級版"
 			},
 			"self": {
-				"description": "得到關於機器人的一般資訊。"
+				"description": "獲取關於機器人的一般資訊。"
 			},
 			"shards": {
-				"current": "目前的Shard",
-				"total": "總共的Shards"
+				"current": "目前的分流",
+				"total": "所有分流"
 			},
-			"uptime": "正常運作時間",
+			"uptime": "運作持續時間",
 			"version": "版本"
 		},
 		"caseDelete": {
-			"done": "案件刪除",
+			"done": "刪除案件",
 			"notFound": "案件未找到",
 			"self": {
 				"args": {
 					"caseNumber": "案件編號",
-					"reason": "移除案件的原因。"
+					"reason": "移除此案件的原因。"
 				},
-				"description": "刪除一個特定案件。"
+				"description": "刪除一個指定案件。"
 			},
-			"title": "案件#{{ id }}"
+			"title": "案件編號 #{{ id }}"
 		},
 		"caseView": {
 			"notFound": "案件未找到",
@@ -141,52 +141,52 @@
 				"args": {
 					"caseNumber": "案件編號"
 				},
-				"description": "檢視一個特定案件的資訊。"
+				"description": "檢視一個指定案件的資訊。"
 			},
-			"strike": "{{{ member }}}收到{{{ amount }}} strikes因為違反{{{ violation }}}規則{{{ date }}}。",
-			"title": "案件#{{ id }}"
+			"strike": "{{{ member }}} 收到 {{{ amount }}} 個記點，因為違反違規事項 {{{ violation }}} {{{ date }}} 。",
+			"title": "案件編號 #{{ id }}"
 		},
 		"check": {
-			"noHistory": "使用者沒有任何歷史。",
+			"noHistory": "使用者沒有任何歷史記錄。",
 			"punishments": {
-				"entry": "{{ punishment }}因為他有{{ amount }} strikes {{ date }}",
+				"entry": "他被懲罰 {{ punishment }} 因為有 {{ amount }} 個記點 {{ date }}",
 				"title": "懲罰",
-				"total": "總共的懲罰",
-				"totalText": "{{{ amount }}}懲罰。"
+				"total": "所有懲罰",
+				"totalText": "{{{ amount }}} 個懲罰。"
 			},
 			"self": {
 				"args": {
-					"user": "檢查使用者。"
+					"user": "被檢查的使用者。"
 				},
-				"description": "檢查使用者的violation和懲罰歷史。"
+				"description": "檢查使用者的違規事項和懲罰歷史記錄。"
 			},
 			"strikes": {
-				"entry": "#{{ id }}—收到{{ amount }} strikes因為{{ violation }} {{ date }}",
-				"title": "Strikes",
-				"total": "總共的Strikes",
-				"totalText": "收到{{{ total }}} strikes因為{{{ amount }}} violations。"
+				"entry": "#{{ id }} — 收到 {{ amount }} 個記點，因為違反違規事項 {{ violation }} {{ date }}",
+				"title": "記點",
+				"total": "所有記點",
+				"totalText": "因為 {{{ amount }}} 個違規事項收到 {{{ total }}} 個記點。"
 			}
 		},
 		"clean": {
 			"error": "錯誤",
-			"invalidQuantity": "您必須指定一個正數來清除訊息。",
+			"invalidQuantity": "您必須指定一個正整數來刪除訊息",
 			"self": {
 				"args": {
-					"member": "訊息被刪除的使用者。",
-					"numberOfMessages": "將被搜尋的訊息數量。",
-					"quantity": "多少個訊息應該被刪除。",
-					"type": "該類型的訊息將被刪除。"
+					"member": "被刪除訊息的使用者。",
+					"numberOfMessages": "被搜尋的訊息數量。",
+					"quantity": "多少則訊息應該被刪除。",
+					"type": "將被刪除的訊息類型。"
 				},
-				"description": "清除一個頻道中一些類型的訊息。"
+				"description": "清除一個頻道中數個類型的訊息。"
 			},
-			"text": "刪除{{ amount }}訊息。\n這個訊息將在5秒內被刪除。",
+			"text": "刪除 {{ amount }} 則訊息。\n此訊息將會在 5 秒後被刪除。",
 			"title": "刪除訊息",
-			"textReactions": "刪除包含反應的{{ amount }}訊息。"
+			"textReactions": "刪除 {{ amount }} 則有反應的訊息。"
 		},
 		"cleanShort": {
 			"self": {
 				"args": {
-					"maxTextLength": "所有短於這個的訊息將被刪除。",
+					"maxTextLength": "將刪除所有短於此的訊息。",
 					"numberOfMessages": "將被搜尋的訊息數量。"
 				},
 				"description": "清除短訊息"
@@ -196,145 +196,145 @@
 			"self": {
 				"args": {
 					"numberOfMessages": "將被搜尋的訊息數量。",
-					"text": "所有包含這個字的訊息將被刪除。"
+					"text": "將刪除有這個字的訊息。"
 				},
-				"description": "刪除包含一些關鍵字的訊息。"
+				"description": "刪除有關鍵字的訊息。"
 			}
 		},
 		"clearInvites": {
-			"done": "清除{{ amount }}使用者的邀請！",
+			"done": "清除 {{ amount }} 個使用者的邀請數量！",
 			"self": {
 				"args": {
-					"clearBonus": "傳送`true`如果您想要移除額外獎勵的邀請，否則`false`（預設值）。",
-					"user": "要被清除所有邀請的使用者。如果省略則清除所有使用者。"
+					"clearBonus": "輸入 `true` 可以移除獎勵邀請數量，否則請輸入 `false` （預設值）。",
+					"user": "清除使用者所有的邀請數量。如果省略則清除所有的使用者。"
 				},
-				"description": "清除伺服器/一個使用者的邀請。",
+				"description": "清除伺服器 / 一個使用者的邀請數量。",
 				"flags": {
-					"clearBonus": "增加此標誌來清除額外獎勵的邀請。否則額外獎勵的邀請被留下不會改變。",
-					"date": "應該開始被計算的邀請的日期。預設值是今日。"
+					"clearBonus": "新增此標記來清除獎勵邀請數量。否則獎勵邀數量不會改變。",
+					"date": "應該開始計算邀請數量的日期。預設值是今天。"
 				}
 			}
 		},
 		"config": {
-			"canNotClear": "配置設定**{{ key }}**不能被清除。您可以使用`config {{ key }} default`來重置它到預設值。",
+			"canNotClear": "此設置選項 **{{ key }}** 不能被清除。您可以使用 `config {{ key }} default` 來重設回預設值。",
 			"changed": {
-				"text": "這個配置已經被更改。\n使用`{{ prefix }}config {{ key }} 1`來再次更改它。\n使用`{{ prefix }}config {{ key }} default`來重置它到預設值。"
+				"text": "此設置選項已經更改完成。\n使用 `{{ prefix }}config {{ key }} <value>` 來再次更改它。\n使用 `{{ prefix }}config {{ key }} default` 來重設回預設值。"
 			},
 			"current": {
-				"clear": "使用`{{ prefix }}config {{ key }} none`來清除它。",
-				"notSet": "這個配置目前**沒有**被設定。\n使用`{{ prefix }}config {{ key }} 1`來設定它。",
-				"text": "這個配置目前被設定。\n使用`{{ prefix }}config {{ key }} 1`來更改它。\n使用`{{ prefix }}config {{ key }} default`來重置它到預設值。",
+				"clear": "使用 `{{ prefix }}config {{ key }} none` 來清除它。",
+				"notSet": "此設置選項目前**沒有**設定。\n使用 `{{ prefix }}config {{ key }} <value>` 來設定它。",
+				"text": "此設置選項目前已經設定完成。\n使用 `{{ prefix }}config {{ key }} <value>` 來更改它。\n使用 `{{ prefix }}config {{ key }} default` 來重設回預設值。",
 				"title": "目前的值"
 			},
 			"invalid": {
-				"canNotReadMessages": "我沒有權限來**讀取訊息**在那個頻道。",
-				"canNotSendEmbeds": "我沒有權限來**嵌入連結**在那個頻道。",
-				"canNotSendMessages": "我沒有權限來**發送訊息**在那個頻道。",
-				"mustBeTextChannel": "那個頻道不是一個文字頻道。",
-				"multipleJoinRolesIsPremium": "Multiple join roles are a premium feature."
+				"canNotReadMessages": "我在頻道沒有**檢視頻道**權限。",
+				"canNotSendEmbeds": "我在頻道沒有**嵌入連結**權限。",
+				"canNotSendMessages": "我在頻道沒有**發送訊息**權限。",
+				"mustBeTextChannel": "頻道不是一個文字頻道。",
+				"multipleJoinRolesIsPremium": "多個加入身分組是高級版的一種功能。"
 			},
 			"new": {
 				"title": "新的值"
 			},
-			"none": "沒有",
-			"notSet": "這些設定還沒被設定。",
+			"none": "無",
+			"notSet": "這些設置選項還沒設定。",
 			"preview": {
 				"nextMessage": "<See next message>",
 				"title": "預覽"
 			},
 			"previous": {
-				"title": "以前的值"
+				"title": "先前的值"
 			},
-			"sameValue": "這個配置已經被設定到那個值。",
+			"sameValue": "此設置選項已經設定成該值。",
 			"self": {
 				"args": {
-					"key": "您想要顯示/更改的配置設定。",
-					"value": "新設定的值。"
+					"key": "您想要顯示 / 更改的設置選項。",
+					"value": "設置選項的新值。"
 				},
-				"description": "顯示和更改伺服器的配置。"
+				"description": "顯示和更改伺服器的設置選項。"
 			},
-			"text": "以下是您的伺服器的所有配置設定。\n使用`{{ prefix }}config 1` 來檢視單一設定\n使用`{{ prefix }}config 2 3` 來設定配置 4 到 5 ",
-			"title": "您的配置設定"
+			"text": "以下是伺服器所有的設置選項。\n使用 `{{ prefix }}config <key>` 來檢視單一設置選項\n使用 `{{ prefix }}config <key> <value>` 來設定 <key> 到 <value>",
+			"title": "您的設置選項"
 		},
 		"createInvite": {
-			"done": "創立邀請代碼**{{{ code }}}**名字為**{{ name }}**在{{{ channel }}}。",
+			"done": "在頻道 {{{ channel }}} 建立名為 **{{ name }}** 的邀請代碼 **{{{ code }}}** 。",
 			"self": {
 				"args": {
-					"channel": "邀請代碼被創立在頻道。使用目前的頻道為默認。",
+					"channel": "已在頻道建立邀請代碼。使用目前的頻道作為預設值。",
 					"name": "邀請代碼的名字。"
 				},
-				"description": "創立獨特的邀請代碼。"
+				"description": "建立獨特的邀請代碼。"
 			}
 		},
 		"credits": {
-			"developers": "機器人開發者",
+			"developers": "開發團隊",
 			"moderators": "審核團隊",
 			"managers": "社群團隊",
-			"designers": "圖案設計師",
+			"designers": "商標設計師",
 			"self": {
-				"description": "顯示機器人的開發人員和合作人員。"
+				"description": "顯示開發團隊和貢獻開發人員。"
 			},
 			"staff": "支援團隊",
 			"translators": "翻譯人員"
 		},
-		"error": "執行指令時發生一個錯誤。請報告這個給一個開發人員：\n{{{ error }}}",
+		"error": "執行指令時發生一個錯誤。請向開發團隊報告：\n{{{ error }}}",
 		"export": {
-			"preparing": "請等候當我們準備檔案時……",
+			"preparing": "正在準備檔案，請稍等……",
 			"self": {
 				"args": {
-					"type": "輸出您想要的類型。"
+					"type": "您想要的輸出類型。"
 				},
-				"description": "輸出InviteManager的資料到一個csv表單。"
+				"description": "輸出 InviteManager 的資料庫到 csv 表格。"
 			},
-			"title": "InviteManager - Export"
+			"title": "InviteManager — 輸出"
 		},
 		"fake": {
 			"join": {
 				"entry": {
-					"multi": "**{{ name }}** (**{{ times }}** times)",
+					"multi": "**{{ name }}** （ **{{ times }}** 次）",
 					"single": "**{{ name }}**",
-					"text": "**{{ name }}** 加入了 **{{ times }} 次**, 邀請人:"
+					"text": "**{{ name }}** 加入 **{{ times }} 次**，邀請者是："
 				}
 			},
-			"none": "暫時未偵測到虛假邀請",
-			"noneSinceJoin": "自從機器人被邀請進服後都未偵測到虛假邀請",
+			"none": "目前未偵測到假邀請數量。",
+			"noneSinceJoin": "從機器人加入之後都未偵測到假邀請數量。",
 			"self": {
 				"args": {
-					"page": "Which page of the fake list to get."
+					"page": "假邀請數量列表的頁數。"
 				},
-				"description": "幫助尋找嘗試欺騙邀請的玩家"
+				"description": "協助找到試圖欺騙的使用者。"
 			},
-			"title": "虛假邀請"
+			"title": "假邀請數量"
 		},
 		"getBot": {
 			"self": {
-				"description": "拿到機器人的邀請鏈接"
+				"description": "機器人的邀請連結。"
 			},
-			"title": "把 InviteManager 邀請到您的伺服"
+			"title": "新增 InviteManager 到伺服器"
 		},
 		"graph": {
 			"joins": {
-				"text": "這個圖表顯示進入你伺服的用戶",
-				"title": "已加入的用戶"
+				"text": "此圖表顯示加入伺服器的使用者。",
+				"title": "加入的使用者"
 			},
 			"leaves": {
-				"text": "這個圖表顯示離開你伺服的用戶",
-				"title": "已退出用戶"
+				"text": "此圖表顯示離開伺服器的使用者。",
+				"title": "離開的使用者"
 			},
 			"self": {
 				"args": {
-					"duration": "The duration period for the chart.",
-					"type": "顯示的圖表類型",
-					"from": "Start date of the chart",
-					"to": "End date of the chart"
+					"duration": "圖表的日期期間。",
+					"type": "圖表的顯示類型。",
+					"from": "圖表的開始日期",
+					"to": "圖表的最後日期"
 				},
-				"description": "顯示關於這個伺服的各種統計資料"
+				"description": "顯示伺服器各種不同的統計資訊圖表。"
 			},
-			"minDays": "你至少要選擇 {{{ days }}} 天",
-			"maxDays": "你最多能選擇 {{{ days }}} 天",
+			"minDays": "您至少要選擇 {{{ days }}} 天",
+			"maxDays": "您最多能選擇 {{{ days }}} 天",
 			"joinsAndLeaves": {
-				"title": "已加入和退出用戶",
-				"text": "這個圖表顯示已加入和退出伺服的用戶"
+				"title": "加入和離開的使用者",
+				"text": "此圖表顯示加入和離開伺服器的使用者。"
 			}
 		},
 		"help": {
@@ -345,834 +345,817 @@
 				"title": "指令"
 			},
 			"description": {
-				"title": "介紹"
+				"title": "敘述"
 			},
-			"links": "鏈接",
-			"missingPermissions": "機器人目前缺少以下權限: {{{ value }}}",
+			"links": "連結",
+			"missingPermissions": "機器人目前缺少以下的權限： {{{ value }}}",
 			"self": {
 				"args": {
-					"command": "The command to get detailed information for."
+					"command": "獲取詳細資訊的指令。"
 				},
-				"description": "顯示幫助"
+				"description": "顯示協助資訊。"
 			},
-			"text": "這列表顯示你可以使用的所有指令。你可以通過 `{{ prefix }}help <指令>` 來搜索特定的指令（例子： `{{ prefix }}help add-ranks`）",
+			"text": "此列表是您可以使用的所有指令。你可以使用 `{{ prefix }}help <command>` 來獲取指定指令的詳細資訊（例如： `{{ prefix }}help add-rank` ）",
 			"usage": {
 				"title": "使用方法"
 			}
 		},
 		"info": {
 			"bonusInvites": {
-				"details": "使用 {{{ cmd }}} 來知道詳情。",
-				"entry": "{{ amount }} from {{{ creator }}} - {{ date }}, reason: {{ reason }}",
-				"more": "增加 {{ amount }} 個獎勵邀請",
-				"none": "這個用戶沒有獲得任何獎勵邀請。",
-				"noReason": "沒有原因",
-				"title": "獎勵邀請"
+				"details": "使用 {{{ cmd }}} 獲取詳細資訊。",
+				"entry": "{{{ creator }}} 在 {{ date }} 給 {{ amount }} 個，原因是： {{ reason }}",
+				"more": "新增 {{ amount }} 個獎勵邀請",
+				"none": "此成員目前沒有收到獎勵邀請",
+				"noReason": "無原因",
+				"title": "獎勵邀請數量"
 			},
 			"created": {
-				"title": "已創建"
+				"title": "已建立"
 			},
 			"invitedMembers": {
-				"details": "使用 {{{ cmd }}} 來知道詳情",
-				"more": "Plus another {{ amount }} more invited members",
-				"none": "這個用戶暫時還沒有邀請過任何人",
-				"title": "已邀請用戶"
+				"details": "使用 {{{ cmd }}} 獲取詳細資訊。",
+				"more": "新增 {{ amount }} 個已邀請成員",
+				"none": "此成員目前沒有邀請其他人",
+				"title": "已邀請成員"
 			},
 			"invites": {
 				"clear": {
-					"text": "**{{ total }}** (**{{ regular }}** regular, **{{ custom }}** bonus)",
-					"title": "Cleared invites"
+					"text": "**{{ total }}** 個所有邀請（ **{{ regular }}** 個普通邀請， **{{ custom }}** 個獎勵邀請）",
+					"title": "已清除邀請數量"
 				},
-				"text": "**{{ total }}** (**{{ regular }}** regular, **{{ custom }}** bonus, **{{ fake }}** fake, **{{ leave }}** leaves)",
-				"title": "Invites"
+				"text": "**{{ total }}** 個所有邀請（ **{{ regular }}** 個普通邀請， **{{ custom }}** 個獎勵邀請， **{{ fake }}** 個假邀請， **{{ leave }}** 個離開邀請）",
+				"title": "邀請數量"
 			},
 			"joined": {
-				"text": "{{ amount }} times",
-				"title": "Joined"
+				"text": "{{ amount }} 次",
+				"title": "已加入"
 			},
 			"joins": {
 				"entry": {
-					"invite": "{{{ member }}} ({{ times }} times)",
-					"text": "{{ total }} times {{ time }}, invited by:"
+					"invite": "{{{ member }}} （ {{ times }} 次）",
+					"text": "{{ total }} 次在 {{ time }} ，邀請者是："
 				},
-				"more": "Plus another {{ amount }} more joins",
-				"title": "Joins",
-				"unknown": "unknown (this only works for new members)"
+				"more": "新增 {{ amount }} 個加入",
+				"title": "加入",
+				"unknown": "未知（新成員專用）"
 			},
 			"lastJoined": {
-				"notInGuild": "User is not part of your guild",
-				"title": "Last joined"
+				"notInGuild": "使用者不是您的成員",
+				"title": "上次加入"
 			},
 			"regularInvites": {
-				"entry": "{{ uses }} from {{ code }} - created {{ createdAt }}",
-				"more": "Plus another {{ amount }} more invite codes",
-				"none": "This member has not invited anyone so far",
-				"title": "Regular invites"
+				"entry": "名為 {{ code }} 的邀請使用 {{ uses }} 次 — 建立於 {{ createdAt }}",
+				"more": "新增 {{ amount }} 個邀請代碼",
+				"none": "此成員目前沒有邀請其他人",
+				"title": "普通邀請數量"
 			},
 			"self": {
 				"args": {
-					"details": "Request only specific details about a member.",
-					"page": "What page of the details to show. You can also use the reactions to navigate.",
-					"user": "The user for whom you want to see additional info."
+					"details": "請求一位指定成員的詳細資訊。",
+					"page": "您想要顯示詳細資訊的頁面。您也可以使用反應來操控。",
+					"user": "您想要顯示詳細資訊的使用者。"
 				},
-				"description": "Show info about a specific member."
+				"description": "顯示一位指定成員的資訊。"
 			}
 		},
 		"interactiveConfig": {
-			"useWeb": "Please use the {{{ configCmd }}} command or our website at {{{ link }}} to configure your bot.",
-			"add": "Enter a value or list of values to add.",
-			"change": "**Current value**\n{{{ current }}}\n\n**Possible values**\n{{{ possible }}}",
+			"useWeb": "請使用 {{{ configCmd }}} 指令或參閱我們的網站 {{{ link }}} 來設定機器人。",
+			"add": "輸入想要新增到列表的值。",
+			"change": "**目前的值**\n{{{ current }}}\n\n**可用的值**\n{{{ possible }}}",
 			"current": {
-				"title": "Current value"
+				"title": "目前的值"
 			},
 			"list": {
 				"add": {
-					"text": "Add a new value to the list.",
-					"title": "Add"
+					"text": "新增一個值到列表。",
+					"title": "新增"
 				},
 				"clear": {
-					"text": "Clear the whole list of all values.",
-					"title": "Clear"
+					"text": "清除整個列表的所有值。",
+					"title": "清除"
 				},
 				"remove": {
-					"text": "Remove an existing value from the list.",
-					"title": "Remove"
+					"text": "從列表移除一個已存在的值。",
+					"title": "移除"
 				},
 				"set": {
-					"text": "Set the whole list using space separated values.",
-					"title": "Set"
+					"text": "設定所有值的列表並且使用空格分隔每一個值。",
+					"title": "設定"
 				}
 			},
 			"more": {
-				"description": "Show more entries",
-				"title": "More"
+				"description": "顯示詳細項目",
+				"title": "詳細"
 			},
-			"new": "Enter a new value:",
+			"new": "輸入一個新的值：",
 			"none": "<None>",
 			"possible": {
-				"title": "Possible values"
+				"title": "可用的值"
 			},
-			"remove": "Enter a value or a list of values to remove.",
-			"removeEmpty": "The list is already empty.",
+			"remove": "輸入想要從列表移除的值。",
+			"removeEmpty": "列表已經是空的。",
 			"self": {
-				"description": "Interactive Config"
+				"description": "互動式設置選項"
 			},
-			"set": "Enter the new values for the list.",
+			"set": "輸入新的值到列表。",
 			"values": {
-				"boolean": "`Yes` or `No`",
-				"channel": "Any channel, for example: #general",
-				"channel[]": "A list of channels, for example: #general #bot-commands",
-				"number": "Any number",
-				"role": "Any role, for example: @Admin",
-				"role[]": "A list of roles, for example: @Admin @Mod",
-				"string": "Any text",
-				"string[]": "A list of words, for example: word another \"word with space\"",
-				"enum<musicplatformtypes>[]": "A list of music platform types",
+				"boolean": "`Yes` 或 `No`",
+				"channel": "任何頻道，例如： #general",
+				"channel[]": "頻道列表，例如： #general #bot-commands",
+				"number": "任何數字",
+				"role": "任何身分組，例如： @Admin",
+				"role[]": "身分組列表，例如： @Admin @Mod",
+				"string": "任何文字",
+				"string[]": "文字列表，例如：文字和\"有空格的文字\"",
+				"enum<musicplatformtypes>[]": "音樂平臺類型的列表",
 				"enum<musicplatformtypes>": "cmd.interactiveConfig.values.enum<musicplatformtypes>"
 			},
-			"welcome": "Use the reactions to pick one of the available options."
+			"welcome": "使用反應來選擇可用的選項。"
 		},
 		"inviteCodeConfig": {
 			"changed": {
-				"text": "This invite code config has been changed.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it again.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to reset it to the default."
+				"text": "此邀請代碼設置選項已經更改完成。\n\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` 來再次更改它。\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` 來重設回預設值。"
 			},
 			"current": {
-				"clear": "Use `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
-				"notSet": "This invite code config is currently **not** set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to set it.",
-				"text": "This invite code config is currently set.\n\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` to change it.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default` to reset it to the default.\nUse `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` to clear it.",
-				"title": "Current Value"
+				"clear": "使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` 來清除它。",
+				"notSet": "此邀請代碼設置選項目前**沒有**設定。\n\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` 來設定它。",
+				"text": "此邀請代碼設置選項目前已經設定完成。\n\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} <value>` 來更改它。\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} default 來重設回預設值。\n使用 `{{ prefix }}inviteCodeConfig {{ key }} {{ code }} none` 來清除它。",
+				"title": "目前的值"
 			},
 			"keys": {
-				"title": "Valid invite code config keys"
+				"title": "有效的邀請代碼設置選項"
 			},
 			"new": {
-				"title": "New Value"
+				"title": "新的值"
 			},
-			"none": "None",
-			"notSet": "This invite code config is currently not set for any invite code",
+			"none": "無",
+			"notSet": "此邀請代碼設置選項目前**沒有**設定。",
 			"previous": {
-				"title": "Previous Value"
+				"title": "先前的值"
 			},
-			"sameValue": "This invite code config is already set to that value",
+			"sameValue": "此邀請代碼設置選項已經設定成該值",
 			"self": {
 				"args": {
-					"code": "The invite code that the setting is changed for.",
-					"inviteCode": "The invite code for which you want to change the settings.",
-					"key": "The config setting which you want to show/change.",
-					"value": "The new value of the setting."
+					"code": "更改配置選項的邀請代碼。",
+					"inviteCode": "您想要更改配置選項的邀請代碼。",
+					"key": "您想要顯示 / 更改的設置選項。",
+					"value": "設置選項的新值。"
 				},
-				"description": "Show and change the config of invite codes of the server."
+				"description": "顯示和更改伺服器的邀請代碼設置選項。"
 			},
-			"text": "Set configs for individual invite codes.",
-			"title": "Invite Code Config",
-			"noneSet": "No configs set!",
-			"codeForOtherGuild": "This invite code is for another server.",
-			"canNotClear": "The config setting **{{ key }}** can not be cleared. You can use `inviteCodeConfig {{ key }} default` to reset it to the default value."
+			"text": "設定個人邀請代碼的設置選項。",
+			"title": "邀請代碼設置選項",
+			"noneSet": "沒有設定設置選項！",
+			"codeForOtherGuild": "此邀請代碼是另一個伺服器的。",
+			"canNotClear": "此設置選項 **{{ key }}** 不能被清除。您可以使用 `inviteCodeConfig {{ key }} default` 來重設回預設值。"
 		},
 		"inviteCodes": {
-			"dmSent": "I sent you a DM with all your invite codes.",
-			"noCodes": "You don't have any active invite codes. Please ask the moderators of the server how to create one.",
+			"dmSent": "已經將您所有的邀請代碼透過私訊發送。",
+			"noCodes": "您沒有任何邀請代碼。請詢問伺服器版主如何建立邀請。",
 			"permanent": {
-				"entry": "**Uses**: {{ uses }}\n**Max Age**: {{ maxAge }}\r\n**Max Uses**: {{ maxUses }}\r\n**Channel**: {{{ channel }}}",
-				"text": "These invites don't expire.",
-				"title": "Permanent"
+				"entry": "**使用者**： {{ uses }}\n**有效時間**： {{ maxAge }}\r\n**最大使用次數**： {{ maxUses }}\r\n**頻道**： {{{ channel }}}",
+				"text": "這些邀請不會過期。",
+				"title": "永久"
 			},
 			"recommendedCode": {
-				"none": "Please create a permanent invite code.",
-				"title": "Recommended invite code"
+				"none": "請建立一個永久邀請代碼。",
+				"title": "建議的邀請代碼"
 			},
 			"self": {
-				"description": "Get a list of all your invite codes"
+				"description": "您所有的邀請代碼列表"
 			},
 			"temporary": {
-				"entry": "**Uses**: {{ uses }}\n**Max Age**: {{ maxAge }}\r\n**Max Uses**: {{ maxUses }}\r\n**Channel**: {{{ channel }}}\r\n**Expires**: {{ expires }}",
-				"text": "These invites expire after a certain time.",
-				"title": "Temporary"
+				"entry": "**使用者**： {{ uses }}\n**有效時間**： {{ maxAge }}\r\n**最大使用次數**： {{ maxUses }}\r\n**頻道**： {{{ channel }}}\n**到期日**： {{ expires }}",
+				"text": "這些邀請將在一段時間後過期。",
+				"title": "暫時"
 			},
-			"title": "You have the following codes on the server {{ guild }}",
-			"error": "I could not send you your invite codes, make sure you are allowing private messages from this server."
+			"title": "您在伺服器 {{ guild }} 有以下邀請代碼",
+			"error": "我不能將您的邀請代碼透過私訊發送，請確認您有允許來自伺服器成員的私人訊息。"
 		},
 		"inviteDetails": {
-			"entry": "**{{ uses }}** from {{{ code }}} - created **{{ createdAt }}**",
-			"noInviteCodes": "You don't have any invite codes yet.",
+			"entry": "名為 {{{ code }}} 的邀請使用 **{{ uses }}** 次 — 建立於 **{{ createdAt }}**",
+			"noInviteCodes": "您沒有任何邀請代碼。",
 			"self": {
 				"args": {
-					"user": "The user for whom you want to show detailed invites."
+					"user": "您想要顯示詳細邀請資訊的使用者。"
 				},
-				"description": "Shows details about where your invites are from."
+				"description": "顯示邀請的詳細資訊。"
 			}
 		},
 		"invites": {
 			"amount": {
-				"other": "{{{ target }}} has {{ total }} invites! ({{ regular }} regular, {{ custom }} bonus, {{ fake }} fake, {{ leave }} leaves)",
-				"self": "You have {{ total }} invites! ({{ regular }} regular, {{ custom }} bonus, {{ fake }} fake, {{ leave }} leaves)"
+				"other": "{{{ target }}} 有 {{ total }} 個所有邀請！（ {{ regular }} 個普通邀請， {{ custom }} 個獎勵邀請， {{ fake }} 個假邀請， {{ leave }} 個離開邀請）",
+				"self": "您有 {{ total }} 個所有邀請！（ {{ regular }} 個普通邀請， {{ custom }} 個獎勵邀請， {{ fake }} 個假邀請， {{ leave }} 個離開邀請）"
 			},
 			"highestRank": {
-				"other": "{{{ target }}} currently has the highest rank!",
-				"self": "Congratulations, you currently have the highest rank!"
+				"other": "{{{ target }}} 目前擁有最高等級！",
+				"self": "恭喜，您目前擁有最高等級！"
 			},
 			"nextRank": {
-				"other": "{{{ target }}} needs **{{ nextRankPointsDiff }}** more invites to reach **{{ nextRankName }}** rank!",
-				"self": "You need **{{ nextRankPointsDiff }}** more invites to reach **{{ nextRankName }}** rank!"
+				"other": "{{{ target }}} 距離 **{{ nextRankName }}** 還需要 **{{ nextRankPointsDiff }}** 個邀請！",
+				"self": "您距離 **{{ nextRankName }}** 還需要 **{{ nextRankPointsDiff }}** 個邀請！"
 			},
 			"self": {
 				"args": {
-					"user": "The user for whom you want to show invites."
+					"user": "您想要顯示邀請資訊的使用者。"
 				},
-				"description": "Show personal invites."
+				"description": "顯示個人邀請數量。"
 			}
 		},
 		"kick": {
-			"canNotKick": "I cannot kick this user.",
-			"done": "The user was successfully kicked.",
-			"error": "There was an error kicking this user:\n{{ error }}",
-			"missingPermissions": "I need the `Kick Members` permission to kick members",
+			"canNotKick": "我不能踢出此使用者。",
+			"done": "成功地踢出使用者。",
+			"error": "踢出使用者時發生錯誤：\n{{ error }}",
+			"missingPermissions": "我需要 `踢出成員` 的權限來執行此指令。",
 			"self": {
 				"args": {
-					"member": "Member to kick.",
-					"reason": "Why the member was kicked."
+					"member": "被踢出的成員。",
+					"reason": "為甚麼踢出成員。"
 				},
-				"description": "Kick a member from the server."
+				"description": "從伺服器踢出一位成員。"
 			}
 		},
 		"leaderboard": {
 			"col": {
-				"change": "Change",
+				"change": "更改",
 				"custom": "B",
 				"fake": "F",
 				"leave": "L",
-				"name": "Name",
+				"name": "名字",
 				"regular": "R",
 				"total": "T"
 			},
-			"comparedTo": "changes compared to {{{ to }}}",
-			"entry": "**{{ pos }}** **{{{ name }}}** - **{{ total }}** invites (**{{ regular }}** regular, **{{ custom }}** bonus, **{{ fake }}** fake, **{{ leave }}** leaves)",
-			"from": "Invites since {{{ from }}}",
-			"invalidDate": "Invalid date: {{ date }}",
-			"legend": "`T` = Total\n`R` = Regular\r\n`B` = Bonus\r\n`F` = Fake\r\n`L` = Leaves",
-			"noInvites": "No invites!",
+			"comparedTo": "與 {{{ to }}} 相比",
+			"entry": "**{{ pos }}** **{{{ name }}}** — **{{ total }}** 個所有邀請（ **{{ regular }}** 個普通邀請， **{{ custom }}** 個獎勵邀請， **{{ fake }}** 個假邀請， **{{ leave }}** 個離開邀請）",
+			"from": "從 {{{ from }}} 開始有邀請數量",
+			"invalidDate": "無效的日期： {{ date }}",
+			"legend": "`T` = 所有邀請\n`R` = 普通邀請\r\n`B` = 獎勵邀請\r\n`F` = 假邀請\r\n`L` = 離開邀請",
+			"noInvites": "沒有邀請數量！",
 			"self": {
 				"args": {
-					"date": "The date (& time) for which the leaderboard is shown.",
-					"duration": "The duration for which to calculate the leaderboard.",
-					"page": "Which page of the leaderboard to get."
+					"date": "排行榜要顯示的日期（＆時間）。",
+					"duration": "排行榜要計算的期間。",
+					"page": "排行榜的頁數。"
 				},
-				"description": "Show members with most invites.",
+				"description": "顯示最多邀請數量的成員。",
 				"flags": {
-					"compare": "The date to which the current leaderboard standings are compared to"
+					"compare": "與目前的排行榜進行比較的日期"
 				}
 			},
-			"title": "Leaderboard",
-			"lastUpdate": "Last updated {{{ lastUpdate }}}, next update {{{ nextUpdate }}}"
-		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "DEPRECATED - this command will be removed soon."
-				},
-				"description": "DEPRECATED - this command will be removed soon."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "DEPRECATED - this command will be removed soon.",
-					"page": "DEPRECATED - this command will be removed soon."
-				},
-				"description": "DEPRECATED - this command will be removed soon."
-			}
+			"title": "排行榜",
+			"lastUpdate": "上次更新於 {{{ lastUpdate }}} ，下次更新於 {{{ nextUpdate }}}"
 		},
 		"makeMentionable": {
-			"alreadyDone": "{{{ role }}} is already mentionable.",
+			"alreadyDone": "{{{ role }}} 已經允許任何人提及這個身分組。",
 			"self": {
 				"args": {
-					"role": "The role that you want to mention."
+					"role": "您想要提及的身分組。"
 				},
-				"description": "Make a role mentionable for 60 seconds or until it was used."
+				"description": "在 60 秒內允許任何人提及這個身分組，或是直到有人提及。"
 			}
 		},
 		"memberConfig": {
-			"canNotClear": "The member config setting **{{ key }}** can not be cleared. You can use `memberConfig {{ key }} default` to reset it to the default value.",
+			"canNotClear": "此成員設置選項 **{{ key }}** 不能被清除。您可以使用 `memberConfig {{ key }} default` 來重設回預設值。",
 			"changed": {
-				"text": "This member config has been changed.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it again.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to reset it to the default."
+				"text": "此成員設置選項已經更改完成。\n\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` 來再次更改它。\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} none` 來重設回預設值。"
 			},
 			"current": {
-				"notSet": "This member config is currently **not** set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to set it.",
-				"text": "This member config is currently set.\n\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` to change it.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} default` to reset it to the default.\nUse `{{ prefix }}memberConfig {{ key }} {{ username }} none` to clear it.",
-				"title": "Current Value"
+				"notSet": "此成員設置選項目前**沒有**設定。\n\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` 來設定它。",
+				"text": "此成員設置選項目前已經設定完成。\n\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} <value>` 來更改它。\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} default` 來重設回預設值。\n使用 `{{ prefix }}memberConfig {{ key }} {{ username }} none` 來清除它。",
+				"title": "目前的值"
 			},
 			"keys": {
-				"title": "Valid member config keys"
+				"title": "有效的成員設置選項"
 			},
 			"new": {
-				"title": "New Value"
+				"title": "新的值"
 			},
-			"none": "None",
-			"notSet": "This member config settings is currently not set for any members",
+			"none": "無",
+			"notSet": "此成員設置選項目前沒有設定",
 			"previous": {
-				"title": "Previous Value"
+				"title": "先前的值"
 			},
-			"sameValue": "This member config is already set to that value",
+			"sameValue": "此成員設置選項已經設定成該值",
 			"self": {
 				"args": {
-					"key": "The member config setting which you want to show/change.",
-					"user": "The member that the setting is shown/changed for.",
-					"value": "The new value of the setting."
+					"key": "您想要顯示 / 更改的成員設置選項。",
+					"user": "顯示 / 更改配置選項的成員。",
+					"value": "設置選項的新值。"
 				},
-				"description": "Show and change the config of members of the server."
+				"description": "顯示和更改伺服器的成員設置選項。"
 			},
-			"text": "Below are all the available member config settings.\n\nUse `{{ prefix }}memberConfig <key>` to view the users which have a `<key>` setting\nUse `{{ prefix }}memberConfig <key> @user` to view the setting for a single `@user`\nUse `{{ prefix }}memberConfig <key> @user <value>` to set the config `<key>` to `<value>` for `@user`",
-			"title": "Member Config"
+			"text": "以下是所有可用的成員設置選項。\n\n使用 `{{ prefix }}memberConfig <key>` 來查看使用者的選項 `<key>`\n使用 `{{ prefix }}memberConfig <key> @使用者` 來查看使用者 `@使用者` 的選項\n使用 `{{ prefix }}memberConfig <key> @使用者 <value>` 來設定 `@使用者` 的 `<key>` 到 `<value>`",
+			"title": "成員設置選項"
 		},
 		"members": {
-			"bots": "Bots",
-			"humans": "Humans",
+			"bots": "機器人",
+			"humans": "真人",
 			"joined": {
-				"day": "Joined last 24h",
-				"month": "Joined this month",
-				"week": "Joined this week"
+				"day": "過去 24 個小時內加入",
+				"month": "過去 1 個月內加入",
+				"week": "過去 1 個星期內加入"
 			},
-			"members": "Members",
-			"online": "Online",
+			"members": "成員",
+			"online": "線上",
 			"self": {
-				"description": "Show member count of current server."
+				"description": "顯示伺服器目前的成員數。"
 			}
 		},
 		"mentionRole": {
-			"alreadyDone": "{{{ role }}} is already mentionable.",
-			"roleTooHigh": "The mentioned role is above my highest role, so I can't change it.",
+			"alreadyDone": "{{{ role }}} 已經允許任何人提及這個身分組。",
+			"roleTooHigh": "該身分組高於我的最高身分組，所以我不能更改它。",
 			"self": {
 				"args": {
-					"role": "The role that you want to mention."
+					"role": "您想要提及的身分組。"
 				},
-				"description": "Mention an unmentionable role."
+				"description": "提及一個不能被提及的身分組。"
 			}
 		},
 		"mute": {
-			"canNotMute": "Cannot mute user!",
-			"done": "User muted!",
-			"error": "There was an error muting this person.",
-			"missingRole": "Muted role not set or does not exist!",
+			"canNotMute": "不能靜音使用者！",
+			"done": "使用者已靜音！",
+			"error": "靜音此使用者時發生錯誤。",
+			"missingRole": "靜音身分組未設定或不存在！",
 			"unmute": {
-				"title": "Auto unmute",
-				"description": "User will be unmuted in {{{ duration }}}"
+				"title": "自動解除靜音",
+				"description": "使用者將在 {{{ duration }}} 之後解除靜音"
 			},
 			"self": {
 				"args": {
-					"muteDuration": "The duration for which the user should be muted.",
-					"reason": "The reason why this user is muted.",
-					"user": "The user that should be muted."
+					"muteDuration": "使用者應該被靜音的期間。",
+					"reason": "靜音此使用者的原因。",
+					"user": "應該被靜音的使用者。"
 				},
-				"description": "Mute a user",
+				"description": "靜音一位使用者",
 				"flags": {
-					"duration": "The duration to mute the user for"
+					"duration": "靜音使用者的期間"
 				}
 			}
 		},
 		"permissions": {
-			"added": "{{{ role }}} can now use {{{ cmds }}}",
-			"adminOnly": "This command can only be used by admins",
-			"adminsCanUseAll": "Keep in mind that *Server Administrators* can *always* use *all* commands",
-			"everyone": "This command can be used by everyone",
-			"removed": "{{{ role }}} can not use {{{ cmds }}} anymore",
+			"added": "{{{ role }}} 現在可以使用 {{{ cmds }}}",
+			"adminOnly": "此指令只有管理者可以使用。",
+			"adminsCanUseAll": "*伺服器管理者*一直都可以使用*所有的*指令",
+			"everyone": "所有人都可以使用此指令",
+			"removed": "{{{ role }}} 不能使用 {{{ cmds }}}",
 			"self": {
 				"args": {
-					"cmd": "The command to configure permissions for.",
-					"role": "The role which should be granted or denied access to the command."
+					"cmd": "要設置權限的指令。",
+					"role": "應該被授予或拒絕訪問指令的身分組。"
 				},
-				"description": "Configure permissions to use commands."
+				"description": "設置使用指令的權限。"
 			},
-			"canNotChange": "The permissions for the {{{ cmd }}} command cannot be changed."
+			"canNotChange": "不能更改指令 {{{ cmd }}} 的權限。"
 		},
 		"ping": {
 			"self": {
-				"description": "Ping the bot"
+				"description": "檢測機器人延遲"
 			}
 		},
 		"prefix": {
 			"self": {
-				"description": "Shows the current prefix of the bot."
+				"description": "顯示機器人目前的指令前綴。"
 			},
-			"title": "The current prefix is {{{ prefix }}}"
+			"title": "目前的指令前綴是 {{{ prefix }}}"
 		},
 		"premium": {
 			"activate": {
-				"currentlyActive": "There is already a premium subscription active on this server.",
-				"customBot": "You are using a custom bot. Custom bots always have premium.",
-				"done": "Premium has been successfully activated for this server.",
-				"noGuild": "You must run this command inside a server.",
-				"noSubscription": "You do not have an active premium subscription.\n\nUse {{{ cmd }}} for more info.",
-				"title": "Activate premium on this server",
-				"permissions": "You need the `Manage Server` permissions to use this command in this server.",
-				"maxGuilds": "You have activated premium on the maximum number of guilds."
+				"currentlyActive": "此伺服器已經激活高級版訂閱。",
+				"customBot": "您正在使用自定義機器人。自定義機器人一直都是高級版。",
+				"done": "此伺服器已成功激活高級版。",
+				"noGuild": "您必須在伺服器內執行此指令。",
+				"noSubscription": "您沒有高級版訂閱。\n\n使用 {{{ cmd }}} 來獲取詳細資訊。",
+				"title": "在此伺服器激活高級版",
+				"permissions": "您需要 `管理伺服器` 權限在此伺服器執行此指令。",
+				"maxGuilds": "您已經激活的高級版達到最大伺服器數量。"
 			},
 			"check": {
-				"declined": "Your payment for premium has been declined, plesae check your Patreon.",
-				"done": "You have an active premium subscription valid until {{{ valid }}}.\n\nUse {{{ cmd }}} for more info.",
-				"notFound": "Your account does not have a premium subscription associated.\n\nIf you aquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
-				"title": "Check for a Premium Subscription",
-				"paused": "Your subscription currently seems to be paused, please check your Patreon."
+				"declined": "您的高級版付費方式已被拒絕，請檢查您的 Patreon 。",
+				"done": "您的高級版訂閱有效期限到 {{{ valid }}} 。\n\n使用 {{{ cmd }}} 來獲取詳細資訊。",
+				"notFound": "您的帳戶沒有高級版訂閱。\n\n如果您已於 Patreon 購買高級版，請確認您有將您的 Discord 帳戶連結至 Patreon 以獲取獎勵，然後再執行一次此指令。",
+				"title": "檢查高級版訂閱",
+				"paused": "您的高級版訂閱目前已暫停，請檢查您的 Patreon 。"
 			},
 			"deactivate": {
-				"customBot": "You are using a custom bot. Custom bots always have premium.",
-				"done": "Premium has been successfully deactivated for this server.",
-				"noGuild": "You must run this command inside a server.",
-				"noSubscription": "You do not have an active premium subscription.\n\nUse {{{ cmd }}} for more info.",
-				"title": "Deactivate premium on this server",
-				"permissions": "You need the `Manage Server` permissions to use this command in this server."
+				"customBot": "您正在使用自定義機器人。自定義機器人一直都是高級版。",
+				"done": "此伺服器已經成功取消激活高級版。",
+				"noGuild": "您必須在伺服器內執行此指令。",
+				"noSubscription": "您沒有高級版訂閱。\n\n使用 {{{ cmd }}} 來獲取詳細資訊。",
+				"title": "在此伺服器取消激活高級版",
+				"permissions": "您需要 `管理伺服器` 權限在此伺服器執行此指令。"
 			},
 			"feature": {
 				"embeds": {
-					"text": "You can use an embed in your join and leave messages which look a lot better.\n[See some examples here]({{{ link }}})",
-					"title": "Premium Feature: Embeds in join messages"
+					"text": "您可以使用更好的嵌入式加入和離開訊息。\n[查看範例]({{{ link }}})",
+					"title": "高級版功能：嵌入式加入訊息"
 				},
 				"export": {
-					"text": "You can export all the joins and leaves that happened on your server since you invited our bot.",
-					"title": "Premium Feature: History export"
+					"text": "邀請我們的機器人之後，您可以輸出發生在伺服器的所有加入和離開。",
+					"title": "高級版功能：輸出歷史記錄"
 				},
 				"patreon": {
-					"text": "Run {{{ cmd }}} to validate and activate your Patreon plegde.",
-					"title": "If you purchased premium on Patreon"
+					"text": "執行 {{{ cmd }}} 來驗證然後激活您的 Patreon 保證。",
+					"title": "如果您透過 Patreon 訂閱高級版"
 				},
 				"servers": {
-					"text": "Once you have premium you may activate it on up to 5 servers of your choosing, and you can change these 5 servers anytime.",
-					"title": "Premium Feature: Up to 5 servers"
+					"text": "當您有高級版時，您可以選擇最多激活 5 個伺服器，然後您可以隨時改變這 5 個伺服器。",
+					"title": "高級版功能：最多激活 5 個伺服器"
 				}
 			},
 			"noPremium": {
-				"text": "By subscribing to a premium tier you help the development of the bot and also get some additional features.",
-				"title": "You currently do not have a premium subscription"
+				"text": "您可以透過訂閱高級版來協助開發機器人和獲取一些額外的功能。",
+				"title": "您目前沒有高級版訂閱"
 			},
 			"premium": {
-				"activate": "Use {{{ cmd }}} to activate it on this server",
-				"deactivate": "Use {{{ cmd }}} to deactivate it on this server",
-				"text": "Your premium subscription is valid for {{ date }}.\n\nYou have activated premium on {{{ limit }}} servers.\n{{{ guildList }}}\n\n[What can I do with premium?]({{{ link }}})",
-				"title": "InviteManager Premium"
+				"activate": "使用 {{{ cmd }}} 來激活此伺服器",
+				"deactivate": "使用 {{{ cmd }}} 來取消激活此伺服器",
+				"text": "您的高級版訂閱有效期限到 {{ date }} 。\n\n您已經在 {{{ limit }}} 個伺服器激活高級版。\n{{{ guildList }}}\n\n[高級版可以做甚麼？]({{{ link }}})",
+				"title": "InviteManager 高級版"
 			},
 			"self": {
 				"args": {
-					"action": "The action to perform. None for premium info. `check` to check your premium status. `activate` to use your premium for this server."
+					"action": "要執行的動作。無高級版資訊。 `check` 來檢查您的高級版狀態。 `activate` 在此伺服器激活您的高級版。"
 				},
-				"description": "Info about premium version of InviteManager."
+				"description": "InviteManager 高級版的資訊。"
 			}
 		},
 		"punishmentConfig": {
-			"deletedText": "Members will no longer receive the punishment {{ punishment }}",
+			"deletedText": "成員將不再收到懲罰 {{ punishment }}",
 			"self": {
 				"args": {
-					"args": "Arguments passed to the punishment.",
-					"punishment": "Type of punishment to use.",
-					"strikes": "Number of strikes for this punishment to be used."
+					"args": "附加於懲罰的值。",
+					"punishment": "要使用的懲罰類型。",
+					"strikes": "此懲罰要使用的記點數量。"
 				},
-				"description": "Configure punishments when reaching a certain amount of strikes."
+				"description": "設置當收到一定數量記點時的懲罰。"
 			},
-			"text": "{{ strikes }} strikes are punished with a {{ punishment }}",
-			"title": "Punishment Config",
-			"unusedPunishment": "Unused Punishment"
+			"text": "有 {{ strikes }} 個記點就會被 {{ punishment }}",
+			"title": "懲罰設置選項",
+			"unusedPunishment": "未使用的懲罰"
 		},
 		"purge": {
-			"error": "Error",
-			"invalidQuantity": "You must specify a positive amount of messages to clean",
+			"error": "錯誤",
+			"invalidQuantity": "您必須指定一個正整數來清除訊息",
 			"self": {
 				"args": {
-					"member": "User whose messages get deleted",
-					"quantity": "How many messages should be deleted.",
-					"user": "User whose messages are deleted."
+					"member": "被刪除訊息的使用者",
+					"quantity": "多少則訊息應該被刪除。",
+					"user": "被刪除訊息的使用者。"
 				},
-				"description": "Purge messages in a channel."
+				"description": "在一個頻道中清除訊息。"
 			},
-			"text": "Deleted {{ amount }} messages.\nThis message will be deleted in 5 seconds.",
-			"title": "Deleted Messages"
+			"text": "刪除 {{ amount }} 則訊息。\n此訊息將會在 5 秒後被刪除。",
+			"title": "刪除訊息"
 		},
 		"purgeUntil": {
-			"error": "Error",
-			"msgNotFound": "Could not find messageID in the last 100 messages.",
-			"none": "No messages found to delete.",
+			"error": "錯誤",
+			"msgNotFound": "不能在最近的 100 則訊息裡找到該訊息 ID 。",
+			"none": "沒有找到訊息來刪除。",
 			"self": {
 				"args": {
-					"messageID": "Last message ID to be deleted."
+					"messageID": "要被刪除的最後一則訊息 ID 。"
 				},
-				"description": "Purge messages in a channel up until a specified message."
+				"description": "在一個頻道中刪除一則指定訊息之後的所有訊息。"
 			},
-			"text": "Deleted {{ amount }} messages.\nThis message will be deleted in 5 seconds.",
-			"title": "Delete Messages",
-			"inProgress": "Purging..."
+			"text": "刪除 {{ amount }} 則訊息。\n此訊息將會在 5 秒後被刪除。",
+			"title": "刪除訊息",
+			"inProgress": "清除中……"
 		},
 		"ranks": {
-			"entry": "{{{ role }}}: **{{ numInvites }} invites** {{ description }}",
-			"none": "No ranks have been created yet.",
+			"entry": "等級 {{{ role }}} ： **{{ numInvites }} 個邀請** {{ description }}",
+			"none": "沒有已建立的等級。",
 			"self": {
-				"description": "Show all ranks.",
+				"description": "顯示所有的等級。",
 				"args": {
-					"page": "The page of the ranks list to show."
+					"page": "您想要顯示等級列表的頁數。"
 				}
 			},
-			"title": "Ranks"
+			"title": "等級"
 		},
 		"removeInvites": {
 			"self": {
 				"args": {
-					"amount": "The amount of invites to remove.",
-					"reason": "The reason for removing the invites.",
-					"user": "The user to remove the invites from."
+					"amount": "您想要移除的邀請數量。",
+					"reason": "移除邀請數量的原因。",
+					"user": "要被移除邀請數量的使用者。"
 				},
-				"description": "Removes a specified amount of invites from a user."
+				"description": "移除一位使用者的指定邀請數量。"
 			}
 		},
 		"removeRank": {
-			"done": "Rank {{{ role }}} removed.",
-			"rankNotFound": "Rank {{{ role }}} does not exist!",
+			"done": "等級 {{{ role }}} 已移除。",
+			"rankNotFound": "等級 {{{ role }}} 不存在！",
 			"self": {
 				"args": {
-					"rank": "The user for which you want to remove the rank."
+					"rank": "您想要移除等級的身分組。"
 				},
-				"description": "Remove a rank."
+				"description": "移除一個等級。"
 			}
 		},
 		"restoreInvites": {
-			"done": "Restored invites",
+			"done": "復原邀請數量",
 			"self": {
 				"args": {
-					"user": "The user to restore all invites to. If omitted restores invites for all users."
+					"user": "復原使用者所有的邀請數量。如果省略則復原所有的使用者。"
 				},
-				"description": "Restore all previously cleared invites."
+				"description": "復原所有先前清除的邀請數量。"
 			}
 		},
 		"setup": {
 			"faq": {
-				"text": "A complete guide on setting up the bot can be found here: https://invitemanager.cc/",
-				"title": "FAQs and more"
+				"text": "可以在這裡找到設定機器人的完整指南： https://invitemanager.cc/",
+				"title": "常見問答和詳細資訊"
 			},
 			"help": {
-				"text": "If you need help or have feedback, you can either use the `!feedback` command or join our discord support server: {{{ link }}}",
-				"title": "Help"
+				"text": "如果您需要協助或有意見回饋，您可以加入我們的支援伺服器： {{{ link }}}",
+				"title": "協助"
 			},
 			"joinLeave": {
-				"text": "If you want to display join and or leave messages in one of your channels, you have to configure that channel by doing `!config joinMessageChannel #channel` or `!config leaveMessageChannel #channel`. Make sure the bot has write permissions in those channels!",
-				"title": "Setting join and leave message channel"
+				"text": "如果您想要在頻道裡顯示加入或離開訊息，您必須透過指令 `!config joinMessageChannel #channel` 或 `!config leaveMessageChannel #channel` 來設置頻道。請確認機器人在那些頻道是否有發送訊息的權限！",
+				"title": "設定加入和離開訊息的頻道"
 			},
 			"manageGuild": {
-				"text": "The bot does not have the \"Manage Server\" permission. This permission is required to read the invites of the user. Without this permission the join messages won't work.",
-				"title": "Missing permission: Manage Server"
+				"text": "機器人沒有 \"管理伺服器\" 的權限。讀取使用者的邀請需要此權限。如果沒有此權限，加入訊息將不會運作。",
+				"title": "缺少的權限：管理伺服器"
 			},
 			"manageRoles": {
-				"text": "The bot does not have the \"Manage Roles\" permission. This permission is required to assign roles to a user. Without this permission members cannot be auto-promoted.",
-				"title": "Missing permission: Manage Roles"
+				"text": "機器人沒有 \"管理身分組\" 的權限。指派身分組給使用者需要此權限。如果沒有此權限，成員將不能被自動指派。",
+				"title": "缺少的權限：管理身分組"
 			},
 			"prefix": {
-				"text": "You can change the prefix by doing `!config prefix !`\n\nIf you don't know the prefix of the bot, you can find it using `@InviteManager config prefix`.",
-				"title": "Changing the prefix"
+				"text": "您可以透過指令 `!config prefix !` 來更改指令前綴\n\n如果您不知道機器人的指令前綴，您可以透過指令 `@InviteManager config prefix` 來找到它。",
+				"title": "更改指令前綴"
 			},
 			"premium": {
-				"text": "If you would like to support the development of this bot, you can do so by supporting us on Patreon: {{{ link }}}\n\nDepending on the tier, you will get some additional features.",
-				"title": "Premium"
+				"text": "如果您想要支持機器人的開發團隊，您可以透過 Patreon 來支持我們： {{{ link }}}\n\n根據價位，您將獲取額外的功能。",
+				"title": "高級版"
 			},
 			"self": {
-				"description": "Help with setting up the bot and checking for problems (e.g. missing permissions)"
+				"description": "協助設定機器人和檢查問題（例如：缺少的權限）"
 			},
-			"text": "After inviting the bot, all invites will be tracked automatically.",
-			"title": "Setting up InviteManager",
+			"text": "邀請機器人之後，所有的邀請將被自動追蹤。",
+			"title": "設定 InviteManager",
 			"viewAuditLogs": {
-				"text": "The bot does not have the `View Audit Logs` permission. This permission allows the bot to better track invites.",
-				"title": "Missing permission: View Audit Logs"
+				"text": "機器人沒有 \"檢視審核紀錄\" 的權限。此權限允許機器人更好追蹤邀請。",
+				"title": "缺少的權限：檢視審核紀錄"
 			}
 		},
 		"softBan": {
-			"canNotSoftBan": "I cannot soft-ban this user.",
-			"done": "The user was successfully soft-banned.",
-			"error": "There was an error banning this user:\n{{ error }}",
-			"missingPermissions": "I need the `Ban Members` permission to use this command",
+			"canNotSoftBan": "我不能暫時停權此使用者。 ",
+			"done": "成功暫時停權使用者。",
+			"error": "停權此使用者時發生錯誤：\n{{ error }}",
+			"missingPermissions": "我需要 `對成員停權` 的權限來執行此指令",
 			"self": {
 				"args": {
-					"deleteMessageDays": "How far back messages will be deleted (in days).",
-					"reason": "Why was the user banned.",
-					"user": "User to ban."
+					"deleteMessageDays": "距今多久以前的訊息將被刪除（以天數為單位）。",
+					"reason": "為甚麼停權成員。",
+					"user": "被停權的使用者。"
 				},
-				"description": "Ban and then automatically unban a member from the server.",
+				"description": "從伺服器停權一位成員然後自動解除停權。",
 				"flags": {
-					"deleteMessageDays": "Delete messages from the user this many days back."
+					"deleteMessageDays": "刪除此使用者多少天以內的訊息。"
 				}
 			},
-			"unBanError": "The user was banned but could not be unbanned...\n{{ error }}"
+			"unBanError": "已停權使用者但是不能解除停權……\n{{ error }}"
 		},
 		"strike": {
 			"self": {
 				"args": {
-					"amount": "The amount of strikes to be added",
-					"member": "The member receiving the strikes",
-					"type": "The type of the violation"
+					"amount": "您想要新增的記點數量",
+					"member": "收到記點的成員",
+					"type": "違規事項的類型"
 				},
-				"description": "Add strikes to a user"
+				"description": "新增一位使用者的記點"
 			}
 		},
 		"strikeConfig": {
-			"deletedText": "Members who violate the rule {{ violation }} will no longer receive strikes.",
+			"deletedText": "成員將不再因為違反違規事項 {{ violation }} 而收到記點。",
 			"self": {
 				"args": {
-					"strikes": "Number of strikes.",
-					"violation": "Violation type."
+					"strikes": "記點的數量。",
+					"violation": "違規事項的類型。"
 				},
-				"description": "Configure strikes received for various violations."
+				"description": "設置各種不同的違規事項所收到的記點。"
 			},
-			"text": "The violation {{ violation }} gives a user {{ strikes }} strikes.",
-			"title": "Strike Config",
-			"unusedViolations": "Unused violations"
+			"text": "違規事項 {{ violation }} 給一位使用者 {{ strikes }} 個記點。",
+			"title": "記點設置選項",
+			"unusedViolations": "未使用的違規事項"
 		},
 		"subtractFakes": {
-			"done": "Removed fake invites!",
-			"none": "No fake invites found.",
+			"done": "移除假邀請數量！",
+			"none": "沒有找到假邀請。",
 			"self": {
-				"description": "Remove fake invites from all users."
+				"description": "移除所有使用者的假邀請數量。"
 			}
 		},
 		"subtractLeaves": {
-			"done": "Removed leaves!",
-			"none": "No leaves found.",
+			"done": "移除離開邀請數量！",
+			"none": "沒有找到離開邀請。",
 			"self": {
-				"description": "Remove leaves from all users"
+				"description": "移除所有使用者的離開邀請數量"
 			}
 		},
 		"support": {
 			"self": {
-				"description": "Get an invite link to our support server."
+				"description": "獲取我們的支援伺服器邀請連結。"
 			},
-			"server": "Support server"
+			"server": "支援伺服器"
 		},
 		"tryPremium": {
-			"alreadyUsed": "You have already used your free premium trial! If you like this bot, please consider purchasing premium.",
-			"currentlyActive": "You currently have an active premium subscription!",
-			"prompt": "Please reply with **yes** or **no**.",
-			"timedOut": "The request has timed out, please try again.",
-			"canceled": "The try-premium process has been aborted.",
+			"alreadyUsed": "您已經使用您的免費試用高級版！如果您喜歡此機器人，請考慮購買高級版。",
+			"currentlyActive": "您目前有高級版訂閱！",
+			"prompt": "請回覆 **yes** 或 **no** 。",
+			"timedOut": "請求已經超時，請再試一次。",
+			"canceled": "試用高級版程序已經被中止。",
 			"self": {
-				"description": "Try the premium version of InviteManager for free for a limited duration."
+				"description": "在有限的期間內免費試用 InviteManager 高級版。"
 			},
-			"started": "You successfully started your trial! Use `{{ prefix }}premium` to check how much time you have left.",
-			"text": "You can try out our premium features for {{ duration }}. You can only do this once. Would you like to test it now?",
-			"title": "InviteManager - Try Premium"
+			"started": "您已經成功開始試用！使用 `{{ prefix }}premium` 來檢查您還剩下多少時間。",
+			"text": "您可以試用我們的高級版功能 {{ duration }} 。您只能試用一次。請問您想要現在試用它嗎？",
+			"title": "InviteManager — 試用高級版"
 		},
 		"unban": {
-			"canNotUnban": "I cannot unban this member.",
-			"done": "User has been unbanned.",
-			"missingPermissions": "I need the `Ban Members` permission to use this command",
+			"canNotUnban": "我不能解除停權此成員。",
+			"done": "已經解除停權使用者。",
+			"missingPermissions": "我需要 `對成員停權` 的權限來執行此指令",
 			"self": {
 				"args": {
-					"reason": "The reason why this user is unbanned.",
-					"user": "The user that should be unbanned."
+					"reason": "解除停權此使用者的原因。",
+					"user": "應該被解除停權的使用者。"
 				},
-				"description": "Unban a user"
+				"description": "解除停權一位使用者"
 			},
-			"error": "Could not unban user because of the following error:\n{{{ error }}}"
+			"error": "因為以下錯誤不能解除停權使用者：\n{{{ error }}}"
 		},
 		"unhoist": {
-			"done": "**Completed!**\n\nProcessed: {{ processed }}\n**Changed: {{ changed }}**\nExcluded: {{ excluded }}\nErrored: {{ errored }}\n",
-			"processing": "Processing, this might take a while...\n\nProcessed: {{ processed }}/{{ total }}\n**Changed: {{ changed }}**\nExcluded: {{ excluded }}\nErrored: {{ errored }}",
+			"done": "**完成！**\n\n處理完畢： {{ processed }}\n**已經更改： {{ changed }}**\n排除在外： {{ excluded }}\n發生錯誤： {{ errored }}\n",
+			"processing": "處理中，可能會花一些時間……\n\n處理完畢： {{ processed }} / {{ total }}\n**已經更改： {{ changed }}**\n排除在外： {{ excluded }}\n發生錯誤： {{ errored }}",
 			"self": {
-				"description": "Add a character in front of all members with a special character in front of their name, so they will be shown at the end of the member list."
+				"description": "在所有名稱是特殊字元開頭的成員前面新增一個字元，所以他們會顯示在成員列表的最後。"
 			},
-			"starting": "Starting unhoist process...",
-			"title": "Unhoist users"
+			"starting": "開始降低程序……",
+			"title": "降低使用者"
 		},
 		"unmute": {
-			"canNotUnmute": "Cannot unmute that user.",
-			"done": "User has been unmuted.",
-			"missingRole": "Muted role not set or does not exist!",
-			"error": "Could not unmute member: {{{ error }}}",
+			"canNotUnmute": "不能解除靜音使用者。",
+			"done": "已經解除靜音使用者。",
+			"missingRole": "靜音身分組未設定或不存在！",
+			"error": "不能解除靜音成員： {{{ error }}}",
 			"self": {
 				"args": {
-					"user": "The user that should be unmuted."
+					"user": "應該被解除靜音的使用者。"
 				},
-				"description": "Unmute a user"
+				"description": "解除靜音一位使用者"
 			}
 		},
 		"warn": {
-			"canNotDm": "User was not able to receive DM:\n{{ error }}",
-			"canNotWarn": "I cannot warn this user.",
-			"done": "The user was successfully warned.",
+			"canNotDm": "使用者不能接收私人訊息：\n{{ error }}",
+			"canNotWarn": "我不能警告此使用者。",
+			"done": "成功警告使用者。",
 			"self": {
 				"args": {
-					"member": "Member to warn.",
-					"reason": "Why was the member was warned."
+					"member": "被警告的成員。",
+					"reason": "為甚麼警告成員。"
 				},
-				"description": "Warn a member."
+				"description": "警告一位成員。"
 			},
-			"text": "You have been warned on server {{ guild }}\n{{ text }}"
+			"text": "您被伺服器 {{ guild }} 警告\n{{ text }}"
 		},
 		"disconnect": {
 			"self": {
-				"description": "Disconnect the bot from the current voice channel."
+				"description": "從目前的語音頻道中斷連接機器人。"
 			}
 		},
 		"lyrics": {
 			"self": {
-				"description": "Show lyrics of the currently playing song.",
+				"description": "顯示目前正在播放歌曲的歌詞。",
 				"flags": {
-					"live": "If set, then the lyrics will sync with the current time of the song."
+					"live": "如果設定，歌詞將會與歌曲目前的時間同步。"
 				}
 			},
-			"notFound": "No lyrics found for this song!",
-			"notSupported": "The lyrics command is not supported on {{ platform }}."
+			"notFound": "沒有找到此歌曲的歌詞！",
+			"notSupported": "歌詞指令不支援 {{ platform }} 。"
 		},
 		"mashup": {
 			"self": {
-				"description": "Create a mashup of 2 songs.",
+				"description": "建立 2 首歌曲的混搭。",
 				"args": {
-					"videos": "The videos that should be mashed together."
+					"videos": "應該被混搭在一起的影片。"
 				}
 			},
-			"missingSecondVideo": "Missing second video link!"
+			"missingSecondVideo": "缺少第二個影片的連結！"
 		},
 		"nowPlaying": {
 			"self": {
-				"description": "Shows information about the currently playing song",
+				"description": "顯示目前正在播放歌曲的資訊",
 				"flags": {
-					"pin": "Pin the now playing message and update it automatically whenever a new song plays."
+					"pin": "釘選正在播放的訊息然後每一首新歌曲播放時自動更新。"
 				}
 			},
-			"playTime": "Playtime"
+			"playTime": "播放時間"
 		},
 		"pause": {
 			"self": {
-				"description": "Pause the current song."
+				"description": "暫停目前的歌曲。"
 			}
 		},
 		"play": {
 			"self": {
-				"description": "Play the song if the queue is empty, otherwise it will add the song to the end of the queue.",
+				"description": "如果列表是空的會播放歌曲，否則它將會新增歌曲到列表的最後。",
 				"flags": {
-					"platform": "Select the platform where you want the song to be played.",
-					"next": "If set, it will play this song next instead of adding it to the end of the queue."
+					"platform": "選擇您想要播放歌曲的平臺。",
+					"next": "如果設定，它將會在下一首播放此歌曲而不是新增它到列表的最後。"
 				},
 				"args": {
-					"link": "The link to a specific song or a search term."
+					"link": "一首指定歌曲或一個搜尋字詞的連結。"
 				}
 			}
 		},
 		"queue": {
 			"self": {
-				"description": "Display the songs in the queue."
+				"description": "顯示列表裡的歌曲。"
 			},
-			"empty": "Queue is currently empty. Use the play command to add songs to it."
+			"empty": "列表目前是空的。使用播放指令來新增歌曲。"
 		},
 		"repeat": {
 			"self": {
-				"description": "Set the song to be played on repeat."
+				"description": "設定重複播放的歌曲。"
 			},
-			"enabled": "This song will now play on repeat.",
-			"disabled": "This song will not be played on repeat anymore."
+			"enabled": "此歌曲現在將重複播放。",
+			"disabled": "此歌曲將不再重複播放。"
 		},
 		"resume": {
 			"self": {
-				"description": "Resume the current song."
+				"description": "恢復播放目前的歌曲。"
 			}
 		},
 		"rewind": {
 			"self": {
-				"description": "Rewind the song and start from the beginning."
+				"description": "倒帶歌曲然後從頭開始。"
 			},
-			"notSupported": "Rewinding is not supported on {{{ platform }}}"
+			"notSupported": "倒帶不支援 {{{ platform }}}"
 		},
 		"search": {
 			"self": {
-				"description": "Search for the search term and let you chose one of the results.",
+				"description": "搜尋字詞然後讓您從結果中選擇一個。",
 				"flags": {
-					"platform": "Select the platform where you want the song to be played."
+					"platform": "選擇您想要播放歌曲的平臺。"
 				},
 				"args": {
-					"search": "The search term"
+					"search": "搜尋字詞"
 				}
 			},
-			"title": "Results for {{ term }}",
-			"noResults": "No results found!",
-			"notSupported": "Searching is not supported on {{{ platform }}}"
+			"title": "{{ term }} 的結果",
+			"noResults": "沒有找到結果！",
+			"notSupported": "搜尋不支援 {{{ platform }}}"
 		},
 		"seek": {
 			"self": {
-				"description": "Skip to a specific part of the song.",
+				"description": "跳過歌曲的指定部分。",
 				"args": {
-					"duration": "The position the song will be skipped to (from the beginning, in seconds)."
+					"duration": "歌曲要跳到的位置（從開始點，以秒計算）。"
 				}
 			},
-			"notSupported": "Seeking is not supported on {{{ platform }}}"
+			"notSupported": "查找不支援 {{{ platform }}}"
 		},
 		"skip": {
 			"self": {
-				"description": "Skip the current song and play the next song in the queue.",
+				"description": "跳過目前的歌曲然後播放列表裡的下一首歌曲。",
 				"args": {
-					"amount": "How many songs will be skipped."
+					"amount": "多少首歌曲將被跳過。"
 				}
 			}
 		},
 		"volume": {
 			"self": {
-				"description": "Set the volume if an argument is passed, or show the current volume.",
+				"description": "如果有輸入值會設定音量，或是顯示目前的音量。",
 				"args": {
-					"volume": "The value the volume will be set to."
+					"volume": "音量將被設定的值。"
 				}
 			}
 		},
 		"fixRanks": {
-			"done": "Done fixing ranks.",
+			"done": "完成等級修復。",
 			"self": {
-				"description": "Deletes any ranks where the role was deleted."
+				"description": "刪除已刪除身分組的等級。"
 			}
 		},
 		"placeholder": {
 			"self": {
 				"flags": {
-					"edit": "The message id of the placeholder to edit."
+					"edit": "要編輯的嵌入式訊息 ID 。"
 				},
 				"args": {
-					"message": "The message of the placeholder."
+					"message": "嵌入式訊息。"
 				},
-				"description": "Creates a new or edits an existing placeholder message."
+				"description": "建立一個新的或編輯一個已存在的嵌入式訊息。"
 			},
-			"noMessage": "You need to provide a message for the placeholder",
-			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found."
+			"noMessage": "您需要提供一個嵌入式的訊息。",
+			"noMessageFoundInDatabase": "不能找到指定的嵌入式訊息 ID 。"
 		},
 		"reactionRole": {
-			"noMessageFoundInDatabase": "The placeholder message with the specified id could not be found.",
-			"unknownEmoji": "Unknown emoji. The bot must be in the guild where the emoji comes from!",
+			"noMessageFoundInDatabase": "不能找到指定的嵌入式訊息 ID 。",
+			"unknownEmoji": "未知的表情符號。機器人必須在表情符號的來源伺服器！",
 			"self": {
 				"flags": {
 					"remove": "cmd.reactionRole.self.flags.remove"
@@ -1186,603 +1169,608 @@
 			}
 		},
 		"lockdown": {
-			"channelUnlocked": "The lockdown for {{{ channel }}} has ended.",
-			"channelLockedDown": "The {{{ channel }}} channel is now locked down.",
+			"channelUnlocked": "{{{ channel }}} 的封鎖已結束。",
+			"channelLockedDown": "頻道 {{{ channel }}} 現在已封鎖。",
 			"self": {
-				"description": "Lockdown a specific channel (Prevents anyone without special roles from sending messages)",
+				"description": "封鎖一個指定頻道（防止特殊身分組以外的任何人發送訊息）",
 				"flags": {
-					"timeout": "The timeout after which the lockdown automatically ends. Run the command again to end the lockdown manually."
+					"timeout": "自動結束封鎖的延遲時間。再執行指令一次來手動結束封鎖。"
 				},
 				"args": {
-					"channel": "The channel that you want to lock down."
+					"channel": "您想要封鎖的頻道。"
 				}
 			},
-			"notATextChannel": "That channel is not a text channel.",
-			"noSuitingRoleFound": "No suitable role found to start a lockdown!"
+			"notATextChannel": "頻道不是一個文字頻道。",
+			"noSuitingRoleFound": "沒有找到適合的身分組來開始封鎖！"
 		}
 	},
 	"messages": {
-		"joinUnknownInviter": "I can't figure out how <@{{ id }}> joined the server.",
-		"joinVanityUrl": "<@{{ id }}> joined the server using a vanity invite.",
-		"leaveUnknownInviter": "{{ tag }} left the server, but I couldn't figure out who invited them.",
-		"joinServerWidget": "The user joined using a server widget.",
-		"joinLeaveEmbedsIsPremium": "Using an embed as your join/leave message is a premium feature. Premium does not seem to be active on this server. Please contact us to learn more about how to purchase premium."
+		"joinUnknownInviter": "我不能斷定 <@{{ id }}> 如何加入伺服器。",
+		"joinVanityUrl": "<@{{ id }}> 使用個性化網址加入伺服器。",
+		"leaveUnknownInviter": "{{ tag }} 離開伺服器，但是我不能斷定誰邀請他們。",
+		"joinServerWidget": "使用者使用伺服器小工具加入伺服器。",
+		"joinLeaveEmbedsIsPremium": "使用嵌入式加入 / 離開訊息是高級版功能。高級版似乎沒有在此伺服器被激活。請聯繫我們來獲取購買高級版的詳細資訊。"
 	},
 	"moderation": {
 		"punishments": {
 			"dm": {
-				"ban": "You have been **banned** from **{{ guild }}**",
-				"kick": "You have been **kicked** from **{{ guild }}**",
-				"mute": "You have been **muted** in **{{ guild }}**",
-				"warn": "You have been **warned** in **{{ guild }}**",
-				"reason": "Reason: {{ reason }}",
-				"amount": "Amount: {{ amount }}"
+				"ban": "您已經被 **{{ guild }}** **停權**",
+				"kick": "您已經被 **{{ guild }}** **踢出**",
+				"mute": "您已經被 **{{ guild }}** **靜音**",
+				"warn": "您已經被 **{{ guild }}** **警告**",
+				"reason": "原因： {{ reason }}",
+				"amount": "數量： {{ amount }}"
 			}
 		},
 		"strikes": {
-			"dm": "You have received **{{ amount }}** strikes for violating the **{{ type }}** rule in **{{ guild }}**"
+			"dm": "您在 **{{ guild }}** 因為規則 **{{ type }}** 收到 **{{ amount }}** 個記點"
 		}
 	},
 	"permissions": {
-		"adminOnly": "You do not have permission to use this command.\nOnly **Administrators** may use this command.",
-		"createInstantInvite": "Create Instant Invite",
-		"manageGuild": "Manage Server",
-		"manageRoles": "Manage Roles",
-		"premiumOnly": "This command is only available for premium subscribers!",
-		"rateLimit": "Slow down! Please wait {{ cooldown }} seconds and try again.",
-		"role": "You do not have permission to use this command.\nYou need one of the following roles: {{{ roles }}}",
-		"viewAuditLogs": "View Audit Logs",
-		"manageMessages": "Manage Messages",
-		"readMessageHistory": "Read Message History",
-		"missing": "InviteManager is missing the permissions {{{ permissions }}} in {{{ channel }}}",
-		"banMembers": "Ban Members",
-		"kickMembers": "Kick Members",
-		"memberError": "Could not get member"
+		"adminOnly": "您沒有權限使用此指令。\n只有 **管理者** 可以使用此指令。",
+		"createInstantInvite": "建立邀請",
+		"manageGuild": "管理伺服器",
+		"manageRoles": "管理身分組",
+		"premiumOnly": "只有高級版訂閱者可以使用此指令！",
+		"rateLimit": "慢下來！請等待 {{ cooldown }} 秒然後再試一次。",
+		"role": "您沒有權限使用此指令。\n您需要以下其中一個身分組： {{{ roles }}}",
+		"viewAuditLogs": "檢視審核紀錄",
+		"manageMessages": "管理訊息",
+		"readMessageHistory": "讀取訊息歷史",
+		"missing": "InviteManager 在 {{{ channel }}} 缺少權限 {{{ permissions }}}",
+		"banMembers": "對成員停權",
+		"kickMembers": "踢出成員",
+		"memberError": "不能獲取成員"
 	},
 	"resolvers": {
 		"boolean": {
-			"invalid": "Not a valid yes/no value.",
-			"type": "Boolean",
-			"typeInfo": "This arguments expects `true` or `false`. You can also use `yes` and `no`."
+			"invalid": "不是一個有效的 yes / no 值。",
+			"type": "布林值",
+			"typeInfo": "此值預計是 `true` 或 `false` 。您也可以使用 `yes` 和  `no` 。"
 		},
 		"channel": {
-			"multiple": "Multiple matching channels found. {{{ channels }}}",
-			"notFound": "Channel not found.",
-			"type": "Channel",
-			"typeInfo": "This arguments expects a Discord Channel. You can use any of the following methods to provide a channel:\n\n- Mention the channel: `#general`\n- Use the ID: `409846838129197057`\n- Use the name: `general`\n- Use quotes if the name has a space: `\"general with a space\"`"
+			"multiple": "找到多個符合的頻道。 {{{ channels }}}",
+			"notFound": "頻道未找到。",
+			"type": "頻道",
+			"typeInfo": "此值預計是一個 Discord 頻道。您可以使用以下任何一種方式來提供一個頻道：\n\n- 提及頻道： `#general`\n- 使用 ID： `409846838129197057`\n- 使用名稱： `general`\n- 使用引號如果名稱有空格： `\"general with a space\"`"
 		},
 		"command": {
-			"multiple": "Multiple matching commands found. {{{ commands }}}",
-			"notFound": "Command not found.",
-			"type": "Command",
-			"validValues": "Use one of the following values: {{{ values }}}",
-			"typeInfo": "This argument expects a command of this bot. You can use any of the following methods to provide a command:\n\n- Use the command name: `invites`\n- Use an alias of the command: `p`"
+			"multiple": "找到多個符合的指令。 {{{ commands }}}",
+			"notFound": "指令未找到。",
+			"type": "指令",
+			"validValues": "使用以下其中一個值： {{{ values }}}",
+			"typeInfo": "此值預計是此機器人的一個指令。您可以使用以下任何一種方式來提供一個指令：\n\n- 使用指令名稱： `invites`\n- 使用指令別名： `p`"
 		},
 		"enum": {
-			"invalid": "Not a valid value.",
-			"validValues": "Use one of the following values: {{{ values }}}",
-			"type": "Enum",
-			"typeInfo": "This arguments expects a value from a specific set of valid values.  \n\n> Depending on the command the valid values can vary. Use `!help <command>` (eg. `!help addRank`) to get more information about the command and the valid values for the enum."
+			"invalid": "不是一個有效的值。",
+			"validValues": "使用以下其中一個值： {{{ values }}}",
+			"type": "列舉",
+			"typeInfo": "此值預計是一個指定的有效值。\n\n> 根據指令會有不同的有效值。使用 `!help <command>` （例如： `!help addRank` ）來獲取指令的詳細資訊和列舉的有效值。"
 		},
-		"invalid": "Invalid value for `{{ arg }}`: {{{ error }}}\n{{{ usage }}}\n{{{ help }}}",
+		"invalid": "無效的值 `{{ arg }}` ： {{{ error }}}\n{{{ usage }}}\n{{{ help }}}",
 		"member": {
-			"multiple": "Multiple matching members found. {{{ members }}}",
-			"notFound": "Member was not found.",
-			"type": "Member"
+			"multiple": "找到多個符合的成員。 {{{ members }}}",
+			"notFound": "沒有找到成員。",
+			"type": "成員"
 		},
-		"missingRequired": "Missing required parameter `{{ name }}`.\n{{{ usage }}}\n{{{ help }}}",
+		"missingRequired": "缺少需要的參數 `{{ name }}` ：\n{{{ usage }}}\n{{{ help }}}",
 		"number": {
-			"invalid": "Not a valid number.",
-			"type": "Number",
-			"typeInfo": "This arguments expects a number",
-			"tooSmall": "That number is too small, it has to be at least {{{ min }}}.",
-			"tooLarge": "That number is too large, it has to be at most {{{ max }}}."
+			"invalid": "不是一個有效的數字。",
+			"type": "數字",
+			"typeInfo": "此值預計是一個數字",
+			"tooSmall": "數字太小，它至少是 {{{ min }}} 。",
+			"tooLarge": "數字太大，它最多是 {{{ max }}} 。"
 		},
 		"role": {
-			"multiple": "Multiple matching roles found. {{{ roles }}}",
-			"notFound": "Role was not found.",
-			"type": "Role",
-			"typeInfo": "This arguments expects a Discord Role. You can use any of the following methods to provide a role:\n\n- Mention the role: `@Admin`\n- Use the ID: `102785693046026240`\n- Use the name: `Admin`\n- Use quotes if the name has a space: `\"Admin with a space\"`"
+			"multiple": "找到多個符合的身分組。 {{{ roles }}}",
+			"notFound": "沒有找到身分組。",
+			"type": "身分組",
+			"typeInfo": "此值預計是一個 Discord 身分組。您可以使用以下任何一種方式來提供一個身分組：\n\n- 提及身分組： `@Admin`\n- 使用 ID ： `102785693046026240`\n- 使用名稱： `Admin`\n- 使用引號如果名稱有空格： `\"Admin with a space\"`"
 		},
 		"user": {
-			"multiple": "Multiple matching users found. {{{ users }}}",
-			"notFound": "User was not found.",
-			"type": "User",
-			"typeInfo": "This arguments expects a Discord User. You can use any of the following methods to provide a user:\n\n- Mention the user: `@Valandur`\n- Use their ID: `102785693046026240`\n- Use their name: `Valandur`\n- Use their name and discriminator: `Valandur#3581`\n- Use quotes if their name has a space: `\"Valandur with a space\"`"
+			"multiple": "找到多個符合的使用者。 {{{ users }}}",
+			"notFound": "沒有找到使用者。",
+			"type": "使用者",
+			"typeInfo": "此值預計是一位 Discord 使用者。您可以使用以下任何一種方式來提供一位使用者：\n\n- 提及使用者： `@Valandur`\n- 使用他們的 ID ： `102785693046026240`\n- 使用他們的名稱： `Valandur`\n- 使用他們的名稱和識別碼： `Valandur#3581`\n使用引號如果他們的名稱有空格： `\"Valandur with a space\"`"
 		},
 		"string": {
-			"type": "Text",
-			"typeInfo": "This arguments expects any text. You can use quotes (`\"Text with quotes\"`) for text that has spaces.  \n\n> If the text is the last argument you don't have to use quotes."
+			"type": "文字",
+			"typeInfo": "此值預計是文字。您可以使用引號（\"引號文字\"）如果文字有空格。\n\n> 如果文字是最後一個值您就不需使用引號。"
 		},
 		"settingsvalue": {
-			"type": "Value"
+			"type": "值"
 		},
 		"date": {
-			"type": "Date",
-			"typeInfo": "This argument expects a date. You can use various formats, but we recommend: `YYYY-MM-DD`"
+			"type": "日期",
+			"typeInfo": "此值預計是日期。您可以使用各種不同的格式，但是我們建議： `西元年-月份-日期`"
 		},
 		"duration": {
-			"type": "Duration",
-			"typeInfo": "This argument expects a duration. The following duration types are supported:\n\n- Seconds: `s` (`5s` = 5 seconds)\n- Minutes: `min` (`3min` = 3 minutes)\n- Hours: `h` (`4h` = 4 hours)\n- Days: `d` (`2d` = 2 days)\n- Weeks: `w` (`1w` = 1 week)\n- Months: `mo` (`6mo` = 6 months)\n- Years: `y` (`10y` = 10 years)"
+			"type": "期間",
+			"typeInfo": "此值預計是一段期間。支援以下類型的期間：\n\n- 秒： `s` （ `5s` = 5 秒）\n- 分： `min` （ `3min` = 3 分）\n- 時： `h` （ `4h` = 4 時）\n- 天： `d` （ `2d` = 2 天）\n- 週： `w` （ `1w` = 1 週）\n- 月： `mo` （ `6mo` = 6 月）\n- 年： `y` （ `10y` = 10 年）"
 		},
 		"invitecode": {
-			"type": "Invite Code",
-			"typeInfo": "This arguments expects a Discord Invite Code.  \n\n> You can put only the part after `https://discord.gg/` to prevent Discord from creating a preview.",
-			"notFound": "The specified invite code could not be found."
+			"type": "邀請代碼",
+			"typeInfo": "此值預計是一個 Discord 邀請代碼。\n\n> 您可以只貼 `https://discord.gg/` 後面的部分來防止 Discord 建立一個預覽。",
+			"notFound": "不能找到指定的邀請代碼。"
 		}
 	},
 	"settings": {
 		"autoModAllCapsEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate messages with A LOT OF CAPS."
+			"title": "啟用",
+			"description": "自動審核許多大寫的訊息。"
 		},
 		"autoModAllCapsMinCharacters": {
-			"title": "Min. Characters",
-			"description": "The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK')."
+			"title": "最少字數",
+			"description": "要考慮進行審核訊息的最少字數（設定 '3' 將會忽略 'OK' ）。"
 		},
 		"autoModAllCapsPercentageCaps": {
-			"title": "Percentage CAPs",
-			"description": "The percentage of characters of the message that have to be CAPs for the rule to trigger."
+			"title": "大寫百分比",
+			"description": "訊息內會觸發大寫規則的字數百分比。"
 		},
 		"autoModDeleteBotMessage": {
-			"title": "Delete Bot Messages",
-			"description": "Automatically delete the bots own messages (keeps your chat clean)."
+			"title": "刪除機器人訊息",
+			"description": "自動刪除機器人自己的訊息（保持您乾淨的聊天室）。"
 		},
 		"autoModDeleteBotMessageTimeoutInSeconds": {
-			"title": "Delete Bot Message Timeout",
-			"description": "The timeout after which bot messages are deleted."
+			"title": "刪除機器人訊息延遲時間",
+			"description": "刪除機器人訊息的延遲時間。"
 		},
 		"autoModDisabledForOldMembers": {
-			"title": "Disabled for Old Members",
-			"description": "Disabled auto moderation for members that have been in your server for a long time."
+			"title": "老成員禁用",
+			"description": "禁用自動審核成員如果他們已在您的伺服器好長一段時間。"
 		},
 		"autoModDisabledForOldMembersThreshold": {
-			"title": "Old Members Threshold",
-			"description": "The amount of time a member has to be in your server to be considered 'old'."
+			"title": "老成員門檻",
+			"description": "考慮是 '老' 成員所需在伺服器內的時間。"
 		},
 		"autoModDuplicateTextEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate duplicate messages (copy-paste spam)."
+			"title": "啟用",
+			"description": "自動審核拷貝訊息（複製貼上的垃圾訊息）。"
 		},
 		"autoModDuplicateTextTimeframeInSeconds": {
-			"title": "Timeframe in Seconds",
-			"description": "The timeframe whithin which messages will be considered duplicates."
+			"title": "以秒為單位的時間範圍",
+			"description": "考慮是拷貝訊息的時間範圍。"
 		},
 		"autoModEmojisEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate messages with an excessive amount of emojis."
+			"title": "啟用",
+			"description": "自動審核數量過多的表情符號訊息。"
 		},
 		"autoModEmojisMaxNumberOfEmojis": {
-			"title": "Max # of Emojis",
-			"description": "The maximum amount of emojis a message is allowed to have before trigger the rule."
+			"title": "最多 # 個表情符號",
+			"description": "在觸發規則前一則訊息所允許的最大表情數量。"
 		},
 		"autoModEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work)."
+			"title": "啟用",
+			"description": "自動審核訊息（也可以開啟或關閉指定規則，此設置必須打開來啟用任何規則）。"
 		},
 		"autoModHoistEnabled": {
-			"title": "Enabled",
-			"description": "Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list)."
+			"title": "啟用",
+			"description": "自動給成員暱稱如果他們嘗試提升（使用特殊文字來出現在使用者列表頂端）。"
 		},
 		"autoModIgnoredChannels": {
-			"title": "Ignored Channels",
-			"description": "Channels that are ignored while automatically moderating."
+			"title": "忽略的頻道",
+			"description": "自動審核時忽略的頻道。"
 		},
 		"autoModIgnoredRoles": {
-			"title": "Ignored Roles",
-			"description": "Any members with these roles will not automatically be moderated."
+			"title": "忽略的身分組",
+			"description": "任何成員有這些身分組將不會被自動審核。"
 		},
 		"autoModInvitesEnabled": {
-			"title": "Enabled",
-			"description": "Automatically scan messages for discord invite links and remove them."
+			"title": "啟用",
+			"description": "自動掃描有 Discord 邀請連結的訊息然後移除他們。"
 		},
 		"autoModLinksBlacklist": {
-			"title": "Blacklist",
-			"description": "Blacklist certain links which users won't be able to post."
+			"title": "黑名單",
+			"description": "使用者將不能張貼的一些黑名單連結。"
 		},
 		"autoModLinksEnabled": {
-			"title": "Enabled",
-			"description": "Automatically remove messages containing links (you can set a whitelist and blacklist)."
+			"title": "啟用",
+			"description": "自動移除有連結的訊息（您可以設定白名單和黑名單）。"
 		},
 		"autoModLinksFollowRedirects": {
-			"title": "Follow Redirects",
-			"description": "Enable this to resolve redirects for links."
+			"title": "追蹤重新導向",
+			"description": "啟用此來解決重新導向連結。"
 		},
 		"autoModLinksWhitelist": {
-			"title": "Whitelist",
-			"description": "A list of links that users are allowed to post."
+			"title": "白名單",
+			"description": "允許使用者張貼的連結列表。"
 		},
 		"autoModLogEnabled": {
-			"title": "Log Enabled",
-			"description": "Log any moderation actions that the bot makes."
+			"title": "啟用紀錄",
+			"description": "紀錄機器人的任何審核動作。"
 		},
 		"autoModMentionRolesEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate messages that mention an excessive amount of roles."
+			"title": "啟用",
+			"description": "自動審核提及過多身分組的訊息。"
 		},
 		"autoModMentionRolesMaxNumberOfMentions": {
-			"title": "Max # of Mentions",
-			"description": "The maximum amount of roles a member can mention in a message."
+			"title": "最多 # 個提及",
+			"description": "一位成員在一則訊息內可以提及的最大身分組數量。"
 		},
 		"autoModMentionUsersEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate messages that mention an excessive amount of users."
+			"title": "啟用",
+			"description": "自動審核提及數量過多的使用者訊息。"
 		},
 		"autoModMentionUsersMaxNumberOfMentions": {
-			"title": "Max # of Mentions",
-			"description": "The maximum amount of users a member can mention in a message."
+			"title": "最多 # 個提及",
+			"description": "一位成員在一則訊息內可以提及的最大使用者數量。"
 		},
 		"autoModModeratedChannels": {
-			"title": "Moderated Channels",
-			"description": "The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels)."
+			"title": "審核的頻道",
+			"description": "想要審核的頻道列表（這類似一份白名單，留白會審核所有頻道，或使用 `autoModIgnoredChannels` 來忽略一些頻道）。"
 		},
 		"autoModModeratedRoles": {
-			"title": "Moderated Roles",
-			"description": "The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles)."
+			"title": "審核的身分組",
+			"description": "想要審核的身分組列表（這類似一份白名單，留白會審核所有身分組，或使用 `autoModIgnoredRoles` 來忽略一些身分組）。"
 		},
 		"autoModQuickMessagesEnabled": {
-			"title": "Enabled",
-			"description": "Automatically moderate users sending a lot of messages in a short time."
+			"title": "啟用",
+			"description": "自動審核使用者在短時間內發送大量訊息。"
 		},
 		"autoModQuickMessagesNumberOfMessages": {
-			"title": "# of Messages",
-			"description": "The number of messages that have to be sent within the timeframe to trigger the rule."
+			"title": "# 訊息數量",
+			"description": "時間範圍內觸發規則的發送訊息數量。"
 		},
 		"autoModQuickMessagesTimeframeInSeconds": {
-			"title": "Timeframe in Seconds",
-			"description": "The timeframe within which a user is allowed to send a maximum amount of messages."
+			"title": "以秒為單位的時間範圍",
+			"description": "時間範圍內允許一位使用者發送的最大訊息數量。"
 		},
 		"autoModWordsBlacklist": {
-			"description": "A list of words that are banned.",
-			"title": "Blacklist"
+			"description": "禁止的文字列表。",
+			"title": "黑名單"
 		},
 		"autoModWordsEnabled": {
-			"description": "Whether or not blacklisted words will be automoderated.",
-			"title": "Enabled"
+			"description": "是否自動審核黑名單的文字。",
+			"title": "啟用"
 		},
 		"autoSubtractFakes": {
-			"description": "Automatically subtract fake invites.",
-			"title": "Auto Subtract"
+			"description": "自動減去假邀請數量。",
+			"title": "自動減去"
 		},
 		"autoSubtractLeaves": {
-			"description": "Automatically remove invites from the inviter when the invited user leaves.",
-			"title": "Auto Subtract"
+			"description": "當被邀請的使用者離開時自動從邀請者移除邀請數量。",
+			"title": "自動減去"
 		},
 		"autoSubtractLeaveThreshold": {
-			"description": "The time in seconds for which a user has to stay in the server for the invite to count.",
-			"title": "Auto Subtract Threshold"
+			"description": "使用者在伺服器停留多少時間可以計算成邀請，以秒為單位。",
+			"title": "自動減去門檻"
 		},
 		"captchaVerificationFailedMessage": {
-			"description": "The message sent to the user if he enters an invalid captcha.",
-			"title": "Failed Message"
+			"description": "發送給使用者的訊息如果他輸入一個無效的驗證碼。",
+			"title": "失敗訊息"
 		},
 		"captchaVerificationLogEnabled": {
-			"description": "Whether or not verification attempts will be logged.",
-			"title": "Log Enabled"
+			"description": "驗證過程是否會被記錄。",
+			"title": "啟用紀錄"
 		},
 		"captchaVerificationOnJoin": {
-			"description": "Whether or not captcha verification is enabled.",
-			"title": "Enabled"
+			"description": "驗證碼是否啟用驗證。",
+			"title": "啟用"
 		},
 		"captchaVerificationSuccessMessage": {
-			"description": "The welcome message that will be sent to the user after he successfully verifies.",
-			"title": "Success Message"
+			"description": "將會發送給使用者的歡迎訊息在他成功驗證之後。",
+			"title": "成功訊息"
 		},
 		"captchaVerificationTimeout": {
-			"description": "The time within which the captcha has to be entered successfully.",
-			"title": "Verification Timeout"
+			"description": "必須成功輸入驗證碼的時間。",
+			"title": "驗證延遲時間"
 		},
 		"captchaVerificationWelcomeMessage": {
-			"description": "The message a user will get after joining a server and instructing them to enter the captcha.",
-			"title": "Welcome Message"
+			"description": "一位使用者在加入伺服器之後將收到的訊息來指示他們輸入驗證碼。",
+			"title": "歡迎訊息"
 		},
 		"channels": {
-			"title": "Command channels",
-			"description": "The channels in which the bot will react to commands."
+			"title": "指令頻道",
+			"description": "機器人將會回應指令的頻道。"
 		},
 		"getUpdates": {
-			"description": "Enable to receive development updates about InviteManager.",
-			"title": "Get Updates"
+			"description": "啟用來接收 InviteManager 的開發更新。",
+			"title": "獲取更新"
 		},
 		"groups": {
 			"general": {
-				"description": "General bot settings such as prefix and language.",
-				"title": "General"
+				"description": "機器人的一般設置選項，例如前綴和語言。",
+				"title": "一般"
 			},
 			"invites": {
-				"description": "Invite related settings, such as channel and message.",
+				"description": "邀請相關的設置選項，例如頻道和訊息。",
 				"fakes": {
-					"description": "Settings for fake invites.",
-					"title": "Fakes"
+					"description": "假邀請數量的設置選項。",
+					"title": "假邀請"
 				},
 				"joins": {
-					"description": "Join related settings, such as join message.",
-					"title": "Joins"
+					"description": "加入相關的設置選項，例如加入訊息。",
+					"title": "加入"
 				},
 				"leaderboard": {
-					"description": "Settings for the leaderboard, such as the visual style.",
-					"title": "Leaderboard"
+					"description": "排行榜的設置選項，例如視覺格式。",
+					"title": "排行榜"
 				},
 				"leaves": {
-					"description": "Leave related settings, such as leave message.",
-					"title": "Leaves"
+					"description": "離開相關的設置選項，例如離開訊息。",
+					"title": "離開"
 				},
 				"ranks": {
-					"description": "Rank related settings.",
-					"title": "Ranks"
+					"description": "等級相關的設置選項。",
+					"title": "等級"
 				},
-				"title": "Invites",
+				"title": "邀請數量",
 				"general": {
-					"title": "General",
-					"description": "General invite settings, such as join roles"
+					"title": "一般",
+					"description": "一般的邀請設置選項，例如加入身分組"
 				}
 			},
 			"moderation": {
 				"bannedWords": {
-					"description": "Ban specific words.",
-					"title": "Banned Words"
+					"description": "禁止特定的文字。",
+					"title": "禁止的文字"
 				},
 				"caps": {
-					"description": "Prevent spamming with CAPS LOCK ON",
-					"title": "Caps"
+					"description": "防止 CAPS LOCK 開啟的垃圾訊息",
+					"title": "大寫"
 				},
 				"captcha": {
-					"description": "Settings related to the captcha-on-join",
-					"title": "Captcha"
+					"description": "加入-驗證碼相關的設置選項",
+					"title": "驗證碼"
 				},
-				"description": "Moderation and auto moderation settings.",
+				"description": "審核和自動審核的設置選項。",
 				"duplicate": {
-					"description": "Automatically remove duplicate messages.",
-					"title": "Duplicate Messages"
+					"description": "自動移除拷貝訊息。",
+					"title": "拷貝訊息"
 				},
 				"emojis": {
-					"description": "Automatically remove messages with too many emojis.",
-					"title": "Emojis"
+					"description": "自動移除太多表情符號的訊息。",
+					"title": "表情符號"
 				},
 				"general": {
-					"description": "General moderation settings which apply to all submodules.",
-					"title": "General"
+					"description": "一般的審核設置選項，適用所有子模組。",
+					"title": "一般"
 				},
 				"invites": {
-					"description": "Automatically remove Discord invite links.",
-					"title": "Invites"
+					"description": "自動移除 Discord 邀請連結。",
+					"title": "邀請數量"
 				},
 				"links": {
-					"description": "Automatically remove links.",
-					"title": "Links"
+					"description": "自動移除連結。",
+					"title": "連結"
 				},
 				"logging": {
-					"description": "Logging settings of various moderation commands and actions",
-					"title": "Logging"
+					"description": "各種不同的審核指令和動作紀錄的設置選項",
+					"title": "紀錄"
 				},
 				"mentions": {
-					"description": "Automatically remove messages with too many mentions.",
-					"title": "Mentions"
+					"description": "自動移除太多提及的訊息。",
+					"title": "提及"
 				},
 				"spam": {
-					"description": "Prevent users from spamming messages.",
-					"title": "Spam"
+					"description": "防止使用者發送垃圾訊息。",
+					"title": "垃圾訊息"
 				},
-				"title": "Moderation"
+				"title": "審核"
 			},
 			"music": {
-				"title": "Music",
-				"description": "Music Settings",
+				"title": "音樂",
+				"description": "音樂的設置選項",
 				"general": {
-					"title": "Music",
-					"description": "General Music Settings"
+					"title": "音樂",
+					"description": "一般的音樂設置選項"
 				},
 				"announcement": {
-					"title": "Announcement",
-					"description": "Announces the next song."
+					"title": "公告",
+					"description": "公告下一首歌曲。"
 				},
 				"fadeMusic": {
-					"title": "Fade Music",
-					"description": "Makes the music quieter when someone talks."
+					"title": "減小音樂",
+					"description": "當有人說話時讓音樂小聲一些。"
 				},
 				"platform": {
-					"title": "Platform",
-					"description": "The various platforms used to play music."
+					"title": "平臺",
+					"description": "用來播放音樂的各種不同平臺。"
 				}
 			}
 		},
 		"hideLeftMembersFromLeaderboard": {
-			"description": "Hide members that left the server from the leaderboard.",
-			"title": "Hide left members"
+			"description": "從排行榜隱藏離開伺服器的成員。",
+			"title": "隱藏離開成員"
 		},
 		"ignoredChannels": {
-			"title": "Ignored channels",
-			"description": "The channels in which the bot will ignore commands."
+			"title": "忽略的頻道",
+			"description": "機器人將會忽略指令的頻道。"
 		},
 		"joinMessage": {
-			"description": "The message sent when someone joins the server.",
-			"title": "Message"
+			"description": "當有人加入伺服器時發送的訊息。",
+			"title": "訊息"
 		},
 		"joinMessageVanity": {
-			"description": "The message sent when someone joins the server using a vanity URL.",
-			"title": "Message"
+			"description": "當有人使用個性化網址加入伺服器時發送的訊息。",
+			"title": "訊息"
 		},
 		"joinMessageChannel": {
-			"description": "The channel that the message on join is sent to.",
-			"title": "Message Channel"
+			"description": "加入訊息發送的頻道。",
+			"title": "訊息頻道"
 		},
 		"lang": {
-			"description": "The language of the bot",
-			"title": "Language"
+			"description": "機器人的語言",
+			"title": "語言"
 		},
 		"leaderboardStyle": {
-			"description": "The display style of the leaderboard.",
-			"title": "Style"
+			"description": "排行榜顯示的格式。",
+			"title": "格式"
 		},
 		"leaveMessage": {
-			"description": "The message sent when someone leaves the server.",
-			"title": "Message"
+			"description": "當有人離開伺服器時發送的訊息。",
+			"title": "訊息"
 		},
 		"leaveMessageVanity": {
-			"description": "The message sent when someone leaves the server after he joined with a vanity URL.",
-			"title": "Message"
+			"description": "當有人使用個性化網址加入伺服器之後離開時發送的訊息。",
+			"title": "訊息"
 		},
 		"leaveMessageChannel": {
-			"description": "The channel that the leave message is sent to.",
-			"title": "Message Channel"
+			"description": "離開訊息發送的頻道。",
+			"title": "訊息頻道"
 		},
 		"logChannel": {
-			"description": "The channel where bot actions are logged.",
-			"title": "Log Channel"
+			"description": "機器人動作紀錄的頻道。",
+			"title": "記錄頻道"
 		},
 		"modLogChannel": {
-			"description": "The channel where moderation logs will be posted in.",
-			"title": "Mod Log Channel"
+			"description": "將張貼審核紀錄的頻道。",
+			"title": "審核紀錄頻道"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "Whether or not \"Ban\" pushment messages will be deleted automatically.",
-			"title": "Delete Ban Messages"
+			"description": "是否自動刪除 \"停權\" 的懲罰訊息。",
+			"title": "刪除停權訊息"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "Whether or not \"Kick\" pushment messages will be deleted automatically.",
-			"title": "Delete Kick Messages"
+			"description": "是否自動刪除 \"踢出\" 的懲罰訊息。",
+			"title": "刪除踢出訊息"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "Whether or not \"Mute\" pushment messages will be deleted automatically.",
-			"title": "Delete Mute Messages"
+			"description": "是否自動刪除 \"靜音\" 的懲罰訊息。",
+			"title": "刪除靜音訊息"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "Whether or not \"Softban\" pushment messages will be deleted automatically.",
-			"title": "Delete Softban Messages"
+			"description": "是否自動刪除 \"暫時停權\" 的懲罰訊息。",
+			"title": "刪除暫時停權訊息"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "Whether or not \"Warn\" pushment messages will be deleted automatically.",
-			"title": "Delete Warn Messages"
+			"description": "是否自動刪除 \"警告\" 的懲罰訊息。",
+			"title": "刪除警告訊息"
 		},
 		"mutedRole": {
-			"description": "The role that is given to people who are muted. Make sure this role is denied the \"Send Message\" permission.",
-			"title": "Muted Role"
+			"description": "給予靜音的身分組。確認已拒絕 \"發送訊息\" 權限。",
+			"title": "靜音的身分組"
 		},
 		"prefix": {
-			"description": "The prefix used to trigger bot commands.",
-			"title": "Prefix"
+			"description": "用來觸發機器人指令的前綴。",
+			"title": "前綴"
 		},
 		"rankAnnouncementChannel": {
-			"description": "The channel where users receiving a new rank are announced.",
-			"title": "Announcement Channel"
+			"description": "使用者收到一個新等級時的公告頻道。",
+			"title": "公告頻道"
 		},
 		"rankAnnouncementMessage": {
-			"description": "The message that is sent when a user receives a new rank.",
-			"title": "Announcement Message"
+			"description": "使用者收到一個新等級時的訊息。",
+			"title": "公告訊息"
 		},
 		"rankAssignmentStyle": {
-			"description": "How ranks are rewarded to users.",
-			"title": "Assignment Style"
+			"description": "如何獎勵使用者的等級。",
+			"title": "指派格式"
 		},
 		"musicVolume": {
-			"title": "Music Volume",
-			"description": "The default volume that is set when the bot joins a voice channel."
+			"title": "音樂音量",
+			"description": "當機器人加入一個語音頻道時的預設音量。"
 		},
 		"announceNextSong": {
-			"title": "Announce Next Song",
-			"description": "Whether or not the next song should be announced in the voice channel."
+			"title": "公告下一首歌曲",
+			"description": "是否應該在語音頻道裡公告下一首歌曲。"
 		},
 		"announcementVoice": {
-			"title": "Announcement Voice",
-			"description": "The voice used in the next song announcements."
+			"title": "公告音量",
+			"description": "公告下一首歌曲的音量。"
 		},
 		"fadeMusicOnTalk": {
-			"title": "Fade Music On Talk",
-			"description": "If enabled, the music will fade down while people are talking."
+			"title": "說話時減小音樂",
+			"description": "如果啟用，當人們說話時音樂會減低。"
 		},
 		"fadeMusicStartDuration": {
-			"title": "Fade Music Start Duration",
-			"description": "The duration during which the fade will happen (eg. 1 second)"
+			"title": "減小音樂期間",
+			"description": "減小將發生的期間（例如： 1 秒）"
 		},
 		"fadeMusicEndDelay": {
-			"title": "Fade Music End Delay",
-			"description": "The delay of how many seconds noone has to speak for the volume to return back to normal."
+			"title": "延遲結束減小音樂",
+			"description": "沒人說話多少秒讓音量恢復正常的延遲時間。"
 		},
 		"defaultMusicPlatform": {
-			"title": "Default Music Platform",
-			"description": "The platform that is used to search / play music when no platform is selected explicitly."
+			"title": "預設音樂平臺",
+			"description": "當沒有明確選擇平臺時用來搜尋 / 播放的平臺。"
 		},
 		"disabledMusicPlatforms": {
-			"title": "Disabled Music Platforms",
-			"description": "Music platforms that are disabled and cannot be used to play music."
+			"title": "禁用音樂平臺",
+			"description": "禁用然後不能用來播放音樂的音樂平臺。"
 		},
 		"joinRoles": {
-			"title": "Join Roles",
-			"description": "Roles that are assigned to all members when joining."
+			"title": "加入身分組",
+			"description": "當加入時指派給所有成員的身分組。"
 		}
 	},
 	"strikeConfig": {
 		"invites": {
-			"title": "Invite Links",
-			"description": "A member posts an invite link to a Discord server."
+			"title": "邀請連結",
+			"description": "一位成員張貼一個 Discord 伺服器的邀請連結。"
 		},
 		"links": {
-			"title": "Links",
-			"description": "Someone posts a link to a website."
+			"title": "連結",
+			"description": "有人張貼一個網站的連結。"
 		},
 		"words": {
-			"title": "Banned words",
-			"description": "A member uses a explicitly banned word."
+			"title": "禁止的文字",
+			"description": "一位成員使用一個明確禁止的文字。"
 		},
 		"allCaps": {
-			"title": "CAPS",
-			"description": "Messages containing an excessive amount of CAPS."
+			"title": "大寫",
+			"description": "訊息有過多的大寫。"
 		},
 		"duplicateText": {
-			"title": "Duplicate Text",
-			"description": "Someone keeps posting the same message (copy-pasta)."
+			"title": "拷貝文字",
+			"description": "有人一直張貼一樣的訊息（複製 — 貼上）。"
 		},
 		"quickMessages": {
-			"title": "Spamming",
-			"description": "Members send a lot of mesages in a short amount of time."
+			"title": "垃圾訊息",
+			"description": "成員在短時間內發送很多訊息。"
 		},
 		"mentionUsers": {
-			"title": "Mention Users",
-			"description": "Someone posts a message mentioning a lot of other people."
+			"title": "提及使用者",
+			"description": "有人張貼一則提及很多其他人們的訊息。"
 		},
 		"mentionRoles": {
-			"title": "Mention Roles",
-			"description": "Someone posts a message mentioning a lot of roles."
+			"title": "提及身分組",
+			"description": "有人張貼一則提及很多身分組的訊息。"
 		},
 		"emojis": {
-			"title": "Emojis",
-			"description": "Messages made up of mostly emojis."
+			"title": "表情符號",
+			"description": "訊息大部分都是表情符號。"
 		},
 		"hoist": {
-			"title": "Hoisting",
-			"description": "Someone adds special characters to their name to be listed at the top."
+			"title": "提升",
+			"description": "有人在他們的名字新增特殊文字來列在頂端。"
 		}
 	},
 	"punishmentConfig": {
 		"ban": {
-			"title": "Ban",
-			"description": "Ban the member from the server."
+			"title": "停權",
+			"description": "從伺服器停權成員。"
 		},
 		"kick": {
-			"title": "Kick",
-			"description": "Kick the member from the server."
+			"title": "踢出",
+			"description": "從伺服器踢出成員。"
 		},
 		"softban": {
-			"title": "Softban",
-			"description": "Ban and then immediately unban a member."
+			"title": "暫時停權",
+			"description": "停權然後立刻解除停權一位成員。"
 		},
 		"warn": {
-			"title": "Warn",
-			"description": "Send a warning message to the member"
+			"title": "警告",
+			"description": "發送警告訊息給成員"
 		},
 		"mute": {
-			"title": "Mute",
-			"description": "Mute the member."
+			"title": "靜音",
+			"description": "靜音成員。"
 		}
 	},
 	"music": {
-		"notPlaying": "There is currently no music being played!",
-		"notConnected": "The bot is not connected to a voice channel!",
-		"voiceChannelRequired": "You need to be in a voice channel to use that command!"
+		"paused": "已暫停播放！",
+		"resumed": "已恢復播放！",
+		"endOfQueue": "停止。達到播放列表的最後！",
+		"seekedTo": "目前的音軌跳至 `{{{ duration }}}` 。",
+		"disconnected": "中斷連接！",
+		"notPlaying": "目前沒有音樂在播放！",
+		"notConnected": "機器人沒有連接到一個語音頻道！",
+		"voiceChannelRequired": "您需要在語音頻道裡使用指令！"
 	},
 	"roles": {
-		"shouldHave": "The user should have the roles {{{ shouldHave }}}, but I can't assign them.",
-		"shouldNotHave": "The user should not have the roles {{{ shouldNotHave }}}, but I can't take them away.",
-		"dangerous": "The roles {{{ dangerous }}} are potentially dangerous to assign because they include important permissions."
+		"shouldHave": "使用者應該有身分組 {{{ shouldHave }}} ，但是我不能指派他們。",
+		"shouldNotHave": "使用者不應該有身分組 {{{ shouldNotHave }}} ，但是我不能拿走他們。",
+		"dangerous": "指派身分組 {{{ dangerous }}} 可能有危險，因為它們包含重要的權限。"
 	}
 }

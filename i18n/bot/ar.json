@@ -355,7 +355,7 @@
 				},
 				"description": "عرض المساعدة."
 			},
-			"text": "هذه هي اللائحة للاوامر, يمكنك الحصول على معلومات اضافية باستعمال\n{{ prefix }}help ` (e.g. `{{ prefix }}help add-ranks`)",
+			"text": "This is a list of commands you can use. You can get more info about a specific command by using `{{ prefix }}help <command>` (e.g. `{{ prefix }}help add-rank`)",
 			"usage": {
 				"title": "استعمال"
 			}
@@ -605,23 +605,6 @@
 			"title": "لائحة المتصدرين",
 			"lastUpdate": "Last updated {{{ lastUpdate }}}, next update {{{ nextUpdate }}}"
 		},
-		"legacyInvites": {
-			"self": {
-				"args": {
-					"user": "سيتم حذف هذا الامر قريبا."
-				},
-				"description": "هذا الامر سيتم حذفه قريبا."
-			}
-		},
-		"legacyLeaderboard": {
-			"self": {
-				"args": {
-					"date": "هذا الامر سيتم حذفه قريبا.",
-					"page": "هذا الامر سيتم حذفه قريبا."
-				},
-				"description": "هذا الامر سيتم حذفه قريبا."
-			}
-		},
 		"makeMentionable": {
 			"alreadyDone": "{{{ role }}} مذكورة من قبل.",
 			"self": {
@@ -747,9 +730,9 @@
 				"maxGuilds": "You have activated premium on the maximum number of guilds."
 			},
 			"check": {
-				"declined": "تم رفض دفعتك للقسط ، يرجى التحقق من Patreon الخاص بك.",
+				"declined": "Your payment for premium has been declined, please check your Patreon.",
 				"done": "لديك اشتراك نشط نشط صالح حتى {{{valid}}}.\nاستخدم {{{cmd}}} لمزيد من المعلومات.",
-				"notFound": "حسابك ليس لديه اشتراك متميز مرتبط.\nإذا كنت ممتازًا باستخدام Patreon ، فيرجى التأكد من ربط حساب Discord الخاص بك مع Patreon لجمع مكافآتك ، ثم قم بتشغيل هذا الأمر مرة أخرى",
+				"notFound": "Your account does not have a premium subscription associated.\n\nIf you acquired premium using Patreon, please make sure to link your Discord account to Patreon to collect your rewards, then run this command again.",
 				"title": "تحقق من وجود قسط الاشتراك",
 				"paused": "Your subscription currently seems to be paused, please check your Patreon."
 			},
@@ -771,7 +754,7 @@
 					"title": "ميزة مميزة: تصدير التاريخ"
 				},
 				"patreon": {
-					"text": "شغّل {{{cmd}}} للتحقق من صحة تعهد Patreon وتنشيطه.",
+					"text": "Run {{{ cmd }}} to validate and activate your Patreon pledge.",
 					"title": "If you purchased premium on Patreon"
 				},
 				"servers": {
@@ -864,7 +847,7 @@
 			"rankNotFound": "الرتبة {{{role}}} غير موجودة!",
 			"self": {
 				"args": {
-					"rank": "The user for which you want to remove the rank."
+					"rank": "The role of the rank you want to remove."
 				},
 				"description": "إزالة رتبة."
 			}
@@ -1635,23 +1618,23 @@
 			"title": "سجل القناه الخاص بالمود"
 		},
 		"modPunishmentBanDeleteMessage": {
-			"description": "سواء سيتم حذف رسائل \"الحظر\" من عدمه تلقائيًا او لا.",
+			"description": "Whether or not \"Ban\" punishment messages will be deleted automatically.",
 			"title": "حذف رسائل الحظر"
 		},
 		"modPunishmentKickDeleteMessage": {
-			"description": "سواء سيتم حذف رسائل \"الطرد\" من عدمه تلقائيًا او لا.",
+			"description": "Whether or not \"Kick\" punishment messages will be deleted automatically.",
 			"title": "حذف رسائل الطرد"
 		},
 		"modPunishmentMuteDeleteMessage": {
-			"description": "سواء سيتم حذف رسائل \"الصمت\" من عدمه تلقائيًا او لا.",
+			"description": "Whether or not \"Mute\" punishment messages will be deleted automatically.",
 			"title": "حذف رسائل الصمت"
 		},
 		"modPunishmentSoftbanDeleteMessage": {
-			"description": "سواء سيتم حذف رسائل \"الحظر\" من عدمه تلقائيًا او لا.",
+			"description": "Whether or not \"Softban\" punishment messages will be deleted automatically.",
 			"title": "حذف رسائل الحظر"
 		},
 		"modPunishmentWarnDeleteMessage": {
-			"description": "سواء سيتم حذف رسائل \"تحذير\" من عدمه تلقائيًا او لا.",
+			"description": "Whether or not \"Warn\" punishment messages will be deleted automatically.",
 			"title": "حذف رسائل التحذير."
 		},
 		"mutedRole": {
@@ -1696,7 +1679,7 @@
 		},
 		"fadeMusicEndDelay": {
 			"title": "تلاشي الموسيقى نهايه التأخير",
-			"description": "تأخر عدد الثواني التي يجب ألا يتحدث فيها أحد من أجل عودة مستوى الصوت إلى طبيعته."
+			"description": "The delay of how many seconds no one has to speak for the volume to return back to normal."
 		},
 		"defaultMusicPlatform": {
 			"title": "Default Music Platform",
@@ -1776,6 +1759,11 @@
 		}
 	},
 	"music": {
+		"paused": "Playback has been paused!",
+		"resumed": "Playback has been resumed!",
+		"endOfQueue": "Stopped. Reached end of playlist!",
+		"seekedTo": "Jumping to `{{{ duration }}}` in current track.",
+		"disconnected": "Disconnected!",
 		"notPlaying": "حاليه لا توجد موسيقى تنعزف!",
 		"notConnected": "البوت غير متصل الى قناه صوت!",
 		"voiceChannelRequired": "ينبغي عليك ان تكون في قناه للصوت لاسعمال هذا الامر!"

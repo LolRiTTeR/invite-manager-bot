@@ -4,7 +4,7 @@
 		"title": "模組",
 		"invites": {
 			"title": "邀請管理",
-			"description": "當機器人加入您的伺服器時，它會追蹤您伺服器上的每一個邀請。 Discord 只會顯示您總共有多少邀請。機器人還會分析誰邀請了誰。此功能可以偵測到假的邀請數量以及發覺誰試圖欺騙邀請系統。",
+			"description": "當我們的機器人加入您的伺服器時，它會追蹤您伺服器上的每一個邀請。 Discord 只會顯示您總共有多少邀請。機器人還會分析誰邀請了誰。此功能可以偵測到假邀請數量以及發覺誰試圖欺騙邀請系統。",
 			"examples": {
 				"title": "範例",
 				"headlines": {
@@ -14,12 +14,12 @@
 					"embed": "嵌入式訊息",
 					"screenshot": "截圖",
 					"code": "代碼",
-					"joinMessage": "一般式加入訊息",
-					"joinMessageVanity": "一般式加入訊息（個性化網址）",
+					"joinMessage": "加入訊息",
+					"joinMessageVanity": "加入訊息（個性化網址）",
 					"joinEmbed": "嵌入式加入訊息",
 					"joinEmbedVanity": "嵌入式加入訊息（個性化網址）",
-					"leaveMessage": "一般式離開訊息",
-					"leaveMessageVanity": "一般式離開訊息（個性化網址）",
+					"leaveMessage": "離開訊息",
+					"leaveMessageVanity": "離開訊息（個性化網址）",
 					"leaveEmbed": "嵌入式離開訊息",
 					"leaveEmbedVanity": "嵌入式離開訊息（個性化網址）"
 				},
@@ -59,12 +59,12 @@
 						"inviterMention": "提及邀請成員（該成員會被@）",
 						"inviterFullName": "邀請成員的完整名稱",
 						"inviterImage": "邀請成員的頭像連結",
-						"numInvites": "邀請成員的總邀請數量",
+						"numInvites": "邀請成員的所有邀請數量",
 						"numRegularInvites": "邀請成員的普通邀請數量",
-						"numBonusInvites": "邀請成員的額外獎勵邀請數量（手動分配）",
+						"numBonusInvites": "邀請成員的獎勵邀請數量（手動指派）",
 						"numFakeInvites": "邀請成員的假邀請數量",
 						"numLeaveInvites": "邀請成員的離開邀請數量",
-						"memberCount": "伺服器的成員總數",
+						"memberCount": "伺服器的所有成員數",
 						"numJoins": "成員加入伺服器的次數",
 						"channelName": "產生邀請連結的頻道名稱",
 						"channelMention": "提及產生邀請連結的頻道",
@@ -83,23 +83,23 @@
 						"joinedAtTimeAgo": "成員加入伺服器距今多久"
 					}
 				},
-				"content": "您可以自訂加入或離開訊息如下：\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\n或\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\n這樣的訊息顯然沒有意義。 您應該使用有關加入成員、邀請成員或伺服器的資訊對其進行個性化設定。 請參閱以下所有可用的預留參數列表。\n\n所以如果想要的訊息如下：\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\n可以透過用預留參數替換所有名稱和數字來輕鬆做到：\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\n所以您可以使用 `!config joinMessage <message from above>` 來設定加入訊息。當有人加入時，機器人會自動替換預留參數。",
-				"premiumNote": "高級會員還可以使用嵌入式加入及離開訊息。 [更多資訊](./examples.md)",
+				"content": "您可以自訂加入或離開訊息如下：\n\n```\n!config joinMessage This is your custom join message! It will be posted every time someone joins your server.\n```\n\n或\n\n```\n!config leaveMessage This is your custom leave message! It will be posted every time someone leaves your server.\n```\n\n這樣的訊息顯然沒有意義。 您應該使用有關加入成員、邀請成員或伺服器的資訊對其進行個性化設定。 請參閱以下可用的預留參數列表。\n\n所以如果想要的訊息如下：\n\n`Welcome @Andy! You were invited by Valandur, who now has 3 invites! Have fun on our server!`\n\n可以透過用預留參數替換所有名稱和數字來輕鬆做到：\n\n`Welcome {memberMention}! You were invited by {inviterName}, who now has {numInvites} invites! Have fun on our server!`\n\n所以您可以使用 `!config joinMessage <message from above>` 來設定加入訊息。當有人加入時，機器人會自動替換預留參數。",
+				"premiumNote": "高級會員還可以使用嵌入式加入和離開訊息。 [詳細資訊](./examples.md)",
 				"endingParagraph": "請參閱 [範例網頁](./examples.md) 來了解您可以使用哪種訊息！"
 			}
 		},
 		"moderation": {
 			"title": "審核",
-			"description": "全新的審核系可以統協助您自動審核許多內容。請閱讀 [記點]({{{ linkStrikes }}}) 和 [懲罰]({{{ linkPunishments }}}) 頁面來獲得更多資訊。簡單來說，機器人會給予「記點」當人們行為不端時，當他們達到一定數量時，便會受到懲罰。這些都可以由使用者自行設定。",
+			"description": "全新的審核系可以統協助您自動審核許多內容。請查看我們的 [記點]({{{ linkStrikes }}}) 和 [懲罰]({{{ linkPunishments }}}) 頁面來獲取詳細資訊。簡單來說，我們的機器人會給予「記點」當人們行為不端時，當他們達到一定數量時，便會受到懲罰。這些都可以由使用者自行設定。",
 			"punishments": {
 				"title": "懲罰",
 				"question": {
 					"first": "甚麼是懲罰？",
-					"second": "記點達到一定數量時，我該如何懲處使用者？"
+					"second": "記點達到一定數量時，我可以怎麼懲處使用者？"
 				},
 				"answer": {
 					"first": "懲罰是類似 `停權` 、 `踢出` 或 `靜音` 之類的動作，可以在使用者違反規定時給予。 您可以使用指令直接懲罰使用者，也可以自訂讓使用者達到一定數量的記點後受到懲處。",
-					"second": "使用 `punishmentconfig` 指令可以設定每種懲罰各自對應到的記點次數。\n\n```text\n!punishmentconfig <punishmentType> <numberOfStrikesNeeded>\n```\n\n可用的懲罰如下：\n\n- 停權\n- 暫時停權\n- 踢出\n- 靜音\n- 警告\n\n所以如果您想要踢出記點達到 5 次的使用者，您可以執行以下指令：\n\n```text\n!punishmentconfig kick 5\n```\n\n如果您想要刪除一項 `punishmentconfig` ，請設定記點次數為 `0` ，如下所示：\n\n```text\n!punishmentconfig kick 0\n```\n\n直接使用指令可確認目前的懲罰設定：\n\n```text\n!punishmentconfig\n```"
+					"second": "使用 `punishmentconfig` 指令可以設定每種懲罰各自對應到的記點次數。\n\n```text\n!punishmentconfig <punishmentType> <numberOfStrikesNeeded>\n```\n\n可用的懲罰如下：\n\n- 停權\n- 暫時停權\n- 踢出\n- 靜音\n- 警告\n\n所以如果您想要踢出記點達到 5 次的使用者，您可以執行以下指令：\n\n```text\n!punishmentconfig kick 5\n```\n\n如果您想要刪除一項 `punishmentconfig` ，請設定記點次數為 `0` ，如下所示：\n\n```text\n!punishmentconfig kick 0\n```\n\n直接使用指令可確認所有的懲罰設定：\n\n```text\n!punishmentconfig\n```"
 				}
 			},
 			"strikes": {
@@ -114,15 +114,15 @@
 				},
 				"violations": {
 					"title": "違規事項的詳細資訊",
-					"invites": "當使用者發送另一個伺服器的邀請連結時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig invites 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig invites 0`\n\n**設置選項：**\n\n- [自動審核邀請連結啟用](../../reference/settings?id=enabled-2)",
-					"links": "當使用者發送一般連結時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig links 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig links 0`\n\n**設置選項：**\n\n- [自動審核一般連結啟用](../../reference/settings?id=enabled-3)\n- [自動審核一般連結白名單](../../reference/settings?id=whitelist)\n- [自動審核一般連結黑名單](../../reference/settings?id=blacklist)\n- [自動審核重新導向連結](../../reference/settings?id=follow-redirects)",
-					"words": "當使用者發送特殊文字時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig words 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig words 0`\n\n**設置選項：**\n\n- [自動審核特殊文字啟用](../../reference/settings?id=enabled-4)\n- [自動審核特殊文字黑名單](../../reference/settings?id=blacklist-1)",
-					"allCaps": "當使用者發送大量大寫文字時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig allCaps 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig allCaps 0`\n\n**設置選項：**\n\n- [自動審核大量大寫啟用](../../reference/settings?id=enabled-5)\n- [自動審核大量大寫最少字數](../../reference/settings?id=min-characters)\n- [自動審核大量大寫百分比](../../reference/settings?id=percentage-caps)",
-					"duplicateText": "當使用者多次發送拷貝訊息時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig duplicateText 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig duplicateText 0`\n\n**設置選項：**\n\n- [自動審核拷貝訊息啟用](../../reference/settings?id=enabled-6)\n- [自動審核拷貝訊息發送間隔](../../reference/settings?id=timeframe-in-seconds)",
-					"quickMessages": "當使用者快速發送洗頻訊息時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig quickMessages 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig quickMessages 0`\n\n**設置選項：**\n\n- [自動審核洗頻訊息啟用](../../reference/settings?id=enabled-7)\n- [自動審核洗頻訊息數量](../../reference/settings?id=-of-messages)\n- [自動審核洗頻訊息發送間隔](../../reference/settings?id=timeframe-in-seconds-1)",
-					"mentionUsers": "當使用者提及多個使用者時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig mentionUsers 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionUsers 0`\n\n**設置選項：**\n\n- [自動審核提及使用者啟用](../../reference/settings?id=enabled-8)\n- [自動審核提及使用者數量](../../reference/settings?id=max-of-mentions)",
-					"mentionRoles": "當使用者提及多個身分組時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig mentionRoles 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionRoles 0`\n\n**設置選項：**\n\n- [自動審核提及身分組啟用](../../reference/settings?id=enabled-9)\n- [自動審核提及身分組數量](../../reference/settings?id=max-of-mentions-1)",
-					"emojis": "當使用者發送多個表情符號時就會觸犯此規定。\n\n例如：\n\n`!strikeconfig emojis 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig emojis 0`\n\n**設置選項：**\n\n- [自動審核表情符號啟用](../../reference/settings?id=enabled-10)\n- [自動審核表情符號數量](../../reference/settings?id=max-of-emojis)"
+					"invites": "當使用者發送另一個伺服器的邀請連結時就會觸發此規定。\n\n例如：\n\n`!strikeconfig invites 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig invites 0`\n\n**設置選項：**\n\n- [自動審核邀請連結啟用](../../reference/settings?id=enabled-2)",
+					"links": "當使用者發送一般連結時就會觸發此規定。\n\n例如：\n\n`!strikeconfig links 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig links 0`\n\n**設置選項：**\n\n- [自動審核一般連結啟用](../../reference/settings?id=enabled-3)\n- [自動審核一般連結白名單](../../reference/settings?id=whitelist)\n- [自動審核一般連結黑名單](../../reference/settings?id=blacklist)\n- [自動審核重新導向連結](../../reference/settings?id=follow-redirects)",
+					"words": "當使用者發送特殊文字時就會觸發此規定。\n\n例如：\n\n`!strikeconfig words 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig words 0`\n\n**設置選項：**\n\n- [自動審核特殊文字啟用](../../reference/settings?id=enabled-4)\n- [自動審核特殊文字黑名單](../../reference/settings?id=blacklist-1)",
+					"allCaps": "當使用者發送大量大寫文字時就會觸發此規定。\n\n例如：\n\n`!strikeconfig allCaps 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig allCaps 0`\n\n**設置選項：**\n\n- [自動審核大量大寫啟用](../../reference/settings?id=enabled-5)\n- [自動審核大量大寫最少字數](../../reference/settings?id=min-characters)\n- [自動審核大量大寫百分比](../../reference/settings?id=percentage-caps)",
+					"duplicateText": "當使用者多次發送拷貝訊息時就會觸發此規定。\n\n例如：\n\n`!strikeconfig duplicateText 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig duplicateText 0`\n\n**設置選項：**\n\n- [自動審核拷貝訊息啟用](../../reference/settings?id=enabled-6)\n- [自動審核拷貝訊息發送間隔](../../reference/settings?id=timeframe-in-seconds)",
+					"quickMessages": "當使用者快速發送洗頻訊息時就會觸發此規定。\n\n例如：\n\n`!strikeconfig quickMessages 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig quickMessages 0`\n\n**設置選項：**\n\n- [自動審核洗頻訊息啟用](../../reference/settings?id=enabled-7)\n- [自動審核洗頻訊息數量](../../reference/settings?id=-of-messages)\n- [自動審核洗頻訊息發送間隔](../../reference/settings?id=timeframe-in-seconds-1)",
+					"mentionUsers": "當使用者提及多個使用者時就會觸發此規定。\n\n例如：\n\n`!strikeconfig mentionUsers 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionUsers 0`\n\n**設置選項：**\n\n- [自動審核提及使用者啟用](../../reference/settings?id=enabled-8)\n- [自動審核提及使用者數量](../../reference/settings?id=max-of-mentions)",
+					"mentionRoles": "當使用者提及多個身分組時就會觸發此規定。\n\n例如：\n\n`!strikeconfig mentionRoles 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig mentionRoles 0`\n\n**設置選項：**\n\n- [自動審核提及身分組啟用](../../reference/settings?id=enabled-9)\n- [自動審核提及身分組數量](../../reference/settings?id=max-of-mentions-1)",
+					"emojis": "當使用者發送多個表情符號時就會觸發此規定。\n\n例如：\n\n`!strikeconfig emojis 1`\n\n刪除違規事項則請用：\n\n`!strikeconfig emojis 0`\n\n**設置選項：**\n\n- [自動審核表情符號啟用](../../reference/settings?id=enabled-10)\n- [自動審核表情符號數量](../../reference/settings?id=max-of-emojis)"
 				}
 			}
 		},
@@ -130,7 +130,7 @@
 			"title": "音樂",
 			"overview": {
 				"title": "概述",
-				"description": "音樂功能已禁用。近期內沒有重新啟用的計劃。"
+				"description": "音樂功能目前已禁用。近期內沒有重新啟用的計劃。"
 			}
 		}
 	},
@@ -149,19 +149,19 @@
 		},
 		"support": {
 			"title": "支援",
-			"description": "如有疑問請先閱讀 [常見的問題與答案(常見問答)]({{{ faqLink }}}) 。\n\n如果沒有找到答案，請加入 [支援伺服器]({{{ discordInvite }}}) ，在 [#faq 頻道]({{{ faqChannelLink }}}) 有更詳細的問與答。\n\n最後，如果以上均無法解答您的疑惑，請查看 [#support 頻道]({{{ supportChannelLink }}}) 是否有您的疑問。如果仍然沒有，請輸入 `6` ，會有專人為您服務。\n(**請務必在請求專人協助前先完整閱讀#faq頻道**)"
+			"description": "如有疑問請先閱讀 [常見的問題與答案(常見問答)]({{{ faqLink }}}) 。\n\n如果沒有找到答案，請加入我們的 [支援伺服器]({{{ discordInvite }}}) ，在 [#faq 頻道]({{{ faqChannelLink }}}) 有更詳細的問與答。\n\n最後，如果以上均無法解答您的疑惑，請查看 [#support 頻道]({{{ supportChannelLink }}}) 是否有您的疑問。如果仍然沒有，請輸入 `6` ，會有專人為您服務。\n(**請務必在請求專人協助前先完整閱讀我們的#faq頻道**)"
 		},
 		"translations": {
 			"title": "翻譯",
 			"description": "InviteManager 需要大家幫忙翻譯成各種不同的語言。非常感謝您的幫助，如果您有意願提供協助，請查看以下連結。",
 			"help": {
 				"title": "協助翻譯",
-				"description": "如果您有意願協助翻譯機器人或網站，請加入 [支援伺服器]({{{ discordLink }}}) 與我們聯繫，我們將邀請您至 [Transifex 團隊]({{{ transifexLink }}}) 。"
+				"description": "如果您有意願協助翻譯機器人或網站，請加入我們的 [支援伺服器]({{{ discordLink }}}) 與我們聯繫，我們可以邀請您至我們的 [Transifex 團隊]({{{ transifexLink }}}) 。"
 			}
 		},
 		"webpanel": {
 			"title": "網頁版",
-			"description": "近期內沒有重新啟用網頁版的計劃。"
+			"description": "目前近期內沒有重新啟用網頁版的計劃。"
 		},
 		"changelog": {
 			"title": "更新日誌"
@@ -171,7 +171,7 @@
 			"description": "InviteManager 是開放式原碼，歡迎大家貢獻開發。",
 			"bot": {
 				"title": "主要機器人",
-				"description": "如果您有意願貢獻開發或自行營運機器人請查看 [GitHub 專案]({{{ link }}})"
+				"description": "如果您有意願貢獻開發或自行營運機器人請查看我們的 [GitHub 專案]({{{ link }}})"
 			}
 		}
 	},
@@ -187,7 +187,7 @@
 		"faq": {
 			"title": "常見問答",
 			"prefix": {
-				"title": "我該如何更改機器人的前綴指令？",
+				"title": "我該如何更改機器人的指令前綴？",
 				"description": "您可以使用 `!config prefix -` 來更改前綴指令。\n\n如果您不知道目前的前綴指令，則可以使用 `@InviteManager config prefix` 來得知。"
 			},
 			"joinLeaveChannel": {
@@ -199,11 +199,11 @@
 				"description": "完全可以！您可以更改的範例如下：\n\n`!config joinMessage {memberMention} **joined**; Invited by **{inviterName}** (**{numInvites}** invites)`\n\n或\n\n`!config leaveMessage {memberName} **left**; Invited by **{inviterName}**`。\n\n有很多預留參數是可用的。你可以在 [自訂訊息]({{{ link }}}) 頁面找到完整的清單。"
 			},
 			"ranks": {
-				"title": "甚麼是等級？我該如何使用它們？",
-				"description": "等級可以在人們達到一定的邀請數量時自動分配身分組。舉例來說，如果您有一個身分組叫 `@Beginner` 然後您希望它能分配給擁有 5 以上邀請數量的人，您可以新增一個等級如下： `!add-rank @Beginner 5 (如果您需要一個描述)` 。當有人達到 5 個邀請時，就會被自動分配該身分組！"
+				"title": "甚麼是等級？我可以怎麼使用它們？",
+				"description": "等級是在人們達到一定的邀請數量時自動指派身分組。舉例來說，如果您有一個身分組叫 `@Beginner` 然後您希望擁有 5 以上邀請數量的人被新增到身分組，您可以新增一個等級如下： `!add-rank @Beginner 5 (如果您需要一個描述)` 。當有人達到 5 個邀請時，他就會自動被新增到身分組！"
 			},
 			"channel": {
-				"title": "我該如何在所有的頻道除了其中一個/一些禁用機器人？",
+				"title": "我可以在所有的頻道除了其中一個/一些禁用機器人？",
 				"description": "在您不想要機器人回覆的頻道取消機器人的閱讀訊息權限。"
 			},
 			"limitations": {
@@ -213,23 +213,23 @@
 		},
 		"pro": {
 			"title": "高級版機器人",
-			"description": "不提供高級版機器人。一般機器人都已經啟用所有高級版功能。"
+			"description": "目前不提供高級版機器人。普通版機器人都已經啟用所有的高級版功能。"
 		},
 		"quick": {
 			"title": "快速設定",
 			"setup": {
 				"title": "設置選項",
-				"description": "如果要開始，請先從 [我們的機器人](./our-bots) 頁面邀請機器人。\n\n接著請確認機器人在該頻道是否有 `檢視頻道` 及 `發送訊息` 權限，然後使用 `!setup` 指令。\n\n此指令會告訴您機器人是否缺少一些必要的權限。",
+				"description": "如果要開始，請先從 [我們的機器人](./our-bots) 頁面邀請機器人。\n\n接著請確認機器人在該頻道是否有 `檢視頻道` 及 `發送訊息` 權限，然後使用 `!setup` 指令。\n\n此指令會告訴您機器人是否缺少任何必要的權限。",
 				"first": {
 					"title": "第一步",
-					"description": "您應該最想要設定加入及離開訊息的頻道。請前往 [常見問答](./faq) 來得知更多資訊。"
+					"description": "您應該最想要設定加入及離開訊息的頻道。請前往 [常見問答](./faq) 來獲取詳細資訊。"
 				}
 			}
 		},
 		"ourBots": {
 			"title": "我們的機器人",
 			"subtitle": "邀請機器人",
-			"description": "InviteManager 有兩個永久運行的相同機器人。除了頭像及狀態不同，兩者的功能皆__**完全相同**__。\n\n**邀請藍色機器人：**\n{{{ blueBotLink }}}\n\n**邀請黃色機器人：**\n{{{ yellowBotLink }}}"
+			"description": "InviteManager 有兩個永久運行的相同機器人。除了頭像及狀態不同，兩者的功能皆**__完全相同__**。\n\n**邀請藍色機器人：**\n{{{ blueBotLink }}}\n\n**邀請黃色機器人：**\n{{{ yellowBotLink }}}"
 		}
 	},
 	"reference": {
@@ -243,7 +243,7 @@
 	},
 	"premium": {
 		"title": "高級版",
-		"description": "我們不提供高級版機器人。兩隻 [我們的機器人]({{{ ourBotsLink }}}) 都已經啟用所有高級版功能。",
+		"description": "我們不提供高級版機器人。兩隻 [我們的機器人]({{{ ourBotsLink }}}) 都已經啟用所有高級版的功能。",
 		"features": {
 			"title": "功能",
 			"first": "加入和離開訊息的格式（嵌入式訊息）",
