@@ -4,202 +4,207 @@ There are many config options that can be set. You don't have to set all of them
 
 ## Overview
 
-### General
+### 一般
 
-| Setting                              | Description                                                |
-| ------------------------------------ | ---------------------------------------------------------- |
-| [Prefix](#prefix)                    | The prefix used to trigger bot commands.                   |
-| [Language](#lang)                    | The language of the bot                                    |
-| [Log Channel](#logchannel)           | The channel where bot actions are logged.                  |
-| [Get Updates](#getupdates)           | Enable to receive development updates about InviteManager. |
-| [Command channels](#channels)        | The channels in which the bot will react to commands.      |
-| [Ignored channels](#ignoredchannels) | The channels in which the bot will ignore commands.        |
+| Setting | Description |
+|---|---|
+| [前綴](#prefix) | 用來觸發機器人指令的前綴。
+| [語言](#lang) | 機器人的語言
+| [記錄頻道](#logchannel) | 機器人動作紀錄的頻道。
+| [獲取更新](#getupdates) | 啟用來接收 InviteManager 的開發更新。
+| [指令頻道](#channels) | 機器人將會回應指令的頻道。
+| [忽略的頻道](#ignoredchannels) | 機器人將會忽略指令的頻道。
 
-### Invites
+### 邀請數量
 
-#### General
 
-| Setting                  | Description                                          |
-| ------------------------ | ---------------------------------------------------- |
-| [Join Roles](#joinroles) | Roles that are assigned to all members when joining. |
 
-#### Joins
+#### 一般
 
-| Setting                                | Description                                                        |
-| -------------------------------------- | ------------------------------------------------------------------ |
-| [Message](#joinmessage)                | The message sent when someone joins the server.                    |
-| [Message](#joinmessagevanity)          | The message sent when someone joins the server using a vanity URL. |
-| [Message Channel](#joinmessagechannel) | The channel that the message on join is sent to.                   |
+| Setting | Description |
+|---|---|
+| [加入身分組](#joinroles) | 當加入時指派給所有成員的身分組。
 
-#### Leaves
+#### 加入
 
-| Setting                                                | Description                                                                             |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| [Message](#leavemessage)                               | The message sent when someone leaves the server.                                        |
-| [Message](#leavemessagevanity)                         | The message sent when someone leaves the server after he joined with a vanity URL.      |
-| [Message Channel](#leavemessagechannel)                | The channel that the leave message is sent to.                                          |
-| [Auto Subtract](#autosubtractleaves)                   | Automatically remove invites from the inviter when the invited user leaves.             |
-| [Auto Subtract Threshold](#autosubtractleavethreshold) | The time in seconds for which a user has to stay in the server for the invite to count. |
+| Setting | Description |
+|---|---|
+| [訊息](#joinmessage) | 當有人加入伺服器時發送的訊息。
+| [訊息](#joinmessagevanity) | 當有人使用個性化網址加入伺服器時發送的訊息。
+| [訊息頻道](#joinmessagechannel) | 加入訊息發送的頻道。
 
-#### Leaderboard
+#### 離開
 
-| Setting                                              | Description                                             |
-| ---------------------------------------------------- | ------------------------------------------------------- |
-| [Style](#leaderboardstyle)                           | The display style of the leaderboard.                   |
-| [Hide left members](#hideleftmembersfromleaderboard) | Hide members that left the server from the leaderboard. |
+| Setting | Description |
+|---|---|
+| [訊息](#leavemessage) | 當有人離開伺服器時發送的訊息。
+| [訊息](#leavemessagevanity) | 當有人使用個性化網址加入伺服器之後離開時發送的訊息。
+| [訊息頻道](#leavemessagechannel) | 離開訊息發送的頻道。
+| [自動減去](#autosubtractleaves) | 當被邀請的使用者離開時自動從邀請者移除邀請數量。
+| [自動減去門檻](#autosubtractleavethreshold) | 使用者在伺服器停留多少時間可以計算成邀請，以秒為單位。
 
-#### Fakes
+#### 排行榜
 
-| Setting                             | Description                          |
-| ----------------------------------- | ------------------------------------ |
-| [Auto Subtract](#autosubtractfakes) | Automatically subtract fake invites. |
+| Setting | Description |
+|---|---|
+| [格式](#leaderboardstyle) | 排行榜顯示的格式。
+| [隱藏離開成員](#hideleftmembersfromleaderboard) | 從排行榜隱藏離開伺服器的成員。
 
-#### Ranks
+#### 假邀請
 
-| Setting                                          | Description                                                 |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| [Assignment Style](#rankassignmentstyle)         | How ranks are rewarded to users.                            |
-| [Announcement Channel](#rankannouncementchannel) | The channel where users receiving a new rank are announced. |
-| [Announcement Message](#rankannouncementmessage) | The message that is sent when a user receives a new rank.   |
+| Setting | Description |
+|---|---|
+| [自動減去](#autosubtractfakes) | 自動減去假邀請數量。
 
-### Moderation
+#### 等級
 
-#### Captcha
+| Setting | Description |
+|---|---|
+| [指派格式](#rankassignmentstyle) | 如何獎勵使用者的等級。
+| [公告頻道](#rankannouncementchannel) | 使用者收到一個新等級時的公告頻道。
+| [公告訊息](#rankannouncementmessage) | 使用者收到一個新等級時的訊息。
 
-| Setting                                               | Description                                                                                   |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [Enabled](#captchaverificationonjoin)                 | Whether or not captcha verification is enabled.                                               |
-| [Welcome Message](#captchaverificationwelcomemessage) | The message a user will get after joining a server and instructing them to enter the captcha. |
-| [Success Message](#captchaverificationsuccessmessage) | The welcome message that will be sent to the user after he successfully verifies.             |
-| [Failed Message](#captchaverificationfailedmessage)   | The message sent to the user if he enters an invalid captcha.                                 |
-| [Verification Timeout](#captchaverificationtimeout)   | The time within which the captcha has to be entered successfully.                             |
-| [Log Enabled](#captchaverificationlogenabled)         | Whether or not verification attempts will be logged.                                          |
+### 審核
 
-#### General
 
-| Setting                                                         | Description                                                                                                                                                  |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Enabled](#automodenabled)                                      | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).                                       |
-| [Moderated Channels](#automodmoderatedchannels)                 | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels). |
-| [Moderated Roles](#automodmoderatedroles)                       | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).    |
-| [Ignored Channels](#automodignoredchannels)                     | Channels that are ignored while automatically moderating.                                                                                                    |
-| [Ignored Roles](#automodignoredroles)                           | Any members with these roles will not automatically be moderated.                                                                                            |
-| [Muted Role](#mutedrole)                                        | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.                                                 |
-| [Disabled for Old Members](#automoddisabledforoldmembers)       | Disabled auto moderation for members that have been in your server for a long time.                                                                          |
-| [Old Members Threshold](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.                                                                                 |
 
-#### Logging
+#### 驗證碼
 
-| Setting                                                                | Description                                                               |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Log Enabled](#automodlogenabled)                                      | Log any moderation actions that the bot makes.                            |
-| [Mod Log Channel](#modlogchannel)                                      | The channel where moderation logs will be posted in.                      |
-| [Delete Bot Messages](#automoddeletebotmessage)                        | Automatically delete the bots own messages (keeps your chat clean).       |
-| [Delete Bot Message Timeout](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.                         |
-| [Delete Ban Messages](#modpunishmentbandeletemessage)                  | Whether or not "Ban" pushment messages will be deleted automatically.     |
-| [Delete Kick Messages](#modpunishmentkickdeletemessage)                | Whether or not "Kick" pushment messages will be deleted automatically.    |
-| [Delete Softban Messages](#modpunishmentsoftbandeletemessage)          | Whether or not "Softban" pushment messages will be deleted automatically. |
-| [Delete Warn Messages](#modpunishmentwarndeletemessage)                | Whether or not "Warn" pushment messages will be deleted automatically.    |
-| [Delete Mute Messages](#modpunishmentmutedeletemessage)                | Whether or not "Mute" pushment messages will be deleted automatically.    |
+| Setting | Description |
+|---|---|
+| [啟用](#captchaverificationonjoin) | 驗證碼是否啟用驗證。
+| [歡迎訊息](#captchaverificationwelcomemessage) | 一位使用者在加入伺服器之後將收到的訊息來指示他們輸入驗證碼。
+| [成功訊息](#captchaverificationsuccessmessage) | 將會發送給使用者的歡迎訊息在他成功驗證之後。
+| [失敗訊息](#captchaverificationfailedmessage) | 發送給使用者的訊息如果他輸入一個無效的驗證碼。
+| [驗證延遲時間](#captchaverificationtimeout) | 必須成功輸入驗證碼的時間。
+| [啟用紀錄](#captchaverificationlogenabled) | 驗證過程是否會被記錄。
 
-#### Invites
+#### 一般
 
-| Setting                           | Description                                                           |
-| --------------------------------- | --------------------------------------------------------------------- |
-| [Enabled](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them. |
+| Setting | Description |
+|---|---|
+| [啟用](#automodenabled) | 自動審核訊息（也可以開啟或關閉指定規則，此設置必須打開來啟用任何規則）。
+| [審核的頻道](#automodmoderatedchannels) | 想要審核的頻道列表（這類似一份白名單，留白會審核所有頻道，或使用 `autoModIgnoredChannels` 來忽略一些頻道）。
+| [審核的身分組](#automodmoderatedroles) | 想要審核的身分組列表（這類似一份白名單，留白會審核所有身分組，或使用 `autoModIgnoredRoles` 來忽略一些身分組）。
+| [忽略的頻道](#automodignoredchannels) | 自動審核時忽略的頻道。
+| [忽略的身分組](#automodignoredroles) | 任何成員有這些身分組將不會被自動審核。
+| [靜音的身分組](#mutedrole) | 給予靜音的身分組。確認已拒絕 "發送訊息" 權限。
+| [老成員禁用](#automoddisabledforoldmembers) | 禁用自動審核成員如果他們已在您的伺服器好長一段時間。
+| [老成員門檻](#automoddisabledforoldmembersthreshold) | 考慮是 '老' 成員所需在伺服器內的時間。
 
-#### Links
+#### 紀錄
 
-| Setting                                          | Description                                                                             |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| [Enabled](#automodlinksenabled)                  | Automatically remove messages containing links (you can set a whitelist and blacklist). |
-| [Whitelist](#automodlinkswhitelist)              | A list of links that users are allowed to post.                                         |
-| [Blacklist](#automodlinksblacklist)              | Blacklist certain links which users won't be able to post.                              |
-| [Follow Redirects](#automodlinksfollowredirects) | Enable this to resolve redirects for links.                                             |
+| Setting | Description |
+|---|---|
+| [啟用紀錄](#automodlogenabled) | 紀錄機器人的任何審核動作。
+| [審核紀錄頻道](#modlogchannel) | 將張貼審核紀錄的頻道。
+| [刪除機器人訊息](#automoddeletebotmessage) | 自動刪除機器人自己的訊息（保持您乾淨的聊天室）。
+| [刪除機器人訊息延遲時間](#automoddeletebotmessagetimeoutinseconds) | 刪除機器人訊息的延遲時間。
+| [刪除停權訊息](#modpunishmentbandeletemessage) | 是否自動刪除 "停權" 的懲罰訊息。
+| [刪除踢出訊息](#modpunishmentkickdeletemessage) | 是否自動刪除 "踢出" 的懲罰訊息。
+| [刪除暫時停權訊息](#modpunishmentsoftbandeletemessage) | 是否自動刪除 "暫時停權" 的懲罰訊息。
+| [刪除警告訊息](#modpunishmentwarndeletemessage) | 是否自動刪除 "警告" 的懲罰訊息。
+| [刪除靜音訊息](#modpunishmentmutedeletemessage) | 是否自動刪除 "靜音" 的懲罰訊息。
 
-#### Banned Words
+#### 邀請數量
 
-| Setting                             | Description                                             |
-| ----------------------------------- | ------------------------------------------------------- |
-| [Enabled](#automodwordsenabled)     | Whether or not blacklisted words will be automoderated. |
-| [Blacklist](#automodwordsblacklist) | A list of words that are banned.                        |
+| Setting | Description |
+|---|---|
+| [啟用](#automodinvitesenabled) | 自動掃描有 Discord 邀請連結的訊息然後移除他們。
 
-#### Caps
+#### 連結
 
-| Setting                                          | Description                                                                                                       |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| [Enabled](#automodallcapsenabled)                | Automatically moderate messages with A LOT OF CAPS.                                                               |
-| [Min. Characters](#automodallcapsmincharacters)  | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK'). |
-| [Percentage CAPs](#automodallcapspercentagecaps) | The percentage of characters of the message that have to be CAPs for the rule to trigger.                         |
+| Setting | Description |
+|---|---|
+| [啟用](#automodlinksenabled) | 自動移除有連結的訊息（您可以設定白名單和黑名單）。
+| [白名單](#automodlinkswhitelist) | 允許使用者張貼的連結列表。
+| [黑名單](#automodlinksblacklist) | 使用者將不能張貼的一些黑名單連結。
+| [追蹤重新導向](#automodlinksfollowredirects) | 啟用此來解決重新導向連結。
 
-#### Duplicate Messages
+#### 禁止的文字
 
-| Setting                                                         | Description                                                         |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [Enabled](#automodduplicatetextenabled)                         | Automatically moderate duplicate messages (copy-paste spam).        |
-| [Timeframe in Seconds](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates. |
+| Setting | Description |
+|---|---|
+| [啟用](#automodwordsenabled) | 是否自動審核黑名單的文字。
+| [黑名單](#automodwordsblacklist) | 禁止的文字列表。
 
-#### Spam
+#### 大寫
 
-| Setting                                                         | Description                                                                           |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [Enabled](#automodquickmessagesenabled)                         | Automatically moderate users sending a lot of messages in a short time.               |
-| [# of Messages](#automodquickmessagesnumberofmessages)          | The number of messages that have to be sent within the timeframe to trigger the rule. |
-| [Timeframe in Seconds](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.    |
+| Setting | Description |
+|---|---|
+| [啟用](#automodallcapsenabled) | 自動審核許多大寫的訊息。
+| [最少字數](#automodallcapsmincharacters) | 要考慮進行審核訊息的最少字數（設定 '3' 將會忽略 'OK' ）。
+| [大寫百分比](#automodallcapspercentagecaps) | 訊息內會觸發大寫規則的字數百分比。
 
-#### Mentions
+#### 拷貝訊息
 
-| Setting                                                      | Description                                                                |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [Enabled](#automodmentionusersenabled)                       | Automatically moderate messages that mention an excessive amount of users. |
-| [Max # of Mentions](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.             |
-| [Enabled](#automodmentionrolesenabled)                       | Automatically moderate messages that mention an excessive amount of roles. |
-| [Max # of Mentions](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.             |
+| Setting | Description |
+|---|---|
+| [啟用](#automodduplicatetextenabled) | 自動審核拷貝訊息（複製貼上的垃圾訊息）。
+| [以秒為單位的時間範圍](#automodduplicatetexttimeframeinseconds) | 考慮是拷貝訊息的時間範圍。
 
-#### Emojis
+#### 垃圾訊息
 
-| Setting                                            | Description                                                                                                               |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [Enabled](#automodemojisenabled)                   | Automatically moderate messages with an excessive amount of emojis.                                                       |
-| [Max # of Emojis](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.                                        |
-| [Enabled](#automodhoistenabled)                    | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list). |
+| Setting | Description |
+|---|---|
+| [啟用](#automodquickmessagesenabled) | 自動審核使用者在短時間內發送大量訊息。
+| [# 訊息數量](#automodquickmessagesnumberofmessages) | 時間範圍內觸發規則的發送訊息數量。
+| [以秒為單位的時間範圍](#automodquickmessagestimeframeinseconds) | 時間範圍內允許一位使用者發送的最大訊息數量。
 
-### Music
+#### 提及
 
-#### Music
+| Setting | Description |
+|---|---|
+| [啟用](#automodmentionusersenabled) | 自動審核提及數量過多的使用者訊息。
+| [最多 # 個提及](#automodmentionusersmaxnumberofmentions) | 一位成員在一則訊息內可以提及的最大使用者數量。
+| [啟用](#automodmentionrolesenabled) | 自動審核提及過多身分組的訊息。
+| [最多 # 個提及](#automodmentionrolesmaxnumberofmentions) | 一位成員在一則訊息內可以提及的最大身分組數量。
 
-| Setting                      | Description                                                        |
-| ---------------------------- | ------------------------------------------------------------------ |
-| [Music Volume](#musicvolume) | The default volume that is set when the bot joins a voice channel. |
+#### 表情符號
 
-#### Announcement
+| Setting | Description |
+|---|---|
+| [啟用](#automodemojisenabled) | 自動審核數量過多的表情符號訊息。
+| [最多 # 個表情符號](#automodemojismaxnumberofemojis) | 在觸發規則前一則訊息所允許的最大表情數量。
+| [啟用](#automodhoistenabled) | 自動給成員暱稱如果他們嘗試提升（使用特殊文字來出現在使用者列表頂端）。
 
-| Setting                                  | Description                                                            |
-| ---------------------------------------- | ---------------------------------------------------------------------- |
-| [Announce Next Song](#announcenextsong)  | Whether or not the next song should be announced in the voice channel. |
-| [Announcement Voice](#announcementvoice) | The voice used in the next song announcements.                         |
+### 音樂
 
-#### Fade Music
 
-| Setting                                    | Description                                                                               |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| [Fade Music On Talk](#fademusicontalk)     | If enabled, the music will fade down while people are talking.                            |
-| [Fade Music End Delay](#fademusicenddelay) | The delay of how many seconds noone has to speak for the volume to return back to normal. |
 
-#### Platform
+#### 音樂
 
-| Setting                                             | Description                                                                               |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Default Music Platform](#defaultmusicplatform)     | The platform that is used to search / play music when no platform is selected explicitly. |
-| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.                       |
+| Setting | Description |
+|---|---|
+| [音樂音量](#musicvolume) | 當機器人加入一個語音頻道時的預設音量。
+
+#### 公告
+
+| Setting | Description |
+|---|---|
+| [公告下一首歌曲](#announcenextsong) | 是否應該在語音頻道裡公告下一首歌曲。
+| [公告音量](#announcementvoice) | 公告下一首歌曲的音量。
+
+#### 減小音樂
+
+| Setting | Description |
+|---|---|
+| [說話時減小音樂](#fademusicontalk) | 如果啟用，當人們說話時音樂會減低。
+| [延遲結束減小音樂](#fademusicenddelay) | 沒人說話多少秒讓音量恢復正常的延遲時間。
+
+#### 平臺
+
+| Setting | Description |
+|---|---|
+| [預設音樂平臺](#defaultmusicplatform) | 當沒有明確選擇平臺時用來搜尋 / 播放的平臺。
+| [禁用音樂平臺](#disabledmusicplatforms) | 禁用然後不能用來播放音樂的音樂平臺。
 
 <a name=prefix></a>
 
 ---
+## 前綴
 
-## Prefix
-
-The prefix used to trigger bot commands.
+用來觸發機器人指令的前綴。
 
 Type: `String`
 
@@ -214,13 +219,14 @@ Examples:
 
 `!config prefix >`
 
+
+
 <a name=lang></a>
 
 ---
+## 語言
 
-## Language
-
-The language of the bot
+機器人的語言
 
 Type: `Enum<Lang>`
 
@@ -235,13 +241,14 @@ Example:
 
 `!config lang ar`
 
+
+
 <a name=logChannel></a>
 
 ---
+## 記錄頻道
 
-## Log Channel
-
-The channel where bot actions are logged.
+機器人動作紀錄的頻道。
 
 Type: `Channel`
 
@@ -254,13 +261,14 @@ Examples:
 
 `!config logChannel #channel`
 
+
+
 <a name=getUpdates></a>
 
 ---
+## 獲取更新
 
-## Get Updates
-
-Enable to receive development updates about InviteManager.
+啟用來接收 InviteManager 的開發更新。
 
 Type: `Boolean`
 
@@ -277,13 +285,14 @@ Disable:
 
 `!config getUpdates false`
 
+
+
 <a name=channels></a>
 
 ---
+## 指令頻道
 
-## Command channels
-
-The channels in which the bot will react to commands.
+機器人將會回應指令的頻道。
 
 Type: `Channel[]`
 
@@ -292,13 +301,14 @@ Default: ``
 Reset to default:
 `!config channels default`
 
+
+
 <a name=ignoredChannels></a>
 
 ---
+## 忽略的頻道
 
-## Ignored channels
-
-The channels in which the bot will ignore commands.
+機器人將會忽略指令的頻道。
 
 Type: `Channel[]`
 
@@ -307,13 +317,14 @@ Default: ``
 Reset to default:
 `!config ignoredChannels default`
 
+
+
 <a name=joinRoles></a>
 
 ---
+## 加入身分組
 
-## Join Roles
-
-Roles that are assigned to all members when joining.
+當加入時指派給所有成員的身分組。
 
 Type: `Role[]`
 
@@ -322,13 +333,14 @@ Default: ``
 Reset to default:
 `!config joinRoles default`
 
+
+
 <a name=joinMessage></a>
 
 ---
+## 訊息
 
-## Message
-
-The message sent when someone joins the server.
+當有人加入伺服器時發送的訊息。
 
 Type: `String`
 
@@ -337,13 +349,14 @@ Default: `{memberMention} **joined**; Invited by **{inviterName}** (**{numInvite
 Reset to default:
 `!config joinMessage default`
 
+
+
 <a name=joinMessageVanity></a>
 
 ---
+## 訊息
 
-## Message
-
-The message sent when someone joins the server using a vanity URL.
+當有人使用個性化網址加入伺服器時發送的訊息。
 
 Type: `String`
 
@@ -352,13 +365,14 @@ Default: `{memberMention} **joined** using the vanity invite code **{inviteCode}
 Reset to default:
 `!config joinMessageVanity default`
 
+
+
 <a name=joinMessageChannel></a>
 
 ---
+## 訊息頻道
 
-## Message Channel
-
-The channel that the message on join is sent to.
+加入訊息發送的頻道。
 
 Type: `Channel`
 
@@ -373,13 +387,14 @@ Examples:
 
 `!config joinMessageChannel #joins`
 
+
+
 <a name=leaveMessage></a>
 
 ---
+## 訊息
 
-## Message
-
-The message sent when someone leaves the server.
+當有人離開伺服器時發送的訊息。
 
 Type: `String`
 
@@ -390,17 +405,18 @@ Reset to default:
 
 Examples:
 
-`!config leaveMessage`
+`!config leaveMessage `
 
-`!config leaveMessage`
+`!config leaveMessage `
+
+
 
 <a name=leaveMessageVanity></a>
 
 ---
+## 訊息
 
-## Message
-
-The message sent when someone leaves the server after he joined with a vanity URL.
+當有人使用個性化網址加入伺服器之後離開時發送的訊息。
 
 Type: `String`
 
@@ -409,13 +425,14 @@ Default: `{memberName} **left** after {joinedAt:duration} on this server`
 Reset to default:
 `!config leaveMessageVanity default`
 
+
+
 <a name=leaveMessageChannel></a>
 
 ---
+## 訊息頻道
 
-## Message Channel
-
-The channel that the leave message is sent to.
+離開訊息發送的頻道。
 
 Type: `Channel`
 
@@ -430,13 +447,14 @@ Examples:
 
 `!config leaveMessageChannel #leaves`
 
+
+
 <a name=leaderboardStyle></a>
 
 ---
+## 格式
 
-## Style
-
-The display style of the leaderboard.
+排行榜顯示的格式。
 
 Type: `Enum<LeaderboardStyle>`
 
@@ -451,13 +469,14 @@ Example:
 
 `!config leaderboardStyle normal`
 
+
+
 <a name=hideLeftMembersFromLeaderboard></a>
 
 ---
+## 隱藏離開成員
 
-## Hide left members
-
-Hide members that left the server from the leaderboard.
+從排行榜隱藏離開伺服器的成員。
 
 Type: `Boolean`
 
@@ -474,13 +493,14 @@ Disable:
 
 `!config hideLeftMembersFromLeaderboard false`
 
+
+
 <a name=autoSubtractFakes></a>
 
 ---
+## 自動減去
 
-## Auto Subtract
-
-Automatically subtract fake invites.
+自動減去假邀請數量。
 
 Type: `Boolean`
 
@@ -497,13 +517,14 @@ Disable:
 
 `!config autoSubtractFakes false`
 
+
+
 <a name=autoSubtractLeaves></a>
 
 ---
+## 自動減去
 
-## Auto Subtract
-
-Automatically remove invites from the inviter when the invited user leaves.
+當被邀請的使用者離開時自動從邀請者移除邀請數量。
 
 Type: `Boolean`
 
@@ -520,13 +541,14 @@ Disable:
 
 `!config autoSubtractLeaves false`
 
+
+
 <a name=autoSubtractLeaveThreshold></a>
 
 ---
+## 自動減去門檻
 
-## Auto Subtract Threshold
-
-The time in seconds for which a user has to stay in the server for the invite to count.
+使用者在伺服器停留多少時間可以計算成邀請，以秒為單位。
 
 Type: `Number`
 
@@ -541,13 +563,14 @@ Examples:
 
 `!config autoSubtractLeaveThreshold 3600`
 
+
+
 <a name=rankAssignmentStyle></a>
 
 ---
+## 指派格式
 
-## Assignment Style
-
-How ranks are rewarded to users.
+如何獎勵使用者的等級。
 
 Type: `Enum<RankAssignmentStyle>`
 
@@ -562,13 +585,14 @@ Example:
 
 `!config rankAssignmentStyle all`
 
+
+
 <a name=rankAnnouncementChannel></a>
 
 ---
+## 公告頻道
 
-## Announcement Channel
-
-The channel where users receiving a new rank are announced.
+使用者收到一個新等級時的公告頻道。
 
 Type: `Channel`
 
@@ -579,17 +603,18 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
+
+
 
 <a name=rankAnnouncementMessage></a>
 
 ---
+## 公告訊息
 
-## Announcement Message
-
-The message that is sent when a user receives a new rank.
+使用者收到一個新等級時的訊息。
 
 Type: `String`
 
@@ -600,17 +625,18 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
+
+
 
 <a name=captchaVerificationOnJoin></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Whether or not captcha verification is enabled.
+驗證碼是否啟用驗證。
 
 Type: `Boolean`
 
@@ -627,13 +653,14 @@ Disable:
 
 `!config captchaVerificationOnJoin false`
 
+
+
 <a name=captchaVerificationWelcomeMessage></a>
 
 ---
+## 歡迎訊息
 
-## Welcome Message
-
-The message a user will get after joining a server and instructing them to enter the captcha.
+一位使用者在加入伺服器之後將收到的訊息來指示他們輸入驗證碼。
 
 Type: `String`
 
@@ -646,13 +673,14 @@ Examples:
 
 `!config captchaVerificationWelcomeMessage Welcome, please enter the captcha below!`
 
+
+
 <a name=captchaVerificationSuccessMessage></a>
 
 ---
+## 成功訊息
 
-## Success Message
-
-The welcome message that will be sent to the user after he successfully verifies.
+將會發送給使用者的歡迎訊息在他成功驗證之後。
 
 Type: `String`
 
@@ -665,13 +693,14 @@ Examples:
 
 `!config captchaVerificationSuccessMessage Thanks for entering the captcha, enjoy our server!`
 
+
+
 <a name=captchaVerificationFailedMessage></a>
 
 ---
+## 失敗訊息
 
-## Failed Message
-
-The message sent to the user if he enters an invalid captcha.
+發送給使用者的訊息如果他輸入一個無效的驗證碼。
 
 Type: `String`
 
@@ -684,13 +713,14 @@ Examples:
 
 `!config captchaVerificationFailedMessage Looks like you are not human :(. You can join again and try again later if this was a mistake!`
 
+
+
 <a name=captchaVerificationTimeout></a>
 
 ---
+## 驗證延遲時間
 
-## Verification Timeout
-
-The time within which the captcha has to be entered successfully.
+必須成功輸入驗證碼的時間。
 
 Type: `Number`
 
@@ -705,13 +735,14 @@ Examples:
 
 `!config captchaVerificationTimeout 600`
 
+
+
 <a name=captchaVerificationLogEnabled></a>
 
 ---
+## 啟用紀錄
 
-## Log Enabled
-
-Whether or not verification attempts will be logged.
+驗證過程是否會被記錄。
 
 Type: `Boolean`
 
@@ -728,13 +759,14 @@ Disable:
 
 `!config captchaVerificationLogEnabled false`
 
+
+
 <a name=autoModEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
+自動審核訊息（也可以開啟或關閉指定規則，此設置必須打開來啟用任何規則）。
 
 Type: `Boolean`
 
@@ -751,13 +783,14 @@ Disable:
 
 `!config autoModEnabled false`
 
+
+
 <a name=autoModModeratedChannels></a>
 
 ---
+## 審核的頻道
 
-## Moderated Channels
-
-The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
+想要審核的頻道列表（這類似一份白名單，留白會審核所有頻道，或使用 `autoModIgnoredChannels` 來忽略一些頻道）。
 
 Type: `Channel[]`
 
@@ -772,13 +805,14 @@ Examples:
 
 `!config autoModModeratedChannels #support,#help`
 
+
+
 <a name=autoModModeratedRoles></a>
 
 ---
+## 審核的身分組
 
-## Moderated Roles
-
-The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
+想要審核的身分組列表（這類似一份白名單，留白會審核所有身分組，或使用 `autoModIgnoredRoles` 來忽略一些身分組）。
 
 Type: `Role[]`
 
@@ -793,13 +827,14 @@ Examples:
 
 `!config autoModModeratedRoles @Newbies,@Starters`
 
+
+
 <a name=autoModIgnoredChannels></a>
 
 ---
+## 忽略的頻道
 
-## Ignored Channels
-
-Channels that are ignored while automatically moderating.
+自動審核時忽略的頻道。
 
 Type: `Channel[]`
 
@@ -814,13 +849,14 @@ Examples:
 
 `!config autoModIgnoredChannels #off-topic,#nsfw`
 
+
+
 <a name=autoModIgnoredRoles></a>
 
 ---
+## 忽略的身分組
 
-## Ignored Roles
-
-Any members with these roles will not automatically be moderated.
+任何成員有這些身分組將不會被自動審核。
 
 Type: `Role[]`
 
@@ -835,13 +871,14 @@ Examples:
 
 `!config autoModIgnoredRoles @Moderators,@Staff`
 
+
+
 <a name=mutedRole></a>
 
 ---
+## 靜音的身分組
 
-## Muted Role
-
-The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
+給予靜音的身分組。確認已拒絕 "發送訊息" 權限。
 
 Type: `Role`
 
@@ -854,13 +891,14 @@ Examples:
 
 `!config mutedRole @muted`
 
+
+
 <a name=autoModDisabledForOldMembers></a>
 
 ---
+## 老成員禁用
 
-## Disabled for Old Members
-
-Disabled auto moderation for members that have been in your server for a long time.
+禁用自動審核成員如果他們已在您的伺服器好長一段時間。
 
 Type: `Boolean`
 
@@ -877,13 +915,14 @@ Disable:
 
 `!config autoModDisabledForOldMembers false`
 
+
+
 <a name=autoModDisabledForOldMembersThreshold></a>
 
 ---
+## 老成員門檻
 
-## Old Members Threshold
-
-The amount of time a member has to be in your server to be considered 'old'.
+考慮是 '老' 成員所需在伺服器內的時間。
 
 Type: `Number`
 
@@ -898,13 +937,14 @@ Examples:
 
 `!config autoModDisabledForOldMembersThreshold 2419200` (1 month)``
 
+
+
 <a name=autoModLogEnabled></a>
 
 ---
+## 啟用紀錄
 
-## Log Enabled
-
-Log any moderation actions that the bot makes.
+紀錄機器人的任何審核動作。
 
 Type: `Boolean`
 
@@ -921,13 +961,14 @@ Disable:
 
 `!config autoModLogEnabled false`
 
+
+
 <a name=modLogChannel></a>
 
 ---
+## 審核紀錄頻道
 
-## Mod Log Channel
-
-The channel where moderation logs will be posted in.
+將張貼審核紀錄的頻道。
 
 Type: `Channel`
 
@@ -942,13 +983,14 @@ Examples:
 
 `!config modLogChannel #logs`
 
+
+
 <a name=autoModDeleteBotMessage></a>
 
 ---
+## 刪除機器人訊息
 
-## Delete Bot Messages
-
-Automatically delete the bots own messages (keeps your chat clean).
+自動刪除機器人自己的訊息（保持您乾淨的聊天室）。
 
 Type: `Boolean`
 
@@ -965,13 +1007,14 @@ Disable:
 
 `!config autoModDeleteBotMessage false`
 
+
+
 <a name=autoModDeleteBotMessageTimeoutInSeconds></a>
 
 ---
+## 刪除機器人訊息延遲時間
 
-## Delete Bot Message Timeout
-
-The timeout after which bot messages are deleted.
+刪除機器人訊息的延遲時間。
 
 Type: `Number`
 
@@ -986,13 +1029,14 @@ Examples:
 
 `!config autoModDeleteBotMessageTimeoutInSeconds 10`
 
+
+
 <a name=modPunishmentBanDeleteMessage></a>
 
 ---
+## 刪除停權訊息
 
-## Delete Ban Messages
-
-Whether or not "Ban" pushment messages will be deleted automatically.
+是否自動刪除 "停權" 的懲罰訊息。
 
 Type: `Boolean`
 
@@ -1009,13 +1053,14 @@ Disable:
 
 `!config modPunishmentBanDeleteMessage false`
 
+
+
 <a name=modPunishmentKickDeleteMessage></a>
 
 ---
+## 刪除踢出訊息
 
-## Delete Kick Messages
-
-Whether or not "Kick" pushment messages will be deleted automatically.
+是否自動刪除 "踢出" 的懲罰訊息。
 
 Type: `Boolean`
 
@@ -1032,13 +1077,14 @@ Disable:
 
 `!config modPunishmentKickDeleteMessage false`
 
+
+
 <a name=modPunishmentSoftbanDeleteMessage></a>
 
 ---
+## 刪除暫時停權訊息
 
-## Delete Softban Messages
-
-Whether or not "Softban" pushment messages will be deleted automatically.
+是否自動刪除 "暫時停權" 的懲罰訊息。
 
 Type: `Boolean`
 
@@ -1055,13 +1101,14 @@ Disable:
 
 `!config modPunishmentSoftbanDeleteMessage false`
 
+
+
 <a name=modPunishmentWarnDeleteMessage></a>
 
 ---
+## 刪除警告訊息
 
-## Delete Warn Messages
-
-Whether or not "Warn" pushment messages will be deleted automatically.
+是否自動刪除 "警告" 的懲罰訊息。
 
 Type: `Boolean`
 
@@ -1078,13 +1125,14 @@ Disable:
 
 `!config modPunishmentWarnDeleteMessage false`
 
+
+
 <a name=modPunishmentMuteDeleteMessage></a>
 
 ---
+## 刪除靜音訊息
 
-## Delete Mute Messages
-
-Whether or not "Mute" pushment messages will be deleted automatically.
+是否自動刪除 "靜音" 的懲罰訊息。
 
 Type: `Boolean`
 
@@ -1101,13 +1149,14 @@ Disable:
 
 `!config modPunishmentMuteDeleteMessage false`
 
+
+
 <a name=autoModInvitesEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically scan messages for discord invite links and remove them.
+自動掃描有 Discord 邀請連結的訊息然後移除他們。
 
 Type: `Boolean`
 
@@ -1124,13 +1173,14 @@ Disable:
 
 `!config autoModInvitesEnabled false`
 
+
+
 <a name=autoModLinksEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically remove messages containing links (you can set a whitelist and blacklist).
+自動移除有連結的訊息（您可以設定白名單和黑名單）。
 
 Type: `Boolean`
 
@@ -1147,13 +1197,14 @@ Disable:
 
 `!config autoModLinksEnabled false`
 
+
+
 <a name=autoModLinksWhitelist></a>
 
 ---
+## 白名單
 
-## Whitelist
-
-A list of links that users are allowed to post.
+允許使用者張貼的連結列表。
 
 Type: `String[]`
 
@@ -1168,13 +1219,14 @@ Examples:
 
 `!config autoModLinksWhitelist youtube.com,twitch.com`
 
+
+
 <a name=autoModLinksBlacklist></a>
 
 ---
+## 黑名單
 
-## Blacklist
-
-Blacklist certain links which users won't be able to post.
+使用者將不能張貼的一些黑名單連結。
 
 Type: `String[]`
 
@@ -1189,13 +1241,14 @@ Examples:
 
 `!config autoModLinksBlacklist twitch.com,youtube.com`
 
+
+
 <a name=autoModLinksFollowRedirects></a>
 
 ---
+## 追蹤重新導向
 
-## Follow Redirects
-
-Enable this to resolve redirects for links.
+啟用此來解決重新導向連結。
 
 Type: `Boolean`
 
@@ -1212,13 +1265,14 @@ Disable:
 
 `!config autoModLinksFollowRedirects false`
 
+
+
 <a name=autoModWordsEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Whether or not blacklisted words will be automoderated.
+是否自動審核黑名單的文字。
 
 Type: `Boolean`
 
@@ -1235,13 +1289,14 @@ Disable:
 
 `!config autoModWordsEnabled false`
 
+
+
 <a name=autoModWordsBlacklist></a>
 
 ---
+## 黑名單
 
-## Blacklist
-
-A list of words that are banned.
+禁止的文字列表。
 
 Type: `String[]`
 
@@ -1256,13 +1311,14 @@ Examples:
 
 `!config autoModWordsBlacklist stupid,fuck`
 
+
+
 <a name=autoModAllCapsEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate messages with A LOT OF CAPS.
+自動審核許多大寫的訊息。
 
 Type: `Boolean`
 
@@ -1279,13 +1335,14 @@ Disable:
 
 `!config autoModAllCapsEnabled false`
 
+
+
 <a name=autoModAllCapsMinCharacters></a>
 
 ---
+## 最少字數
 
-## Min. Characters
-
-The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
+要考慮進行審核訊息的最少字數（設定 '3' 將會忽略 'OK' ）。
 
 Type: `Number`
 
@@ -1300,13 +1357,14 @@ Examples:
 
 `!config autoModAllCapsMinCharacters 15`
 
+
+
 <a name=autoModAllCapsPercentageCaps></a>
 
 ---
+## 大寫百分比
 
-## Percentage CAPs
-
-The percentage of characters of the message that have to be CAPs for the rule to trigger.
+訊息內會觸發大寫規則的字數百分比。
 
 Type: `Number`
 
@@ -1321,13 +1379,14 @@ Examples:
 
 `!config autoModAllCapsPercentageCaps 90`
 
+
+
 <a name=autoModDuplicateTextEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate duplicate messages (copy-paste spam).
+自動審核拷貝訊息（複製貼上的垃圾訊息）。
 
 Type: `Boolean`
 
@@ -1344,13 +1403,14 @@ Disable:
 
 `!config autoModDuplicateTextEnabled false`
 
+
+
 <a name=autoModDuplicateTextTimeframeInSeconds></a>
 
 ---
+## 以秒為單位的時間範圍
 
-## Timeframe in Seconds
-
-The timeframe whithin which messages will be considered duplicates.
+考慮是拷貝訊息的時間範圍。
 
 Type: `Number`
 
@@ -1365,13 +1425,14 @@ Examples:
 
 `!config autoModDuplicateTextTimeframeInSeconds 20`
 
+
+
 <a name=autoModQuickMessagesEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate users sending a lot of messages in a short time.
+自動審核使用者在短時間內發送大量訊息。
 
 Type: `Boolean`
 
@@ -1388,13 +1449,14 @@ Disable:
 
 `!config autoModQuickMessagesEnabled false`
 
+
+
 <a name=autoModQuickMessagesNumberOfMessages></a>
 
 ---
+## # 訊息數量
 
-## # of Messages
-
-The number of messages that have to be sent within the timeframe to trigger the rule.
+時間範圍內觸發規則的發送訊息數量。
 
 Type: `Number`
 
@@ -1409,13 +1471,14 @@ Examples:
 
 `!config autoModQuickMessagesNumberOfMessages 10`
 
+
+
 <a name=autoModQuickMessagesTimeframeInSeconds></a>
 
 ---
+## 以秒為單位的時間範圍
 
-## Timeframe in Seconds
-
-The timeframe within which a user is allowed to send a maximum amount of messages.
+時間範圍內允許一位使用者發送的最大訊息數量。
 
 Type: `Number`
 
@@ -1430,13 +1493,14 @@ Examples:
 
 `!config autoModQuickMessagesTimeframeInSeconds 10`
 
+
+
 <a name=autoModMentionUsersEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate messages that mention an excessive amount of users.
+自動審核提及數量過多的使用者訊息。
 
 Type: `Boolean`
 
@@ -1453,13 +1517,14 @@ Disable:
 
 `!config autoModMentionUsersEnabled false`
 
+
+
 <a name=autoModMentionUsersMaxNumberOfMentions></a>
 
 ---
+## 最多 # 個提及
 
-## Max # of Mentions
-
-The maximum amount of users a member can mention in a message.
+一位成員在一則訊息內可以提及的最大使用者數量。
 
 Type: `Number`
 
@@ -1474,13 +1539,14 @@ Examples:
 
 `!config autoModMentionUsersMaxNumberOfMentions 5`
 
+
+
 <a name=autoModMentionRolesEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate messages that mention an excessive amount of roles.
+自動審核提及過多身分組的訊息。
 
 Type: `Boolean`
 
@@ -1497,13 +1563,14 @@ Disable:
 
 `!config autoModMentionRolesEnabled false`
 
+
+
 <a name=autoModMentionRolesMaxNumberOfMentions></a>
 
 ---
+## 最多 # 個提及
 
-## Max # of Mentions
-
-The maximum amount of roles a member can mention in a message.
+一位成員在一則訊息內可以提及的最大身分組數量。
 
 Type: `Number`
 
@@ -1518,13 +1585,14 @@ Examples:
 
 `!config autoModMentionRolesMaxNumberOfMentions 5`
 
+
+
 <a name=autoModEmojisEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically moderate messages with an excessive amount of emojis.
+自動審核數量過多的表情符號訊息。
 
 Type: `Boolean`
 
@@ -1541,13 +1609,14 @@ Disable:
 
 `!config autoModEmojisEnabled false`
 
+
+
 <a name=autoModEmojisMaxNumberOfEmojis></a>
 
 ---
+## 最多 # 個表情符號
 
-## Max # of Emojis
-
-The maximum amount of emojis a message is allowed to have before trigger the rule.
+在觸發規則前一則訊息所允許的最大表情數量。
 
 Type: `Number`
 
@@ -1562,13 +1631,14 @@ Examples:
 
 `!config autoModEmojisMaxNumberOfEmojis 10`
 
+
+
 <a name=autoModHoistEnabled></a>
 
 ---
+## 啟用
 
-## Enabled
-
-Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
+自動給成員暱稱如果他們嘗試提升（使用特殊文字來出現在使用者列表頂端）。
 
 Type: `Boolean`
 
@@ -1585,13 +1655,14 @@ Disable:
 
 `!config autoModHoistEnabled false`
 
+
+
 <a name=musicVolume></a>
 
 ---
+## 音樂音量
 
-## Music Volume
-
-The default volume that is set when the bot joins a voice channel.
+當機器人加入一個語音頻道時的預設音量。
 
 Type: `Number`
 
@@ -1600,17 +1671,18 @@ Default: `100`
 Reset to default:
 `!config musicVolume default`
 
+
+
 <a name=announceNextSong></a>
 
 ---
+## 公告下一首歌曲
 
-## Announce Next Song
-
-Whether or not the next song should be announced in the voice channel.
+是否應該在語音頻道裡公告下一首歌曲。
 
 Type: `Boolean`
 
-Default: `true`
+Default: `false`
 
 Reset to default:
 `!config announceNextSong default`
@@ -1623,13 +1695,14 @@ Disable:
 
 `!config announceNextSong false`
 
+
+
 <a name=announcementVoice></a>
 
 ---
+## 公告音量
 
-## Announcement Voice
-
-The voice used in the next song announcements.
+公告下一首歌曲的音量。
 
 Type: `Enum<AnnouncementVoice>`
 
@@ -1644,13 +1717,14 @@ Example:
 
 `!config announcementVoice Joanna`
 
+
+
 <a name=fadeMusicOnTalk></a>
 
 ---
+## 說話時減小音樂
 
-## Fade Music On Talk
-
-If enabled, the music will fade down while people are talking.
+如果啟用，當人們說話時音樂會減低。
 
 Type: `Boolean`
 
@@ -1667,13 +1741,14 @@ Disable:
 
 `!config fadeMusicOnTalk false`
 
+
+
 <a name=fadeMusicEndDelay></a>
 
 ---
+## 延遲結束減小音樂
 
-## Fade Music End Delay
-
-The delay of how many seconds noone has to speak for the volume to return back to normal.
+沒人說話多少秒讓音量恢復正常的延遲時間。
 
 Type: `Number`
 
@@ -1682,32 +1757,35 @@ Default: `1`
 Reset to default:
 `!config fadeMusicEndDelay default`
 
+
+
 <a name=defaultMusicPlatform></a>
 
 ---
+## 預設音樂平臺
 
-## Default Music Platform
-
-The platform that is used to search / play music when no platform is selected explicitly.
+當沒有明確選擇平臺時用來搜尋 / 播放的平臺。
 
 Type: `Enum<MusicPlatformTypes>`
 
-Default: `soundcloud`
+Default: `youtube`
 
 Reset to default:
 `!config defaultMusicPlatform default`
 
+
+
 <a name=disabledMusicPlatforms></a>
 
 ---
+## 禁用音樂平臺
 
-## Disabled Music Platforms
-
-Music platforms that are disabled and cannot be used to play music.
+禁用然後不能用來播放音樂的音樂平臺。
 
 Type: `Enum<MusicPlatformTypes>[]`
 
-Default: ``
+Default: `soundcloud`
 
 Reset to default:
 `!config disabledMusicPlatforms default`
+

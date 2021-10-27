@@ -24,11 +24,13 @@ Pour chacune de ces infractions, tu peux définir combien d'avertissements seron
 !strikeconfig <violationType><numberOfStrikes>
 ```
 
+
 Par exemple, si tu veux que les utilisateurs reçoivent `2` avertissements lorsqu'ils enfreignent la règle `invites`, tu devrais utiliser cette commande :
 
 ```text
 !strikeconfig invites 2
 ```
+
 
 Tu peux vérifier la configuration actuelle en faisant :
 

@@ -36,4 +36,4 @@ Pour voir tous les paramètres de sanction, utilise la commande sans argument :
 
 ```text
 !punishmentconfig
-```
+``` 

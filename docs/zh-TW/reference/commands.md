@@ -7,193 +7,193 @@ To get a list of available commands, do !help on your server.
 Most commands accept arguments and/or flags.  
 According to the **Type** of the argument or flag you can provide different values.
 
-### Boolean
+### 布林值
 
-This arguments expects `true` or `false`. You can also use `yes` and `no`.
+此值預計是 `true` 或 `false` 。您也可以使用 `yes` 和  `no` 。
 
-### Number
+### 數字
 
-This arguments expects a number
+此值預計是一個數字
 
-### Enum
+### 列舉
 
-This arguments expects a value from a specific set of valid values.
+此值預計是一個指定的有效值。
 
-> Depending on the command the valid values can vary. Use `!help <command>` (eg. `!help addRank`) to get more information about the command and the valid values for the enum.
+> 根據指令會有不同的有效值。使用 `!help <command>` （例如： `!help addRank` ）來獲取指令的詳細資訊和列舉的有效值。
 
-### Invite Code
+### 邀請代碼
 
-This arguments expects a Discord Invite Code.
+此值預計是一個 Discord 邀請代碼。
 
-> You can put only the part after `https://discord.gg/` to prevent Discord from creating a preview.
+> 您可以只貼 `https://discord.gg/` 後面的部分來防止 Discord 建立一個預覽。
 
-### User
+### 使用者
 
-This arguments expects a Discord User. You can use any of the following methods to provide a user:
+此值預計是一位 Discord 使用者。您可以使用以下任何一種方式來提供一位使用者：
 
-- Mention the user: `@Valandur`
-- Use their ID: `102785693046026240`
-- Use their name: `Valandur`
-- Use their name and discriminator: `Valandur#3581`
-- Use quotes if their name has a space: `"Valandur with a space"`
+- 提及使用者： `@Valandur`
+- 使用他們的 ID ： `102785693046026240`
+- 使用他們的名稱： `Valandur`
+- 使用他們的名稱和識別碼： `Valandur#3581`
+使用引號如果他們的名稱有空格： `"Valandur with a space"`
 
-### Role
+### 身分組
 
-This arguments expects a Discord Role. You can use any of the following methods to provide a role:
+此值預計是一個 Discord 身分組。您可以使用以下任何一種方式來提供一個身分組：
 
-- Mention the role: `@Admin`
-- Use the ID: `102785693046026240`
-- Use the name: `Admin`
-- Use quotes if the name has a space: `"Admin with a space"`
+- 提及身分組： `@Admin`
+- 使用 ID ： `102785693046026240`
+- 使用名稱： `Admin`
+- 使用引號如果名稱有空格： `"Admin with a space"`
 
-### Channel
+### 頻道
 
-This arguments expects a Discord Channel. You can use any of the following methods to provide a channel:
+此值預計是一個 Discord 頻道。您可以使用以下任何一種方式來提供一個頻道：
 
-- Mention the channel: `#general`
-- Use the ID: `409846838129197057`
-- Use the name: `general`
-- Use quotes if the name has a space: `"general with a space"`
+- 提及頻道： `#general`
+- 使用 ID： `409846838129197057`
+- 使用名稱： `general`
+- 使用引號如果名稱有空格： `"general with a space"`
 
-### Command
+### 指令
 
-This argument expects a command of this bot. You can use any of the following methods to provide a command:
+此值預計是此機器人的一個指令。您可以使用以下任何一種方式來提供一個指令：
 
-- Use the command name: `invites`
-- Use an alias of the command: `p`
+- 使用指令名稱： `invites`
+- 使用指令別名： `p`
 
-### Text
+### 文字
 
-This arguments expects any text. You can use quotes (`"Text with quotes"`) for text that has spaces.
+此值預計是文字。您可以使用引號（"引號文字"）如果文字有空格。
 
-> If the text is the last argument you don't have to use quotes.
+> 如果文字是最後一個值您就不需使用引號。
 
-### Date
+### 日期
 
-This argument expects a date. You can use various formats, but we recommend: `YYYY-MM-DD`
+此值預計是日期。您可以使用各種不同的格式，但是我們建議： `西元年-月份-日期`
 
-### Duration
+### 期間
 
-This argument expects a duration. The following duration types are supported:
+此值預計是一段期間。支援以下類型的期間：
 
-- Seconds: `s` (`5s` = 5 seconds)
-- Minutes: `min` (`3min` = 3 minutes)
-- Hours: `h` (`4h` = 4 hours)
-- Days: `d` (`2d` = 2 days)
-- Weeks: `w` (`1w` = 1 week)
-- Months: `mo` (`6mo` = 6 months)
-- Years: `y` (`10y` = 10 years)
+- 秒： `s` （ `5s` = 5 秒）
+- 分： `min` （ `3min` = 3 分）
+- 時： `h` （ `4h` = 4 時）
+- 天： `d` （ `2d` = 2 天）
+- 週： `w` （ `1w` = 1 週）
+- 月： `mo` （ `6mo` = 6 月）
+- 年： `y` （ `10y` = 10 年）
 
 ## Overview
 
 ### Invites
 
-| Command                           | Description                                        | Usage                                                            |
-| --------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------- |
-| [addInvites](#addInvites)         | 增加/減少成員的邀請數量。                          | !addInvites \<user\> \<amount\> [reason]                         |
-| [clearInvites](#clearInvites)     | 清除伺服器/一個使用者的邀請。                      | !clearInvites [-d value\|--date=value][-cb\|--clearbonus] [user] |
-| [createInvite](#createInvite)     | 創立獨特的邀請代碼。                               | !createInvite \<name\> [channel]                                 |
-| [info](#info)                     | Show info about a specific member.                 | !info \<user\> [details][page]                                   |
-| [inviteCodes](#inviteCodes)       | Get a list of all your invite codes                | !inviteCodes                                                     |
-| [inviteDetails](#inviteDetails)   | Shows details about where your invites are from.   | !inviteDetails [user]                                            |
-| [invites](#invites)               | Show personal invites.                             | !invites [user]                                                  |
-| [leaderboard](#leaderboard)       | Show members with most invites.                    | !leaderboard [page]                                              |
-| [removeInvites](#removeInvites)   | Removes a specified amount of invites from a user. | !removeInvites \<user\> \<amount\> [reason]                      |
-| [restoreInvites](#restoreInvites) | Restore all previously cleared invites.            | !restoreInvites [user]                                           |
-| [subtractFakes](#subtractFakes)   | Remove fake invites from all users.                | !subtractFakes                                                   |
-| [subtractLeaves](#subtractLeaves) | Remove leaves from all users                       | !subtractLeaves                                                  |
+| Command | Description | Usage |
+|---|---|---|
+| [addInvites](#addInvites) | 新增 / 移除一位成員的邀請數量。 | !addInvites \<user\> \<amount\> [reason]  |
+| [clearInvites](#clearInvites) | 清除伺服器 / 一個使用者的邀請數量。 | !clearInvites [-d value\|--date=value] [-cb\|--clearBonus] [user]  |
+| [createInvite](#createInvite) | 建立獨特的邀請代碼。 | !createInvite \<name\> [channel]  |
+| [info](#info) | 顯示一位指定成員的資訊。 | !info \<user\> [details] [page]  |
+| [inviteCodes](#inviteCodes) | 您所有的邀請代碼列表 | !inviteCodes  |
+| [inviteDetails](#inviteDetails) | 顯示邀請的詳細資訊。 | !inviteDetails [user]  |
+| [invites](#invites) | 顯示個人邀請數量。 | !invites [user]  |
+| [leaderboard](#leaderboard) | 顯示最多邀請數量的成員。 | !leaderboard [page]  |
+| [removeInvites](#removeInvites) | 移除一位使用者的指定邀請數量。 | !removeInvites \<user\> \<amount\> [reason]  |
+| [restoreInvites](#restoreInvites) | 復原所有先前清除的邀請數量。 | !restoreInvites [user]  |
+| [subtractFakes](#subtractFakes) | 移除所有使用者的假邀請數量。 | !subtractFakes  |
+| [subtractLeaves](#subtractLeaves) | 移除所有使用者的離開邀請數量 | !subtractLeaves  |
 
 ### Ranks
 
-| Command                   | Description                                   | Usage                                |
-| ------------------------- | --------------------------------------------- | ------------------------------------ |
-| [addRank](#addRank)       | 新增一個新的等級。                            | !addRank \<role\> \<invites\> [info] |
-| [fixRanks](#fixRanks)     | Deletes any ranks where the role was deleted. | !fixRanks                            |
-| [ranks](#ranks)           | Show all ranks.                               | !ranks [page]                        |
-| [removeRank](#removeRank) | Remove a rank.                                | !removeRank \<rank\>                 |
+| Command | Description | Usage |
+|---|---|---|
+| [addRank](#addRank) | 新增一個新的等級。 | !addRank \<role\> \<invites\> [info]  |
+| [fixRanks](#fixRanks) | 刪除已刪除身分組的等級。 | !fixRanks  |
+| [ranks](#ranks) | 顯示所有的等級。 | !ranks [page]  |
+| [removeRank](#removeRank) | 移除一個等級。 | !removeRank \<rank\>  |
 
 ### Config
 
-| Command                                 | Description                                               | Usage                                       |
-| --------------------------------------- | --------------------------------------------------------- | ------------------------------------------- |
-| [botConfig](#botConfig)                 | 顯示和更改機器人的設置選項。                              | !botConfig [key][value]                     |
-| [config](#config)                       | 顯示和更改伺服器的配置。                                  | !config [key][value]                        |
-| [interactiveConfig](#interactiveConfig) | Interactive Config                                        | !interactiveConfig                          |
-| [inviteCodeConfig](#inviteCodeConfig)   | Show and change the config of invite codes of the server. | !inviteCodeConfig [key][invitecode] [value] |
-| [memberConfig](#memberConfig)           | Show and change the config of members of the server.      | !memberConfig [key][user] [value]           |
-| [permissions](#permissions)             | Configure permissions to use commands.                    | !permissions [cmd][role]                    |
+| Command | Description | Usage |
+|---|---|---|
+| [botConfig](#botConfig) | 顯示和更改機器人的設置選項。 | !botConfig [key] [value]  |
+| [config](#config) | 顯示和更改伺服器的設置選項。 | !config [key] [value]  |
+| [interactiveConfig](#interactiveConfig) | 互動式設置選項 | !interactiveConfig  |
+| [inviteCodeConfig](#inviteCodeConfig) | 顯示和更改伺服器的邀請代碼設置選項。 | !inviteCodeConfig [key] [inviteCode] [value]  |
+| [memberConfig](#memberConfig) | 顯示和更改伺服器的成員設置選項。 | !memberConfig [key] [user] [value]  |
+| [permissions](#permissions) | 設置使用指令的權限。 | !permissions [cmd] [role]  |
 
 ### Info
 
-| Command             | Description                                                                       | Usage           |
-| ------------------- | --------------------------------------------------------------------------------- | --------------- |
-| [botInfo](#botInfo) | 得到關於機器人的一般資訊。                                                        | !botInfo        |
-| [credits](#credits) | 顯示機器人的開發人員和合作人員。                                                  | !credits        |
-| [getBot](#getBot)   | 拿到機器人的邀請鏈接                                                              | !getBot         |
-| [help](#help)       | 顯示幫助                                                                          | !help [command] |
-| [members](#members) | Show member count of current server.                                              | !members        |
-| [ping](#ping)       | Ping the bot                                                                      | !ping           |
-| [prefix](#prefix)   | Shows the current prefix of the bot.                                              | !prefix         |
-| [setup](#setup)     | Help with setting up the bot and checking for problems (e.g. missing permissions) | !setup          |
-| [support](#support) | Get an invite link to our support server.                                         | !support        |
+| Command | Description | Usage |
+|---|---|---|
+| [botInfo](#botInfo) | 獲取關於機器人的一般資訊。 | !botInfo  |
+| [credits](#credits) | 顯示開發團隊和貢獻開發人員。 | !credits  |
+| [getBot](#getBot) | 機器人的邀請連結。 | !getBot  |
+| [help](#help) | 顯示協助資訊。 | !help [command]  |
+| [members](#members) | 顯示伺服器目前的成員數。 | !members  |
+| [ping](#ping) | 檢測機器人延遲 | !ping  |
+| [prefix](#prefix) | 顯示機器人目前的指令前綴。 | !prefix  |
+| [setup](#setup) | 協助設定機器人和檢查問題（例如：缺少的權限） | !setup  |
+| [support](#support) | 獲取我們的支援伺服器邀請連結。 | !support  |
 
 ### Premium
 
-| Command                   | Description                                                               | Usage             |
-| ------------------------- | ------------------------------------------------------------------------- | ----------------- |
-| [export](#export)         | 輸出 InviteManager 的資料到一個 csv 表單。                                | !export \<type\>  |
-| [premium](#premium)       | Info about premium version of InviteManager.                              | !premium [action] |
-| [tryPremium](#tryPremium) | Try the premium version of InviteManager for free for a limited duration. | !tryPremium       |
+| Command | Description | Usage |
+|---|---|---|
+| [export](#export) | 輸出 InviteManager 的資料庫到 csv 表格。 | !export \<type\>  |
+| [premium](#premium) | InviteManager 高級版的資訊。 | !premium [action]  |
+| [tryPremium](#tryPremium) | 在有限的期間內免費試用 InviteManager 高級版。 | !tryPremium  |
 
 ### Moderation
 
-| Command                               | Description                                                                                                                                   | Usage                                                            |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [ban](#ban)                           | 從伺服器停權一位成員。                                                                                                                        | !ban [-d value\|--deleteMessageDays=value] \<user\> [reason]     |
-| [caseDelete](#caseDelete)             | 刪除一個特定案件。                                                                                                                            | !caseDelete \<caseNumber\> [reason]                              |
-| [caseView](#caseView)                 | 檢視一個特定案件的資訊。                                                                                                                      | !caseView \<caseNumber\>                                         |
-| [check](#check)                       | 檢查使用者的 violation 和懲罰歷史。                                                                                                           | !check \<user\>                                                  |
-| [clean](#clean)                       | 清除一個頻道中一些類型的訊息。                                                                                                                | !clean \<type\> [numberOfMessages]                               |
-| [cleanShort](#cleanShort)             | 清除短訊息                                                                                                                                    | !cleanShort \<maxTextLength\> [numberOfMessages]                 |
-| [cleanText](#cleanText)               | 刪除包含一些關鍵字的訊息。                                                                                                                    | !cleanText \<text\> [numberOfMessages]                           |
-| [kick](#kick)                         | Kick a member from the server.                                                                                                                | !kick \<member\> [reason]                                        |
-| [lockdown](#lockdown)                 | Lockdown a specific channel (Prevents anyone without special roles from sending messages)                                                     | !lockdown [-t value\|--timeout=value][channel]                   |
-| [mute](#mute)                         | Mute a user                                                                                                                                   | !mute [-d value\|--duration=value] \<user\> [reason]             |
-| [punishmentConfig](#punishmentConfig) | Configure punishments when reaching a certain amount of strikes.                                                                              | !punishmentConfig [punishment][strikes] [args]                   |
-| [purge](#purge)                       | Purge messages in a channel.                                                                                                                  | !purge \<quantity\> [user]                                       |
-| [purgeUntil](#purgeUntil)             | Purge messages in a channel up until a specified message.                                                                                     | !purgeUntil \<messageID\>                                        |
-| [softBan](#softBan)                   | Ban and then automatically unban a member from the server.                                                                                    | !softBan [-d value\|--deleteMessageDays=value] \<user\> [reason] |
-| [strike](#strike)                     | Add strikes to a user                                                                                                                         | !strike \<member\> \<type\> \<amount\>                           |
-| [strikeConfig](#strikeConfig)         | Configure strikes received for various violations.                                                                                            | !strikeConfig [violation][strikes]                               |
-| [unban](#unban)                       | Unban a user                                                                                                                                  | !unban \<user\> [reason]                                         |
-| [unhoist](#unhoist)                   | Add a character in front of all members with a special character in front of their name, so they will be shown at the end of the member list. | !unhoist                                                         |
-| [unmute](#unmute)                     | Unmute a user                                                                                                                                 | !unmute \<user\>                                                 |
-| [warn](#warn)                         | Warn a member.                                                                                                                                | !warn \<member\> [reason]                                        |
+| Command | Description | Usage |
+|---|---|---|
+| [ban](#ban) | 從伺服器停權一位成員。 | !ban [-d value\|--deleteMessageDays=value] \<user\> [reason]  |
+| [caseDelete](#caseDelete) | 刪除一個指定案件。 | !caseDelete \<caseNumber\> [reason]  |
+| [caseView](#caseView) | 檢視一個指定案件的資訊。 | !caseView \<caseNumber\>  |
+| [check](#check) | 檢查使用者的違規事項和懲罰歷史記錄。 | !check \<user\>  |
+| [clean](#clean) | 清除一個頻道中數個類型的訊息。 | !clean \<type\> [numberOfMessages]  |
+| [cleanShort](#cleanShort) | 清除短訊息 | !cleanShort \<maxTextLength\> [numberOfMessages]  |
+| [cleanText](#cleanText) | 刪除有關鍵字的訊息。 | !cleanText \<text\> [numberOfMessages]  |
+| [kick](#kick) | 從伺服器踢出一位成員。 | !kick \<member\> [reason]  |
+| [lockdown](#lockdown) | 封鎖一個指定頻道（防止特殊身分組以外的任何人發送訊息） | !lockdown [-t value\|--timeout=value] [channel]  |
+| [mute](#mute) | 靜音一位使用者 | !mute [-d value\|--duration=value] \<user\> [reason]  |
+| [punishmentConfig](#punishmentConfig) | 設置當收到一定數量記點時的懲罰。 | !punishmentConfig [punishment] [strikes] [args]  |
+| [purge](#purge) | 在一個頻道中清除訊息。 | !purge \<quantity\> [user]  |
+| [purgeUntil](#purgeUntil) | 在一個頻道中刪除一則指定訊息之後的所有訊息。 | !purgeUntil \<messageID\>  |
+| [softBan](#softBan) | 從伺服器停權一位成員然後自動解除停權。 | !softBan [-d value\|--deleteMessageDays=value] \<user\> [reason]  |
+| [strike](#strike) | 新增一位使用者的記點 | !strike \<member\> \<type\> \<amount\>  |
+| [strikeConfig](#strikeConfig) | 設置各種不同的違規事項所收到的記點。 | !strikeConfig [violation] [strikes]  |
+| [unban](#unban) | 解除停權一位使用者 | !unban \<user\> [reason]  |
+| [unhoist](#unhoist) | 在所有名稱是特殊字元開頭的成員前面新增一個字元，所以他們會顯示在成員列表的最後。 | !unhoist  |
+| [unmute](#unmute) | 解除靜音一位使用者 | !unmute \<user\>  |
+| [warn](#warn) | 警告一位成員。 | !warn \<member\> [reason]  |
 
 ### Music
 
-| Command                   | Description                                                                                  | Usage                                                   |
-| ------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| [disconnect](#disconnect) | Disconnect the bot from the current voice channel.                                           | !disconnect                                             |
-| [lyrics](#lyrics)         | Show lyrics of the currently playing song.                                                   | !lyrics [-l\|--live]                                    |
-| [mashup](#mashup)         | Create a mashup of 2 songs.                                                                  | !mashup \<videos\>                                      |
-| [nowPlaying](#nowPlaying) | Shows information about the currently playing song                                           | !nowPlaying [-p\|--pin]                                 |
-| [pause](#pause)           | Pause the current song.                                                                      | !pause                                                  |
-| [play](#play)             | Play the song if the queue is empty, otherwise it will add the song to the end of the queue. | !play [-p value\|--platform=value][-n\|--next] \<link\> |
-| [queue](#queue)           | Display the songs in the queue.                                                              | !queue                                                  |
-| [repeat](#repeat)         | Set the song to be played on repeat.                                                         | !repeat                                                 |
-| [resume](#resume)         | Resume the current song.                                                                     | !resume                                                 |
-| [rewind](#rewind)         | Rewind the song and start from the beginning.                                                | !rewind                                                 |
-| [search](#search)         | Search for the search term and let you chose one of the results.                             | !search [-p value\|--platform=value] \<search\>         |
-| [seek](#seek)             | Skip to a specific part of the song.                                                         | !seek [duration]                                        |
-| [skip](#skip)             | Skip the current song and play the next song in the queue.                                   | !skip [amount]                                          |
-| [volume](#volume)         | Set the volume if an argument is passed, or show the current volume.                         | !volume [volume]                                        |
+| Command | Description | Usage |
+|---|---|---|
+| [disconnect](#disconnect) | 從目前的語音頻道中斷連接機器人。 | !disconnect  |
+| [lyrics](#lyrics) | 顯示目前正在播放歌曲的歌詞。 | !lyrics [-l\|--live]  |
+| [mashup](#mashup) | 建立 2 首歌曲的混搭。 | !mashup \<videos\>  |
+| [nowPlaying](#nowPlaying) | 顯示目前正在播放歌曲的資訊 | !nowPlaying [-p\|--pin]  |
+| [pause](#pause) | 暫停目前的歌曲。 | !pause  |
+| [play](#play) | 如果列表是空的會播放歌曲，否則它將會新增歌曲到列表的最後。 | !play [-p value\|--platform=value] [-n\|--next] \<link\>  |
+| [queue](#queue) | 顯示列表裡的歌曲。 | !queue  |
+| [repeat](#repeat) | 設定重複播放的歌曲。 | !repeat  |
+| [resume](#resume) | 恢復播放目前的歌曲。 | !resume  |
+| [rewind](#rewind) | 倒帶歌曲然後從頭開始。 | !rewind  |
+| [search](#search) | 搜尋字詞然後讓您從結果中選擇一個。 | !search [-p value\|--platform=value] \<search\>  |
+| [seek](#seek) | 跳過歌曲的指定部分。 | !seek [duration]  |
+| [skip](#skip) | 跳過目前的歌曲然後播放列表裡的下一首歌曲。 | !skip [amount]  |
+| [volume](#volume) | 如果有輸入值會設定音量，或是顯示目前的音量。 | !volume [volume]  |
 
 ### Other
 
-| Command         | Description                    | Usage                      |
-| --------------- | ------------------------------ | -------------------------- |
-| [graph](#graph) | 顯示關於這個伺服的各種統計資料 | !graph \<type\> [from][to] |
+| Command | Description | Usage |
+|---|---|---|
+| [graph](#graph) | 顯示伺服器各種不同的統計資訊圖表。 | !graph \<type\> [from] [to]  |
 
 <a name='addInvites'></a>
 
@@ -201,12 +201,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !addInvites
 
-增加/減少成員的邀請數量。
+新增 / 移除一位成員的邀請數量。
 
 ### Usage
 
 ```text
-!addInvites <user> <amount> [reason]
+!addInvites <user> <amount> [reason] 
 ```
 
 ### Aliases
@@ -215,21 +215,22 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                             | Details |
-| -------- | ----------------- | -------- | ------------------------------------------------------- | ------- |
-| user     | [User](#User)     | Yes      | 使用者將收到/失去額外獎勵邀請數量。                     |         |
-| amount   | [Number](#Number) | Yes      | 使用者的邀請數量將被增加/減少。使用負數來減少邀請數量。 |         |
-| reason   | [Text](#Text)     | No       | 增加/減少邀請數量的原因。                               |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 使用者將收到 / 失去獎勵邀請數量。|  |
+| amount | [數字](#數字) | Yes | 將新增 / 移除使用者的邀請數量。使用負(-)數來減少邀請數量。|  |
+| reason | [文字](#文字) | No | 新增 / 移除邀請數量的原因。|  |
 
 ### Examples
 
 ```text
 !addInvites @User 5
 ```
-
+  
 ```text
 !addInvites "Name with space" -30 Removed for cheating
 ```
+
 
 <a name='addRank'></a>
 
@@ -242,7 +243,7 @@ This argument expects a duration. The following duration types are supported:
 ### Usage
 
 ```text
-!addRank <role> <invites> [info]
+!addRank <role> <invites> [info] 
 ```
 
 ### Aliases
@@ -253,21 +254,22 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                  | Details |
-| -------- | ----------------- | -------- | -------------------------------------------- | ------- |
-| role     | [Role](#Role)     | Yes      | 當達到等級時使用者將獲得的身分組。           |         |
-| invites  | [Number](#Number) | Yes      | 需要的邀請數量來達到等級。                   |         |
-| info     | [Text](#Text)     | No       | 使用者能看見的條件所以他們會更了解這個等級。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| role | [身分組](#身分組) | Yes | 當達到等級時使用者將收到的身分組。|  |
+| invites | [數字](#數字) | Yes | 需要達到等級的邀請數量。|  |
+| info | [文字](#文字) | No | 使用者將看見的敘述，所以他們會更了解這個等級。|  |
 
 ### Examples
 
 ```text
 !addRank @Role 5
 ```
-
+  
 ```text
 !addRank "Role with space" 10 Wow, already 10 people!
 ```
+
 
 <a name='ban'></a>
 
@@ -280,23 +282,25 @@ This argument expects a duration. The following duration types are supported:
 ### Usage
 
 ```text
-!ban [-d value|--deleteMessageDays=value] <user> [reason]
+!ban [-d value|--deleteMessageDays=value] <user> [reason] 
 ```
 
 ### Arguments
 
-| Argument | Type          | Required | Description          | Details |
-| -------- | ------------- | -------- | -------------------- | ------- |
-| user     | [User](#User) | Yes      | 被停權的使用者。     |         |
-| reason   | [Text](#Text) | No       | 為甚麼使用者被停權。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 被停權的使用者。|  |
+| reason | [文字](#文字) | No | 為甚麼使用者被停權。|  |
 
 ### Flags
 
-| Flag                              | Short     | Type              | Description                                  |
-| --------------------------------- | --------- | ----------------- | -------------------------------------------- |
-| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | 如果指定時間將刪除被停權成員近數日內的訊息。 |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [數字](#數字) | 如果指定時間將刪除被停權成員多少天以內的訊息。 |
 
 ### Examples
+
+
 
 <a name='botConfig'></a>
 
@@ -309,7 +313,7 @@ This argument expects a duration. The following duration types are supported:
 ### Usage
 
 ```text
-!botConfig [key] [value]
+!botConfig [key] [value] 
 ```
 
 ### Aliases
@@ -320,10 +324,10 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type            | Required | Description                       | Details                                                                                                                                     |
-| -------- | --------------- | -------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| key      | [Enum](#Enum)   | No       | 您想要顯示/更改的機器人設置選項。 | Use one of the following values: `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
-| value    | [Value](#Value) | No       | 新設定的值。                      |                                                                                                                                             |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| key | [列舉](#列舉) | No | 您想要顯示 / 更改的機器人設置選項。| 使用以下其中一個值： `activityEnabled`, `activityMessage`, `activityStatus`, `activityType`, `activityUrl`, `embedDefaultColor` |
+| value | [值](#值) | No | 新設定的值。|  |
 
 ### Examples
 
@@ -331,18 +335,19 @@ This argument expects a duration. The following duration types are supported:
 !botConfig
 ```
 
+
 <a name='botInfo'></a>
 
 ---
 
 ## !botInfo
 
-得到關於機器人的一般資訊。
+獲取關於機器人的一般資訊。
 
 ### Usage
 
 ```text
-!botInfo
+!botInfo 
 ```
 
 ### Aliases
@@ -355,18 +360,19 @@ This argument expects a duration. The following duration types are supported:
 !botInfo
 ```
 
+
 <a name='caseDelete'></a>
 
 ---
 
 ## !caseDelete
 
-刪除一個特定案件。
+刪除一個指定案件。
 
 ### Usage
 
 ```text
-!caseDelete <caseNumber> [reason]
+!caseDelete <caseNumber> [reason] 
 ```
 
 ### Aliases
@@ -377,10 +383,10 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument   | Type              | Required | Description      | Details |
-| ---------- | ----------------- | -------- | ---------------- | ------- |
-| caseNumber | [Number](#Number) | Yes      | 案件編號         |         |
-| reason     | [Text](#Text)     | No       | 移除案件的原因。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| caseNumber | [數字](#數字) | Yes | 案件編號|  |
+| reason | [文字](#文字) | No | 移除此案件的原因。|  |
 
 ### Examples
 
@@ -388,18 +394,19 @@ This argument expects a duration. The following duration types are supported:
 !caseDelete 5434 User apologized
 ```
 
+
 <a name='caseView'></a>
 
 ---
 
 ## !caseView
 
-檢視一個特定案件的資訊。
+檢視一個指定案件的資訊。
 
 ### Usage
 
 ```text
-!caseView <caseNumber>
+!caseView <caseNumber> 
 ```
 
 ### Aliases
@@ -410,9 +417,9 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument   | Type              | Required | Description | Details |
-| ---------- | ----------------- | -------- | ----------- | ------- |
-| caseNumber | [Number](#Number) | Yes      | 案件編號    |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| caseNumber | [數字](#數字) | Yes | 案件編號|  |
 
 ### Examples
 
@@ -420,18 +427,19 @@ This argument expects a duration. The following duration types are supported:
 !caseView 5434
 ```
 
+
 <a name='check'></a>
 
 ---
 
 ## !check
 
-檢查使用者的 violation 和懲罰歷史。
+檢查使用者的違規事項和懲罰歷史記錄。
 
 ### Usage
 
 ```text
-!check <user>
+!check <user> 
 ```
 
 ### Aliases
@@ -440,19 +448,20 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type          | Required | Description  | Details |
-| -------- | ------------- | -------- | ------------ | ------- |
-| user     | [User](#User) | Yes      | 檢查使用者。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 被檢查的使用者。|  |
 
 ### Examples
 
 ```text
 !check @User
 ```
-
+  
 ```text
 !check "User with space"
 ```
+
 
 <a name='clean'></a>
 
@@ -460,12 +469,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !clean
 
-清除一個頻道中一些類型的訊息。
+清除一個頻道中數個類型的訊息。
 
 ### Usage
 
 ```text
-!clean <type> [numberOfMessages]
+!clean <type> [numberOfMessages] 
 ```
 
 ### Aliases
@@ -474,12 +483,14 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument         | Type              | Required | Description            | Details                                                                                                            |
-| ---------------- | ----------------- | -------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| type             | [Enum](#Enum)     | Yes      | 該類型的訊息將被刪除。 | Use one of the following values: `bots`, `embeds`, `emojis`, `images`, `links`, `mentions`, `reacted`, `reactions` |
-| numberOfMessages | [Number](#Number) | No       | 將被搜尋的訊息數量。   |                                                                                                                    |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| type | [列舉](#列舉) | Yes | 將被刪除的訊息類型。| 使用以下其中一個值： `bots`, `embeds`, `emojis`, `images`, `links`, `mentions`, `reacted`, `reactions` |
+| numberOfMessages | [數字](#數字) | No | 被搜尋的訊息數量。|  |
 
 ### Examples
+
+
 
 <a name='cleanShort'></a>
 
@@ -492,7 +503,7 @@ This argument expects a duration. The following duration types are supported:
 ### Usage
 
 ```text
-!cleanShort <maxTextLength> [numberOfMessages]
+!cleanShort <maxTextLength> [numberOfMessages] 
 ```
 
 ### Aliases
@@ -503,12 +514,14 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument         | Type              | Required | Description                  | Details |
-| ---------------- | ----------------- | -------- | ---------------------------- | ------- |
-| maxTextLength    | [Number](#Number) | Yes      | 所有短於這個的訊息將被刪除。 |         |
-| numberOfMessages | [Number](#Number) | No       | 將被搜尋的訊息數量。         |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| maxTextLength | [數字](#數字) | Yes | 將刪除所有短於此的訊息。|  |
+| numberOfMessages | [數字](#數字) | No | 將被搜尋的訊息數量。|  |
 
 ### Examples
+
+
 
 <a name='cleanText'></a>
 
@@ -516,12 +529,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !cleanText
 
-刪除包含一些關鍵字的訊息。
+刪除有關鍵字的訊息。
 
 ### Usage
 
 ```text
-!cleanText <text> [numberOfMessages]
+!cleanText <text> [numberOfMessages] 
 ```
 
 ### Aliases
@@ -532,12 +545,14 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument         | Type              | Required | Description                    | Details |
-| ---------------- | ----------------- | -------- | ------------------------------ | ------- |
-| text             | [Text](#Text)     | Yes      | 所有包含這個字的訊息將被刪除。 |         |
-| numberOfMessages | [Number](#Number) | No       | 將被搜尋的訊息數量。           |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| text | [文字](#文字) | Yes | 將刪除有這個字的訊息。|  |
+| numberOfMessages | [數字](#數字) | No | 將被搜尋的訊息數量。|  |
 
 ### Examples
+
+
 
 <a name='clearInvites'></a>
 
@@ -545,12 +560,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !clearInvites
 
-清除伺服器/一個使用者的邀請。
+清除伺服器 / 一個使用者的邀請數量。
 
 ### Usage
 
 ```text
-!clearInvites [-d value|--date=value] [-cb|--clearBonus] [user]
+!clearInvites [-d value|--date=value] [-cb|--clearBonus] [user] 
 ```
 
 ### Aliases
@@ -559,30 +574,31 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                          | Details |
-| -------- | ------------- | -------- | ---------------------------------------------------- | ------- |
-| user     | [User](#User) | No       | 要被清除所有邀請的使用者。如果省略則清除所有使用者。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | No | 清除使用者所有的邀請數量。如果省略則清除所有的使用者。|  |
 
 ### Flags
 
-| Flag                       | Short      | Type                | Description                                                        |
-| -------------------------- | ---------- | ------------------- | ------------------------------------------------------------------ |
-| &#x2011;&#x2011;date       | &#x2011;d  | [Date](#Date)       | 應該開始被計算的邀請的日期。預設值是今日。                         |
-| &#x2011;&#x2011;clearBonus | &#x2011;cb | [Boolean](#Boolean) | 增加此標誌來清除額外獎勵的邀請。否則額外獎勵的邀請被留下不會改變。 |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;date | &#x2011;d | [日期](#日期) | 應該開始計算邀請數量的日期。預設值是今天。 |
+| &#x2011;&#x2011;clearBonus | &#x2011;cb | [布林值](#布林值) | 新增此標記來清除獎勵邀請數量。否則獎勵邀數量不會改變。 |
 
 ### Examples
 
 ```text
 !clearInvites
 ```
-
+  
 ```text
 !clearInvites @User
 ```
-
+  
 ```text
 !clearInvites -cb "User with space"
 ```
+
 
 <a name='config'></a>
 
@@ -590,12 +606,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !config
 
-顯示和更改伺服器的配置。
+顯示和更改伺服器的設置選項。
 
 ### Usage
 
 ```text
-!config [key] [value]
+!config [key] [value] 
 ```
 
 ### Aliases
@@ -604,10 +620,10 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type            | Required | Description                 | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------- | --------------- | -------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key      | [Enum](#Enum)   | No       | 您想要顯示/更改的配置設定。 | Use one of the following values: `announcementVoice`, `announceNextSong`, `autoModAllCapsEnabled`, `autoModAllCapsMinCharacters`, `autoModAllCapsPercentageCaps`, `autoModDeleteBotMessage`, `autoModDeleteBotMessageTimeoutInSeconds`, `autoModDisabledForOldMembers`, `autoModDisabledForOldMembersThreshold`, `autoModDuplicateTextEnabled`, `autoModDuplicateTextTimeframeInSeconds`, `autoModEmojisEnabled`, `autoModEmojisMaxNumberOfEmojis`, `autoModEnabled`, `autoModHoistEnabled`, `autoModIgnoredChannels`, `autoModIgnoredRoles`, `autoModInvitesEnabled`, `autoModLinksBlacklist`, `autoModLinksEnabled`, `autoModLinksFollowRedirects`, `autoModLinksWhitelist`, `autoModLogEnabled`, `autoModMentionRolesEnabled`, `autoModMentionRolesMaxNumberOfMentions`, `autoModMentionUsersEnabled`, `autoModMentionUsersMaxNumberOfMentions`, `autoModModeratedChannels`, `autoModModeratedRoles`, `autoModQuickMessagesEnabled`, `autoModQuickMessagesNumberOfMessages`, `autoModQuickMessagesTimeframeInSeconds`, `autoModWordsBlacklist`, `autoModWordsEnabled`, `autoSubtractFakes`, `autoSubtractLeaves`, `autoSubtractLeaveThreshold`, `captchaVerificationFailedMessage`, `captchaVerificationLogEnabled`, `captchaVerificationOnJoin`, `captchaVerificationSuccessMessage`, `captchaVerificationTimeout`, `captchaVerificationWelcomeMessage`, `channels`, `defaultMusicPlatform`, `disabledMusicPlatforms`, `fadeMusicEndDelay`, `fadeMusicOnTalk`, `getUpdates`, `hideLeftMembersFromLeaderboard`, `ignoredChannels`, `joinMessage`, `joinMessageChannel`, `joinMessageVanity`, `joinRoles`, `lang`, `leaderboardStyle`, `leaveMessage`, `leaveMessageChannel`, `leaveMessageVanity`, `logChannel`, `modLogChannel`, `modPunishmentBanDeleteMessage`, `modPunishmentKickDeleteMessage`, `modPunishmentMuteDeleteMessage`, `modPunishmentSoftbanDeleteMessage`, `modPunishmentWarnDeleteMessage`, `musicVolume`, `mutedRole`, `prefix`, `rankAnnouncementChannel`, `rankAnnouncementMessage`, `rankAssignmentStyle` |
-| value    | [Value](#Value) | No       | 新設定的值。                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| key | [列舉](#列舉) | No | 您想要顯示 / 更改的設置選項。| 使用以下其中一個值： `announcementVoice`, `announceNextSong`, `autoModAllCapsEnabled`, `autoModAllCapsMinCharacters`, `autoModAllCapsPercentageCaps`, `autoModDeleteBotMessage`, `autoModDeleteBotMessageTimeoutInSeconds`, `autoModDisabledForOldMembers`, `autoModDisabledForOldMembersThreshold`, `autoModDuplicateTextEnabled`, `autoModDuplicateTextTimeframeInSeconds`, `autoModEmojisEnabled`, `autoModEmojisMaxNumberOfEmojis`, `autoModEnabled`, `autoModHoistEnabled`, `autoModIgnoredChannels`, `autoModIgnoredRoles`, `autoModInvitesEnabled`, `autoModLinksBlacklist`, `autoModLinksEnabled`, `autoModLinksFollowRedirects`, `autoModLinksWhitelist`, `autoModLogEnabled`, `autoModMentionRolesEnabled`, `autoModMentionRolesMaxNumberOfMentions`, `autoModMentionUsersEnabled`, `autoModMentionUsersMaxNumberOfMentions`, `autoModModeratedChannels`, `autoModModeratedRoles`, `autoModQuickMessagesEnabled`, `autoModQuickMessagesNumberOfMessages`, `autoModQuickMessagesTimeframeInSeconds`, `autoModWordsBlacklist`, `autoModWordsEnabled`, `autoSubtractFakes`, `autoSubtractLeaves`, `autoSubtractLeaveThreshold`, `captchaVerificationFailedMessage`, `captchaVerificationLogEnabled`, `captchaVerificationOnJoin`, `captchaVerificationSuccessMessage`, `captchaVerificationTimeout`, `captchaVerificationWelcomeMessage`, `channels`, `defaultMusicPlatform`, `disabledMusicPlatforms`, `fadeMusicEndDelay`, `fadeMusicOnTalk`, `getUpdates`, `hideLeftMembersFromLeaderboard`, `ignoredChannels`, `joinMessage`, `joinMessageChannel`, `joinMessageVanity`, `joinRoles`, `lang`, `leaderboardStyle`, `leaveMessage`, `leaveMessageChannel`, `leaveMessageVanity`, `logChannel`, `modLogChannel`, `modPunishmentBanDeleteMessage`, `modPunishmentKickDeleteMessage`, `modPunishmentMuteDeleteMessage`, `modPunishmentSoftbanDeleteMessage`, `modPunishmentWarnDeleteMessage`, `musicVolume`, `mutedRole`, `prefix`, `rankAnnouncementChannel`, `rankAnnouncementMessage`, `rankAssignmentStyle` |
+| value | [值](#值) | No | 設置選項的新值。|  |
 
 ### Examples
 
@@ -615,18 +631,19 @@ This argument expects a duration. The following duration types are supported:
 !config
 ```
 
+
 <a name='createInvite'></a>
 
 ---
 
 ## !createInvite
 
-創立獨特的邀請代碼。
+建立獨特的邀請代碼。
 
 ### Usage
 
 ```text
-!createInvite <name> [channel]
+!createInvite <name> [channel] 
 ```
 
 ### Aliases
@@ -635,20 +652,21 @@ This argument expects a duration. The following duration types are supported:
 
 ### Arguments
 
-| Argument | Type                | Required | Description                                  | Details |
-| -------- | ------------------- | -------- | -------------------------------------------- | ------- |
-| name     | [Text](#Text)       | Yes      | 邀請代碼的名字。                             |         |
-| channel  | [Channel](#Channel) | No       | 邀請代碼被創立在頻道。使用目前的頻道為默認。 |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| name | [文字](#文字) | Yes | 邀請代碼的名字。|  |
+| channel | [頻道](#頻道) | No | 已在頻道建立邀請代碼。使用目前的頻道作為預設值。|  |
 
 ### Examples
 
 ```text
 !createInvite reddit
 ```
-
+  
 ```text
 !createInvite website #welcome
 ```
+
 
 <a name='credits'></a>
 
@@ -656,12 +674,12 @@ This argument expects a duration. The following duration types are supported:
 
 ## !credits
 
-顯示機器人的開發人員和合作人員。
+顯示開發團隊和貢獻開發人員。
 
 ### Usage
 
 ```text
-!credits
+!credits 
 ```
 
 ### Examples
@@ -669,6 +687,7 @@ This argument expects a duration. The following duration types are supported:
 ```text
 !credits
 ```
+
 
 <a name='disconnect'></a>
 
@@ -676,19 +695,24 @@ This argument expects a duration. The following duration types are supported:
 
 ## !disconnect
 
-Disconnect the bot from the current voice channel.
+從目前的語音頻道中斷連接機器人。
 
 ### Usage
 
 ```text
-!disconnect
+!disconnect 
 ```
+
+### Aliases
+
+- `!dc`
 
 ### Examples
 
 ```text
 !disconnect
 ```
+
 
 <a name='export'></a>
 
@@ -696,19 +720,19 @@ Disconnect the bot from the current voice channel.
 
 ## !export
 
-輸出 InviteManager 的資料到一個 csv 表單。
+輸出 InviteManager 的資料庫到 csv 表格。
 
 ### Usage
 
 ```text
-!export <type>
+!export <type> 
 ```
 
 ### Arguments
 
-| Argument | Type          | Required | Description        | Details                                        |
-| -------- | ------------- | -------- | ------------------ | ---------------------------------------------- |
-| type     | [Enum](#Enum) | Yes      | 輸出您想要的類型。 | Use one of the following values: `leaderboard` |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| type | [列舉](#列舉) | Yes | 您想要的輸出類型。| 使用以下其中一個值： `leaderboard` |
 
 ### Examples
 
@@ -716,18 +740,19 @@ Disconnect the bot from the current voice channel.
 !export leaderboard
 ```
 
+
 <a name='fixRanks'></a>
 
 ---
 
 ## !fixRanks
 
-Deletes any ranks where the role was deleted.
+刪除已刪除身分組的等級。
 
 ### Usage
 
 ```text
-!fixRanks
+!fixRanks 
 ```
 
 ### Aliases
@@ -740,18 +765,19 @@ Deletes any ranks where the role was deleted.
 !fixRanks
 ```
 
+
 <a name='getBot'></a>
 
 ---
 
 ## !getBot
 
-拿到機器人的邀請鏈接
+機器人的邀請連結。
 
 ### Usage
 
 ```text
-!getBot
+!getBot 
 ```
 
 ### Aliases
@@ -766,18 +792,19 @@ Deletes any ranks where the role was deleted.
 !getBot
 ```
 
+
 <a name='graph'></a>
 
 ---
 
 ## !graph
 
-顯示關於這個伺服的各種統計資料
+顯示伺服器各種不同的統計資訊圖表。
 
 ### Usage
 
 ```text
-!graph <type> [from] [to]
+!graph <type> [from] [to] 
 ```
 
 ### Aliases
@@ -787,25 +814,26 @@ Deletes any ranks where the role was deleted.
 
 ### Arguments
 
-| Argument | Type          | Required | Description             | Details                                                              |
-| -------- | ------------- | -------- | ----------------------- | -------------------------------------------------------------------- |
-| type     | [Enum](#Enum) | Yes      | 顯示的圖表類型          | Use one of the following values: `joins`, `joinsAndLeaves`, `leaves` |
-| from     | [Date](#Date) | No       | Start date of the chart |                                                                      |
-| to       | [Date](#Date) | No       | End date of the chart   |                                                                      |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| type | [列舉](#列舉) | Yes | 圖表的顯示類型。| 使用以下其中一個值： `joins`, `joinsAndLeaves`, `leaves` |
+| from | [日期](#日期) | No | 圖表的開始日期|  |
+| to | [日期](#日期) | No | 圖表的最後日期|  |
 
 ### Examples
 
 ```text
 !graph joins
 ```
-
+  
 ```text
 !graph leaves
 ```
-
+  
 ```text
 !graph usage
 ```
+
 
 <a name='help'></a>
 
@@ -813,29 +841,30 @@ Deletes any ranks where the role was deleted.
 
 ## !help
 
-顯示幫助
+顯示協助資訊。
 
 ### Usage
 
 ```text
-!help [command]
+!help [command] 
 ```
 
 ### Arguments
 
-| Argument | Type                | Required | Description                                  | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| -------- | ------------------- | -------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| command  | [Command](#Command) | No       | The command to get detailed information for. | Use one of the following values: `addInvites`, `addRank`, `ban`, `botConfig`, `botInfo`, `caseDelete`, `caseView`, `check`, `clean`, `cleanShort`, `cleanText`, `clearInvites`, `config`, `createInvite`, `credits`, `disconnect`, `export`, `fixRanks`, `getBot`, `graph`, `help`, `info`, `interactiveConfig`, `inviteCodeConfig`, `inviteCodes`, `inviteDetails`, `invites`, `kick`, `leaderboard`, `lockdown`, `lyrics`, `mashup`, `memberConfig`, `members`, `mute`, `nowPlaying`, `pause`, `permissions`, `ping`, `play`, `prefix`, `premium`, `punishmentConfig`, `purge`, `purgeUntil`, `queue`, `ranks`, `removeInvites`, `removeRank`, `repeat`, `restoreInvites`, `resume`, `rewind`, `search`, `seek`, `setup`, `skip`, `softBan`, `strike`, `strikeConfig`, `subtractFakes`, `subtractLeaves`, `support`, `tryPremium`, `unban`, `unhoist`, `unmute`, `volume`, `warn` |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| command | [指令](#指令) | No | 獲取詳細資訊的指令。| 使用以下其中一個值： `addInvites`, `addRank`, `ban`, `botConfig`, `botInfo`, `caseDelete`, `caseView`, `check`, `clean`, `cleanShort`, `cleanText`, `clearInvites`, `config`, `createInvite`, `credits`, `disconnect`, `export`, `fixRanks`, `getBot`, `graph`, `help`, `info`, `interactiveConfig`, `inviteCodeConfig`, `inviteCodes`, `inviteDetails`, `invites`, `kick`, `leaderboard`, `lockdown`, `lyrics`, `mashup`, `memberConfig`, `members`, `mute`, `nowPlaying`, `pause`, `permissions`, `ping`, `play`, `prefix`, `premium`, `punishmentConfig`, `purge`, `purgeUntil`, `queue`, `ranks`, `removeInvites`, `removeRank`, `repeat`, `restoreInvites`, `resume`, `rewind`, `search`, `seek`, `setup`, `skip`, `softBan`, `strike`, `strikeConfig`, `subtractFakes`, `subtractLeaves`, `support`, `tryPremium`, `unban`, `unhoist`, `unmute`, `volume`, `warn` |
 
 ### Examples
 
 ```text
 !help
 ```
-
+  
 ```text
 !help addRank
 ```
+
 
 <a name='info'></a>
 
@@ -843,12 +872,12 @@ Deletes any ranks where the role was deleted.
 
 ## !info
 
-Show info about a specific member.
+顯示一位指定成員的資訊。
 
 ### Usage
 
 ```text
-!info <user> [details] [page]
+!info <user> [details] [page] 
 ```
 
 ### Aliases
@@ -857,33 +886,34 @@ Show info about a specific member.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                                                   | Details                                             |
-| -------- | ----------------- | -------- | ----------------------------------------------------------------------------- | --------------------------------------------------- |
-| user     | [User](#User)     | Yes      | The user for whom you want to see additional info.                            |                                                     |
-| details  | [Enum](#Enum)     | No       | Request only specific details about a member.                                 | Use one of the following values: `bonus`, `members` |
-| page     | [Number](#Number) | No       | What page of the details to show. You can also use the reactions to navigate. |                                                     |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 您想要顯示詳細資訊的使用者。|  |
+| details | [列舉](#列舉) | No | 請求一位指定成員的詳細資訊。| 使用以下其中一個值： `bonus`, `members` |
+| page | [數字](#數字) | No | 您想要顯示詳細資訊的頁面。您也可以使用反應來操控。|  |
 
 ### Examples
 
 ```text
 !info @User
 ```
-
+  
 ```text
 !info "User with space"
 ```
-
+  
 ```text
 !info @User members
 ```
-
+  
 ```text
 !info @User bonus
 ```
-
+  
 ```text
 !info @User members 4
 ```
+
 
 <a name='interactiveConfig'></a>
 
@@ -891,12 +921,12 @@ Show info about a specific member.
 
 ## !interactiveConfig
 
-Interactive Config
+互動式設置選項
 
 ### Usage
 
 ```text
-!interactiveConfig
+!interactiveConfig 
 ```
 
 ### Aliases
@@ -909,18 +939,19 @@ Interactive Config
 !interactiveConfig
 ```
 
+
 <a name='inviteCodeConfig'></a>
 
 ---
 
 ## !inviteCodeConfig
 
-Show and change the config of invite codes of the server.
+顯示和更改伺服器的邀請代碼設置選項。
 
 ### Usage
 
 ```text
-!inviteCodeConfig [key] [inviteCode] [value]
+!inviteCodeConfig [key] [inviteCode] [value] 
 ```
 
 ### Aliases
@@ -930,11 +961,11 @@ Show and change the config of invite codes of the server.
 
 ### Arguments
 
-| Argument   | Type                       | Required | Description                                                | Details                                          |
-| ---------- | -------------------------- | -------- | ---------------------------------------------------------- | ------------------------------------------------ |
-| key        | [Enum](#Enum)              | No       | The config setting which you want to show/change.          | Use one of the following values: `name`, `roles` |
-| inviteCode | [Invite Code](#InviteCode) | No       | The invite code for which you want to change the settings. |                                                  |
-| value      | [Value](#Value)            | No       | The new value of the setting.                              |                                                  |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| key | [列舉](#列舉) | No | 您想要顯示 / 更改的設置選項。| 使用以下其中一個值： `name`, `roles` |
+| inviteCode | [邀請代碼](#邀請代碼) | No | 您想要更改配置選項的邀請代碼。|  |
+| value | [值](#值) | No | 設置選項的新值。|  |
 
 ### Examples
 
@@ -942,18 +973,19 @@ Show and change the config of invite codes of the server.
 !inviteCodeConfig
 ```
 
+
 <a name='inviteCodes'></a>
 
 ---
 
 ## !inviteCodes
 
-Get a list of all your invite codes
+您所有的邀請代碼列表
 
 ### Usage
 
 ```text
-!inviteCodes
+!inviteCodes 
 ```
 
 ### Aliases
@@ -973,18 +1005,19 @@ Get a list of all your invite codes
 !inviteCodes
 ```
 
+
 <a name='inviteDetails'></a>
 
 ---
 
 ## !inviteDetails
 
-Shows details about where your invites are from.
+顯示邀請的詳細資訊。
 
 ### Usage
 
 ```text
-!inviteDetails [user]
+!inviteDetails [user] 
 ```
 
 ### Aliases
@@ -993,23 +1026,24 @@ Shows details about where your invites are from.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                          | Details |
-| -------- | ------------- | -------- | ---------------------------------------------------- | ------- |
-| user     | [User](#User) | No       | The user for whom you want to show detailed invites. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | No | 您想要顯示詳細邀請資訊的使用者。|  |
 
 ### Examples
 
 ```text
 !inviteDetails
 ```
-
+  
 ```text
 !inviteDetails @User
 ```
-
+  
 ```text
 !inviteDetails "User with space"
 ```
+
 
 <a name='invites'></a>
 
@@ -1017,12 +1051,12 @@ Shows details about where your invites are from.
 
 ## !invites
 
-Show personal invites.
+顯示個人邀請數量。
 
 ### Usage
 
 ```text
-!invites [user]
+!invites [user] 
 ```
 
 ### Aliases
@@ -1032,23 +1066,24 @@ Show personal invites.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                 | Details |
-| -------- | ------------- | -------- | ------------------------------------------- | ------- |
-| user     | [User](#User) | No       | The user for whom you want to show invites. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | No | 您想要顯示邀請資訊的使用者。|  |
 
 ### Examples
 
 ```text
 !invites
 ```
-
+  
 ```text
 !invites @User
 ```
-
+  
 ```text
 !invites "User with space"
 ```
+
 
 <a name='kick'></a>
 
@@ -1056,22 +1091,24 @@ Show personal invites.
 
 ## !kick
 
-Kick a member from the server.
+從伺服器踢出一位成員。
 
 ### Usage
 
 ```text
-!kick <member> [reason]
+!kick <member> [reason] 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                | Details |
-| -------- | ----------------- | -------- | -------------------------- | ------- |
-| member   | [Member](#Member) | Yes      | Member to kick.            |         |
-| reason   | [Text](#Text)     | No       | Why the member was kicked. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| member | [成員](#成員) | Yes | 被踢出的成員。|  |
+| reason | [文字](#文字) | No | 為甚麼踢出成員。|  |
 
 ### Examples
+
+
 
 <a name='leaderboard'></a>
 
@@ -1079,12 +1116,12 @@ Kick a member from the server.
 
 ## !leaderboard
 
-Show members with most invites.
+顯示最多邀請數量的成員。
 
 ### Usage
 
 ```text
-!leaderboard [page]
+!leaderboard [page] 
 ```
 
 ### Aliases
@@ -1093,23 +1130,24 @@ Show members with most invites.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                           | Details |
-| -------- | ----------------- | -------- | ------------------------------------- | ------- |
-| page     | [Number](#Number) | No       | Which page of the leaderboard to get. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| page | [數字](#數字) | No | 排行榜的頁數。|  |
 
 ### Examples
 
 ```text
 !leaderboard
 ```
-
+  
 ```text
 !leaderboard 1mo
 ```
-
+  
 ```text
 !leaderboard 30d 6
 ```
+
 
 <a name='lockdown'></a>
 
@@ -1117,25 +1155,25 @@ Show members with most invites.
 
 ## !lockdown
 
-Lockdown a specific channel (Prevents anyone without special roles from sending messages)
+封鎖一個指定頻道（防止特殊身分組以外的任何人發送訊息）
 
 ### Usage
 
 ```text
-!lockdown [-t value|--timeout=value] [channel]
+!lockdown [-t value|--timeout=value] [channel] 
 ```
 
 ### Arguments
 
-| Argument | Type                | Required | Description                             | Details |
-| -------- | ------------------- | -------- | --------------------------------------- | ------- |
-| channel  | [Channel](#Channel) | No       | The channel that you want to lock down. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| channel | [頻道](#頻道) | No | 您想要封鎖的頻道。|  |
 
 ### Flags
 
-| Flag                    | Short     | Type                  | Description                                                                                                  |
-| ----------------------- | --------- | --------------------- | ------------------------------------------------------------------------------------------------------------ |
-| &#x2011;&#x2011;timeout | &#x2011;t | [Duration](#Duration) | The timeout after which the lockdown automatically ends. Run the command again to end the lockdown manually. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;timeout | &#x2011;t | [期間](#期間) | 自動結束封鎖的延遲時間。再執行指令一次來手動結束封鎖。 |
 
 ### Examples
 
@@ -1143,25 +1181,26 @@ Lockdown a specific channel (Prevents anyone without special roles from sending 
 !lockdown
 ```
 
+
 <a name='lyrics'></a>
 
 ---
 
 ## !lyrics
 
-Show lyrics of the currently playing song.
+顯示目前正在播放歌曲的歌詞。
 
 ### Usage
 
 ```text
-!lyrics [-l|--live]
+!lyrics [-l|--live] 
 ```
 
 ### Flags
 
-| Flag                 | Short     | Type                | Description                                                          |
-| -------------------- | --------- | ------------------- | -------------------------------------------------------------------- |
-| &#x2011;&#x2011;live | &#x2011;l | [Boolean](#Boolean) | If set, then the lyrics will sync with the current time of the song. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;live | &#x2011;l | [布林值](#布林值) | 如果設定，歌詞將會與歌曲目前的時間同步。 |
 
 ### Examples
 
@@ -1169,27 +1208,30 @@ Show lyrics of the currently playing song.
 !lyrics
 ```
 
+
 <a name='mashup'></a>
 
 ---
 
 ## !mashup
 
-Create a mashup of 2 songs.
+建立 2 首歌曲的混搭。
 
 ### Usage
 
 ```text
-!mashup <videos>
+!mashup <videos> 
 ```
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                | Details |
-| -------- | ------------- | -------- | ------------------------------------------ | ------- |
-| videos   | [Text](#Text) | Yes      | The videos that should be mashed together. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| videos | [文字](#文字) | Yes | 應該被混搭在一起的影片。|  |
 
 ### Examples
+
+
 
 <a name='memberConfig'></a>
 
@@ -1197,12 +1239,12 @@ Create a mashup of 2 songs.
 
 ## !memberConfig
 
-Show and change the config of members of the server.
+顯示和更改伺服器的成員設置選項。
 
 ### Usage
 
 ```text
-!memberConfig [key] [user] [value]
+!memberConfig [key] [user] [value] 
 ```
 
 ### Aliases
@@ -1213,11 +1255,11 @@ Show and change the config of members of the server.
 
 ### Arguments
 
-| Argument | Type            | Required | Description                                              | Details                                                |
-| -------- | --------------- | -------- | -------------------------------------------------------- | ------------------------------------------------------ |
-| key      | [Enum](#Enum)   | No       | The member config setting which you want to show/change. | Use one of the following values: `hideFromLeaderboard` |
-| user     | [User](#User)   | No       | The member that the setting is shown/changed for.        |                                                        |
-| value    | [Value](#Value) | No       | The new value of the setting.                            |                                                        |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| key | [列舉](#列舉) | No | 您想要顯示 / 更改的成員設置選項。| 使用以下其中一個值： `hideFromLeaderboard` |
+| user | [使用者](#使用者) | No | 顯示 / 更改配置選項的成員。|  |
+| value | [值](#值) | No | 設置選項的新值。|  |
 
 ### Examples
 
@@ -1225,18 +1267,19 @@ Show and change the config of members of the server.
 !memberConfig
 ```
 
+
 <a name='members'></a>
 
 ---
 
 ## !members
 
-Show member count of current server.
+顯示伺服器目前的成員數。
 
 ### Usage
 
 ```text
-!members
+!members 
 ```
 
 ### Aliases
@@ -1250,34 +1293,37 @@ Show member count of current server.
 !members
 ```
 
+
 <a name='mute'></a>
 
 ---
 
 ## !mute
 
-Mute a user
+靜音一位使用者
 
 ### Usage
 
 ```text
-!mute [-d value|--duration=value] <user> [reason]
+!mute [-d value|--duration=value] <user> [reason] 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                        | Details |
-| -------- | ----------------- | -------- | ---------------------------------- | ------- |
-| user     | [Member](#Member) | Yes      | The user that should be muted.     |         |
-| reason   | [Text](#Text)     | No       | The reason why this user is muted. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [成員](#成員) | Yes | 應該被靜音的使用者。|  |
+| reason | [文字](#文字) | No | 靜音此使用者的原因。|  |
 
 ### Flags
 
-| Flag                     | Short     | Type                  | Description                       |
-| ------------------------ | --------- | --------------------- | --------------------------------- |
-| &#x2011;&#x2011;duration | &#x2011;d | [Duration](#Duration) | The duration to mute the user for |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;duration | &#x2011;d | [期間](#期間) | 靜音使用者的期間 |
 
 ### Examples
+
+
 
 <a name='nowPlaying'></a>
 
@@ -1285,12 +1331,12 @@ Mute a user
 
 ## !nowPlaying
 
-Shows information about the currently playing song
+顯示目前正在播放歌曲的資訊
 
 ### Usage
 
 ```text
-!nowPlaying [-p|--pin]
+!nowPlaying [-p|--pin] 
 ```
 
 ### Aliases
@@ -1300,9 +1346,9 @@ Shows information about the currently playing song
 
 ### Flags
 
-| Flag                | Short     | Type                | Description                                                                        |
-| ------------------- | --------- | ------------------- | ---------------------------------------------------------------------------------- |
-| &#x2011;&#x2011;pin | &#x2011;p | [Boolean](#Boolean) | Pin the now playing message and update it automatically whenever a new song plays. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;pin | &#x2011;p | [布林值](#布林值) | 釘選正在播放的訊息然後每一首新歌曲播放時自動更新。 |
 
 ### Examples
 
@@ -1310,18 +1356,19 @@ Shows information about the currently playing song
 !nowPlaying
 ```
 
+
 <a name='pause'></a>
 
 ---
 
 ## !pause
 
-Pause the current song.
+暫停目前的歌曲。
 
 ### Usage
 
 ```text
-!pause
+!pause 
 ```
 
 ### Aliases
@@ -1334,18 +1381,19 @@ Pause the current song.
 !pause
 ```
 
+
 <a name='permissions'></a>
 
 ---
 
 ## !permissions
 
-Configure permissions to use commands.
+設置使用指令的權限。
 
 ### Usage
 
 ```text
-!permissions [cmd] [role]
+!permissions [cmd] [role] 
 ```
 
 ### Aliases
@@ -1354,10 +1402,10 @@ Configure permissions to use commands.
 
 ### Arguments
 
-| Argument | Type                | Required | Description                                                       | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| -------- | ------------------- | -------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cmd      | [Command](#Command) | No       | The command to configure permissions for.                         | Use one of the following values: `addInvites`, `addRank`, `ban`, `botConfig`, `botInfo`, `caseDelete`, `caseView`, `check`, `clean`, `cleanShort`, `cleanText`, `clearInvites`, `config`, `createInvite`, `credits`, `disconnect`, `export`, `fixRanks`, `getBot`, `graph`, `help`, `info`, `interactiveConfig`, `inviteCodeConfig`, `inviteCodes`, `inviteDetails`, `invites`, `kick`, `leaderboard`, `lockdown`, `lyrics`, `mashup`, `memberConfig`, `members`, `mute`, `nowPlaying`, `pause`, `permissions`, `ping`, `play`, `prefix`, `premium`, `punishmentConfig`, `purge`, `purgeUntil`, `queue`, `ranks`, `removeInvites`, `removeRank`, `repeat`, `restoreInvites`, `resume`, `rewind`, `search`, `seek`, `setup`, `skip`, `softBan`, `strike`, `strikeConfig`, `subtractFakes`, `subtractLeaves`, `support`, `tryPremium`, `unban`, `unhoist`, `unmute`, `volume`, `warn` |
-| role     | [Role](#Role)       | No       | The role which should be granted or denied access to the command. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| cmd | [指令](#指令) | No | 要設置權限的指令。| 使用以下其中一個值： `addInvites`, `addRank`, `ban`, `botConfig`, `botInfo`, `caseDelete`, `caseView`, `check`, `clean`, `cleanShort`, `cleanText`, `clearInvites`, `config`, `createInvite`, `credits`, `disconnect`, `export`, `fixRanks`, `getBot`, `graph`, `help`, `info`, `interactiveConfig`, `inviteCodeConfig`, `inviteCodes`, `inviteDetails`, `invites`, `kick`, `leaderboard`, `lockdown`, `lyrics`, `mashup`, `memberConfig`, `members`, `mute`, `nowPlaying`, `pause`, `permissions`, `ping`, `play`, `prefix`, `premium`, `punishmentConfig`, `purge`, `purgeUntil`, `queue`, `ranks`, `removeInvites`, `removeRank`, `repeat`, `restoreInvites`, `resume`, `rewind`, `search`, `seek`, `setup`, `skip`, `softBan`, `strike`, `strikeConfig`, `subtractFakes`, `subtractLeaves`, `support`, `tryPremium`, `unban`, `unhoist`, `unmute`, `volume`, `warn` |
+| role | [身分組](#身分組) | No | 應該被授予或拒絕訪問指令的身分組。|  |
 
 ### Examples
 
@@ -1365,18 +1413,19 @@ Configure permissions to use commands.
 !permissions
 ```
 
+
 <a name='ping'></a>
 
 ---
 
 ## !ping
 
-Ping the bot
+檢測機器人延遲
 
 ### Usage
 
 ```text
-!ping
+!ping 
 ```
 
 ### Examples
@@ -1385,18 +1434,19 @@ Ping the bot
 !ping
 ```
 
+
 <a name='play'></a>
 
 ---
 
 ## !play
 
-Play the song if the queue is empty, otherwise it will add the song to the end of the queue.
+如果列表是空的會播放歌曲，否則它將會新增歌曲到列表的最後。
 
 ### Usage
 
 ```text
-!play [-p value|--platform=value] [-n|--next] <link>
+!play [-p value|--platform=value] [-n|--next] <link> 
 ```
 
 ### Aliases
@@ -1405,18 +1455,20 @@ Play the song if the queue is empty, otherwise it will add the song to the end o
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                   | Details |
-| -------- | ------------- | -------- | --------------------------------------------- | ------- |
-| link     | [Text](#Text) | Yes      | The link to a specific song or a search term. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| link | [文字](#文字) | Yes | 一首指定歌曲或一個搜尋字詞的連結。|  |
 
 ### Flags
 
-| Flag                     | Short     | Type                | Description                                                                       |
-| ------------------------ | --------- | ------------------- | --------------------------------------------------------------------------------- |
-| &#x2011;&#x2011;platform | &#x2011;p | [Enum](#Enum)       | Select the platform where you want the song to be played.                         |
-| &#x2011;&#x2011;next     | &#x2011;n | [Boolean](#Boolean) | If set, it will play this song next instead of adding it to the end of the queue. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;platform | &#x2011;p | [列舉](#列舉) | 選擇您想要播放歌曲的平臺。 |
+| &#x2011;&#x2011;next | &#x2011;n | [布林值](#布林值) | 如果設定，它將會在下一首播放此歌曲而不是新增它到列表的最後。 |
 
 ### Examples
+
+
 
 <a name='prefix'></a>
 
@@ -1424,12 +1476,12 @@ Play the song if the queue is empty, otherwise it will add the song to the end o
 
 ## !prefix
 
-Shows the current prefix of the bot.
+顯示機器人目前的指令前綴。
 
 ### Usage
 
 ```text
-!prefix
+!prefix 
 ```
 
 ### Examples
@@ -1438,18 +1490,19 @@ Shows the current prefix of the bot.
 !prefix
 ```
 
+
 <a name='premium'></a>
 
 ---
 
 ## !premium
 
-Info about premium version of InviteManager.
+InviteManager 高級版的資訊。
 
 ### Usage
 
 ```text
-!premium [action]
+!premium [action] 
 ```
 
 ### Aliases
@@ -1459,27 +1512,28 @@ Info about premium version of InviteManager.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                                                                                                         | Details                                                            |
-| -------- | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| action   | [Enum](#Enum) | No       | The action to perform. None for premium info. `check` to check your premium status. `activate` to use your premium for this server. | Use one of the following values: `Activate`, `Check`, `Deactivate` |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| action | [列舉](#列舉) | No | 要執行的動作。無高級版資訊。 `check` 來檢查您的高級版狀態。 `activate` 在此伺服器激活您的高級版。| 使用以下其中一個值： `Activate`, `Check`, `Deactivate` |
 
 ### Examples
 
 ```text
 !premium
 ```
-
+  
 ```text
 !premium check
 ```
-
+  
 ```text
 !premium activate
 ```
-
+  
 ```text
 !premium deactivate
 ```
+
 
 <a name='punishmentConfig'></a>
 
@@ -1487,12 +1541,12 @@ Info about premium version of InviteManager.
 
 ## !punishmentConfig
 
-Configure punishments when reaching a certain amount of strikes.
+設置當收到一定數量記點時的懲罰。
 
 ### Usage
 
 ```text
-!punishmentConfig [punishment] [strikes] [args]
+!punishmentConfig [punishment] [strikes] [args] 
 ```
 
 ### Aliases
@@ -1501,11 +1555,11 @@ Configure punishments when reaching a certain amount of strikes.
 
 ### Arguments
 
-| Argument   | Type              | Required | Description                                       | Details                                                                   |
-| ---------- | ----------------- | -------- | ------------------------------------------------- | ------------------------------------------------------------------------- |
-| punishment | [Enum](#Enum)     | No       | Type of punishment to use.                        | Use one of the following values: `ban`, `kick`, `mute`, `softban`, `warn` |
-| strikes    | [Number](#Number) | No       | Number of strikes for this punishment to be used. |                                                                           |
-| args       | [Text](#Text)     | No       | Arguments passed to the punishment.               |                                                                           |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| punishment | [列舉](#列舉) | No | 要使用的懲罰類型。| 使用以下其中一個值： `ban`, `kick`, `mute`, `softban`, `warn` |
+| strikes | [數字](#數字) | No | 此懲罰要使用的記點數量。|  |
+| args | [文字](#文字) | No | 附加於懲罰的值。|  |
 
 ### Examples
 
@@ -1513,18 +1567,19 @@ Configure punishments when reaching a certain amount of strikes.
 !punishmentConfig
 ```
 
+
 <a name='purge'></a>
 
 ---
 
 ## !purge
 
-Purge messages in a channel.
+在一個頻道中清除訊息。
 
 ### Usage
 
 ```text
-!purge <quantity> [user]
+!purge <quantity> [user] 
 ```
 
 ### Aliases
@@ -1533,12 +1588,14 @@ Purge messages in a channel.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                          | Details |
-| -------- | ----------------- | -------- | ------------------------------------ | ------- |
-| quantity | [Number](#Number) | Yes      | How many messages should be deleted. |         |
-| user     | [User](#User)     | No       | User whose messages are deleted.     |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| quantity | [數字](#數字) | Yes | 多少則訊息應該被刪除。|  |
+| user | [使用者](#使用者) | No | 被刪除訊息的使用者。|  |
 
 ### Examples
+
+
 
 <a name='purgeUntil'></a>
 
@@ -1546,12 +1603,12 @@ Purge messages in a channel.
 
 ## !purgeUntil
 
-Purge messages in a channel up until a specified message.
+在一個頻道中刪除一則指定訊息之後的所有訊息。
 
 ### Usage
 
 ```text
-!purgeUntil <messageID>
+!purgeUntil <messageID> 
 ```
 
 ### Aliases
@@ -1563,11 +1620,13 @@ Purge messages in a channel up until a specified message.
 
 ### Arguments
 
-| Argument  | Type          | Required | Description                    | Details |
-| --------- | ------------- | -------- | ------------------------------ | ------- |
-| messageID | [Text](#Text) | Yes      | Last message ID to be deleted. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| messageID | [文字](#文字) | Yes | 要被刪除的最後一則訊息 ID 。|  |
 
 ### Examples
+
+
 
 <a name='queue'></a>
 
@@ -1575,13 +1634,17 @@ Purge messages in a channel up until a specified message.
 
 ## !queue
 
-Display the songs in the queue.
+顯示列表裡的歌曲。
 
 ### Usage
 
 ```text
-!queue
+!queue 
 ```
+
+### Aliases
+
+- `!q`
 
 ### Examples
 
@@ -1589,18 +1652,19 @@ Display the songs in the queue.
 !queue
 ```
 
+
 <a name='ranks'></a>
 
 ---
 
 ## !ranks
 
-Show all ranks.
+顯示所有的等級。
 
 ### Usage
 
 ```text
-!ranks [page]
+!ranks [page] 
 ```
 
 ### Aliases
@@ -1610,9 +1674,9 @@ Show all ranks.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                         | Details |
-| -------- | ----------------- | -------- | ----------------------------------- | ------- |
-| page     | [Number](#Number) | No       | The page of the ranks list to show. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| page | [數字](#數字) | No | 您想要顯示等級列表的頁數。|  |
 
 ### Examples
 
@@ -1620,18 +1684,19 @@ Show all ranks.
 !ranks
 ```
 
+
 <a name='removeInvites'></a>
 
 ---
 
 ## !removeInvites
 
-Removes a specified amount of invites from a user.
+移除一位使用者的指定邀請數量。
 
 ### Usage
 
 ```text
-!removeInvites <user> <amount> [reason]
+!removeInvites <user> <amount> [reason] 
 ```
 
 ### Aliases
@@ -1640,25 +1705,26 @@ Removes a specified amount of invites from a user.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                          | Details |
-| -------- | ----------------- | -------- | ------------------------------------ | ------- |
-| user     | [User](#User)     | Yes      | The user to remove the invites from. |         |
-| amount   | [Number](#Number) | Yes      | The amount of invites to remove.     |         |
-| reason   | [Text](#Text)     | No       | The reason for removing the invites. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 要被移除邀請數量的使用者。|  |
+| amount | [數字](#數字) | Yes | 您想要移除的邀請數量。|  |
+| reason | [文字](#文字) | No | 移除邀請數量的原因。|  |
 
 ### Examples
 
 ```text
 !removeInvites @User 5
 ```
-
+  
 ```text
 !removeInvites "User with space" 23 Removed for cheating
 ```
-
+  
 ```text
 !removeInvites @User -6 Added for apologizing
 ```
+
 
 <a name='removeRank'></a>
 
@@ -1666,12 +1732,12 @@ Removes a specified amount of invites from a user.
 
 ## !removeRank
 
-Remove a rank.
+移除一個等級。
 
 ### Usage
 
 ```text
-!removeRank <rank>
+!removeRank <rank> 
 ```
 
 ### Aliases
@@ -1680,19 +1746,20 @@ Remove a rank.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                     | Details |
-| -------- | ------------- | -------- | ----------------------------------------------- | ------- |
-| rank     | [Role](#Role) | Yes      | The user for which you want to remove the rank. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| rank | [身分組](#身分組) | Yes | 您想要移除等級的身分組。|  |
 
 ### Examples
 
 ```text
 !removeRank @Role
 ```
-
+  
 ```text
 !removeRank "Role with space"
 ```
+
 
 <a name='repeat'></a>
 
@@ -1700,12 +1767,12 @@ Remove a rank.
 
 ## !repeat
 
-Set the song to be played on repeat.
+設定重複播放的歌曲。
 
 ### Usage
 
 ```text
-!repeat
+!repeat 
 ```
 
 ### Aliases
@@ -1718,18 +1785,19 @@ Set the song to be played on repeat.
 !repeat
 ```
 
+
 <a name='restoreInvites'></a>
 
 ---
 
 ## !restoreInvites
 
-Restore all previously cleared invites.
+復原所有先前清除的邀請數量。
 
 ### Usage
 
 ```text
-!restoreInvites [user]
+!restoreInvites [user] 
 ```
 
 ### Aliases
@@ -1740,23 +1808,24 @@ Restore all previously cleared invites.
 
 ### Arguments
 
-| Argument | Type          | Required | Description                                                                    | Details |
-| -------- | ------------- | -------- | ------------------------------------------------------------------------------ | ------- |
-| user     | [User](#User) | No       | The user to restore all invites to. If omitted restores invites for all users. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | No | 復原使用者所有的邀請數量。如果省略則復原所有的使用者。|  |
 
 ### Examples
 
 ```text
 !restoreInvites
 ```
-
+  
 ```text
 !restoreInvites @User
 ```
-
+  
 ```text
 !restoreInvites "User with space"
 ```
+
 
 <a name='resume'></a>
 
@@ -1764,12 +1833,12 @@ Restore all previously cleared invites.
 
 ## !resume
 
-Resume the current song.
+恢復播放目前的歌曲。
 
 ### Usage
 
 ```text
-!resume
+!resume 
 ```
 
 ### Aliases
@@ -1782,18 +1851,19 @@ Resume the current song.
 !resume
 ```
 
+
 <a name='rewind'></a>
 
 ---
 
 ## !rewind
 
-Rewind the song and start from the beginning.
+倒帶歌曲然後從頭開始。
 
 ### Usage
 
 ```text
-!rewind
+!rewind 
 ```
 
 ### Aliases
@@ -1806,33 +1876,36 @@ Rewind the song and start from the beginning.
 !rewind
 ```
 
+
 <a name='search'></a>
 
 ---
 
 ## !search
 
-Search for the search term and let you chose one of the results.
+搜尋字詞然後讓您從結果中選擇一個。
 
 ### Usage
 
 ```text
-!search [-p value|--platform=value] <search>
+!search [-p value|--platform=value] <search> 
 ```
 
 ### Arguments
 
-| Argument | Type          | Required | Description     | Details |
-| -------- | ------------- | -------- | --------------- | ------- |
-| search   | [Text](#Text) | Yes      | The search term |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| search | [文字](#文字) | Yes | 搜尋字詞|  |
 
 ### Flags
 
-| Flag                     | Short     | Type          | Description                                               |
-| ------------------------ | --------- | ------------- | --------------------------------------------------------- |
-| &#x2011;&#x2011;platform | &#x2011;p | [Enum](#Enum) | Select the platform where you want the song to be played. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;platform | &#x2011;p | [列舉](#列舉) | 選擇您想要播放歌曲的平臺。 |
 
 ### Examples
+
+
 
 <a name='seek'></a>
 
@@ -1840,19 +1913,19 @@ Search for the search term and let you chose one of the results.
 
 ## !seek
 
-Skip to a specific part of the song.
+跳過歌曲的指定部分。
 
 ### Usage
 
 ```text
-!seek [duration]
+!seek [duration] 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                                                                | Details |
-| -------- | ----------------- | -------- | -------------------------------------------------------------------------- | ------- |
-| duration | [Number](#Number) | No       | The position the song will be skipped to (from the beginning, in seconds). |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| duration | [數字](#數字) | No | 歌曲要跳到的位置（從開始點，以秒計算）。|  |
 
 ### Examples
 
@@ -1860,18 +1933,19 @@ Skip to a specific part of the song.
 !seek
 ```
 
+
 <a name='setup'></a>
 
 ---
 
 ## !setup
 
-Help with setting up the bot and checking for problems (e.g. missing permissions)
+協助設定機器人和檢查問題（例如：缺少的權限）
 
 ### Usage
 
 ```text
-!setup
+!setup 
 ```
 
 ### Aliases
@@ -1887,18 +1961,19 @@ Help with setting up the bot and checking for problems (e.g. missing permissions
 !setup
 ```
 
+
 <a name='skip'></a>
 
 ---
 
 ## !skip
 
-Skip the current song and play the next song in the queue.
+跳過目前的歌曲然後播放列表裡的下一首歌曲。
 
 ### Usage
 
 ```text
-!skip [amount]
+!skip [amount] 
 ```
 
 ### Aliases
@@ -1907,9 +1982,9 @@ Skip the current song and play the next song in the queue.
 
 ### Arguments
 
-| Argument | Type              | Required | Description                     | Details |
-| -------- | ----------------- | -------- | ------------------------------- | ------- |
-| amount   | [Number](#Number) | No       | How many songs will be skipped. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| amount | [數字](#數字) | No | 多少首歌曲將被跳過。|  |
 
 ### Examples
 
@@ -1917,18 +1992,19 @@ Skip the current song and play the next song in the queue.
 !skip
 ```
 
+
 <a name='softBan'></a>
 
 ---
 
 ## !softBan
 
-Ban and then automatically unban a member from the server.
+從伺服器停權一位成員然後自動解除停權。
 
 ### Usage
 
 ```text
-!softBan [-d value|--deleteMessageDays=value] <user> [reason]
+!softBan [-d value|--deleteMessageDays=value] <user> [reason] 
 ```
 
 ### Aliases
@@ -1937,18 +2013,20 @@ Ban and then automatically unban a member from the server.
 
 ### Arguments
 
-| Argument | Type              | Required | Description              | Details |
-| -------- | ----------------- | -------- | ------------------------ | ------- |
-| user     | [Member](#Member) | Yes      | User to ban.             |         |
-| reason   | [Text](#Text)     | No       | Why was the user banned. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [成員](#成員) | Yes | 被停權的使用者。|  |
+| reason | [文字](#文字) | No | 為甚麼停權成員。|  |
 
 ### Flags
 
-| Flag                              | Short     | Type              | Description                                        |
-| --------------------------------- | --------- | ----------------- | -------------------------------------------------- |
-| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [Number](#Number) | Delete messages from the user this many days back. |
+| Flag | Short | Type | Description |
+|---|---|---|---|
+| &#x2011;&#x2011;deleteMessageDays | &#x2011;d | [數字](#數字) | 刪除此使用者多少天以內的訊息。 |
 
 ### Examples
+
+
 
 <a name='strike'></a>
 
@@ -1956,23 +2034,25 @@ Ban and then automatically unban a member from the server.
 
 ## !strike
 
-Add strikes to a user
+新增一位使用者的記點
 
 ### Usage
 
 ```text
-!strike <member> <type> <amount>
+!strike <member> <type> <amount> 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                       | Details                                                                                                                                                      |
-| -------- | ----------------- | -------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| member   | [Member](#Member) | Yes      | The member receiving the strikes  |                                                                                                                                                              |
-| type     | [Enum](#Enum)     | Yes      | The type of the violation         | Use one of the following values: `allCaps`, `duplicateText`, `emojis`, `hoist`, `invites`, `links`, `mentionRoles`, `mentionUsers`, `quickMessages`, `words` |
-| amount   | [Number](#Number) | Yes      | The amount of strikes to be added |                                                                                                                                                              |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| member | [成員](#成員) | Yes | 收到記點的成員|  |
+| type | [列舉](#列舉) | Yes | 違規事項的類型| 使用以下其中一個值： `allCaps`, `duplicateText`, `emojis`, `hoist`, `invites`, `links`, `mentionRoles`, `mentionUsers`, `quickMessages`, `words` |
+| amount | [數字](#數字) | Yes | 您想要新增的記點數量|  |
 
 ### Examples
+
+
 
 <a name='strikeConfig'></a>
 
@@ -1980,12 +2060,12 @@ Add strikes to a user
 
 ## !strikeConfig
 
-Configure strikes received for various violations.
+設置各種不同的違規事項所收到的記點。
 
 ### Usage
 
 ```text
-!strikeConfig [violation] [strikes]
+!strikeConfig [violation] [strikes] 
 ```
 
 ### Aliases
@@ -1994,10 +2074,10 @@ Configure strikes received for various violations.
 
 ### Arguments
 
-| Argument  | Type              | Required | Description        | Details                                                                                                                                                      |
-| --------- | ----------------- | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| violation | [Enum](#Enum)     | No       | Violation type.    | Use one of the following values: `allCaps`, `duplicateText`, `emojis`, `hoist`, `invites`, `links`, `mentionRoles`, `mentionUsers`, `quickMessages`, `words` |
-| strikes   | [Number](#Number) | No       | Number of strikes. |                                                                                                                                                              |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| violation | [列舉](#列舉) | No | 違規事項的類型。| 使用以下其中一個值： `allCaps`, `duplicateText`, `emojis`, `hoist`, `invites`, `links`, `mentionRoles`, `mentionUsers`, `quickMessages`, `words` |
+| strikes | [數字](#數字) | No | 記點的數量。|  |
 
 ### Examples
 
@@ -2005,18 +2085,19 @@ Configure strikes received for various violations.
 !strikeConfig
 ```
 
+
 <a name='subtractFakes'></a>
 
 ---
 
 ## !subtractFakes
 
-Remove fake invites from all users.
+移除所有使用者的假邀請數量。
 
 ### Usage
 
 ```text
-!subtractFakes
+!subtractFakes 
 ```
 
 ### Aliases
@@ -2031,18 +2112,19 @@ Remove fake invites from all users.
 !subtractFakes
 ```
 
+
 <a name='subtractLeaves'></a>
 
 ---
 
 ## !subtractLeaves
 
-Remove leaves from all users
+移除所有使用者的離開邀請數量
 
 ### Usage
 
 ```text
-!subtractLeaves
+!subtractLeaves 
 ```
 
 ### Aliases
@@ -2057,18 +2139,19 @@ Remove leaves from all users
 !subtractLeaves
 ```
 
+
 <a name='support'></a>
 
 ---
 
 ## !support
 
-Get an invite link to our support server.
+獲取我們的支援伺服器邀請連結。
 
 ### Usage
 
 ```text
-!support
+!support 
 ```
 
 ### Examples
@@ -2077,18 +2160,19 @@ Get an invite link to our support server.
 !support
 ```
 
+
 <a name='tryPremium'></a>
 
 ---
 
 ## !tryPremium
 
-Try the premium version of InviteManager for free for a limited duration.
+在有限的期間內免費試用 InviteManager 高級版。
 
 ### Usage
 
 ```text
-!tryPremium
+!tryPremium 
 ```
 
 ### Aliases
@@ -2102,28 +2186,31 @@ Try the premium version of InviteManager for free for a limited duration.
 !tryPremium
 ```
 
+
 <a name='unban'></a>
 
 ---
 
 ## !unban
 
-Unban a user
+解除停權一位使用者
 
 ### Usage
 
 ```text
-!unban <user> [reason]
+!unban <user> [reason] 
 ```
 
 ### Arguments
 
-| Argument | Type          | Required | Description                           | Details |
-| -------- | ------------- | -------- | ------------------------------------- | ------- |
-| user     | [User](#User) | Yes      | The user that should be unbanned.     |         |
-| reason   | [Text](#Text) | No       | The reason why this user is unbanned. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [使用者](#使用者) | Yes | 應該被解除停權的使用者。|  |
+| reason | [文字](#文字) | No | 解除停權此使用者的原因。|  |
 
 ### Examples
+
+
 
 <a name='unhoist'></a>
 
@@ -2131,12 +2218,12 @@ Unban a user
 
 ## !unhoist
 
-Add a character in front of all members with a special character in front of their name, so they will be shown at the end of the member list.
+在所有名稱是特殊字元開頭的成員前面新增一個字元，所以他們會顯示在成員列表的最後。
 
 ### Usage
 
 ```text
-!unhoist
+!unhoist 
 ```
 
 ### Aliases
@@ -2149,27 +2236,30 @@ Add a character in front of all members with a special character in front of the
 !unhoist
 ```
 
+
 <a name='unmute'></a>
 
 ---
 
 ## !unmute
 
-Unmute a user
+解除靜音一位使用者
 
 ### Usage
 
 ```text
-!unmute <user>
+!unmute <user> 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                      | Details |
-| -------- | ----------------- | -------- | -------------------------------- | ------- |
-| user     | [Member](#Member) | Yes      | The user that should be unmuted. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| user | [成員](#成員) | Yes | 應該被解除靜音的使用者。|  |
 
 ### Examples
+
+
 
 <a name='volume'></a>
 
@@ -2177,19 +2267,23 @@ Unmute a user
 
 ## !volume
 
-Set the volume if an argument is passed, or show the current volume.
+如果有輸入值會設定音量，或是顯示目前的音量。
 
 ### Usage
 
 ```text
-!volume [volume]
+!volume [volume] 
 ```
+
+### Aliases
+
+- `!vol`
 
 ### Arguments
 
-| Argument | Type              | Required | Description                          | Details |
-| -------- | ----------------- | -------- | ------------------------------------ | ------- |
-| volume   | [Number](#Number) | No       | The value the volume will be set to. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| volume | [數字](#數字) | No | 音量將被設定的值。|  |
 
 ### Examples
 
@@ -2197,25 +2291,29 @@ Set the volume if an argument is passed, or show the current volume.
 !volume
 ```
 
+
 <a name='warn'></a>
 
 ---
 
 ## !warn
 
-Warn a member.
+警告一位成員。
 
 ### Usage
 
 ```text
-!warn <member> [reason]
+!warn <member> [reason] 
 ```
 
 ### Arguments
 
-| Argument | Type              | Required | Description                    | Details |
-| -------- | ----------------- | -------- | ------------------------------ | ------- |
-| member   | [Member](#Member) | Yes      | Member to warn.                |         |
-| reason   | [Text](#Text)     | No       | Why was the member was warned. |         |
+| Argument | Type | Required | Description | Details |
+|---|---|---|---|---|
+| member | [成員](#成員) | Yes | 被警告的成員。|  |
+| reason | [文字](#文字) | No | 為甚麼警告成員。|  |
 
 ### Examples
+
+
+

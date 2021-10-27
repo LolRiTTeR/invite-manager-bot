@@ -1,6 +1,6 @@
 # 高級版
 
-我們不提供高級版機器人。兩隻 [我們的機器人](/zh-TW/getting-started/our-bots.md) 都已經啟用所有高級版功能。
+我們不提供高級版機器人。兩隻 [我們的機器人](/zh-TW/getting-started/our-bots.md) 都已經啟用所有高級版的功能。
 
 ## 功能
 

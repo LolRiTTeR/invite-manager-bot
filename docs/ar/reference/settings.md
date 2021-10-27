@@ -6,197 +6,202 @@ There are many config options that can be set. You don't have to set all of them
 
 ### عام
 
-| Setting                               | Description                                      |
-| ------------------------------------- | ------------------------------------------------ |
-| [بريفكس](#prefix)                     | البريفكس المستخدم لتشغيل أوامر البوت.            |
-| [لغه](#lang)                          | لغة البوت                                        |
-| [قناه السجل](#logchannel)             | القناه التي يتم تسجيل حركات البوت فيها.          |
-| [الحصول على التحديثات](#getupdates)   | فعل لتلقي تحديثات التطوير الخاصه بInviteManager. |
-| [قنوات الأوامر](#channels)            | القنوات التي سيتفاعل فيها البوت مع الأوامر.      |
-| [القنوات المتجاهلة](#ignoredchannels) | القنوات التي سيتجاهل فيها البوت الأوامر.         |
+| Setting | Description |
+|---|---|
+| [بريفكس](#prefix) | البريفكس المستخدم لتشغيل أوامر البوت.
+| [لغه](#lang) | لغة البوت
+| [قناه السجل](#logchannel) | القناه التي يتم تسجيل حركات البوت فيها.
+| [الحصول على التحديثات](#getupdates) | فعل لتلقي تحديثات التطوير الخاصه بInviteManager.
+| [قنوات الأوامر](#channels) | القنوات التي سيتفاعل فيها البوت مع الأوامر.
+| [القنوات المتجاهلة](#ignoredchannels) | القنوات التي سيتجاهل فيها البوت الأوامر.
 
 ### دعوات
 
+
+
 #### General
 
-| Setting                  | Description                                          |
-| ------------------------ | ---------------------------------------------------- |
-| [Join Roles](#joinroles) | Roles that are assigned to all members when joining. |
+| Setting | Description |
+|---|---|
+| [Join Roles](#joinroles) | Roles that are assigned to all members when joining.
 
 #### الانضمامات
 
-| Setting                             | Description                                                        |
-| ----------------------------------- | ------------------------------------------------------------------ |
-| [رساله](#joinmessage)               | الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر.                  |
-| [Message](#joinmessagevanity)       | The message sent when someone joins the server using a vanity URL. |
-| [قناه الرسائل](#joinmessagechannel) | القناة التي يتم إرسال رسالة الدخول فيها.                           |
+| Setting | Description |
+|---|---|
+| [رساله](#joinmessage) | الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر.
+| [Message](#joinmessagevanity) | The message sent when someone joins the server using a vanity URL.
+| [قناه الرسائل](#joinmessagechannel) | القناة التي يتم إرسال رسالة الدخول فيها.
 
 #### المغادرات
 
-| Setting                                             | Description                                                                        |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [رساله](#leavemessage)                              | الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.                                  |
-| [Message](#leavemessagevanity)                      | The message sent when someone leaves the server after he joined with a vanity URL. |
-| [قناه الرسائل](#leavemessagechannel)                | القناة التي يتم إرسال رسالة الخروج فيها.                                           |
-| [طرح تلقائي](#autosubtractleaves)                   | ازالة الدعوات تلقائيًا من المدعو عندما يغادر                                       |
-| [بداية الطرح التلقائي](#autosubtractleavethreshold) | الوقت بالثواني الذي يتعين على المستخدم البقاء فيه في السيرفر للدعوه للعد           |
+| Setting | Description |
+|---|---|
+| [رساله](#leavemessage) | الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.
+| [Message](#leavemessagevanity) | The message sent when someone leaves the server after he joined with a vanity URL.
+| [قناه الرسائل](#leavemessagechannel) | القناة التي يتم إرسال رسالة الخروج فيها.
+| [طرح تلقائي](#autosubtractleaves) | ازالة الدعوات تلقائيًا من المدعو عندما يغادر
+| [بداية الطرح التلقائي](#autosubtractleavethreshold) | الوقت بالثواني الذي يتعين على المستخدم البقاء فيه في السيرفر للدعوه للعد
 
 #### المتصدرين
 
-| Setting                                                     | Description                                   |
-| ----------------------------------------------------------- | --------------------------------------------- |
-| [اسلوب ](#leaderboardstyle)                                 | مظهر اسلوب المتصدرين                          |
-| [اخفي الاعضاء الذين خرجوا](#hideleftmembersfromleaderboard) | إخفاء الأعضاء الذين تركوا الخادم من المتصدرين |
+| Setting | Description |
+|---|---|
+| [اسلوب ](#leaderboardstyle) | مظهر اسلوب المتصدرين
+| [اخفي الاعضاء الذين خرجوا](#hideleftmembersfromleaderboard) | إخفاء الأعضاء الذين تركوا الخادم من المتصدرين
 
 #### المزيفون
 
-| Setting                          | Description                    |
-| -------------------------------- | ------------------------------ |
-| [طرح تلقائي](#autosubtractfakes) | ازاله الدعوات المزورة تلقائياً |
+| Setting | Description |
+|---|---|
+| [طرح تلقائي](#autosubtractfakes) | ازاله الدعوات المزورة تلقائياً
 
 #### رتب
 
-| Setting                                   | Description                                               |
-| ----------------------------------------- | --------------------------------------------------------- |
-| [أسلوب الواجب](#rankassignmentstyle)      | كيف تتم مكافأة الرتب للمستخدمين.                          |
-| [قناه التصاريح](#rankannouncementchannel) | القناة التي يعلن فيها المستخدمون الذين يتلقون رتبة جديدة. |
-| [رساله التصريح](#rankannouncementmessage) | الرسالة التي يتم إرسالها عندما يتلقى المستخدم رتبة جديدة. |
+| Setting | Description |
+|---|---|
+| [أسلوب الواجب](#rankassignmentstyle) | كيف تتم مكافأة الرتب للمستخدمين.
+| [قناه التصاريح](#rankannouncementchannel) | القناة التي يعلن فيها المستخدمون الذين يتلقون رتبة جديدة.
+| [رساله التصريح](#rankannouncementmessage) | الرسالة التي يتم إرسالها عندما يتلقى المستخدم رتبة جديدة.
 
 ### اداره
 
+
+
 #### كلمة التحقق
 
-| Setting                                             | Description                                                                                 |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [مفعل](#captchaverificationonjoin)                  | سواء تم تفعيل التحقق من كلمة التحقق أم لا.                                                  |
-| [رسالة الترحيب](#captchaverificationwelcomemessage) | الرسالة التي سيحصل عليها المستخدم بعد الانضمام إلى الخادم وتوجيهه لدخول اختبار كلمة التحقق. |
-| [رسالة النجاح](#captchaverificationsuccessmessage)  | رسالة الترحيب التي سيتم إرسالها إلى المستخدم بعد أن يتحقق بنجاح.                            |
-| [رسالة فاشلة](#captchaverificationfailedmessage)    | الرسالة التي يتم إرسالها عندما يخفق المستخدم بكلمه التحقق.                                  |
-| [التحقق من المهلة](#captchaverificationtimeout)     | الوقت الذي يتم فيه إدخال كلمة التحقق بنجاح.                                                 |
-| [السجل مفعل](#captchaverificationlogenabled)        | سواء سيتم تسجيل محاولات التحقق ام لا.                                                       |
+| Setting | Description |
+|---|---|
+| [مفعل](#captchaverificationonjoin) | سواء تم تفعيل التحقق من كلمة التحقق أم لا.
+| [رسالة الترحيب](#captchaverificationwelcomemessage) | الرسالة التي سيحصل عليها المستخدم بعد الانضمام إلى الخادم وتوجيهه لدخول اختبار كلمة التحقق.
+| [رسالة النجاح](#captchaverificationsuccessmessage) | رسالة الترحيب التي سيتم إرسالها إلى المستخدم بعد أن يتحقق بنجاح.
+| [رسالة فاشلة](#captchaverificationfailedmessage) | الرسالة التي يتم إرسالها عندما يخفق المستخدم بكلمه التحقق.
+| [التحقق من المهلة](#captchaverificationtimeout) | الوقت الذي يتم فيه إدخال كلمة التحقق بنجاح.
+| [السجل مفعل](#captchaverificationlogenabled) | سواء سيتم تسجيل محاولات التحقق ام لا.
 
 #### عام
 
-| Setting                                                        | Description                                                                                                                                                  |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [تمكين](#automodenabled)                                       | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).                                       |
-| [القنوات الادارية](#automodmoderatedchannels)                  | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels). |
-| [الرتب الادارية](#automodmoderatedroles)                       | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).    |
-| [القنوات المتجاهلة](#automodignoredchannels)                   | Channels that are ignored while automatically moderating.                                                                                                    |
-| [تجاهل الأدوار](#automodignoredroles)                          | Any members with these roles will not automatically be moderated.                                                                                            |
-| [رتبه صامته](#mutedrole)                                       | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.                                                 |
-| [معطل للأعضاء القدامى](#automoddisabledforoldmembers)          | Disabled auto moderation for members that have been in your server for a long time.                                                                          |
-| [الأعضاء القديمة عتبة](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.                                                                                 |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodenabled) | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
+| [القنوات الادارية](#automodmoderatedchannels) | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
+| [الرتب الادارية](#automodmoderatedroles) | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
+| [القنوات المتجاهلة](#automodignoredchannels) | Channels that are ignored while automatically moderating.
+| [تجاهل الأدوار](#automodignoredroles) | Any members with these roles will not automatically be moderated.
+| [رتبه صامته](#mutedrole) | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
+| [معطل للأعضاء القدامى](#automoddisabledforoldmembers) | Disabled auto moderation for members that have been in your server for a long time.
+| [الأعضاء القديمة عتبة](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.
 
 #### تسجيل
 
-| Setting                                                             | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [Log Enabled](#automodlogenabled)                                   | Log any moderation actions that the bot makes.                      |
-| [سجل القناه الخاص بالمود](#modlogchannel)                           | القناة التي سيتم نشر سجلات المود فيها.                              |
-| [حذف رسائل بوت](#automoddeletebotmessage)                           | Automatically delete the bots own messages (keeps your chat clean). |
-| [حذف Bot Message Timeout](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.                   |
-| [حذف رسائل الحظر](#modpunishmentbandeletemessage)                   | سواء سيتم حذف رسائل "الحظر" من عدمه تلقائيًا او لا.                 |
-| [حذف رسائل الطرد](#modpunishmentkickdeletemessage)                  | سواء سيتم حذف رسائل "الطرد" من عدمه تلقائيًا او لا.                 |
-| [حذف رسائل الحظر](#modpunishmentsoftbandeletemessage)               | سواء سيتم حذف رسائل "الحظر" من عدمه تلقائيًا او لا.                 |
-| [حذف رسائل التحذير.](#modpunishmentwarndeletemessage)               | سواء سيتم حذف رسائل "تحذير" من عدمه تلقائيًا او لا.                 |
-| [حذف رسائل الصمت](#modpunishmentmutedeletemessage)                  | سواء سيتم حذف رسائل "الصمت" من عدمه تلقائيًا او لا.                 |
+| Setting | Description |
+|---|---|
+| [Log Enabled](#automodlogenabled) | Log any moderation actions that the bot makes.
+| [سجل القناه الخاص بالمود](#modlogchannel) | القناة التي سيتم نشر سجلات المود فيها.
+| [حذف رسائل بوت](#automoddeletebotmessage) | Automatically delete the bots own messages (keeps your chat clean).
+| [حذف Bot Message Timeout](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.
+| [حذف رسائل الحظر](#modpunishmentbandeletemessage) | Whether or not "Ban" punishment messages will be deleted automatically.
+| [حذف رسائل الطرد](#modpunishmentkickdeletemessage) | Whether or not "Kick" punishment messages will be deleted automatically.
+| [حذف رسائل الحظر](#modpunishmentsoftbandeletemessage) | Whether or not "Softban" punishment messages will be deleted automatically.
+| [حذف رسائل التحذير.](#modpunishmentwarndeletemessage) | Whether or not "Warn" punishment messages will be deleted automatically.
+| [حذف رسائل الصمت](#modpunishmentmutedeletemessage) | Whether or not "Mute" punishment messages will be deleted automatically.
 
 #### دعوات
 
-| Setting                         | Description                                                           |
-| ------------------------------- | --------------------------------------------------------------------- |
-| [تمكين](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them. |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them.
 
 #### روابط
 
-| Setting                                          | Description                                                                             |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| [تمكين](#automodlinksenabled)                    | Automatically remove messages containing links (you can set a whitelist and blacklist). |
-| [القائمة البيضاء](#automodlinkswhitelist)        | A list of links that users are allowed to post.                                         |
-| [القائمة السوداء](#automodlinksblacklist)        | Blacklist certain links which users won't be able to post.                              |
-| [Follow Redirects](#automodlinksfollowredirects) | Enable this to resolve redirects for links.                                             |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodlinksenabled) | Automatically remove messages containing links (you can set a whitelist and blacklist).
+| [القائمة البيضاء](#automodlinkswhitelist) | A list of links that users are allowed to post.
+| [القائمة السوداء](#automodlinksblacklist) | Blacklist certain links which users won't be able to post.
+| [Follow Redirects](#automodlinksfollowredirects) | Enable this to resolve redirects for links.
 
 #### كلمات محظوره
 
-| Setting                       | Description                                        |
-| ----------------------------- | -------------------------------------------------- |
-| [مفعل](#automodwordsenabled)  | سواء سيتم التحقق تلقائياً من رسائل المحظوره او لا. |
-| [حظر](#automodwordsblacklist) | قائمه من الكلمات المحظوره                          |
+| Setting | Description |
+|---|---|
+| [مفعل](#automodwordsenabled) | سواء سيتم التحقق تلقائياً من رسائل المحظوره او لا.
+| [حظر](#automodwordsblacklist) | قائمه من الكلمات المحظوره
 
 #### احرف كبيره
 
-| Setting                                                 | Description                                                                                                       |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [تمكين](#automodallcapsenabled)                         | Automatically moderate messages with A LOT OF CAPS.                                                               |
-| [الحد الأدنى من الشخصيات](#automodallcapsmincharacters) | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK'). |
-| [النسبة المئوية CAPs](#automodallcapspercentagecaps)    | The percentage of characters of the message that have to be CAPs for the rule to trigger.                         |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodallcapsenabled) | Automatically moderate messages with A LOT OF CAPS.
+| [الحد الأدنى من الشخصيات](#automodallcapsmincharacters) | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
+| [النسبة المئوية CAPs](#automodallcapspercentagecaps) | The percentage of characters of the message that have to be CAPs for the rule to trigger.
 
 #### رسائل مكررة
 
-| Setting                                                           | Description                                                         |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [تمكين](#automodduplicatetextenabled)                             | Automatically moderate duplicate messages (copy-paste spam).        |
-| [الإطار الزمني بالثواني](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates. |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodduplicatetextenabled) | Automatically moderate duplicate messages (copy-paste spam).
+| [الإطار الزمني بالثواني](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates.
 
 #### سبام/اصرار
 
-| Setting                                                           | Description                                                                           |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [مفعل](#automodquickmessagesenabled)                              | Automatically moderate users sending a lot of messages in a short time.               |
-| [# من الرسائل](#automodquickmessagesnumberofmessages)             | The number of messages that have to be sent within the timeframe to trigger the rule. |
-| [الإطار الزمني بالثواني](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.    |
+| Setting | Description |
+|---|---|
+| [مفعل](#automodquickmessagesenabled) | Automatically moderate users sending a lot of messages in a short time.
+| [# من الرسائل](#automodquickmessagesnumberofmessages) | The number of messages that have to be sent within the timeframe to trigger the rule.
+| [الإطار الزمني بالثواني](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.
 
 #### إشارات
 
-| Setting                                                      | Description                                                                |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [تمكين](#automodmentionusersenabled)                         | Automatically moderate messages that mention an excessive amount of users. |
-| [Max # of Mentions](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.             |
-| [تمكين](#automodmentionrolesenabled)                         | Automatically moderate messages that mention an excessive amount of roles. |
-| [Max # of Mentions](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.             |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodmentionusersenabled) | Automatically moderate messages that mention an excessive amount of users.
+| [Max # of Mentions](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.
+| [تمكين](#automodmentionrolesenabled) | Automatically moderate messages that mention an excessive amount of roles.
+| [Max # of Mentions](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.
 
 #### ايموجيز - تعبير وجه
 
-| Setting                                             | Description                                                                                                               |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [تمكين](#automodemojisenabled)                      | Automatically moderate messages with an excessive amount of emojis.                                                       |
-| [ماكس # من Emojis](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.                                        |
-| [Enabled](#automodhoistenabled)                     | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list). |
+| Setting | Description |
+|---|---|
+| [تمكين](#automodemojisenabled) | Automatically moderate messages with an excessive amount of emojis.
+| [ماكس # من Emojis](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.
+| [Enabled](#automodhoistenabled) | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
 
 ### موسيقى
 
+
+
 #### Music
 
-| Setting                           | Description                                          |
-| --------------------------------- | ---------------------------------------------------- |
-| [طبقة صوت الموسيقى](#musicvolume) | الصوت المعتاد الذي تم ضبطه عند دخول بوت لقناه صوتيه. |
+| Setting | Description |
+|---|---|
+| [طبقة صوت الموسيقى](#musicvolume) | الصوت المعتاد الذي تم ضبطه عند دخول بوت لقناه صوتيه.
 
 #### Announcement
 
-| Setting                                    | Description                                                         |
-| ------------------------------------------ | ------------------------------------------------------------------- |
-| [اعلان الاغنيه التاليه](#announcenextsong) | ما إذا كان سيتم الإعلان عن الأغنية التالية في القناة الصوتية أم لا. |
-| [صوت الاعلانات.](#announcementvoice)       | الصوت المستخدم في إعلانات الأغنية التاليه.                          |
+| Setting | Description |
+|---|---|
+| [اعلان الاغنيه التاليه](#announcenextsong) | ما إذا كان سيتم الإعلان عن الأغنية التالية في القناة الصوتية أم لا.
+| [صوت الاعلانات.](#announcementvoice) | الصوت المستخدم في إعلانات الأغنية التاليه.
 
 #### Fade Music
 
-| Setting                                            | Description                                                                      |
-| -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [تلاشي الموسيقى على التكلم](#fademusicontalk)      | اذا مفعل, الموسيقى ستبدأ بالتلاشي عندما يتحدث الناس                              |
-| [تلاشي الموسيقى نهايه التأخير](#fademusicenddelay) | تأخر عدد الثواني التي يجب ألا يتحدث فيها أحد من أجل عودة مستوى الصوت إلى طبيعته. |
+| Setting | Description |
+|---|---|
+| [تلاشي الموسيقى على التكلم](#fademusicontalk) | اذا مفعل, الموسيقى ستبدأ بالتلاشي عندما يتحدث الناس
+| [تلاشي الموسيقى نهايه التأخير](#fademusicenddelay) | The delay of how many seconds no one has to speak for the volume to return back to normal.
 
 #### Platform
 
-| Setting                                             | Description                                                                               |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Default Music Platform](#defaultmusicplatform)     | The platform that is used to search / play music when no platform is selected explicitly. |
-| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.                       |
+| Setting | Description |
+|---|---|
+| [Default Music Platform](#defaultmusicplatform) | The platform that is used to search / play music when no platform is selected explicitly.
+| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.
 
 <a name=prefix></a>
 
 ---
-
 ## بريفكس
 
 البريفكس المستخدم لتشغيل أوامر البوت.
@@ -214,10 +219,11 @@ Examples:
 
 `!config prefix >`
 
+
+
 <a name=lang></a>
 
 ---
-
 ## لغه
 
 لغة البوت
@@ -235,10 +241,11 @@ Example:
 
 `!config lang ar`
 
+
+
 <a name=logChannel></a>
 
 ---
-
 ## قناه السجل
 
 القناه التي يتم تسجيل حركات البوت فيها.
@@ -254,10 +261,11 @@ Examples:
 
 `!config logChannel #channel`
 
+
+
 <a name=getUpdates></a>
 
 ---
-
 ## الحصول على التحديثات
 
 فعل لتلقي تحديثات التطوير الخاصه بInviteManager.
@@ -277,10 +285,11 @@ Disable:
 
 `!config getUpdates false`
 
+
+
 <a name=channels></a>
 
 ---
-
 ## قنوات الأوامر
 
 القنوات التي سيتفاعل فيها البوت مع الأوامر.
@@ -292,10 +301,11 @@ Default: ``
 Reset to default:
 `!config channels default`
 
+
+
 <a name=ignoredChannels></a>
 
 ---
-
 ## القنوات المتجاهلة
 
 القنوات التي سيتجاهل فيها البوت الأوامر.
@@ -307,10 +317,11 @@ Default: ``
 Reset to default:
 `!config ignoredChannels default`
 
+
+
 <a name=joinRoles></a>
 
 ---
-
 ## Join Roles
 
 Roles that are assigned to all members when joining.
@@ -322,10 +333,11 @@ Default: ``
 Reset to default:
 `!config joinRoles default`
 
+
+
 <a name=joinMessage></a>
 
 ---
-
 ## رساله
 
 الرسالة المرسلة عندما يدخل شخص ما الخادم/السيرفر.
@@ -337,10 +349,11 @@ Default: `{memberMention} **joined**; Invited by **{inviterName}** (**{numInvite
 Reset to default:
 `!config joinMessage default`
 
+
+
 <a name=joinMessageVanity></a>
 
 ---
-
 ## Message
 
 The message sent when someone joins the server using a vanity URL.
@@ -352,10 +365,11 @@ Default: `{memberMention} **joined** using the vanity invite code **{inviteCode}
 Reset to default:
 `!config joinMessageVanity default`
 
+
+
 <a name=joinMessageChannel></a>
 
 ---
-
 ## قناه الرسائل
 
 القناة التي يتم إرسال رسالة الدخول فيها.
@@ -373,10 +387,11 @@ Examples:
 
 `!config joinMessageChannel #joins`
 
+
+
 <a name=leaveMessage></a>
 
 ---
-
 ## رساله
 
 الرسالة المرسلة عندما يترك شخص ما الخادم/السيرفر.
@@ -390,14 +405,15 @@ Reset to default:
 
 Examples:
 
-`!config leaveMessage`
+`!config leaveMessage `
 
-`!config leaveMessage`
+`!config leaveMessage `
+
+
 
 <a name=leaveMessageVanity></a>
 
 ---
-
 ## Message
 
 The message sent when someone leaves the server after he joined with a vanity URL.
@@ -409,10 +425,11 @@ Default: `{memberName} **left** after {joinedAt:duration} on this server`
 Reset to default:
 `!config leaveMessageVanity default`
 
+
+
 <a name=leaveMessageChannel></a>
 
 ---
-
 ## قناه الرسائل
 
 القناة التي يتم إرسال رسالة الخروج فيها.
@@ -430,11 +447,12 @@ Examples:
 
 `!config leaveMessageChannel #leaves`
 
+
+
 <a name=leaderboardStyle></a>
 
 ---
-
-## اسلوب
+## اسلوب 
 
 مظهر اسلوب المتصدرين
 
@@ -451,10 +469,11 @@ Example:
 
 `!config leaderboardStyle normal`
 
+
+
 <a name=hideLeftMembersFromLeaderboard></a>
 
 ---
-
 ## اخفي الاعضاء الذين خرجوا
 
 إخفاء الأعضاء الذين تركوا الخادم من المتصدرين
@@ -474,10 +493,11 @@ Disable:
 
 `!config hideLeftMembersFromLeaderboard false`
 
+
+
 <a name=autoSubtractFakes></a>
 
 ---
-
 ## طرح تلقائي
 
 ازاله الدعوات المزورة تلقائياً
@@ -497,10 +517,11 @@ Disable:
 
 `!config autoSubtractFakes false`
 
+
+
 <a name=autoSubtractLeaves></a>
 
 ---
-
 ## طرح تلقائي
 
 ازالة الدعوات تلقائيًا من المدعو عندما يغادر
@@ -520,10 +541,11 @@ Disable:
 
 `!config autoSubtractLeaves false`
 
+
+
 <a name=autoSubtractLeaveThreshold></a>
 
 ---
-
 ## بداية الطرح التلقائي
 
 الوقت بالثواني الذي يتعين على المستخدم البقاء فيه في السيرفر للدعوه للعد
@@ -541,10 +563,11 @@ Examples:
 
 `!config autoSubtractLeaveThreshold 3600`
 
+
+
 <a name=rankAssignmentStyle></a>
 
 ---
-
 ## أسلوب الواجب
 
 كيف تتم مكافأة الرتب للمستخدمين.
@@ -562,10 +585,11 @@ Example:
 
 `!config rankAssignmentStyle all`
 
+
+
 <a name=rankAnnouncementChannel></a>
 
 ---
-
 ## قناه التصاريح
 
 القناة التي يعلن فيها المستخدمون الذين يتلقون رتبة جديدة.
@@ -579,14 +603,15 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
 
-`!config rankAnnouncementChannel`
+`!config rankAnnouncementChannel `
+
+
 
 <a name=rankAnnouncementMessage></a>
 
 ---
-
 ## رساله التصريح
 
 الرسالة التي يتم إرسالها عندما يتلقى المستخدم رتبة جديدة.
@@ -600,14 +625,15 @@ Reset to default:
 
 Examples:
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
 
-`!config rankAnnouncementMessage`
+`!config rankAnnouncementMessage `
+
+
 
 <a name=captchaVerificationOnJoin></a>
 
 ---
-
 ## مفعل
 
 سواء تم تفعيل التحقق من كلمة التحقق أم لا.
@@ -627,10 +653,11 @@ Disable:
 
 `!config captchaVerificationOnJoin false`
 
+
+
 <a name=captchaVerificationWelcomeMessage></a>
 
 ---
-
 ## رسالة الترحيب
 
 الرسالة التي سيحصل عليها المستخدم بعد الانضمام إلى الخادم وتوجيهه لدخول اختبار كلمة التحقق.
@@ -646,10 +673,11 @@ Examples:
 
 `!config captchaVerificationWelcomeMessage Welcome, please enter the captcha below!`
 
+
+
 <a name=captchaVerificationSuccessMessage></a>
 
 ---
-
 ## رسالة النجاح
 
 رسالة الترحيب التي سيتم إرسالها إلى المستخدم بعد أن يتحقق بنجاح.
@@ -665,10 +693,11 @@ Examples:
 
 `!config captchaVerificationSuccessMessage Thanks for entering the captcha, enjoy our server!`
 
+
+
 <a name=captchaVerificationFailedMessage></a>
 
 ---
-
 ## رسالة فاشلة
 
 الرسالة التي يتم إرسالها عندما يخفق المستخدم بكلمه التحقق.
@@ -684,10 +713,11 @@ Examples:
 
 `!config captchaVerificationFailedMessage Looks like you are not human :(. You can join again and try again later if this was a mistake!`
 
+
+
 <a name=captchaVerificationTimeout></a>
 
 ---
-
 ## التحقق من المهلة
 
 الوقت الذي يتم فيه إدخال كلمة التحقق بنجاح.
@@ -705,10 +735,11 @@ Examples:
 
 `!config captchaVerificationTimeout 600`
 
+
+
 <a name=captchaVerificationLogEnabled></a>
 
 ---
-
 ## السجل مفعل
 
 سواء سيتم تسجيل محاولات التحقق ام لا.
@@ -728,10 +759,11 @@ Disable:
 
 `!config captchaVerificationLogEnabled false`
 
+
+
 <a name=autoModEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
@@ -751,10 +783,11 @@ Disable:
 
 `!config autoModEnabled false`
 
+
+
 <a name=autoModModeratedChannels></a>
 
 ---
-
 ## القنوات الادارية
 
 The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
@@ -772,10 +805,11 @@ Examples:
 
 `!config autoModModeratedChannels #support,#help`
 
+
+
 <a name=autoModModeratedRoles></a>
 
 ---
-
 ## الرتب الادارية
 
 The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
@@ -793,10 +827,11 @@ Examples:
 
 `!config autoModModeratedRoles @Newbies,@Starters`
 
+
+
 <a name=autoModIgnoredChannels></a>
 
 ---
-
 ## القنوات المتجاهلة
 
 Channels that are ignored while automatically moderating.
@@ -814,10 +849,11 @@ Examples:
 
 `!config autoModIgnoredChannels #off-topic,#nsfw`
 
+
+
 <a name=autoModIgnoredRoles></a>
 
 ---
-
 ## تجاهل الأدوار
 
 Any members with these roles will not automatically be moderated.
@@ -835,10 +871,11 @@ Examples:
 
 `!config autoModIgnoredRoles @Moderators,@Staff`
 
+
+
 <a name=mutedRole></a>
 
 ---
-
 ## رتبه صامته
 
 The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
@@ -854,10 +891,11 @@ Examples:
 
 `!config mutedRole @muted`
 
+
+
 <a name=autoModDisabledForOldMembers></a>
 
 ---
-
 ## معطل للأعضاء القدامى
 
 Disabled auto moderation for members that have been in your server for a long time.
@@ -877,10 +915,11 @@ Disable:
 
 `!config autoModDisabledForOldMembers false`
 
+
+
 <a name=autoModDisabledForOldMembersThreshold></a>
 
 ---
-
 ## الأعضاء القديمة عتبة
 
 The amount of time a member has to be in your server to be considered 'old'.
@@ -898,10 +937,11 @@ Examples:
 
 `!config autoModDisabledForOldMembersThreshold 2419200` (1 month)``
 
+
+
 <a name=autoModLogEnabled></a>
 
 ---
-
 ## Log Enabled
 
 Log any moderation actions that the bot makes.
@@ -921,10 +961,11 @@ Disable:
 
 `!config autoModLogEnabled false`
 
+
+
 <a name=modLogChannel></a>
 
 ---
-
 ## سجل القناه الخاص بالمود
 
 القناة التي سيتم نشر سجلات المود فيها.
@@ -942,10 +983,11 @@ Examples:
 
 `!config modLogChannel #logs`
 
+
+
 <a name=autoModDeleteBotMessage></a>
 
 ---
-
 ## حذف رسائل بوت
 
 Automatically delete the bots own messages (keeps your chat clean).
@@ -965,10 +1007,11 @@ Disable:
 
 `!config autoModDeleteBotMessage false`
 
+
+
 <a name=autoModDeleteBotMessageTimeoutInSeconds></a>
 
 ---
-
 ## حذف Bot Message Timeout
 
 The timeout after which bot messages are deleted.
@@ -986,13 +1029,14 @@ Examples:
 
 `!config autoModDeleteBotMessageTimeoutInSeconds 10`
 
+
+
 <a name=modPunishmentBanDeleteMessage></a>
 
 ---
-
 ## حذف رسائل الحظر
 
-سواء سيتم حذف رسائل "الحظر" من عدمه تلقائيًا او لا.
+Whether or not "Ban" punishment messages will be deleted automatically.
 
 Type: `Boolean`
 
@@ -1009,13 +1053,14 @@ Disable:
 
 `!config modPunishmentBanDeleteMessage false`
 
+
+
 <a name=modPunishmentKickDeleteMessage></a>
 
 ---
-
 ## حذف رسائل الطرد
 
-سواء سيتم حذف رسائل "الطرد" من عدمه تلقائيًا او لا.
+Whether or not "Kick" punishment messages will be deleted automatically.
 
 Type: `Boolean`
 
@@ -1032,13 +1077,14 @@ Disable:
 
 `!config modPunishmentKickDeleteMessage false`
 
+
+
 <a name=modPunishmentSoftbanDeleteMessage></a>
 
 ---
-
 ## حذف رسائل الحظر
 
-سواء سيتم حذف رسائل "الحظر" من عدمه تلقائيًا او لا.
+Whether or not "Softban" punishment messages will be deleted automatically.
 
 Type: `Boolean`
 
@@ -1055,13 +1101,14 @@ Disable:
 
 `!config modPunishmentSoftbanDeleteMessage false`
 
+
+
 <a name=modPunishmentWarnDeleteMessage></a>
 
 ---
-
 ## حذف رسائل التحذير.
 
-سواء سيتم حذف رسائل "تحذير" من عدمه تلقائيًا او لا.
+Whether or not "Warn" punishment messages will be deleted automatically.
 
 Type: `Boolean`
 
@@ -1078,13 +1125,14 @@ Disable:
 
 `!config modPunishmentWarnDeleteMessage false`
 
+
+
 <a name=modPunishmentMuteDeleteMessage></a>
 
 ---
-
 ## حذف رسائل الصمت
 
-سواء سيتم حذف رسائل "الصمت" من عدمه تلقائيًا او لا.
+Whether or not "Mute" punishment messages will be deleted automatically.
 
 Type: `Boolean`
 
@@ -1101,10 +1149,11 @@ Disable:
 
 `!config modPunishmentMuteDeleteMessage false`
 
+
+
 <a name=autoModInvitesEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically scan messages for discord invite links and remove them.
@@ -1124,10 +1173,11 @@ Disable:
 
 `!config autoModInvitesEnabled false`
 
+
+
 <a name=autoModLinksEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically remove messages containing links (you can set a whitelist and blacklist).
@@ -1147,10 +1197,11 @@ Disable:
 
 `!config autoModLinksEnabled false`
 
+
+
 <a name=autoModLinksWhitelist></a>
 
 ---
-
 ## القائمة البيضاء
 
 A list of links that users are allowed to post.
@@ -1168,10 +1219,11 @@ Examples:
 
 `!config autoModLinksWhitelist youtube.com,twitch.com`
 
+
+
 <a name=autoModLinksBlacklist></a>
 
 ---
-
 ## القائمة السوداء
 
 Blacklist certain links which users won't be able to post.
@@ -1189,10 +1241,11 @@ Examples:
 
 `!config autoModLinksBlacklist twitch.com,youtube.com`
 
+
+
 <a name=autoModLinksFollowRedirects></a>
 
 ---
-
 ## Follow Redirects
 
 Enable this to resolve redirects for links.
@@ -1212,10 +1265,11 @@ Disable:
 
 `!config autoModLinksFollowRedirects false`
 
+
+
 <a name=autoModWordsEnabled></a>
 
 ---
-
 ## مفعل
 
 سواء سيتم التحقق تلقائياً من رسائل المحظوره او لا.
@@ -1235,10 +1289,11 @@ Disable:
 
 `!config autoModWordsEnabled false`
 
+
+
 <a name=autoModWordsBlacklist></a>
 
 ---
-
 ## حظر
 
 قائمه من الكلمات المحظوره
@@ -1256,10 +1311,11 @@ Examples:
 
 `!config autoModWordsBlacklist stupid,fuck`
 
+
+
 <a name=autoModAllCapsEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate messages with A LOT OF CAPS.
@@ -1279,10 +1335,11 @@ Disable:
 
 `!config autoModAllCapsEnabled false`
 
+
+
 <a name=autoModAllCapsMinCharacters></a>
 
 ---
-
 ## الحد الأدنى من الشخصيات
 
 The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
@@ -1300,10 +1357,11 @@ Examples:
 
 `!config autoModAllCapsMinCharacters 15`
 
+
+
 <a name=autoModAllCapsPercentageCaps></a>
 
 ---
-
 ## النسبة المئوية CAPs
 
 The percentage of characters of the message that have to be CAPs for the rule to trigger.
@@ -1321,10 +1379,11 @@ Examples:
 
 `!config autoModAllCapsPercentageCaps 90`
 
+
+
 <a name=autoModDuplicateTextEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate duplicate messages (copy-paste spam).
@@ -1344,10 +1403,11 @@ Disable:
 
 `!config autoModDuplicateTextEnabled false`
 
+
+
 <a name=autoModDuplicateTextTimeframeInSeconds></a>
 
 ---
-
 ## الإطار الزمني بالثواني
 
 The timeframe whithin which messages will be considered duplicates.
@@ -1365,10 +1425,11 @@ Examples:
 
 `!config autoModDuplicateTextTimeframeInSeconds 20`
 
+
+
 <a name=autoModQuickMessagesEnabled></a>
 
 ---
-
 ## مفعل
 
 Automatically moderate users sending a lot of messages in a short time.
@@ -1388,10 +1449,11 @@ Disable:
 
 `!config autoModQuickMessagesEnabled false`
 
+
+
 <a name=autoModQuickMessagesNumberOfMessages></a>
 
 ---
-
 ## # من الرسائل
 
 The number of messages that have to be sent within the timeframe to trigger the rule.
@@ -1409,10 +1471,11 @@ Examples:
 
 `!config autoModQuickMessagesNumberOfMessages 10`
 
+
+
 <a name=autoModQuickMessagesTimeframeInSeconds></a>
 
 ---
-
 ## الإطار الزمني بالثواني
 
 The timeframe within which a user is allowed to send a maximum amount of messages.
@@ -1430,10 +1493,11 @@ Examples:
 
 `!config autoModQuickMessagesTimeframeInSeconds 10`
 
+
+
 <a name=autoModMentionUsersEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate messages that mention an excessive amount of users.
@@ -1453,10 +1517,11 @@ Disable:
 
 `!config autoModMentionUsersEnabled false`
 
+
+
 <a name=autoModMentionUsersMaxNumberOfMentions></a>
 
 ---
-
 ## Max # of Mentions
 
 The maximum amount of users a member can mention in a message.
@@ -1474,10 +1539,11 @@ Examples:
 
 `!config autoModMentionUsersMaxNumberOfMentions 5`
 
+
+
 <a name=autoModMentionRolesEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate messages that mention an excessive amount of roles.
@@ -1497,10 +1563,11 @@ Disable:
 
 `!config autoModMentionRolesEnabled false`
 
+
+
 <a name=autoModMentionRolesMaxNumberOfMentions></a>
 
 ---
-
 ## Max # of Mentions
 
 The maximum amount of roles a member can mention in a message.
@@ -1518,10 +1585,11 @@ Examples:
 
 `!config autoModMentionRolesMaxNumberOfMentions 5`
 
+
+
 <a name=autoModEmojisEnabled></a>
 
 ---
-
 ## تمكين
 
 Automatically moderate messages with an excessive amount of emojis.
@@ -1541,10 +1609,11 @@ Disable:
 
 `!config autoModEmojisEnabled false`
 
+
+
 <a name=autoModEmojisMaxNumberOfEmojis></a>
 
 ---
-
 ## ماكس # من Emojis
 
 The maximum amount of emojis a message is allowed to have before trigger the rule.
@@ -1562,10 +1631,11 @@ Examples:
 
 `!config autoModEmojisMaxNumberOfEmojis 10`
 
+
+
 <a name=autoModHoistEnabled></a>
 
 ---
-
 ## Enabled
 
 Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
@@ -1585,10 +1655,11 @@ Disable:
 
 `!config autoModHoistEnabled false`
 
+
+
 <a name=musicVolume></a>
 
 ---
-
 ## طبقة صوت الموسيقى
 
 الصوت المعتاد الذي تم ضبطه عند دخول بوت لقناه صوتيه.
@@ -1600,17 +1671,18 @@ Default: `100`
 Reset to default:
 `!config musicVolume default`
 
+
+
 <a name=announceNextSong></a>
 
 ---
-
 ## اعلان الاغنيه التاليه
 
 ما إذا كان سيتم الإعلان عن الأغنية التالية في القناة الصوتية أم لا.
 
 Type: `Boolean`
 
-Default: `true`
+Default: `false`
 
 Reset to default:
 `!config announceNextSong default`
@@ -1623,10 +1695,11 @@ Disable:
 
 `!config announceNextSong false`
 
+
+
 <a name=announcementVoice></a>
 
 ---
-
 ## صوت الاعلانات.
 
 الصوت المستخدم في إعلانات الأغنية التاليه.
@@ -1644,10 +1717,11 @@ Example:
 
 `!config announcementVoice Joanna`
 
+
+
 <a name=fadeMusicOnTalk></a>
 
 ---
-
 ## تلاشي الموسيقى على التكلم
 
 اذا مفعل, الموسيقى ستبدأ بالتلاشي عندما يتحدث الناس
@@ -1667,13 +1741,14 @@ Disable:
 
 `!config fadeMusicOnTalk false`
 
+
+
 <a name=fadeMusicEndDelay></a>
 
 ---
-
 ## تلاشي الموسيقى نهايه التأخير
 
-تأخر عدد الثواني التي يجب ألا يتحدث فيها أحد من أجل عودة مستوى الصوت إلى طبيعته.
+The delay of how many seconds no one has to speak for the volume to return back to normal.
 
 Type: `Number`
 
@@ -1682,32 +1757,35 @@ Default: `1`
 Reset to default:
 `!config fadeMusicEndDelay default`
 
+
+
 <a name=defaultMusicPlatform></a>
 
 ---
-
 ## Default Music Platform
 
 The platform that is used to search / play music when no platform is selected explicitly.
 
 Type: `Enum<MusicPlatformTypes>`
 
-Default: `soundcloud`
+Default: `youtube`
 
 Reset to default:
 `!config defaultMusicPlatform default`
 
+
+
 <a name=disabledMusicPlatforms></a>
 
 ---
-
 ## Disabled Music Platforms
 
 Music platforms that are disabled and cannot be used to play music.
 
 Type: `Enum<MusicPlatformTypes>[]`
 
-Default: ``
+Default: `soundcloud`
 
 Reset to default:
 `!config disabledMusicPlatforms default`
+

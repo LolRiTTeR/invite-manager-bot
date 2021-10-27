@@ -4,7 +4,7 @@
 
 Öneki değiştirmek için `!config prefix -` yapabilirsiniz.
 
-Geçerli önekinizi bilmiyorsanız, öneki görmek için`@InviteManager config prefix` komtunu kullanabilirsiniz.
+Geçerli önekinizi bilmiyorsanız, öneki görmek için`@InviteManager config prefix`  komtunu kullanabilirsiniz.
 
 ## Katılma ve ayrılma mesajlarını nasıl ayarlarım?
 
@@ -22,11 +22,11 @@ Bunu yaptıktan sonra yeni katılmalar ve ayrılmalar o kanala gönderilecek.
 
 Kesinlikle! Mesajı yaparak örneğin değiştirebilirsiniz
 
-`! config joinMessage {memberMention} ** katıldı **; ** {inviterName} ** tarafından davet edildi (** {numInvites} ** davet yaptı)`
+`! config joinMessage {memberMention} ** katıldı **; ** {inviterName} ** tarafından davet edildi (** {numInvites} ** davet yaptı) `
 
 ya da
 
-`! config leaveMessage {memberName} ** ayrıldı **; ** {inviterName} **`tarafından davet edilmişti.
+`! config leaveMessage {memberName} ** ayrıldı **; ** {inviterName} ** `tarafından davet edilmişti.
 
 Kullanılabilecek çok sayıda yer tutucu var. Listenin tamamını '[Custom Messages](/tr/modules/invites/custom-messages.md)' sayfasında görebilirsiniz.
 

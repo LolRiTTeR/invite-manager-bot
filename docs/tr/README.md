@@ -7,7 +7,7 @@
 
 ## Başlangıç
 
-Başlamak için sunucunuzda `!setup` komutunu çalıştırmanız yeterlidir.
+Başlamak için sunucunuzda `!setup` komutunu çalıştırmanız yeterlidir. 
 
 ### Davet Yönetimi
 
@@ -15,7 +15,7 @@ Botumuz sunucunuzdayken, sunucunuzda gerçekleşen her daveti izleriz. Discord s
 
 ### Moderasyon
 
-Yeni moderasyon sistemimiz birçok şeyi otomatik olarak yönetmenizi sağlar. Daha fazla bilgi için lütfen [strikes](/tr/modules/moderation/strikes.md) ve [punishments](/tr/modules/moderation/punishments.md) sayfalarımızı kontrol edin. Kısacası, botumuz yanlış davranan insanlara 'grev' verir ve belirli bir grevden sonra kullanıcı bir ceza alır. Tüm bunlar kullanıcı tarafından yapılandırılabilir.
+Yeni moderasyon sistemimiz birçok şeyi otomatik olarak yönetmenizi sağlar. Daha fazla bilgi için lütfen [strikes] (/tr/modules/moderation/strikes.md) ve [punishments] (/tr/modules/moderation/punishments.md) sayfalarımızı kontrol edin. Kısacası, botumuz yanlış davranan insanlara 'grev' verir ve belirli bir grevden sonra kullanıcı bir ceza alır. Tüm bunlar kullanıcı tarafından yapılandırılabilir.
 
 ## Premium
 
