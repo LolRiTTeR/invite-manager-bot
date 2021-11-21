@@ -5,10 +5,10 @@ import { BotCommand, CommandGroup } from '../../../types';
 import { Command, Context } from '../Command';
 
 const community: string[] = [
-	'Menno#0002',
 	'Armin#2296',
 	'Astryx#4587',
-	'malok#0002'
+	'malok#9340',
+	'Menno#0001'
 ];
 
 const devs: string[] = [
@@ -17,14 +17,12 @@ const devs: string[] = [
 ];
 
 const mods: string[] = [
-	'Gugu72#7378',
 	'Simplee.#5460',
+	'Gugu72#6081',
 	'JWEi#9873'
 ];
 
 const staff: string[] = [
-	'wilman#4040',
-	'SPAZ#0001'
 ];
 
 const graphic_designer: string[] = [
@@ -32,10 +30,13 @@ const graphic_designer: string[] = [
 ];
 
 const translators: string[] = [
-	'• xFalcon#0061',
-	'Ormani3#8819',
+	'" rxd#4495',
+	'd4niell#7062',
 	'GPP#9510',
-	'awsamboi#9999'
+	'Laweis#0999',
+	'Mopsior#7997',
+	'Ormani3#8819',
+	'• xFalcon#0061'
 ];
 
 export default class extends Command {
