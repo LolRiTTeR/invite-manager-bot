@@ -90,7 +90,7 @@
 		},
 		"moderation": {
 			"title": "Moderation",
-			"description": "Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu moderieren. Bitte schaue dir für weiteren Informationen unsere [Strikes]({{{ linkStrikes }}}) und [Bestraftungen]({{{ linkPunishments }}}) Seiten an. Kurz gesagt vergibt unser Bot 'Strikes' an Leute, die sich schlecht benehmen, und nach einer bestimmten Anzahl von Strikes erhält der User eine Bestrafung. All das ist durch den Benutzer konfigurierbar.",
+			"description": "Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu moderieren. Bitte schaue dir für weiteren Informationen unsere [Strikes]({{{ linkStrikes }}}) und [Bestrafungen]({{{ linkPunishments }}}) Seiten an. Kurz gesagt vergibt unser Bot 'Strikes' an Leute, die sich schlecht benehmen, und nach einer bestimmten Anzahl von Strikes erhält der User eine Bestrafung. All das ist durch den Benutzer konfigurierbar.",
 			"punishments": {
 				"title": "Bestrafungen",
 				"question": {

@@ -15,7 +15,7 @@ Während unser Bot auf deinem Server ist, verfolgen wir jede Einladung, die auf 
 
 ### Moderation
 
-Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu moderieren. Bitte schaue dir für weiteren Informationen unsere [Strikes](/de/modules/moderation/strikes.md) und [Bestraftungen](/de/modules/moderation/punishments.md) Seiten an. Kurz gesagt vergibt unser Bot 'Strikes' an Leute, die sich schlecht benehmen, und nach einer bestimmten Anzahl von Strikes erhält der User eine Bestrafung. All das ist durch den Benutzer konfigurierbar.
+Unser brandneues Moderationssystem ermöglicht es dir viele Dinge automatisch zu moderieren. Bitte schaue dir für weiteren Informationen unsere [Strikes](/de/modules/moderation/strikes.md) und [Bestrafungen](/de/modules/moderation/punishments.md) Seiten an. Kurz gesagt vergibt unser Bot 'Strikes' an Leute, die sich schlecht benehmen, und nach einer bestimmten Anzahl von Strikes erhält der User eine Bestrafung. All das ist durch den Benutzer konfigurierbar.
 
 ## Premium
 
