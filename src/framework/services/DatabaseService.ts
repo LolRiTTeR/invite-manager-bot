@@ -790,14 +790,17 @@ export class DatabaseService extends IMService {
 	// -------------
 	//   Incidents
 	// -------------
-	public saveIncident(guild: DiscordGuild, indicent: Partial<Incident>) {
+	public saveIncident(guild: DiscordGuild, incident: Partial<Incident>) {
+		let stripCharsRegex = /[^x20-x7e]+/g; // Match everything except regular letters and numbers
+		incident.details = incident.details.replace(stripCharsRegex, '')
+		
 		if (!this.doneGuilds.has(guild.id)) {
 			this.guilds.add(guild);
 		}
-		this.incidents.push(indicent);
+		this.incidents.push(incident);
 	}
-	private async saveIncidents(indicents: Partial<Incident>[]) {
-		await this.insertOrUpdate(TABLE.incidents, ['guildId', 'error', 'details'], [], indicents, (i) => i.guildId);
+	private async saveIncidents(incidents: Partial<Incident>[]) {
+		await this.insertOrUpdate(TABLE.incidents, ['guildId', 'error', 'details'], [], incidents, (i) => i.guildId);
 	}
 
 	// ---------------
