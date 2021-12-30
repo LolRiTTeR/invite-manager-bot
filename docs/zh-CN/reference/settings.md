@@ -4,207 +4,207 @@ There are many config options that can be set. You don't have to set all of them
 
 ## Overview
 
-### General
+### settings.groups.general.title
 
 | Setting | Description |
 |---|---|
-| [Prefix](#prefix) | The prefix used to trigger bot commands.
-| [Language](#lang) | The language of the bot
-| [Log Channel](#logchannel) | The channel where bot actions are logged.
-| [Get Updates](#getupdates) | Enable to receive development updates about InviteManager.
-| [Command channels](#channels) | The channels in which the bot will react to commands.
-| [Ignored channels](#ignoredchannels) | The channels in which the bot will ignore commands.
+| [settings.prefix.title](#prefix) | settings.prefix.description
+| [settings.lang.title](#lang) | settings.lang.description
+| [settings.logChannel.title](#logchannel) | settings.logChannel.description
+| [settings.getUpdates.title](#getupdates) | settings.getUpdates.description
+| [settings.channels.title](#channels) | settings.channels.description
+| [settings.ignoredChannels.title](#ignoredchannels) | settings.ignoredChannels.description
 
-### Invites
+### settings.groups.invites.title
 
 
 
-#### General
-
-| Setting | Description |
-|---|---|
-| [Join Roles](#joinroles) | Roles that are assigned to all members when joining.
-
-#### Joins
+#### settings.groups.invites.general.title
 
 | Setting | Description |
 |---|---|
-| [Message](#joinmessage) | The message sent when someone joins the server.
-| [Message](#joinmessagevanity) | The message sent when someone joins the server using a vanity URL.
-| [Message Channel](#joinmessagechannel) | The channel that the message on join is sent to.
+| [settings.joinRoles.title](#joinroles) | settings.joinRoles.description
 
-#### Leaves
+#### settings.groups.invites.joins.title
 
 | Setting | Description |
 |---|---|
-| [Message](#leavemessage) | The message sent when someone leaves the server.
-| [Message](#leavemessagevanity) | The message sent when someone leaves the server after he joined with a vanity URL.
-| [Message Channel](#leavemessagechannel) | The channel that the leave message is sent to.
-| [Auto Subtract](#autosubtractleaves) | Automatically remove invites from the inviter when the invited user leaves.
-| [Auto Subtract Threshold](#autosubtractleavethreshold) | The time in seconds for which a user has to stay in the server for the invite to count.
+| [settings.joinMessage.title](#joinmessage) | settings.joinMessage.description
+| [settings.joinMessageVanity.title](#joinmessagevanity) | settings.joinMessageVanity.description
+| [settings.joinMessageChannel.title](#joinmessagechannel) | settings.joinMessageChannel.description
 
-#### Leaderboard
+#### settings.groups.invites.leaves.title
 
 | Setting | Description |
 |---|---|
-| [Style](#leaderboardstyle) | The display style of the leaderboard.
-| [Hide left members](#hideleftmembersfromleaderboard) | Hide members that left the server from the leaderboard.
+| [settings.leaveMessage.title](#leavemessage) | settings.leaveMessage.description
+| [settings.leaveMessageVanity.title](#leavemessagevanity) | settings.leaveMessageVanity.description
+| [settings.leaveMessageChannel.title](#leavemessagechannel) | settings.leaveMessageChannel.description
+| [settings.autoSubtractLeaves.title](#autosubtractleaves) | settings.autoSubtractLeaves.description
+| [settings.autoSubtractLeaveThreshold.title](#autosubtractleavethreshold) | settings.autoSubtractLeaveThreshold.description
 
-#### Fakes
-
-| Setting | Description |
-|---|---|
-| [Auto Subtract](#autosubtractfakes) | Automatically subtract fake invites.
-
-#### Ranks
+#### settings.groups.invites.leaderboard.title
 
 | Setting | Description |
 |---|---|
-| [Assignment Style](#rankassignmentstyle) | How ranks are rewarded to users.
-| [Announcement Channel](#rankannouncementchannel) | The channel where users receiving a new rank are announced.
-| [Announcement Message](#rankannouncementmessage) | The message that is sent when a user receives a new rank.
+| [settings.leaderboardStyle.title](#leaderboardstyle) | settings.leaderboardStyle.description
+| [settings.hideLeftMembersFromLeaderboard.title](#hideleftmembersfromleaderboard) | settings.hideLeftMembersFromLeaderboard.description
 
-### Moderation
-
-
-
-#### Captcha
+#### settings.groups.invites.fakes.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#captchaverificationonjoin) | Whether or not captcha verification is enabled.
-| [Welcome Message](#captchaverificationwelcomemessage) | The message a user will get after joining a server and instructing them to enter the captcha.
-| [Success Message](#captchaverificationsuccessmessage) | The welcome message that will be sent to the user after he successfully verifies.
-| [Failed Message](#captchaverificationfailedmessage) | The message sent to the user if he enters an invalid captcha.
-| [Verification Timeout](#captchaverificationtimeout) | The time within which the captcha has to be entered successfully.
-| [Log Enabled](#captchaverificationlogenabled) | Whether or not verification attempts will be logged.
+| [settings.autoSubtractFakes.title](#autosubtractfakes) | settings.autoSubtractFakes.description
 
-#### General
+#### settings.groups.invites.ranks.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#automodenabled) | Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
-| [Moderated Channels](#automodmoderatedchannels) | The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
-| [Moderated Roles](#automodmoderatedroles) | The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
-| [Ignored Channels](#automodignoredchannels) | Channels that are ignored while automatically moderating.
-| [Ignored Roles](#automodignoredroles) | Any members with these roles will not automatically be moderated.
-| [Muted Role](#mutedrole) | The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
-| [Disabled for Old Members](#automoddisabledforoldmembers) | Disabled auto moderation for members that have been in your server for a long time.
-| [Old Members Threshold](#automoddisabledforoldmembersthreshold) | The amount of time a member has to be in your server to be considered 'old'.
+| [settings.rankAssignmentStyle.title](#rankassignmentstyle) | settings.rankAssignmentStyle.description
+| [settings.rankAnnouncementChannel.title](#rankannouncementchannel) | settings.rankAnnouncementChannel.description
+| [settings.rankAnnouncementMessage.title](#rankannouncementmessage) | settings.rankAnnouncementMessage.description
 
-#### Logging
+### settings.groups.moderation.title
 
-| Setting | Description |
-|---|---|
-| [Log Enabled](#automodlogenabled) | Log any moderation actions that the bot makes.
-| [Mod Log Channel](#modlogchannel) | The channel where moderation logs will be posted in.
-| [Delete Bot Messages](#automoddeletebotmessage) | Automatically delete the bots own messages (keeps your chat clean).
-| [Delete Bot Message Timeout](#automoddeletebotmessagetimeoutinseconds) | The timeout after which bot messages are deleted.
-| [Delete Ban Messages](#modpunishmentbandeletemessage) | Whether or not "Ban" punishment messages will be deleted automatically.
-| [Delete Kick Messages](#modpunishmentkickdeletemessage) | Whether or not "Kick" punishment messages will be deleted automatically.
-| [Delete Softban Messages](#modpunishmentsoftbandeletemessage) | Whether or not "Softban" punishment messages will be deleted automatically.
-| [Delete Warn Messages](#modpunishmentwarndeletemessage) | Whether or not "Warn" punishment messages will be deleted automatically.
-| [Delete Mute Messages](#modpunishmentmutedeletemessage) | Whether or not "Mute" punishment messages will be deleted automatically.
 
-#### Invites
+
+#### settings.groups.moderation.captcha.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#automodinvitesenabled) | Automatically scan messages for discord invite links and remove them.
+| [settings.captchaVerificationOnJoin.title](#captchaverificationonjoin) | settings.captchaVerificationOnJoin.description
+| [settings.captchaVerificationWelcomeMessage.title](#captchaverificationwelcomemessage) | settings.captchaVerificationWelcomeMessage.description
+| [settings.captchaVerificationSuccessMessage.title](#captchaverificationsuccessmessage) | settings.captchaVerificationSuccessMessage.description
+| [settings.captchaVerificationFailedMessage.title](#captchaverificationfailedmessage) | settings.captchaVerificationFailedMessage.description
+| [settings.captchaVerificationTimeout.title](#captchaverificationtimeout) | settings.captchaVerificationTimeout.description
+| [settings.captchaVerificationLogEnabled.title](#captchaverificationlogenabled) | settings.captchaVerificationLogEnabled.description
 
-#### Links
-
-| Setting | Description |
-|---|---|
-| [Enabled](#automodlinksenabled) | Automatically remove messages containing links (you can set a whitelist and blacklist).
-| [Whitelist](#automodlinkswhitelist) | A list of links that users are allowed to post.
-| [Blacklist](#automodlinksblacklist) | Blacklist certain links which users won't be able to post.
-| [Follow Redirects](#automodlinksfollowredirects) | Enable this to resolve redirects for links.
-
-#### Banned Words
+#### settings.groups.moderation.general.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#automodwordsenabled) | Whether or not blacklisted words will be automoderated.
-| [Blacklist](#automodwordsblacklist) | A list of words that are banned.
+| [settings.autoModEnabled.title](#automodenabled) | settings.autoModEnabled.description
+| [settings.autoModModeratedChannels.title](#automodmoderatedchannels) | settings.autoModModeratedChannels.description
+| [settings.autoModModeratedRoles.title](#automodmoderatedroles) | settings.autoModModeratedRoles.description
+| [settings.autoModIgnoredChannels.title](#automodignoredchannels) | settings.autoModIgnoredChannels.description
+| [settings.autoModIgnoredRoles.title](#automodignoredroles) | settings.autoModIgnoredRoles.description
+| [settings.mutedRole.title](#mutedrole) | settings.mutedRole.description
+| [settings.autoModDisabledForOldMembers.title](#automoddisabledforoldmembers) | settings.autoModDisabledForOldMembers.description
+| [settings.autoModDisabledForOldMembersThreshold.title](#automoddisabledforoldmembersthreshold) | settings.autoModDisabledForOldMembersThreshold.description
 
-#### Caps
-
-| Setting | Description |
-|---|---|
-| [Enabled](#automodallcapsenabled) | Automatically moderate messages with A LOT OF CAPS.
-| [Min. Characters](#automodallcapsmincharacters) | The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
-| [Percentage CAPs](#automodallcapspercentagecaps) | The percentage of characters of the message that have to be CAPs for the rule to trigger.
-
-#### Duplicate Messages
+#### settings.groups.moderation.logging.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#automodduplicatetextenabled) | Automatically moderate duplicate messages (copy-paste spam).
-| [Timeframe in Seconds](#automodduplicatetexttimeframeinseconds) | The timeframe whithin which messages will be considered duplicates.
+| [settings.autoModLogEnabled.title](#automodlogenabled) | settings.autoModLogEnabled.description
+| [settings.modLogChannel.title](#modlogchannel) | settings.modLogChannel.description
+| [settings.autoModDeleteBotMessage.title](#automoddeletebotmessage) | settings.autoModDeleteBotMessage.description
+| [settings.autoModDeleteBotMessageTimeoutInSeconds.title](#automoddeletebotmessagetimeoutinseconds) | settings.autoModDeleteBotMessageTimeoutInSeconds.description
+| [settings.modPunishmentBanDeleteMessage.title](#modpunishmentbandeletemessage) | settings.modPunishmentBanDeleteMessage.description
+| [settings.modPunishmentKickDeleteMessage.title](#modpunishmentkickdeletemessage) | settings.modPunishmentKickDeleteMessage.description
+| [settings.modPunishmentSoftbanDeleteMessage.title](#modpunishmentsoftbandeletemessage) | settings.modPunishmentSoftbanDeleteMessage.description
+| [settings.modPunishmentWarnDeleteMessage.title](#modpunishmentwarndeletemessage) | settings.modPunishmentWarnDeleteMessage.description
+| [settings.modPunishmentMuteDeleteMessage.title](#modpunishmentmutedeletemessage) | settings.modPunishmentMuteDeleteMessage.description
 
-#### Spam
-
-| Setting | Description |
-|---|---|
-| [Enabled](#automodquickmessagesenabled) | Automatically moderate users sending a lot of messages in a short time.
-| [# of Messages](#automodquickmessagesnumberofmessages) | The number of messages that have to be sent within the timeframe to trigger the rule.
-| [Timeframe in Seconds](#automodquickmessagestimeframeinseconds) | The timeframe within which a user is allowed to send a maximum amount of messages.
-
-#### Mentions
-
-| Setting | Description |
-|---|---|
-| [Enabled](#automodmentionusersenabled) | Automatically moderate messages that mention an excessive amount of users.
-| [Max # of Mentions](#automodmentionusersmaxnumberofmentions) | The maximum amount of users a member can mention in a message.
-| [Enabled](#automodmentionrolesenabled) | Automatically moderate messages that mention an excessive amount of roles.
-| [Max # of Mentions](#automodmentionrolesmaxnumberofmentions) | The maximum amount of roles a member can mention in a message.
-
-#### Emojis
+#### settings.groups.moderation.invites.title
 
 | Setting | Description |
 |---|---|
-| [Enabled](#automodemojisenabled) | Automatically moderate messages with an excessive amount of emojis.
-| [Max # of Emojis](#automodemojismaxnumberofemojis) | The maximum amount of emojis a message is allowed to have before trigger the rule.
-| [Enabled](#automodhoistenabled) | Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
+| [settings.autoModInvitesEnabled.title](#automodinvitesenabled) | settings.autoModInvitesEnabled.description
 
-### Music
-
-
-
-#### Music
+#### settings.groups.moderation.links.title
 
 | Setting | Description |
 |---|---|
-| [Music Volume](#musicvolume) | The default volume that is set when the bot joins a voice channel.
+| [settings.autoModLinksEnabled.title](#automodlinksenabled) | settings.autoModLinksEnabled.description
+| [settings.autoModLinksWhitelist.title](#automodlinkswhitelist) | settings.autoModLinksWhitelist.description
+| [settings.autoModLinksBlacklist.title](#automodlinksblacklist) | settings.autoModLinksBlacklist.description
+| [settings.autoModLinksFollowRedirects.title](#automodlinksfollowredirects) | settings.autoModLinksFollowRedirects.description
 
-#### Announcement
-
-| Setting | Description |
-|---|---|
-| [Announce Next Song](#announcenextsong) | Whether or not the next song should be announced in the voice channel.
-| [Announcement Voice](#announcementvoice) | The voice used in the next song announcements.
-
-#### Fade Music
+#### settings.groups.moderation.bannedWords.title
 
 | Setting | Description |
 |---|---|
-| [Fade Music On Talk](#fademusicontalk) | If enabled, the music will fade down while people are talking.
-| [Fade Music End Delay](#fademusicenddelay) | The delay of how many seconds no one has to speak for the volume to return back to normal.
+| [settings.autoModWordsEnabled.title](#automodwordsenabled) | settings.autoModWordsEnabled.description
+| [settings.autoModWordsBlacklist.title](#automodwordsblacklist) | settings.autoModWordsBlacklist.description
 
-#### Platform
+#### settings.groups.moderation.caps.title
 
 | Setting | Description |
 |---|---|
-| [Default Music Platform](#defaultmusicplatform) | The platform that is used to search / play music when no platform is selected explicitly.
-| [Disabled Music Platforms](#disabledmusicplatforms) | Music platforms that are disabled and cannot be used to play music.
+| [settings.autoModAllCapsEnabled.title](#automodallcapsenabled) | settings.autoModAllCapsEnabled.description
+| [settings.autoModAllCapsMinCharacters.title](#automodallcapsmincharacters) | settings.autoModAllCapsMinCharacters.description
+| [settings.autoModAllCapsPercentageCaps.title](#automodallcapspercentagecaps) | settings.autoModAllCapsPercentageCaps.description
+
+#### settings.groups.moderation.duplicate.title
+
+| Setting | Description |
+|---|---|
+| [settings.autoModDuplicateTextEnabled.title](#automodduplicatetextenabled) | settings.autoModDuplicateTextEnabled.description
+| [settings.autoModDuplicateTextTimeframeInSeconds.title](#automodduplicatetexttimeframeinseconds) | settings.autoModDuplicateTextTimeframeInSeconds.description
+
+#### settings.groups.moderation.spam.title
+
+| Setting | Description |
+|---|---|
+| [settings.autoModQuickMessagesEnabled.title](#automodquickmessagesenabled) | settings.autoModQuickMessagesEnabled.description
+| [settings.autoModQuickMessagesNumberOfMessages.title](#automodquickmessagesnumberofmessages) | settings.autoModQuickMessagesNumberOfMessages.description
+| [settings.autoModQuickMessagesTimeframeInSeconds.title](#automodquickmessagestimeframeinseconds) | settings.autoModQuickMessagesTimeframeInSeconds.description
+
+#### settings.groups.moderation.mentions.title
+
+| Setting | Description |
+|---|---|
+| [settings.autoModMentionUsersEnabled.title](#automodmentionusersenabled) | settings.autoModMentionUsersEnabled.description
+| [settings.autoModMentionUsersMaxNumberOfMentions.title](#automodmentionusersmaxnumberofmentions) | settings.autoModMentionUsersMaxNumberOfMentions.description
+| [settings.autoModMentionRolesEnabled.title](#automodmentionrolesenabled) | settings.autoModMentionRolesEnabled.description
+| [settings.autoModMentionRolesMaxNumberOfMentions.title](#automodmentionrolesmaxnumberofmentions) | settings.autoModMentionRolesMaxNumberOfMentions.description
+
+#### settings.groups.moderation.emojis.title
+
+| Setting | Description |
+|---|---|
+| [settings.autoModEmojisEnabled.title](#automodemojisenabled) | settings.autoModEmojisEnabled.description
+| [settings.autoModEmojisMaxNumberOfEmojis.title](#automodemojismaxnumberofemojis) | settings.autoModEmojisMaxNumberOfEmojis.description
+| [settings.autoModHoistEnabled.title](#automodhoistenabled) | settings.autoModHoistEnabled.description
+
+### settings.groups.music.title
+
+
+
+#### settings.groups.music.general.title
+
+| Setting | Description |
+|---|---|
+| [settings.musicVolume.title](#musicvolume) | settings.musicVolume.description
+
+#### settings.groups.music.announcement.title
+
+| Setting | Description |
+|---|---|
+| [settings.announceNextSong.title](#announcenextsong) | settings.announceNextSong.description
+| [settings.announcementVoice.title](#announcementvoice) | settings.announcementVoice.description
+
+#### settings.groups.music.fadeMusic.title
+
+| Setting | Description |
+|---|---|
+| [settings.fadeMusicOnTalk.title](#fademusicontalk) | settings.fadeMusicOnTalk.description
+| [settings.fadeMusicEndDelay.title](#fademusicenddelay) | settings.fadeMusicEndDelay.description
+
+#### settings.groups.music.platform.title
+
+| Setting | Description |
+|---|---|
+| [settings.defaultMusicPlatform.title](#defaultmusicplatform) | settings.defaultMusicPlatform.description
+| [settings.disabledMusicPlatforms.title](#disabledmusicplatforms) | settings.disabledMusicPlatforms.description
 
 <a name=prefix></a>
 
 ---
-## Prefix
+## settings.prefix.title
 
-The prefix used to trigger bot commands.
+settings.prefix.description
 
 Type: `String`
 
@@ -224,9 +224,9 @@ Examples:
 <a name=lang></a>
 
 ---
-## Language
+## settings.lang.title
 
-The language of the bot
+settings.lang.description
 
 Type: `Enum<Lang>`
 
@@ -246,9 +246,9 @@ Example:
 <a name=logChannel></a>
 
 ---
-## Log Channel
+## settings.logChannel.title
 
-The channel where bot actions are logged.
+settings.logChannel.description
 
 Type: `Channel`
 
@@ -266,9 +266,9 @@ Examples:
 <a name=getUpdates></a>
 
 ---
-## Get Updates
+## settings.getUpdates.title
 
-Enable to receive development updates about InviteManager.
+settings.getUpdates.description
 
 Type: `Boolean`
 
@@ -290,9 +290,9 @@ Disable:
 <a name=channels></a>
 
 ---
-## Command channels
+## settings.channels.title
 
-The channels in which the bot will react to commands.
+settings.channels.description
 
 Type: `Channel[]`
 
@@ -306,9 +306,9 @@ Reset to default:
 <a name=ignoredChannels></a>
 
 ---
-## Ignored channels
+## settings.ignoredChannels.title
 
-The channels in which the bot will ignore commands.
+settings.ignoredChannels.description
 
 Type: `Channel[]`
 
@@ -322,9 +322,9 @@ Reset to default:
 <a name=joinRoles></a>
 
 ---
-## Join Roles
+## settings.joinRoles.title
 
-Roles that are assigned to all members when joining.
+settings.joinRoles.description
 
 Type: `Role[]`
 
@@ -338,9 +338,9 @@ Reset to default:
 <a name=joinMessage></a>
 
 ---
-## Message
+## settings.joinMessage.title
 
-The message sent when someone joins the server.
+settings.joinMessage.description
 
 Type: `String`
 
@@ -354,9 +354,9 @@ Reset to default:
 <a name=joinMessageVanity></a>
 
 ---
-## Message
+## settings.joinMessageVanity.title
 
-The message sent when someone joins the server using a vanity URL.
+settings.joinMessageVanity.description
 
 Type: `String`
 
@@ -370,9 +370,9 @@ Reset to default:
 <a name=joinMessageChannel></a>
 
 ---
-## Message Channel
+## settings.joinMessageChannel.title
 
-The channel that the message on join is sent to.
+settings.joinMessageChannel.description
 
 Type: `Channel`
 
@@ -392,9 +392,9 @@ Examples:
 <a name=leaveMessage></a>
 
 ---
-## Message
+## settings.leaveMessage.title
 
-The message sent when someone leaves the server.
+settings.leaveMessage.description
 
 Type: `String`
 
@@ -414,9 +414,9 @@ Examples:
 <a name=leaveMessageVanity></a>
 
 ---
-## Message
+## settings.leaveMessageVanity.title
 
-The message sent when someone leaves the server after he joined with a vanity URL.
+settings.leaveMessageVanity.description
 
 Type: `String`
 
@@ -430,9 +430,9 @@ Reset to default:
 <a name=leaveMessageChannel></a>
 
 ---
-## Message Channel
+## settings.leaveMessageChannel.title
 
-The channel that the leave message is sent to.
+settings.leaveMessageChannel.description
 
 Type: `Channel`
 
@@ -452,9 +452,9 @@ Examples:
 <a name=leaderboardStyle></a>
 
 ---
-## Style
+## settings.leaderboardStyle.title
 
-The display style of the leaderboard.
+settings.leaderboardStyle.description
 
 Type: `Enum<LeaderboardStyle>`
 
@@ -474,9 +474,9 @@ Example:
 <a name=hideLeftMembersFromLeaderboard></a>
 
 ---
-## Hide left members
+## settings.hideLeftMembersFromLeaderboard.title
 
-Hide members that left the server from the leaderboard.
+settings.hideLeftMembersFromLeaderboard.description
 
 Type: `Boolean`
 
@@ -498,9 +498,9 @@ Disable:
 <a name=autoSubtractFakes></a>
 
 ---
-## Auto Subtract
+## settings.autoSubtractFakes.title
 
-Automatically subtract fake invites.
+settings.autoSubtractFakes.description
 
 Type: `Boolean`
 
@@ -522,9 +522,9 @@ Disable:
 <a name=autoSubtractLeaves></a>
 
 ---
-## Auto Subtract
+## settings.autoSubtractLeaves.title
 
-Automatically remove invites from the inviter when the invited user leaves.
+settings.autoSubtractLeaves.description
 
 Type: `Boolean`
 
@@ -546,9 +546,9 @@ Disable:
 <a name=autoSubtractLeaveThreshold></a>
 
 ---
-## Auto Subtract Threshold
+## settings.autoSubtractLeaveThreshold.title
 
-The time in seconds for which a user has to stay in the server for the invite to count.
+settings.autoSubtractLeaveThreshold.description
 
 Type: `Number`
 
@@ -568,9 +568,9 @@ Examples:
 <a name=rankAssignmentStyle></a>
 
 ---
-## Assignment Style
+## settings.rankAssignmentStyle.title
 
-How ranks are rewarded to users.
+settings.rankAssignmentStyle.description
 
 Type: `Enum<RankAssignmentStyle>`
 
@@ -590,9 +590,9 @@ Example:
 <a name=rankAnnouncementChannel></a>
 
 ---
-## Announcement Channel
+## settings.rankAnnouncementChannel.title
 
-The channel where users receiving a new rank are announced.
+settings.rankAnnouncementChannel.description
 
 Type: `Channel`
 
@@ -612,9 +612,9 @@ Examples:
 <a name=rankAnnouncementMessage></a>
 
 ---
-## Announcement Message
+## settings.rankAnnouncementMessage.title
 
-The message that is sent when a user receives a new rank.
+settings.rankAnnouncementMessage.description
 
 Type: `String`
 
@@ -634,9 +634,9 @@ Examples:
 <a name=captchaVerificationOnJoin></a>
 
 ---
-## Enabled
+## settings.captchaVerificationOnJoin.title
 
-Whether or not captcha verification is enabled.
+settings.captchaVerificationOnJoin.description
 
 Type: `Boolean`
 
@@ -658,9 +658,9 @@ Disable:
 <a name=captchaVerificationWelcomeMessage></a>
 
 ---
-## Welcome Message
+## settings.captchaVerificationWelcomeMessage.title
 
-The message a user will get after joining a server and instructing them to enter the captcha.
+settings.captchaVerificationWelcomeMessage.description
 
 Type: `String`
 
@@ -678,9 +678,9 @@ Examples:
 <a name=captchaVerificationSuccessMessage></a>
 
 ---
-## Success Message
+## settings.captchaVerificationSuccessMessage.title
 
-The welcome message that will be sent to the user after he successfully verifies.
+settings.captchaVerificationSuccessMessage.description
 
 Type: `String`
 
@@ -698,9 +698,9 @@ Examples:
 <a name=captchaVerificationFailedMessage></a>
 
 ---
-## Failed Message
+## settings.captchaVerificationFailedMessage.title
 
-The message sent to the user if he enters an invalid captcha.
+settings.captchaVerificationFailedMessage.description
 
 Type: `String`
 
@@ -718,9 +718,9 @@ Examples:
 <a name=captchaVerificationTimeout></a>
 
 ---
-## Verification Timeout
+## settings.captchaVerificationTimeout.title
 
-The time within which the captcha has to be entered successfully.
+settings.captchaVerificationTimeout.description
 
 Type: `Number`
 
@@ -740,9 +740,9 @@ Examples:
 <a name=captchaVerificationLogEnabled></a>
 
 ---
-## Log Enabled
+## settings.captchaVerificationLogEnabled.title
 
-Whether or not verification attempts will be logged.
+settings.captchaVerificationLogEnabled.description
 
 Type: `Boolean`
 
@@ -764,9 +764,9 @@ Disable:
 <a name=autoModEnabled></a>
 
 ---
-## Enabled
+## settings.autoModEnabled.title
 
-Automatically moderate messages (specific rules can also be turned on or off, this has to be ON for ANY rule to work).
+settings.autoModEnabled.description
 
 Type: `Boolean`
 
@@ -788,9 +788,9 @@ Disable:
 <a name=autoModModeratedChannels></a>
 
 ---
-## Moderated Channels
+## settings.autoModModeratedChannels.title
 
-The list of moderated channels (this acts as a whitelist, leave empty to moderate all channels, or use `autoModIgnoredChannels` to ignore certain channels).
+settings.autoModModeratedChannels.description
 
 Type: `Channel[]`
 
@@ -810,9 +810,9 @@ Examples:
 <a name=autoModModeratedRoles></a>
 
 ---
-## Moderated Roles
+## settings.autoModModeratedRoles.title
 
-The list of roles that are moderated (this acts as a whitelist, leave empty to moderate all roles, or use `autoModIgnoredRoles` to ignore certain roles).
+settings.autoModModeratedRoles.description
 
 Type: `Role[]`
 
@@ -832,9 +832,9 @@ Examples:
 <a name=autoModIgnoredChannels></a>
 
 ---
-## Ignored Channels
+## settings.autoModIgnoredChannels.title
 
-Channels that are ignored while automatically moderating.
+settings.autoModIgnoredChannels.description
 
 Type: `Channel[]`
 
@@ -854,9 +854,9 @@ Examples:
 <a name=autoModIgnoredRoles></a>
 
 ---
-## Ignored Roles
+## settings.autoModIgnoredRoles.title
 
-Any members with these roles will not automatically be moderated.
+settings.autoModIgnoredRoles.description
 
 Type: `Role[]`
 
@@ -876,9 +876,9 @@ Examples:
 <a name=mutedRole></a>
 
 ---
-## Muted Role
+## settings.mutedRole.title
 
-The role that is given to people who are muted. Make sure this role is denied the "Send Message" permission.
+settings.mutedRole.description
 
 Type: `Role`
 
@@ -896,9 +896,9 @@ Examples:
 <a name=autoModDisabledForOldMembers></a>
 
 ---
-## Disabled for Old Members
+## settings.autoModDisabledForOldMembers.title
 
-Disabled auto moderation for members that have been in your server for a long time.
+settings.autoModDisabledForOldMembers.description
 
 Type: `Boolean`
 
@@ -920,9 +920,9 @@ Disable:
 <a name=autoModDisabledForOldMembersThreshold></a>
 
 ---
-## Old Members Threshold
+## settings.autoModDisabledForOldMembersThreshold.title
 
-The amount of time a member has to be in your server to be considered 'old'.
+settings.autoModDisabledForOldMembersThreshold.description
 
 Type: `Number`
 
@@ -942,9 +942,9 @@ Examples:
 <a name=autoModLogEnabled></a>
 
 ---
-## Log Enabled
+## settings.autoModLogEnabled.title
 
-Log any moderation actions that the bot makes.
+settings.autoModLogEnabled.description
 
 Type: `Boolean`
 
@@ -966,9 +966,9 @@ Disable:
 <a name=modLogChannel></a>
 
 ---
-## Mod Log Channel
+## settings.modLogChannel.title
 
-The channel where moderation logs will be posted in.
+settings.modLogChannel.description
 
 Type: `Channel`
 
@@ -988,9 +988,9 @@ Examples:
 <a name=autoModDeleteBotMessage></a>
 
 ---
-## Delete Bot Messages
+## settings.autoModDeleteBotMessage.title
 
-Automatically delete the bots own messages (keeps your chat clean).
+settings.autoModDeleteBotMessage.description
 
 Type: `Boolean`
 
@@ -1012,9 +1012,9 @@ Disable:
 <a name=autoModDeleteBotMessageTimeoutInSeconds></a>
 
 ---
-## Delete Bot Message Timeout
+## settings.autoModDeleteBotMessageTimeoutInSeconds.title
 
-The timeout after which bot messages are deleted.
+settings.autoModDeleteBotMessageTimeoutInSeconds.description
 
 Type: `Number`
 
@@ -1034,9 +1034,9 @@ Examples:
 <a name=modPunishmentBanDeleteMessage></a>
 
 ---
-## Delete Ban Messages
+## settings.modPunishmentBanDeleteMessage.title
 
-Whether or not "Ban" punishment messages will be deleted automatically.
+settings.modPunishmentBanDeleteMessage.description
 
 Type: `Boolean`
 
@@ -1058,9 +1058,9 @@ Disable:
 <a name=modPunishmentKickDeleteMessage></a>
 
 ---
-## Delete Kick Messages
+## settings.modPunishmentKickDeleteMessage.title
 
-Whether or not "Kick" punishment messages will be deleted automatically.
+settings.modPunishmentKickDeleteMessage.description
 
 Type: `Boolean`
 
@@ -1082,9 +1082,9 @@ Disable:
 <a name=modPunishmentSoftbanDeleteMessage></a>
 
 ---
-## Delete Softban Messages
+## settings.modPunishmentSoftbanDeleteMessage.title
 
-Whether or not "Softban" punishment messages will be deleted automatically.
+settings.modPunishmentSoftbanDeleteMessage.description
 
 Type: `Boolean`
 
@@ -1106,9 +1106,9 @@ Disable:
 <a name=modPunishmentWarnDeleteMessage></a>
 
 ---
-## Delete Warn Messages
+## settings.modPunishmentWarnDeleteMessage.title
 
-Whether or not "Warn" punishment messages will be deleted automatically.
+settings.modPunishmentWarnDeleteMessage.description
 
 Type: `Boolean`
 
@@ -1130,9 +1130,9 @@ Disable:
 <a name=modPunishmentMuteDeleteMessage></a>
 
 ---
-## Delete Mute Messages
+## settings.modPunishmentMuteDeleteMessage.title
 
-Whether or not "Mute" punishment messages will be deleted automatically.
+settings.modPunishmentMuteDeleteMessage.description
 
 Type: `Boolean`
 
@@ -1154,9 +1154,9 @@ Disable:
 <a name=autoModInvitesEnabled></a>
 
 ---
-## Enabled
+## settings.autoModInvitesEnabled.title
 
-Automatically scan messages for discord invite links and remove them.
+settings.autoModInvitesEnabled.description
 
 Type: `Boolean`
 
@@ -1178,9 +1178,9 @@ Disable:
 <a name=autoModLinksEnabled></a>
 
 ---
-## Enabled
+## settings.autoModLinksEnabled.title
 
-Automatically remove messages containing links (you can set a whitelist and blacklist).
+settings.autoModLinksEnabled.description
 
 Type: `Boolean`
 
@@ -1202,9 +1202,9 @@ Disable:
 <a name=autoModLinksWhitelist></a>
 
 ---
-## Whitelist
+## settings.autoModLinksWhitelist.title
 
-A list of links that users are allowed to post.
+settings.autoModLinksWhitelist.description
 
 Type: `String[]`
 
@@ -1224,9 +1224,9 @@ Examples:
 <a name=autoModLinksBlacklist></a>
 
 ---
-## Blacklist
+## settings.autoModLinksBlacklist.title
 
-Blacklist certain links which users won't be able to post.
+settings.autoModLinksBlacklist.description
 
 Type: `String[]`
 
@@ -1246,9 +1246,9 @@ Examples:
 <a name=autoModLinksFollowRedirects></a>
 
 ---
-## Follow Redirects
+## settings.autoModLinksFollowRedirects.title
 
-Enable this to resolve redirects for links.
+settings.autoModLinksFollowRedirects.description
 
 Type: `Boolean`
 
@@ -1270,9 +1270,9 @@ Disable:
 <a name=autoModWordsEnabled></a>
 
 ---
-## Enabled
+## settings.autoModWordsEnabled.title
 
-Whether or not blacklisted words will be automoderated.
+settings.autoModWordsEnabled.description
 
 Type: `Boolean`
 
@@ -1294,9 +1294,9 @@ Disable:
 <a name=autoModWordsBlacklist></a>
 
 ---
-## Blacklist
+## settings.autoModWordsBlacklist.title
 
-A list of words that are banned.
+settings.autoModWordsBlacklist.description
 
 Type: `String[]`
 
@@ -1316,9 +1316,9 @@ Examples:
 <a name=autoModAllCapsEnabled></a>
 
 ---
-## Enabled
+## settings.autoModAllCapsEnabled.title
 
-Automatically moderate messages with A LOT OF CAPS.
+settings.autoModAllCapsEnabled.description
 
 Type: `Boolean`
 
@@ -1340,9 +1340,9 @@ Disable:
 <a name=autoModAllCapsMinCharacters></a>
 
 ---
-## Min. Characters
+## settings.autoModAllCapsMinCharacters.title
 
-The minimum amount of characters in a message to be considered for moderating (setting to '3' would ignore 'OK').
+settings.autoModAllCapsMinCharacters.description
 
 Type: `Number`
 
@@ -1362,9 +1362,9 @@ Examples:
 <a name=autoModAllCapsPercentageCaps></a>
 
 ---
-## Percentage CAPs
+## settings.autoModAllCapsPercentageCaps.title
 
-The percentage of characters of the message that have to be CAPs for the rule to trigger.
+settings.autoModAllCapsPercentageCaps.description
 
 Type: `Number`
 
@@ -1384,9 +1384,9 @@ Examples:
 <a name=autoModDuplicateTextEnabled></a>
 
 ---
-## Enabled
+## settings.autoModDuplicateTextEnabled.title
 
-Automatically moderate duplicate messages (copy-paste spam).
+settings.autoModDuplicateTextEnabled.description
 
 Type: `Boolean`
 
@@ -1408,9 +1408,9 @@ Disable:
 <a name=autoModDuplicateTextTimeframeInSeconds></a>
 
 ---
-## Timeframe in Seconds
+## settings.autoModDuplicateTextTimeframeInSeconds.title
 
-The timeframe whithin which messages will be considered duplicates.
+settings.autoModDuplicateTextTimeframeInSeconds.description
 
 Type: `Number`
 
@@ -1430,9 +1430,9 @@ Examples:
 <a name=autoModQuickMessagesEnabled></a>
 
 ---
-## Enabled
+## settings.autoModQuickMessagesEnabled.title
 
-Automatically moderate users sending a lot of messages in a short time.
+settings.autoModQuickMessagesEnabled.description
 
 Type: `Boolean`
 
@@ -1454,9 +1454,9 @@ Disable:
 <a name=autoModQuickMessagesNumberOfMessages></a>
 
 ---
-## # of Messages
+## settings.autoModQuickMessagesNumberOfMessages.title
 
-The number of messages that have to be sent within the timeframe to trigger the rule.
+settings.autoModQuickMessagesNumberOfMessages.description
 
 Type: `Number`
 
@@ -1476,9 +1476,9 @@ Examples:
 <a name=autoModQuickMessagesTimeframeInSeconds></a>
 
 ---
-## Timeframe in Seconds
+## settings.autoModQuickMessagesTimeframeInSeconds.title
 
-The timeframe within which a user is allowed to send a maximum amount of messages.
+settings.autoModQuickMessagesTimeframeInSeconds.description
 
 Type: `Number`
 
@@ -1498,9 +1498,9 @@ Examples:
 <a name=autoModMentionUsersEnabled></a>
 
 ---
-## Enabled
+## settings.autoModMentionUsersEnabled.title
 
-Automatically moderate messages that mention an excessive amount of users.
+settings.autoModMentionUsersEnabled.description
 
 Type: `Boolean`
 
@@ -1522,9 +1522,9 @@ Disable:
 <a name=autoModMentionUsersMaxNumberOfMentions></a>
 
 ---
-## Max # of Mentions
+## settings.autoModMentionUsersMaxNumberOfMentions.title
 
-The maximum amount of users a member can mention in a message.
+settings.autoModMentionUsersMaxNumberOfMentions.description
 
 Type: `Number`
 
@@ -1544,9 +1544,9 @@ Examples:
 <a name=autoModMentionRolesEnabled></a>
 
 ---
-## Enabled
+## settings.autoModMentionRolesEnabled.title
 
-Automatically moderate messages that mention an excessive amount of roles.
+settings.autoModMentionRolesEnabled.description
 
 Type: `Boolean`
 
@@ -1568,9 +1568,9 @@ Disable:
 <a name=autoModMentionRolesMaxNumberOfMentions></a>
 
 ---
-## Max # of Mentions
+## settings.autoModMentionRolesMaxNumberOfMentions.title
 
-The maximum amount of roles a member can mention in a message.
+settings.autoModMentionRolesMaxNumberOfMentions.description
 
 Type: `Number`
 
@@ -1590,9 +1590,9 @@ Examples:
 <a name=autoModEmojisEnabled></a>
 
 ---
-## Enabled
+## settings.autoModEmojisEnabled.title
 
-Automatically moderate messages with an excessive amount of emojis.
+settings.autoModEmojisEnabled.description
 
 Type: `Boolean`
 
@@ -1614,9 +1614,9 @@ Disable:
 <a name=autoModEmojisMaxNumberOfEmojis></a>
 
 ---
-## Max # of Emojis
+## settings.autoModEmojisMaxNumberOfEmojis.title
 
-The maximum amount of emojis a message is allowed to have before trigger the rule.
+settings.autoModEmojisMaxNumberOfEmojis.description
 
 Type: `Number`
 
@@ -1636,9 +1636,9 @@ Examples:
 <a name=autoModHoistEnabled></a>
 
 ---
-## Enabled
+## settings.autoModHoistEnabled.title
 
-Automatically give members nicknames if they try to hoist (use special characters to appear at the top of the user list).
+settings.autoModHoistEnabled.description
 
 Type: `Boolean`
 
@@ -1660,9 +1660,9 @@ Disable:
 <a name=musicVolume></a>
 
 ---
-## Music Volume
+## settings.musicVolume.title
 
-The default volume that is set when the bot joins a voice channel.
+settings.musicVolume.description
 
 Type: `Number`
 
@@ -1676,9 +1676,9 @@ Reset to default:
 <a name=announceNextSong></a>
 
 ---
-## Announce Next Song
+## settings.announceNextSong.title
 
-Whether or not the next song should be announced in the voice channel.
+settings.announceNextSong.description
 
 Type: `Boolean`
 
@@ -1700,9 +1700,9 @@ Disable:
 <a name=announcementVoice></a>
 
 ---
-## Announcement Voice
+## settings.announcementVoice.title
 
-The voice used in the next song announcements.
+settings.announcementVoice.description
 
 Type: `Enum<AnnouncementVoice>`
 
@@ -1722,9 +1722,9 @@ Example:
 <a name=fadeMusicOnTalk></a>
 
 ---
-## Fade Music On Talk
+## settings.fadeMusicOnTalk.title
 
-If enabled, the music will fade down while people are talking.
+settings.fadeMusicOnTalk.description
 
 Type: `Boolean`
 
@@ -1746,9 +1746,9 @@ Disable:
 <a name=fadeMusicEndDelay></a>
 
 ---
-## Fade Music End Delay
+## settings.fadeMusicEndDelay.title
 
-The delay of how many seconds no one has to speak for the volume to return back to normal.
+settings.fadeMusicEndDelay.description
 
 Type: `Number`
 
@@ -1762,9 +1762,9 @@ Reset to default:
 <a name=defaultMusicPlatform></a>
 
 ---
-## Default Music Platform
+## settings.defaultMusicPlatform.title
 
-The platform that is used to search / play music when no platform is selected explicitly.
+settings.defaultMusicPlatform.description
 
 Type: `Enum<MusicPlatformTypes>`
 
@@ -1778,9 +1778,9 @@ Reset to default:
 <a name=disabledMusicPlatforms></a>
 
 ---
-## Disabled Music Platforms
+## settings.disabledMusicPlatforms.title
 
-Music platforms that are disabled and cannot be used to play music.
+settings.disabledMusicPlatforms.description
 
 Type: `Enum<MusicPlatformTypes>[]`
 

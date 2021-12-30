@@ -791,9 +791,6 @@ export class DatabaseService extends IMService {
 	//   Incidents
 	// -------------
 	public saveIncident(guild: DiscordGuild, incident: Partial<Incident>) {
-		let stripCharsRegex = /[^x20-x7e]+/g; // Match everything except regular letters and numbers
-		incident.details = incident.details.replace(stripCharsRegex, '')
-		
 		if (!this.doneGuilds.has(guild.id)) {
 			this.guilds.add(guild);
 		}
