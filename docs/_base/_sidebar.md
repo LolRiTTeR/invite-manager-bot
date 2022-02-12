@@ -40,3 +40,4 @@
   - [§{other.changelog.title}](/§{lang}/other/changelog.md)
   - [§{other.roadmap.title}](/§{lang}/other/roadmap.md)
   - [§{other.openSource.title}](/§{lang}/other/open-source.md)
+  - [Privacy Policy](/§{lang}/other/privacypolicy.md)

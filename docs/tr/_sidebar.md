@@ -40,3 +40,4 @@
   - [Değişiklikler](/tr/other/changelog.md)
   - [Harita yolu](/tr/other/roadmap.md)
   - [Açık kaynak](/tr/other/open-source.md)
+  - [Privacy Policy](/tr/other/privacypolicy.md)

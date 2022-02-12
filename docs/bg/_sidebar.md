@@ -40,3 +40,4 @@
   - [Промени](/bg/other/changelog.md)
   - [Пътна карта](/bg/other/roadmap.md)
   - [Отворен код](/bg/other/open-source.md)
+  - [Privacy Policy](/bg/other/privacypolicy.md)

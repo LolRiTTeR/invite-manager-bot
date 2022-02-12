@@ -40,3 +40,4 @@
   - [Dziennik zmian](/pl/other/changelog.md)
   - [Mapa](/pl/other/roadmap.md)
   - [Otwarte źródło](/pl/other/open-source.md)
+  - [Privacy Policy](/pl/other/privacypolicy.md)

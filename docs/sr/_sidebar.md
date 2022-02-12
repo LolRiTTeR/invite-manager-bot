@@ -40,3 +40,4 @@
   - [Changelog](/sr/other/changelog.md)
   - [Roadmap](/sr/other/roadmap.md)
   - [Open Source](/sr/other/open-source.md)
+  - [Privacy Policy](/sr/other/privacypolicy.md)

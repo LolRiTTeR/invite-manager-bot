@@ -40,3 +40,4 @@
   - [チェンジログ](/ja/other/changelog.md)
   - [ロードマップ](/ja/other/roadmap.md)
   - [オープン-ソース](/ja/other/open-source.md)
+  - [Privacy Policy](/ja/other/privacypolicy.md)

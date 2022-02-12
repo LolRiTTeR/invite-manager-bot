@@ -40,3 +40,4 @@
   - [Notes de mises à jour](/fr/other/changelog.md)
   - [Feuille de route](/fr/other/roadmap.md)
   - [Open Source](/fr/other/open-source.md)
+  - [Privacy Policy](/fr/other/privacypolicy.md)

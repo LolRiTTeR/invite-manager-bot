@@ -40,3 +40,4 @@
   - [更新日誌](/zh-TW/other/changelog.md)
   - [未來規劃](/zh-TW/other/roadmap.md)
   - [開放式原碼](/zh-TW/other/open-source.md)
+  - [Privacy Policy](/zh-TW/other/privacypolicy.md)

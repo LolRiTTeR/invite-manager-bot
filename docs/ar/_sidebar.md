@@ -40,3 +40,4 @@
   - [التحديثات](/ar/other/changelog.md)
   - [خريطة الطريق](/ar/other/roadmap.md)
   - [المصدر المفتوح](/ar/other/open-source.md)
+  - [Privacy Policy](/ar/other/privacypolicy.md)

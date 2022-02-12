@@ -40,3 +40,4 @@
   - [更新记录](/zh-CN/other/changelog.md)
   - [Roadmap](/zh-CN/other/roadmap.md)
   - [Open Source](/zh-CN/other/open-source.md)
+  - [Privacy Policy](/zh-CN/other/privacypolicy.md)
