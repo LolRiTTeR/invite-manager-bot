@@ -187,7 +187,7 @@ export class CommandsService extends IMService {
 				if (isInitialMessage) {
 					const initialMessage =
 						`Hi there, thanks for writing me!\n\n` +
-						`To invite me to your own server, just click here: https://invitemanager.co/add-bot?origin=initial-dm \n\n` +
+						`To invite me to your own server, just click here: https://invitemanager.cc/add-bot?origin=initial-dm&bot=blue \n\n` +
 						`If you need help, you can either write me here (try "help") or join our discord support server: ` +
 						`https://discord.gg/Z7rtDpe.\n\nHave a good day!`;
 					const embed = this.client.msg.createEmbed({
