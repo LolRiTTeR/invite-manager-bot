@@ -42,7 +42,7 @@ interface GuildAuditLogOnlyInvites extends GuildAuditLog {
 	entries: GuildAuditLogOnlyInvitesEntries[];
 }
 
-const GUILDS_IN_PARALLEL = os.cpus().length;
+const GUILDS_IN_PARALLEL = 5;
 const INVITE_CREATE = 40;
 
 export class TrackingService extends IMService {
@@ -133,7 +133,7 @@ export class TrackingService extends IMService {
 					this.startupDone();
 				}
 
-				setTimeout(func, 0);
+				setTimeout(func, 1500);
 			};
 			// tslint:disable-next-line: no-floating-promises
 			func();

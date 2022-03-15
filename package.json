@@ -41,7 +41,7 @@
 		"chart.js": "^3.5.1",
 		"chartjs-node-canvas": "^4.0.1",
 		"chartjs-plugin-datalabels": "2.0.0",
-		"eris": "0.15.1",
+		"eris": "^0.15.1",
 		"eris-lavalink": "github:SideProjectGuys/eris-lavalink#8e3156a968033c1f037b5424dd46aacb8af76436",
 		"erlpack": "github:abalabahaha/erlpack",
 		"eventemitter3": "4.0.7",
@@ -78,6 +78,6 @@
 		"typestrict": "1.0.2"
 	},
 	"engines": {
-		"node": ">=10.16.3 <12"
+		"node": ">=14.18.1"
 	}
 }

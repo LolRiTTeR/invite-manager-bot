@@ -43,7 +43,7 @@ export default class extends Command {
 		// Shard info
 		embed.fields.push({
 			name: t('cmd.botInfo.shards.current'),
-			value: `${this.client.shardId} (${this.client.db.getDbShardForGuild(guild.id)})`,
+			value: `${this.client.shardId} (${this.client.shardCount})`,
 			inline: true
 		});
 

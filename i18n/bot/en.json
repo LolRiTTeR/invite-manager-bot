@@ -1220,7 +1220,8 @@
 		"missing": "InviteManager is missing the permissions {{{ permissions }}} in {{{ channel }}}",
 		"banMembers": "Ban Members",
 		"kickMembers": "Kick Members",
-		"memberError": "Could not get member"
+		"memberError": "Could not get member",
+		"manageChannels": "permissions.manageChannels"
 	},
 	"resolvers": {
 		"boolean": {
