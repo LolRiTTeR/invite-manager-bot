@@ -21,27 +21,27 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/SideProjectGuys/invite-manager-bot.git"
+		"url": "git+https://github.com/LolRiTTeR/invite-manager-bot.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/SideProjectGuys/invite-manager-bot/issues"
+		"url": "https://github.com/LolRiTTeR/invite-manager-bot/issues"
 	},
 	"homepage": "https://invitemanager.cc/",
 	"dependencies": {
 		"@sentry/node": "6.13.3",
-		"@types/offscreencanvas": "^2019.6.4",
-		"@types/resemblejs": "^3.2.1",
+		"@types/offscreencanvas": "2019.6.4",
+		"@types/resemblejs": "3.2.1",
 		"amqplib": "0.8.0",
-		"axios": "^0.23.0",
+		"axios": "0.23.0",
 		"bufferutil": "4.0.5",
 		"canvas": "2.8.0",
 		"chalk": "4.1.2",
-		"chart.js": "^3.5.1",
-		"chartjs-node-canvas": "^4.0.1",
+		"chart.js": "3.5.1",
+		"chartjs-node-canvas": "4.0.1",
 		"chartjs-plugin-datalabels": "2.0.0",
-		"eris": "^0.15.1",
+		"eris": "0.15.1",
 		"eris-lavalink": "github:SideProjectGuys/eris-lavalink#8e3156a968033c1f037b5424dd46aacb8af76436",
 		"erlpack": "github:abalabahaha/erlpack",
 		"eventemitter3": "4.0.7",
@@ -62,7 +62,7 @@
 		"@types/i18n": "0.13.1",
 		"@types/mysql2": "github:types/mysql2",
 		"@types/node": "16.11.0",
-		"@types/ws": "^8.2.0",
+		"@types/ws": "8.2.0",
 		"@types/xmldoc": "1.1.6",
 		"cross-env": "7.0.3",
 		"docsify": "4.12.1",
