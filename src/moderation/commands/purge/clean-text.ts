@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { Message, TextableChannel } from 'eris';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -46,7 +46,8 @@ export default class extends Command {
 		const messages = await message.channel.getMessages(Math.min(numberOfMessages, 100), message.id);
 
 		const searchStrings = text.split('+');
-		const messagesToBeDeleted = messages.filter((msg) => {
+		// @ts-ignore: TODO - Command still works
+		const messagesToBeDeleted = messages.filter((msg: any) => {
 			return searchStrings.some((s) => msg.content.includes(s));
 		});
 
@@ -55,7 +56,7 @@ export default class extends Command {
 		try {
 			await this.client.deleteMessages(
 				message.channel.id,
-				messagesToBeDeleted.map((m) => m.id)
+				messagesToBeDeleted.map((m: any) => m.id)
 			);
 
 			embed.title = t('cmd.clean.title');

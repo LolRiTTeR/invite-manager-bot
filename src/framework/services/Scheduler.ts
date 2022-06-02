@@ -139,7 +139,7 @@ export class SchedulerService extends IMService {
 			roleId,
 			override ? override.allow | newAllow : newAllow,
 			override ? override.deny & NOT_SEND_MESSAGES : 0,
-			'role',
+			0, // Role
 			'Channel lockdown'
 		);
 	}

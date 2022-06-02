@@ -45,7 +45,8 @@ export default class extends Command {
 
 		const messages = await message.channel.getMessages(Math.min(numberOfMessages, 100), message.id);
 
-		const messagesToBeDeleted = messages.filter((msg) => {
+		// @ts-ignore: TODO - Command still works
+		const messagesToBeDeleted = messages.filter((msg: any) => {
 			return msg.content.length < maxTextLength && msg.attachments.length === 0 && msg.embeds.length === 0;
 		});
 
@@ -53,7 +54,7 @@ export default class extends Command {
 		try {
 			await this.client.deleteMessages(
 				message.channel.id,
-				messagesToBeDeleted.map((m) => m.id)
+				messagesToBeDeleted.map((m: any) => m.id)
 			);
 
 			embed.title = t('cmd.clean.title');

@@ -12,12 +12,8 @@
 		"release": "npm run build && npm run docs && npm run format && standard-version",
 		"i18n": "node scripts/check-i18n.js",
 		"nxv": "node ./scripts/npm-exact-versions.js",
-		"docs": "node scripts/generate-docs.js"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run nxv && pretty-quick --staged"
-		}
+		"docs": "node scripts/generate-docs.js",
+		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
@@ -36,12 +32,12 @@
 		"amqplib": "0.8.0",
 		"axios": "0.23.0",
 		"bufferutil": "4.0.5",
-		"canvas": "2.8.0",
+		"canvas": "2.9.1",
 		"chalk": "4.1.2",
 		"chart.js": "3.5.1",
 		"chartjs-node-canvas": "4.0.1",
 		"chartjs-plugin-datalabels": "2.0.0",
-		"eris": "0.15.1",
+		"eris": "0.16.1",
 		"eris-lavalink": "github:SideProjectGuys/eris-lavalink#8e3156a968033c1f037b5424dd46aacb8af76436",
 		"erlpack": "github:abalabahaha/erlpack",
 		"eventemitter3": "4.0.7",
@@ -68,7 +64,7 @@
 		"docsify": "4.12.1",
 		"docsify-cli": "4.4.3",
 		"fs-extra": "10.0.0",
-		"husky": "7.0.2",
+		"husky": "7.0.4",
 		"prettier": "2.4.1",
 		"pretty-quick": "3.1.1",
 		"standard-version": "9.3.1",
@@ -78,6 +74,6 @@
 		"typestrict": "1.0.2"
 	},
 	"engines": {
-		"node": ">=14.18.1"
+		"node": ">=16.14.2"
 	}
 }

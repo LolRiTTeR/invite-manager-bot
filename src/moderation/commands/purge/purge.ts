@@ -42,9 +42,8 @@ export default class extends Command {
 
 		let messages: Message[];
 		if (user) {
-			messages = (await message.channel.getMessages(Math.min(quantity, 100), message.id)).filter(
-				(a: Message) => a.author && a.author.id === user.id
-			);
+			messages = await message.channel.getMessages(Math.min(quantity, 100), message.id);
+			messages = messages.filter((a: Message) => a.author && a.author.id === user.id);
 		} else {
 			messages = await message.channel.getMessages(Math.min(quantity, 100), message.id);
 		}

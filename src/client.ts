@@ -147,6 +147,16 @@ export class IMClient extends Client {
 
 	public constructor({ version, token, type, instance, shardId, shardCount, flags, config }: ClientOptions) {
 		super(token, {
+			intents: [
+				'guilds',
+				'guildInvites',
+				'guildMembers',
+				'guildMessages',
+				'guildBans',
+				'guildMessageReactions',
+				'guildVoiceStates',
+				'directMessages'
+			],
 			allowedMentions: {
 				everyone: false,
 				roles: true,
@@ -538,8 +548,10 @@ export class IMClient extends Client {
 
 		// First channel in order where the bot can speak
 		return guild.channels
-			.filter((c) => c.type === ChannelType.GUILD_TEXT /*&&
-					c.permissionsOf(guild.self).has('SEND_MESSAGES')*/)
+			.filter(
+				(c) => c.type === ChannelType.GUILD_TEXT /*&&
+					c.permissionsOf(guild.self).has('SEND_MESSAGES')*/
+			)
 			.sort((a, b) => a.position - b.position || a.id.localeCompare(b.id))[0];
 	}
 

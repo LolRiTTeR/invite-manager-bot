@@ -64,7 +64,7 @@ export default class extends Command {
 				scheduledUnlockAction.args.roleId,
 				override ? override.allow | newAllow : newAllow,
 				override ? override.deny & NOT_SEND_MESSAGES : 0,
-				'role',
+				0, // role
 				'Channel lockdown'
 			);
 			await this.client.scheduler.removeScheduledAction(guild.id, scheduledUnlockAction.id);
@@ -78,7 +78,8 @@ export default class extends Command {
 		let lowestRole: Role | null = null;
 		let lowestOverride: PermissionOverwrite | null = null;
 		for (const [id, value] of channel.permissionOverwrites) {
-			if (value.type === 'member') {
+			if (value.type === 1) {
+				// type 1 = member
 				continue;
 			}
 
@@ -114,13 +115,13 @@ export default class extends Command {
 			'Unlock from `!lockdown` command'
 		);
 
-		await this.client.editChannelPermission(channel.id, me.id, SEND_MESSAGES, 0, 'member', 'Channel lockdown');
+		await this.client.editChannelPermission(channel.id, me.id, SEND_MESSAGES, 0, 1, 'Channel lockdown');
 		await this.client.editChannelPermission(
 			channel.id,
 			lowestRole.id,
 			lowestOverride.allow & NOT_SEND_MESSAGES,
 			lowestOverride.deny | SEND_MESSAGES,
-			'role',
+			0,
 			'Channel lockdown'
 		);
 
