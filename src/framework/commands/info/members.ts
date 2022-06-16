@@ -28,6 +28,7 @@ export default class extends Command {
 
 		const botCount = guild.members.filter((m) => m.user.bot).length;
 		const humanCount = guild.memberCount - botCount;
+		// @ts-ignore: TODO - Broken
 		const offlineCount = guild.members.filter((m) => m.status === 'offline').length;
 		const joinedToday = guild.members.filter((m) => todayTimestamp - m.joinedAt < ONE_DAY).length;
 		const joinedThisWeek = guild.members.filter((m) => todayTimestamp - m.joinedAt < ONE_WEEK).length;
