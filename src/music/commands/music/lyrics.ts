@@ -27,6 +27,9 @@ export default class extends Command {
 	}
 
 	public async action(message: Message, args: [], { live }: { live: boolean }, { t, guild }: Context): Promise<any> {
+		await this.sendReply(message, 'This command is disabled');
+		return;
+
 		const conn = await this.client.music.getMusicConnection(guild);
 		if (!conn.isPlaying()) {
 			await this.sendReply(message, t('music.notPlaying'));
