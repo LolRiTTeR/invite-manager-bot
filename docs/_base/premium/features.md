@@ -1,6 +1,6 @@
 # §{premium.title}
 
-§{premium.description:["ourBotsLink":"/§{lang}/getting-started/our-bots.md"]}
+§{premium.description:["ourBotsLink":"/§{lang}/getting-started/our-bots.md","patreonLink":"https://www.patreon.com/invitemanagerbots"]}
 
 ## §{premium.features.title}
 

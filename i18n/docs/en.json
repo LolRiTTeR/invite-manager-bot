@@ -243,7 +243,7 @@
 	},
 	"premium": {
 		"title": "Premium",
-		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.",
+		"description": "We are not offering a paid premium bot. Both of our bots listed in [Our Bots]({{{ ourBotsLink }}}) already have all premium features enabled.\n\nWe are however offering custom bots! Please check our [Patreon page]({{{ patreonLink }}}) for more details.",
 		"features": {
 			"title": "Features",
 			"first": "Join and leave message styling (Embedded messages)",
