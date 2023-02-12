@@ -21,7 +21,7 @@ export class Youtube extends MusicPlatform {
 		if (!url) {
 			return false;
 		}
-		return url.startsWith('https://youtube.com/');
+		return url.startsWith('https://www.youtube.com/');
 	}
 
 	public getType(): MusicPlatformType {
@@ -37,7 +37,7 @@ export class Youtube extends MusicPlatform {
 		return new YoutubeMusicItem(this, {
 			id: videoInfo.videoDetails.videoId,
 			title: videoInfo.player_response.videoDetails.title,
-			link: `https://youtube.com/watch?v=${videoInfo.videoDetails.videoId}`,
+			link: `https://www.youtube.com/watch?v=${videoInfo.videoDetails.videoId}`,
 			imageUrl: videoInfo.thumbnail_url,
 			channel: videoInfo.videoDetails.author.name,
 			duration: Number(videoInfo.videoDetails.lengthSeconds)
@@ -52,7 +52,7 @@ export class Youtube extends MusicPlatform {
 			return new YoutubeMusicItem(this, {
 				id: id,
 				title: track.info.title,
-				link: `https://youtube.com/watch?v=${id}`,
+				link: `https://www.youtube.com/watch?v=${id}`,
 				imageUrl: `https://img.youtube.com/vi/${id}/default.jpg`,
 				channel: track.info.author,
 				duration: track.info.length / 1000
