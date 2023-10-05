@@ -45,7 +45,7 @@ export default class extends Command {
 		{ platform, next }: { platform: MusicPlatformType; next: boolean },
 		{ t, guild, settings }: Context
 	): Promise<any> {
-		await this.sendReply(message, 'This command is disabled');
+		await this.sendReply(message, 'Sorry, the `music` module is currently disabled.');
 		return;
 
 		const voiceChannelId = message.member.voiceState.channelID;

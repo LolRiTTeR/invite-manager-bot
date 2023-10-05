@@ -35,6 +35,8 @@ export default class extends Command {
 		{ pin }: { pin: boolean },
 		{ guild, t, isPremium }: Context
 	): Promise<any> {
+		await this.sendReply(message, 'Sorry, the `music` module is currently disabled.');
+		return;
 		const conn = await this.client.music.getMusicConnection(guild);
 
 		let item = conn.getNowPlaying();
