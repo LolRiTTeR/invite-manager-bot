@@ -677,7 +677,13 @@ export class TrackingService extends IMService {
 	}
 
 	private async onGuildMemberRemove(guild: Guild, member: Member) {
-		console.log('EVENT(guildMemberRemove):', guild.name, member.user.username, member.user.discriminator);
+		console.log(
+			'EVENT(guildMemberRemove):',
+			guild.id,
+			guild.name,
+			member.user.id,
+			member.user.username + '#' + member.user.discriminator
+		);
 
 		if (member.user.bot) {
 			// If the pro version of our bot left, re-enable this version
