@@ -130,7 +130,7 @@ export class RabbitMqService extends IMService {
 		}
 
 		// Don't do this for custom bots
-		if (this.client.type === BotType.custom) {
+		if (this.client.type === BotType.custom || this.client.type === BotType.pro || this.client.type === BotType.regular) {
 			return;
 		}
 
