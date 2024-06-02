@@ -10,7 +10,7 @@
 
 ## §{start.faq.patreon.title}
 
-§ {start.faq.patreon.description}
+§{start.faq.patreon.description}
 
 ## §{start.faq.joinLeaveChannel.title}
 
