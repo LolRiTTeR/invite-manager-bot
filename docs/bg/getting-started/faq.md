@@ -2,9 +2,17 @@
 
 ## Как да сменя префикса на бота?
 
-Трябва да  напишете `!config prefix -` за да смените префикса.
+Трябва да напишете `!config prefix -` за да смените префикса.
 
 Ако не знаете сегашният ви префикс, може да напишете `@InviteManager config prefix` , за да видите префикса.
+
+## Ограничение: Без разширено проследяване преди да се присъедини бота.
+
+Разширено проследяване (кой, кого е поканил) работи, когато сте поканили бота. Бота ще знае поканите на всеки, след като сте го поканили, но не се притеснявайте. Само допълнителна информация липсва и може да бъде събрана само за членове, които се присъединяват след като сте поканили бот.
+
+## start.faq.patreon.title
+
+§ {start.faq.patreon.description}
 
 ## Как да сложа съобщение за илизане и влизане?
 
@@ -16,7 +24,7 @@
 
 `!config leaveMessageChannel #channel`.
 
-След като направите това, новите влизания и  излизания ще бъдат изпращани в този канал.
+След като направите това, новите влизания и излизания ще бъдат изпращани в този канал.
 
 ## Мога ли да персонализирам съобщенията за излизане и влизане?
 
@@ -30,6 +38,14 @@ or
 
 Има още много начини. Може да видите целият лист от '[Custom Messages](/bg/modules/invites/custom-messages.md)' .
 
+## start.faq.bonusinvites.title
+
+start.faq.bonusinvites.description
+
+## start.faq.language.title
+
+start.faq.language.description
+
 ## Какво представляват "Ranks" и как мога да ги използвам?
 
 Ranks are used to assign roles to people when they reach a certain amount of invites. For example, if you have a role called `@Beginner` and you want people who have 5 or more invites to be added to that role, you would have to create a rank for that like so: `!add-rank @Beginner 5 (and if you want a description here)`. As soon as someone has 5 invites, he will automatically be added to that role!
@@ -38,6 +54,14 @@ Ranks are used to assign roles to people when they reach a certain amount of inv
 
 Махнете правата "Read Messages" в каналите, в които не искате бота да отговаря.
 
-## Ограничение: Без разширено проследяване преди да се присъедини бота.
+## start.faq.premiumbot.title
 
-Разширено проследяване (кой, кого е поканил) работи, когато сте поканили бота. Бота ще знае поканите на всеки, след като сте го поканили, но не се притеснявайте. Само допълнителна информация липсва и може да бъде събрана само за членове, които се присъединяват след като сте поканили бот.
+start.faq.premiumbot.description
+
+## start.faq.leaderboard.title
+
+start.faq.leaderboard.description
+
+## start.faq.clearinvites.title
+
+start.faq.clearinvites.description

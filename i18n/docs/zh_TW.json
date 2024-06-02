@@ -209,6 +209,29 @@
 			"limitations": {
 				"title": "限制：在機器人加入伺服器以前無法追蹤。",
 				"description": "追蹤（誰邀請誰）只會在您邀請機器人後才開始運作。在您邀請了它之後，機器人將持續追蹤所有人的邀請數量，請放心。額外資訊只能在您邀請機器人後開始收集。"
+			},
+			"patreon": {
+				"title": "start.faq.patreon.title"
+			},
+			"bonusinvites": {
+				"title": "start.faq.bonusinvites.title",
+				"description": "start.faq.bonusinvites.description"
+			},
+			"language": {
+				"title": "start.faq.language.title",
+				"description": "start.faq.language.description"
+			},
+			"premiumbot": {
+				"title": "start.faq.premiumbot.title",
+				"description": "start.faq.premiumbot.description"
+			},
+			"leaderboard": {
+				"title": "start.faq.leaderboard.title",
+				"description": "start.faq.leaderboard.description"
+			},
+			"clearinvites": {
+				"title": "start.faq.clearinvites.title",
+				"description": "start.faq.clearinvites.description"
 			}
 		},
 		"pro": {

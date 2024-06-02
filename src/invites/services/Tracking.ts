@@ -337,7 +337,21 @@ export class TrackingService extends IMService {
 				const premium = await this.client.cache.premium.get(guild.id);
 				const roles = premium ? sets.joinRoles : sets.joinRoles.slice(0, 1);
 
-				roles.forEach((role) => guild.addMemberRole(member.id, role, 'Join role'));
+				roles.forEach((role) =>
+					guild.addMemberRole(member.id, role, 'Join role').catch(async (err) => {
+						// Remove Rank if role is unknown
+						if (err.code === 10011) {
+							const allRoles = await guild.getRESTRoles();
+							const allRanks = await this.client.cache.ranks.get(guild.id);
+							const oldRoleIds = allRanks
+								.filter((rank) => !allRoles.some((r) => r.id === rank.roleId))
+								.map((r) => r.roleId);
+							for (const roleId of oldRoleIds) {
+								await this.client.db.removeRank(guild.id, roleId);
+							}
+						}
+					})
+				);
 			}
 		}
 

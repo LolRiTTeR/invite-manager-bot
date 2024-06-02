@@ -209,6 +209,29 @@
 			"limitations": {
 				"title": "Limitation: No advanced tracking before the bot joins",
 				"description": "Advanced tracking (who invited who) only works after you have invited the bot. The bot will still know everyones invite count after you invite it, don't worry. Just the additional information is missing and can only be collected for members who join after you invited the bot."
+			},
+			"patreon": {
+				"title": "start.faq.patreon.title"
+			},
+			"bonusinvites": {
+				"title": "start.faq.bonusinvites.title",
+				"description": "start.faq.bonusinvites.description"
+			},
+			"language": {
+				"title": "start.faq.language.title",
+				"description": "start.faq.language.description"
+			},
+			"premiumbot": {
+				"title": "start.faq.premiumbot.title",
+				"description": "start.faq.premiumbot.description"
+			},
+			"leaderboard": {
+				"title": "start.faq.leaderboard.title",
+				"description": "start.faq.leaderboard.description"
+			},
+			"clearinvites": {
+				"title": "start.faq.clearinvites.title",
+				"description": "start.faq.clearinvites.description"
 			}
 		},
 		"pro": {

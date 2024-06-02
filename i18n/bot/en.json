@@ -1199,7 +1199,8 @@
 				"mute": "You have been **muted** in **{{ guild }}**",
 				"warn": "You have been **warned** in **{{ guild }}**",
 				"reason": "Reason: {{ reason }}",
-				"amount": "Amount: {{ amount }}"
+				"amount": "Amount: {{ amount }}",
+				"softban": "moderation.punishments.dm.softban"
 			}
 		},
 		"strikes": {
@@ -1221,7 +1222,8 @@
 		"banMembers": "Ban Members",
 		"kickMembers": "Kick Members",
 		"memberError": "Could not get member",
-		"manageChannels": "permissions.manageChannels"
+		"manageChannels": "permissions.manageChannels",
+		"addReactions": "permissions.addReactions"
 	},
 	"resolvers": {
 		"boolean": {

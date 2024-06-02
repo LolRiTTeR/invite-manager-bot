@@ -3,3 +3,4 @@ config.json
 pm2.json
 bin
 Generated.md
+start.sh

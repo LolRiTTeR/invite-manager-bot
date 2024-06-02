@@ -257,7 +257,8 @@
 		}
 	},
 	"messages": {
-		"leaveUnknownInviter": "messages.leaveUnknownInviter"
+		"leaveUnknownInviter": "messages.leaveUnknownInviter",
+		"joinUnknownInviter": "messages.joinUnknownInviter"
 	},
 	"settings": {
 		"prefix": {
@@ -554,64 +555,84 @@
 		},
 		"groups": {
 			"general": {
-				"title": "settings.groups.general.title"
+				"title": "settings.groups.general.title",
+				"description": "settings.groups.general.description"
 			},
 			"invites": {
 				"title": "settings.groups.invites.title",
 				"general": {
-					"title": "settings.groups.invites.general.title"
+					"title": "settings.groups.invites.general.title",
+					"description": "settings.groups.invites.general.description"
 				},
 				"joins": {
-					"title": "settings.groups.invites.joins.title"
+					"title": "settings.groups.invites.joins.title",
+					"description": "settings.groups.invites.joins.description"
 				},
 				"leaves": {
-					"title": "settings.groups.invites.leaves.title"
+					"title": "settings.groups.invites.leaves.title",
+					"description": "settings.groups.invites.leaves.description"
 				},
 				"leaderboard": {
-					"title": "settings.groups.invites.leaderboard.title"
+					"title": "settings.groups.invites.leaderboard.title",
+					"description": "settings.groups.invites.leaderboard.description"
 				},
 				"fakes": {
-					"title": "settings.groups.invites.fakes.title"
+					"title": "settings.groups.invites.fakes.title",
+					"description": "settings.groups.invites.fakes.description"
 				},
 				"ranks": {
-					"title": "settings.groups.invites.ranks.title"
-				}
+					"title": "settings.groups.invites.ranks.title",
+					"description": "settings.groups.invites.ranks.description"
+				},
+				"description": "settings.groups.invites.description"
 			},
 			"moderation": {
 				"title": "settings.groups.moderation.title",
 				"captcha": {
-					"title": "settings.groups.moderation.captcha.title"
+					"title": "settings.groups.moderation.captcha.title",
+					"description": "settings.groups.moderation.captcha.description"
 				},
 				"general": {
-					"title": "settings.groups.moderation.general.title"
+					"title": "settings.groups.moderation.general.title",
+					"description": "settings.groups.moderation.general.description"
 				},
 				"logging": {
-					"title": "settings.groups.moderation.logging.title"
+					"title": "settings.groups.moderation.logging.title",
+					"description": "settings.groups.moderation.logging.description"
 				},
 				"invites": {
-					"title": "settings.groups.moderation.invites.title"
+					"title": "settings.groups.moderation.invites.title",
+					"description": "settings.groups.moderation.invites.description"
 				},
 				"links": {
-					"title": "settings.groups.moderation.links.title"
+					"title": "settings.groups.moderation.links.title",
+					"description": "settings.groups.moderation.links.description"
 				},
 				"bannedWords": {
-					"title": "settings.groups.moderation.bannedWords.title"
+					"title": "settings.groups.moderation.bannedWords.title",
+					"description": "settings.groups.moderation.bannedWords.description"
 				},
 				"caps": {
-					"title": "settings.groups.moderation.caps.title"
+					"title": "settings.groups.moderation.caps.title",
+					"description": "settings.groups.moderation.caps.description"
 				},
 				"duplicate": {
-					"title": "settings.groups.moderation.duplicate.title"
+					"title": "settings.groups.moderation.duplicate.title",
+					"description": "settings.groups.moderation.duplicate.description"
 				},
 				"spam": {
-					"title": "settings.groups.moderation.spam.title"
+					"title": "settings.groups.moderation.spam.title",
+					"description": "settings.groups.moderation.spam.description"
 				},
 				"mentions": {
-					"title": "settings.groups.moderation.mentions.title"
+					"title": "settings.groups.moderation.mentions.title",
+					"description": "settings.groups.moderation.mentions.description"
 				},
 				"emojis": {
-					"title": "settings.groups.moderation.emojis.title"
-				}
+					"title": "settings.groups.moderation.emojis.title",
+					"description": "settings.groups.moderation.emojis.description"
+				},
+				"description": "settings.groups.moderation.description"
 			},
 			"music": {
 				"title": "settings.groups.music.title",
@@ -626,7 +647,8 @@
 				},
 				"platform": {
 					"title": "settings.groups.music.platform.title"
-				}
+				},
+				"description": "settings.groups.music.description"
 			}
 		}
 	},
@@ -637,12 +659,14 @@
 		},
 		"number": {
 			"type": "resolvers.number.type",
-			"typeInfo": "resolvers.number.typeInfo"
+			"typeInfo": "resolvers.number.typeInfo",
+			"invalid": "resolvers.number.invalid"
 		},
 		"enum": {
 			"type": "resolvers.enum.type",
 			"typeInfo": "resolvers.enum.typeInfo",
-			"validValues": "resolvers.enum.validValues"
+			"validValues": "resolvers.enum.validValues",
+			"invalid": "resolvers.enum.invalid"
 		},
 		"invitecode": {
 			"type": "resolvers.invitecode.type",
@@ -682,7 +706,9 @@
 		},
 		"member": {
 			"type": "resolvers.member.type"
-		}
+		},
+		"invalid": "resolvers.invalid",
+		"missingRequired": "resolvers.missingRequired"
 	},
 	"cmd": {
 		"addInvites": {
@@ -714,7 +740,8 @@
 					"name": "cmd.createInvite.self.args.name",
 					"channel": "cmd.createInvite.self.args.channel"
 				}
-			}
+			},
+			"done": "cmd.createInvite.done"
 		},
 		"info": {
 			"self": {
@@ -724,12 +751,52 @@
 					"details": "cmd.info.self.args.details",
 					"page": "cmd.info.self.args.page"
 				}
+			},
+			"lastJoined": {
+				"title": "cmd.info.lastJoined.title",
+				"notInGuild": "cmd.info.lastJoined.notInGuild"
+			},
+			"joined": {
+				"title": "cmd.info.joined.title",
+				"text": "cmd.info.joined.text"
+			},
+			"created": {
+				"title": "cmd.info.created.title"
+			},
+			"invites": {
+				"title": "cmd.info.invites.title",
+				"text": "cmd.info.invites.text",
+				"clear": {
+					"title": "cmd.info.invites.clear.title",
+					"text": "cmd.info.invites.clear.text"
+				}
+			},
+			"joins": {
+				"title": "cmd.info.joins.title",
+				"unknown": "cmd.info.joins.unknown"
+			},
+			"regularInvites": {
+				"entry": "cmd.info.regularInvites.entry",
+				"title": "cmd.info.regularInvites.title",
+				"none": "cmd.info.regularInvites.none"
+			},
+			"bonusInvites": {
+				"title": "cmd.info.bonusInvites.title",
+				"none": "cmd.info.bonusInvites.none"
+			},
+			"invitedMembers": {
+				"details": "cmd.info.invitedMembers.details",
+				"title": "cmd.info.invitedMembers.title",
+				"none": "cmd.info.invitedMembers.none"
 			}
 		},
 		"inviteCodes": {
 			"self": {
 				"description": "cmd.inviteCodes.self.description"
-			}
+			},
+			"title": "cmd.inviteCodes.title",
+			"noCodes": "cmd.inviteCodes.noCodes",
+			"dmSent": "cmd.inviteCodes.dmSent"
 		},
 		"inviteDetails": {
 			"self": {
@@ -737,7 +804,9 @@
 				"args": {
 					"user": "cmd.inviteDetails.self.args.user"
 				}
-			}
+			},
+			"entry": "cmd.inviteDetails.entry",
+			"noInviteCodes": "cmd.inviteDetails.noInviteCodes"
 		},
 		"invites": {
 			"self": {
@@ -745,6 +814,15 @@
 				"args": {
 					"user": "cmd.invites.self.args.user"
 				}
+			},
+			"amount": {
+				"self": "cmd.invites.amount.self"
+			},
+			"nextRank": {
+				"self": "cmd.invites.nextRank.self"
+			},
+			"highestRank": {
+				"self": "cmd.invites.highestRank.self"
 			}
 		},
 		"leaderboard": {
@@ -753,7 +831,11 @@
 				"args": {
 					"page": "cmd.leaderboard.self.args.page"
 				}
-			}
+			},
+			"from": "cmd.leaderboard.from",
+			"lastUpdate": "cmd.leaderboard.lastUpdate",
+			"entry": "cmd.leaderboard.entry",
+			"title": "cmd.leaderboard.title"
 		},
 		"removeInvites": {
 			"self": {
@@ -830,12 +912,37 @@
 					"key": "cmd.config.self.args.key",
 					"value": "cmd.config.self.args.value"
 				}
-			}
+			},
+			"changed": {
+				"text": "cmd.config.changed.text"
+			},
+			"previous": {
+				"title": "cmd.config.previous.title"
+			},
+			"new": {
+				"title": "cmd.config.new.title"
+			},
+			"sameValue": "cmd.config.sameValue",
+			"current": {
+				"title": "cmd.config.current.title",
+				"text": "cmd.config.current.text",
+				"clear": "cmd.config.current.clear",
+				"notSet": "cmd.config.current.notSet"
+			},
+			"none": "cmd.config.none"
 		},
 		"interactiveConfig": {
 			"self": {
 				"description": "cmd.interactiveConfig.self.description"
-			}
+			},
+			"welcome": "cmd.interactiveConfig.welcome",
+			"none": "cmd.interactiveConfig.none",
+			"values": {
+				"string": "cmd.interactiveConfig.values.string",
+				"channel": "cmd.interactiveConfig.values.channel"
+			},
+			"change": "cmd.interactiveConfig.change",
+			"new": "cmd.interactiveConfig.new"
 		},
 		"inviteCodeConfig": {
 			"self": {
@@ -845,6 +952,11 @@
 					"inviteCode": "cmd.inviteCodeConfig.self.args.inviteCode",
 					"value": "cmd.inviteCodeConfig.self.args.value"
 				}
+			},
+			"title": "cmd.inviteCodeConfig.title",
+			"text": "cmd.inviteCodeConfig.text",
+			"keys": {
+				"title": "cmd.inviteCodeConfig.keys.title"
 			}
 		},
 		"memberConfig": {
@@ -887,7 +999,9 @@
 				"args": {
 					"command": "cmd.help.self.args.command"
 				}
-			}
+			},
+			"text": "cmd.help.text",
+			"links": "cmd.help.links"
 		},
 		"members": {
 			"self": {
@@ -1230,6 +1344,23 @@
 					"to": "cmd.graph.self.args.to"
 				}
 			}
+		}
+	},
+	"permissions": {
+		"rateLimit": "permissions.rateLimit"
+	},
+	"bot": {
+		"supportDiscord": {
+			"title": "bot.supportDiscord.title"
+		},
+		"invite": {
+			"title": "bot.invite.title"
+		},
+		"website": {
+			"title": "bot.website.title"
+		},
+		"patreon": {
+			"title": "bot.patreon.title"
 		}
 	}
 }

@@ -217,7 +217,7 @@ export class CommandsService extends IMService {
 		}
 
 		// Ignore rate limiting on sudo messages
-		if (!(message as any).__sudo) {
+		/*if (!(message as any).__sudo) {
 			const now = new Date().getTime();
 			let lastCall = this.commandCalls.get(message.author.id);
 
@@ -247,7 +247,7 @@ export class CommandsService extends IMService {
 			}
 			// Update last command execution time
 			lastCall.last = now;
-		}
+		}*/
 
 		const isPremium = guild ? await this.client.cache.premium.get(guild.id) : false;
 

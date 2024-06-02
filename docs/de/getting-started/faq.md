@@ -6,6 +6,14 @@ Du kannst `!config prefix -` ausführen, um den Prefix zu ändern.
 
 Wenn du deinen aktuellen Prefix nicht kennst, kannst du `@InviteManager config prefix` ausführen, um den Prefix zu sehen.
 
+## Einschränkung: Kein Tracking bevor der Bot beigetreten ist
+
+Das Tracking (wer wen eingeladen hat) funktioniert nur, nachdem du den Bot eingeladen hast. Der Bot weiß auch nach der Einladung noch von jedem die Anzahl der Einladungen, keine Sorge. Nur die zusätzlichen Informationen fehlen und können nur für die Mitglieder gesammelt werden, die erst nach der Einladung des Bots beitreten.
+
+## start.faq.patreon.title
+
+§ {start.faq.patreon.description}
+
 ## Wie stelle ich Join und Leave Nachrichten ein?
 
 Stelle den Channel mit folgendem Command
@@ -30,6 +38,14 @@ oder
 
 Es sind viele Platzhalter verfügbar. Du kannst die vollständige Liste auf der Seite '[Individuelle Nachrichten](/de/modules/invites/custom-messages.md)' sehen.
 
+## start.faq.bonusinvites.title
+
+start.faq.bonusinvites.description
+
+## start.faq.language.title
+
+start.faq.language.description
+
 ## Was sind 'Ränge' und wie kann ich sie benutzen?
 
 Ränge werden verwendet um Benutzern rollen zuzuweisen, wenn diese eine gewisse Anzahl an Einladungen erreicht haben. Wenn du zum Beispiel eine Rolle namens `@Anfänger` hast und du willst, dass Benutzer mit 5 oder mehr Einladungen diese Rolle bekommen, dann musst du mit `!add-rank @Anfänger 5 (Und fallst du willst, mit einer Beschreibung hier)` den Rang erstellen. Sobald jemand 5 Einladungen erreicht wird ihm automatisch die Rolle zugewiesen.
@@ -38,6 +54,14 @@ Ränge werden verwendet um Benutzern rollen zuzuweisen, wenn diese eine gewisse 
 
 Nimm dem Bot die Rechte zum Lesen von Nachrichten in den Channeln, in denen der Bot nicht antworten soll, weg.
 
-## Einschränkung: Kein Tracking bevor der Bot beigetreten ist
+## start.faq.premiumbot.title
 
-Das Tracking (wer wen eingeladen hat) funktioniert nur, nachdem du den Bot eingeladen hast. Der Bot weiß auch nach der Einladung noch von jedem die Anzahl der Einladungen, keine Sorge. Nur die zusätzlichen Informationen fehlen und können nur für die Mitglieder gesammelt werden, die erst nach der Einladung des Bots beitreten.
+start.faq.premiumbot.description
+
+## start.faq.leaderboard.title
+
+start.faq.leaderboard.description
+
+## start.faq.clearinvites.title
+
+start.faq.clearinvites.description

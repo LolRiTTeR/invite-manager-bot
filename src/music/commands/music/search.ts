@@ -39,7 +39,7 @@ export default class extends Command {
 		{ platform }: { platform: MusicPlatformType },
 		{ t, guild, settings }: Context
 	): Promise<any> {
-		await this.sendReply(message, 'This command is disabled');
+		//await this.sendReply(message, 'This command is disabled');
 		return;
 
 		const voiceChannelId = message.member.voiceState.channelID;

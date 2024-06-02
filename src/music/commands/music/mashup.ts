@@ -27,7 +27,7 @@ export default class extends Command {
 	}
 
 	public async action(message: Message, [videos]: [string], flags: {}, { t, guild }: Context): Promise<any> {
-		await this.sendReply(message, 'This command is disabled');
+		//await this.sendReply(message, 'This command is disabled');
 		return;
 
 		const voiceChannelId = message.member.voiceState.channelID;

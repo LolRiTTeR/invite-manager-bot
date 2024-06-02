@@ -209,6 +209,29 @@
 			"limitations": {
 				"title": "Ograniczenie: Brak zaawansowanego śledzenia przed dołączeniem bota",
 				"description": "Zaawansowane śledzenie (kto zaprosił kogo) działa tylko po zaproszeniu bota. Bot nadal będzie wiedział, że wszyscy zaproszeni liczą po zaproszeniu, nie martw się. Brakuje tylko dodatkowych informacji i można je gromadzić tylko dla członków, którzy dołączą po zaproszeniu bota."
+			},
+			"patreon": {
+				"title": "start.faq.patreon.title"
+			},
+			"bonusinvites": {
+				"title": "start.faq.bonusinvites.title",
+				"description": "start.faq.bonusinvites.description"
+			},
+			"language": {
+				"title": "start.faq.language.title",
+				"description": "start.faq.language.description"
+			},
+			"premiumbot": {
+				"title": "start.faq.premiumbot.title",
+				"description": "start.faq.premiumbot.description"
+			},
+			"leaderboard": {
+				"title": "start.faq.leaderboard.title",
+				"description": "start.faq.leaderboard.description"
+			},
+			"clearinvites": {
+				"title": "start.faq.clearinvites.title",
+				"description": "start.faq.clearinvites.description"
 			}
 		},
 		"pro": {

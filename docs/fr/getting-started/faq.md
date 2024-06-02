@@ -6,9 +6,17 @@ Tu peux faire `!config prefix -` pour changer le préfixe.
 
 Si tu ne connais pas ton préfixe actuel, tu peux utiliser `@InviteManager config prefix` pour afficher le préfixe.
 
+## Limitation : Pas de suivi avancé avant que le bot ne sois ajouté
+
+Le suivi avancé (qui a invité qui) ne fonctionne qu'après que vous ayez invité le bot. Le bot saura toujours le nombre d'invitations de tout le monde après l'invitation, ne vous inquiétez pas. Seules les informations supplémentaires sont manquantes et ne peuvent être collectées que pour les membres qui rejoignent après que vous ayez invité le bot.
+
+## start.faq.patreon.title
+
+§ {start.faq.patreon.description}
+
 ## Comment je définis les messages d'arrivée et de départ ?
 
-Définis le salon en faisant 
+Définis le salon en faisant
 `!config joinMessageChannel #channel` ou
 
 `!config leaveMessageChannel #channel`.
@@ -19,11 +27,19 @@ Après cela, les prochains messages seront affichées sur ce salon.
 Absolument ! Tu peux changer le message en faisant par exemple
 `!config joinMessage {memberMention} **a rejoint**; Invité par **{inviterName}** (**{numInvites}** invitations)`
 
- ou
+ou
 
 `!config leaveMessage {memberName} **à quitté**; Invité par **{inviterName}**`.
 
 Il existe de nombreux placeholders disponibles. Tu peux voir la liste complète sur la page '[Messages personnalisés](/fr/modules/invites/custom-messages.md)'.
+
+## start.faq.bonusinvites.title
+
+start.faq.bonusinvites.description
+
+## start.faq.language.title
+
+start.faq.language.description
 
 ## Qu'est-ce que 'Ranks' et comment puis-je les utiliser ?
 
@@ -33,6 +49,14 @@ Les rangs sont utilisés pour attribuer des rôles aux personnes lorsqu'elles at
 
 Supprime les autorisations de lecture dans les salons où tu ne souhaites pas que le bot réponde.
 
-## Limitation : Pas de suivi avancé avant que le bot ne sois ajouté
+## start.faq.premiumbot.title
 
-Le suivi avancé (qui a invité qui) ne fonctionne qu'après que vous ayez invité le bot. Le bot saura toujours le nombre d'invitations de tout le monde après l'invitation, ne vous inquiétez pas. Seules les informations supplémentaires sont manquantes et ne peuvent être collectées que pour les membres qui rejoignent après que vous ayez invité le bot.
+start.faq.premiumbot.description
+
+## start.faq.leaderboard.title
+
+start.faq.leaderboard.description
+
+## start.faq.clearinvites.title
+
+start.faq.clearinvites.description

@@ -209,6 +209,29 @@
 			"limitations": {
 				"title": "Limitation : Pas de suivi avancé avant que le bot ne sois ajouté",
 				"description": "Le suivi avancé (qui a invité qui) ne fonctionne qu'après que vous ayez invité le bot. Le bot saura toujours le nombre d'invitations de tout le monde après l'invitation, ne vous inquiétez pas. Seules les informations supplémentaires sont manquantes et ne peuvent être collectées que pour les membres qui rejoignent après que vous ayez invité le bot."
+			},
+			"patreon": {
+				"title": "start.faq.patreon.title"
+			},
+			"bonusinvites": {
+				"title": "start.faq.bonusinvites.title",
+				"description": "start.faq.bonusinvites.description"
+			},
+			"language": {
+				"title": "start.faq.language.title",
+				"description": "start.faq.language.description"
+			},
+			"premiumbot": {
+				"title": "start.faq.premiumbot.title",
+				"description": "start.faq.premiumbot.description"
+			},
+			"leaderboard": {
+				"title": "start.faq.leaderboard.title",
+				"description": "start.faq.leaderboard.description"
+			},
+			"clearinvites": {
+				"title": "start.faq.clearinvites.title",
+				"description": "start.faq.clearinvites.description"
 			}
 		},
 		"pro": {

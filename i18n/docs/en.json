@@ -209,6 +209,30 @@
 			"limitations": {
 				"title": "Limitation: No advanced tracking before the bot joins",
 				"description": "Advanced tracking (who invited who) only works after you have invited the bot. The bot will still know everyones invite count after you invite it, don't worry. Just the additional information is missing and can only be collected for members who join after you invited the bot."
+			},
+			"premiumbot": {
+				"title": "Is there a premium version of this bot, or can I run my own bot?",
+				"description": "We do have our [**Patreon page**](https://patreon.com/invitemanagerbots) where you can subscribe to our patreon and see our packages of custom bots.\n\nYou are able to host your own instance by using the [**source code**](https://github.com/LolRiTTeR/invite-manager-bot), but you will **not** receive official support from us."
+			},
+			"patreon": {
+				"title": "I've donated on Patreon, how do I receive my perks?",
+				"description": "Please message [**@Invman Modmail**](https://discord.com/channels/@me/1246735442141908992) through our [**Discord Server**](https://discord.gg/KV38jbcuJJ) for getting access."
+			},
+			"leaderboard": {
+				"title": "Why are some people missing on the leaderboard?",
+				"description": "Please use the command\n\n`!config hideLeftMembersFromLeaderboard false`\n\nto show all members on the leaderboard."
+			},
+			"clearinvites": {
+				"title": "How do I clear all invites for my server?",
+				"description": "You can do\n\n`!clearInvites`\n\nto clear everyone's invites.\n\nAnd do `!help clearInvites` for more command details."
+			},
+			"bonusinvites": {
+				"title": "What are bonus invites?",
+				"description": "Bonus invites are invites that can be given to members by an admin.\n\nYou can either increase or decrease the number of invites.\nYou can also give a reason why you did it, like if someone was helpful or if someone broke the rules.\n\n`!add-invites @user 5 Was very helpful`\n\nto remove someones invites, use a negative number eg:\n\n`!add-invites @user -5 Broke the rules`\n\nUse negative number eg. -5 to decrease the value of someone.\n\nYou can see how why someone has bonus invites by doing `!info @user`"
+			},
+			"language": {
+				"title": "How do I change the language?",
+				"description": "To change the language you can use:\n`!config lang {countryCode}`\n`!config lang en`\n\nYou can use the [i18n language code table](https://i18ns.com/languagecode.html) to get the 2 letter language code for your country.\n\nThe bot is not 100% translated."
 			}
 		},
 		"pro": {

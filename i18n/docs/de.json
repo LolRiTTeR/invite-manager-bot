@@ -209,6 +209,29 @@
 			"limitations": {
 				"title": "Einschränkung: Kein Tracking bevor der Bot beigetreten ist",
 				"description": "Das Tracking (wer wen eingeladen hat) funktioniert nur, nachdem du den Bot eingeladen hast. Der Bot weiß auch nach der Einladung noch von jedem die Anzahl der Einladungen, keine Sorge. Nur die zusätzlichen Informationen fehlen und können nur für die Mitglieder gesammelt werden, die erst nach der Einladung des Bots beitreten."
+			},
+			"patreon": {
+				"title": "start.faq.patreon.title"
+			},
+			"bonusinvites": {
+				"title": "start.faq.bonusinvites.title",
+				"description": "start.faq.bonusinvites.description"
+			},
+			"language": {
+				"title": "start.faq.language.title",
+				"description": "start.faq.language.description"
+			},
+			"premiumbot": {
+				"title": "start.faq.premiumbot.title",
+				"description": "start.faq.premiumbot.description"
+			},
+			"leaderboard": {
+				"title": "start.faq.leaderboard.title",
+				"description": "start.faq.leaderboard.description"
+			},
+			"clearinvites": {
+				"title": "start.faq.clearinvites.title",
+				"description": "start.faq.clearinvites.description"
 			}
 		},
 		"pro": {

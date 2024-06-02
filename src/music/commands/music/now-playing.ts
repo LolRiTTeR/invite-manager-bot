@@ -35,6 +35,7 @@ export default class extends Command {
 		{ pin }: { pin: boolean },
 		{ guild, t, isPremium }: Context
 	): Promise<any> {
+		return;
 		const conn = await this.client.music.getMusicConnection(guild);
 
 		let item = conn.getNowPlaying();

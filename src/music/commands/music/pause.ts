@@ -17,6 +17,7 @@ export default class extends Command {
 	}
 
 	public async action(message: Message, args: any[], flags: {}, { t, guild }: Context): Promise<any> {
+		return;
 		const conn = await this.client.music.getMusicConnection(guild);
 		if (!conn.isConnected()) {
 			await this.sendReply(message, t('music.notConnected'));

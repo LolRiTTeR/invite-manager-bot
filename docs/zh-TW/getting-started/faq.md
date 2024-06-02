@@ -6,6 +6,14 @@
 
 如果您不知道目前的前綴指令，則可以使用 `@InviteManager config prefix` 來得知。
 
+## 限制：在機器人加入伺服器以前無法追蹤。
+
+追蹤（誰邀請誰）只會在您邀請機器人後才開始運作。在您邀請了它之後，機器人將持續追蹤所有人的邀請數量，請放心。額外資訊只能在您邀請機器人後開始收集。
+
+## start.faq.patreon.title
+
+§ {start.faq.patreon.description}
+
 ## 我該如何設定加入和離開訊息？
 
 設定頻道請用
@@ -30,6 +38,14 @@
 
 有很多預留參數是可用的。你可以在 [自訂訊息](/zh-TW/modules/invites/custom-messages.md) 頁面找到完整的清單。
 
+## start.faq.bonusinvites.title
+
+start.faq.bonusinvites.description
+
+## start.faq.language.title
+
+start.faq.language.description
+
 ## 甚麼是等級？我可以怎麼使用它們？
 
 等級是在人們達到一定的邀請數量時自動指派身分組。舉例來說，如果您有一個身分組叫 `@Beginner` 然後您希望擁有 5 以上邀請數量的人被新增到身分組，您可以新增一個等級如下： `!add-rank @Beginner 5 (如果您需要一個描述)` 。當有人達到 5 個邀請時，他就會自動被新增到身分組！
@@ -38,6 +54,14 @@
 
 在您不想要機器人回覆的頻道取消機器人的閱讀訊息權限。
 
-## 限制：在機器人加入伺服器以前無法追蹤。
+## start.faq.premiumbot.title
 
-追蹤（誰邀請誰）只會在您邀請機器人後才開始運作。在您邀請了它之後，機器人將持續追蹤所有人的邀請數量，請放心。額外資訊只能在您邀請機器人後開始收集。
+start.faq.premiumbot.description
+
+## start.faq.leaderboard.title
+
+start.faq.leaderboard.description
+
+## start.faq.clearinvites.title
+
+start.faq.clearinvites.description
