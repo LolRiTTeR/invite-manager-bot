@@ -25,7 +25,7 @@
 		"music": {
 			"pollyUrl": ""
 		},
-		"bot_admins": ["216749228087705610"]
+		"bot_devs": ["216749228087705610"]
 	},
 	"rabbitmq": {
 		"hostname": "localhost",
