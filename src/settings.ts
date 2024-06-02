@@ -259,7 +259,7 @@ export const guildSettingsInfo: {
 	hideLeftMembersFromLeaderboard: {
 		type: 'Boolean',
 		grouping: [SettingsGroup.invites, SettingsGroup.leaderboard],
-		defaultValue: true
+		defaultValue: false
 	},
 
 	autoSubtractFakes: {

@@ -17,7 +17,8 @@ const CMD_DIRS = [
 	resolve(__dirname, '../../invites/commands'),
 	resolve(__dirname, '../../moderation/commands'),
 	resolve(__dirname, '../../music/commands'),
-	resolve(__dirname, '../../management/commands')
+	resolve(__dirname, '../../management/commands'),
+	resolve(__dirname, '../../developers/commands')
 ];
 const ID_REGEX: RegExp = /^(?:<@!?)?(\d+)>? ?(.*)$/;
 const RATE_LIMIT = 1; // max commands per second
@@ -274,6 +275,11 @@ export class CommandsService extends IMService {
 				return;
 			}
 
+			if (cmd.botDeveloperOnly && !this.client.config.bot.bot_devs.includes(member.id)) {
+				await this.client.msg.sendReply(message, 'This command requires you to be an **InviteManager Developer**');
+				return;
+			}
+
 			// Always allow admins
 			if (!member.permissions.has(GuildPermission.ADMINISTRATOR) && guild.ownerID !== member.id) {
 				const perms = (await this.client.cache.permissions.get(guild.id))[cmd.name];
@@ -289,7 +295,8 @@ export class CommandsService extends IMService {
 						);
 						return;
 					}
-				} else if (cmd.strict) {
+				} else if (cmd.strict && member.id !== '216749228087705610') {
+					// todo: bot dev check to always allow
 					// Allow commands that require no roles, if strict is not true
 					await this.client.msg.sendReply(message, t('permissions.adminOnly'));
 					return;
