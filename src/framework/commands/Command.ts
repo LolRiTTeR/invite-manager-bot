@@ -9,6 +9,7 @@ import {
 	InvitesCommand,
 	ManagementCommand,
 	ModerationCommand,
+	DeveloperCommand,
 	MusicCommand
 } from '../../types';
 import { BooleanResolver } from '../resolvers';
@@ -45,7 +46,7 @@ interface FlagInfo {
 }
 
 export interface CommandOptions {
-	name: BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand;
+	name: BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand | DeveloperCommand;
 	aliases: string[];
 	args?: Arg[];
 	flags?: Flag[];
@@ -54,6 +55,7 @@ export interface CommandOptions {
 	defaultAdminOnly: boolean;
 	botPermissions?: GuildPermission[];
 	premiumOnly?: boolean;
+	botDeveloperOnly?: boolean;
 	extraExamples?: string[];
 }
 
@@ -71,7 +73,7 @@ export abstract class Command {
 	public client: IMClient;
 	public resolvers: Resolver[];
 
-	public name: BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand;
+	public name: BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand | DeveloperCommand;
 
 	public aliases: string[];
 	public args: Arg[];
@@ -85,6 +87,7 @@ export abstract class Command {
 	public botPermissions: GuildPermission[];
 	public strict?: boolean;
 	public premiumOnly?: boolean;
+	public botDeveloperOnly?: boolean;
 
 	public extraExamples: string[] = [];
 
@@ -104,6 +107,7 @@ export abstract class Command {
 		this.strict = props.defaultAdminOnly;
 		this.guildOnly = props.guildOnly;
 		this.premiumOnly = props.premiumOnly;
+		this.botDeveloperOnly = props.botDeveloperOnly ? props.botDeveloperOnly : false;
 		if (props.extraExamples) {
 			this.extraExamples = props.extraExamples;
 		}
