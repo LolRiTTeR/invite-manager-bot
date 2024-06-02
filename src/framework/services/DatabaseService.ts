@@ -127,6 +127,21 @@ export class DatabaseService extends IMService {
 		const [rows] = await pool.query<RowDataPacket[]>(`SELECT ${table}.* FROM ${db}.${table} WHERE ${where}`, values);
 		return rows as T[];
 	}
+
+	private async findManyWithLimits<T>(
+		shard: number | string,
+		table: TABLE,
+		where: string,
+		values: any[]
+	): Promise<T[]> {
+		const [db, pool] = this.getDbInfo(shard);
+		const [rows] = await pool.query<RowDataPacket[]>(
+			`SELECT ${table}.* FROM ${db}.${table} WHERE ${where} LIMIT 10`,
+			values
+		);
+		return rows as T[];
+	}
+
 	private async findManyOnSpecificShards<T, O = string>(
 		table: TABLE,
 		where: string,
@@ -260,7 +275,7 @@ export class DatabaseService extends IMService {
 		return this.findOne<Member>(guildId, TABLE.members, '`id` = ?', [id]);
 	}
 	public async getMembersByName(guildId: string, name: string, discriminator?: string) {
-		return this.findMany<Member>(
+		return this.findManyWithLimits<Member>(
 			guildId,
 			TABLE.members,
 			'`name` LIKE ?' + (discriminator ? ' AND `discriminator` LIKE ?' : ''),
