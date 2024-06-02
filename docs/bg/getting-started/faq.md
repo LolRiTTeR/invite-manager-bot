@@ -12,7 +12,7 @@
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## Как да сложа съобщение за илизане и влизане?
 

@@ -211,7 +211,8 @@
 				"description": "Advanced tracking (who invited who) only works after you have invited the bot. The bot will still know everyones invite count after you invite it, don't worry. Just the additional information is missing and can only be collected for members who join after you invited the bot."
 			},
 			"patreon": {
-				"title": "start.faq.patreon.title"
+				"title": "start.faq.patreon.title",
+				"description": "start.faq.patreon.description"
 			},
 			"bonusinvites": {
 				"title": "start.faq.bonusinvites.title",

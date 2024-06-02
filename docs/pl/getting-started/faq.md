@@ -12,7 +12,7 @@ Zaawansowane śledzenie (kto zaprosił kogo) działa tylko po zaproszeniu bota. 
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## Jak ustawić wiadomości na powitania i pożegnania?
 

@@ -12,7 +12,7 @@ Gelişmiş izleme (kim kimi davet ettiğinde) yalnızca botu davet ettikten sonr
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## Katılma ve ayrılma mesajlarını nasıl ayarlarım?
 

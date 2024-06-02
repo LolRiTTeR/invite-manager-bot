@@ -12,7 +12,7 @@ Das Tracking (wer wen eingeladen hat) funktioniert nur, nachdem du den Bot einge
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## Wie stelle ich Join und Leave Nachrichten ein?
 

@@ -211,7 +211,8 @@
 				"description": "Разширено проследяване (кой, кого е поканил) работи, когато сте поканили бота. Бота ще знае поканите на всеки, след като сте го поканили, но не се притеснявайте. Само допълнителна информация липсва и може да бъде събрана само за членове, които се присъединяват след като сте поканили бот."
 			},
 			"patreon": {
-				"title": "start.faq.patreon.title"
+				"title": "start.faq.patreon.title",
+				"description": "start.faq.patreon.description"
 			},
 			"bonusinvites": {
 				"title": "start.faq.bonusinvites.title",

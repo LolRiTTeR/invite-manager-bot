@@ -211,7 +211,8 @@
 				"description": "追蹤（誰邀請誰）只會在您邀請機器人後才開始運作。在您邀請了它之後，機器人將持續追蹤所有人的邀請數量，請放心。額外資訊只能在您邀請機器人後開始收集。"
 			},
 			"patreon": {
-				"title": "start.faq.patreon.title"
+				"title": "start.faq.patreon.title",
+				"description": "start.faq.patreon.description"
 			},
 			"bonusinvites": {
 				"title": "start.faq.bonusinvites.title",

@@ -12,7 +12,7 @@ Le suivi avancé (qui a invité qui) ne fonctionne qu'après que vous ayez invit
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## Comment je définis les messages d'arrivée et de départ ?
 

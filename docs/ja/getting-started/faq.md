@@ -12,7 +12,7 @@
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## 参加および退出のメッセージを設定するにはどうすればよいですか？
 

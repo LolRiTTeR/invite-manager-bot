@@ -211,7 +211,8 @@
 				"description": "Le suivi avancé (qui a invité qui) ne fonctionne qu'après que vous ayez invité le bot. Le bot saura toujours le nombre d'invitations de tout le monde après l'invitation, ne vous inquiétez pas. Seules les informations supplémentaires sont manquantes et ne peuvent être collectées que pour les membres qui rejoignent après que vous ayez invité le bot."
 			},
 			"patreon": {
-				"title": "start.faq.patreon.title"
+				"title": "start.faq.patreon.title",
+				"description": "start.faq.patreon.description"
 			},
 			"bonusinvites": {
 				"title": "start.faq.bonusinvites.title",

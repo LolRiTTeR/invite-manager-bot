@@ -211,7 +211,8 @@
 				"description": "Das Tracking (wer wen eingeladen hat) funktioniert nur, nachdem du den Bot eingeladen hast. Der Bot weiß auch nach der Einladung noch von jedem die Anzahl der Einladungen, keine Sorge. Nur die zusätzlichen Informationen fehlen und können nur für die Mitglieder gesammelt werden, die erst nach der Einladung des Bots beitreten."
 			},
 			"patreon": {
-				"title": "start.faq.patreon.title"
+				"title": "start.faq.patreon.title",
+				"description": "start.faq.patreon.description"
 			},
 			"bonusinvites": {
 				"title": "start.faq.bonusinvites.title",

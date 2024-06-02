@@ -12,7 +12,7 @@ Advanced tracking (who invited who) only works after you have invited the bot. T
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## كيف أختار رسائل الدخول والخروج?
 

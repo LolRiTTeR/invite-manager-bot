@@ -12,7 +12,7 @@ Advanced tracking (who invited who) only works after you have invited the bot. T
 
 ## I've donated on Patreon, how do I receive my perks?
 
-§ {start.faq.patreon.description}
+Please message [**@Invman Modmail**](https://discord.com/channels/@me/1246735442141908992) through our [**Discord Server**](https://discord.gg/KV38jbcuJJ) for getting access.
 
 ## How do I set join and leave messages?
 
@@ -58,7 +58,9 @@ You can see how why someone has bonus invites by doing `!info @user`
 ## How do I change the language?
 
 To change the language you can use:
+
 `!config lang {countryCode}`
+
 `!config lang en`
 
 You can use the [i18n language code table](https://i18ns.com/languagecode.html) to get the 2 letter language code for your country.

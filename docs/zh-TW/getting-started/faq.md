@@ -12,7 +12,7 @@
 
 ## start.faq.patreon.title
 
-§ {start.faq.patreon.description}
+start.faq.patreon.description
 
 ## 我該如何設定加入和離開訊息？
 
