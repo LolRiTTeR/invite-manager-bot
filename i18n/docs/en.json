@@ -232,7 +232,7 @@
 			},
 			"language": {
 				"title": "How do I change the language?",
-				"description": "To change the language you can use:\n`!config lang {countryCode}`\n`!config lang en`\n\nYou can use the [i18n language code table](https://i18ns.com/languagecode.html) to get the 2 letter language code for your country.\n\nThe bot is not 100% translated."
+				"description": "To change the language you can use:\n\n`!config lang {countryCode}`\n\n`!config lang en`\n\nYou can use the [i18n language code table](https://i18ns.com/languagecode.html) to get the 2 letter language code for your country.\n\nThe bot is not 100% translated."
 			}
 		},
 		"pro": {
