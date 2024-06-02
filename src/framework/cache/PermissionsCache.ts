@@ -1,8 +1,15 @@
-import { BotCommand, InvitesCommand, ManagementCommand, ModerationCommand, MusicCommand } from '../../types';
+import {
+	BotCommand,
+	DeveloperCommand,
+	InvitesCommand,
+	ManagementCommand,
+	ModerationCommand,
+	MusicCommand
+} from '../../types';
 
 import { Cache } from './Cache';
 
-type AnyCommand = BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand;
+type AnyCommand = BotCommand | InvitesCommand | ModerationCommand | MusicCommand | ManagementCommand | DeveloperCommand;
 
 type PermissionsObject = { [key in AnyCommand]?: string[] };
 

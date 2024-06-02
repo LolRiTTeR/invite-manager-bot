@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"noImplicitAny": true,
 		"moduleResolution": "node",
+		"noErrorTruncation": true,
 		"resolveJsonModule": true,
 		"emitDecoratorMetadata": true,
 		"esModuleInterop": true,

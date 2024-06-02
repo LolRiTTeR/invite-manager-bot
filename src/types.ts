@@ -186,6 +186,10 @@ export enum MusicCommand {
 	lyrics = 'lyrics'
 }
 
+export enum DeveloperCommand {
+	evaluate = 'evaluate'
+}
+
 export enum ChannelType {
 	GUILD_TEXT = 0,
 	DM = 1,
@@ -292,3 +296,8 @@ export interface GatewayInfo {
 		reset_after: number;
 	};
 }
+
+export interface AsyncFunctionConstructor {
+	new (...args: string[]): Function;
+}
+export const AsyncFunction: AsyncFunctionConstructor = async function () {}.constructor as AsyncFunctionConstructor;
