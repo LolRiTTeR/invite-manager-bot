@@ -19,16 +19,17 @@ export class UserResolver extends Resolver {
 			user = this.client.users.get(id);
 			// Then try the rest API
 			if (!user) {
-				user = await this.client.getRESTUser(id).then(() => undefined);
+				await this.client.getRESTUser(id).then((e) => {
+					if (e?.id) user = e;
+				});
 			}
 			// Then try our database
 			if (!user) {
-				user = await this.client.db.getMember(guild.id, id).then((u) => ({
-					...u,
-					username: u.name,
-					createdAt: u.createdAt.getTime(),
-					avatarURL: undefined
-				}));
+				await this.client.db.getMember(guild.id, id).then((u) => {
+					if (u) {
+						user = { ...u, username: u.name, createdAt: u.createdAt.getTime(), avatarURL: undefined };
+					}
+				});
 			}
 			if (!user) {
 				throw Error(t(`resolvers.user.notFound`));
@@ -65,7 +66,7 @@ export class UserResolver extends Resolver {
 				users = await this.client.db.getMembersByName(guild.id, username, discriminator).then((us) =>
 					us.map((u) => ({
 						...u,
-						username: u.name,
+						username: u?.name,
 						createdAt: u.createdAt.getTime(),
 						avatarURL: undefined
 					}))
@@ -77,7 +78,7 @@ export class UserResolver extends Resolver {
 				users = await this.client.db.getMembersByName(guild.id, username, discriminator).then((us) =>
 					us.map((u) => ({
 						...u,
-						username: u.name,
+						username: u?.name,
 						createdAt: u.createdAt.getTime(),
 						avatarURL: undefined
 					}))
@@ -87,6 +88,7 @@ export class UserResolver extends Resolver {
 			if (users.length === 1) {
 				user = users[0];
 			} else if (users.length === 0) {
+				console.log(`user resolvable2 == ` + users[0]);
 				throw Error(t(`resolvers.user.notFound`));
 			} else {
 				throw Error(
