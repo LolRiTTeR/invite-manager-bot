@@ -2,16 +2,16 @@
 	"devToken": "",
 	"sentryDsn": "",
 	"bot": {
-		"type": "regular",
+		"type": "custom",
 		"ids": {
 			"regular": "",
 			"pro": ""
 		},
 		"links": {
-			"add": "https://discord.com/oauth2/authorize?client_id=789797049746980895&permissions=8&scope=bot",
-			"support": "https://discord.gg/kQQmfNCTzm",
-			"website": "https://invitemanager.cc",
-			"patreon": "Disabled"
+			"add": "https://www.patreon.com/invitemanagerbots",
+			"support": "https://discord.gg/KV38jbcuJJ",
+			"website": "https://invitemanager.cc/#/",
+			"patreon": "https://www.patreon.com/invitemanagerbots"
 		},
 		"dm": {
 			"guild": "",
@@ -25,19 +25,20 @@
 		"music": {
 			"pollyUrl": ""
 		},
-		"bot_devs": ["216749228087705610"]
+		"bot_devs": ["593094474004168711", "79305800157233152", "216749228087705610"],
+		"botconfig": ["593094474004168711", "79305800157233152", "216749228087705610"]
 	},
 	"rabbitmq": {
-		"hostname": "localhost",
-		"username": "guest",
-		"password": "guest",
+		"hostname": "",
+		"username": "",
+		"password": "",
 		"prefix": ""
 	},
 	"databases": [
 		{
 			"host": "localhost",
 			"port": 3306,
-			"user": "root",
+			"user": "",
 			"password": "",
 			"range": {
 				"from": 0,
@@ -47,7 +48,7 @@
 		{
 			"host": "localhost",
 			"port": 3306,
-			"user": "root",
+			"user": "",
 			"password": "",
 			"range": {
 				"from": 1,
