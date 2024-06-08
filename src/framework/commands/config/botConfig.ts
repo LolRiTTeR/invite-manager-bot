@@ -36,12 +36,12 @@ export default class extends Command {
 		flags: {},
 		context: Context
 	): Promise<any> {
-		if (message.author.id != '79305800157233152') {
+		if (!['593094474004168711', '290506577411178497'].includes(message.author.id)) {
 			const embed = this.createEmbed();
 
 			embed.fields.push({
-				name: `Command disabled`,
-				value: `This command is disabled.`
+				name: `Permission Denied`,
+				value: `You do not have permission to use this command.`
 			});
 
 			return this.sendReply(message, embed);
