@@ -48,7 +48,7 @@ export default class extends Command {
 		}
 		const { guild, t } = context;
 
-		if (this.client.type !== 'custom') {
+		/*if (this.client.type !== 'custom') {
 			await this.sendReply(
 				message,
 				t('cmd.botConfig.customOnly', {
@@ -57,7 +57,7 @@ export default class extends Command {
 				})
 			);
 			return;
-		}
+		}*/
 
 		const settings = this.client.settings;
 
