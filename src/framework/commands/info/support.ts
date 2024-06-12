@@ -20,7 +20,7 @@ export default class extends Command {
 
 		embed.fields.push({
 			name: t('cmd.support.server'),
-			value: `https://discord.gg/kQQmfNCTzm`
+			value: this.client.config.bot.links.support
 		});
 
 		return this.sendReply(message, embed);

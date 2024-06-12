@@ -25,8 +25,7 @@ export default class extends Command {
 			params.push(`guild=${guild.id}`);
 		}
 
-		embed.description =
-			`[${t('cmd.getBot.title')}]` + `(https://invitemanager.cc/add-bot?${params.join('&')}&bot=yellow)`;
+		embed.description = `[${t('cmd.getBot.title')}]` + `(${this.client.config.bot.links.add})`;
 
 		return this.sendReply(message, embed);
 	}

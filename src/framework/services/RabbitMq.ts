@@ -130,7 +130,11 @@ export class RabbitMqService extends IMService {
 		}
 
 		// Don't do this for custom bots
-		if (this.client.type === BotType.custom) {
+		if (
+			this.client.type === BotType.custom ||
+			this.client.type === BotType.pro ||
+			this.client.type === BotType.regular
+		) {
 			return;
 		}
 
@@ -236,14 +240,13 @@ export class RabbitMqService extends IMService {
 				: !!this.startTicket
 				? 'starting'
 				: 'running',
-			startedAt: this.client.startedAt?.toISOString(),
+			startedAt: this.client.startedAt?.toString(),
 			gateway: this.client.gatewayConnected,
 			guilds: this.client.guilds.size,
 			error: err ? err.message : null,
 			tracking: this.getTrackingStatus(),
 			music: this.getMusicStatus(),
-			cache: this.getCacheSizes(),
-			metrics: this.getMetrics()
+			cache: this.getCacheSizes()
 		});
 	}
 
