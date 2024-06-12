@@ -1,10 +1,13 @@
 import { configureScope, init } from '@sentry/node';
 import chalk from 'chalk';
+import { InvManConfig } from './framework/models/Config';
 
 import { IMClient } from './client';
 
 const pkg = require('../package.json');
 const config = require('../config.json');
+
+config.newConfig = new InvManConfig();
 
 // First two arguments are "node" and "<filename>"
 if (process.argv.length < 5) {

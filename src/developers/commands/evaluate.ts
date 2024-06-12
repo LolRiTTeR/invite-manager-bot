@@ -19,7 +19,7 @@ export default class extends Command {
 					rest: true
 				}
 			],
-			group: CommandGroup.Info,
+			group: CommandGroup.BotDev,
 			guildOnly: true,
 			defaultAdminOnly: false,
 			botDeveloperOnly: true,
@@ -99,8 +99,10 @@ export default class extends Command {
 		result = inspect(result, undefined, 0);
 
 		// Safety check
-		// note: probably not needed as token is not stored on process or client
-		//result = result.replaceAll(this.tclient., "[token omitted]");
+		const config = this.client.config;
+		if (config.devToken && config.devToken.length > 0) {
+			result = result.replaceAll(this.client.config.devToken, '[token omitted]');
+		}
 
 		if (result.length > 2_000 - OUTPUT_PREFIX.length - OUTPUT_SUFFIX.length) {
 			await this.client.msg.sendReply(message, `ERROR: Reached maximum length`);

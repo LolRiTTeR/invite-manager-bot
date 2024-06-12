@@ -35,6 +35,7 @@ import { MusicCache } from './music/cache/MusicCache';
 import { MusicService } from './music/services/MusicService';
 import { botDefaultSettings, BotSettingsObject, guildDefaultSettings } from './settings';
 import { BotType, ChannelType, LavaPlayerManager } from './types';
+import { InvManConfig } from './framework/models/Config';
 
 i18n.configure({
 	locales: ['cs', 'de', 'en', 'es', 'fr', 'it', 'ja', 'nl', 'pl', 'pt', 'pt_BR', 'ro', 'ru', 'tr'],
@@ -62,6 +63,7 @@ export interface ClientOptions {
 	shardCount: number;
 	flags: string[];
 	config: any;
+	newConfig?: InvManConfig;
 }
 
 export interface ClientCacheObject {
@@ -102,6 +104,7 @@ export interface ClientServiceObject {
 export class IMClient extends Client {
 	public version: string;
 	public config: any;
+	public newConfig: InvManConfig;
 	public flags: string[];
 	public type: BotType;
 	public instance: string;
@@ -145,7 +148,7 @@ export class IMClient extends Client {
 
 	public disabledGuilds: Set<string> = new Set();
 
-	public constructor({ version, token, type, instance, shardId, shardCount, flags, config }: ClientOptions) {
+	public constructor({ version, token, type, instance, shardId, shardCount, flags, config, newConfig }: ClientOptions) {
 		super(token, {
 			intents: [
 				'guilds',
@@ -192,6 +195,7 @@ export class IMClient extends Client {
 		this.shardCount = shardCount;
 		this.flags = flags;
 		this.config = config;
+		this.newConfig = newConfig;
 		this.shardId = shardId;
 		this.shardCount = shardCount;
 

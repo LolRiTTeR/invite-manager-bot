@@ -65,7 +65,8 @@ export enum CommandGroup {
 	Moderation = 'Moderation',
 	Report = 'Report',
 	Music = 'Music',
-	Other = 'Other'
+	Other = 'Other',
+	BotDev = 'BotDev'
 }
 
 export enum ShardCommand {
