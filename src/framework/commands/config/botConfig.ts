@@ -37,7 +37,11 @@ export default class extends Command {
 		context: Context
 	): Promise<any> {
 		const botType = this.client.config.bot.type;
-		if (!this.client.config.bot.bot_devs.includes(message.author.id)) {
+		if (
+			!this.client.config.bot.bot_devs.includes(message.author.id) &&
+			botType == 'custom' &&
+			this.client.config.bot?.bot_owner !== message.author.id
+		) {
 			const embed = this.createEmbed();
 
 			embed.fields.push({
