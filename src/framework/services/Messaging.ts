@@ -204,12 +204,7 @@ export class MessagingService extends IMService {
 
 		try {
 			const temp = JSON.parse(msg);
-			if (await this.client.cache.premium.get(guild.id)) {
-				return this.createEmbed(temp, false);
-			} else {
-				const lang = (await this.client.cache.guilds.get(guild.id)).lang;
-				msg += '\n\n' + i18n.__({ locale: lang, phrase: 'messages.joinLeaveEmbedsIsPremium' });
-			}
+			return this.createEmbed(temp, false);
 		} catch (e) {
 			//
 		}
