@@ -4,30 +4,15 @@ import { IMClient } from '../../../client';
 import { BotCommand, CommandGroup } from '../../../types';
 import { Command, Context } from '../Command';
 
-const community: string[] = [
-	'Armin#2296',
-	'Astryx#4587',
-	'malok#9340',
-	'Menno#0001'
-];
+const community: string[] = ['Armin#2296', 'Astryx#4587', 'malok#9340', 'Menno#0001'];
 
-const devs: string[] = [
-	'Alan Wen#3344',
-	'LolRiTTeR#1258'
-];
+const devs: string[] = ['Alan Wen#3344', 'LolRiTTeR#1258', 'SemiMute (@semimute)'];
 
-const mods: string[] = [
-	'Simplee.#5460',
-	'Gugu72#6081',
-	'JWEi#9873'
-];
+const mods: string[] = ['Simplee.#5460', 'Gugu72#6081', 'JWEi#9873'];
 
-const staff: string[] = [
-];
+const staff: string[] = [];
 
-const graphic_designer: string[] = [
-	'Danu#4422'
-];
+const graphic_designer: string[] = ['Danu#4422'];
 
 const translators: string[] = [
 	'" rxd#4495',
