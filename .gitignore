@@ -4,4 +4,3 @@ pm2.json
 bin
 Generated.md
 start.sh
-package-lock.json
