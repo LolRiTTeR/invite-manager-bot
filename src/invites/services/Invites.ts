@@ -203,7 +203,7 @@ export class InvitesService extends IMService {
 				inviterId: inviter.user.id,
 				inviterName: invName,
 				inviterFullName: inviterFullName,
-				inviterMention: `<@${inviter.user.id}>`,
+				inviterMention: inviter.user.id !== null ? `<@${inviter.user.id}>` : `Unknown User`,
 				inviterImage: inviter.user.avatarURL,
 				numInvites: `${invites.total}`,
 				numRegularInvites: `${invites.regular}`,
@@ -211,8 +211,8 @@ export class InvitesService extends IMService {
 				numFakeInvites: `${invites.fake}`,
 				numLeaveInvites: `${invites.leave}`,
 				memberCount: `${guild.memberCount}`,
-				channelMention: `<#${invite.channel.id}>`,
-				channelName: invite.channel.name
+				channelMention: invite.channel.id == null ? `\`#unknown-channel\`` : `<#${invite.channel.id}>`,
+				channelName: invite.channel.name == null ? `Unknown Channel` : invite.channel.name
 			},
 			{
 				memberCreated: createdAt,
