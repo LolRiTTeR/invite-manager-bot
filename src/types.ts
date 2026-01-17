@@ -71,6 +71,7 @@ export enum ShardCommand {
 	CACHE = 'CACHE',
 	CUSTOM = 'CUSTOM',
 	DIAGNOSE = 'DIAGNOSE',
+	ROLE_INFO = 'ROLE_INFO',
 	FLUSH_CACHE = 'FLUSH_CACHE',
 	SUDO = 'SUDO',
 	OWNER_DM = 'OWNER_DM',

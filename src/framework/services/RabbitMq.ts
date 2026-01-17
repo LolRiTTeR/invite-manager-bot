@@ -237,10 +237,10 @@ export class RabbitMqService extends IMService {
 			state: this.waitingForTicket
 				? 'waiting'
 				: !this.client.hasStarted
-				? 'init'
-				: !!this.startTicket
-				? 'starting'
-				: 'running',
+					? 'init'
+					: !!this.startTicket
+						? 'starting'
+						: 'running',
 			startedAt: this.client.startedAt?.toString(),
 			gateway: this.client.gatewayConnected,
 			guilds: this.client.guilds.size,
@@ -354,6 +354,28 @@ export class RabbitMqService extends IMService {
 					leaveChannelPerms,
 					announceChannelPerms: annChannelPerms
 				});
+				break;
+
+			case ShardCommand.ROLE_INFO:
+				if (!guild) {
+					return sendResponse({
+						error: `Guild ${guildId} not found`
+					});
+				}
+
+				const roleIds = Array.isArray(content.roleIds) ? (content.roleIds as string[]) : [];
+				const roles = roleIds.map((id) => {
+					const role = guild.roles.get(id);
+					return {
+						id,
+						exists: !!role,
+						name: role?.name,
+						position: role?.position,
+						color: role?.color
+					};
+				});
+
+				await sendResponse({ roles });
 				break;
 
 			case ShardCommand.FLUSH_CACHE:
