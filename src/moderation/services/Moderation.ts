@@ -181,7 +181,7 @@ export class ModerationService extends IMService {
 				continue;
 			}
 
-			await message.delete().catch(() => undefined);
+			await message.delete().catch(() => {});
 
 			await this.logViolationModAction(guild, message.author, strike.type, strike.amount, [
 				{ name: 'Channel', value: channel.name },
@@ -213,7 +213,7 @@ export class ModerationService extends IMService {
 				continue;
 			}
 
-			message.delete().catch(() => undefined);
+			message.delete().catch(() => {});
 
 			await this.logViolationModAction(guild, message.author, violation, 0, [
 				{ name: 'Channel', value: channel.name },
@@ -586,7 +586,7 @@ export class ModerationService extends IMService {
 		const amount = strike ? strike.amount : 0;
 
 		const newName = (NAME_DEHOIST_PREFIX + ' ' + name).substr(0, 32);
-		member.edit({ nick: newName }, 'Auto dehoist').catch(() => undefined);
+		member.edit({ nick: newName }, 'Auto dehoist').catch(() => {});
 
 		await this.logViolationModAction(guild, member.user, type, amount, [
 			{ name: 'New name', value: newName },
@@ -655,7 +655,7 @@ export class ModerationService extends IMService {
 		}
 		const reply = await this.client.msg.sendReply(message, embed);
 		if (reply && settings.autoModDeleteBotMessage) {
-			setTimeout(() => reply.delete().catch(() => undefined), settings.autoModDeleteBotMessageTimeoutInSeconds * 1000);
+			setTimeout(() => reply.delete().catch(() => {}), settings.autoModDeleteBotMessageTimeoutInSeconds * 1000);
 		}
 	}
 

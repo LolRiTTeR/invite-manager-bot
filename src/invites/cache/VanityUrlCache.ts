@@ -15,9 +15,9 @@ export class VanityUrlCache extends Cache<string> {
 		return (
 			guild.vanityURL ||
 			guild
-				.getVanity()
-				.then((r) => r.code as any)
-				.catch(() => null)
-		);
+					.getVanity()
+					.then((r) => r.code as any)
+					.catch((): string => null)
+			);
 	}
 }

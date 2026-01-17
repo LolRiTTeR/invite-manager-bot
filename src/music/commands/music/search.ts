@@ -82,18 +82,18 @@ export default class extends Command {
 		});
 
 		for (let i = 0; i < Math.min(items.length, this.choices.length); i++) {
-			msg.addReaction(this.choices[i]).catch(() => undefined);
+			msg.addReaction(this.choices[i]).catch(() => {});
 		}
 
-		msg.addReaction(this.cancel).catch(() => undefined);
+		msg.addReaction(this.cancel).catch(() => {});
 
 		const choice = await this.awaitChoice(message.author.id, msg);
 		if (choice === null) {
 			return;
 		}
 
-		msg.delete().catch(() => undefined);
-		message.delete().catch(() => undefined);
+		msg.delete().catch(() => {});
+		message.delete().catch(() => {});
 
 		const musicItem = items[choice];
 		musicItem.setAuthor(message.author);
@@ -112,7 +112,7 @@ export default class extends Command {
 
 	private async awaitChoice(authorId: string, msg: Message) {
 		return new Promise<number>(async (resolve) => {
-			let timeOut: NodeJS.Timer;
+			let timeOut: NodeJS.Timeout;
 			const func = async (resp: Message, emoji: Emoji, { id: userId }: Member) => {
 				if (resp.id !== msg.id || authorId !== userId) {
 					return;
@@ -122,13 +122,13 @@ export default class extends Command {
 				this.client.removeListener('messageReactionAdd', func);
 
 				if (emoji.name === this.cancel) {
-					await msg.delete().catch(() => undefined);
+					await msg.delete().catch(() => {});
 					resolve(null);
 					return;
 				}
 
 				const id = this.choices.indexOf(emoji.name);
-				await resp.removeReaction(emoji.name, userId).catch(() => undefined);
+				await resp.removeReaction(emoji.name, userId).catch(() => {});
 
 				resolve(id);
 			};
@@ -138,7 +138,7 @@ export default class extends Command {
 			const timeOutFunc = () => {
 				this.client.removeListener('messageReactionAdd', func);
 
-				msg.delete().catch(() => undefined);
+				msg.delete().catch(() => {});
 
 				resolve(null);
 			};

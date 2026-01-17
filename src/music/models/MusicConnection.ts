@@ -2,7 +2,7 @@ import { Guild, VoiceChannel } from 'eris';
 
 import { AnnouncementVoice } from '../../framework/models/GuildSetting';
 import { GuildSettingsObject } from '../../settings';
-import { LavaPlayer, LavaPlayerState, MusicQueue } from '../../types';
+import { LavaPlayer, LavaPlayerState, LavaTrack, MusicQueue } from '../../types';
 import { MusicService } from '../services/MusicService';
 
 import { MusicItem } from './MusicItem';
@@ -135,7 +135,7 @@ export class MusicConnection {
 		return this.musicQueueCache.queue;
 	}
 
-	private stopSpeakingTimeout: NodeJS.Timer;
+	private stopSpeakingTimeout: NodeJS.Timeout;
 	public async connect(channel: VoiceChannel) {
 		if (this.player) {
 			this.switchChannel(channel);
@@ -254,14 +254,17 @@ export class MusicConnection {
 				let sanitizedTitle = next.title || '';
 				IGNORED_ANNOUNCEMENT_WORDS.forEach((word) => (sanitizedTitle = sanitizedTitle.replace(word, '')));
 				if (sanitizedTitle) {
-					await this.playAnnouncement(this.settings.announcementVoice, 'Playing: ' + sanitizedTitle).catch(
-						() => undefined
-					);
+						await this.playAnnouncement(this.settings.announcementVoice, 'Playing: ' + sanitizedTitle).catch(() => {});
 				}
 			}
 
-			const stream = await next.getStreamUrl().catch(() => undefined);
-			const tracks = await this.service.resolveTracks(stream).catch(() => []);
+				const stream = await next.getStreamUrl().catch(() => null as string);
+				if (!stream) {
+					this.preparingNext = false;
+					await this.playNext();
+					return;
+				}
+				const tracks = await this.service.resolveTracks(stream).catch(() => [] as LavaTrack[]);
 
 			if (tracks.length === 0) {
 				this.preparingNext = false;

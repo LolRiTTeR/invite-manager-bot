@@ -54,7 +54,7 @@ export default class extends Command {
 		});
 		await response.edit({ embed });
 
-		const func = () => response.delete().catch(() => undefined);
+		const func = () => response.delete().catch(() => {});
 		setTimeout(func, 5000);
 	}
 }

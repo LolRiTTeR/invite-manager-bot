@@ -303,7 +303,7 @@ export class InvitesService extends IMService {
 						rankChannel
 							.createMessage(typeof msg === 'string' ? msg : { embed: msg })
 							.then((m: Message) => m.addReaction('🎉'))
-							.catch(() => undefined);
+							.catch(() => {});
 					}
 				} else {
 					console.error(`Guild ${guild.id} has invalid ` + `rank announcement channel ${rankChannelId}`);
@@ -326,7 +326,7 @@ export class InvitesService extends IMService {
 					.forEach((r) =>
 						this.client
 							.removeGuildMemberRole(guild.id, member.id, r.id, 'Not have enough invites for rank')
-							.catch(() => undefined)
+							.catch(() => {})
 					);
 			}
 
@@ -341,7 +341,7 @@ export class InvitesService extends IMService {
 					.forEach((r) =>
 						this.client
 							.addGuildMemberRole(guild.id, member.user.id, r.id, 'Reached a new rank by invites')
-							.catch(() => undefined)
+							.catch(() => {})
 					);
 			} else if (style === RankAssignmentStyle.highest) {
 				// Only add the highest role we've reached to the member
@@ -355,14 +355,14 @@ export class InvitesService extends IMService {
 					.forEach((r) =>
 						this.client
 							.removeGuildMemberRole(guild.id, member.id, r.id, 'Only keeping highest rank')
-							.catch(() => undefined)
+							.catch(() => {})
 					);
 				// Add the highest one if we don't have it yet
 				if (highest && !member.roles.includes(highest.id)) {
 					if (!tooHighRoles.includes(highest)) {
 						this.client
 							.addGuildMemberRole(guild.id, member.id, highest.id, 'Reached a new rank by invites')
-							.catch(() => undefined);
+							.catch(() => {});
 					} else {
 						shouldHave = [highest];
 					}

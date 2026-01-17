@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Guild } from 'eris';
-import xmldoc, { XmlElement } from 'xmldoc';
+import XmlDocument, { XmlElement } from 'xmldoc';
 
 import { AnnouncementVoice } from '../../framework/models/GuildSetting';
 import { IMService } from '../../framework/services/Service';
@@ -107,7 +107,7 @@ export class MusicService extends IMService {
 
 		const lyrics: { start: number; dur: number; text: string }[] = [];
 		try {
-			const doc = new xmldoc.XmlDocument(data);
+			const doc = new XmlDocument(data);
 
 			doc.children.forEach((txt: XmlElement) => {
 				lyrics.push({

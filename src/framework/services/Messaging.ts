@@ -333,7 +333,7 @@ export class MessagingService extends IMService {
 		}
 
 		if (page > 0 || page < maxPage - 1) {
-			let timer: NodeJS.Timer;
+			let timer: NodeJS.Timeout;
 
 			const func = async (msg: Message, emoji: Emoji, { id: userId }: Member) => {
 				if (msg.id !== prevMsg.id || userId !== author.id) {

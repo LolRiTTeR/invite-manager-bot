@@ -55,7 +55,7 @@ export default class extends Command {
 				embeds: newMessage.embeds
 			});
 
-			await message.delete().catch(() => undefined);
+			await message.delete().catch(() => {});
 
 			return;
 		}

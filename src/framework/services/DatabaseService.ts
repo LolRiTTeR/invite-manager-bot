@@ -188,10 +188,10 @@ export class DatabaseService extends IMService {
 		values: Partial<T>[],
 		selector: (obj: Partial<T>) => number | string
 	) {
-		const colQuery = cols.map((c) => `\`${c}\``).join(',');
+		const colQuery = cols.map((c) => `\`${String(c)}\``).join(',');
 		const updateQuery =
 			updateCols.length > 0
-				? `ON DUPLICATE KEY UPDATE ${updateCols.map((u) => `\`${u}\` = VALUES(\`${u}\`)`).join(',')}`
+				? `ON DUPLICATE KEY UPDATE ${updateCols.map((u) => `\`${String(u)}\` = VALUES(\`${String(u)}\`)`).join(',')}`
 				: '';
 
 		const map: Map<string, [Pool, Partial<T>[]]> = new Map();
@@ -1112,15 +1112,27 @@ export class DatabaseService extends IMService {
 			newUsers.forEach((u) => this.doneUsers.add(u.id));
 		}
 
-		const promises: Promise<any[]>[] = [];
+		const promises: Promise<void>[] = [];
 		if (this.logActions.length > 0) {
-			promises.push(this.saveLogs(this.logActions).then(() => (this.logActions = [])));
+			promises.push(
+				this.saveLogs(this.logActions).then(() => {
+					this.logActions = [];
+				})
+			);
 		}
 		if (this.cmdUsages.length > 0) {
-			promises.push(this.saveCommandUsages(this.cmdUsages).then(() => (this.cmdUsages = [])));
+			promises.push(
+				this.saveCommandUsages(this.cmdUsages).then(() => {
+					this.cmdUsages = [];
+				})
+			);
 		}
 		if (this.incidents.length > 0) {
-			promises.push(this.saveIncidents(this.incidents).then(() => (this.incidents = [])));
+			promises.push(
+				this.saveIncidents(this.incidents).then(() => {
+					this.incidents = [];
+				})
+			);
 		}
 
 		await Promise.all(promises);

@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { Member, Message } from 'eris';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -96,9 +96,9 @@ export default class extends Command {
 		}
 
 		let member = guild.members.get(user.id);
-		if (!member) {
-			member = await guild.getRESTMember(user.id).catch(() => undefined);
-		}
+			if (!member) {
+				member = await guild.getRESTMember(user.id).catch(() => null as Member);
+			}
 		// Promote the member if it's not a bot
 		// and if the member is still in the guild
 		if (member && !member.user.bot) {

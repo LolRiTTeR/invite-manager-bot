@@ -60,8 +60,8 @@ export default class extends Command {
 		const response = await this.sendReply(message, embed);
 		if (response && settings.modPunishmentBanDeleteMessage) {
 			const func = () => {
-				message.delete().catch(() => undefined);
-				response.delete().catch(() => undefined);
+				message.delete().catch(() => {});
+				response.delete().catch(() => {});
 			};
 			setTimeout(func, 4000);
 		}

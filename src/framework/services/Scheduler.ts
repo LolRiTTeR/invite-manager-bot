@@ -1,6 +1,6 @@
 import { captureException, withScope } from '@sentry/node';
 import chalk from 'chalk';
-import { Guild } from 'eris';
+import { Guild, GuildChannel } from 'eris';
 import moment from 'moment';
 
 import { ScheduledAction, ScheduledActionType } from '../models/ScheduledAction';
@@ -15,7 +15,7 @@ type ScheduledActionFunctions = {
 };
 
 export class SchedulerService extends IMService {
-	private scheduledActionTimers: Map<number, NodeJS.Timer> = new Map();
+	private scheduledActionTimers: Map<number, NodeJS.Timeout> = new Map();
 	private scheduledActionFunctions: ScheduledActionFunctions = {
 		[ScheduledActionType.unmute]: (g, a) => this.unmute(g, a),
 		[ScheduledActionType.unlock]: (g, a) => this.unlock(g, a)
@@ -130,7 +130,12 @@ export class SchedulerService extends IMService {
 			return;
 		}
 
-		const override = channel.permissionOverwrites.get(roleId);
+		const perms = (channel as any).permissionOverwrites;
+		if (!perms) {
+			console.error('SCHEDULED TASK: UNLOCK: NO PERMISSION OVERWRITES', channelId);
+			return;
+		}
+		const override = perms.get(roleId);
 		const newAllow = wasAllowed ? SEND_MESSAGES : BigInt(0);
 
 		// tslint:disable: no-bitwise

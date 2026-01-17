@@ -9,7 +9,7 @@ const PIN_UPDATE_INTERVAL = 5000;
 const PREMIUM_PIN_UPDATE_INTERVAL = 2000;
 
 export default class extends Command {
-	private timerMap: Map<string, NodeJS.Timer> = new Map();
+	private timerMap: Map<string, NodeJS.Timeout> = new Map();
 
 	public constructor(client: IMClient) {
 		super(client, {
@@ -35,8 +35,6 @@ export default class extends Command {
 		{ pin }: { pin: boolean },
 		{ guild, t, isPremium }: Context
 	): Promise<any> {
-		await this.sendReply(message, 'Sorry, the `music` module is currently disabled.');
-		return;
 		const conn = await this.client.music.getMusicConnection(guild);
 
 		let item = conn.getNowPlaying();
@@ -77,7 +75,7 @@ export default class extends Command {
 					}
 				} else {
 					if (msg2) {
-						await msg2.delete().catch(() => undefined);
+						await msg2.delete().catch(() => {});
 						msg2 = null;
 					}
 				}

@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { Member, Message } from 'eris';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -50,7 +50,7 @@ export default class extends Command {
 
 		let targetMember = guild.members.get(target.id);
 		if (!targetMember) {
-			targetMember = await guild.getRESTMember(target.id).catch(() => undefined);
+			targetMember = await guild.getRESTMember(target.id).catch(() => null as Member);
 		}
 		// Only process if the user is still in the guild
 		if (targetMember && !targetMember.user.bot) {

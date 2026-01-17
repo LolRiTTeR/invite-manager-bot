@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { Member, Message } from 'eris';
 
 import { IMClient } from '../../../client';
 import { Command, Context } from '../../../framework/commands/Command';
@@ -45,7 +45,7 @@ export default class extends Command {
 	): Promise<any> {
 		let targetMember = guild.members.get(targetUser.id);
 		if (!targetMember) {
-			targetMember = await guild.getRESTMember(targetUser.id).catch(() => undefined);
+			targetMember = await guild.getRESTMember(targetUser.id).catch(() => null as Member);
 		}
 
 		const embed = this.client.mod.createBasicEmbed(targetUser);
@@ -99,8 +99,8 @@ export default class extends Command {
 		const response = await this.sendReply(message, embed);
 		if (response && settings.modPunishmentBanDeleteMessage) {
 			const func = () => {
-				message.delete().catch(() => undefined);
-				response.delete().catch(() => undefined);
+				message.delete().catch(() => {});
+				response.delete().catch(() => {});
 			};
 			setTimeout(func, 4000);
 		}

@@ -75,9 +75,9 @@ export default class extends Command {
 
 		if (type === CleanType.reactions) {
 			for (const messageToBeDeleted of messagesToBeDeleted) {
-				await messageToBeDeleted.removeReactions().catch(() => undefined);
+				await messageToBeDeleted.removeReactions().catch(() => {});
 			}
-			message.delete().catch(() => undefined);
+			message.delete().catch(() => {});
 
 			embed.title = t('cmd.clean.title');
 			embed.description = t('cmd.clean.textReactions', {
@@ -104,7 +104,7 @@ export default class extends Command {
 
 		const response = await this.sendReply(message, embed);
 		if (response) {
-			const func = () => response.delete().catch(() => undefined);
+			const func = () => response.delete().catch(() => {});
 			setTimeout(func, 5000);
 		}
 	}

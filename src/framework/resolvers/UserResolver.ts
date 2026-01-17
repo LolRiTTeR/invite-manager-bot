@@ -27,7 +27,7 @@ export class UserResolver extends Resolver {
 			if (!user) {
 				await this.client.db.getMember(guild.id, id).then((u) => {
 					if (u) {
-						user = { ...u, username: u.name, createdAt: u.createdAt.getTime(), avatarURL: undefined };
+						user = { ...u, username: u.name, createdAt: u.createdAt.getTime(), avatarURL: '' };
 					}
 				});
 			}
@@ -68,7 +68,7 @@ export class UserResolver extends Resolver {
 						...u,
 						username: u?.name,
 						createdAt: u.createdAt.getTime(),
-						avatarURL: undefined
+							avatarURL: ''
 					}))
 				);
 			}
@@ -80,7 +80,7 @@ export class UserResolver extends Resolver {
 						...u,
 						username: u?.name,
 						createdAt: u.createdAt.getTime(),
-						avatarURL: undefined
+							avatarURL: ''
 					}))
 				);
 			}

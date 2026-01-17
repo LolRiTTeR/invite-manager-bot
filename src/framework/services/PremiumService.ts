@@ -44,7 +44,7 @@ export class PremiumService extends IMService {
 								'If you purchased premium run `!premium check` and then `!premium activate` in the server\n\n' +
 								'I will be leaving your server soon, thanks for having me!'
 						)
-						.catch(() => undefined);
+						.catch(() => {});
 					const onTimeout = async () => {
 						// Check one last time before leaving
 						if (await this.client.cache.premium._get(guild.id)) {
@@ -64,7 +64,7 @@ export class PremiumService extends IMService {
 			.get(`https://api.invitemanager.gg/patreon/check/?userId=${userId}`, {
 				auth: this.client.config.bot.apiAuth
 			})
-			.catch(() => undefined);
+			.catch(() => {});
 
 		if (!res) {
 			return 'not_found';

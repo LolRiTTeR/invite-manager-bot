@@ -16,7 +16,7 @@ export default class extends Command {
 	}
 
 	public async action(message: Message, args: any[], flags: {}, context: Context): Promise<any> {
-		const msg = await message.channel.createMessage('Pong!').catch(() => undefined);
+		const msg = await message.channel.createMessage('Pong!').catch(() => {});
 		if (msg) {
 			msg.edit(`Pong! (${(msg.createdAt - message.createdAt).toFixed(0)}ms)`);
 		}

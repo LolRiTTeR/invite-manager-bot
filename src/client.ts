@@ -8,6 +8,7 @@ import { GuildSettingsCache } from './framework/cache/GuildSettingsCache';
 import { MemberSettingsCache } from './framework/cache/MemberSettingsCache';
 import { PermissionsCache } from './framework/cache/PermissionsCache';
 import { PremiumCache } from './framework/cache/PremiumCache';
+import { Guild as DbGuild } from './framework/models/Guild';
 import { GuildSettingsKey } from './framework/models/GuildSetting';
 import { LogAction } from './framework/models/Log';
 import { IMRequestHandler } from './framework/RequestHandler';
@@ -136,7 +137,7 @@ export class IMClient extends Client {
 
 	public startedAt: Moment;
 	public gatewayConnected: boolean;
-	public activityInterval: NodeJS.Timer;
+	public activityInterval: NodeJS.Timeout;
 	public voiceConnections: LavaPlayerManager;
 	public stats: {
 		wsEvents: number;
@@ -294,7 +295,7 @@ export class IMClient extends Client {
 
 		// Insert guilds into db
 		await this.db.saveGuilds(
-			this.guilds.map((g) => ({
+			this.guilds.map((g): Partial<DbGuild> => ({
 				id: g.id,
 				name: g.name,
 				icon: g.iconURL,
@@ -321,7 +322,7 @@ export class IMClient extends Client {
 							`${this.config.bot.links.support}\n\n` +
 							'I will be leaving your server now, thanks for having me!'
 					)
-					.catch(() => undefined);
+					.catch(() => {});
 				await guild.leave();
 				return;
 			}
@@ -359,7 +360,7 @@ export class IMClient extends Client {
 										'If you purchased premium run `!premium check` and then `!premium activate` in the server\n\n' +
 										'I will be leaving your server soon, thanks for having me!'
 								)
-								.catch(() => undefined);
+								.catch(() => {});
 							const onTimeout = async () => {
 								// Check one last time before leaving
 								if (await this.cache.premium._get(guild.id)) {
@@ -395,17 +396,16 @@ export class IMClient extends Client {
 		const dbGuild = await this.db.getGuild(guild.id);
 
 		if (!dbGuild) {
-			await this.db.saveGuilds([
-				{
-					id: guild.id,
-					name: guild.name,
-					icon: guild.iconURL,
-					memberCount: guild.memberCount,
-					createdAt: new Date(guild.createdAt),
-					deletedAt: null,
-					banReason: null
-				}
-			]);
+			const newGuild: Partial<DbGuild> = {
+				id: guild.id,
+				name: guild.name,
+				icon: guild.iconURL,
+				memberCount: guild.memberCount,
+				createdAt: new Date(guild.createdAt),
+				deletedAt: null,
+				banReason: null
+			};
+			await this.db.saveGuilds([newGuild]);
 
 			const defChannel = await this.getDefaultChannel(guild);
 			const newSettings = {
@@ -426,7 +426,7 @@ export class IMClient extends Client {
 						`${this.config.bot.links.support}\n\n` +
 						'I will be leaving your server soon, thanks for having me!'
 				)
-				.catch(() => undefined);
+				.catch(() => {});
 			await guild.leave();
 			return;
 		}
@@ -453,7 +453,7 @@ export class IMClient extends Client {
 							'If you purchased premium run `!premium check` and then `!premium activate` in the server\n\n' +
 							'I will be leaving your server soon, thanks for having me!'
 					)
-					.catch(() => undefined);
+					.catch(() => {});
 				const onTimeout = async () => {
 					if (await this.cache.premium._get(guild.id)) {
 						return;
@@ -481,7 +481,7 @@ export class IMClient extends Client {
 					`That's it! Enjoy the bot and if you have any questions feel free to join our support server!\n` +
 					'https://discord.gg/kQQmfNCTzm'
 			)
-			.catch(() => undefined);
+			.catch(() => {});
 	}
 
 	private async onGuildDelete(guild: Guild): Promise<void> {
@@ -551,12 +551,11 @@ export class IMClient extends Client {
 		}
 
 		// First channel in order where the bot can speak
-		return guild.channels
-			.filter(
-				(c) => c.type === ChannelType.GUILD_TEXT /*&&
-					c.permissionsOf(guild.self).has('SEND_MESSAGES')*/
-			)
-			.sort((a, b) => a.position - b.position || a.id.localeCompare(b.id))[0];
+		const textChannels = guild.channels.filter(
+			(c) => c.type === ChannelType.GUILD_TEXT /*&&
+				c.permissionsOf(guild.self).has('SEND_MESSAGES')*/
+		) as TextChannel[];
+		return textChannels.sort((a, b) => a.position - b.position || a.id.localeCompare(b.id))[0];
 	}
 
 	public async logModAction(guild: Guild, embed: Embed) {

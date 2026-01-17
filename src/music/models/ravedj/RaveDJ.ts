@@ -21,7 +21,7 @@ export class RaveDJ extends MusicPlatform {
 	public constructor(client: IMClient) {
 		super(client);
 		// TODO: Deactivate service if not available
-		this.getIdToken().catch(() => undefined);
+		this.getIdToken().catch(() => {});
 	}
 
 	public isPlatformUrl(url: string): boolean {
@@ -63,7 +63,7 @@ export class RaveDJ extends MusicPlatform {
 		};
 
 		const res = await axios.get<RaveDjResponse>(url, opts).catch(async (err) => {
-			if (err.code === 401) {
+			if (err?.response?.status === 401) {
 				await this.getIdToken();
 			}
 			return axios.get<RaveDjResponse>(url, opts);
@@ -121,7 +121,7 @@ export class RaveDJ extends MusicPlatform {
 		};
 
 		const { data } = await axios(options).catch<any>(async (err) => {
-			if (err.code === 401) {
+			if (err?.response?.status === 401) {
 				await this.getIdToken();
 			}
 			return axios(options);

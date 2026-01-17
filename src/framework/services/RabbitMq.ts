@@ -1,5 +1,5 @@
 import { captureException } from '@sentry/node';
-import { Channel, connect, Connection, Message as MQMessage } from 'amqplib';
+import { Channel, ChannelModel, connect, Message as MQMessage } from 'amqplib';
 import chalk from 'chalk';
 import { Message, TextChannel } from 'eris';
 import moment from 'moment';
@@ -18,7 +18,7 @@ interface ShardMessage {
 }
 
 export class RabbitMqService extends IMService {
-	private conn: Connection;
+	private conn: ChannelModel;
 	private connRetry: number = 0;
 
 	private qNameStartup: string;
@@ -337,7 +337,7 @@ export class RabbitMqService extends IMService {
 					annChannelPerms = { 'Not set': true };
 				}
 
-				const owner = await this.client.getRESTUser(guild.ownerID).catch(() => undefined);
+				const owner = await this.client.getRESTUser(guild.ownerID).catch(() => {});
 
 				const premium = await this.client.cache.premium.get(guildId);
 
@@ -445,7 +445,8 @@ export class RabbitMqService extends IMService {
 		};
 	}
 	private getCacheSizes() {
-		let channelCount = this.client.groupChannels.size + this.client.privateChannels.size;
+		const groupChannels = (this.client as any).groupChannels;
+		let channelCount = (groupChannels ? groupChannels.size : 0) + this.client.privateChannels.size;
 		let roleCount = 0;
 
 		this.client.guilds.forEach((g) => {

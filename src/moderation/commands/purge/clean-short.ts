@@ -48,7 +48,7 @@ export default class extends Command {
 		// @ts-ignore: TODO - Command still works
 		const messagesToBeDeleted = messages.filter((msg: any) => {
 			return msg.content.length < maxTextLength && msg.attachments.length === 0 && msg.embeds.length === 0;
-		});
+		}) as Message[];
 
 		messagesToBeDeleted.push(message);
 		try {
@@ -68,7 +68,7 @@ export default class extends Command {
 
 		const response = await this.sendReply(message, embed);
 		if (response) {
-			const func = () => response.delete().catch(() => undefined);
+			const func = () => response.delete().catch(() => {});
 			setTimeout(func, 5000);
 		}
 	}

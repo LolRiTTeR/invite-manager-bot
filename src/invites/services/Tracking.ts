@@ -385,24 +385,28 @@ export class TrackingService extends IMService {
 
 			const logs = (await guild
 				.getAuditLogs(50, undefined, INVITE_CREATE)
-				.catch(() => null)) as GuildAuditLogOnlyInvites;
+				.catch((): null => null)) as GuildAuditLogOnlyInvites;
 			if (logs && logs.entries.length) {
 				const createdCodes = logs.entries
 					.filter((e) => deconstruct(e.id) > lastUpdate && newInvs[e.after.code] === undefined)
-					.map((e) => ({
-						code: e.after.code,
-						channel: {
-							id: e.after.channel_id,
-							name: (e.guild.channels.get(e.after.channel_id) || {}).name
-						},
-						guild: e.guild,
-						inviter: e.user,
-						uses: (e.after.uses as number) + 1,
-						maxUses: e.after.max_uses,
-						maxAge: e.after.max_age,
-						temporary: e.after.temporary,
-						createdAt: deconstruct(e.id)
-					}));
+					.map((e) => {
+						const auditGuild = e.guild && 'channels' in e.guild ? (e.guild as Guild) : null;
+						const auditChannel = auditGuild ? auditGuild.channels.get(e.after.channel_id) : null;
+						return {
+							code: e.after.code,
+							channel: {
+								id: e.after.channel_id,
+								name: auditChannel ? auditChannel.name : 'unknown'
+							},
+							guild: e.guild,
+							inviter: e.user,
+							uses: (e.after.uses as number) + 1,
+							maxUses: e.after.max_uses,
+							maxAge: e.after.max_age,
+							temporary: e.after.temporary,
+							createdAt: deconstruct(e.id)
+						};
+					});
 				inviteCodesUsed = inviteCodesUsed.concat(createdCodes.map((c) => c.code) as string[]);
 				invs = invs.concat(createdCodes as any);
 			}
@@ -656,17 +660,17 @@ export class TrackingService extends IMService {
 			}
 		}
 
-		let inviter = guild.members.get(invite.inviter.id);
-		if (!inviter && invite.inviter) {
-			inviter = await guild.getRESTMember(invite.inviter.id).catch(() => undefined);
-		}
+			let inviter = guild.members.get(invite.inviter.id);
+			if (!inviter && invite.inviter) {
+				inviter = await guild.getRESTMember(invite.inviter.id).catch(() => null as Member);
+			}
 
 		if (inviter) {
 			// Promote the inviter if required
-			let me = guild.members.get(this.client.user.id);
-			if (!me) {
-				me = await guild.getRESTMember(this.client.user.id).catch(() => undefined);
-			}
+				let me = guild.members.get(this.client.user.id);
+				if (!me) {
+					me = await guild.getRESTMember(this.client.user.id).catch(() => null as Member);
+				}
 
 			if (me) {
 				await this.client.invs.promoteIfQualified(guild, inviter, me, invites.total);
@@ -776,7 +780,7 @@ export class TrackingService extends IMService {
 
 		let inviter: BasicMember = guild.members.get(inviterId);
 		if (!inviter) {
-			inviter = await guild.getRESTMember(inviterId).catch(() => undefined);
+			inviter = await guild.getRESTMember(inviterId).catch(() => null as Member);
 		}
 		if (!inviter) {
 			inviter = {
@@ -813,7 +817,7 @@ export class TrackingService extends IMService {
 			// Demote the inviter if required
 			let me = guild.members.get(this.client.user.id);
 			if (!me) {
-				me = await guild.getRESTMember(this.client.user.id).catch(() => undefined);
+				me = await guild.getRESTMember(this.client.user.id).catch(() => null as Member);
 			}
 
 			if (me) {

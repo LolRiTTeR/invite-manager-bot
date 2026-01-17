@@ -58,7 +58,7 @@ export default class extends Command {
 			}
 
 			await role.edit({ mentionable: false }, 'Done pinging role');
-			await message.delete().catch(() => undefined);
+			await message.delete().catch(() => {});
 		}
 	}
 }

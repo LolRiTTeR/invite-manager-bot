@@ -82,8 +82,8 @@ export class CaptchaService extends IMService {
 			if (!response) {
 				await dmChannel
 					.createMessage(sets.captchaVerificationFailedMessage.replace(/\{serverName\}/g, member.guild.name))
-					.catch(() => undefined);
-				member.kick().catch(() => undefined);
+					.catch(() => {});
+				member.kick().catch(() => {});
 				return;
 			}
 
@@ -151,7 +151,7 @@ export class CaptchaService extends IMService {
 		const modifier = config.complexity / 5;
 		ctx.strokeStyle = config.color;
 		for (let i = 0; i < config.text.length; i++) {
-			ctx.setTransform(
+			(ctx as any).setTransform(
 				Math.random() * modifier + 1 + modifier / 3,
 				Math.random() * modifier + modifier / 3,
 				Math.random() * modifier + modifier / 3,
@@ -191,7 +191,7 @@ export class CaptchaService extends IMService {
 
 	private async awaitMessage(member: Member, timeLeft: number) {
 		return new Promise<string | void>((resolve) => {
-			let timeOut: NodeJS.Timer;
+			let timeOut: NodeJS.Timeout;
 			const func = async (resp: Message) => {
 				if (member.id !== resp.author.id) {
 					return;

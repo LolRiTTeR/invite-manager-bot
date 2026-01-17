@@ -71,6 +71,6 @@ export default class extends Command {
 			inline: true
 		});
 
-		await msg.edit({ content: '', embed }).catch(() => undefined);
+		await msg.edit({ content: '', embed }).catch(() => {});
 	}
 }

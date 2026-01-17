@@ -69,8 +69,8 @@ export default class extends Command {
 							file: Buffer.from(csv),
 							name: 'InviteManagerExport.csv'
 						})
-						.then(() => msg.delete().catch(() => undefined))
-						.catch(() => undefined);
+						.then(() => msg.delete().catch(() => {}))
+						.catch(() => {});
 				}
 				break;
 

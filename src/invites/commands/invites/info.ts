@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { Member, Message } from 'eris';
 import moment from 'moment';
 
 import { IMClient } from '../../../client';
@@ -171,7 +171,7 @@ export default class extends Command {
 		// Try and get the member if they are still in the guild
 		let member = guild.members.get(user.id);
 		if (!member) {
-			member = await guild.getRESTMember(user.id).catch(() => undefined);
+			member = await guild.getRESTMember(user.id).catch(() => null as Member);
 		}
 
 		if (member) {

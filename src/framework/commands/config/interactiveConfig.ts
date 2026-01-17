@@ -54,7 +54,7 @@ export default class extends Command {
 			message.channel instanceof GuildChannel &&
 			message.channel.permissionsOf(this.client.user.id).has(GuildPermission.MANAGE_MESSAGES)
 		) {
-			await message.delete().catch(() => undefined);
+			await message.delete().catch(() => {});
 		}
 
 		const msg = await this.sendReply(message, embed);
@@ -353,7 +353,7 @@ export default class extends Command {
 
 	private async parseInput(context: Context, authorId: string, msg: Message, key: GuildSettingsKey) {
 		return new Promise<any>(async (resolve, reject) => {
-			let timeOut: NodeJS.Timer;
+			let timeOut: NodeJS.Timeout;
 
 			const func = async (userMsg: Message, emoji: Emoji, member: Member) => {
 				clearTimeout(timeOut);
@@ -367,7 +367,7 @@ export default class extends Command {
 					await msg.removeReaction(emoji.name, userId);
 					resolve(null);
 				} else if (userMsg.author && userMsg.author.id === authorId) {
-					await userMsg.delete().catch(() => undefined);
+					await userMsg.delete().catch(() => {});
 					new SettingsValueResolver(this.client, guildSettingsInfo)
 						.resolve(userMsg.content, context, [key])
 						.then((v) => resolve(v))
@@ -447,8 +447,8 @@ export default class extends Command {
 	}
 
 	private async awaitChoice(authorId: string, msg: Message) {
-		return new Promise<'prev' | 'next' | 'up' | number | void>(async (resolve) => {
-			let timeOut: NodeJS.Timer;
+		return new Promise<'prev' | 'next' | 'up' | number | undefined>(async (resolve) => {
+			let timeOut: NodeJS.Timeout;
 			const func = async (resp: Message, emoji: Emoji, member: Member) => {
 				let userId: string;
 				if (member) userId = member.id;
@@ -461,8 +461,8 @@ export default class extends Command {
 				this.client.removeListener('messageReactionAdd', func);
 
 				if (emoji.name === this.cancel) {
-					await msg.delete().catch(() => undefined);
-					resolve();
+					await msg.delete().catch(() => {});
+					resolve(undefined);
 					return;
 				}
 
@@ -484,13 +484,13 @@ export default class extends Command {
 
 			this.client.on('messageReactionAdd', func);
 
-			const timeOutFunc = async () => {
-				this.client.removeListener('messageReactionAdd', func);
+				const timeOutFunc = async () => {
+					this.client.removeListener('messageReactionAdd', func);
 
-				await msg.delete().catch(() => undefined);
+					await msg.delete().catch(() => {});
 
-				resolve(undefined);
-			};
+					resolve(undefined);
+				};
 
 			timeOut = setTimeout(timeOutFunc, 60000);
 		});

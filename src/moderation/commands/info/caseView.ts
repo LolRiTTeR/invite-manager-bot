@@ -38,16 +38,16 @@ export default class extends Command {
 		const strike = await this.client.db.getStrike(guild.id, caseNumber);
 
 		if (strike) {
-			let user: BasicUser = await guild
-				.getRESTMember(strike.memberId)
-				.then((m) => ({
-					id: m.user.id,
+				let user: BasicUser = await guild
+					.getRESTMember(strike.memberId)
+					.then((m) => ({
+						id: m.user.id,
 					username: m.username,
 					discriminator: m.discriminator,
 					createdAt: m.createdAt,
-					avatarURL: m.avatarURL
-				}))
-				.catch(() => undefined);
+						avatarURL: m.avatarURL
+					}))
+					.catch(() => null as BasicUser);
 
 			if (!user) {
 				user = {
