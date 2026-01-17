@@ -70,6 +70,8 @@ enum TABLE {
 export class DatabaseService extends IMService {
 	private dbCount: number = 1;
 	private pools: Map<number, Pool> = new Map();
+	private dbNamePrefix: string = 'im_';
+	private dbNameSuffix: string = '';
 
 	private guilds: Set<DiscordGuild> = new Set();
 	private doneGuilds: Set<String> = new Set();
@@ -83,6 +85,13 @@ export class DatabaseService extends IMService {
 
 	public constructor(client: IMClient) {
 		super(client);
+
+		if (typeof client.config.databaseNamePrefix === 'string') {
+			this.dbNamePrefix = client.config.databaseNamePrefix;
+		}
+		if (typeof client.config.databaseNameSuffix === 'string') {
+			this.dbNameSuffix = client.config.databaseNameSuffix;
+		}
 
 		for (const db of client.config.databases) {
 			const range = db.range;
@@ -103,10 +112,13 @@ export class DatabaseService extends IMService {
 
 	private getDbInfo(dbShardOrGuildId: number | string): [string, Pool] {
 		if (typeof dbShardOrGuildId === 'number') {
-			return [`\`im_${dbShardOrGuildId}\``, this.pools.get(dbShardOrGuildId)];
+			return [
+				`\`${this.dbNamePrefix}${dbShardOrGuildId}${this.dbNameSuffix}\``,
+				this.pools.get(dbShardOrGuildId)
+			];
 		} else {
 			const db = getShardIdForGuild(dbShardOrGuildId, this.dbCount);
-			return [`\`im_${db}\``, this.pools.get(db)];
+			return [`\`${this.dbNamePrefix}${db}${this.dbNameSuffix}\``, this.pools.get(db)];
 		}
 	}
 
