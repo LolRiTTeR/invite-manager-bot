@@ -296,7 +296,7 @@ export default class extends Command {
 
 		if (key === GuildSettingsKey.announcementVoice) {
 			// Play sample announcement message
-			if (member.voiceState && member.voiceState.channelID) {
+			if (this.client.music.enabled && member.voiceState && member.voiceState.channelID) {
 				const channel = guild.channels.get(member.voiceState.channelID) as VoiceChannel;
 				const conn = await this.client.music.getMusicConnection(guild);
 				await conn.playAnnouncement(value, `Hi, my name is ${value}`, channel);

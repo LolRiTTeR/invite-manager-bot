@@ -374,10 +374,12 @@ export class RabbitMqService extends IMService {
 				await sendResponse({ error: errors.join('\n') });
 				break;
 
-			case ShardCommand.RELOAD_MUSIC_NODES:
-				await this.client.music.loadMusicNodes();
-				await sendResponse({});
-				break;
+				case ShardCommand.RELOAD_MUSIC_NODES:
+					if (this.client.music.enabled) {
+						await this.client.music.loadMusicNodes();
+					}
+					await sendResponse({});
+					break;
 
 			case ShardCommand.LEAVE_GUILD:
 				if (!guild) {

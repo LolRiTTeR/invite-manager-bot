@@ -34,16 +34,25 @@ interface MusicNode {
 }
 
 export class MusicService extends IMService {
+	public enabled: boolean = false;
 	public cache: MusicCache;
 	private nodes: MusicNode[] = [];
 
 	public platforms: MusicPlatformService;
 	private musicConnections: Map<string, MusicConnection> = new Map();
 	public getMusicConnectionGuildIds() {
+		if (!this.enabled) {
+			return [];
+		}
+
 		return [...this.musicConnections.keys()];
 	}
 
 	public async init() {
+		if (!this.enabled) {
+			return;
+		}
+
 		this.cache = this.client.cache.music;
 
 		this.platforms = new MusicPlatformService(this.client);
@@ -51,6 +60,11 @@ export class MusicService extends IMService {
 	}
 
 	public async onClientReady() {
+		if (!this.enabled) {
+			await super.onClientReady();
+			return;
+		}
+
 		if (!this.client.hasStarted) {
 			await this.loadMusicNodes();
 			await this.platforms.onClientReady();
@@ -60,6 +74,10 @@ export class MusicService extends IMService {
 	}
 
 	public async loadMusicNodes() {
+		if (!this.enabled) {
+			return;
+		}
+
 		// Load nodes from database
 		this.nodes = await this.client.db.getMusicNodes();
 
@@ -73,6 +91,10 @@ export class MusicService extends IMService {
 	}
 
 	public async getMusicConnection(guild: Guild) {
+		if (!this.enabled) {
+			throw new Error('Music service is disabled.');
+		}
+
 		let conn = this.musicConnections.get(guild.id);
 		if (!conn) {
 			conn = new MusicConnection(this, guild, await this.cache.get(guild.id));
@@ -82,10 +104,22 @@ export class MusicService extends IMService {
 	}
 
 	public async removeConnection(guild: Guild) {
+		if (!this.enabled) {
+			return;
+		}
+
 		this.musicConnections.delete(guild.id);
 	}
 
 	public createPlayingEmbed(item: MusicItem) {
+		if (!this.enabled) {
+			return this.client.msg.createEmbed({
+				author: null,
+				title: 'Music disabled',
+				fields: []
+			});
+		}
+
 		if (!item) {
 			return this.client.msg.createEmbed({
 				author: null,
@@ -103,6 +137,10 @@ export class MusicService extends IMService {
 	}
 
 	public async getLyrics(item: MusicItem) {
+		if (!this.enabled) {
+			return [];
+		}
+
 		const { data } = await axios.get<any>(`http://video.google.com/timedtext?lang=en&v=${item.id}`);
 
 		const lyrics: { start: number; dur: number; text: string }[] = [];
