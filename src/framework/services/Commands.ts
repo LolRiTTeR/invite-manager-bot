@@ -1,6 +1,6 @@
 import { captureException, withScope } from '@sentry/node';
 import chalk from '../../util/chalk';
-import { GuildChannel, Member, Message, PrivateChannel } from 'eris';
+import { DMChannel, GuildChannel, Member, Message } from 'eris';
 import { readdir, statSync } from 'fs';
 import i18n from 'i18n';
 import { relative, resolve } from 'path';
@@ -199,7 +199,7 @@ export class CommandsService extends IMService {
 			}
 
 			// Send message to InviteManager Guild if it's a DM
-			if (message.channel instanceof PrivateChannel) {
+			if (message.channel instanceof DMChannel) {
 				const user = message.author;
 
 				const oldMessages = await message.channel.getMessages(2);
