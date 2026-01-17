@@ -4,7 +4,7 @@ import chalk from '../../util/chalk';
 import { Message, TextChannel } from 'eris';
 import moment from 'moment';
 
-import { BotType, ChannelType, ShardCommand } from '../../types';
+import { BotType, ChannelType, GuildPermission, ShardCommand } from '../../types';
 
 import { IMService } from './Service';
 
@@ -399,7 +399,11 @@ export class RabbitMqService extends IMService {
 				const settings = await this.client.cache.guilds.get(guildId);
 				const prefix = settings?.prefix || '!';
 
-				const channel = guild.channels.find((c) => c.type === ChannelType.GUILD_TEXT);
+				const channel = guild.channels.find(
+					(c) =>
+						c.type === ChannelType.GUILD_TEXT &&
+						(c as TextChannel).permissionsOf(this.client.user.id).has(GuildPermission.SEND_MESSAGES)
+				);
 
 				if (!channel) {
 					return sendResponse({ error: 'No text channel available' });
