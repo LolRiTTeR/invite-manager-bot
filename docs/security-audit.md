@@ -19,19 +19,19 @@
 - Direktabhaengigkeiten aktualisiert (z. B. @sentry/node, docsify, docsify-cli)
 - Chart-Stack aktualisiert (chart.js 4, chartjs-node-canvas 5, canvas 3) und tar-Risiko beseitigt
 - npm audit fix ohne --force ausgefuehrt
-- Laufzeit-Block fuer Music-Commands und Eval-Restriktion vorhanden
+- Musikservice deaktiviert (keine Verbindungen/Requests), Music-Commands bleiben blockiert
 - Build und Lint laufen (Lint nur Warnungen)
 
 ## Offene Risiken (bewertet)
 ### Runtime
 - ws via eris-lavalink (^3.1.0)
   - Risiko: DoS bei sehr vielen HTTP-Headern waehrend WS-Handshake
-  - Exponierung: Client-Verbindung zu Lavalink; Musikbefehle deaktiviert
+  - Exponierung: Musikservice deaktiviert, keine Verbindungen
   - Fix: Nur per Update/Fork von eris-lavalink oder Bibliothekswechsel
 
 - node-fetch via isomorphic-fetch -> iheart
   - Risiko: Weitergabe sicherer Header an untrusted Targets
-  - Exponierung: iHeart-Requests im Musikmodul; Musikbefehle deaktiviert
+  - Exponierung: Musikservice deaktiviert, keine Requests
   - Fix: Kein Patch verfuegbar, nur Austausch der Bibliothek
 
 ### Dev-only
