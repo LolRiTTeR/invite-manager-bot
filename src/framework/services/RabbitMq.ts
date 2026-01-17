@@ -448,7 +448,7 @@ export class RabbitMqService extends IMService {
 	}
 	private getCacheSizes() {
 		const groupChannels = (this.client as any).groupChannels;
-		let channelCount = (groupChannels ? groupChannels.size : 0) + this.client.privateChannels.size;
+		let channelCount = (groupChannels ? groupChannels.size : 0) + this.client.dmChannels.size;
 		let roleCount = 0;
 
 		this.client.guilds.forEach((g) => {
