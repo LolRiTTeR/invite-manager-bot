@@ -1,47 +1,56 @@
-# Security-Audit (Stand: 2026-01-17)
+# Security Audit (As of: 2026-01-17)
 
-## Umfang
-- Runtime- und Dev-Abhaengigkeiten (npm audit)
-- Manuelle Pfadpruefung fuer Runtime-Exponierung
-- Codepunkte: eval, externe Requests, Secrets
+## Scope
 
-## Methode
-- npm audit (inkl. npm audit fix ohne --force)
-- Sichtung der betroffenen Abhaengigkeitsketten
-- Bewertung nach Runtime/Dev und realer Nutzung
+- Runtime and dev dependencies (npm audit)
+- Manual path check for runtime exposure
+- Code points: eval, external requests, secrets
 
-## Zusammenfassung
-- npm audit: 8 offene Vulnerabilities (7 moderate, 1 high)
-- Runtime-relevant: keine offenen Findings aus npm audit
+## Method
+
+- npm audit (including npm audit fix without --force)
+- Review of affected dependency chains
+- Rating by runtime/dev and real usage
+
+## Summary
+
+- npm audit: 8 open vulnerabilities (7 moderate, 1 high)
+- Runtime relevant: no open findings from npm audit
 - Dev-only: got (docsify-cli), marked (docsify)
 
-## Bereits umgesetzt
-- Direktabhaengigkeiten aktualisiert (z. B. @sentry/node, docsify, docsify-cli)
-- Chart-Stack aktualisiert (chart.js 4, chartjs-node-canvas 5, canvas 3) und tar-Risiko beseitigt
-- npm audit fix ohne --force ausgefuehrt
-- Musikservice deaktiviert (keine Verbindungen/Requests), Music-Commands nicht mehr registriert
-- eris-lavalink entfernt, ws-Risiko entfiel
-- Restliche Musikmodule entfernt und Abhaengigkeiten bereinigt
-- Build und Lint laufen (Lint nur Warnungen)
+## Already done
 
-## Offene Risiken (bewertet)
+- Direct dependencies updated (e.g. @sentry/node, docsify, docsify-cli)
+- Chart stack updated (chart.js 4, chartjs-node-canvas 5, canvas 3) and tar risk removed
+- npm audit fix without --force executed
+- Music service disabled (no connections/requests), music commands no longer registered
+- eris-lavalink removed, ws risk eliminated
+- Remaining music modules removed and dependencies cleaned up
+- Build and lint pass (lint warnings only)
+
+## Open risks (assessed)
+
 ### Runtime
-- Keine offenen Runtime-Risiken aus npm audit.
+
+- No open runtime risks from npm audit.
 
 ### Dev-only
+
 - got via docsify-cli -> update-notifier
-  - Risiko: Dev-CLI, keine Runtime-Exponierung
-  - Fix: Nur mit Breaking-Update im CLI-Stack
+  - Risk: dev CLI, no runtime exposure
+  - Fix: only with a breaking update in the CLI stack
 
 - marked via docsify
-  - Risiko: Docs-Generierung, keine Runtime-Exponierung
-  - Fix: Abhaengig von docsify Release
+  - Risk: docs generation, no runtime exposure
+  - Fix: depends on docsify release
 
-## Empfohlene naechste Schritte
-- Bei Reaktivierung von Musik: Lavaplayer-Client evaluieren (maintained) und iHeart ersetzen/isolieren
-- Offene Risiken dokumentiert lassen und regelmaessig neu bewerten
-- Secrets: config.json bleibt in .gitignore; keine Secrets committen
+## Recommended next steps
 
-## Massnahmen/Risiko-Abschnitt (Entscheidung)
-- Breaking-Updates aktuell nicht erzwungen, da Nutzen < Risiko und Musik deaktiviert
-- Offene Risiken bleiben dokumentiert, Monitoring empfohlen
+- If music is re-enabled: evaluate a maintained Lava player client and replace or isolate iHeart
+- Keep open risks documented and review regularly
+- Secrets: keep config.json in .gitignore; do not commit secrets
+
+## Actions/Risk decision
+
+- Breaking updates not forced for now because benefit < risk and music is disabled
+- Open risks remain documented; monitoring recommended
