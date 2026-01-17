@@ -11,24 +11,20 @@
 - Bewertung nach Runtime/Dev und realer Nutzung
 
 ## Zusammenfassung
-- npm audit: 13 offene Vulnerabilities (7 moderate, 6 high)
-- Runtime-relevant: node-fetch (iheart), ws (eris-lavalink)
+- npm audit: 11 offene Vulnerabilities (7 moderate, 4 high)
+- Runtime-relevant: node-fetch (iheart)
 - Dev-only: got (docsify-cli), marked (docsify)
 
 ## Bereits umgesetzt
 - Direktabhaengigkeiten aktualisiert (z. B. @sentry/node, docsify, docsify-cli)
 - Chart-Stack aktualisiert (chart.js 4, chartjs-node-canvas 5, canvas 3) und tar-Risiko beseitigt
 - npm audit fix ohne --force ausgefuehrt
-- Musikservice deaktiviert (keine Verbindungen/Requests), Music-Commands bleiben blockiert
+- Musikservice deaktiviert (keine Verbindungen/Requests), Music-Commands nicht mehr registriert
+- eris-lavalink entfernt, ws-Risiko entfiel
 - Build und Lint laufen (Lint nur Warnungen)
 
 ## Offene Risiken (bewertet)
 ### Runtime
-- ws via eris-lavalink (^3.1.0)
-  - Risiko: DoS bei sehr vielen HTTP-Headern waehrend WS-Handshake
-  - Exponierung: Musikservice deaktiviert, keine Verbindungen
-  - Fix: Nur per Update/Fork von eris-lavalink oder Bibliothekswechsel
-
 - node-fetch via isomorphic-fetch -> iheart
   - Risiko: Weitergabe sicherer Header an untrusted Targets
   - Exponierung: Musikservice deaktiviert, keine Requests
