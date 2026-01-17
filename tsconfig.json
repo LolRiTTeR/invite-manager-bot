@@ -8,18 +8,13 @@
 		"esModuleInterop": true,
 		"module": "commonjs",
 		"target": "es2017",
-		"lib": ["es2017", "es2018", "esnext"],
+		"lib": ["es2017", "es2018", "esnext", "dom"],
 		"sourceMap": true,
 		"removeComments": false,
 		"experimentalDecorators": true,
-		"typeRoots": [],
 		"types": ["node", "offscreencanvas"],
 		"outDir": "bin",
-		"plugins": [
-			{
-				"name": "tslint-language-service"
-			}
-		]
+		"skipLibCheck": true
 	},
 	"exclude": [
 		"node_modules",

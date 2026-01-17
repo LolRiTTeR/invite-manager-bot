@@ -1,4 +1,4 @@
-import { configureScope, init } from '@sentry/node';
+import { getCurrentScope, init } from '@sentry/node';
 import chalk from 'chalk';
 import { InvManConfig } from './framework/models/Config';
 
@@ -32,11 +32,10 @@ init({
 	release: pkg.version,
 	environment: process.env.NODE_ENV || 'production'
 });
-configureScope((scope) => {
-	scope.setTag('botType', type);
-	scope.setTag('instance', instance);
-	scope.setTag('shard', `${shardId}/${shardCount}`);
-});
+const scope = getCurrentScope();
+scope.setTag('botType', type);
+scope.setTag('instance', instance);
+scope.setTag('shard', `${shardId}/${shardCount}`);
 
 process.on('unhandledRejection', (reason: any, p: any) => {
 	console.error('Unhandled Rejection at: Promise', p, 'reason:', reason);

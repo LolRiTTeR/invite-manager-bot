@@ -12,8 +12,10 @@ This is the code repository for the InviteManager Discord Bot.
 
 ### Requirements
 
-- NodeJS (tested using v14)
+- NodeJS (tested using v24.12.0)
 - Database (tested using `MySQL` 8.0, `MariaDB` 10.4+ should work)
+- Build deps for charts (node-canvas): `pkg-config`, `libcairo2-dev`, `libpango1.0-dev`, `libjpeg-dev`, `libgif-dev`, `librsvg2-dev`
+- Optional: `@sentry/cli` if you use `scripts/upload-sourcemaps.sh`
 
 ### Setup
 
