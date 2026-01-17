@@ -1,8 +1,11 @@
 import { Guild } from 'eris';
 
 import { IMService } from '../../framework/services/Service';
-import type { MusicConnection } from '../models/MusicConnection';
-import type { MusicItem } from '../models/MusicItem';
+type DisabledMusicConnection = {
+	playAnnouncement: (voice: string, message: string, channel: unknown) => Promise<void>;
+};
+
+type DisabledMusicItem = unknown;
 
 export class MusicService extends IMService {
 	public enabled: boolean = false;
@@ -24,7 +27,7 @@ export class MusicService extends IMService {
 		// NO-OP: music service disabled
 	}
 
-	public async getMusicConnection(_guild: Guild): Promise<MusicConnection> {
+	public async getMusicConnection(_guild: Guild): Promise<DisabledMusicConnection> {
 		throw new Error('Music service is disabled.');
 	}
 
@@ -32,7 +35,7 @@ export class MusicService extends IMService {
 		// NO-OP: music service disabled
 	}
 
-	public createPlayingEmbed(_item: MusicItem) {
+	public createPlayingEmbed(_item: DisabledMusicItem) {
 		return this.client.msg.createEmbed({
 			author: null,
 			title: 'Music disabled',
@@ -40,7 +43,7 @@ export class MusicService extends IMService {
 		});
 	}
 
-	public async getLyrics(_item: MusicItem): Promise<{ start: number; dur: number; text: string }[]> {
+	public async getLyrics(_item: DisabledMusicItem): Promise<{ start: number; dur: number; text: string }[]> {
 		return [];
 	}
 

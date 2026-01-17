@@ -1,7 +1,5 @@
 import { VoiceConnection, VoiceConnectionManager } from 'eris';
 
-import { MusicItem } from './music/models/MusicItem';
-
 export enum BotType {
 	regular = 'regular',
 	pro = 'pro',
@@ -197,11 +195,6 @@ export enum ChannelType {
 	GUILD_VOICE = 2,
 	GROUP_DM = 3,
 	GUILD_CATEGORY = 4
-}
-
-export interface MusicQueue {
-	current: MusicItem;
-	queue: MusicItem[];
 }
 
 export enum MusicPlatformType {

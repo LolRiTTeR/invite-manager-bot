@@ -39,12 +39,10 @@
 		"eris": "0.18.0",
 		"eventemitter3": "4.0.7",
 		"i18n": "0.15.3",
-		"iheart": "3.1.1",
 		"moment": "2.30.1",
 		"mysql2": "3.16.1",
 		"reflect-metadata": "0.2.2",
-		"xmldoc": "2.0.3",
-		"ytdl-core": "4.11.5"
+		"xmldoc": "2.0.3"
 	},
 	"optionalDependencies": {
 		"@sentry/cli": "1.69.1",
