@@ -33,8 +33,6 @@
 		"password": "guest",
 		"prefix": ""
 	},
-	"databaseNamePrefix": "im_",
-	"databaseNameSuffix": "",
 	"databases": [
 		{
 			"host": "localhost",
