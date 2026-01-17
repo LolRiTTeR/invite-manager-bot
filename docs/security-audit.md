@@ -11,8 +11,8 @@
 - Bewertung nach Runtime/Dev und realer Nutzung
 
 ## Zusammenfassung
-- npm audit: 11 offene Vulnerabilities (7 moderate, 4 high)
-- Runtime-relevant: node-fetch (iheart)
+- npm audit: 8 offene Vulnerabilities (7 moderate, 1 high)
+- Runtime-relevant: keine offenen Findings aus npm audit
 - Dev-only: got (docsify-cli), marked (docsify)
 
 ## Bereits umgesetzt
@@ -21,14 +21,12 @@
 - npm audit fix ohne --force ausgefuehrt
 - Musikservice deaktiviert (keine Verbindungen/Requests), Music-Commands nicht mehr registriert
 - eris-lavalink entfernt, ws-Risiko entfiel
+- Restliche Musikmodule entfernt und Abhaengigkeiten bereinigt
 - Build und Lint laufen (Lint nur Warnungen)
 
 ## Offene Risiken (bewertet)
 ### Runtime
-- node-fetch via isomorphic-fetch -> iheart
-  - Risiko: Weitergabe sicherer Header an untrusted Targets
-  - Exponierung: Musikservice deaktiviert, keine Requests
-  - Fix: Kein Patch verfuegbar, nur Austausch der Bibliothek
+- Keine offenen Runtime-Risiken aus npm audit.
 
 ### Dev-only
 - got via docsify-cli -> update-notifier
