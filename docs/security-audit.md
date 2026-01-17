@@ -20,6 +20,7 @@
 - npm audit fix ohne --force ausgefuehrt
 - Laufzeit-Block fuer Music-Commands und Eval-Restriktion vorhanden
 - Build und Lint laufen (Lint nur Warnungen)
+- Canvas 3.x getestet; tar-Risiko bleibt, da chartjs-node-canvas weiterhin canvas 2.11.2 nutzt
 
 ## Offene Risiken (bewertet)
 ### Runtime
@@ -36,7 +37,7 @@
 - tar via canvas -> @mapbox/node-pre-gyp
   - Risiko: Install-Time (Tar-Parsing), Supply-Chain-/Build-Phase
   - Exponierung: Build/Install, nicht im Laufzeitpfad
-  - Fix: Canvas Major-Update oder Prebuild-Chain-Wechsel
+  - Fix: chartjs-node-canvas 5 + chart.js 4 (Breaking) oder Prebuild-Chain-Wechsel
 
 ### Dev-only
 - got via docsify-cli -> update-notifier
