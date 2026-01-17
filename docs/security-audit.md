@@ -11,16 +11,16 @@
 - Bewertung nach Runtime/Dev und realer Nutzung
 
 ## Zusammenfassung
-- npm audit: 15 offene Vulnerabilities (7 moderate, 8 high)
-- Runtime-relevant: node-fetch (iheart), ws (eris-lavalink), tar (canvas/@mapbox/node-pre-gyp, Install-Time)
+- npm audit: 13 offene Vulnerabilities (7 moderate, 6 high)
+- Runtime-relevant: node-fetch (iheart), ws (eris-lavalink)
 - Dev-only: got (docsify-cli), marked (docsify)
 
 ## Bereits umgesetzt
 - Direktabhaengigkeiten aktualisiert (z. B. @sentry/node, docsify, docsify-cli)
+- Chart-Stack aktualisiert (chart.js 4, chartjs-node-canvas 5, canvas 3) und tar-Risiko beseitigt
 - npm audit fix ohne --force ausgefuehrt
 - Laufzeit-Block fuer Music-Commands und Eval-Restriktion vorhanden
 - Build und Lint laufen (Lint nur Warnungen)
-- Canvas 3.x getestet; tar-Risiko bleibt, da chartjs-node-canvas weiterhin canvas 2.11.2 nutzt
 
 ## Offene Risiken (bewertet)
 ### Runtime
@@ -34,11 +34,6 @@
   - Exponierung: iHeart-Requests im Musikmodul; Musikbefehle deaktiviert
   - Fix: Kein Patch verfuegbar, nur Austausch der Bibliothek
 
-- tar via canvas -> @mapbox/node-pre-gyp
-  - Risiko: Install-Time (Tar-Parsing), Supply-Chain-/Build-Phase
-  - Exponierung: Build/Install, nicht im Laufzeitpfad
-  - Fix: chartjs-node-canvas 5 + chart.js 4 (Breaking) oder Prebuild-Chain-Wechsel
-
 ### Dev-only
 - got via docsify-cli -> update-notifier
   - Risiko: Dev-CLI, keine Runtime-Exponierung
@@ -50,7 +45,6 @@
 
 ## Empfohlene naechste Schritte
 - Bei Reaktivierung von Musik: Lavaplayer-Client evaluieren (maintained) und iHeart ersetzen/isolieren
-- Optional: Canvas Major-Update in separater Teststufe
 - Offene Risiken dokumentiert lassen und regelmaessig neu bewerten
 - Secrets: config.json bleibt in .gitignore; keine Secrets committen
 
