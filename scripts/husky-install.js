@@ -6,8 +6,12 @@ if (process.env.HUSKY === '0') {
 	process.exit(0);
 }
 
-const bin = path.resolve(__dirname, '../node_modules/husky/lib/bin.js');
-if (!existsSync(bin)) {
+const binCandidates = [
+	path.resolve(__dirname, '../node_modules/husky/bin.js'),
+	path.resolve(__dirname, '../node_modules/husky/lib/bin.js')
+];
+const bin = binCandidates.find((candidate) => existsSync(candidate));
+if (!bin) {
 	process.exit(0);
 }
 
