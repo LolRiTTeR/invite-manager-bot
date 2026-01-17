@@ -153,6 +153,7 @@ export class IMClient extends Client {
 				'guildInvites',
 				'guildMembers',
 				'guildMessages',
+				'messageContent',
 				'guildBans',
 				'guildMessageReactions',
 				'guildVoiceStates',
