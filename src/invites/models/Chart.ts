@@ -4,9 +4,13 @@ import chartjsPluginDatalabels from 'chartjs-plugin-datalabels';
 const width = 1000;
 const height = 400;
 
-const bigCanvasRenderService = new ChartJSNodeCanvas({ width, height, chartCallback: (chartJS) => {
-	chartJS.register(chartjsPluginDatalabels);
-}});
+const bigCanvasRenderService = new ChartJSNodeCanvas({
+	width,
+	height,
+	chartCallback: (chartJS) => {
+		chartJS.register(chartjsPluginDatalabels);
+	}
+});
 
 const backgroundColor = {
 	id: 'backgroundColor',
@@ -18,7 +22,7 @@ const backgroundColor = {
 		ctx.fillRect(0, 0, chart.width, chart.height);
 		ctx.restore();
 	}
-}
+};
 
 const options = {
 	maintainAspectRatio: false,
@@ -26,42 +30,42 @@ const options = {
 		duration: 0
 	},
 	scales: {
-		yAxes: [
-			{
-				ticks: {
-					display: true,
-					fontColor: 'black',
-					fontStyle: 'bold',
-					beginAtZero: true,
-					maxTicksLimit: 5,
-					padding: 20
+		y: {
+			beginAtZero: true,
+			ticks: {
+				display: true,
+				color: 'black',
+				font: {
+					weight: 'bold'
 				},
-				gridLines: {
-					drawTicks: true,
-					display: true
+				maxTicksLimit: 5,
+				padding: 20
+			},
+			grid: {
+				drawTicks: true,
+				display: true
+			}
+		},
+		x: {
+			grid: {
+				drawTicks: true,
+				display: true
+			},
+			ticks: {
+				display: true,
+				padding: 20,
+				color: 'black',
+				font: {
+					weight: 'bold'
 				}
 			}
-		],
-		xAxes: [
-			{
-				gridLines: {
-					drawTicks: true,
-					display: true
-				},
-				ticks: {
-					display: true,
-					padding: 20,
-					fontColor: 'black',
-					fontStyle: 'bold'
-				}
-			}
-		]
+		}
 	},
 	plugins: {
 		legend: {
 			display: false
 		},
-		chartjsPluginDatalabels: {
+		datalabels: {
 			display: function (context: { dataIndex: number; dataset: any }) {
 				// Always show first and last value
 				if (context.dataIndex === 0 || context.dataIndex === context.dataset.data.length - 1) {
@@ -85,6 +89,6 @@ export const renderChart = (type: any, data: any) => {
 		data: data,
 		options: options,
 		plugins: [backgroundColor]
-	}
+	};
 	return bigCanvasRenderService.renderToBuffer(configuration);
 };
