@@ -6,7 +6,7 @@ import i18n from 'i18n';
 import { relative, resolve } from 'path';
 
 import { guildDefaultSettings } from '../../settings';
-import { GuildPermission } from '../../types';
+import { CommandGroup, GuildPermission } from '../../types';
 import { Command, Context } from '../commands/Command';
 import { BooleanResolver } from '../resolvers';
 
@@ -214,6 +214,11 @@ export class CommandsService extends IMService {
 
 		// Command not allowed in DM
 		if (cmd.guildOnly && !guild) {
+			return;
+		}
+
+		if (cmd.group === CommandGroup.Music) {
+			await this.client.msg.sendReply(message, 'Music commands are currently disabled.');
 			return;
 		}
 
