@@ -32,7 +32,6 @@ import { ManagementService } from './management/services/ManagementService';
 import { PunishmentCache } from './moderation/cache/PunishmentsCache';
 import { StrikesCache } from './moderation/cache/StrikesCache';
 import { ModerationService } from './moderation/services/Moderation';
-import { MusicCache } from './music/cache/MusicCache';
 import { MusicService } from './music/services/MusicService';
 import { botDefaultSettings, BotSettingsObject, guildDefaultSettings } from './settings';
 import { BotType, ChannelType, LavaPlayerManager } from './types';
@@ -81,7 +80,6 @@ export interface ClientCacheObject {
 	punishments: PunishmentCache;
 	guilds: GuildSettingsCache;
 	strikes: StrikesCache;
-	music: MusicCache;
 	reactionRoles: ReactionRoleCache;
 }
 
@@ -96,7 +94,6 @@ export interface ClientServiceObject {
 	commands: CommandsService;
 	captcha: CaptchaService;
 	invites: InvitesService;
-	music: MusicService;
 	tracking: TrackingService;
 	premium: PremiumService;
 	management: ManagementService;
@@ -210,7 +207,6 @@ export class IMClient extends Client {
 			captcha: new CaptchaService(this),
 			invites: new InvitesService(this),
 			tracking: new TrackingService(this),
-			music: new MusicService(this),
 			premium: new PremiumService(this),
 			management: new ManagementService(this)
 		};
@@ -227,7 +223,6 @@ export class IMClient extends Client {
 			punishments: new PunishmentCache(this),
 			guilds: new GuildSettingsCache(this),
 			strikes: new StrikesCache(this),
-			music: new MusicCache(this),
 			reactionRoles: new ReactionRoleCache(this)
 		};
 
@@ -240,7 +235,7 @@ export class IMClient extends Client {
 		this.cmds = this.service.commands;
 		this.captcha = this.service.captcha;
 		this.invs = this.service.invites;
-		this.music = this.service.music;
+		this.music = new MusicService(this);
 		this.tracking = this.service.tracking;
 		this.premium = this.service.premium;
 		this.management = this.service.management;
