@@ -6,7 +6,7 @@ import i18n from 'i18n';
 import { relative, resolve } from 'path';
 
 import { guildDefaultSettings } from '../../settings';
-import { CommandGroup, GuildPermission } from '../../types';
+import { CommandGroup, GuildPermission, MusicCommand } from '../../types';
 import { Command, Context } from '../commands/Command';
 import { BooleanResolver } from '../resolvers';
 
@@ -16,10 +16,23 @@ const CMD_DIRS = [
 	resolve(__dirname, '../commands'),
 	resolve(__dirname, '../../invites/commands'),
 	resolve(__dirname, '../../moderation/commands'),
-	resolve(__dirname, '../../music/commands'),
 	resolve(__dirname, '../../management/commands'),
 	resolve(__dirname, '../../developers/commands')
 ];
+const MUSIC_COMMANDS = new Set<string>([
+	...Object.values(MusicCommand),
+	'np',
+	'now-playing',
+	'p',
+	'q',
+	'vol',
+	'loop',
+	'next',
+	'start',
+	'stop',
+	'dc',
+	'replay'
+]);
 const ID_REGEX: RegExp = /^(?:<@!?)?(\d+)>? ?(.*)$/;
 const RATE_LIMIT = 1; // max commands per second
 const COOLDOWN = 5; // in seconds
@@ -179,6 +192,12 @@ export class CommandsService extends IMService {
 
 		// Command not found
 		if (!cmd) {
+			const cmdName = splits[0].toLowerCase();
+			if (MUSIC_COMMANDS.has(cmdName)) {
+				await this.client.msg.sendReply(message, 'Music commands are currently disabled.');
+				return;
+			}
+
 			// Send message to InviteManager Guild if it's a DM
 			if (message.channel instanceof PrivateChannel) {
 				const user = message.author;
