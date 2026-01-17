@@ -4,11 +4,12 @@ import chalk from '../../util/chalk';
 import { Message, TextChannel } from 'eris';
 import moment from 'moment';
 
-import { BotType, ShardCommand } from '../../types';
+import { BotType, ChannelType, ShardCommand } from '../../types';
 
 import { IMService } from './Service';
 
 const BOT_SHARDING = 16;
+const ALLOWED_SUDO_COMMANDS = new Set(['leaderboard', 'invites', 'bot-info', 'prefix']);
 
 interface ShardMessage {
 	id: string;
@@ -374,12 +375,75 @@ export class RabbitMqService extends IMService {
 				await sendResponse({ error: errors.join('\n') });
 				break;
 
-				case ShardCommand.RELOAD_MUSIC_NODES:
-					if (this.client.music.enabled) {
-						await this.client.music.loadMusicNodes();
+			case ShardCommand.RELOAD_MUSIC_NODES:
+				if (this.client.music.enabled) {
+					await this.client.music.loadMusicNodes();
+				}
+				await sendResponse({});
+				break;
+
+			case ShardCommand.SUDO:
+				if (!guild) {
+					return sendResponse({ error: 'Guild not found' });
+				}
+				if (!content.command) {
+					return sendResponse({ error: 'Missing command' });
+				}
+
+				const rawCmd = content.command.toString().trim();
+				const cmdName = rawCmd.split(' ')[0].toLowerCase();
+				if (!ALLOWED_SUDO_COMMANDS.has(cmdName)) {
+					return sendResponse({ error: 'Command not allowed' });
+				}
+
+				const settings = await this.client.cache.guilds.get(guildId);
+				const prefix = settings?.prefix || '!';
+
+				const channel = guild.channels.find((c) => c.type === ChannelType.GUILD_TEXT);
+
+				if (!channel) {
+					return sendResponse({ error: 'No text channel available' });
+				}
+
+				const outputs: Array<{ content?: string; embed?: any }> = [];
+				const sudoChannel = Object.create(channel) as TextChannel;
+				sudoChannel.createMessage = async (payload: any) => {
+					if (typeof payload === 'string') {
+						outputs.push({ content: payload });
+					} else if (payload) {
+						if (payload.embed) {
+							outputs.push({ embed: payload.embed });
+						}
+						if (payload.embeds && Array.isArray(payload.embeds)) {
+							for (const emb of payload.embeds) {
+								outputs.push({ embed: emb });
+							}
+						}
+						if (payload.content) {
+							outputs.push({ content: payload.content });
+						}
 					}
-					await sendResponse({});
-					break;
+					return null as any;
+				};
+
+				const sudoAuthor = {
+					id: content.userId || this.client.user.id,
+					bot: false,
+					username: 'Manager',
+					discriminator: '0000'
+				};
+
+				const sudoMessage: any = {
+					id: `sudo-${Date.now()}`,
+					content: `${prefix}${rawCmd}`,
+					author: sudoAuthor,
+					channel: sudoChannel
+				};
+				sudoMessage.__sudo = true;
+
+				await this.client.cmds.onMessage(sudoMessage as Message);
+				await sendResponse({ outputs });
+				break;
 
 			case ShardCommand.LEAVE_GUILD:
 				if (!guild) {

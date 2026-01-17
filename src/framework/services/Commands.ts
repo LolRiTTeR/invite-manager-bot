@@ -121,6 +121,8 @@ export class CommandsService extends IMService {
 			return;
 		}
 
+		const isSudo = (message as any).__sudo;
+
 		const start = Date.now();
 
 		const channel = message.channel;
@@ -129,6 +131,7 @@ export class CommandsService extends IMService {
 		if (guild) {
 			// Check if this guild is disabled due to the pro bot
 			if (
+				!isSudo &&
 				this.client.disabledGuilds.has(guild.id) &&
 				!message.content.startsWith(`<@${this.client.user.id}>`) &&
 				!message.content.startsWith(`<@!${this.client.user.id}>`)
@@ -285,45 +288,47 @@ export class CommandsService extends IMService {
 
 		// Guild only stuff
 		if (guild) {
-			// Check permissions for guilds
-			let member = message.member;
-			if (!member) {
-				member = guild.members.get(message.author.id);
-			}
-			if (!member) {
-				member = await guild.getRESTMember(message.author.id);
-			}
-			if (!member) {
-				console.error(`Could not get member ${message.author.id} for ${guild.id}`);
-				await this.client.msg.sendReply(message, t('permissions.memberError'));
-				return;
-			}
+			if (!isSudo) {
+				// Check permissions for guilds
+				let member = message.member;
+				if (!member) {
+					member = guild.members.get(message.author.id);
+				}
+				if (!member) {
+					member = await guild.getRESTMember(message.author.id);
+				}
+				if (!member) {
+					console.error(`Could not get member ${message.author.id} for ${guild.id}`);
+					await this.client.msg.sendReply(message, t('permissions.memberError'));
+					return;
+				}
 
-			if (cmd.botDeveloperOnly && !this.client.config.bot.bot_devs.includes(member.id)) {
-				await this.client.msg.sendReply(message, 'This command requires you to be an **InviteManager Developer**');
-				return;
-			}
+				if (cmd.botDeveloperOnly && !this.client.config.bot.bot_devs.includes(member.id)) {
+					await this.client.msg.sendReply(message, 'This command requires you to be an **InviteManager Developer**');
+					return;
+				}
 
-			// Always allow admins
-			if (!member.permissions.has(GuildPermission.ADMINISTRATOR) && guild.ownerID !== member.id) {
-				const perms = (await this.client.cache.permissions.get(guild.id))[cmd.name];
+				// Always allow admins
+				if (!member.permissions.has(GuildPermission.ADMINISTRATOR) && guild.ownerID !== member.id) {
+					const perms = (await this.client.cache.permissions.get(guild.id))[cmd.name];
 
-				if (perms && perms.length > 0) {
-					// Check that we have at least one of the required roles
-					if (!perms.some((p) => member.roles.indexOf(p) >= 0)) {
-						await this.client.msg.sendReply(
-							message,
-							t('permissions.role', {
-								roles: perms.map((p) => `<@&${p}>`).join(', ')
-							})
-						);
+					if (perms && perms.length > 0) {
+						// Check that we have at least one of the required roles
+						if (!perms.some((p) => member.roles.indexOf(p) >= 0)) {
+							await this.client.msg.sendReply(
+								message,
+								t('permissions.role', {
+									roles: perms.map((p) => `<@&${p}>`).join(', ')
+								})
+							);
+							return;
+						}
+					} else if (cmd.strict && member.id !== '216749228087705610') {
+						// todo: bot dev check to always allow
+						// Allow commands that require no roles, if strict is not true
+						await this.client.msg.sendReply(message, t('permissions.adminOnly'));
 						return;
 					}
-				} else if (cmd.strict && member.id !== '216749228087705610') {
-					// todo: bot dev check to always allow
-					// Allow commands that require no roles, if strict is not true
-					await this.client.msg.sendReply(message, t('permissions.adminOnly'));
-					return;
 				}
 			}
 
@@ -334,18 +339,20 @@ export class CommandsService extends IMService {
 			}
 
 			// Check command permissions
-			const missingPerms = cmd.botPermissions.filter(
-				(p) => !(channel as GuildChannel).permissionsOf(this.client.user.id).has(p)
-			);
-			if (missingPerms.length > 0) {
-				await this.client.msg.sendReply(
-					message,
-					t(`permissions.missing`, {
-						channel: `<#${channel.id}>`,
-						permissions: missingPerms.map((p) => '`' + t(`permissions.${p}`) + '`').join(', ')
-					})
+			if (!isSudo) {
+				const missingPerms = cmd.botPermissions.filter(
+					(p) => !(channel as GuildChannel).permissionsOf(this.client.user.id).has(p)
 				);
-				return;
+				if (missingPerms.length > 0) {
+					await this.client.msg.sendReply(
+						message,
+						t(`permissions.missing`, {
+							channel: `<#${channel.id}>`,
+							permissions: missingPerms.map((p) => '`' + t(`permissions.${p}`) + '`').join(', ')
+						})
+					);
+					return;
+				}
 			}
 		}
 
