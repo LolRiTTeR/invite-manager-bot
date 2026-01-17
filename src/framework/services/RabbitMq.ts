@@ -1,6 +1,6 @@
 import { captureException } from '@sentry/node';
 import { Channel, ChannelModel, connect, Message as MQMessage } from 'amqplib';
-import chalk from 'chalk';
+import chalk from '../../util/chalk';
 import { Message, TextChannel } from 'eris';
 import moment from 'moment';
 

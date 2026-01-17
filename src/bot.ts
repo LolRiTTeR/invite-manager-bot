@@ -1,5 +1,5 @@
 import { getCurrentScope, init } from '@sentry/node';
-import chalk from 'chalk';
+import chalk from './util/chalk';
 import { InvManConfig } from './framework/models/Config';
 
 import { IMClient } from './client';

@@ -1,6 +1,6 @@
 const { readFileSync, readdirSync, statSync } = require('fs');
 const { resolve, relative } = require('path');
-const chalk = require('chalk');
+const chalk = require('./chalk');
 
 const en = require('../i18n/bot/en.json');
 

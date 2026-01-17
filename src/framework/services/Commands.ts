@@ -1,5 +1,5 @@
 import { captureException, withScope } from '@sentry/node';
-import chalk from 'chalk';
+import chalk from '../../util/chalk';
 import { GuildChannel, Member, Message, PrivateChannel } from 'eris';
 import { readdir, statSync } from 'fs';
 import i18n from 'i18n';

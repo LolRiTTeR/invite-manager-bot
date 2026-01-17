@@ -1,5 +1,5 @@
 import { captureException, withScope } from '@sentry/node';
-import chalk from 'chalk';
+import chalk from '../../util/chalk';
 import { Guild, GuildChannel } from 'eris';
 import moment from 'moment';
 
