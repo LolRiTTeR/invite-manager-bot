@@ -27,6 +27,12 @@ export class RabbitMqService extends IMService {
 	private startTicket: MQMessage;
 	private waitingForTicket: boolean;
 
+	private qNameInviteSync: string;
+	private channelInviteSync: Channel;
+	private inviteSyncTicket: MQMessage;
+	private waitingForInviteSyncTicket: boolean;
+	private inviteSyncSeeded: boolean;
+
 	private qName: string;
 	private channel: Channel;
 	private channelRetry: number = 0;
@@ -62,6 +68,7 @@ export class RabbitMqService extends IMService {
 	}
 	private async shutdownConnection() {
 		await this.shutdownChannel();
+		await this.shutdownInviteSyncChannel();
 
 		if (this.conn) {
 			try {
@@ -120,6 +127,18 @@ export class RabbitMqService extends IMService {
 			}
 
 			this.channel = null;
+		}
+	}
+
+	private async shutdownInviteSyncChannel() {
+		if (this.channelInviteSync) {
+			try {
+				await this.channelInviteSync.close();
+			} catch {
+				// NO-OP
+			}
+
+			this.channelInviteSync = null;
 		}
 	}
 
@@ -199,6 +218,122 @@ export class RabbitMqService extends IMService {
 		this.channelStartup = null;
 
 		this.startTicket = null;
+	}
+
+	private getInviteSyncSettings(): { globalMaxConcurrent: number; ticketShardId: number } {
+		const raw = (this.client.config && this.client.config.inviteSync) || {};
+		const readNumber = (value: unknown, fallback: number) =>
+			typeof value === 'number' && Number.isFinite(value) ? value : fallback;
+
+		const globalMaxConcurrent = Math.max(0, Math.floor(readNumber(raw.globalMaxConcurrent, 0)));
+		const ticketShardId = Math.max(0, Math.floor(readNumber(raw.ticketShardId, 0)));
+
+		return { globalMaxConcurrent, ticketShardId };
+	}
+
+	private getInviteSyncQueueName(): string {
+		return `shard-${this.client.instance}-invite-sync`;
+	}
+
+	public async ensureInviteSyncTickets() {
+		if (!this.conn) {
+			return;
+		}
+
+		const { globalMaxConcurrent, ticketShardId } = this.getInviteSyncSettings();
+		if (globalMaxConcurrent <= 0 || this.inviteSyncSeeded || this.client.shardId !== ticketShardId) {
+			return;
+		}
+
+		const channel = await this.conn.createChannel();
+		try {
+			const qName = this.getInviteSyncQueueName();
+			const { messageCount, consumerCount } = await channel.assertQueue(qName, { durable: true, autoDelete: false });
+
+			if (messageCount === 0 && consumerCount === 0) {
+				for (let i = 0; i < globalMaxConcurrent; i++) {
+					channel.sendToQueue(qName, Buffer.from(JSON.stringify({ ticket: i + 1 })), { persistent: true });
+				}
+				console.log(chalk.green(`Seeded ${globalMaxConcurrent} invite sync tickets`));
+			}
+		} catch (err) {
+			console.error(err);
+		} finally {
+			try {
+				await channel.close();
+			} catch {
+				// NO-OP
+			}
+		}
+
+		this.inviteSyncSeeded = true;
+	}
+
+	public async waitForInviteSyncTicket() {
+		if (!this.conn) {
+			console.log(chalk.yellow('No connection available, invite sync tickets disabled.'));
+			return;
+		}
+
+		const { globalMaxConcurrent } = this.getInviteSyncSettings();
+		if (globalMaxConcurrent <= 0) {
+			return;
+		}
+
+		this.qNameInviteSync = this.getInviteSyncQueueName();
+		this.channelInviteSync = await this.conn.createChannel();
+		this.channelInviteSync.on('close', async (err) => {
+			this.waitingForInviteSyncTicket = false;
+
+			if (this.inviteSyncTicket) {
+				return;
+			}
+
+			if (err) {
+				captureException(err);
+				console.error(err);
+			}
+
+			console.error('Could not acquire invite sync ticket');
+			process.exit(1);
+		});
+
+		await this.channelInviteSync.prefetch(1);
+		await this.channelInviteSync.assertQueue(this.qNameInviteSync, { durable: true, autoDelete: false });
+
+		this.inviteSyncTicket = null;
+		this.waitingForInviteSyncTicket = true;
+
+		return new Promise<void>((resolve) => {
+			this.channelInviteSync.consume(
+				this.qNameInviteSync,
+				(msg) => {
+					if (!msg) {
+						return;
+					}
+					console.log(chalk.green('Acquired invite sync ticket!'));
+					this.waitingForInviteSyncTicket = false;
+					this.inviteSyncTicket = msg;
+					resolve();
+				},
+				{ noAck: false }
+			);
+		});
+	}
+
+	public async endInviteSync() {
+		if (!this.channelInviteSync) {
+			return;
+		}
+
+		if (this.inviteSyncTicket) {
+			this.channelInviteSync.nack(this.inviteSyncTicket, false, true);
+		}
+
+		await this.channelInviteSync.close();
+		this.channelInviteSync = null;
+		this.inviteSyncTicket = null;
+		this.waitingForInviteSyncTicket = false;
 	}
 
 	public async sendToManager(message: { id: string; [x: string]: any }, isResend: boolean = false) {

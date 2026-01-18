@@ -134,6 +134,12 @@ export class TrackingService extends IMService {
 		);
 
 		this.initialPendingGuilds = allGuilds.length;
+		await this.client.rabbitmq.ensureInviteSyncTickets();
+		if (inviteSyncConfig.globalMaxConcurrent > 0) {
+			console.log(`Waiting for invite sync ticket (max ${inviteSyncConfig.globalMaxConcurrent} shards in parallel)`);
+		}
+		await this.client.rabbitmq.waitForInviteSyncTicket();
+
 		this.inviteSyncQueue = allGuilds;
 		this.initInviteSyncState(inviteSyncConfig);
 		console.log(
@@ -141,6 +147,12 @@ export class TrackingService extends IMService {
 				`${this.inviteSyncState.delayMs}ms`
 			)} delay`
 		);
+		if (this.inviteSyncQueue.length === 0) {
+			this.logInviteSyncSummary();
+			await this.client.rabbitmq.endInviteSync();
+			this.startupDone();
+			return;
+		}
 		this.ensureInviteSyncWorkers();
 	}
 
@@ -245,6 +257,7 @@ export class TrackingService extends IMService {
 			if (this.pendingGuilds.size === 0) {
 				console.log(chalk.green('Loaded all pending guilds!'));
 				this.logInviteSyncSummary();
+				await this.client.rabbitmq.endInviteSync();
 				this.startupDone();
 				this.inviteSyncState.activeWorkers--;
 				return;
