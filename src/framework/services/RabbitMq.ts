@@ -230,9 +230,9 @@ export class RabbitMqService extends IMService {
 		);
 	}
 
-	public async sendStatusToManager(err?: Error) {
+	public async sendStatusToManager(err?: Error, requestId?: string) {
 		await this.sendToManager({
-			id: 'status',
+			id: requestId || 'status',
 			cmd: ShardCommand.STATUS,
 			state: this.waitingForTicket
 				? 'waiting'
@@ -271,7 +271,7 @@ export class RabbitMqService extends IMService {
 
 		switch (cmd) {
 			case ShardCommand.STATUS:
-				await this.sendStatusToManager();
+				await this.sendStatusToManager(undefined, content.id);
 				break;
 
 			case ShardCommand.CUSTOM:
