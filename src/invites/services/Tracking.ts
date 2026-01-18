@@ -42,6 +42,38 @@ interface GuildAuditLogOnlyInvites extends GuildAuditLog {
 	entries: GuildAuditLogOnlyInvitesEntries[];
 }
 
+interface InviteSyncConfig {
+	parallel: number;
+	delayMs: number;
+	minDelayMs: number;
+	maxDelayMs: number;
+	minParallel: number;
+	maxParallel: number;
+	globalMaxConcurrent: number;
+	ticketShardId: number;
+}
+
+interface InviteSyncState {
+	startedAt: number;
+	processed: number;
+	delayMs: number;
+	targetParallel: number;
+	minDelayMs: number;
+	maxDelayMs: number;
+	minParallel: number;
+	maxParallel: number;
+	activeWorkers: number;
+	lastReportAt: number;
+	avgMs: number;
+	successStreak: number;
+}
+
+interface InviteSyncResult {
+	durationMs: number;
+	queued: number;
+	hadError: boolean;
+}
+
 const GUILDS_IN_PARALLEL = 5;
 const INVITE_CREATE = 40;
 
@@ -49,6 +81,8 @@ export class TrackingService extends IMService {
 	public pendingGuilds: Set<string> = new Set();
 	public initialPendingGuilds: number = 0;
 
+	private inviteSyncQueue: Guild[] = [];
+	private inviteSyncState: InviteSyncState;
 	private inviteStore: {
 		[guildId: string]: { [code: string]: { uses: number; maxUses: number } };
 	} = {};
@@ -73,7 +107,8 @@ export class TrackingService extends IMService {
 			return;
 		}
 
-		console.log(`Requesting ${chalk.blue(GUILDS_IN_PARALLEL)} guilds in parallel during startup`);
+		const inviteSyncConfig = this.getInviteSyncConfig();
+		console.log(`Requesting ${chalk.blue(inviteSyncConfig.parallel)} guilds in parallel during startup`);
 
 		// Save all guilds, sort descending by member count
 		// (Guilds with more members are more likely to get a join)
@@ -99,45 +134,218 @@ export class TrackingService extends IMService {
 		);
 
 		this.initialPendingGuilds = allGuilds.length;
-		for (let j = 0; j < GUILDS_IN_PARALLEL; j++) {
-			const func = async () => {
-				const guild = allGuilds.shift();
+		this.inviteSyncQueue = allGuilds;
+		this.initInviteSyncState(inviteSyncConfig);
+		console.log(
+			`Invite sync: ${chalk.blue(`${this.inviteSyncState.targetParallel}`)} parallel, ${chalk.blue(
+				`${this.inviteSyncState.delayMs}ms`
+			)} delay`
+		);
+		this.ensureInviteSyncWorkers();
+	}
 
-				if (!guild) {
-					if (allGuilds.length) {
-						console.error('Guild in pending list was null but list is not empty');
-					}
-					return;
-				}
+	private getInviteSyncConfig(): InviteSyncConfig {
+		const raw = (this.client.config && this.client.config.inviteSync) || {};
+		const readNumber = (value: unknown, fallback: number) =>
+			typeof value === 'number' && Number.isFinite(value) ? value : fallback;
 
-				// Filter any guilds that have the pro bot
-				if (!this.client.disabledGuilds.has(guild.id)) {
-					// Insert data into db
-					try {
-						await this.insertGuildData(guild);
-					} catch (err) {
-						console.error(err);
-					}
+		const parallel = Math.floor(readNumber(raw.parallel, GUILDS_IN_PARALLEL));
+		const delayMs = Math.floor(readNumber(raw.delayMs, 1500));
+		const minDelayMs = Math.floor(readNumber(raw.minDelayMs, 500));
+		const maxDelayMs = Math.floor(readNumber(raw.maxDelayMs, 5000));
+		const minParallel = Math.floor(readNumber(raw.minParallel, 1));
+		const maxParallel = Math.floor(readNumber(raw.maxParallel, Math.max(parallel, minParallel)));
+		const globalMaxConcurrent = Math.floor(readNumber(raw.globalMaxConcurrent, 0));
+		const ticketShardId = Math.floor(readNumber(raw.ticketShardId, 0));
 
-					console.log(`Updated invite count for ${chalk.blue(guild.name)}`);
-				}
+		const safeMinParallel = Math.max(1, minParallel);
+		const safeMaxParallel = Math.max(safeMinParallel, maxParallel);
+		const safeParallel = Math.min(safeMaxParallel, Math.max(safeMinParallel, parallel));
 
-				this.pendingGuilds.delete(guild.id);
-				if (this.pendingGuilds.size % 50 === 0) {
-					console.log(`Pending: ${chalk.blue(`${this.pendingGuilds.size}/${this.initialPendingGuilds}`)}`);
-					await this.client.rabbitmq.sendStatusToManager();
-				}
+		const safeMinDelayMs = Math.max(0, minDelayMs);
+		const safeMaxDelayMs = Math.max(safeMinDelayMs, maxDelayMs);
+		const safeDelayMs = Math.min(safeMaxDelayMs, Math.max(safeMinDelayMs, delayMs));
 
-				if (this.pendingGuilds.size === 0) {
-					console.log(chalk.green(`Loaded all pending guilds!`));
-					this.startupDone();
-				}
+		return {
+			parallel: safeParallel,
+			delayMs: safeDelayMs,
+			minDelayMs: safeMinDelayMs,
+			maxDelayMs: safeMaxDelayMs,
+			minParallel: safeMinParallel,
+			maxParallel: safeMaxParallel,
+			globalMaxConcurrent: Math.max(0, globalMaxConcurrent),
+			ticketShardId: Math.max(0, ticketShardId)
+		};
+	}
 
-				setTimeout(func, 1500);
-			};
-			// tslint:disable-next-line: no-floating-promises
-			func();
+	private initInviteSyncState(config: InviteSyncConfig) {
+		this.inviteSyncState = {
+			startedAt: Date.now(),
+			processed: 0,
+			delayMs: config.delayMs,
+			targetParallel: config.parallel,
+			minDelayMs: config.minDelayMs,
+			maxDelayMs: config.maxDelayMs,
+			minParallel: config.minParallel,
+			maxParallel: config.maxParallel,
+			activeWorkers: 0,
+			lastReportAt: 0,
+			avgMs: 0,
+			successStreak: 0
+		};
+	}
+
+	private ensureInviteSyncWorkers() {
+		if (!this.inviteSyncState) {
+			return;
 		}
+
+		while (this.inviteSyncState.activeWorkers < this.inviteSyncState.targetParallel && this.inviteSyncQueue.length > 0) {
+			this.spawnInviteSyncWorker();
+		}
+	}
+
+	private spawnInviteSyncWorker() {
+		this.inviteSyncState.activeWorkers++;
+
+		const run = async () => {
+			const guild = this.inviteSyncQueue.shift();
+
+			if (!guild) {
+				this.inviteSyncState.activeWorkers--;
+				return;
+			}
+
+			const startedAt = Date.now();
+			let hadError = false;
+
+			// Filter any guilds that have the pro bot
+			if (!this.client.disabledGuilds.has(guild.id)) {
+				// Insert data into db
+				try {
+					await this.insertGuildData(guild);
+				} catch (err) {
+					hadError = true;
+					console.error(err);
+				}
+
+				console.log(`Updated invite count for ${chalk.blue(guild.name)}`);
+			}
+
+			const durationMs = Date.now() - startedAt;
+			const queued = this.getRatelimitQueueSize();
+			this.recordInviteSyncResult({ durationMs, queued, hadError });
+
+			this.pendingGuilds.delete(guild.id);
+			if (this.pendingGuilds.size % 50 === 0) {
+				this.logInviteSyncProgress();
+				await this.client.rabbitmq.sendStatusToManager();
+			}
+
+			if (this.pendingGuilds.size === 0) {
+				console.log(chalk.green('Loaded all pending guilds!'));
+				this.logInviteSyncSummary();
+				this.startupDone();
+				this.inviteSyncState.activeWorkers--;
+				return;
+			}
+
+			setTimeout(run, this.inviteSyncState.delayMs);
+		};
+
+		// tslint:disable-next-line: no-floating-promises
+		run();
+	}
+
+	private recordInviteSyncResult(result: InviteSyncResult) {
+		if (!this.inviteSyncState) {
+			return;
+		}
+
+		const state = this.inviteSyncState;
+		state.processed++;
+		state.avgMs = state.avgMs === 0 ? result.durationMs : Math.round(state.avgMs * 0.9 + result.durationMs * 0.1);
+
+		const hasQueue = result.queued > 0;
+		if (result.hadError || hasQueue) {
+			state.successStreak = 0;
+			const backoff = hasQueue ? Math.min(1000, 200 + result.queued * 50) : 500;
+			state.delayMs = Math.min(state.maxDelayMs, state.delayMs + backoff);
+			if (hasQueue && state.targetParallel > state.minParallel) {
+				state.targetParallel--;
+			}
+			return;
+		}
+
+		state.successStreak++;
+		if (state.successStreak % 25 === 0) {
+			state.delayMs = Math.max(state.minDelayMs, state.delayMs - 100);
+			if (state.targetParallel < state.maxParallel && this.inviteSyncQueue.length > 0) {
+				state.targetParallel++;
+				this.ensureInviteSyncWorkers();
+			}
+		}
+	}
+
+	private logInviteSyncProgress() {
+		if (!this.inviteSyncState) {
+			console.log(`Pending: ${chalk.blue(`${this.pendingGuilds.size}/${this.initialPendingGuilds}`)}`);
+			return;
+		}
+
+		const rate = this.getInviteSyncRate();
+		const pendingText = `${this.pendingGuilds.size}/${this.initialPendingGuilds}`;
+		const rateText = rate > 0 ? `${rate.toFixed(1)} guilds/min` : 'n/a';
+		const queued = this.getRatelimitQueueSize();
+
+		console.log(
+			`Pending: ${chalk.blue(pendingText)} (${rateText}, delay=${this.inviteSyncState.delayMs}ms, parallel=${
+				this.inviteSyncState.targetParallel
+			}, rlq=${queued})`
+		);
+		this.inviteSyncState.lastReportAt = Date.now();
+	}
+
+	private logInviteSyncSummary() {
+		if (!this.inviteSyncState) {
+			return;
+		}
+
+		const durationMs = Date.now() - this.inviteSyncState.startedAt;
+		const durationSec = Math.max(1, Math.round(durationMs / 1000));
+		const rate = this.getInviteSyncRate();
+
+		console.log(
+			`Invite sync finished in ${durationSec}s (${rate > 0 ? rate.toFixed(1) : 'n/a'} guilds/min, avg ${
+				this.inviteSyncState.avgMs
+			}ms)`
+		);
+	}
+
+	private getInviteSyncRate(): number {
+		if (!this.inviteSyncState || this.inviteSyncState.processed === 0) {
+			return 0;
+		}
+
+		const minutes = (Date.now() - this.inviteSyncState.startedAt) / 60000;
+		if (minutes <= 0) {
+			return 0;
+		}
+
+		return this.inviteSyncState.processed / minutes;
+	}
+
+	private getRatelimitQueueSize(): number {
+		const handler = this.client.requestHandler as any;
+		const limits = handler && handler.ratelimits ? handler.ratelimits : null;
+		if (!limits) {
+			return 0;
+		}
+
+		return Object.values(limits).reduce((sum: number, limit: any) => {
+			const queue = limit && limit.queue ? limit.queue.length : 0;
+			return sum + (typeof queue === 'number' ? queue : 0);
+		}, 0);
 	}
 
 	private async onInviteCreate(guild: Guild, invite: Invite) {

@@ -33,6 +33,16 @@
 		"password": "guest",
 		"prefix": ""
 	},
+	"inviteSync": {
+		"parallel": 5,
+		"delayMs": 1500,
+		"minDelayMs": 500,
+		"maxDelayMs": 5000,
+		"minParallel": 1,
+		"maxParallel": 10,
+		"globalMaxConcurrent": 0,
+		"ticketShardId": 0
+	},
 	"databases": [
 		{
 			"host": "localhost",
