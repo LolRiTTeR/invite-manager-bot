@@ -355,7 +355,8 @@ export class TrackingService extends IMService {
 			return 0;
 		}
 
-		return Object.values(limits).reduce((sum: number, limit: any) => {
+		const values = Object.values(limits as Record<string, { queue?: { length?: number } }>);
+		return values.reduce((sum: number, limit) => {
 			const queue = limit && limit.queue ? limit.queue.length : 0;
 			return sum + (typeof queue === 'number' ? queue : 0);
 		}, 0);
