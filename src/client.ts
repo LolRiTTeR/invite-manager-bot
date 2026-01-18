@@ -668,6 +668,10 @@ export class IMClient extends Client {
 	}
 
 	private async onError(error: Error) {
+		const message = error instanceof Error ? error.message : String(error);
+		if (message.includes('Invalid channel ID: undefined')) {
+			return;
+		}
 		console.error('DISCORD ERROR:', error);
 		this.stats.wsErrors++;
 	}
