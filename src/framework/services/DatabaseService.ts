@@ -67,6 +67,12 @@ enum TABLE {
 	strikes = '`strikes`'
 }
 
+type InviteCodeStartupRow = Pick<InviteCode, 'guildId' | 'code' | 'uses' | 'maxUses'>;
+type InviteCodeMemberRow = Pick<
+	InviteCode,
+	'code' | 'createdAt' | 'maxAge' | 'maxUses' | 'channelId' | 'uses' | 'clearedAmount'
+>;
+
 export class DatabaseService extends IMService {
 	private dbCount: number = 1;
 	private pools: Map<number, Pool> = new Map();
@@ -122,9 +128,19 @@ export class DatabaseService extends IMService {
 		);
 		return rows[0] as T;
 	}
-	private async findMany<T>(shard: number | string, table: TABLE, where: string, values: any[]): Promise<T[]> {
+	private async findMany<T>(
+		shard: number | string,
+		table: TABLE,
+		where: string,
+		values: any[],
+		columns?: string[]
+	): Promise<T[]> {
 		const [db, pool] = this.getDbInfo(shard);
-		const [rows] = await pool.query<RowDataPacket[]>(`SELECT ${table}.* FROM ${db}.${table} WHERE ${where}`, values);
+		const selectCols = columns && columns.length > 0 ? columns.join(', ') : `${table}.*`;
+		const [rows] = await pool.query<RowDataPacket[]>(
+			`SELECT ${selectCols} FROM ${db}.${table} WHERE ${where}`,
+			values
+		);
 		return rows as T[];
 	}
 
@@ -147,8 +163,10 @@ export class DatabaseService extends IMService {
 		where: string,
 		values: O[],
 		selector: (obj: O) => number | string = (o) => o as any,
-		dataSelector: (obj: O) => any = (o) => o
+		dataSelector: (obj: O) => any = (o) => o,
+		columns?: string[]
 	): Promise<T[]> {
+		const selectCols = columns && columns.length > 0 ? columns.join(', ') : `${table}.*`;
 		const map: Map<Pool, Map<string, O[]>> = new Map();
 		for (const value of values) {
 			const [id, pool] = this.getDbInfo(selector(value));
@@ -172,7 +190,7 @@ export class DatabaseService extends IMService {
 			const queries: string[] = [];
 			const poolValues: O[][] = [];
 			for (const [db, vals] of poolData.entries()) {
-				queries.push(`SELECT ${table}.* FROM ${db}.${table} WHERE ${where}`);
+				queries.push(`SELECT ${selectCols} FROM ${db}.${table} WHERE ${where}`);
 				poolValues.push(vals);
 			}
 			const query = queries.join(' UNION ');
@@ -372,7 +390,15 @@ export class DatabaseService extends IMService {
 	//   InviteCode
 	// --------------
 	public async getAllInviteCodesForGuilds(guildIds: string[]) {
-		return this.findManyOnSpecificShards<InviteCode>(TABLE.inviteCodes, '`guildId` IN(?)', guildIds);
+		const columns = ['`guildId`', '`code`', '`uses`', '`maxUses`'];
+		return this.findManyOnSpecificShards<InviteCodeStartupRow>(
+			TABLE.inviteCodes,
+			'`guildId` IN(?)',
+			guildIds,
+			undefined,
+			undefined,
+			columns
+		);
 	}
 	public async getInviteCodesForGuild(guildId: string) {
 		const [db, pool] = this.getDbInfo(guildId);
@@ -387,11 +413,13 @@ export class DatabaseService extends IMService {
 		return rows as Array<{ total: string; id: string; name: string; discriminator: string }>;
 	}
 	public async getInviteCodesForMember(guildId: string, memberId: string) {
-		return this.findMany<InviteCode>(
+		const columns = ['`code`', '`createdAt`', '`maxAge`', '`maxUses`', '`channelId`', '`uses`', '`clearedAmount`'];
+		return this.findMany<InviteCodeMemberRow>(
 			guildId,
 			TABLE.inviteCodes,
 			'`guildId` = ? AND `inviterId` = ? ORDER BY `uses` DESC',
-			[guildId, memberId]
+			[guildId, memberId],
+			columns
 		);
 	}
 	public async getInviteCodeTotalForMember(guildId: string, memberId: string) {

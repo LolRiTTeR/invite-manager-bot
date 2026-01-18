@@ -35,11 +35,11 @@
 	},
 	"inviteSync": {
 		"parallel": 5,
-		"delayMs": 1500,
-		"minDelayMs": 500,
+		"delayMs": 1200,
+		"minDelayMs": 800,
 		"maxDelayMs": 5000,
 		"minParallel": 1,
-		"maxParallel": 10,
+		"maxParallel": 8,
 		"globalMaxConcurrent": 0,
 		"ticketShardId": 0
 	},

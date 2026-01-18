@@ -291,7 +291,7 @@ export class TrackingService extends IMService {
 		}
 
 		state.successStreak++;
-		if (state.successStreak % 25 === 0) {
+		if (state.successStreak % 15 === 0) {
 			state.delayMs = Math.max(state.minDelayMs, state.delayMs - 100);
 			if (state.targetParallel < state.maxParallel && this.inviteSyncQueue.length > 0) {
 				state.targetParallel++;
