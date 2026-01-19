@@ -380,6 +380,7 @@ export class RabbitMqService extends IMService {
 			gateway: this.client.gatewayConnected,
 			guilds: this.client.guilds.size,
 			error: err ? err.message : null,
+			build: this.client.build,
 			tracking: this.getTrackingStatus(),
 			music: this.getMusicStatus(),
 			cache: this.getCacheSizes()

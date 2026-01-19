@@ -36,6 +36,7 @@ import { MusicService } from './music/services/MusicService';
 import { botDefaultSettings, BotSettingsObject, guildDefaultSettings } from './settings';
 import { BotType, ChannelType, LavaPlayerManager } from './types';
 import { InvManConfig } from './framework/models/Config';
+import { GitInfo, readGitInfo } from './util/git';
 
 i18n.configure({
 	locales: ['cs', 'de', 'en', 'es', 'fr', 'it', 'ja', 'nl', 'pl', 'pt', 'pt_BR', 'ro', 'ru', 'tr'],
@@ -101,6 +102,7 @@ export interface ClientServiceObject {
 
 export class IMClient extends Client {
 	public version: string;
+	public build: GitInfo;
 	public config: any;
 	public newConfig: InvManConfig;
 	public flags: string[];
@@ -188,6 +190,7 @@ export class IMClient extends Client {
 
 		this.requestHandler = new IMRequestHandler(this);
 		this.version = version;
+		this.build = readGitInfo(process.cwd());
 		this.type = type;
 		this.instance = instance;
 		this.shardId = shardId;
