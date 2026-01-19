@@ -244,6 +244,40 @@ export class DatabaseService extends IMService {
 
 		return oks;
 	}
+	private dedupeByKey<T>(
+		values: Partial<T>[],
+		keyFn: (value: Partial<T>) => string | null,
+		updateCols: (keyof T)[]
+	): Partial<T>[] {
+		if (values.length < 2) {
+			return values;
+		}
+
+		const result: Partial<T>[] = [];
+		const indexByKey = new Map<string, number>();
+
+		for (const value of values) {
+			const key = keyFn(value);
+			if (!key) {
+				result.push(value);
+				continue;
+			}
+
+			const existingIndex = indexByKey.get(key);
+			if (existingIndex === undefined) {
+				indexByKey.set(key, result.length);
+				result.push({ ...value });
+				continue;
+			}
+
+			const existing = result[existingIndex] as Record<string, any>;
+			for (const col of updateCols) {
+				existing[String(col)] = (value as Record<string, any>)[String(col)];
+			}
+		}
+
+		return result;
+	}
 	private async delete(shard: number | string, table: TABLE, where: string, values: any[]) {
 		const [db, pool] = this.getDbInfo(shard);
 		const [ok] = await pool.query<OkPacket>(`DELETE FROM ${db}.${table} WHERE ${where}`, values);
@@ -260,11 +294,17 @@ export class DatabaseService extends IMService {
 		return await this.findManyOnSpecificShards<Guild>(TABLE.guilds, '`id` IN (?) AND `banReason` IS NOT NULL', ids);
 	}
 	public async saveGuilds(guilds: Partial<Guild>[]) {
+		const updateCols: Array<keyof Guild> = ['name', 'icon', 'memberCount', 'banReason', 'deletedAt'];
+		const deduped = this.dedupeByKey(
+			guilds,
+			(g) => (g.id ? String(g.id) : null),
+			updateCols
+		);
 		await this.insertOrUpdate(
 			TABLE.guilds,
 			['id', 'name', 'icon', 'memberCount', 'banReason', 'deletedAt'],
-			['name', 'icon', 'memberCount', 'banReason', 'deletedAt'],
-			guilds,
+			updateCols,
+			deduped,
 			(g) => g.id
 		);
 	}
@@ -283,7 +323,13 @@ export class DatabaseService extends IMService {
 	//   Channels
 	// ------------
 	public async saveChannels(channels: Partial<Channel>[]) {
-		await this.insertOrUpdate(TABLE.channels, ['guildId', 'id', 'name'], ['name'], channels, (c) => c.guildId);
+		const updateCols: Array<keyof Channel> = ['name'];
+		const deduped = this.dedupeByKey(
+			channels,
+			(c) => (c.id ? String(c.id) : null),
+			updateCols
+		);
+		await this.insertOrUpdate(TABLE.channels, ['guildId', 'id', 'name'], updateCols, deduped, (c) => c.guildId);
 	}
 
 	// -----------
@@ -301,11 +347,17 @@ export class DatabaseService extends IMService {
 		);
 	}
 	public async saveMembers(members: Array<Partial<Member> & { guildId: string }>) {
+		const updateCols: Array<keyof Member> = ['name', 'discriminator'];
+		const deduped = this.dedupeByKey(
+			members,
+			(m) => (m.id ? String(m.id) : null),
+			updateCols
+		);
 		await this.insertOrUpdate(
 			TABLE.members,
 			['id', 'name', 'discriminator'],
-			['name', 'discriminator'],
-			members,
+			updateCols,
+			deduped,
 			(m) => m.guildId
 		);
 	}
@@ -330,11 +382,17 @@ export class DatabaseService extends IMService {
 	//   Roles
 	// ---------
 	public async saveRoles(roles: Partial<Role>[]) {
+		const updateCols: Array<keyof Role> = ['name', 'color'];
+		const deduped = this.dedupeByKey(
+			roles,
+			(r) => (r.id ? String(r.id) : null),
+			updateCols
+		);
 		await this.insertOrUpdate(
 			TABLE.roles,
 			['id', 'createdAt', 'guildId', 'name', 'color'],
-			['name', 'color'],
-			roles,
+			updateCols,
+			deduped,
 			(r) => r.guildId
 		);
 	}
@@ -380,7 +438,13 @@ export class DatabaseService extends IMService {
 		return rows as Array<RolePermission & { roleName: string }>;
 	}
 	public async saveRolePermissions(guildId: string, rolePermissions: Partial<RolePermission>[]) {
-		await this.insertOrUpdate(TABLE.rolePermissions, ['roleId', 'command'], [], rolePermissions, (rp) => guildId);
+		const updateCols: Array<keyof RolePermission> = [];
+		const deduped = this.dedupeByKey(
+			rolePermissions,
+			(rp) => (rp.roleId && rp.command ? `${rp.roleId}:${rp.command}` : null),
+			updateCols
+		);
+		await this.insertOrUpdate(TABLE.rolePermissions, ['roleId', 'command'], updateCols, deduped, (rp) => guildId);
 	}
 	public async removeRolePermissions(guildId: string, roleId: string, command: string) {
 		await this.delete(guildId, TABLE.rolePermissions, '`roleId` = ? AND `command` = ?', [roleId, command]);
@@ -448,6 +512,12 @@ export class DatabaseService extends IMService {
 		await pool.query(`UPDATE ${db}.${TABLE.inviteCodes} SET \`uses\` = \`uses\` + 1 WHERE \`code\` IN(?)`, [codes]);
 	}
 	public async saveInviteCodes(inviteCodes: Partial<InviteCode>[]) {
+		const updateCols: Array<keyof InviteCode> = ['uses'];
+		const deduped = this.dedupeByKey(
+			inviteCodes,
+			(ic) => (ic.code ? String(ic.code) : null),
+			updateCols
+		);
 		await this.insertOrUpdate(
 			TABLE.inviteCodes,
 			[
@@ -464,8 +534,8 @@ export class DatabaseService extends IMService {
 				'temporary',
 				'uses'
 			],
-			['uses'],
-			inviteCodes,
+			updateCols,
+			deduped,
 			(ic) => ic.guildId
 		);
 	}
