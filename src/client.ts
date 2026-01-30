@@ -137,6 +137,9 @@ export class IMClient extends Client {
 	public startedAt: Moment;
 	public gatewayConnected: boolean;
 	public activityInterval: NodeJS.Timeout;
+	private invalidSessionCount: number = 0;
+	private lastInvalidSessionAt: number = 0;
+	private readonly baseReconnectDelay?: (lastDelay: number, attempts: number) => number;
 	public voiceConnections: LavaPlayerManager;
 	public stats: {
 		wsEvents: number;
@@ -186,6 +189,18 @@ export class IMClient extends Client {
 			wsErrors: 0,
 			cmdProcessed: 0,
 			cmdErrors: 0
+		};
+
+		this.baseReconnectDelay = this.options.reconnectDelay;
+		this.options.reconnectDelay = (lastDelay: number, attempts: number) => {
+			const backoff = this.getInvalidSessionBackoffMs();
+			if (backoff > 0) {
+				return backoff;
+			}
+			if (typeof this.baseReconnectDelay === 'function') {
+				return this.baseReconnectDelay(lastDelay, attempts);
+			}
+			return 0;
 		};
 
 		this.requestHandler = new IMRequestHandler(this);
@@ -273,6 +288,8 @@ export class IMClient extends Client {
 	}
 
 	private async onClientReady(): Promise<void> {
+		this.invalidSessionCount = 0;
+		this.lastInvalidSessionAt = 0;
 		if (this.hasStarted) {
 			console.error('BOT HAS ALREADY STARTED, IGNORING EXTRA READY EVENT');
 			return;
@@ -668,6 +685,9 @@ export class IMClient extends Client {
 	private async onWarn(warn: string) {
 		console.error('DISCORD WARNING:', warn);
 		this.stats.wsWarnings++;
+		if (warn.toLowerCase().includes('invalid session')) {
+			this.registerInvalidSession();
+		}
 	}
 
 	private async onError(error: Error) {
@@ -681,5 +701,30 @@ export class IMClient extends Client {
 
 	private async onRawWS() {
 		this.stats.wsEvents++;
+	}
+
+	private registerInvalidSession() {
+		const now = Date.now();
+		if (this.lastInvalidSessionAt && now - this.lastInvalidSessionAt > 120000) {
+			this.invalidSessionCount = 0;
+		}
+		this.invalidSessionCount += 1;
+		this.lastInvalidSessionAt = now;
+	}
+
+	private getInvalidSessionBackoffMs(): number {
+		if (!this.invalidSessionCount || !this.lastInvalidSessionAt) {
+			return 0;
+		}
+		const now = Date.now();
+		if (now - this.lastInvalidSessionAt > 120000) {
+			return 0;
+		}
+		if (this.invalidSessionCount <= 1) {
+			return 0;
+		}
+		const step = this.invalidSessionCount - 1;
+		const delay = 5000 * Math.pow(2, step - 1);
+		return Math.min(120000, Math.max(0, Math.round(delay)));
 	}
 }

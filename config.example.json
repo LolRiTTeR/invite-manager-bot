@@ -43,6 +43,10 @@
 		"globalMaxConcurrent": 0,
 		"ticketShardId": 0
 	},
+	"startupTickets": {
+		"enabled": false,
+		"requeue": true
+	},
 	"databases": [
 		{
 			"host": "localhost",

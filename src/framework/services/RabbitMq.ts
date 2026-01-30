@@ -38,6 +38,13 @@ export class RabbitMqService extends IMService {
 	private channelRetry: number = 0;
 	private msgQueue: any[] = [];
 
+	private getStartupTicketSettings(): { enabled: boolean; requeue: boolean } {
+		const raw = (this.client.config && (this.client.config as any).startupTickets) || {};
+		const enabled = Boolean(raw.enabled);
+		const requeue = raw.requeue !== undefined ? Boolean(raw.requeue) : true;
+		return { enabled, requeue };
+	}
+
 	public async init() {
 		if (this.client.flags.includes('--no-rabbitmq')) {
 			return;
@@ -149,11 +156,10 @@ export class RabbitMqService extends IMService {
 			return;
 		}
 
-		// Don't do this for custom bots
+		const { enabled } = this.getStartupTicketSettings();
 		if (
-			this.client.type === BotType.custom ||
-			this.client.type === BotType.pro ||
-			this.client.type === BotType.regular
+			!enabled &&
+			(this.client.type === BotType.custom || this.client.type === BotType.pro || this.client.type === BotType.regular)
 		) {
 			return;
 		}
@@ -210,8 +216,14 @@ export class RabbitMqService extends IMService {
 			return;
 		}
 
-		// Nack the message, so that it gets returned to the queue for the next process to use
-		this.channelStartup.nack(this.startTicket, false, true);
+		if (this.startTicket) {
+			const { requeue } = this.getStartupTicketSettings();
+			if (requeue) {
+				this.channelStartup.nack(this.startTicket, false, true);
+			} else {
+				this.channelStartup.ack(this.startTicket);
+			}
+		}
 
 		// Close the channel because we don't want another ticket
 		await this.channelStartup.close();

@@ -1,4 +1,5 @@
 import { getCurrentScope, init } from '@sentry/node';
+import https from 'https';
 import chalk from './util/chalk';
 import { InvManConfig } from './framework/models/Config';
 
@@ -73,6 +74,8 @@ const main = async () => {
 
 	await client.waitForStartupTicket();
 
+	await logGatewaySessionLimit(token);
+
 	console.log(chalk.green('-------------------------------------'));
 	console.log(chalk.green('Connecting to discord...'));
 	console.log(chalk.green('-------------------------------------'));
@@ -80,3 +83,71 @@ const main = async () => {
 };
 
 main().catch((err) => console.error(err));
+
+type GatewayBotResponse = {
+	session_start_limit?: {
+		remaining?: number;
+		reset_after?: number;
+		max_concurrency?: number;
+	};
+};
+
+const logGatewaySessionLimit = async (token: string) => {
+	const limit = await fetchGatewaySessionLimit(token);
+	console.log(chalk.green('-------------------------------------'));
+	if (!limit) {
+		console.log(chalk.yellow('Gateway session start limit unavailable.'));
+		console.log(chalk.green('-------------------------------------'));
+		return;
+	}
+
+	const resetAfter = Math.max(0, Math.round(limit.resetAfter));
+	console.log(chalk.green('Gateway session start limit'));
+	console.log(chalk.green(`Remaining: ${chalk.blue(limit.remaining)}`));
+	console.log(chalk.green(`Reset after: ${chalk.blue(`${resetAfter}s`)}`));
+	console.log(chalk.green(`Max concurrency: ${chalk.blue(limit.maxConcurrency)}`));
+	console.log(chalk.green('-------------------------------------'));
+};
+
+const fetchGatewaySessionLimit = (token: string): Promise<{ remaining: number; resetAfter: number; maxConcurrency: number } | null> => {
+	return new Promise((resolve) => {
+		const req = https.request(
+			{
+				method: 'GET',
+				hostname: 'discord.com',
+				path: '/api/v9/gateway/bot',
+				headers: {
+					Authorization: `Bot ${token}`,
+					'User-Agent': 'InviteManager (gateway-check)'
+				}
+			},
+			(res) => {
+				let raw = '';
+				res.on('data', (chunk) => {
+					raw += chunk.toString();
+				});
+				res.on('end', () => {
+					if (res.statusCode !== 200) {
+						return resolve(null);
+					}
+					try {
+						const parsed = JSON.parse(raw) as GatewayBotResponse;
+						const limit = parsed.session_start_limit;
+						if (!limit) {
+							return resolve(null);
+						}
+						resolve({
+							remaining: Number.isFinite(limit.remaining) ? Number(limit.remaining) : 0,
+							resetAfter: Number.isFinite(limit.reset_after) ? Number(limit.reset_after) : 0,
+							maxConcurrency: Number.isFinite(limit.max_concurrency) ? Number(limit.max_concurrency) : 1
+						});
+					} catch {
+						resolve(null);
+					}
+				});
+			}
+		);
+		req.on('error', () => resolve(null));
+		req.end();
+	});
+};
