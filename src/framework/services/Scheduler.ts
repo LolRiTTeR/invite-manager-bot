@@ -22,7 +22,7 @@ export class SchedulerService extends IMService {
 	};
 
 	public async onClientReady() {
-		await this.scheduleScheduledActions();
+		await this.scheduleScheduledActionsWithRetry();
 
 		await super.onClientReady();
 	}
@@ -93,6 +93,29 @@ export class SchedulerService extends IMService {
 		actions = actions.filter((a) => a.date !== null);
 		console.log(`Scheduling ${chalk.blue(actions.length)} actions from DB`);
 		actions.forEach((action) => this.createTimer(action));
+	}
+
+	private async scheduleScheduledActionsWithRetry() {
+		let attempt = 0;
+		while (true) {
+			try {
+				await this.scheduleScheduledActions();
+				return;
+			} catch (error) {
+				attempt += 1;
+				withScope((scope) => {
+					scope.setExtra('attempt', attempt);
+					captureException(error);
+				});
+				const delay = Math.min(60000, 5000 * Math.pow(2, attempt - 1));
+				console.error(`SCHEDULER: failed to load scheduled actions (attempt ${attempt}). Retrying in ${delay}ms`);
+				if (attempt >= 5) {
+					console.error('SCHEDULER: giving up on scheduled actions for now.');
+					return;
+				}
+				await new Promise((resolve) => setTimeout(resolve, delay));
+			}
+		}
 	}
 
 	//////////////////////////

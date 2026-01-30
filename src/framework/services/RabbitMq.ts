@@ -53,24 +53,49 @@ export class RabbitMqService extends IMService {
 		await this.initConnection();
 		await this.initChannel();
 	}
+	private getConnectConfig(): any {
+		const raw = (this.client.config && this.client.config.rabbitmq) || null;
+		if (typeof raw === 'string') {
+			if (raw.includes('heartbeat=')) {
+				return raw;
+			}
+			const sep = raw.includes('?') ? '&' : '?';
+			return `${raw}${sep}heartbeat=60`;
+		}
+		if (raw && typeof raw === 'object') {
+			const heartbeat = typeof (raw as any).heartbeat === 'number' ? (raw as any).heartbeat : 60;
+			return { ...raw, heartbeat };
+		}
+		return raw;
+	}
+	private getReconnectDelayMs(attempt: number, base = 1000, max = 60000): number {
+		const step = Math.max(0, attempt);
+		const delay = Math.min(max, base * Math.pow(2, step));
+		const jitter = Math.floor(Math.random() * 250);
+		return delay + jitter;
+	}
 	private async initConnection() {
 		try {
-			const conn = await connect(this.client.config.rabbitmq);
+			const conn = await connect(this.getConnectConfig());
 			this.conn = conn;
+			this.connRetry = 0;
 			this.conn.on('close', async (err) => {
 				if (err) {
 					console.error(err);
 				}
 				await this.shutdownConnection();
 
-				setTimeout(() => this.initConnection(), this.connRetry * 30);
+				const delay = this.getReconnectDelayMs(this.connRetry);
+				setTimeout(() => this.initConnection(), delay);
 				this.connRetry++;
 			});
 		} catch (err) {
 			console.error(err);
 
 			await this.shutdownConnection();
-			await this.initConnection();
+			const delay = this.getReconnectDelayMs(this.connRetry);
+			this.connRetry++;
+			setTimeout(() => this.initConnection(), delay);
 		}
 	}
 	private async shutdownConnection() {
@@ -103,7 +128,8 @@ export class RabbitMqService extends IMService {
 				}
 				await this.shutdownChannel();
 
-				setTimeout(() => this.initChannel(), this.channelRetry * 30);
+				const delay = this.getReconnectDelayMs(this.channelRetry, 500, 30000);
+				setTimeout(() => this.initChannel(), delay);
 				this.channelRetry++;
 			});
 
@@ -122,7 +148,9 @@ export class RabbitMqService extends IMService {
 			console.error(err);
 
 			await this.shutdownChannel();
-			await this.initChannel();
+			const delay = this.getReconnectDelayMs(this.channelRetry, 500, 30000);
+			this.channelRetry++;
+			setTimeout(() => this.initChannel(), delay);
 		}
 	}
 	private async shutdownChannel() {
