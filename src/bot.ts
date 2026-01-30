@@ -101,12 +101,23 @@ const logGatewaySessionLimit = async (token: string) => {
 		return;
 	}
 
-	const resetAfter = Math.max(0, Math.round(limit.resetAfter));
+	const resetAfterMs = Math.max(0, Math.round(limit.resetAfter));
+	const resetAfterSec = Math.floor(resetAfterMs / 1000);
+	const resetAfter = formatHms(resetAfterSec);
 	console.log(chalk.green('Gateway session start limit'));
 	console.log(chalk.green(`Remaining: ${chalk.blue(limit.remaining)}`));
-	console.log(chalk.green(`Reset after: ${chalk.blue(`${resetAfter}s`)}`));
+	console.log(chalk.green(`Reset after: ${chalk.blue(resetAfter)}`));
 	console.log(chalk.green(`Max concurrency: ${chalk.blue(limit.maxConcurrency)}`));
 	console.log(chalk.green('-------------------------------------'));
+};
+
+const formatHms = (totalSeconds: number): string => {
+	const seconds = Math.max(0, totalSeconds);
+	const hours = Math.floor(seconds / 3600);
+	const minutes = Math.floor((seconds % 3600) / 60);
+	const secs = seconds % 60;
+	const pad = (value: number) => String(value).padStart(2, '0');
+	return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 };
 
 const fetchGatewaySessionLimit = (token: string): Promise<{ remaining: number; resetAfter: number; maxConcurrency: number } | null> => {
