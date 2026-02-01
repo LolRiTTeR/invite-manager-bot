@@ -278,21 +278,7 @@ export class IMClient extends Client {
 	}
 
 	public async waitForStartupTicket() {
-		const start = process.uptime();
-		const logIntervalMs = 60000;
-		const jitterMs = Math.floor(Math.random() * 5000);
-		let interval: NodeJS.Timeout | null = null;
-		const logWaiting = () =>
-			console.log(`Waiting for ticket since ${chalk.blue(Math.floor(process.uptime() - start))} seconds...`);
-		const timeout = setTimeout(() => {
-			logWaiting();
-			interval = setInterval(logWaiting, logIntervalMs);
-		}, logIntervalMs + jitterMs);
 		await this.service.rabbitmq.waitForStartupTicket();
-		clearTimeout(timeout);
-		if (interval) {
-			clearInterval(interval);
-		}
 	}
 
 	private async onClientReady(): Promise<void> {
