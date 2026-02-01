@@ -29,6 +29,11 @@ export class RabbitMqService extends IMService {
 	private startTicket: MQMessage;
 	private waitingForTicket: boolean;
 	private startupRetry: number = 0;
+	private qNameStartupDone: string;
+	private channelStartupDone: Channel;
+	private startupDoneTicket: MQMessage;
+	private waitingForStartupDone: boolean;
+	private startupDoneRetry: number = 0;
 
 	private qNameInviteSync: string;
 	private channelInviteSync: Channel;
@@ -120,6 +125,7 @@ export class RabbitMqService extends IMService {
 		await this.shutdownChannel();
 		await this.shutdownInviteSyncChannel();
 		await this.shutdownStartupChannel();
+		await this.shutdownStartupDoneChannel();
 
 		if (this.conn) {
 			try {
@@ -216,6 +222,18 @@ export class RabbitMqService extends IMService {
 		this.startTicket = null;
 		this.waitingForTicket = false;
 	}
+	private async shutdownStartupDoneChannel() {
+		if (this.channelStartupDone) {
+			try {
+				await this.channelStartupDone.close();
+			} catch {
+				// NO-OP
+			}
+			this.channelStartupDone = null;
+		}
+		this.startupDoneTicket = null;
+		this.waitingForStartupDone = false;
+	}
 
 	public async waitForStartupTicket() {
 		const { enabled } = this.getStartupTicketSettings();
@@ -283,6 +301,72 @@ export class RabbitMqService extends IMService {
 					resolve();
 				},
 				{ noAck: false, priority: this.client.hasStarted ? 1 : 0 }
+			);
+		});
+	}
+	public async waitForStartupTicketsDone() {
+		const { enabled } = this.getStartupTicketSettings();
+		if (
+			!enabled &&
+			(this.client.type === BotType.custom || this.client.type === BotType.pro || this.client.type === BotType.regular)
+		) {
+			return;
+		}
+		if (this.client.flags.includes('--no-rabbitmq')) {
+			console.log(chalk.yellow('Skipping startup done ticket (--no-rabbitmq).'));
+			return;
+		}
+		if (!this.conn) {
+			console.log(chalk.yellow('RabbitMQ not connected, waiting for startup done ticket...'));
+			await this.waitForConnection();
+		}
+
+		this.qNameStartupDone = `shard-${this.client.instance}-start-done`;
+		this.channelStartupDone = await this.conn.createChannel();
+		this.channelStartupDone.on('close', async (err) => {
+			this.waitingForStartupDone = false;
+
+			if (this.startupDoneTicket) {
+				return;
+			}
+
+			if (err) {
+				captureException(err);
+				console.error(err);
+			}
+
+			console.error('Could not acquire startup done ticket, retrying');
+			const delay = this.getReconnectDelayMs(this.startupDoneRetry, 1000, 30000);
+			this.startupDoneRetry++;
+			setTimeout(() => {
+				this.waitForStartupTicketsDone().catch((retryErr) => console.error(retryErr));
+			}, delay);
+		});
+
+		await this.channelStartupDone.prefetch(1);
+		await this.channelStartupDone.assertQueue(this.qNameStartupDone, { durable: true, autoDelete: false });
+
+		this.startupDoneTicket = null;
+		this.waitingForStartupDone = true;
+
+		return new Promise<void>((resolve) => {
+			this.channelStartupDone.consume(
+				this.qNameStartupDone,
+				async (msg) => {
+					if (!msg) {
+						return;
+					}
+					console.log(chalk.green('Acquired startup done ticket!'));
+					this.waitingForStartupDone = false;
+					this.startupDoneTicket = msg;
+					this.startupDoneRetry = 0;
+					this.channelStartupDone.ack(msg);
+					await this.channelStartupDone.close();
+					this.channelStartupDone = null;
+					this.startupDoneTicket = null;
+					resolve();
+				},
+				{ noAck: false }
 			);
 		});
 	}
