@@ -53,6 +53,7 @@ export class CommandsService extends IMService {
 	public commands: Command[] = [];
 	private cmdMap: Map<string, Command> = new Map();
 	private commandCalls: Map<string, { last: number; warned: boolean }> = new Map();
+	private onMessageHandler: ((message: Message) => void) | null = null;
 
 	public async init() {
 		console.log(`Loading commands...`);
@@ -110,7 +111,11 @@ export class CommandsService extends IMService {
 
 	public async onClientReady() {
 		// Attach events after the bot is ready
-		this.client.on('messageCreate', this.onMessage.bind(this));
+		if (!this.onMessageHandler) {
+			this.onMessageHandler = this.onMessage.bind(this);
+		}
+		this.client.removeListener('messageCreate', this.onMessageHandler);
+		this.client.on('messageCreate', this.onMessageHandler);
 
 		await super.onClientReady();
 	}
