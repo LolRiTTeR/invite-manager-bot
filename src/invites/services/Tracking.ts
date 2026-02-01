@@ -183,9 +183,7 @@ export class TrackingService extends IMService {
 		this.initialPendingGuilds = allGuilds.length;
 		await this.client.rabbitmq.waitForStartupTicketsDone();
 		await this.client.rabbitmq.ensureInviteSyncTickets();
-		if (inviteSyncConfig.globalMaxConcurrent > 0) {
-			console.log(`Waiting for invite sync ticket (max ${inviteSyncConfig.globalMaxConcurrent} shards in parallel)`);
-		}
+		// No log for invite sync ticket waiting to reduce shard log spam
 		await this.client.rabbitmq.waitForInviteSyncTicket();
 
 		this.inviteSyncQueue = allGuilds;
