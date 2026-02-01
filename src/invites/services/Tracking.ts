@@ -76,6 +76,53 @@ interface InviteSyncResult {
 
 const GUILDS_IN_PARALLEL = 5;
 const INVITE_CREATE = 40;
+const INVITE_CODES_BATCH_SIZE_DEFAULT = 250;
+
+function splitInviteCodeBatches<T>(items: T[], batchSize: number): T[][] {
+	if (items.length === 0) {
+		return [];
+	}
+	const safeBatchSize = Math.max(1, Math.floor(batchSize));
+	const batches: T[][] = [];
+	for (let i = 0; i < items.length; i += safeBatchSize) {
+		batches.push(items.slice(i, i + safeBatchSize));
+	}
+	return batches;
+}
+
+function buildInviteCodesToSave(
+	invs: Invite[],
+	cachedInvites: { [code: string]: { uses: number; maxUses: number } },
+	guildId: string
+) {
+	return invs
+		.filter((inv) => {
+			const cached = cachedInvites[inv.code];
+			if (!cached) {
+				return true;
+			}
+			return cached.uses !== inv.uses || cached.maxUses !== inv.maxUses;
+		})
+		.map((inv) => ({
+			createdAt: inv.createdAt ? moment(inv.createdAt).toDate() : new Date(),
+			code: inv.code,
+			channelId: inv.channel ? inv.channel.id : null,
+			maxAge: inv.maxAge,
+			maxUses: inv.maxUses,
+			uses: inv.uses,
+			temporary: inv.temporary,
+			guildId,
+			inviterId: inv.inviter ? inv.inviter.id : null,
+			clearedAmount: 0,
+			isVanity: !!(inv as any).vanity,
+			isWidget: !inv.inviter && !(inv as any).vanity
+		}));
+}
+
+export const __test__ = {
+	buildInviteCodesToSave,
+	splitInviteCodeBatches
+};
 
 export class TrackingService extends IMService {
 	public pendingGuilds: Set<string> = new Set();
@@ -1115,11 +1162,10 @@ export class TrackingService extends IMService {
 
 		// Get the invites
 		const invs = await guild.getInvites().catch(() => [] as Invite[]);
+		const cachedInvites = this.inviteStore[guild.id] || {};
 
 		// Filter out new invite codes
-		const newInviteCodes = invs.filter(
-			(inv) => this.inviteStore[inv.guild.id] === undefined || this.inviteStore[inv.guild.id][inv.code] === undefined
-		);
+		const newInviteCodes = invs.filter((inv) => cachedInvites[inv.code] === undefined);
 
 		// Update our local cache
 		this.inviteStore[guild.id] = this.getInviteCounts(invs);
@@ -1174,24 +1220,19 @@ export class TrackingService extends IMService {
 
 		await Promise.all(promises);
 
-		const codes = invs.map((inv) => ({
-			createdAt: inv.createdAt ? moment(inv.createdAt).toDate() : new Date(),
-			code: inv.code,
-			channelId: inv.channel ? inv.channel.id : null,
-			maxAge: inv.maxAge,
-			maxUses: inv.maxUses,
-			uses: inv.uses,
-			temporary: inv.temporary,
-			guildId: guild.id,
-			inviterId: inv.inviter ? inv.inviter.id : null,
-			clearedAmount: 0,
-			isVanity: !!(inv as any).vanity,
-			isWidget: !inv.inviter && !(inv as any).vanity
-		}));
+		const codes = buildInviteCodesToSave(invs, cachedInvites, guild.id);
 
 		// Then insert invite codes
 		if (codes.length > 0) {
-			await this.client.db.saveInviteCodes(codes);
+			const raw = (this.client.config && this.client.config.inviteSync) || {};
+			const batchSize =
+				typeof raw.inviteCodesBatchSize === 'number' && Number.isFinite(raw.inviteCodesBatchSize)
+					? raw.inviteCodesBatchSize
+					: INVITE_CODES_BATCH_SIZE_DEFAULT;
+			const batches = splitInviteCodeBatches(codes, batchSize);
+			for (const batch of batches) {
+				await this.client.db.saveInviteCodes(batch);
+			}
 		}
 	}
 
