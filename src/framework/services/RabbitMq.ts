@@ -10,6 +10,7 @@ import { IMService } from './Service';
 
 const BOT_SHARDING = 16;
 const ALLOWED_SUDO_COMMANDS = new Set(['leaderboard', 'invites', 'bot-info', 'prefix']);
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 interface ShardMessage {
 	id: string;
@@ -217,18 +218,20 @@ export class RabbitMqService extends IMService {
 	}
 
 	public async waitForStartupTicket() {
-		if (!this.conn) {
-			console.log(chalk.yellow('No connection available, this is ok for single installations or in dev mode.'));
-			console.log(chalk.yellow('Skipping start ticket...'));
-			return;
-		}
-
 		const { enabled } = this.getStartupTicketSettings();
 		if (
 			!enabled &&
 			(this.client.type === BotType.custom || this.client.type === BotType.pro || this.client.type === BotType.regular)
 		) {
 			return;
+		}
+		if (this.client.flags.includes('--no-rabbitmq')) {
+			console.log(chalk.yellow('Skipping start ticket (--no-rabbitmq).'));
+			return;
+		}
+		if (!this.conn) {
+			console.log(chalk.yellow('RabbitMQ not connected, waiting for connection to acquire start ticket...'));
+			await this.waitForConnection();
 		}
 
 		// const startupSuffix = this.client.shardCount > BOT_SHARDING ? `-${this.client.shardId % BOT_SHARDING}` : '';
@@ -317,6 +320,15 @@ export class RabbitMqService extends IMService {
 
 	private getInviteSyncQueueName(): string {
 		return `shard-${this.client.instance}-invite-sync`;
+	}
+
+	private async waitForConnection(): Promise<void> {
+		let attempt = 0;
+		while (!this.conn) {
+			const delay = this.getReconnectDelayMs(attempt, 1000, 30000);
+			await sleep(delay);
+			attempt += 1;
+		}
 	}
 
 	public async ensureInviteSyncTickets() {
