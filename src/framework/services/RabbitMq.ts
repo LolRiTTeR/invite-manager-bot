@@ -21,22 +21,27 @@ interface ShardMessage {
 export class RabbitMqService extends IMService {
 	private conn: ChannelModel;
 	private connRetry: number = 0;
+	private reconnectTimer: NodeJS.Timeout | null = null;
 
 	private qNameStartup: string;
 	private channelStartup: Channel;
 	private startTicket: MQMessage;
 	private waitingForTicket: boolean;
+	private startupRetry: number = 0;
 
 	private qNameInviteSync: string;
 	private channelInviteSync: Channel;
 	private inviteSyncTicket: MQMessage;
 	private waitingForInviteSyncTicket: boolean;
 	private inviteSyncSeeded: boolean;
+	private inviteSyncRetry: number = 0;
 
 	private qName: string;
 	private channel: Channel;
 	private channelRetry: number = 0;
 	private msgQueue: any[] = [];
+	private lastStatusAt: number = 0;
+	private lastStatusPayload: { [key: string]: any } | null = null;
 
 	private getStartupTicketSettings(): { enabled: boolean; requeue: boolean } {
 		const raw = (this.client.config && (this.client.config as any).startupTickets) || {};
@@ -51,7 +56,6 @@ export class RabbitMqService extends IMService {
 		}
 
 		await this.initConnection();
-		await this.initChannel();
 	}
 	private getConnectConfig(): any {
 		const raw = (this.client.config && this.client.config.rabbitmq) || null;
@@ -79,28 +83,42 @@ export class RabbitMqService extends IMService {
 			const conn = await connect(this.getConnectConfig());
 			this.conn = conn;
 			this.connRetry = 0;
-			this.conn.on('close', async (err) => {
+			this.conn.on('error', (err) => {
 				if (err) {
 					console.error(err);
 				}
-				await this.shutdownConnection();
-
-				const delay = this.getReconnectDelayMs(this.connRetry);
-				setTimeout(() => this.initConnection(), delay);
-				this.connRetry++;
+				this.scheduleReconnect();
 			});
+			this.conn.on('close', (err) => {
+				if (err) {
+					console.error(err);
+				}
+				this.scheduleReconnect();
+			});
+
+			await this.initChannel();
 		} catch (err) {
 			console.error(err);
-
-			await this.shutdownConnection();
-			const delay = this.getReconnectDelayMs(this.connRetry);
-			this.connRetry++;
-			setTimeout(() => this.initConnection(), delay);
+			this.scheduleReconnect();
 		}
+	}
+	private async scheduleReconnect() {
+		if (this.reconnectTimer) {
+			return;
+		}
+
+		await this.shutdownConnection();
+		const delay = this.getReconnectDelayMs(this.connRetry);
+		this.connRetry++;
+		this.reconnectTimer = setTimeout(() => {
+			this.reconnectTimer = null;
+			this.initConnection();
+		}, delay);
 	}
 	private async shutdownConnection() {
 		await this.shutdownChannel();
 		await this.shutdownInviteSyncChannel();
+		await this.shutdownStartupChannel();
 
 		if (this.conn) {
 			try {
@@ -122,6 +140,15 @@ export class RabbitMqService extends IMService {
 
 		try {
 			this.channel = await this.conn.createChannel();
+			this.channel.on('error', async (err) => {
+				if (err) {
+					console.error(err);
+				}
+				await this.shutdownChannel();
+				const delay = this.getReconnectDelayMs(this.channelRetry, 500, 30000);
+				setTimeout(() => this.initChannel(), delay);
+				this.channelRetry++;
+			});
 			this.channel.on('close', async (err) => {
 				if (err) {
 					console.error(err);
@@ -137,11 +164,11 @@ export class RabbitMqService extends IMService {
 				await this.sendToManager(this.msgQueue.pop(), true);
 			}
 
-			await this.channel.prefetch(5);
-			await this.channel.assertQueue(this.qName, { durable: false, autoDelete: true });
-			await this.channel.assertExchange('shards', 'fanout', { durable: true });
-			await this.channel.bindQueue(this.qName, 'shards', '');
-			this.channel.consume(this.qName, (msg) => this.onShardCommand(msg), { noAck: false });
+		await this.channel.prefetch(5);
+		await this.channel.assertQueue(this.qName, { durable: false, autoDelete: true });
+		await this.channel.assertExchange('shards', 'fanout', { durable: true });
+		await this.channel.bindQueue(this.qName, 'shards', '');
+		this.channel.consume(this.qName, (msg) => this.onShardCommand(msg), { noAck: false });
 
 			this.channelRetry = 0;
 		} catch (err) {
@@ -175,6 +202,18 @@ export class RabbitMqService extends IMService {
 
 			this.channelInviteSync = null;
 		}
+	}
+	private async shutdownStartupChannel() {
+		if (this.channelStartup) {
+			try {
+				await this.channelStartup.close();
+			} catch {
+				// NO-OP
+			}
+			this.channelStartup = null;
+		}
+		this.startTicket = null;
+		this.waitingForTicket = false;
 	}
 
 	public async waitForStartupTicket() {
@@ -210,8 +249,12 @@ export class RabbitMqService extends IMService {
 				console.error(err);
 			}
 
-			console.error('Could not aquire startup ticket');
-			process.exit(1);
+			console.error('Could not acquire startup ticket, retrying');
+			const delay = this.getReconnectDelayMs(this.startupRetry, 1000, 30000);
+			this.startupRetry++;
+			setTimeout(() => {
+				this.waitForStartupTicket().catch((retryErr) => console.error(retryErr));
+			}, delay);
 		});
 
 		await this.channelStartup.prefetch(1);
@@ -230,6 +273,7 @@ export class RabbitMqService extends IMService {
 					console.log(chalk.green(`Aquired start ticket!`));
 
 					this.waitingForTicket = false;
+					this.startupRetry = 0;
 
 					// Save the ticket so we can return it to the queue when our startup is done
 					this.startTicket = msg;
@@ -334,8 +378,12 @@ export class RabbitMqService extends IMService {
 				console.error(err);
 			}
 
-			console.error('Could not acquire invite sync ticket');
-			process.exit(1);
+			console.error('Could not acquire invite sync ticket, retrying');
+			const delay = this.getReconnectDelayMs(this.inviteSyncRetry, 1000, 30000);
+			this.inviteSyncRetry++;
+			setTimeout(() => {
+				this.waitForInviteSyncTicket().catch((retryErr) => console.error(retryErr));
+			}, delay);
 		});
 
 		await this.channelInviteSync.prefetch(1);
@@ -354,6 +402,7 @@ export class RabbitMqService extends IMService {
 					console.log(chalk.green('Acquired invite sync ticket!'));
 					this.waitingForInviteSyncTicket = false;
 					this.inviteSyncTicket = msg;
+					this.inviteSyncRetry = 0;
 					resolve();
 				},
 				{ noAck: false }
@@ -406,9 +455,7 @@ export class RabbitMqService extends IMService {
 	}
 
 	public async sendStatusToManager(err?: Error, requestId?: string) {
-		await this.sendToManager({
-			id: requestId || 'status',
-			cmd: ShardCommand.STATUS,
+		const payload = {
 			state: this.waitingForTicket
 				? 'waiting'
 				: !this.client.hasStarted
@@ -424,6 +471,15 @@ export class RabbitMqService extends IMService {
 			tracking: this.getTrackingStatus(),
 			music: this.getMusicStatus(),
 			cache: this.getCacheSizes()
+		};
+
+		this.lastStatusAt = Date.now();
+		this.lastStatusPayload = payload;
+
+		await this.sendToManager({
+			id: requestId || 'status',
+			cmd: ShardCommand.STATUS,
+			...payload
 		});
 	}
 
@@ -447,6 +503,14 @@ export class RabbitMqService extends IMService {
 
 		switch (cmd) {
 			case ShardCommand.STATUS:
+				if (this.lastStatusPayload && Date.now() - this.lastStatusAt < 2000) {
+					await this.sendToManager({
+						id: content.id,
+						cmd: ShardCommand.STATUS,
+						...this.lastStatusPayload
+					});
+					break;
+				}
 				await this.sendStatusToManager(undefined, content.id);
 				break;
 
