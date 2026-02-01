@@ -35,6 +35,7 @@ import { ScheduledAction, ScheduledActionType } from '../models/ScheduledAction'
 import { IMService } from './Service';
 
 const GLOBAL_SHARD_ID = 0;
+const INVITE_CODE_GUILD_BATCH_SIZE = 250;
 
 enum TABLE {
 	botSettings = '`botSettings`',
@@ -455,14 +456,35 @@ export class DatabaseService extends IMService {
 	// --------------
 	public async getAllInviteCodesForGuilds(guildIds: string[]) {
 		const columns = ['`guildId`', '`code`', '`uses`', '`maxUses`'];
-		return this.findManyOnSpecificShards<InviteCodeStartupRow>(
-			TABLE.inviteCodes,
-			'`guildId` IN(?)',
-			guildIds,
-			undefined,
-			undefined,
-			columns
-		);
+		if (guildIds.length <= INVITE_CODE_GUILD_BATCH_SIZE) {
+			return this.findManyOnSpecificShards<InviteCodeStartupRow>(
+				TABLE.inviteCodes,
+				'`guildId` IN(?)',
+				guildIds,
+				undefined,
+				undefined,
+				columns
+			);
+		}
+
+		const results: InviteCodeStartupRow[] = [];
+		for (let i = 0; i < guildIds.length; i += INVITE_CODE_GUILD_BATCH_SIZE) {
+			const batch = guildIds.slice(i, i + INVITE_CODE_GUILD_BATCH_SIZE);
+			if (batch.length === 0) {
+				continue;
+			}
+			const rows = await this.findManyOnSpecificShards<InviteCodeStartupRow>(
+				TABLE.inviteCodes,
+				'`guildId` IN(?)',
+				batch,
+				undefined,
+				undefined,
+				columns
+			);
+			results.push(...rows);
+		}
+
+		return results;
 	}
 	public async getInviteCodesForGuild(guildId: string) {
 		const [db, pool] = this.getDbInfo(guildId);
