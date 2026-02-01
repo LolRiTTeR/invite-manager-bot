@@ -34,14 +34,16 @@
 		"prefix": ""
 	},
 	"inviteSync": {
-		"parallel": 5,
-		"delayMs": 1200,
-		"minDelayMs": 800,
-		"maxDelayMs": 5000,
+		"parallel": 3,
+		"delayMs": 2000,
+		"minDelayMs": 1500,
+		"maxDelayMs": 8000,
 		"minParallel": 1,
-		"maxParallel": 8,
+		"maxParallel": 5,
 		"globalMaxConcurrent": 0,
-		"ticketShardId": 0
+		"ticketShardId": 0,
+		"inviteCodeBatchDelayMs": 200,
+		"preloadCap": 0
 	},
 	"startupTickets": {
 		"enabled": false,

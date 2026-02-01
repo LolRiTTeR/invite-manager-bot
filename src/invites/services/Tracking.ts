@@ -51,6 +51,8 @@ interface InviteSyncConfig {
 	maxParallel: number;
 	globalMaxConcurrent: number;
 	ticketShardId: number;
+	inviteCodeBatchDelayMs: number;
+	preloadCap: number;
 }
 
 interface InviteSyncState {
@@ -161,8 +163,14 @@ export class TrackingService extends IMService {
 		// (Guilds with more members are more likely to get a join)
 		const allGuilds = [...this.client.guilds.values()].sort((a, b) => b.memberCount - a.memberCount);
 
-		// Fetch all invites from DB
-		const allCodes = await this.client.db.getAllInviteCodesForGuilds(allGuilds.map((g) => g.id));
+		const preloadCap = inviteSyncConfig.preloadCap;
+		const preloadGuilds = preloadCap > 0 ? allGuilds.slice(0, preloadCap) : allGuilds;
+
+		// Fetch invites from DB for the selected preload set
+		const allCodes = await this.client.db.getAllInviteCodesForGuilds(
+			preloadGuilds.map((g) => g.id),
+			inviteSyncConfig.inviteCodeBatchDelayMs
+		);
 
 		// Initialize our cache for each guild, so we
 		// don't need to do any if checks later
@@ -215,6 +223,8 @@ export class TrackingService extends IMService {
 		const maxParallel = Math.floor(readNumber(raw.maxParallel, Math.max(parallel, minParallel)));
 		const globalMaxConcurrent = Math.floor(readNumber(raw.globalMaxConcurrent, 0));
 		const ticketShardId = Math.floor(readNumber(raw.ticketShardId, 0));
+		const inviteCodeBatchDelayMs = Math.floor(readNumber(raw.inviteCodeBatchDelayMs, 0));
+		const preloadCap = Math.floor(readNumber(raw.preloadCap, 0));
 
 		const safeMinParallel = Math.max(1, minParallel);
 		const safeMaxParallel = Math.max(safeMinParallel, maxParallel);
@@ -232,7 +242,9 @@ export class TrackingService extends IMService {
 			minParallel: safeMinParallel,
 			maxParallel: safeMaxParallel,
 			globalMaxConcurrent: Math.max(0, globalMaxConcurrent),
-			ticketShardId: Math.max(0, ticketShardId)
+			ticketShardId: Math.max(0, ticketShardId),
+			inviteCodeBatchDelayMs: Math.max(0, inviteCodeBatchDelayMs),
+			preloadCap: Math.max(0, preloadCap)
 		};
 	}
 

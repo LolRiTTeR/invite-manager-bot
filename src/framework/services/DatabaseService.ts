@@ -454,7 +454,7 @@ export class DatabaseService extends IMService {
 	// --------------
 	//   InviteCode
 	// --------------
-	public async getAllInviteCodesForGuilds(guildIds: string[]) {
+	public async getAllInviteCodesForGuilds(guildIds: string[], batchDelayMs: number = 0) {
 		const columns = ['`guildId`', '`code`', '`uses`', '`maxUses`'];
 		if (guildIds.length <= INVITE_CODE_GUILD_BATCH_SIZE) {
 			return this.findManyOnSpecificShards<InviteCodeStartupRow>(
@@ -483,6 +483,9 @@ export class DatabaseService extends IMService {
 			);
 			for (const row of rows) {
 				results.push(row);
+			}
+			if (batchDelayMs > 0 && i + INVITE_CODE_GUILD_BATCH_SIZE < guildIds.length) {
+				await new Promise<void>((resolve) => setTimeout(resolve, batchDelayMs));
 			}
 		}
 
