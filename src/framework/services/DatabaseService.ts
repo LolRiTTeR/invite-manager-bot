@@ -481,7 +481,9 @@ export class DatabaseService extends IMService {
 				undefined,
 				columns
 			);
-			results.push(...rows);
+			for (const row of rows) {
+				results.push(row);
+			}
 		}
 
 		return results;
