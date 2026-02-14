@@ -1,6 +1,9 @@
 const { spawn } = require('child_process');
 const fs = require('fs-extra');
 const path = require('path');
+const repoRoot = path.resolve(__dirname, '..');
+const fromRoot = (...parts) => path.join(repoRoot, ...parts);
+const docsRoot = fromRoot('docs');
 
 const locales = [
 	'en',
@@ -61,10 +64,10 @@ child.on('error', (error) => console.log(error));
 child.on('close', () => {
 	const cmds = [];
 	const cmdDirs = [
-		path.resolve('../bin/framework/commands'),
-		path.resolve('../bin//invites/commands'),
-		path.resolve('../bin/moderation/commands'),
-		path.resolve('../bin/music/commands')
+		fromRoot('bin', 'framework', 'commands'),
+		fromRoot('bin', 'invites', 'commands'),
+		fromRoot('bin', 'moderation', 'commands'),
+		fromRoot('bin', 'music', 'commands')
 	];
 	const fakeClient = {
 		msg: {
@@ -129,7 +132,7 @@ child.on('close', () => {
 	let i18nBot = {};
 	geti18n({
 		locales,
-		directory: path.resolve('../i18n/bot/'),
+		directory: fromRoot('i18n', 'bot'),
 		objectNotation: true,
 		register: i18nBot,
 		updateFiles: true
@@ -139,14 +142,16 @@ child.on('close', () => {
 		const niceLocale = locale.replace('_', '-');
 		console.log(`  ${niceLocale}`);
 
-		if (!fs.existsSync(`../docs/${niceLocale}`)) {
-			fs.mkdirSync(`../docs/${niceLocale}`);
+		const localeDocsDir = path.join(docsRoot, niceLocale);
+		if (!fs.existsSync(localeDocsDir)) {
+			fs.mkdirSync(localeDocsDir);
 		}
 
 		const _tBot = (phrase, replacements) => i18nBot.__({ locale, phrase }, replacements);
 
-		if (!fs.existsSync(`../docs/${niceLocale}/reference/`)) {
-			fs.mkdirSync(`../docs/${niceLocale}/reference/`);
+		const localeReferenceDir = path.join(localeDocsDir, 'reference');
+		if (!fs.existsSync(localeReferenceDir)) {
+			fs.mkdirSync(localeReferenceDir);
 		}
 
 		function generateGroup(path, group) {
@@ -183,7 +188,7 @@ child.on('close', () => {
 		}
 
 		// Import after compile
-		const { guildSettingsInfo } = require('../bin/settings.js');
+		const { guildSettingsInfo } = require(fromRoot('bin', 'settings.js'));
 		const { CommandGroup } = require('../bin/types');
 
 		// Generate config docs
@@ -247,7 +252,7 @@ child.on('close', () => {
 			.map((key) => `<a name=${key}></a>\n\n` + guildSettingsInfo[key].markdown)
 			.join('\n\n');
 
-		fs.writeFileSync(`../docs/${niceLocale}/reference/settings.md`, outSettings);
+		fs.writeFileSync(path.join(localeReferenceDir, 'settings.md'), outSettings);
 
 		// Generate command docs
 		let outCmds = '# Commands\n\n';
@@ -340,7 +345,7 @@ child.on('close', () => {
 				outCmds += generateExamples(cmd).join('  \n') + '\n\n';
 			});
 
-		fs.writeFileSync(`../docs/${niceLocale}/reference/commands.md`, outCmds);
+		fs.writeFileSync(path.join(localeReferenceDir, 'commands.md'), outCmds);
 	});
 
 	console.log('Generating docs...');
@@ -348,7 +353,7 @@ child.on('close', () => {
 	let i18nDocs = {};
 	geti18n({
 		locales,
-		directory: path.resolve('../i18n/docs/'),
+		directory: fromRoot('i18n', 'docs'),
 		objectNotation: true,
 		register: i18nDocs,
 		updateFiles: true
@@ -360,9 +365,10 @@ child.on('close', () => {
 
 		const _tDocs = (phrase, replacements) => i18nDocs.__({ locale, phrase }, replacements);
 
-		const docFiles = getAllFiles(`../docs/_base/`);
+		const baseDocsDir = path.join(docsRoot, '_base');
+		const docFiles = getAllFiles(baseDocsDir);
 		docFiles.forEach((docFile) => {
-			const newPath = path.relative('../docs/_base/', docFile).replace(/\.md/gi, '');
+			const newPath = path.relative(baseDocsDir, docFile).replace(/\.md/gi, '');
 
 			let text = fs.readFileSync(docFile, 'utf8');
 			text = text.replace(langRegex, niceLocale);
@@ -377,8 +383,9 @@ child.on('close', () => {
 				return _tDocs(args[0], replace);
 			});
 
-			fs.mkdirpSync(`../docs/${niceLocale}/${path.dirname(newPath)}`);
-			fs.writeFileSync(`../docs/${niceLocale}/${newPath}.md`, text, 'utf8');
+			const localeDocsDir = path.join(docsRoot, niceLocale);
+			fs.mkdirpSync(path.join(localeDocsDir, path.dirname(newPath)));
+			fs.writeFileSync(path.join(localeDocsDir, `${newPath}.md`), text, 'utf8');
 		});
 	});
 
@@ -388,12 +395,12 @@ child.on('close', () => {
 		const langName = i18nBot.__({ locale, phrase: 'lang' });
 		sidebarText += `- [${langName}](/${locale.replace('_', '-')}/README.md)\n`;
 	});
-	fs.writeFileSync(`../docs/_sidebar.md`, sidebarText);
+	fs.writeFileSync(path.join(docsRoot, '_sidebar.md'), sidebarText);
 
 	let readmeText = '# InviteManager Docs\n\n';
 	locales.forEach((locale) => {
 		const langName = i18nBot.__({ locale, phrase: 'lang' });
 		readmeText += `- [${langName}](/${locale.replace('_', '-')}/README.md)\n`;
 	});
-	fs.writeFileSync(`../docs/README.md`, readmeText);
+	fs.writeFileSync(path.join(docsRoot, 'README.md'), readmeText);
 });

@@ -480,7 +480,7 @@ settings.hideLeftMembersFromLeaderboard.description
 
 Type: `Boolean`
 
-Default: `true`
+Default: `false`
 
 Reset to default:
 `!config hideLeftMembersFromLeaderboard default`

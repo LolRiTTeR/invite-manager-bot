@@ -4,7 +4,7 @@
 
 Öneki değiştirmek için `!config prefix -` yapabilirsiniz.
 
-Geçerli önekinizi bilmiyorsanız, öneki görmek için`@InviteManager config prefix` komtunu kullanabilirsiniz.
+Geçerli önekinizi bilmiyorsanız, öneki görmek için`@InviteManager config prefix`  komtunu kullanabilirsiniz.
 
 ## Limitation: No advanced tracking before the bot joins
 

@@ -480,7 +480,7 @@ Hide members that left the server from the leaderboard.
 
 Type: `Boolean`
 
-Default: `true`
+Default: `false`
 
 Reset to default:
 `!config hideLeftMembersFromLeaderboard default`

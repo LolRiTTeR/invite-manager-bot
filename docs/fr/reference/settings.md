@@ -480,7 +480,7 @@ Cache les utilisateurs qui ont quitté le serveur du leaderboard.
 
 Type: `Boolean`
 
-Default: `true`
+Default: `false`
 
 Reset to default:
 `!config hideLeftMembersFromLeaderboard default`
