@@ -1,7 +1,5 @@
 # Mapa
 
-# Roadmap
-
 ## Current Focus
 
 - Stability and reliability improvements for our two main InviteManager bots

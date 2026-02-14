@@ -1,7 +1,5 @@
 # 未來規劃
 
-# Roadmap
-
 ## Current Focus
 
 - Stability and reliability improvements for our two main InviteManager bots
