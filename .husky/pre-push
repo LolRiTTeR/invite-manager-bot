@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run docs || exit 1
+
+if [ -n "$(git status --porcelain -- docs)" ]; then
+  echo ""
+  echo "Docs are out of date after 'npm run docs'."
+  echo "Please commit generated docs before pushing."
+  git status --short -- docs
+  exit 1
+fi
